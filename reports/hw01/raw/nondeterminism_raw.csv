@@ -1,0 +1,41 @@
+temperature,run_index,tags,summary,latency_ms
+0.7,0,bus breakdown | emergency response | traffic jam,A bus breakdown on El Camino Real caused traffic delays and emergency response delays.,77965
+0.7,1,bus breakdown | emergency response | traffic delay,A bus breakdown on El Camino Real caused traffic delays resolved by fire and towing after 2 hours.,82496
+0.7,2,bus breakdown | emergency services | traffic delay,A bus breakdown on El Camino Real caused traffic delays and required emergency services to clear the road.,76161
+0.7,3,bus breakdown | emergency response | traffic delay,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance.,73360
+0.7,4,bus breakdown | emergency response | traffic delay,A bus breakdown caused traffic delays and required emergency assistance to clear the road.,62002
+0.7,5,bus breakdown | emergency response | traffic delay,A bus breakdown on El Camino Real caused a 2-hour traffic delay in Sunnyvale.,81528
+0.7,6,bus breakdown | emergency services | traffic delay,A bus breakdown on El Camino Real caused over two hours of traffic delay before emergency services cleared the road.,83037
+0.7,7,bus breakdown | emergency response | traffic delay,A bus breakdown on El Camino Real caused significant traffic delays until emergency services cleared the road.,75334
+0.7,8,bus breakdown | emergency response | traffic jam,A bus breakdown on El Camino Real caused significant traffic delays in Sunnyvale.,76714
+0.7,9,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency vehicle intervention.,70822
+0.7,10,bus breakdown | emergency response | traffic jam,A bus breakdown near MollyTea caused a traffic jam requiring emergency services for over two hours.,82478
+0.7,11,bus breakdown | emergency assistance | traffic delay,A bus breakdown on El Camino Real caused significant traffic delays and required emergency assistance.,73236
+0.7,12,bus breakdown | emergency response | traffic delay,A bus breakdown on El Camino Real caused significant traffic delays near Sunnyvale.,79510
+0.7,13,bus breakdown | emergency response | traffic delay,A bus breakdown on El Camino Real caused significant traffic delays requiring emergency assistance for over two hours.,82768
+0.7,14,bus breakdown | emergency response | traffic delay,A bus breakdown on El Camino Real caused significant traffic delays and required emergency assistance.,75595
+0.7,15,bus breakdown | emergency services | traffic delay,A bus breakdown on El Camino Real caused severe traffic delays and required emergency services for over two hours.,81487
+0.7,16,bus breakdown | emergency response | traffic delay,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance.,77129
+0.7,17,bus breakdown | emergency response | traffic delay,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance.,74241
+0.7,18,bus breakdown | emergency response | traffic jam,A bus breakdown on El Camino Real caused a 2-hour traffic jam resolved by fire and towing.,79473
+0.7,19,bus breakdown | emergency response | traffic delay,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance to clear the road.,74260
+0.0,0,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,82463
+0.0,1,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72640
+0.0,2,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72539
+0.0,3,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72604
+0.0,4,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72567
+0.0,5,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72678
+0.0,6,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72657
+0.0,7,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72531
+0.0,8,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72470
+0.0,9,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72566
+0.0,10,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72601
+0.0,11,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72666
+0.0,12,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72601
+0.0,13,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72562
+0.0,14,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72491
+0.0,15,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72649
+0.0,16,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72548
+0.0,17,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72593
+0.0,18,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72552
+0.0,19,emergency response | public transportation | traffic incident,A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.,72636

@@ -1,0 +1,87 @@
+{
+  "total_checks": 16,
+  "passed": 16,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "file_exists:html",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/HW1-PragnayaPriyadarshini.html"
+    },
+    {
+      "check": "file_exists:hw1_js",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/hw1.js"
+    },
+    {
+      "check": "file_exists:domain_schema",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/DOMAIN_SCHEMA.md"
+    },
+    {
+      "check": "file_exists:dockerfile",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/Dockerfile"
+    },
+    {
+      "check": "compiles:agents_demo",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_exists:nondeterminism_input",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw01/cases/nondeterminism_input.json"
+    },
+    {
+      "check": "nondeterminism_input:has_title_content",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_exists:nondeterminism_raw",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw01/raw/nondeterminism_raw.json"
+    },
+    {
+      "check": "nondeterminism_raw:40_records",
+      "passed": true,
+      "detail": "found 40"
+    },
+    {
+      "check": "file_exists:nondeterminism_summary",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw01/raw/nondeterminism_summary.json"
+    },
+    {
+      "check": "file_exists:metrics_md",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw01/METRICS.md"
+    },
+    {
+      "check": "compiles:model_client",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compiles:hw1_client",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_exists:agent_md",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/AGENT.md"
+    },
+    {
+      "check": "ollama:reachable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "ollama:qwen3_8b_pulled",
+      "passed": true,
+      "detail": "['smollm:1.7b', 'qwen3:8b']"
+    }
+  ]
+}

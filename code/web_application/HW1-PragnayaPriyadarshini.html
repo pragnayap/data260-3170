@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HW1-Pragnaya-Priyadarshini</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+  }
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2b6cb0;
+  }
+  form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: #2b6cb0;
+    outline: none;
+  }
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  .checkbox-row input {
+    width: auto;
+    margin-bottom: 0;
+  }
+  .checkbox-row label {
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+  button {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+  }
+  button:hover {
+    background-color: #234e8c;
+  }
+</style>
+</head>
+<body>
+
+<h1>Municipal Transit Incident Report</h1>
+
+<form id="incidentForm">
+  <label for="routeId">Route / Line *</label>
+  <input type="text" id="routeId" placeholder="e.g., Line 22 or BART Red Line" required autofocus>
+
+  <label for="location">Stop / Station / Intersection *</label>
+  <input type="text" id="location" placeholder="e.g., Downtown Transit Center" required>
+
+  <label for="submitterEmail">Your Email *</label>
+  <input type="email" id="submitterEmail" placeholder="you@example.com" required>
+
+  <label for="description">Incident Description *</label>
+  <textarea id="description" rows="4" placeholder="Describe what happened..minimum 25 characters" required minlength="25"></textarea>
+
+  <label for="category">Category *</label>
+  <select id="category" required>
+    <option value="" disabled selected>Choose a category</option>
+    <option value="Delay">Delay</option>
+    <option value="Mechanical Failure">Mechanical Failure</option>
+    <option value="Accident/Collision">Accident/Collision</option>
+    <option value="Safety Hazard">Safety Hazard</option>
+  </select>
+
+  <div class="checkbox-row">
+    <input type="checkbox" id="agreeTerms" />
+    <label for="agreeTerms">I agree to the terms and conditions.</label>
+  </div>
+
+  <button type="submit">Report Incident</button>
+</form>
+
+<script src="hw1.js"></script>
+</body>
+</html>

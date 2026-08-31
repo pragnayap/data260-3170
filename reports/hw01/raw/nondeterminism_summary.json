@@ -1,0 +1,26 @@
+{
+  "0.7": {
+    "distinct_tag_sets": 5,
+    "tags_in_all_runs": [],
+    "tags_in_exactly_one_run": [
+      "emergency assistance",
+      "public transportation",
+      "traffic incident"
+    ],
+    "latency_p50_ms": 76921.5,
+    "latency_p95_ms": 82781.4,
+    "latency_p99_ms": 82985.9
+  },
+  "0.0": {
+    "distinct_tag_sets": 1,
+    "tags_in_all_runs": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "tags_in_exactly_one_run": [],
+    "latency_p50_ms": 72597.0,
+    "latency_p95_ms": 73167.2,
+    "latency_p99_ms": 80603.8
+  }
+}

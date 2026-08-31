@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+reports/hw01/report.docx
+reports/hw01/~$report.docx

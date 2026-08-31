@@ -1,0 +1,442 @@
+[
+  {
+    "temperature": 0.7,
+    "run_index": 0,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic jam"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and emergency response delays.",
+    "latency_ms": 77965
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 1,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays resolved by fire and towing after 2 hours.",
+    "latency_ms": 82496
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 2,
+    "tags": [
+      "bus breakdown",
+      "emergency services",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency services to clear the road.",
+    "latency_ms": 76161
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 3,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance.",
+    "latency_ms": 73360
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 4,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown caused traffic delays and required emergency assistance to clear the road.",
+    "latency_ms": 62002
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 5,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused a 2-hour traffic delay in Sunnyvale.",
+    "latency_ms": 81528
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 6,
+    "tags": [
+      "bus breakdown",
+      "emergency services",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused over two hours of traffic delay before emergency services cleared the road.",
+    "latency_ms": 83037
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 7,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused significant traffic delays until emergency services cleared the road.",
+    "latency_ms": 75334
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 8,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic jam"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused significant traffic delays in Sunnyvale.",
+    "latency_ms": 76714
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 9,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency vehicle intervention.",
+    "latency_ms": 70822
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 10,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic jam"
+    ],
+    "summary": "A bus breakdown near MollyTea caused a traffic jam requiring emergency services for over two hours.",
+    "latency_ms": 82478
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 11,
+    "tags": [
+      "bus breakdown",
+      "emergency assistance",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused significant traffic delays and required emergency assistance.",
+    "latency_ms": 73236
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 12,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused significant traffic delays near Sunnyvale.",
+    "latency_ms": 79510
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 13,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused significant traffic delays requiring emergency assistance for over two hours.",
+    "latency_ms": 82768
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 14,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused significant traffic delays and required emergency assistance.",
+    "latency_ms": 75595
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 15,
+    "tags": [
+      "bus breakdown",
+      "emergency services",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused severe traffic delays and required emergency services for over two hours.",
+    "latency_ms": 81487
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 16,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance.",
+    "latency_ms": 77129
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 17,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance.",
+    "latency_ms": 74241
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 18,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic jam"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused a 2-hour traffic jam resolved by fire and towing.",
+    "latency_ms": 79473
+  },
+  {
+    "temperature": 0.7,
+    "run_index": 19,
+    "tags": [
+      "bus breakdown",
+      "emergency response",
+      "traffic delay"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance to clear the road.",
+    "latency_ms": 74260
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 0,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 82463
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 1,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72640
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 2,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72539
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 3,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72604
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 4,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72567
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 5,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72678
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 6,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72657
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 7,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72531
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 8,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72470
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 9,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72566
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 10,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72601
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 11,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72666
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 12,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72601
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 13,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72562
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 14,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72491
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 15,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72649
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 16,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72548
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 17,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72593
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 18,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72552
+  },
+  {
+    "temperature": 0.0,
+    "run_index": 19,
+    "tags": [
+      "emergency response",
+      "public transportation",
+      "traffic incident"
+    ],
+    "summary": "A bus breakdown on El Camino Real caused traffic delays and required emergency assistance for over two hours.",
+    "latency_ms": 72636
+  }
+]
