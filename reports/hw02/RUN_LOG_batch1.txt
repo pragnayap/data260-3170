@@ -1,0 +1,1112 @@
+
+=== Part 4.3 - 30 runs on the frozen input (ceiling=8) ===
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 1] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 2] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 1/30 -> valid_first_attempt attempts=1 (11345 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 3] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 4] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 2/30 -> valid_first_attempt attempts=1 (11320 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 5] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 6] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 3/30 -> valid_first_attempt attempts=1 (11006 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 7] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 8] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 4/30 -> valid_first_attempt attempts=1 (11205 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 9] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 10] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 5/30 -> valid_first_attempt attempts=1 (11269 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 11] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 12] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 6/30 -> valid_first_attempt attempts=1 (11365 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 13] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 14] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 7/30 -> valid_first_attempt attempts=1 (10949 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 15] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 16] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 8/30 -> valid_first_attempt attempts=1 (10767 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 17] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 18] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 9/30 -> valid_first_attempt attempts=1 (10767 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 19] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 20] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 10/30 -> valid_first_attempt attempts=1 (10695 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 21] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 22] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 11/30 -> valid_first_attempt attempts=1 (10606 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 23] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 24] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 12/30 -> valid_first_attempt attempts=1 (10696 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 25] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 26] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 13/30 -> valid_first_attempt attempts=1 (10695 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 27] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 28] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 14/30 -> valid_first_attempt attempts=1 (10894 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 29] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 30] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 15/30 -> valid_first_attempt attempts=1 (10759 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 31] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 32] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 16/30 -> valid_first_attempt attempts=1 (10739 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 33] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 34] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 17/30 -> valid_first_attempt attempts=1 (10666 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 35] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 36] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 18/30 -> valid_first_attempt attempts=1 (10695 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 37] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 38] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 19/30 -> valid_first_attempt attempts=1 (10716 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 39] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 40] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 20/30 -> valid_first_attempt attempts=1 (10642 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 41] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 42] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 21/30 -> valid_first_attempt attempts=1 (10840 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 43] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 44] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 22/30 -> valid_first_attempt attempts=1 (10792 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 45] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 46] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 23/30 -> valid_first_attempt attempts=1 (11040 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 47] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 48] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 24/30 -> valid_first_attempt attempts=1 (10766 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 49] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 50] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 25/30 -> valid_first_attempt attempts=1 (10889 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 51] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 52] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 26/30 -> valid_first_attempt attempts=1 (10950 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 53] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 54] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 27/30 -> valid_first_attempt attempts=1 (11250 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 55] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 56] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 28/30 -> valid_first_attempt attempts=1 (11083 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 57] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 58] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 29/30 -> valid_first_attempt attempts=1 (10220 ms)
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 59] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 60] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/8) ---
+    router -> END (valid and reviewed clean)
+[schema ceiling=8] run 30/30 -> valid_first_attempt attempts=1 (10243 ms)
+
+=== Part 4.4 - 20 runs at turn ceiling 2 ===
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 61] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 1/20 -> valid_first_attempt attempts=1 (8563 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 62] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 2/20 -> valid_first_attempt attempts=1 (8547 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 63] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 3/20 -> valid_first_attempt attempts=1 (8551 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 64] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 4/20 -> valid_first_attempt attempts=1 (8512 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 65] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 5/20 -> valid_first_attempt attempts=1 (8592 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 66] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 6/20 -> valid_first_attempt attempts=1 (8507 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 67] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 7/20 -> valid_first_attempt attempts=1 (8551 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 68] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 8/20 -> valid_first_attempt attempts=1 (8782 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 69] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 9/20 -> valid_first_attempt attempts=1 (8638 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 70] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 10/20 -> valid_first_attempt attempts=1 (8517 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 71] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 11/20 -> valid_first_attempt attempts=1 (8537 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 72] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 12/20 -> valid_first_attempt attempts=1 (8553 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 73] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 13/20 -> valid_first_attempt attempts=1 (8490 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 74] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 14/20 -> valid_first_attempt attempts=1 (8625 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 75] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 15/20 -> valid_first_attempt attempts=1 (8538 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 76] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 16/20 -> valid_first_attempt attempts=1 (11514 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 77] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 17/20 -> valid_first_attempt attempts=1 (9512 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 78] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 18/20 -> valid_first_attempt attempts=1 (8571 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 79] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 19/20 -> valid_first_attempt attempts=1 (8773 ms)
+--- NODE: Supervisor (turn 1/2) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 80] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/2) ---
+    router -> END (hit turn ceiling 2)
+[ceiling ceiling=2] run 20/20 -> valid_first_attempt attempts=1 (9042 ms)
+
+=== Part 4.4 - 20 runs at turn ceiling 10 ===
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 81] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 82] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 1/20 -> valid_first_attempt attempts=1 (11193 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 83] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 84] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 2/20 -> valid_first_attempt attempts=1 (10942 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 85] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 86] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 3/20 -> valid_first_attempt attempts=1 (10758 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 87] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 88] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 4/20 -> valid_first_attempt attempts=1 (10597 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 89] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 90] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 5/20 -> valid_first_attempt attempts=1 (11060 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 91] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 92] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 6/20 -> valid_first_attempt attempts=1 (10396 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 93] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 94] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 7/20 -> valid_first_attempt attempts=1 (10280 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 95] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 96] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 8/20 -> valid_first_attempt attempts=1 (10217 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 97] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 98] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 9/20 -> valid_first_attempt attempts=1 (10253 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 99] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 100] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 10/20 -> valid_first_attempt attempts=1 (10262 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 101] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 102] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 11/20 -> valid_first_attempt attempts=1 (10256 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 103] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 104] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 12/20 -> valid_first_attempt attempts=1 (10278 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 105] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 106] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 13/20 -> valid_first_attempt attempts=1 (10336 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 107] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 108] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 14/20 -> valid_first_attempt attempts=1 (10193 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 109] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 110] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 15/20 -> valid_first_attempt attempts=1 (10269 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 111] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 112] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 16/20 -> valid_first_attempt attempts=1 (10232 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 113] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 114] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 17/20 -> valid_first_attempt attempts=1 (10221 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 115] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 116] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 18/20 -> valid_first_attempt attempts=1 (10844 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 117] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 118] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 19/20 -> valid_first_attempt attempts=1 (10766 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 119] input_tokens=178 output_tokens=41 total_tokens=219
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 120] input_tokens=389 output_tokens=8 total_tokens=397
+    issues=0
+--- NODE: Supervisor (turn 3/10) ---
+    router -> END (valid and reviewed clean)
+[ceiling ceiling=10] run 20/20 -> valid_first_attempt attempts=1 (10676 ms)
+
+=== Part 4.5 - 5 runs on the adversarial input (ceiling=10) ===
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 121] input_tokens=343 output_tokens=51 total_tokens=394
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 122] input_tokens=563 output_tokens=70 total_tokens=633
+    issues=2
+--- NODE: Supervisor (turn 3/10) ---
+    router -> planner (2 reviewer issues)
+--- NODE: Planner ---
+[turn 123] input_tokens=404 output_tokens=40 total_tokens=444
+    valid=True
+=== Part 4.5 - 5 runs on the adversarial input (ceiling=10) ===
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 1] input_tokens=343 output_tokens=55 total_tokens=398
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 2] input_tokens=547 output_tokens=92 total_tokens=639
+    issues=1
+--- NODE: Supervisor (turn 3/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 3] input_tokens=440 output_tokens=39 total_tokens=479
+    valid=True
+--- NODE: Supervisor (turn 4/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 4] input_tokens=540 output_tokens=84 total_tokens=624
+    issues=1
+--- NODE: Supervisor (turn 5/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 5] input_tokens=432 output_tokens=49 total_tokens=481
+    valid=True
+--- NODE: Supervisor (turn 6/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 6] input_tokens=540 output_tokens=80 total_tokens=620
+    issues=1
+--- NODE: Supervisor (turn 7/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 7] input_tokens=428 output_tokens=37 total_tokens=465
+    valid=True
+--- NODE: Supervisor (turn 8/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 8] input_tokens=536 output_tokens=79 total_tokens=615
+    issues=1
+--- NODE: Supervisor (turn 9/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 9] input_tokens=427 output_tokens=47 total_tokens=474
+    valid=True
+--- NODE: Supervisor (turn 10/10) ---
+    router -> END (hit turn ceiling 10)
+[adversarial ceiling=10] run 1/5 -> valid_first_attempt attempts=5 (155103 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 10] input_tokens=343 output_tokens=55 total_tokens=398
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 11] input_tokens=547 output_tokens=92 total_tokens=639
+    issues=1
+--- NODE: Supervisor (turn 3/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 12] input_tokens=440 output_tokens=39 total_tokens=479
+    valid=True
+--- NODE: Supervisor (turn 4/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 13] input_tokens=540 output_tokens=84 total_tokens=624
+    issues=1
+--- NODE: Supervisor (turn 5/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 14] input_tokens=432 output_tokens=49 total_tokens=481
+    valid=True
+--- NODE: Supervisor (turn 6/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 15] input_tokens=540 output_tokens=80 total_tokens=620
+    issues=1
+--- NODE: Supervisor (turn 7/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 16] input_tokens=428 output_tokens=37 total_tokens=465
+    valid=True
+--- NODE: Supervisor (turn 8/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 17] input_tokens=536 output_tokens=79 total_tokens=615
+    issues=1
+--- NODE: Supervisor (turn 9/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 18] input_tokens=427 output_tokens=47 total_tokens=474
+    valid=True
+--- NODE: Supervisor (turn 10/10) ---
+    router -> END (hit turn ceiling 10)
+[adversarial ceiling=10] run 2/5 -> valid_first_attempt attempts=5 (160374 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 19] input_tokens=343 output_tokens=55 total_tokens=398
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 20] input_tokens=547 output_tokens=92 total_tokens=639
+    issues=1
+--- NODE: Supervisor (turn 3/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 21] input_tokens=440 output_tokens=39 total_tokens=479
+    valid=True
+--- NODE: Supervisor (turn 4/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 22] input_tokens=540 output_tokens=84 total_tokens=624
+    issues=1
+--- NODE: Supervisor (turn 5/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 23] input_tokens=432 output_tokens=49 total_tokens=481
+    valid=True
+--- NODE: Supervisor (turn 6/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 24] input_tokens=540 output_tokens=80 total_tokens=620
+    issues=1
+--- NODE: Supervisor (turn 7/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 25] input_tokens=428 output_tokens=37 total_tokens=465
+    valid=True
+--- NODE: Supervisor (turn 8/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 26] input_tokens=536 output_tokens=79 total_tokens=615
+    issues=1
+--- NODE: Supervisor (turn 9/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 27] input_tokens=427 output_tokens=47 total_tokens=474
+    valid=True
+--- NODE: Supervisor (turn 10/10) ---
+    router -> END (hit turn ceiling 10)
+[adversarial ceiling=10] run 3/5 -> valid_first_attempt attempts=5 (154584 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 28] input_tokens=343 output_tokens=55 total_tokens=398
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 29] input_tokens=547 output_tokens=92 total_tokens=639
+    issues=1
+--- NODE: Supervisor (turn 3/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 30] input_tokens=440 output_tokens=39 total_tokens=479
+    valid=True
+--- NODE: Supervisor (turn 4/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 31] input_tokens=540 output_tokens=84 total_tokens=624
+    issues=1
+--- NODE: Supervisor (turn 5/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 32] input_tokens=432 output_tokens=49 total_tokens=481
+    valid=True
+--- NODE: Supervisor (turn 6/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 33] input_tokens=540 output_tokens=80 total_tokens=620
+    issues=1
+--- NODE: Supervisor (turn 7/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 34] input_tokens=428 output_tokens=37 total_tokens=465
+    valid=True
+--- NODE: Supervisor (turn 8/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 35] input_tokens=536 output_tokens=79 total_tokens=615
+    issues=1
+--- NODE: Supervisor (turn 9/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 36] input_tokens=427 output_tokens=47 total_tokens=474
+    valid=True
+--- NODE: Supervisor (turn 10/10) ---
+    router -> END (hit turn ceiling 10)
+[adversarial ceiling=10] run 4/5 -> valid_first_attempt attempts=5 (156297 ms)
+--- NODE: Supervisor (turn 1/10) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 37] input_tokens=343 output_tokens=55 total_tokens=398
+    valid=True
+--- NODE: Supervisor (turn 2/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 38] input_tokens=547 output_tokens=92 total_tokens=639
+    issues=1
+--- NODE: Supervisor (turn 3/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 39] input_tokens=440 output_tokens=39 total_tokens=479
+    valid=True
+--- NODE: Supervisor (turn 4/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 40] input_tokens=540 output_tokens=84 total_tokens=624
+    issues=1
+--- NODE: Supervisor (turn 5/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 41] input_tokens=432 output_tokens=49 total_tokens=481
+    valid=True
+--- NODE: Supervisor (turn 6/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 42] input_tokens=540 output_tokens=80 total_tokens=620
+    issues=1
+--- NODE: Supervisor (turn 7/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 43] input_tokens=428 output_tokens=37 total_tokens=465
+    valid=True
+--- NODE: Supervisor (turn 8/10) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 44] input_tokens=536 output_tokens=79 total_tokens=615
+    issues=1
+--- NODE: Supervisor (turn 9/10) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 45] input_tokens=427 output_tokens=47 total_tokens=474
+    valid=True
+--- NODE: Supervisor (turn 10/10) ---
+    router -> END (hit turn ceiling 10)
+[adversarial ceiling=10] run 5/5 -> valid_first_attempt attempts=5 (153272 ms)
+
+
+=== SUMMARY ===
+{
+  "model": "qwen3:8b",
+  "started_at": "2026-09-12T07:29:03Z",
+  "frozen_case": "schema_input",
+  "adversarial": {
+    "case_id": "adversarial_input",
+    "runs": 5,
+    "hit_ceiling_count": 0,
+    "hit_ceiling_rate": 0.0,
+    "outcomes": {
+      "valid_first_attempt": {
+        "count": 5,
+        "mean_latency_ms": 155926
+      },
+      "valid_after_1_retry": {
+        "count": 0,
+        "mean_latency_ms": null
+      },
+      "valid_after_2plus_retries": {
+        "count": 0,
+        "mean_latency_ms": null
+      },
+      "hit_turn_ceiling": {
+        "count": 0,
+        "mean_latency_ms": null
+      }
+    }
+  },
+  "finished_at": "2026-09-12T07:42:02Z",
+  "total_runs": 5
+}
+
+Raw results: /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw02/raw
+
+[exit] turns=45 cumulative_input_tokens=21165 cumulative_output_tokens=2810 cumulative_total_tokens=23975

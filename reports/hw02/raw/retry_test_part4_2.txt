@@ -1,0 +1,54 @@
+--- NODE: Supervisor (turn 1/8) ---
+    router -> planner (no proposal yet)
+--- NODE: Planner ---
+[turn 1] input_tokens=153 output_tokens=47 total_tokens=200
+    [forced] first attempt truncated to 2 tags
+    valid=False error=tags: List should have at least 3 items after validation, not 2
+--- NODE: Supervisor (turn 2/8) ---
+    router -> planner (schema invalid)
+--- NODE: Planner ---
+[turn 2] input_tokens=190 output_tokens=45 total_tokens=235
+    valid=True
+--- NODE: Supervisor (turn 3/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 3] input_tokens=348 output_tokens=51 total_tokens=399
+    issues=1
+--- NODE: Supervisor (turn 4/8) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 4] input_tokens=209 output_tokens=41 total_tokens=250
+    valid=True
+--- NODE: Supervisor (turn 5/8) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+[turn 5] input_tokens=347 output_tokens=8 total_tokens=355
+    issues=0
+--- NODE: Supervisor (turn 6/8) ---
+    router -> END (valid and reviewed clean)
+{
+  "valid": true,
+  "reviewed_clean": true,
+  "succeeded": true,
+  "planner_attempts": 3,
+  "schema_retries": 1,
+  "turn_count": 6,
+  "turn_ceiling": 8,
+  "hit_ceiling": false,
+  "tags": [
+    "Bus Delay",
+    "Downtown Wait",
+    "No Announcement"
+  ],
+  "summary": "Bus Line 22 delayed 40 minutes with no prior notice at Downtown Transit Center.",
+  "validation_history": [
+    "tags: List should have at least 3 items after validation, not 2"
+  ],
+  "issue_history": [
+    "[rule 1] 'Transit Center': The tag 'Transit Center' is about a subject the input never raises."
+  ],
+  "reviewer_issues": [],
+  "latency_ms": 78513
+}
+
+[exit] turns=5 cumulative_input_tokens=1247 cumulative_output_tokens=192 cumulative_total_tokens=1439

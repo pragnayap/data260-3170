@@ -1,0 +1,251 @@
+{
+  "homework": "HW2",
+  "sid4": 3170,
+  "commit_hash": "20d660334188426a8b350e00a4ad30f8b634fcf8",
+  "model": "qwen3:8b",
+  "configuration": {
+    "port_base": 8470,
+    "prefix": "s3170",
+    "domain_id": 2,
+    "temperature": 0.0,
+    "ollama_url": "http://localhost:11434"
+  },
+  "seed": 3170,
+  "verify_seed": 263170,
+  "generated_at": "2026-09-13T01:39:06Z",
+  "total_checks": 46,
+  "passed": 46,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "file_exists:html",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/HW1-PragnayaPriyadarshini.html"
+    },
+    {
+      "check": "file_exists:styles_css",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/styles.css"
+    },
+    {
+      "check": "file_exists:hw1_js",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/hw1.js"
+    },
+    {
+      "check": "css:responsive_breakpoint",
+      "passed": true,
+      "detail": "covers 375px"
+    },
+    {
+      "check": "css:wraps_long_text",
+      "passed": true,
+      "detail": "prevents horizontal scroll at 375px"
+    },
+    {
+      "check": "css:state-loading_styled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "css:state-empty_styled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "css:state-error_styled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_exists:domain_schema",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/DOMAIN_SCHEMA.md"
+    },
+    {
+      "check": "file_exists:requirements",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/requirements.txt"
+    },
+    {
+      "check": "compiles:model_client",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compiles:schemas",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "compiles:run_schema_experiments",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "routing:no_direct_model_calls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "routing:all_llm_calls_via_model_client",
+      "passed": true,
+      "detail": "2/2 call sites use state['llm'].complete()"
+    },
+    {
+      "check": "schemas:importable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "schemas:accepts_valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "schemas:rejects_two_tags",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "schemas:rejects_four_tags",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "schemas:rejects_short_tag",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "schemas:rejects_long_summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "ollama:reachable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "ollama:model_pulled",
+      "passed": true,
+      "detail": "['smollm:1.7b', 'qwen3:8b']"
+    },
+    {
+      "check": "file_exists:app_py",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/app.py"
+    },
+    {
+      "check": "compiles:app_py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fastapi:port_free",
+      "passed": true,
+      "detail": "PORT_BASE=8470"
+    },
+    {
+      "check": "fastapi:starts_on_port_base",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fastapi:get_list_200",
+      "passed": true,
+      "detail": "status=200"
+    },
+    {
+      "check": "fastapi:get_list_returns_array",
+      "passed": true,
+      "detail": "type=list"
+    },
+    {
+      "check": "fastapi:post_create_201",
+      "passed": true,
+      "detail": "status=201"
+    },
+    {
+      "check": "fastapi:post_returns_id",
+      "passed": true,
+      "detail": "id=3"
+    },
+    {
+      "check": "fastapi:list_grew_by_one",
+      "passed": true,
+      "detail": "2 -> 3"
+    },
+    {
+      "check": "fastapi:put_update_200",
+      "passed": true,
+      "detail": "status=200"
+    },
+    {
+      "check": "fastapi:update_persisted",
+      "passed": true,
+      "detail": "routeId=s3170-updated-route"
+    },
+    {
+      "check": "fastapi:search_filters",
+      "passed": true,
+      "detail": "status=200 hits=2"
+    },
+    {
+      "check": "fastapi:delete_2xx",
+      "passed": true,
+      "detail": "status=200"
+    },
+    {
+      "check": "fastapi:list_shrank_by_one",
+      "passed": true,
+      "detail": "3 -> 2"
+    },
+    {
+      "check": "file_exists:agents_graph",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/agents_graph.py"
+    },
+    {
+      "check": "compiles:agents_graph",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "file_exists:schema_input",
+      "passed": true,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw02/cases/schema_input.json"
+    },
+    {
+      "check": "graph:completes_without_hanging",
+      "passed": true,
+      "detail": "50285 ms"
+    },
+    {
+      "check": "graph:returns_result",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "graph:respected_turn_ceiling",
+      "passed": true,
+      "detail": "turn_count=4 ceiling=4"
+    },
+    {
+      "check": "graph:made_at_least_one_attempt",
+      "passed": true,
+      "detail": "attempts=2"
+    },
+    {
+      "check": "graph:valid_run_has_exactly_3_tags",
+      "passed": true,
+      "detail": "tags=['Bus Delay', 'Waiting Time', 'No Announcement']"
+    },
+    {
+      "check": "graph:valid_run_summary_within_25_words",
+      "passed": true,
+      "detail": "words=17"
+    }
+  ]
+}

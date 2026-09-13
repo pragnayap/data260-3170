@@ -4,77 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>HW1-Pragnaya-Priyadarshini</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-    line-height: 1.6;
-  }
-  h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #2b6cb0;
-  }
-  form {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  }
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-  }
-  input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    font-family: inherit;
-  }
-  input:focus, select:focus, textarea:focus {
-    border-color: #2b6cb0;
-    outline: none;
-  }
-  .checkbox-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 15px;
-  }
-  .checkbox-row input {
-    width: auto;
-    margin-bottom: 0;
-  }
-  .checkbox-row label {
-    margin-bottom: 0;
-    font-weight: normal;
-  }
-  button {
-    background-color: #2b6cb0;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    display: block;
-    margin: 20px auto 0;
-  }
-  button:hover {
-    background-color: #234e8c;
-  }
-</style>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -109,6 +39,39 @@
 
   <button type="submit">Report Incident</button>
 </form>
+
+<section class="panel" id="homeView">
+  <h2>Reported Incidents</h2>
+
+  <div class="search-row">
+    <label for="searchBox" class="sr-only">Search incidents</label>
+    <input type="text" id="searchBox" placeholder="Search by route or location">
+    <button type="button" id="searchBtn">Search</button>
+    <button type="button" id="clearSearchBtn" class="btn-secondary">Clear</button>
+  </div>
+
+  <!-- Exactly one of these four is visible at a time. -->
+  <div id="listLoading" class="state state-loading" hidden>
+    <span class="spinner"></span>Loading incidents…
+  </div>
+
+  <div id="listEmpty" class="state state-empty" hidden>
+    No incidents to show.
+  </div>
+
+  <div id="listError" class="state state-error" hidden>
+    <strong>Could not load incidents.</strong>
+    <div id="listErrorDetail"></div>
+    <button type="button" id="retryBtn">Try again</button>
+  </div>
+
+  <ul id="incidentList" hidden></ul>
+
+  <div class="actions">
+    <button type="button" id="updateFirstBtn">Update incident #1</button>
+    <button type="button" id="deleteHighestBtn" class="btn-secondary">Delete newest</button>
+  </div>
+</section>
 
 <script src="hw1.js"></script>
 </body>

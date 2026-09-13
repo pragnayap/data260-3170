@@ -1,0 +1,70 @@
+{
+  "model": "qwen3:8b",
+  "rebuilt_from": "reports/hw02/raw/runs.jsonl",
+  "rebuilt_at": "2026-09-12T07:42:15Z",
+  "total_runs": 75,
+  "schema_validation": {
+    "runs": 30,
+    "turn_ceiling": 8,
+    "outcomes": {
+      "valid_first_attempt": {
+        "count": 30,
+        "mean_latency_ms": 10862.3
+      },
+      "valid_after_1_retry": {
+        "count": 0,
+        "mean_latency_ms": null
+      },
+      "valid_after_2plus_retries": {
+        "count": 0,
+        "mean_latency_ms": null
+      },
+      "hit_turn_ceiling": {
+        "count": 0,
+        "mean_latency_ms": null
+      }
+    }
+  },
+  "ceiling_comparison": {
+    "2": {
+      "runs": 20,
+      "completed": 0,
+      "completion_rate": 0.0,
+      "mean_latency_ms": 8795.8,
+      "median_latency_ms": 8558.0,
+      "mean_planner_attempts": 1
+    },
+    "10": {
+      "runs": 20,
+      "completed": 20,
+      "completion_rate": 1.0,
+      "mean_latency_ms": 10501.5,
+      "median_latency_ms": 10308.0,
+      "mean_planner_attempts": 1
+    }
+  },
+  "adversarial": {
+    "case_id": "adversarial_input",
+    "runs": 5,
+    "hit_ceiling_count": 5,
+    "hit_ceiling_rate": 1.0,
+    "outcomes": {
+      "valid_first_attempt": {
+        "count": 5,
+        "mean_latency_ms": 155926
+      },
+      "valid_after_1_retry": {
+        "count": 0,
+        "mean_latency_ms": null
+      },
+      "valid_after_2plus_retries": {
+        "count": 0,
+        "mean_latency_ms": null
+      },
+      "hit_turn_ceiling": {
+        "count": 0,
+        "mean_latency_ms": null
+      }
+    }
+  }
+}

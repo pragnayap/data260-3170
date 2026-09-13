@@ -1,0 +1,50 @@
+--- NODE: Supervisor (turn 1/6) ---
+    router -> planner (no proposal yet)
+--- NODE: Planner ---
+[turn 1] input_tokens=153 output_tokens=47 total_tokens=200
+    valid=True
+--- NODE: Supervisor (turn 2/6) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+    issues=1 (forced)
+--- NODE: Supervisor (turn 3/6) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 2] input_tokens=202 output_tokens=39 total_tokens=241
+    valid=True
+--- NODE: Supervisor (turn 4/6) ---
+    router -> reviewer (proposal not yet reviewed)
+--- NODE: Reviewer ---
+    issues=1 (forced)
+--- NODE: Supervisor (turn 5/6) ---
+    router -> planner (1 reviewer issues)
+--- NODE: Planner ---
+[turn 3] input_tokens=202 output_tokens=39 total_tokens=241
+    valid=True
+--- NODE: Supervisor (turn 6/6) ---
+    router -> END (hit turn ceiling 6)
+{
+  "valid": true,
+  "reviewed_clean": false,
+  "succeeded": false,
+  "planner_attempts": 3,
+  "schema_retries": 0,
+  "turn_count": 6,
+  "turn_ceiling": 6,
+  "hit_ceiling": true,
+  "tags": [
+    "public transportation delay",
+    "bus service disruption",
+    "downtown transit issues"
+  ],
+  "summary": "Bus Line 22 delayed 40 minutes with no prior notice at Downtown Transit Center.",
+  "validation_history": [],
+  "issue_history": [
+    "[forced] Reviewer set to always object (Part 3 Step 6 loop test).",
+    "[forced] Reviewer set to always object (Part 3 Step 6 loop test)."
+  ],
+  "reviewer_issues": [],
+  "latency_ms": 30222
+}
+
+[exit] turns=3 cumulative_input_tokens=557 cumulative_output_tokens=125 cumulative_total_tokens=682

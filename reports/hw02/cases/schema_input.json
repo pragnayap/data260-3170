@@ -1,0 +1,8 @@
+{
+  "case_id": "schema_input",
+  "frozen_at": "2026-09-12",
+  "note": "Fixed input for HW2 Part 4.3 (30 runs) and 4.4 (ceiling 2 vs 10). Ordinary single-topic transit incident, matching the DOMAIN_ID=2 transit-incident domain from HW1.",
+  "title": "Delayed Line 22 bus at Downtown Transit Center",
+  "content": "The 7:15am Line 22 bus never arrived at Downtown Transit Center. About twenty riders waited forty minutes in the rain with no announcement on the platform display, and several left to find another route to work.",
+  "email": "rider@example.com"
+}
