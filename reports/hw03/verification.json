@@ -1,7 +1,7 @@
 {
   "homework": "HW3",
   "sid4": 3170,
-  "commit_hash": "0745fee77891a53dd00368ba30b4c42f6f90ceb6",
+  "commit_hash": "db0750624e7c36ed8249d4f52a3b2b7964c708ef",
   "configuration": {
     "port_base": 8470,
     "prefix": "s3170",
@@ -11,10 +11,10 @@
   },
   "seed": 3170,
   "verify_seed": 263170,
-  "generated_at": "2026-09-21T19:40:10Z",
-  "total_checks": 50,
-  "passed": 48,
-  "failed": 2,
+  "generated_at": "2026-09-21T19:48:19Z",
+  "total_checks": 75,
+  "passed": 75,
+  "failed": 0,
   "skipped": 0,
   "checks": [
     {
@@ -151,9 +151,153 @@
     },
     {
       "check": "server:port_free",
-      "passed": false,
+      "passed": true,
       "skipped": false,
-      "detail": "something is already listening on 8470; stop it and re-run"
+      "detail": "8470"
+    },
+    {
+      "check": "server:started",
+      "passed": true,
+      "skipped": false,
+      "detail": "uvicorn app:app on 8470"
+    },
+    {
+      "check": "route:home_200",
+      "passed": true,
+      "skipped": false,
+      "detail": "GET / -> 200"
+    },
+    {
+      "check": "route:dashboard_anonymous_redirects",
+      "passed": true,
+      "skipped": false,
+      "detail": "303 -> /login?expired=1"
+    },
+    {
+      "check": "route:login_200",
+      "passed": true,
+      "skipped": false,
+      "detail": "GET /login -> 200"
+    },
+    {
+      "check": "auth:bad_password_rejected",
+      "passed": true,
+      "skipped": false,
+      "detail": "-> 401"
+    },
+    {
+      "check": "auth:bad_password_shows_alert",
+      "passed": true,
+      "skipped": false,
+      "detail": "Bootstrap alert rendered on the login page"
+    },
+    {
+      "check": "auth:bad_password_issues_no_session",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "auth:unknown_user_same_response",
+      "passed": true,
+      "skipped": false,
+      "detail": "does not reveal which half was wrong"
+    },
+    {
+      "check": "auth:good_login_redirects",
+      "passed": true,
+      "skipped": false,
+      "detail": "303 -> /dashboard"
+    },
+    {
+      "check": "auth:session_cookie_issued",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "cookie:httponly",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "cookie:secure",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "cookie:samesite",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "cookie:all_three_attributes",
+      "passed": true,
+      "skipped": false,
+      "detail": "s3170_session=eyJzaWQiOiAiekRDQVRxcml2TGJndlRfYWtDUWM3LVdqNTlGMmJmN0gifQ==.arGJ_g.bBffZRsHraXYfO7pAztmaogQpbw; path=/; M"
+    },
+    {
+      "check": "cookie:header_captured_to_file",
+      "passed": true,
+      "skipped": false,
+      "detail": "reports/hw03/raw/set_cookie_header.txt"
+    },
+    {
+      "check": "route:dashboard_authenticated_200",
+      "passed": true,
+      "skipped": false,
+      "detail": "GET /dashboard with session -> 200"
+    },
+    {
+      "check": "dashboard:greets_user",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "route:logout_redirects",
+      "passed": true,
+      "skipped": false,
+      "detail": "303 -> /"
+    },
+    {
+      "check": "session:logged_out_cookie_cannot_reach_dashboard",
+      "passed": true,
+      "skipped": false,
+      "detail": "replayed a valid signed cookie after logout -> 303"
+    },
+    {
+      "check": "session:relogin_ok",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "session:live_before_timeout",
+      "passed": true,
+      "skipped": false,
+      "detail": "-> 200"
+    },
+    {
+      "check": "session:idle_timeout_blocks_dashboard",
+      "passed": true,
+      "skipped": false,
+      "detail": "after 3s idle -> 303 /login?expired=1"
+    },
+    {
+      "check": "hw2:api_still_works",
+      "passed": true,
+      "skipped": false,
+      "detail": "HW2 REST API unaffected by the HW3 changes"
+    },
+    {
+      "check": "hw2:form_moved_to_incidents",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
     },
     {
       "check": "file_exists:fetch_corpus",
@@ -265,9 +409,15 @@
     },
     {
       "check": "git:questions_committed",
-      "passed": false,
+      "passed": true,
       "skipped": false,
-      "detail": "reports/hw03/questions.yaml has no commit yet -- commit it BEFORE running retrieval"
+      "detail": "2026-09-21T19:42:41+00:00"
+    },
+    {
+      "check": "git:questions_committed_before_results",
+      "passed": true,
+      "skipped": false,
+      "detail": "questions 1790019761 vs results 1790019761"
     },
     {
       "check": "raw:retrieval_rows",

@@ -1,0 +1,93 @@
+.venv/bin/python code/verify_hw03.py
+==============================================================================
+HW3 verification  |  SID4 3170  PORT_BASE 8470  PREFIX s3170
+SEED 3170  VERIFY_SEED 263170  DOMAIN_ID 2 (municipal transit incidents)
+==============================================================================
+
+Section 0 - configuration
+  [PASS] config:port_base -- 8470
+  [PASS] config:prefix -- s3170
+  [PASS] config:seed -- 3170
+  [PASS] config:verify_seed -- 263170
+  [PASS] config:domain_id -- 2
+
+Part 1 - files and structure
+  [PASS] file_exists:auth_py -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/auth.py
+  [PASS] file_exists:app_py -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/app.py
+  [PASS] file_exists:template_base -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/templates/base.html
+  [PASS] file_exists:template_home -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/templates/home.html
+  [PASS] file_exists:template_login -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/templates/login.html
+  [PASS] file_exists:template_dashboard -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/templates/dashboard.html
+  [PASS] compiles:auth_py
+  [PASS] compiles:app_py
+  [PASS] app:uses_session_middleware
+  [PASS] app:includes_auth_router
+  [PASS] auth:uses_apirouter -- routes are handled separately in a router
+  [PASS] auth:no_plaintext_passwords_in_store
+  [PASS] auth:server_side_revocation -- signed cookies alone cannot be revoked on logout
+  [PASS] bootstrap:stylesheet_linked
+  [PASS] bootstrap:navbar
+  [PASS] bootstrap:alert_on_login
+  [PASS] bootstrap:cards
+
+Part 1 - live auth flow on port 8470
+  [PASS] server:port_free -- 8470
+  [PASS] server:started -- uvicorn app:app on 8470
+  [PASS] route:home_200 -- GET / -> 200
+  [PASS] route:dashboard_anonymous_redirects -- 303 -> /login?expired=1
+  [PASS] route:login_200 -- GET /login -> 200
+  [PASS] auth:bad_password_rejected -- -> 401
+  [PASS] auth:bad_password_shows_alert -- Bootstrap alert rendered on the login page
+  [PASS] auth:bad_password_issues_no_session
+  [PASS] auth:unknown_user_same_response -- does not reveal which half was wrong
+  [PASS] auth:good_login_redirects -- 303 -> /dashboard
+  [PASS] auth:session_cookie_issued
+  [PASS] cookie:httponly
+  [PASS] cookie:secure
+  [PASS] cookie:samesite
+  [PASS] cookie:all_three_attributes -- s3170_session=eyJzaWQiOiAiekRDQVRxcml2TGJndlRfYWtDUWM3LVdqNTlGMmJmN0gifQ==.arGJ_g.bBffZRsHraXYfO7pAztmaogQpbw; path=/; M
+  [PASS] cookie:header_captured_to_file -- reports/hw03/raw/set_cookie_header.txt
+  [PASS] route:dashboard_authenticated_200 -- GET /dashboard with session -> 200
+  [PASS] dashboard:greets_user
+  [PASS] route:logout_redirects -- 303 -> /
+  [PASS] session:logged_out_cookie_cannot_reach_dashboard -- replayed a valid signed cookie after logout -> 303
+  [PASS] session:relogin_ok
+  [PASS] session:live_before_timeout -- -> 200
+  [PASS] session:idle_timeout_blocks_dashboard -- after 3s idle -> 303 /login?expired=1
+  [PASS] hw2:api_still_works -- HW2 REST API unaffected by the HW3 changes
+  [PASS] hw2:form_moved_to_incidents
+
+Part 2 - corpus and retrieval artefacts
+  [PASS] file_exists:fetch_corpus -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/fetch_corpus.py
+  [PASS] compiles:fetch_corpus
+  [PASS] file_exists:run_rag_chunking -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/run_rag_chunking.py
+  [PASS] compiles:run_rag_chunking
+  [PASS] file_exists:summarize_rag_metrics -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/summarize_rag_metrics.py
+  [PASS] compiles:summarize_rag_metrics
+  [PASS] file_exists:questions_yaml -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw03/questions.yaml
+  [PASS] file_exists:sources_md -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw03/SOURCES.md
+  [PASS] file_exists:corpus_manifest -- /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw03/CORPUS_MANIFEST.json
+  [PASS] corpus:present -- 8 files
+  [PASS] corpus:size_over_200kb -- 4,396,156 bytes (4293.1 KB), floor 204,800
+  [PASS] corpus:hashes_match_manifest -- 8 documents verified
+  [PASS] manifest:records_sha256
+  [PASS] questions:at_least_five -- 5 questions
+  [PASS] questions:have_expected_answers
+  [PASS] questions:have_expected_source_files
+  [PASS] questions:at_least_two_single_source -- 4 marked single_source
+  [PASS] questions:expected_files_exist_in_corpus -- all present
+  [PASS] git:questions_committed -- 2026-09-21T19:42:41+00:00
+  [PASS] git:questions_committed_before_results -- questions 1790019761 vs results 1790019761
+  [PASS] raw:retrieval_rows -- 75 rows
+  [PASS] raw:three_techniques -- semantic, sentence, token
+  [PASS] raw:csv_present
+  [PASS] raw:graded_embed_model -- embed_model=sentence-transformers/all-MiniLM-L6-v2
+  [PASS] metrics:written -- 174 lines
+  [PASS] metrics:no_placeholders
+  [PASS] metrics:confident_miss_found -- the assignment requires at least one confidently-wrong retrieval
+  [PASS] git:hw3_tag_present -- hw3
+
+==============================================================================
+75 passed, 0 failed, 0 skipped (of 75 checks)
+wrote reports/hw03/verification.json
+==============================================================================

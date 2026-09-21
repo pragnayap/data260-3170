@@ -14,7 +14,7 @@
 
 corpus: data/corpus
 top_k: 5
-embed_model: sentence-transformers/all-MiniLM-L6-v2
+
 
 questions:
 
