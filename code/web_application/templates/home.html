@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Home &middot; Transit Incident Desk{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-10">
+
+    <div class="card shadow-sm border-0 mb-4">
+      <div class="card-body p-4 p-md-5">
+        <h1 class="card-title h2 mb-3">Municipal Transit Incident Desk</h1>
+        <p class="lead text-body-secondary mb-4">
+          Internal reporting console for delays, mechanical failures, collisions
+          and safety hazards across the municipal bus and rail network.
+          Incident records are restricted to authorised transit staff.
+        </p>
+
+        {% if user %}
+          <div class="alert alert-success d-flex align-items-center" role="alert">
+            <div>
+              You are signed in as <strong>{{ user.display_name }}</strong> ({{ user.role }}).
+            </div>
+          </div>
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="/dashboard" class="btn btn-primary">Go to dashboard</a>
+            <a href="/logout" class="btn btn-outline-secondary">Log out</a>
+          </div>
+        {% else %}
+          <div class="alert alert-info" role="alert">
+            You are not signed in. The incident dashboard is a protected route.
+          </div>
+          <a href="/login" class="btn btn-warning btn-lg">Log in to continue</a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h2 class="h6 text-uppercase text-body-secondary">Delay</h2>
+            <p class="card-text small mb-0">Service running behind schedule on a bus or rail line.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h2 class="h6 text-uppercase text-body-secondary">Mechanical failure</h2>
+            <p class="card-text small mb-0">Vehicle breakdown, door fault, or equipment malfunction.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h2 class="h6 text-uppercase text-body-secondary">Safety hazard</h2>
+            <p class="card-text small mb-0">Blocked platform, broken signal, or other unsafe condition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

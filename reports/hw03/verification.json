@@ -1,0 +1,321 @@
+{
+  "homework": "HW3",
+  "sid4": 3170,
+  "commit_hash": "0745fee77891a53dd00368ba30b4c42f6f90ceb6",
+  "configuration": {
+    "port_base": 8470,
+    "prefix": "s3170",
+    "domain_id": 2,
+    "domain": "Municipal Transit Incidents",
+    "idle_timeout_used_in_test_s": 3
+  },
+  "seed": 3170,
+  "verify_seed": 263170,
+  "generated_at": "2026-09-21T19:40:10Z",
+  "total_checks": 50,
+  "passed": 48,
+  "failed": 2,
+  "skipped": 0,
+  "checks": [
+    {
+      "check": "config:port_base",
+      "passed": true,
+      "skipped": false,
+      "detail": "8470"
+    },
+    {
+      "check": "config:prefix",
+      "passed": true,
+      "skipped": false,
+      "detail": "s3170"
+    },
+    {
+      "check": "config:seed",
+      "passed": true,
+      "skipped": false,
+      "detail": "3170"
+    },
+    {
+      "check": "config:verify_seed",
+      "passed": true,
+      "skipped": false,
+      "detail": "263170"
+    },
+    {
+      "check": "config:domain_id",
+      "passed": true,
+      "skipped": false,
+      "detail": "2"
+    },
+    {
+      "check": "file_exists:auth_py",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/auth.py"
+    },
+    {
+      "check": "file_exists:app_py",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/app.py"
+    },
+    {
+      "check": "file_exists:template_base",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/templates/base.html"
+    },
+    {
+      "check": "file_exists:template_home",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/templates/home.html"
+    },
+    {
+      "check": "file_exists:template_login",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/templates/login.html"
+    },
+    {
+      "check": "file_exists:template_dashboard",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/web_application/templates/dashboard.html"
+    },
+    {
+      "check": "compiles:auth_py",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "compiles:app_py",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "app:uses_session_middleware",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "app:includes_auth_router",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "auth:uses_apirouter",
+      "passed": true,
+      "skipped": false,
+      "detail": "routes are handled separately in a router"
+    },
+    {
+      "check": "auth:no_plaintext_passwords_in_store",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "auth:server_side_revocation",
+      "passed": true,
+      "skipped": false,
+      "detail": "signed cookies alone cannot be revoked on logout"
+    },
+    {
+      "check": "bootstrap:stylesheet_linked",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "bootstrap:navbar",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "bootstrap:alert_on_login",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "bootstrap:cards",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "server:port_free",
+      "passed": false,
+      "skipped": false,
+      "detail": "something is already listening on 8470; stop it and re-run"
+    },
+    {
+      "check": "file_exists:fetch_corpus",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/fetch_corpus.py"
+    },
+    {
+      "check": "compiles:fetch_corpus",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "file_exists:run_rag_chunking",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/run_rag_chunking.py"
+    },
+    {
+      "check": "compiles:run_rag_chunking",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "file_exists:summarize_rag_metrics",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/code/summarize_rag_metrics.py"
+    },
+    {
+      "check": "compiles:summarize_rag_metrics",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "file_exists:questions_yaml",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw03/questions.yaml"
+    },
+    {
+      "check": "file_exists:sources_md",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw03/SOURCES.md"
+    },
+    {
+      "check": "file_exists:corpus_manifest",
+      "passed": true,
+      "skipped": false,
+      "detail": "/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw03/CORPUS_MANIFEST.json"
+    },
+    {
+      "check": "corpus:present",
+      "passed": true,
+      "skipped": false,
+      "detail": "8 files"
+    },
+    {
+      "check": "corpus:size_over_200kb",
+      "passed": true,
+      "skipped": false,
+      "detail": "4,396,156 bytes (4293.1 KB), floor 204,800"
+    },
+    {
+      "check": "corpus:hashes_match_manifest",
+      "passed": true,
+      "skipped": false,
+      "detail": "8 documents verified"
+    },
+    {
+      "check": "manifest:records_sha256",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "questions:at_least_five",
+      "passed": true,
+      "skipped": false,
+      "detail": "5 questions"
+    },
+    {
+      "check": "questions:have_expected_answers",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "questions:have_expected_source_files",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "questions:at_least_two_single_source",
+      "passed": true,
+      "skipped": false,
+      "detail": "4 marked single_source"
+    },
+    {
+      "check": "questions:expected_files_exist_in_corpus",
+      "passed": true,
+      "skipped": false,
+      "detail": "all present"
+    },
+    {
+      "check": "git:questions_committed",
+      "passed": false,
+      "skipped": false,
+      "detail": "reports/hw03/questions.yaml has no commit yet -- commit it BEFORE running retrieval"
+    },
+    {
+      "check": "raw:retrieval_rows",
+      "passed": true,
+      "skipped": false,
+      "detail": "75 rows"
+    },
+    {
+      "check": "raw:three_techniques",
+      "passed": true,
+      "skipped": false,
+      "detail": "semantic, sentence, token"
+    },
+    {
+      "check": "raw:csv_present",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "raw:graded_embed_model",
+      "passed": true,
+      "skipped": false,
+      "detail": "embed_model=sentence-transformers/all-MiniLM-L6-v2"
+    },
+    {
+      "check": "metrics:written",
+      "passed": true,
+      "skipped": false,
+      "detail": "174 lines"
+    },
+    {
+      "check": "metrics:no_placeholders",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "metrics:confident_miss_found",
+      "passed": true,
+      "skipped": false,
+      "detail": "the assignment requires at least one confidently-wrong retrieval"
+    },
+    {
+      "check": "git:hw3_tag_present",
+      "passed": true,
+      "skipped": false,
+      "detail": "hw3"
+    }
+  ]
+}

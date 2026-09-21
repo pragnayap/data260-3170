@@ -1,0 +1,84 @@
+{
+  "seed": 3170,
+  "verify_seed": 263170,
+  "embed_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "offline_embedding_run": false,
+  "top_k": 5,
+  "generated_at": "2026-09-21T10:57:00-0700",
+  "techniques": [
+    {
+      "technique": "token",
+      "parser": "TokenTextSplitter",
+      "parser_config": {
+        "chunk_size": 512,
+        "chunk_overlap": 64
+      },
+      "n_chunks": 544,
+      "avg_chunk_len_chars": 1980.5,
+      "avg_chunk_len_tokens_est": 361.3,
+      "min_chunk_len_chars": 197,
+      "max_chunk_len_chars": 3506,
+      "build_seconds": 1.88,
+      "embed_seconds": 29.66,
+      "per_file_chunk_counts": {
+        "ecfr_49cfr673_agency_safety_plans.txt": 18,
+        "ecfr_49cfr674_state_safety_oversight.txt": 19,
+        "fr_2023_ptasp_proposed_rule.txt": 64,
+        "fr_2024_general_directive_24_1_assaults.txt": 63,
+        "fr_2024_national_transit_safety_plan.txt": 35,
+        "fr_2024_ptasp_final_rule.txt": 198,
+        "ntsb_rir2207_sacramento_light_rail_collision.pdf": 63,
+        "ntsb_rir2315_wmata_rosslyn_derailment.pdf": 84
+      }
+    },
+    {
+      "technique": "semantic",
+      "parser": "SemanticSplitterNodeParser",
+      "parser_config": {
+        "buffer_size": 2,
+        "breakpoint_percentile_threshold": 95
+      },
+      "n_chunks": 442,
+      "avg_chunk_len_chars": 2146.5,
+      "avg_chunk_len_tokens_est": 390.7,
+      "min_chunk_len_chars": 3,
+      "max_chunk_len_chars": 51993,
+      "build_seconds": 699.84,
+      "embed_seconds": 22.87,
+      "per_file_chunk_counts": {
+        "ecfr_49cfr673_agency_safety_plans.txt": 12,
+        "ecfr_49cfr674_state_safety_oversight.txt": 13,
+        "fr_2023_ptasp_proposed_rule.txt": 38,
+        "fr_2024_general_directive_24_1_assaults.txt": 36,
+        "fr_2024_national_transit_safety_plan.txt": 22,
+        "fr_2024_ptasp_final_rule.txt": 126,
+        "ntsb_rir2207_sacramento_light_rail_collision.pdf": 82,
+        "ntsb_rir2315_wmata_rosslyn_derailment.pdf": 113
+      }
+    },
+    {
+      "technique": "sentence",
+      "parser": "SentenceWindowNodeParser",
+      "parser_config": {
+        "window_size": 3
+      },
+      "n_chunks": 6008,
+      "avg_chunk_len_chars": 157.9,
+      "avg_chunk_len_tokens_est": 28.3,
+      "min_chunk_len_chars": 2,
+      "max_chunk_len_chars": 3508,
+      "build_seconds": 2.03,
+      "embed_seconds": 510.16,
+      "per_file_chunk_counts": {
+        "ecfr_49cfr673_agency_safety_plans.txt": 217,
+        "ecfr_49cfr674_state_safety_oversight.txt": 229,
+        "fr_2023_ptasp_proposed_rule.txt": 734,
+        "fr_2024_general_directive_24_1_assaults.txt": 684,
+        "fr_2024_national_transit_safety_plan.txt": 415,
+        "fr_2024_ptasp_final_rule.txt": 2485,
+        "ntsb_rir2207_sacramento_light_rail_collision.pdf": 554,
+        "ntsb_rir2315_wmata_rosslyn_derailment.pdf": 690
+      }
+    }
+  ]
+}

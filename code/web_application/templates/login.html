@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Log in &middot; Transit Incident Desk{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-7 col-lg-5">
+
+    {% if alert %}
+      <div class="alert alert-{{ alert_kind|default('danger') }} alert-dismissible fade show" role="alert">
+        {{ alert }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endif %}
+
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4 p-md-5">
+        <h1 class="h4 mb-1">Staff sign-in</h1>
+        <p class="text-body-secondary small mb-4">
+          Authorised transit operations staff only.
+        </p>
+
+        <form method="post" action="/login">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username"
+                   value="{{ username|default('') }}" autocomplete="username"
+                   required autofocus>
+          </div>
+          <div class="mb-4">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password"
+                   autocomplete="current-password" required>
+          </div>
+          <button type="submit" class="btn btn-warning w-100">Log in</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

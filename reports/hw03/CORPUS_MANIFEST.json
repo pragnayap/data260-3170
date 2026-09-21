@@ -1,0 +1,111 @@
+{
+  "corpus_name": "Municipal Transit Incidents (DOMAIN_ID 2)",
+  "prefix": "s3170",
+  "generated_by": "code/fetch_corpus.py",
+  "generated_at": "2026-09-21T17:44:55+00:00",
+  "corpus_dir": "data/corpus",
+  "document_count": 8,
+  "total_bytes": 4396156,
+  "total_kb": 4293.1,
+  "minimum_required_bytes": 204800,
+  "meets_minimum": true,
+  "hash_algorithm": "sha256",
+  "documents": [
+    {
+      "filename": "ecfr_49cfr673_agency_safety_plans.txt",
+      "title": "49 CFR Part 673 - Public Transportation Agency Safety Plans",
+      "publisher": "Electronic Code of Federal Regulations (eCFR)",
+      "source_url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-VI/part-673",
+      "retrieved_url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-VI/part-673",
+      "access_date": "2026-09-21",
+      "media_type": "text/plain",
+      "bytes": 38152,
+      "sha256": "7abb2e02081dbecd7b3f6224820ab235b4303d3ad323311495f02f05c94fac34",
+      "why_included": "Defines what a transit agency's safety plan must contain, including the safety risk management and safety assurance processes."
+    },
+    {
+      "filename": "ecfr_49cfr674_state_safety_oversight.txt",
+      "title": "49 CFR Part 674 - State Safety Oversight",
+      "publisher": "Electronic Code of Federal Regulations (eCFR)",
+      "source_url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-VI/part-674",
+      "retrieved_url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-VI/part-674",
+      "access_date": "2026-09-21",
+      "media_type": "text/plain",
+      "bytes": 38462,
+      "sha256": "f57a0b3665380da241e6c49d781c95e83da83e6aa116d03b66ad1622d218d975",
+      "why_included": "Defines how states oversee rail transit safety, including the accident notification and investigation duties after an incident."
+    },
+    {
+      "filename": "fr_2024_ptasp_final_rule.txt",
+      "title": "Public Transportation Agency Safety Plans - Final Rule (2024)",
+      "publisher": "Federal Register / Federal Transit Administration",
+      "source_url": "https://www.federalregister.gov/d/2024-07514",
+      "retrieved_url": "2024-07514",
+      "access_date": "2026-09-21",
+      "media_type": "text/plain",
+      "bytes": 370003,
+      "sha256": "2bf7cc88b55ccec8e93dde582401f065e6ebb7b2379914d9767473564ba7f40a",
+      "why_included": "The final rule preamble; long analytical prose with compliance deadlines and cost estimates."
+    },
+    {
+      "filename": "fr_2023_ptasp_proposed_rule.txt",
+      "title": "Public Transportation Agency Safety Plans - Notice of Proposed Rulemaking (2023)",
+      "publisher": "Federal Register / Federal Transit Administration",
+      "source_url": "https://www.federalregister.gov/d/2023-08777",
+      "retrieved_url": "2023-08777",
+      "access_date": "2026-09-21",
+      "media_type": "text/plain",
+      "bytes": 114254,
+      "sha256": "94d4df7adafdd365b989db823ac08dba4c648084c5591c3b5440374a5063aeb3",
+      "why_included": "The proposal that preceded the final rule; overlaps it heavily, which is useful for producing confidently-scored wrong retrievals."
+    },
+    {
+      "filename": "fr_2024_national_transit_safety_plan.txt",
+      "title": "National Public Transportation Safety Plan (2024)",
+      "publisher": "Federal Register / Federal Transit Administration",
+      "source_url": "https://www.federalregister.gov/d/2024-07392",
+      "retrieved_url": "2024-07392",
+      "access_date": "2026-09-21",
+      "media_type": "text/plain",
+      "bytes": 71612,
+      "sha256": "915b6603262b20f8b2b4eff950b5b95e26dd4727973ff083042cf4594c4e3ada",
+      "why_included": "National safety performance measures for transit, including the fatality, injury, safety-event and reliability measures."
+    },
+    {
+      "filename": "fr_2024_general_directive_24_1_assaults.txt",
+      "title": "General Directive 24-1: Required Actions Regarding Assaults on Transit Workers",
+      "publisher": "Federal Register / Federal Transit Administration",
+      "source_url": "https://www.federalregister.gov/d/2024-21923",
+      "retrieved_url": "2024-21923",
+      "access_date": "2026-09-21",
+      "media_type": "text/plain",
+      "bytes": 125339,
+      "sha256": "ec2cb20a91c1763c7ff324ec2b0b8f1f8786e8714098110734d2eb5cbe2b09d1",
+      "why_included": "A short, highly specific directive; its requirements appear in no other document in the corpus."
+    },
+    {
+      "filename": "ntsb_rir2207_sacramento_light_rail_collision.pdf",
+      "title": "NTSB/RIR-22/07 - Collision Between Sacramento Regional Transit District Light Rail Vehicles",
+      "publisher": "National Transportation Safety Board",
+      "source_url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/RIR2207.pdf",
+      "retrieved_url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/RIR2207.pdf",
+      "access_date": "2026-09-21",
+      "media_type": "application/pdf",
+      "bytes": 1616498,
+      "sha256": "37df3d06966141910455fa168ea9664a19fcad2b9273f82943fae7e8ec0821f4",
+      "why_included": "A complete single-incident investigation: date, milepost, injury count and probable cause exist only in this document."
+    },
+    {
+      "filename": "ntsb_rir2315_wmata_rosslyn_derailment.pdf",
+      "title": "NTSB/RIR-23/15 - Derailment of Washington Metropolitan Area Transit Authority Train 407",
+      "publisher": "National Transportation Safety Board",
+      "source_url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/RIR2315.pdf",
+      "retrieved_url": "https://www.ntsb.gov/investigations/AccidentReports/Reports/RIR2315.pdf",
+      "access_date": "2026-09-21",
+      "media_type": "application/pdf",
+      "bytes": 2021836,
+      "sha256": "249c0d2c3f62d470539fde79668b3aec97007760b257360bba718aca16262253",
+      "why_included": "A second single-incident investigation with a mechanical (rather than procedural) probable cause, for contrast."
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+# --- HW1 / HW2 ---
 fastapi==0.109.0
 uvicorn[standard]==0.27.0
 pydantic==2.12.5
@@ -6,3 +7,45 @@ langchain
 langchain-community
 langchain-ollama
 langgraph
+
+# --- HW3 Part 1: session auth + server-rendered templates ---
+jinja2==3.1.4
+itsdangerous==2.2.0
+python-multipart==0.0.9
+
+# --- HW3 Part 2: retrieval-only RAG ---
+#
+# INTEL MAC PINS. PyTorch dropped x86_64 macOS support after 2.2.2, so this
+# machine cannot go above it, and everything that sits on torch has to be held
+# back to match. Verified to resolve together:
+#     torch 2.2.2 + sentence-transformers 3.0.1 + transformers 4.44.2 + numpy 1.26.4
+# llama-index-embeddings-huggingface only requires sentence-transformers>=2.6.1,
+# so 3.0.1 satisfies it. Do NOT bump sentence-transformers to 3.3.x here: it
+# pulls a torch newer than 2.2.2 and the install fails on this hardware.
+torch==2.2.2
+sentence-transformers==3.0.1
+transformers==4.44.2
+numpy<2
+
+llama-index==0.12.10
+llama-index-embeddings-huggingface==0.5.1
+
+# In the assignment's setup list. It installs fine on this machine as
+# faiss_cpu-1.15.1-cp310-abi3-macosx_15_0_x86_64.whl (an abi3 wheel, so one
+# build serves 3.10+). Left unpinned so pip picks the wheel matching the
+# platform.
+#
+# Note that nothing in this homework actually calls faiss: the handout
+# specifies an in-memory vector store for the indexes, so the pipeline uses
+# LlamaIndex's SimpleVectorStore throughout. faiss is installed to satisfy the
+# setup step, not because it is on the retrieval path.
+faiss-cpu
+
+pandas
+PyYAML==6.0.2
+
+# PDF reading for the two NTSB reports. NTSB publishes RIR2315.pdf with AES
+# encryption (empty user password); pypdf refuses to open it without
+# cryptography, and the retrieval run dies on that file.
+pypdf==5.1.0
+cryptography>=42.0

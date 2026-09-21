@@ -1,0 +1,1176 @@
+[Federal Register Volume 89, Number 70 (Wednesday, April 10, 2024)]
+[Notices]
+[Pages 25316-25326]
+From the Federal Register Online via the Government Publishing Office [www.gpo.gov]
+[FR Doc No: 2024-07392]
+
+-----------------------------------------------------------------------
+
+DEPARTMENT OF TRANSPORTATION
+
+Federal Transit Administration
+
+[Docket No. FTA-2023-0010]
+
+National Public Transportation Safety Plan
+
+AGENCY: Federal Transit Administration (FTA), Department of
+Transportation (DOT).
+
+ACTION: Notice of availability and response to comments.
+
+-----------------------------------------------------------------------
+
+SUMMARY: The Federal Transit Administration (FTA) has placed into the
+docket and on its website the final National Public Transportation
+Safety Plan (National Safety Plan) that is intended to guide the
+national effort to manage safety risk in our nation's public
+transportation systems. The updated National Safety Plan establishes
+performance measures for Public Transportation Agency Safety Plans
+(PTASP), including measures for safety risk reduction programs, to
+improve the safety of public transportation systems that receive FTA
+Federal financial assistance. Transit agencies will set performance
+targets based on the measures in order to monitor and assess the safety
+performance of their public transportation systems.
+
+DATES: The applicable date of the National Safety Plan is April 10,
+2024.
+
+FOR FURTHER INFORMATION CONTACT: For program matters, contact Arnebya
+Belton, Office of Transit Safety and Oversight, 202-366-7546 or
+[email protected]. For legal matters, contact Emily Jessup, Office
+of Chief Counsel, (202) 366-8907 or [email protected].
+
+SUPPLEMENTARY INFORMATION:
+
+Availability of Final Plan
+
+    This notice provides responses to comments received on the proposed
+updates to the National Safety Plan and discusses the changes made to
+the National Safety Plan in response. The National Safety Plan itself
+is not included in this notice; instead, an electronic version is
+available on FTA's website, at: https://www.transit.dot.gov/regulations-and-guidance/safety/national-public-transportation-safety-plan, and in the docket, at https://www.regulations.gov/docket/FTA-2023-0010.
+
+Table of Contents
+
+I. Background
+II. Summary of Public Comments and FTA's Responses
+
+[[Page 25317]]
+
+I. Background
+
+    Congress first directed FTA to create and implement a National
+Public Transportation Safety Plan (National Safety Plan) under the
+Moving Ahead for Progress in the 21st Century (MAP-21) Act (Pub. L.
+112-141), which authorized a new Public Transportation Safety Program
+(Safety Program) at 49 U.S.C. 5329. The Safety Program was reauthorized
+by the Fixing America's Surface Transportation (FAST) Act (Pub. L. 114-
+94) and again by the Bipartisan Infrastructure Law, enacted as the
+Infrastructure Investment and Jobs Act (Pub. L. 117-58).
+    On February 5, 2016, FTA first published a Federal Register notice
+(81 FR 6372) seeking comment on a proposed National Safety Plan.
+Subsequently, on January 18, 2017, FTA published a summary of the final
+changes to the National Safety Plan and responses to comments in the
+Federal Register (82 FR 5628) and published the finalized plan to the
+docket and on FTA's website.
+    On May 31, 2023, FTA published a notice of availability of proposed
+updates to the National Safety Plan and a request for comments (88 FR
+34917). Pursuant to 49 U.S.C. 5329(b), the National Safety Plan
+includes several elements intended to improve the safety of all public
+transportation systems that receive Federal financial assistance under
+49 U.S.C. Chapter 53. The Bipartisan Infrastructure Law identified new
+elements that must be included in the National Safety Plan, including:
+     Safety performance measures related to the PTASP safety
+risk reduction program;
+     In consultation with the Secretary of Health and Human
+Services, precautionary and reactive actions required to ensure public
+and personnel safety and health during an emergency; and
+     Consideration, where appropriate, of performance-based and
+risk-based methodologies.
+    The Bipartisan Infrastructure Law also requires that the minimum
+safety performance standards for public transportation vehicles used in
+revenue operations take into consideration, to the extent practicable,
+innovations in driver assistance technologies and driver protection
+infrastructure, where appropriate, and a reduction in visibility
+impairments that contribute to pedestrian fatalities.
+    This update continues to strengthen FTA's safety program and
+addresses new requirements in the Bipartisan Infrastructure Law to
+further advance transit safety.
+
+II. Summary of Public Comment and FTA's Response
+
+    The public comment period for the proposed update to the National
+Safety Plan closed on July 31, 2023. FTA received 34 comment
+submissions. Excluding two duplicate submissions, received submissions
+from 32 unique commenters, including States, transit agencies, trade
+associations, and individuals. FTA reviewed all the comments and
+thoughtfully considered them when finalizing the National Safety Plan.
+    FTA received several comments that raised issues outside of the
+scope of the proposed National Safety Plan. Because they are outside
+the scope of the proposal, FTA will not respond to those comments in
+this notice.
+    Specifically, FTA received comments on National Transit Database
+(NTD) reporting requirements and FTA's proposals in the Public
+Transportation Agency Safety Plans (PTASP) notice of proposed
+rulemaking (NPRM) published in the Federal Register on April 26, 2023
+(88 FR 25336). FTA appreciates the interest in these areas but is not
+addressing these comments in this notice. Rather, FTA directs
+interested readers to the NTD web page on FTA's website for NTD-related
+information and has addressed comments related to the PTASP NPRM
+through the PTASP final rule, which is a separate regulatory action.
+    While FTA received comments on various aspects of the National
+Safety Plan, FTA is largely finalizing the National Safety Plan as
+proposed. In response to comments received, FTA has revised Chapter III
+of the final National Safety Plan. These revisions are discussed below
+in the summary of public comments and FTA's responses. Comments and
+responses are subdivided by their corresponding sections of the
+National Safety Plan and subject matter.
+
+A. General
+
+1. Applicability
+
+    Comments: Two commenters expressed that the National Safety Plan
+and safety performance measurement requirements should be consistent
+with the applicability of the existing PTASP regulation, which excludes
+recipients that only receive funding under 49 U.S.C. 5310, 49 U.S.C.
+5311, or both (See: 49 CFR 673.1). One of the commenters argued that
+rural and small public transportation providers have limited resources
+and an excellent safety record, and that FTA should limit the burden of
+safety regulations on such providers.
+    One commenter expressed concern that paratransit service appeared
+to be excluded from the National Safety Plan, including with respect to
+safety performance measures and the voluntary standards and recommended
+practices.
+    Response: FTA appreciates the comments regarding the applicability
+of the National Safety Plan to small and rural providers and the
+regulatory burden on such providers. The National Safety Plan is
+intended to be a useful tool for all public transportation systems that
+receive funding under 49 U.S.C. Chapter 53, including small and rural
+providers. FTA notes that only agencies subject to the PTASP regulation
+are required to set targets using the safety performance measures in
+the National Safety Plan. As noted above, the PTASP regulation excludes
+transit agencies that receive funding only under 49 U.S.C. 5310, 49
+U.S.C. 5311, or both. While some voluntary standards and resources
+presented in Chapter III of the National Safety Plan pertain to
+specific modes such as rail transit, transit agencies of all types and
+sizes can refer to the standards and resources presented in the
+National Safety Plan.
+    The National Safety Plan applies to paratransit service. The safety
+performance measures identified in Chapter II apply to paratransit
+service subject to the PTASP regulation, and Chapter III includes
+resources that pertain to paratransit service.
+2. Effective Date
+    Comments: One commenter asked for clarification on when the
+National Safety Plan will go into effect, and whether it will be
+applicable before or after the effective date of FTA's PTASP final
+rule. Another commenter urged FTA to clarify that the safety
+performance measures must be implemented on the applicable date of the
+National Safety Plan. In addition, a commenter asked FTA not to delay
+implementation of the NTD reporting requirements that transit agencies
+and Safety Committees rely on to set performance targets for the new
+safety performance measures.
+    Response: The National Safety Plan is applicable upon today's
+publication in the Federal Register. Per 49 U.S.C. 5329(d)(4)(A), the
+Safety Committee of transit agencies serving a large urbanized area
+must set performance targets for the safety risk reduction program
+using a 3-year rolling average of NTD data. In a Dear Colleague letter
+released on February 17, 2022, FTA communicated that these performance
+targets need not be in place until FTA establishes related performance
+
+[[Page 25318]]
+
+measures through the National Safety Plan (https://www.transit.dot.gov/safety/public-transportation-agency-safety-program/dear-colleague-letter-bipartisan-infrastructure). FTA establishes such performance
+measures through the National Safety Plan finalized today. Therefore,
+FTA expects Safety Committees to set safety performance targets for the
+safety risk reduction program based on the safety risk reduction
+program performance measures in this final National Safety Plan. Per 49
+CFR 673.11(a), FTA expects that transit agencies will revise their
+Agency Safety Plans (ASPs) to address the new performance measures,
+including documenting required safety performance targets, as part of
+their existing annual ASP update process.
+    FTA recognizes that certain transit agencies may not yet have
+reported three years of safety event information to the NTD that
+corresponds to the safety risk reduction program performance measures.
+FTA has addressed this situation in the PTASP final rule.
+    FTA understands that transit agencies and their Safety Committees
+rely on NTD data to set PTASP performance targets, including targets
+for the new performance measures finalized today. In February 2023, FTA
+finalized NTD reporting changes regarding assaults on transit workers
+and fatalities that result from an impact with a bus (88 FR 11506). The
+new NTD requirements took effect for Full Reporters in calendar year
+2023. The reporting requirements take effect for smaller reporters
+beginning in NTD report year 2023.
+3. Safety Management Systems (SMS)
+    Comments: One commenter requested that FTA develop SMS-related
+guidance to support SMS implementation by transit managers and Safety
+Committees. Another commenter recommended that the updated National
+Safety Plan not completely supersede the 2017 version of the plan. It
+argued that the 2017 version includes valuable information,
+particularly related to SMS implementation, that is still useful to
+transit agencies and joint labor-management Safety Committees.
+    Another commenter requested that FTA add guidance to the National
+Safety Plan about how agencies should use the data they collect,
+including how to analyze safety data, use leading indicators to
+identify safety issues, and evaluate the effectiveness of safety
+efforts. It provided two examples of National Transportation Safety
+Board (NTSB) investigations in which agencies lacked the tools or
+processes to use data effectively. The commenter also urged FTA to
+include guidance in the National Safety Plan on Employee Safety
+Reporting Programs (ESRP), noting additional NTSB investigations that
+demonstrated this need.
+    One commenter requested clarification on FTA's rationale for
+omitting ``top-down'' from the definition of SMS in the National Safety
+Plan, noting that their agency understands the ``top-down'' concept to
+be a foundational principle of SMS.
+    Response: Regarding the request that FTA develop SMS-related
+guidance, FTA encourages transit agencies to explore the PTASP
+Technical Assistance Center (PTASP TAC) resource library at https://www.transit.dot.gov/PTASP-TAC to locate existing resources to support a
+transit agency's SMS implementation. These resources include
+information on topics raised by the commenters, such as data analysis
+and ESRP development. FTA will continue to develop and disseminate SMS
+technical assistance as needed through the PTASP TAC and other avenues.
+    Regarding the commenter that recommended against the proposed
+National Safety Plan completely superseding the previous version due to
+the elimination of SMS-related content, FTA notes that the SMS content
+in the original National Safety Plan did not fully reflect the SMS
+requirements in the PTASP rule, which FTA published in 2018. FTA has
+since clarified the SMS requirements, and agencies should reference
+updated materials in the PTASP TAC resource library. As noted above,
+FTA has developed substantial SMS-related guidance and technical
+assistance materials tailored specifically for transit agencies
+implementing an SMS and has made this information available to the
+public through more thorough and comprehensive technical assistance
+materials and SMS documentation published through the PTASP TAC
+resource library. FTA believes that providing guidance via the PTASP
+TAC rather than in the National Safety Plan allows FTA flexibility and
+responsiveness as questions arise related to the implementation of the
+Safety Program and SMS generally.
+    FTA appreciates the comment received regarding the need for
+additional guidance on effective data usage and ESRPs. However, FTA
+does not agree that the National Safety Plan is the best vehicle for
+this guidance because this document is not intended to include detailed
+technical assistance on specific topics, such as ESRPs. Instead, FTA
+will continue developing targeted guidance and technical assistance
+materials focused on specific SMS topics such as performance monitoring
+and measurement, safety performance target setting, and ESRP, and
+publishing such materials through the PTASP TAC resource library.
+    FTA appreciates the comment on the definition of SMS but declines
+to make changes in response. FTA notes that removing the phrase ``top-
+down'' is intended to reflect the multi-directional flow of information
+that is intrinsic to the function of an SMS. Transit worker safety
+reporting programs and Safety Committees are examples of multi-
+directional information flow throughout the agency.
+
+B. Chapter I: Keeping Safety the Top Priority
+
+1. Data Presentation
+    Comments: One commenter noted the importance of the safety
+performance trends presented in the National Safety Plan and
+recommended that FTA present a deeper dive into the associated data in
+the National Safety Plan, including additional granularity related to
+transit modes, geographical regions, population density, agency size,
+and other factors. This commenter noted in particular that the data on
+transit worker fatalities would benefit from additional context to help
+understand the effectiveness of existing mitigations. The commenter
+asked if FTA could provide additional ongoing analyses of safety
+performance data, including when relevant to FTA's actions to reduce
+safety risk and highlighted FTA's issuance of Special Directives as an
+example. One commenter commented that the data FTA used to prepare the
+charts included in Chapter I displaying safety trends in the transit
+industry is incomplete because the NTD did not previously collect the
+full picture of transit worker assaults.
+    Response: The data presented in Chapter I of the National Safety
+Plan are intended to provide a high-level snapshot of transit industry
+safety performance. FTA publishes more granular data monthly through
+the NTD, including individual event records and summary safety
+analyses, at https://www.transit.dot.gov/ntd/ntd-data. FTA will
+continue to explore additional methods for developing and publishing
+topic-specific safety performance analyses and communicating the data
+that contributes to FTA's actions to reduce safety risk.
+    Regarding transit worker assaults, FTA developed the charts in
+Chapter I based on historical data that was reported to the NTD. As
+transit agencies report to the NTD using the new definitions, FTA will
+update these
+
+[[Page 25319]]
+
+charts using that data in future iterations of the National Safety
+Plan.
+2. Public Transportation Safety Concerns
+    Comments: One commenter expressed support for the inclusion of bus
+and pedestrian collisions as a safety concern and encouraged FTA to
+consider how bus electrification may impact pedestrian safety. Another
+commenter noted that the National Safety Plan does not mention suicides
+and urged FTA to add suicide prevention as a top safety concern in
+Chapter I.
+    Response: FTA appreciates the comments received regarding specific
+safety concerns facing the transit industry that were not included in
+the proposed National Safety Plan. In response to the suggestion
+regarding bus electrification, FTA has added two best practices
+resources developed by FTA to Chapter III of the National Safety Plan
+that address safety concerns related to the electrification of bus
+fleets: ``Safety and Security Certification of Electric Bus Fleets''
+and ``Procuring and Maintaining Battery Electric Buses and Charging
+Systems.''
+    FTA agrees that suicide prevention is an important issue facing the
+transit industry. In December 2022, FTA issued Safety Advisory 22-4:
+Suicide Prevention Signage on Public Transit that recommends transit
+agencies apply best practices for reducing suicide attempts to suicide
+prevention signage and messaging campaigns. While FTA declines to add
+suicide prevention to Chapter I of the National Safety Plan, it has
+added a resource to Chapter III in response to this commenter's
+concerns: ``Mitigations for Trespasser and Suicide Fatalities and
+Injuries.''
+    After consideration of comments received, FTA is finalizing Chapter
+I of the National Safety Plan as proposed.
+
+C. Chapter II: Safety Performance Criteria
+
+1. Definitions
+    Comments: One commenter urged FTA to specify that transit agencies
+should use the revised NTD definition of ``assault on a transit
+worker'' when setting the safety performance target for assault on a
+transit worker. Two commenters expressed concern with the definition of
+``assault on a transit worker'' and its impact on data reporting and
+associated data analyses. A commenter argued that it is difficult to
+apply certain elements of the definition consistently, such as
+determining when an individual acted ``knowingly'' and ``with intent.''
+Another commenter noted that the definition may differ from the
+definition of assault under State law, which may require agencies to
+keep separate records for State law purposes and result in other
+burdens. A commenter requested that FTA work with transit agencies to
+clarify the term.
+    One commenter urged FTA to address consistency with event
+definitions used across FTA programs to ensure performance measurement
+consistency and reduce administrative burden. The commenter stated that
+FTA should not impose safety performance measurement requirements until
+it addresses definitional inconsistencies. One commenter asked what
+definition of ``Safety Event'' transit agencies should use for the
+major event performance measure. One commenter recommended that FTA
+allow individual transit agencies to define what events will be
+included in the major events performance measure, noting that safety
+risk differs at each agency.
+    Response: FTA appreciates the challenges associated with new
+definitions and NTD reporting requirements. FTA confirms that the term
+``assault on a transit worker'' in the National Safety Plan has the
+same definition as in the NTD, which mirrors the statutory definition
+in 49 U.S.C. 5302. Although the definition potentially differs from how
+assault is defined under State law, FTA believes it is critical to
+ensure the definition used in the National Safety Plan, including in
+the performance measurement context, is consistent with the statutory
+and NTD definition. This is because the NTD is the primary source of
+data used for performance target setting. Moreover, Safety Committees
+must set safety risk reduction program performance targets using a 3-
+year rolling average of NTD data, as required by 49 U.S.C.
+5329(d)(4)(A). For additional information regarding the NTD definition
+of ``assault'' and ``assault on a transit worker,'' FTA refers readers
+to the Federal Register notice finalizing the recent NTD Safety and
+Security Reporting requirements (88 FR 11506).
+    FTA appreciates the requests for additional guidance from FTA about
+the definition of ``assault on a transit worker'' and how it should be
+applied. The NTD program serves as FTA's system for collection of
+assaults on transit worker data and ensures all associated reporting
+requirements are clarified, including definitional questions stemming
+from the terms ``knowingly'' and ``with intent'' in the definition of
+``assault on a transit worker.'' Further, the NTD program provides
+guidance on the new assault on a transit worker reporting requirements
+to the NTD reporting community through (1) annual messaging around
+updates to reporting requirements, (2) regular communications with
+reporters (both through the system's blast messaging, and between the
+reporter and their assigned validation analyst), (3) an updated
+Frequently Asked Questions (FAQ) section on the FTA website specific to
+assaults on transit workers, and (4) updates to guidance and training.
+    The NTD program has developed several training opportunities and
+guidance materials to help agencies address the new assault on transit
+worker reporting requirements. The 2023 NTD Safety and Security
+Reporting Policy Manual provides detailed guidance about safety and
+security reporting, including assaults on transit workers. In addition,
+the 2023 safety and security quick reference guides, both for rail and
+non-rail modes, define reportable events and identify reporting
+thresholds. A webinar on 2023 Safety & Security Updates: Reporting
+Assaults on Transit Workers, was provided to the public on April 27,
+2023, and is available for viewing online. Finally, the NTD program
+develops courses pertaining to safety reporting for full reporters
+(rail and non-rail) as well as reduced reporters (see the National
+Transit Institute (NTI) website for schedule--https://www.ntionline.com/events-2/).
+    FTA appreciates the comments received regarding consistency in
+event definitions across FTA programs and will take the need for
+consistency into consideration as it develops its pending safety
+rulemakings. FTA confirms that the major events and major event rate
+safety performance measures include all safety and security major
+events as defined by the NTD. This creates consistent requirements
+across transit agencies and ensures definitional alignment across
+safety programs. For this reason, FTA disagrees that it is necessary to
+delay implementation of the safety performance measures.
+    FTA disagrees with the commenter who suggested transit agencies
+should define what events to include in the major events safety
+performance measures because FTA believes this approach would undercut
+efforts to ensure consistency of performance measurement requirements
+across the industry. FTA's proposed approach is consistent with
+previous PTASP safety performance measurement guidance, which used the
+NTD major event
+
+[[Page 25320]]
+
+definition for the previous safety event performance measures.
+2. Required Safety Performance Measures for All Agencies Subject to the
+PTASP Regulation
+Additional Measures
+    Comments: Several commenters recommended that FTA add required
+safety performance measures in addition to the 14 measures proposed in
+the National Safety Plan. One commenter recommended that FTA add
+measures for the pedestrian collision rate of mobility assistive device
+users and the number of sidewalks, crosswalks, and pedestrian signals
+that are compliant with the Americans with Disabilities Act (ADA).
+Another commenter requested that FTA add safety performance measures
+gauging connectivity and transit agencies' adoption of preventative
+measures and technologies. One commenter urged FTA to include a
+performance measure regarding suicide attempts and deaths.
+    Another commenter recommended that the National Safety Plan should
+include performance measures for the total numbers of collisions,
+transit worker fatalities, and transit worker injuries. The commenter
+expressed concern that only using rate-based performance measures for
+such events could obscure their scope at larger transit agencies. It
+stated that there is no clear distinction explaining why FTA would
+require both total numbers and rates for other performance measures,
+but only rates for those three.
+    Response: FTA considered each of the suggestions regarding
+additional safety performance measures for all transit agencies subject
+to the PTASP regulation. However, FTA declines to adopt the suggestions
+and establishes only the safety performance measures identified in its
+proposal. FTA believes these safety performance measures provide a
+comprehensive look at transit agencies' safety performance, without
+attempting to identify every measure that an agency may select and
+enable each agency to monitor safety performance based on data that is
+collected by the NTD.
+    Many of the measures suggested by commenters, while useful
+measures, are not data points that FTA currently collects through the
+NTD. These include measures recommended by commenters such as:
+pedestrian collision rate of mobility assistive device users; the
+number of sidewalks, crosswalks, and pedestrian signals that are ADA
+compliant; measures gauging connectivity; and technology adoption
+rates. In the final National Safety Plan, FTA is only adding new
+measures that are based on data that agencies currently report to the
+NTD. This approach provides consistency across the industry and helps
+minimize data-related collection burdens.
+    FTA appreciates the recommendation that FTA require transit
+agencies to set safety performance targets for total counts of
+collisions, transit worker fatalities, and transit worker injuries. FTA
+believes that safety issues related to these three areas justify the
+establishment of related safety performance measures for all agencies
+subject to the PTASP regulation. To this end, FTA has established
+performance measures regarding the rates of collisions, transit worker
+fatalities, and transit worker injuries. However, as described in the
+next section below, several commenters expressed concern about the
+burden related to new safety performance measures. FTA believes that
+establishing only rate-based safety performance measures for
+collisions, transit worker fatalities, and transit worker injuries
+strikes a reasonable balance between ensuring that transit agencies are
+monitoring safety performance related to these important issues and
+limiting the burden that setting additional performance targets would
+impose. Therefore, FTA declines to establish safety performance
+measures for total counts of collisions, transit worker fatalities, and
+transit worker injuries. Transit agencies may determine a need to put
+in place additional performance measures, such as total counts of
+collisions, transit worker fatalities and transit worker injuries, and
+to set associated safety performance targets.
+    FTA disagrees that the scope of safety concerns will be obscured at
+large transit agencies by not requiring all agencies to set safety
+performance targets for the total numbers of collisions, transit worker
+fatalities, and transit worker injuries. The safety performance
+measures in the National Safety Plan do not limit visibility into an
+agency's safety performance. Safety data analysis at a transit agency
+should not be limited to safety performance targets. FTA expects that
+transit agencies will use additional contextual data to understand
+safety performance beyond the required safety performance measures and
+safety performance targets.
+    Regarding the proposal to include safety performance measures
+related to suicides, FTA acknowledges that for many transit agencies
+suicide is an important safety concern. FTA notes that suicides are a
+subset of two safety performance measures in the National Safety Plan--
+major events and collisions. FTA also notes that suicide concerns may
+vary significantly across the transit industry based on system type and
+other transit agency operational realities. FTA does not believe it is
+necessary to require all transit agencies to set safety performance
+targets for suicide-related safety performance measures because of this
+varied safety risk and declines to establish suicides as a performance
+measure in the National Safety Plan. However, FTA notes that transit
+agencies may voluntarily establish additional safety performance
+measures, such as suicide counts and rates, and set associated safety
+performance targets based on needs identified through Safety Risk
+Management and Safety Assurance activities.
+Burden
+    Comments: Two commenters expressed concern that the proposed
+increase of safety performance measures for all agencies subject to the
+PTASP regulation from seven to 14 measures would result in increased
+administrative and data reporting burden for transit agencies. Further,
+the commenters urged FTA to consider the burden on specific types of
+providers, such as rail transit providers who must comply with State
+Safety Oversight Agency requirements, and small and medium sized
+transit agencies with limited resources. One commenter stated that rail
+transit agencies operating multiple other modes and serving large
+urbanized areas may be required to have up to 66 performance targets
+across the general and safety risk reduction program performance
+measures. The commenter requested that FTA coordinate with the industry
+on the feasibility of these changes. Another commenter requested that
+FTA offer training, technical assistance, and additional funding to
+assist agencies with compliance.
+    One commenter noted that the Pedestrian Collision Rate and
+Vehicular Collision Rate measures may be particularly burdensome
+because they have not been collected by the NTD in the past.
+    Response: FTA appreciates the potential burden related to
+increasing the number of safety performance measures for all agencies
+subject to the PTASP regulation from seven to 14. FTA has thoroughly
+considered the effects of these measures on different types of
+providers, including small providers and rail transit agencies serving
+large urbanized areas, and has taken these effects into consideration
+when finalizing these performance measures. To reduce data analysis
+
+[[Page 25321]]
+
+burden on transit agencies, FTA has taken care to ensure that all new
+safety performance measures are data points that transit agencies
+report to the NTD on an ongoing basis. As of the 2023 NTD report year,
+agencies track, record, and report this information as part of their
+NTD reporting requirements. Agencies should have access to these
+records internally and may download these data for their agency and
+other transit agencies from the NTD data portal at https://www.transit.dot.gov/ntd/ntd-data. Importantly, FTA also notes that the
+National Safety Plan does not require transit agencies to submit data
+or safety performance targets to FTA. FTA appreciates the comment
+regarding the importance of industry review and feedback regarding
+safety performance measures. FTA sought industry feedback on the
+performance measures by publishing the proposed National Safety Plan in
+the Federal Register for public comment.
+    Regarding the number of safety performance measures for all transit
+agencies subject to the PTASP regulation, FTA agrees with the commenter
+noting that some providers will be required to set more than 14 safety
+performance targets based on these measures. As with existing safety
+performance measurement requirements, transit agencies set safety
+performance targets through PTASP by mode. Through previous guidance,
+FTA has identified three modal groups for PTASP performance target
+setting: fixed route bus, non-fixed route bus, and rail. This means
+that transit agencies that provide service within all three of these
+groups already have been setting 21 safety performance targets per year
+through PTASP based on the performance measures established under the
+2017 National Safety Plan. Based on the safety performance measures
+that FTA is establishing under the new National Safety Plan, transit
+agencies serving all three modal groups would set 42 safety performance
+targets per year. In addition, the Safety Committee of transit agencies
+serving large urbanized areas with service in all three modal groups
+would set 24 annual safety performance targets for the safety risk
+reduction program. This therefore raises the total number of safety
+performance targets to 66 for certain providers.
+    In finalizing these measures, FTA has worked to minimize burden.
+FTA notes that 7 of the 8 safety performance measures for the safety
+risk reduction program overlap with the safety performance measures
+required of all agencies subject to the PTASP regulation. To reduce
+burden associated with target setting, transit agencies serving large
+urbanized areas may opt to use the same safety performance target set
+by the Safety Committee for the safety risk reduction program to
+satisfy the general safety performance target requirement for
+overlapping measures. In effect, this reduces the minimum number of
+required safety performance targets from 66 to 45 for providers serving
+large urbanized areas with service in all three modal groups. Further,
+transit agencies now have years of experience setting annual safety
+performance targets, which alleviates the burden of additional
+measures. Additionally, all of the new measures represent data the
+agencies track and report to the FTA through the NTD program, which
+helps to limit data management and analysis burden. FTA notes that the
+new safety performance measures identified by FTA relate to transit
+worker safety and transit collisions, two safety concerns addressed
+directly by the Bipartisan Infrastructure Law.
+    FTA is committed to developing technical assistance and training to
+support transit agency compliance with safety performance measurement
+and target setting requirements, including tools and materials
+published through the PTASP TAC, as well as webinars, workshops, and
+training opportunities. Further, FTA has made direct one-on-one
+technical assistance available to the transit industry through the
+PTASP TAC. FTA encourages transit agencies with questions about any
+PTASP related requirement, including safety performance measurement, to
+contact the PTASP TAC for direct technical assistance.
+    FTA disagrees with the commenter who argued that the Pedestrian
+Collision Rate and Vehicular Collision Rate measures may be
+particularly burdensome because they are tied to data points that have
+not been collected in the past. While neither Pedestrian Collision Rate
+nor Vehicular Collision Rate were required safety performance measures
+in the past, transit agencies are now required to report this collision
+data to the NTD. These data therefore should be readily available to
+transit agencies, which FTA believes alleviates the potential burden.
+Major Events
+    Comment: One commenter questioned whether FTA should adopt the
+proposed general major events performance measure, given that the
+measure is also included under the safety risk reduction program and
+FTA proposed separate performance measures for specific categories of
+safety and security events. This commenter also stated that major
+events is a new safety performance measure, but the measure is not
+noted as ``new'' in the updated National Safety Plan.
+    Response: FTA believes the major event performance measure should
+be included in both the set of general safety performance measures and
+the set of measures for the safety risk reduction program because not
+all transit agencies are required to have a safety risk reduction
+program. Specifically, agencies that do not serve a large urbanized
+area are only subject to the general safety performance measurement
+requirements. Further, FTA does not believe that including more
+granular measures such as collision rate or assaults on a transit
+worker rate causes broader measures such as major event rate to be less
+valuable. To the contrary, overall major event performance trends can
+serve as useful indicators for transit agencies of all sizes. FTA
+appreciates the comment about whether the major events performance
+measure is new. While the 2017 version of the National Safety Plan
+includes a performance measure for ``safety events'' as opposed to
+``major events,'' the major event performance measure is not new in
+practice. Previous PTASP safety performance measurement guidance
+advises that the safety event performance measure is based on the NTD
+major event reporting threshold. The two measures therefore are
+synonymous in practice. Accordingly, FTA has not designated the measure
+as ``new'' in the updated National Safety Plan.
+Collisions
+    Comment: One commenter supported the inclusion of rate-based
+performance measures for pedestrian collisions and vehicular
+collisions.
+    Response: FTA appreciates the support for these measures.
+Assaults on Transit Workers
+    Comments: FTA received several comments regarding the assaults on
+transit workers performance measures. For FTA's response regarding the
+definition of ``assault on a transit worker,'' please refer to the
+``Definitions'' section of this notice above.
+    One commenter expressed general support for the performance
+measures, as well as the transit worker injury rate and transit worker
+fatality rate measures. However, it argued that the National Safety
+Plan and proposed safety performance measures will result in
+significant data collection gaps and fall short of ensuring transit
+agencies
+
+[[Page 25322]]
+
+have the data necessary to address these issues. This commenter, along
+with one other commenter, urged FTA to split the assault on a transit
+worker measures into job functions or crafts, such as operators,
+custodial workers, station agents, and other frontline workers in non-
+operating crafts. One commenter requested that the performance measures
+separate physical from non-physical assaults.
+    Another commenter opposed including assaults on transit workers as
+a performance measure. Two commenters urged FTA to address transit
+security and emergency preparedness as a separate area of regulatory
+focus from safety events. One of these commenters requested additional
+clarification on the difference between safety and security events, and
+between safety risk management and security risk management. The second
+commenter requested that FTA socialize any security and emergency
+preparedness guidance with the Department of Homeland Security (DHS).
+    One commenter recommended that FTA consider requiring the
+normalization of assault on transit worker data by unlinked passenger
+trips (UPT) in addition to vehicle revenue miles (VRM). Another
+commenter questioned whether VRM is a useful metric for this measure
+and the safety risk reduction program assault measure, noting that it
+may not provide meaningful data for assaults on transit workers not
+employed in operating roles.
+    Response: FTA appreciates the commenters' general support for the
+assaults on transit worker safety performance measures. FTA disagrees
+that the National Safety Plan and proposed safety performance measures
+will result in data collection gaps or will prevent transit agencies in
+any way from collecting or analyzing data to support the analysis of
+transit worker assault-related issues. The safety performance measures
+defined in the National Safety Plan do not create any data collection
+requirements. Nor do they prevent transit agencies from collecting and
+analyzing data related to assaults on transit workers.
+    FTA appreciates the commenter's suggestion that FTA should require
+transit agencies to set safety performance targets for more granular
+safety performance measures related to assaults on transit workers such
+as measures specific to job functions or crafts. However, FTA's NTD
+program does not currently collect assault on transit worker data at
+such a detailed level. As such, FTA declines to establish these more
+granular measures in the National Safety Plan. FTA notes that this does
+not prevent a transit agency from establishing safety performance
+measures such as assaults against custodians or assaults against
+station agents and setting safety performance targets for these
+measures in addition to the required safety performance measures and
+targets.
+    FTA also appreciates the comment recommending that FTA require all
+transit agencies to set separate safety performance targets for
+physical and non-physical assaults on transit workers. FTA revised NTD
+reporting in 2023 to capture this additional level of detail. While
+additional data analysis and safety performance monitoring of more
+detailed aspects of assaults on transit workers may offer value to
+transit agencies based on their operating realities, FTA declines at
+this time to establish safety performance measures for the physical and
+non-physical subsets of assaults on transit workers. Both these types
+of assaults are included in the larger performance measures for
+assaults on transit workers, and both are therefore captured within the
+required PTASP safety performance targets. FTA expects that a transit
+agency, through its SMS processes, will identify and address any
+specific safety concerns regarding assaults on transit workers, both
+physical and non-physical. Transit agencies may set additional targets,
+as needed, on a voluntary basis to support this process.
+    FTA disagrees with the commenter that recommended FTA remove
+``assaults on transit worker'' from the performance measures and the
+recommendations to address transit security as a separate area of
+focus. FTA appreciates that some transit agencies treat an assault on a
+transit worker as both a safety and a security event. Congress directed
+FTA to address assaults on transit workers through both the NTD and
+FTA's safety program as part of FTA's work to improve safety at transit
+systems across the country. Accordingly, FTA declines to adopt this
+suggestion. FTA also appreciates that there can be a distinction
+between transit safety and security and FTA coordinates with other
+Federal agencies, including DHS, as appropriate and practicable when
+developing guidance in this area.
+    FTA appreciates suggestions from commenters regarding normalization
+alternatives for calculating rates of assaults on transit workers.
+While other metrics like UPT may provide alternative risk exposure
+measurements, FTA disagrees with changing the performance measure as
+proposed in the National Safety Plan. As a general practice and
+according to existing PTASP program guidance and technical assistance,
+FTA calculates performance rates using service provided (VRM) and not
+service consumed (UPT). For consistency and to limit safety performance
+measurement burden, FTA continues to use VRM for the required safety
+performance measure rates. Further, analysis performed within FTA
+demonstrates minimal differences when evaluating trends of assaults on
+transit workers per VRM or per UPT. As noted above, transit agencies
+have the flexibility to establish additional measures beyond the 14
+established by the National Safety Plan. A transit agency may opt to
+also establish additional safety performance measures such as rates of
+assaults on transit workers that use UPT or other normalizers such as
+revenue hours.
+    After consideration of comments received, FTA is adopting the
+performance measures for all agencies subject to the PTASP regulation
+as proposed.
+3. Safety Performance Measures for the Safety Risk Reduction Program
+    FTA received several comments about PTASP safety risk reduction
+programs that are outside the scope of the proposed National Safety
+Plan. In the National Safety Plan, FTA proposed safety risk reduction
+program performance measures and re-stated statutory requirements for
+such programs. FTA did not propose specific details in the National
+Safety Plan regarding safety risk reduction program implementation,
+target setting, or the reallocation of the safety set-aside when such
+targets are missed. FTA addressed comments on these topics in the PTASP
+final rule. Accordingly, this section of the notice only addresses
+comments related to the safety risk reduction program safety
+performance measures.
+Relationship to Other Performance Measures
+    Comments: Two commenters asked for clarification on the distinction
+and relationship between the safety performance measures for all
+agencies subject to the PTASP regulation and the safety performance
+measures for the safety risk reduction program, given that some of the
+measures overlap. Another commenter requested clarification on the
+possibility of an agency serving a large urbanized area having two
+different targets for a similar measure: one as part of the general
+PTASP safety performance target requirements and another under the
+safety risk reduction program. The commenter argued that
+
+[[Page 25323]]
+
+this could lead to confusion about which target takes precedence and
+that presenting performance measures in two separate charts in the
+National Safety Plan may be overly complicated. Another commenter urged
+streamlining the two types of performance measures to remove any
+duplication and reduce burden on transit agencies. The commenter noted
+that transit agencies are already analyzing many of the proposed
+measures through their existing SMS processes.
+    Response: The Bipartisan Infrastructure Law introduces new safety
+risk reduction program performance target requirements for Section 5307
+recipients that serve an urbanized area of 200,000 or more at 49 U.S.C.
+5329(d)(4). This is a separate requirement from the existing general
+performance target setting required of all transit agencies subject to
+the PTASP regulation under 49 CFR 673.11(a)(3). The general safety
+performance measures and the safety risk reduction program safety
+performance measures have different programmatic purposes, are shaped
+by different statutory requirements, and result in different outcomes
+in instances where an associated safety performance target is missed.
+For example, per 49 U.S.C. 5329(d)(4), safety performance targets for
+the safety risk reduction program must be set by the Safety Committee
+using a three-year rolling average of data reported to the NTD, and
+failure to meet a safety performance target in the safety risk
+reduction program triggers statutorily required actions related to a
+transit agency's safety set-aside. These statutory requirements do not
+apply to the general safety performance targets required under the
+PTASP regulation. Due to these differences, FTA believes it is
+necessary to establish two separate categories of safety performance
+measures and believes it is helpful to visually distinguish them in two
+separate charts in the National Safety Plan.
+    FTA appreciates the potential burden associated with FTA
+establishing the same measure under both sets of performance measures
+and the concern that transit agencies are already analyzing many of the
+proposed measures through their existing SMS processes. However, FTA
+notes that transit agencies serving large urbanized areas may opt to
+use the same safety performance target set by the Safety Committee for
+the safety risk reduction program to satisfy the general safety
+performance target requirement for overlapping measures. In effect,
+this minimizes burden associated with duplication while preserving
+flexibility for agencies to set safety performance targets for the
+general safety performance measures using varied target setting
+methodologies. FTA agrees that transit agencies should use their SMS to
+address safety concerns associated with the safety performance measures
+identified in the National Safety Plan.
+    FTA acknowledges that it may be possible for an agency's Safety
+Committee to establish a safety performance target for a measure under
+the safety risk reduction program, while the agency sets a separate
+target for the same measure as part of the general safety performance
+measurement requirements. While agencies and Safety Committees may
+elect to use the same target for both types of measures, they are not
+required to do so. FTA notes that while such an arrangement is
+potentially duplicative, a missed target in the safety risk reduction
+program and the required general safety performance targets result in
+different outcomes, as discussed above.
+Proposed Measures
+    Comments: Several commenters requested changes to the proposed
+safety performance measures for the safety risk reduction program. One
+commenter expressed concern that some of the proposed measures are
+broader than the statutory focus of the safety risk reduction program
+and therefore would detract from the purpose and effectiveness of the
+program. Specifically, the commenter urged that the safety risk
+reduction program collision and injury performance measures should be
+limited to collisions related to bus operator visibility impairments
+and injuries resulting from assaults on transit workers, respectively.
+    Another commenter suggested that FTA should add transit worker
+injury rate as a safety performance measure for the safety risk
+reduction program. Another noted that agencies should be required to
+address a reduction of major events under the safety risk reduction
+program.
+    Response: FTA appreciates the suggested revisions to the safety
+risk reduction program performance measures. FTA has thoroughly
+considered each suggestion but declines to adopt the recommendations.
+FTA identified the eight safety performance measures for the safety
+risk reduction program to align with the goals of the safety risk
+reduction program. One of these goals is to ``improve safety by
+reducing the number and rates of accidents, injuries, and assaults on
+transit workers.'' (49 U.S.C. 5329(d)(1)(I)). Based on this statutory
+language, FTA disagrees with limiting the measures to bus collisions
+related to visibility impairments and injuries resulting from assaults
+on transit workers, as suggested by the commenter. FTA continues to
+believe that the performance measures address the safety risk reduction
+program goals of an overall reduction in the number and rates of safety
+events and injuries, as well as a reduction of vehicular and pedestrian
+safety events involving transit vehicles, and the mitigation of
+assaults on transit workers.
+    FTA appreciates the recommendation to add transit worker injury
+rate to the set of safety performance measures established for the
+safety risk reduction program. FTA acknowledges the importance of this
+measure and notes that FTA has included it in the set of general safety
+performance measures. As discussed above, FTA identified the safety
+performance measures for the safety risk reduction program to align
+with the goals of the safety risk reduction program at 49 U.S.C.
+5329(d)(1)(I). In the future, FTA may identify safety concerns and
+safety risk that necessitate additional required safety performance
+measures within the safety risk reduction program, but at this time
+declines to establish measures beyond those identified in its proposal.
+Finally, FTA agrees with the commenter who urged FTA to require
+agencies to address a reduction of major events under the safety risk
+reduction program. FTA confirms that FTA proposed major events as a
+performance measure for the safety risk reduction program and is
+adopting the measure in this final National Safety Plan.
+5. Performance Target Setting and Safety Set-Aside
+    Comments: FTA received several questions and comments regarding
+PTASP performance target setting and the safety set-aside. One
+commenter asked whether the three-year rolling average requirement
+applies to all PTASP safety performance targets, or only the safety
+risk reduction program ones. Another commenter urged FTA to state that
+the general performance targets should be forward-looking, as opposed
+to being based on three-year rolling averages. Another commenter asked
+what role Metropolitan Planning Organizations (MPOs) play in the
+performance measurement process.
+    Several commenters recommended the development of additional
+technical assistance or guidance to support the effective development
+of safety performance targets. Similarly, one commenter recommended
+that FTA provide technical assistance and
+
+[[Page 25324]]
+
+guidance to Safety Committees on best practices for setting safety
+performance targets based on the updated data requirements of the
+Bipartisan Infrastructure Law. Several commenters asked FTA to develop
+guidance to support the industry's implementation of the safety set-
+aside. One of these commenters asked FTA to work with the industry in
+developing guidance and examine issues they are facing with this
+requirement.
+    Response: FTA appreciates the comments on PTASP performance target
+setting. While FTA proposed safety performance measures for safety risk
+reduction programs in the National Safety Plan, detailed implementation
+requirements regarding performance target setting for the safety risk
+reduction program are outside the scope of the proposed National Safety
+Plan. FTA encourages readers to refer to the PTASP final rule for
+information regarding implementation of PTASP safety risk reduction
+program target setting. FTA confirms that the three-year rolling
+average requirement applies only to the safety risk reduction program.
+As described in the National Safety Plan, transit agencies may define
+their own methodology for the other targets.
+    FTA appreciates the comment regarding the role MPOs play in the
+PTASP performance measurement process and notes that in accordance with
+49 U.S.C. 5303(h)(2)(B) and 5304(d)(2)(B), 49 CFR 673.15(a) requires
+that each State and transit agency must make its safety performance
+targets available to States and MPOs to aid in the planning process. In
+addition, Sec.  673.15(b) requires, to the maximum extent practicable,
+a State or transit agency to coordinate with States and MPOs in the
+selection of State and MPO safety performance targets.
+    FTA reiterates that it did not propose specific implementation
+details in the National Safety Plan regarding the reallocation of the
+safety set-aside when certain performance targets are missed under 49
+U.S.C. 5329(d)(4)(C) and (D). This requirement is addressed in the
+PTASP final rule at Sec.  673.27(d)(3)(iii), and FTA is not responding
+to related comments in this notice.
+    FTA agrees with the commenters that identified the importance of
+technical assistance and training related to safety performance
+measurement for agencies and Safety Committees, as well as the safety
+set-aside requirements. FTA has published technical assistance on
+performance measurement through the PTASP TAC and will consider
+developing additional technical assistance on this topic and the safety
+set-aside for the transit industry in the future.
+    After consideration of comments received, FTA is finalizing Chapter
+II of the National Safety Plan as proposed.
+
+D. Chapter III: Voluntary Minimum Safety Standards and Recommended
+Practices
+
+1. Mandatory Standards
+    Comments: Several commenters encouraged FTA to move towards
+mandatory safety standards. Commenters argued that mandatory standards
+are necessary to improve transit industry safety. Two commenters urged
+FTA to develop mandatory standards relating to transit worker assault,
+with one noting that the FAST Act required FTA to issue a rulemaking on
+this topic.
+    Some commenters also recommended other topics for mandatory
+standard development, including standards for connected and automated
+vehicle (CAV) speed, size, and testing; automatic emergency braking
+(AEB) and pedestrian automatic emergency braking (PAEB) systems;
+vehicle design standards to address blind spots, ergonomics, and air
+quality concerns; and transit worker facilities.
+    Response: FTA appreciates the comments regarding the need for
+additional mandatory requirements or standards to improve transit
+safety. FTA notes that the National Safety Plan does not create new
+mandatory standards but rather identifies existing voluntary minimum
+safety standards and recommended practices, which can support transit
+agencies' efforts to improve transit safety. FTA is committed to
+addressing safety concerns, including consideration of mandatory
+requirements or standards where necessary and supported by data. FTA
+will establish any mandatory standards through separate regulatory
+processes.
+    FTA appreciates the commenters requesting mandatory standards
+regarding assaults on transit workers. FTA has initiated a rulemaking
+titled Transit Worker and Public Safety (RIN 2132-AB47), which would
+establish minimum baseline standards and risk-based requirements to
+address transit worker and public safety based on the most current
+research and available information, including but not limited to,
+addressing Section 3022 of the FAST Act. Recently, FTA issued a NPRM
+related to Rail Transit Roadway Worker Protection (89 FR 20605) that is
+proposing minimum safety standards for rail transit roadway worker
+protection. FTA is also exploring additional regulatory action on
+topics that include fatigue risk management. FTA reiterates that any
+mandatory standards will be undertaken through the notice and comment
+process.
+2. Voluntary Standards
+    Comments: Several commenters expressed support for the voluntary
+nature of the minimum safety standards presented in Chapter III of the
+National Safety Plan. Two commenters encouraged FTA to further clarify
+the voluntary nature of the safety standards and recommended practices.
+One of them suggested moving the standards to an appendix to limit any
+confusion about the voluntary nature of the content and urged FTA to
+add a clear statement that the standards are voluntary and that changes
+to the National Safety Plan will be undertaken through the notice and
+comment process. One commenter requested that FTA develop additional
+technical assistance around the voluntary minimum safety standards
+identified in the National Safety Plan.
+    Response: FTA appreciates the feedback regarding the voluntary
+minimum safety standards and recommended practices identified in
+Chapter III. FTA declines to provide additional clarity on the
+voluntary nature of the voluntary minimum safety standards and
+recommended practices and disagrees that an additional appendix is
+necessary or would be helpful in confirming the voluntary nature of the
+materials presented in Chapter III. FTA believes that the title of
+Chapter III clearly articulates the voluntary nature of the standards
+and resources. FTA appreciates the comment regarding the additional
+technical assistance focused on the voluntary minimum safety standards
+and recommended practices outlined in Chapter III and will explore
+opportunities to develop and provide such assistance, including through
+the PTASP TAC.
+3. Standards and Recommended Practices
+    Comments: One commenter commended FTA on the proposed new
+categories of voluntary minimum safety standards and recommended
+practices, including transit worker safety, pedestrian and bicyclist
+safety, and rail grade crossing safety. Another supported FTA's
+statement encouraging transit agencies to work with roadway owners to
+address safety concerns, noting that FTA should continue to encourage
+this and first and last-mile connections.
+
+[[Page 25325]]
+
+    One commenter requested clarification and context regarding how FTA
+categorized the standards and recommended practices in Chapter III. In
+particular, this commenter expressed concern that Category A: Transit
+Worker Safety is particularly confusing.
+    Two commenters noted that the ``Tools and Strategies for
+Eliminating Assaults Against Transit Operators, Volume 2: User Guide''
+in Subcategory A.1 does not address all law-enforcement related
+challenges that transit agencies may experience, including shortages of
+law enforcement officers and competing demands with a municipality's
+emergency services needs.
+    Two commenters recommended specific additional resources for
+inclusion in Chapter III. One commenter recommended inclusion of
+several NTSB recommendations, specifically in Categories A, B, C, and
+I. This commenter also recommended adding Transit Cooperative Research
+Program (TCRP) Report 149, ``Improving Safety-Related Rules Compliance
+in the Public Transportation Industry.'' Another commenter suggested
+that FTA include the Equitable Cities ``Arrested Mobility Report'' as a
+recommended resource.
+    Response: FTA appreciates commenters' feedback regarding the new
+categorization of voluntary minimum safety standards and recommended
+practices. FTA believes these categories help to effectively organize
+strategies to address industry safety concerns, including transit
+worker safety, pedestrian and bicyclist safety, and rail grade crossing
+safety. Similarly, FTA appreciates the support for FTA's statement
+encouraging transit agencies to work with roadway owners to address
+safety concerns and agrees with the commenter's statement about
+challenges to further incorporate first and last mile connections using
+micromobility systems.
+    With regards to the comment about the organization of Category A,
+the category breaks the topic of transit worker safety into three
+subcategories: transit worker assault prevention; roadway worker
+protection; and fatigue management, fitness for duty, and employee
+distraction. FTA believes that this organization clearly separates the
+three areas of voluntary minimum safety standards and recommended
+practices included under this category and declines to revise the
+category substructure.
+    FTA appreciates the comments regarding the ``Tools and Strategies
+for Eliminating Assaults Against Transit Operators, Volume 2: User
+Guide'' that FTA has included in category A.1. While this resource may
+not fully discuss law enforcement officer shortages, FTA believes that
+it offers valuable information and approaches to help transit agencies
+identify and deploy strategies to counter assaults against transit
+operators. Further, the document was developed to help transit agencies
+improve the safety and security of operators within existing resource
+and budgetary constraints and was developed with an understanding that
+the needs and available resources of these agencies are often different
+depending on their size and scope of operations.
+    In response to comments, FTA has added two additional resources in
+the final National Safety Plan: TCRP Report 149 and NTSB recommendation
+R-09-11 regarding programs to identify and address sleep apnea and
+other sleep disorders. TCRP Report 149 identifies potential best
+practices for all elements of a comprehensive approach to safety-
+related rules compliance and offers the transit industry valuable
+information for developing or evaluating rules compliance programs. FTA
+did not include all the NTSB recommendations suggested by the commenter
+as many of these were issued to a single entity and as such may not be
+directly applicable to the transit industry. However, FTA did include
+R-09-11, which was recommended by the NTSB to the rail transit
+industry.
+    Finally, FTA appreciates the recommendation regarding the Equitable
+Cities ``Arrested Mobility Report.'' FTA declines to include this
+document in Chapter III of the National Safety Plan as it does not
+include voluntary minimum safety standards or recommended practices for
+improving public transportation safety.
+4. Specific Safety Concerns and Mitigations
+    Comments: Several commenters urged FTA to include additional
+standards and recommended practices to Chapter III of the National
+Safety Plan. Some commenters provided specific examples of transit
+industry hazards as well as specific safety risk mitigations that may
+be useful in addressing the associated safety risk. Commenters
+suggested that FTA consider adding standards and resources to the
+National Safety Plan related to topics such as: connected technology
+systems to alert security personnel of potentially dangerous
+situations; collision avoidance systems; panic buttons and body worn
+cameras for transit workers; digital methodologies and assessments such
+as condition-based health indices of transit assets and predictive
+maintenance solutions; and collision concerns related to the increased
+weight of bus fleets through electrification. Another commenter argued
+that FTA could do more through its Office of Research, Demonstration,
+and Innovation to explore how agencies are using connectivity,
+innovation, and operational management to address safety issues.
+    One commenter urged FTA to include safety standards and recommended
+practices regarding suicide safety events, including consideration of
+design interventions such as physical barriers, signage noting crisis
+line numbers, and follow-up care for transit workers who witness
+suicide events.
+    Another commenter recommended that when developing standards and
+recommended practices, FTA should explicitly include the safety of
+mobility assistive device users on public transportation, including
+with respect to railroad grade crossings, emergency signage, emergency
+response, and life safety equipment, and that such users should be
+considered in all standards as well.
+    One commenter asked FTA to include strategies to minimize exposure
+to infectious diseases, including removal of infectious aerosols in the
+air people breathe, consistent with the Centers for Disease Control and
+Prevention (CDC) or State health authority guidelines.
+    One commenter urged FTA to require only standard traffic lights at
+railroad crossings and to eliminate ``red-red'' flashing lights.
+Another commenter provided a list of several suggestions to improve
+transit safety, including platform screen doors for suicide prevention;
+signal priority; fare gates and security; emergency alarms on vehicles;
+and grade crossing barriers. Commenters also urged FTA to include
+standards and recommended practices on other topics outside the scope
+of transit, such as high-speed passenger rail, highways, municipal
+zoning, and automobile usage.
+    Response: FTA appreciates the information commenters have shared to
+the docket regarding transit industry safety concerns and potential
+safety risk mitigations. In response to commenters' identification of
+safety concerns and mitigations, FTA has added resources to Chapter III
+of the final National Safety Plan as discussed below. Most of these
+documents were not available during the original development of the
+proposed National Safety Plan but are now available for inclusion and
+are responsive to many of the suggestions offered by commenters.
+    FTA appreciates the comment regarding connectivity, innovation, and
+
+[[Page 25326]]
+
+operational management and FTA's efforts to research these topics.
+Within this area, FTA has added a resource to Chapter III, Needs
+Assessment for Transit Rail Transmission-Based Train Control (TBTC).
+Further, FTA's Office of Research, Demonstration and Innovation is
+undertaking a number of related initiatives, including the Transit
+Worker and Rider Safety Best Practice Research Program as well as four
+new research programs to address the challenges of: (1) rising assault
+incidents in transit; (2) advancing autonomous rail transit track
+inspection technology; (3) improving transit infrastructure condition
+monitoring; and (4) the Bus Compartment Redesign and Bus of the Future
+initiatives.
+    Regarding the topic of challenges related to the electrification of
+transit fleets and associated concerns raised by commenters, FTA has
+added the following resources to Chapter III of the National Safety
+Plan: Safety and Security Certification of Electric Bus Fleets;
+Procuring and Maintaining Battery Electric Buses and Charging Systems;
+and Crash Energy Management for Heavy Rail Vehicles, Light Rail
+Vehicles, and Streetcars.
+    In response to the commenter who recommended additional resources
+on suicide and suicide prevention, FTA added the resource, Mitigations
+for Trespasser and Suicide Fatalities and Injuries to Chapter III of
+the National Safety Plan.
+    FTA appreciates the commenter that recommended FTA include the
+safety of mobility assistive device users on public transportation when
+developing standards and resources. FTA agrees with commenter on the
+importance of ensuring the safety of mobility assistive users,
+especially with respect to railroad grade crossings, emergency signage,
+emergency response, and life safety equipment. FTA will consider the
+safety of mobility assistive device users when developing standards or
+technical assistance.
+    FTA appreciates the commenter that requested FTA include strategies
+to minimize exposure to infectious diseases, including removal of
+infectious aerosols in the air people breathe. FTA coordinated with the
+Department of Health and Human Services (HHS) prior to publishing the
+proposed National Safety Plan to identify precautionary and reactive
+actions required to ensure public and personnel safety and health
+during an emergency. Following publication of the proposed National
+Safety Plan, FTA coordinated with HHS again to confirm the voluntary
+minimum safety standards and recommended practices for inclusion in the
+final National Safety Plan. FTA has added three related resources to
+the final National Safety Plan that are responsive to the commenter's
+suggestion: Ventilation in Buildings resources from the Centers for
+Disease Control (CDC); FTA's COVID-19 Resource Tool for Public
+Transportation; and FTA's Using Your Safety Management System (SMS) to
+Mitigate Infectious Disease and Respiratory Hazard Exposure. FTA has
+also included additional ventilation-related resources in Category E,
+including: Specifications and Guidelines for Rail Tunnel Design,
+Construction, Maintenance, and Rehabilitation; Specifications and
+Guidelines for Rail Tunnel Repair and Rehabilitation; and
+Specifications and Guidelines for Rail Tunnel Inspection and
+Maintenance.
+    Finally, FTA appreciates the commenters that offered suggestions
+regarding railroad crossing light requirements and other safety
+recommendations. FTA appreciates and has thoroughly considered all
+these recommendations; however, at this time FTA declines to include
+them in the final National Safety Plan. FTA notes that these
+suggestions may be considered when FTA is developing future safety
+standards and identifying technical assistance needs for transit
+safety.
+
+Veronica Vanterpool,
+Acting Administrator.
+[FR Doc. 2024-07392 Filed 4-9-24; 8:45 am]
+BILLING CODE 4910-57-P

@@ -1,0 +1,1994 @@
+[Federal Register Volume 88, Number 80 (Wednesday, April 26, 2023)]
+[Proposed Rules]
+[Pages 25336-25351]
+From the Federal Register Online via the Government Publishing Office [www.gpo.gov]
+[FR Doc No: 2023-08777]
+
+-----------------------------------------------------------------------
+
+DEPARTMENT OF TRANSPORTATION
+
+Federal Transit Administration
+
+49 CFR Part 673
+
+[Docket No. FTA-2023-0007]
+RIN 2132-AB44
+
+Public Transportation Agency Safety Plans
+
+AGENCY: Federal Transit Administration (FTA), Department of
+Transportation (DOT).
+
+ACTION: Notice of Proposed Rulemaking (NPRM).
+
+-----------------------------------------------------------------------
+
+SUMMARY: The Federal Transit Administration (FTA) is proposing new
+requirements for Public Transportation Agency Safety Plans (PTASP) that
+include revised requirements for Agency Safety Plans (ASP), safety
+committees, cooperation with frontline transit worker representatives
+in the development of ASPs, safety risk reduction programs, safety
+performance targets, de-escalation training for certain transit
+workers, and addressing infectious diseases through the Safety
+Management System (SMS) process. FTA also proposes revisions to the
+regulation to coordinate and align with other FTA programs and safety
+rulemakings.
+
+DATES: Comments should be filed by June 26, 2023. FTA will consider
+comments received after that date to the extent practicable.
+
+ADDRESSES: You may send comments, identified by docket number FTA-2023-
+0007, by any of the following methods:
+     Federal eRulemaking Portal: https://www.regulations.gov.
+Follow the instructions for sending comments.
+     Fax: (202) 493-2251.
+     Mail: Docket Management Facility, U.S. Department of
+Transportation, 1200 New Jersey Avenue SE, West Building Ground Floor,
+Room W12-140, Washington, DC 20590-0001.
+     Hand Delivery/Courier: West Building Ground Floor, Room
+W12-140, 1200 New Jersey Avenue SE, Washington, DC, between 9 a.m. and
+5 p.m. ET, Monday through Friday, except Federal holidays.
+    Instructions: All submissions received must include the agency name
+and docket number or Regulatory Information Number (RIN) for this
+rulemaking. All comments received will be posted without change to
+https://www.regulations.gov, including any personal information
+provided. For detailed instructions on sending comments and additional
+information on the rulemaking process, see the ``Public Participation''
+heading of the SUPPLEMENTARY INFORMATION section of this document.
+    Docket: For internet access to the docket to read background
+documents and comments received, go to https://www.regulations.gov.
+Background documents and comments received may also be viewed at the
+U.S. Department of Transportation, 1200 New Jersey Ave. SE, Docket
+Operations, M-30, West Building Ground Floor, Room W12-140, Washington,
+DC 20590-0001, between 9 a.m. and 5 p.m. EST, Monday through Friday,
+except Federal holidays.
+
+FOR FURTHER INFORMATION CONTACT: For program matters, contact Stewart
+Mader, Office of Transit Safety and Oversight, (202) 366-9677 or
+[email protected]. For legal matters, contact Heather Ueyama,
+Office of Chief Counsel, (202) 366-7374 or [email protected].
+    Office hours are from 8:30 a.m. to 5:00 p.m., Monday through
+Friday, except Federal holidays.
+
+SUPPLEMENTARY INFORMATION:
+
+Table of Contents
+
+I. Executive Summary
+    A. Purpose of Regulatory Action
+    B. Statutory Authority
+    C. Questions About Transit Worker Safety Reporting Programs
+II. Section-by-Section Analysis
+III. Regulatory Analyses and Notices
+
+I. Executive Summary
+
+A. Purpose of Regulatory Action
+
+    This Notice of Proposed Rulemaking (NPRM) proposes to amend the
+Public Transportation Agency Safety Plans (PTASP) regulation at 49 CFR
+part 673 with new requirements that would incorporate explicit
+statutory changes in the Bipartisan Infrastructure Law, enacted as the
+Infrastructure Investment and Jobs Act (Pub. L. 117-58; November 15,
+2021). The Bipartisan Infrastructure Law amends FTA's safety program at
+49 U.S.C. 5329(d) by adding to the PTASP requirements for public
+transportation systems that receive Federal financial assistance under
+49 U.S.C. chapter 53 (chapter 53).
+    In response to these statutory changes, this NPRM proposes several
+revisions to the PTASP regulation, including requirements for the
+development, update, and approval of Agency Safety Plans (ASP); the
+establishment of a Safety Committee; cooperation with frontline transit
+worker representatives in the development of ASPs; the establishment of
+a safety risk reduction program for transit operations to improve
+safety by reducing the number and rates of safety events, injuries, and
+assaults on transit workers based on data submitted to the National
+Transit Database (NTD); the establishment of safety performance targets
+for risk reduction programs; the establishment of de-escalation
+training for certain transit workers; and the incorporation of
+guidelines from the CDC or a State health authority regarding exposure
+to infectious diseases into the agency's SMS processes. FTA also
+proposes revisions to 49 CFR part 673 based on coordination and
+alignment with other FTA programs and forthcoming safety rulemakings.
+    Prior to publishing this NPRM, FTA engaged in stakeholder outreach
+regarding the new Bipartisan Infrastructure Law PTASP requirements. In
+accordance with the Department of Transportation's Guidance on
+Communication with Parties outside of the Federal Executive Branch (Ex
+Parte Communications),\1\ FTA has added a memorandum summarizing these
+communications to the docket for this rulemaking. Where FTA has
+incorporated stakeholder suggestions into its regulatory proposals, FTA
+discusses such suggestions in the corresponding sections below.
+---------------------------------------------------------------------------
+
+    \1\ Available at: https://www.transportation.gov/regulations/memorandum-secretarial-officers-and-heads-operating-administrations.
+---------------------------------------------------------------------------
+
+B. Statutory Authority
+
+    Congress directed FTA to establish a comprehensive Public
+Transportation Safety Program, one element of which is the requirement
+for PTASP, in the Moving Ahead for Progress in the 21st Century Act
+(Pub. L. 112-141; July 6, 2012) (MAP-21), which was reauthorized by the
+Fixing America's Surface Transportation Act (Pub. L. 114-94; December
+4, 2015). To implement the requirements of 49 U.S.C. 5329(d), FTA
+issued a final rule on July 19, 2018, that added part 673, ``Public
+Transportation Agency Safety Plans,'' to title 49 of the Code of
+Federal Regulations (83 FR 34418).
+    The Bipartisan Infrastructure Law continues the Public
+Transportation Safety Program and adds to the PTASP requirements for
+public transportation systems that receive Federal financial assistance
+under chapter 53.
+
+[[Page 25337]]
+
+    The Bipartisan Infrastructure Law made several changes to 49 U.S.C.
+5329(d). This proposed rule would revise portions of part 673 to
+incorporate these new requirements. The Bipartisan Infrastructure Law
+amended 49 U.S.C. 5329(d)(1)(B) to require that each recipient serving
+an urbanized area with a population of fewer than 200,000 (small
+urbanized area) develop its ASP in cooperation with frontline employee
+representatives.
+    In addition, the Bipartisan Infrastructure Law added several new
+requirements that apply to each recipient of Urbanized Area Formula
+Program funds under 49 U.S.C. 5307 (section 5307) that serves an
+urbanized area with a population of 200,000 or more (large urbanized
+area). The statute requires these agencies to undertake the following
+activities:
+     Establish a Safety Committee that is convened by a joint
+labor-management process and consists of an equal number of (1)
+frontline employee representatives, selected by a labor organization
+representing the plurality of the frontline workforce employed by the
+recipient or, if applicable, a contractor to the recipient, to the
+extent frontline employees are represented by labor organizations; and
+(2) management representatives. (49 U.S.C. 5329(d)(5)). This Safety
+Committee has responsibility, at a minimum, for:
+    [cir] Approving the transit agency's ASP and any updates to the ASP
+before approval by the agency's Board of Directors or equivalent entity
+(49 U.S.C. 5329(d)(1)(A));
+    [cir] Setting safety performance targets for the safety risk
+reduction program using a three-year rolling average of the data
+submitted by the transit agency to the NTD (49 U.S.C. 5329(d)(4)(A));
+    [cir] Identifying and recommending risk-based mitigations or
+strategies necessary to reduce the likelihood and severity of
+consequences identified through the agency's safety risk assessment (49
+U.S.C. 5329(d)(5)(A)(iii)(I));
+    [cir] Identifying mitigations or strategies that may be
+ineffective, inappropriate, or were not implemented as intended (49
+U.S.C. 5329(d)(5)(A)(iii)(II)); and
+    [cir] Identifying safety deficiencies for purposes of continuous
+improvement (49 U.S.C. 5329(d)(5)(A)(iii)(III)).
+     Establish a risk reduction program for transit operations
+to improve safety by reducing the number and rates of accidents,
+injuries, and assaults on transit workers based on data submitted to
+the NTD, including:
+    [cir] A reduction of vehicular and pedestrian accidents involving
+buses that includes measures to reduce visibility impairments for bus
+operators that contribute to accidents, including retrofits to buses in
+revenue service and specifications for future procurements that reduce
+visibility impairments; and
+    [cir] The mitigation of assaults on transit workers, including the
+deployment of assault mitigation infrastructure and technology on
+buses, including barriers to restrict the unwanted entry of individuals
+and objects into bus operator workstations when a risk analysis
+performed by the Safety Committee determines that such barriers or
+other measures would reduce assaults on and injuries to transit workers
+((49 U.S.C. 5329(d)(1)(I)).
+     Allocate not less than 0.75 percent of its section 5307
+funds to safety-related projects eligible under section 5307 (safety
+set-aside). In the event the transit agency fails to meet a safety risk
+reduction program safety performance target:
+    [cir] Allocate the transit agency's safety set-aside in the
+following fiscal year to projects that are reasonably likely to assist
+the agency in meeting the target, including modifications to rolling
+stock and de-escalation training (49 U.S.C. 5329(d)(4)).
+     Ensure the agency's comprehensive staff training program
+includes maintenance personnel and de-escalation training. (49 U.S.C.
+5329(d)(1)(H)(ii)).
+    In addition, the Bipartisan Infrastructure Law requires that each
+agency's ASP address strategies to minimize exposure to infectious
+diseases, consistent with guidelines of the CDC or a State health
+authority (49 U.S.C. 5329(d)(1)(D)).
+
+C. Questions About Confidential Close-Call/Near-Miss Transit Worker
+Safety Reporting Programs
+
+    This NPRM does not propose any new requirements related to transit
+worker safety reporting programs. Through voluntary review of ASPs and
+technical assistance provided by its PTASP Technical Assistance Center,
+FTA has observed that many transit agencies have incorporated
+mechanisms to allow for confidential close call/near-miss reporting as
+part of their transit worker safety reporting programs. FTA is
+interested in hearing from the transit industry and other interested
+stakeholders regarding any experience establishing confidential
+reporting methods for transit workers and would appreciate feedback to
+the following questions:
+     Have transit agencies offered transit workers methods to
+submit confidential reports of near-misses or safety concerns?
+    [cir] If so, please share a brief summary of such methods,
+including how transit agencies ensure reports are submitted
+confidentially.
+    [cir] How many reports do such programs receive annually?
+    [cir] How has this reporting improved or not improved transit
+agencies' ability to manage safety risk?
+    [cir] What challenges, if any, have transit agencies encountered,
+including in protecting information to ensure reports remain
+confidential, and in taking action on reports that are redacted?
+    [cir] What has been the annual cost of operating such programs?
+     Have transit agencies participated in a close-call or
+near-miss reporting program facilitated by a third party to protect the
+confidentiality of reporters?
+    [cir] If so, please share a brief summary of how the program works,
+including whether transit agencies receive only de-identified reports
+specific to the agency, or if de-identified reports are shared with all
+participants in the program.
+    [cir] How many reports do transit agencies receive annually?
+    [cir] How has this participation improved or not improved transit
+agencies' ability to manage safety risk?
+    [cir] What are the annual estimated costs for participation in such
+programs?
+     If transit agencies do not have a confidential close-call
+or near-miss reporting program, have such agencies assessed the
+feasibility of establishing a program? What are the expected benefits
+and barriers that transit agencies have identified, if any?
+    Respondents may respond to any question and do not need to respond
+to all questions.
+
+II. Section-by-Section Analysis
+
+    FTA proposes several terminology changes that would apply
+throughout part 673. FTA proposes to change the term ``agency'' to
+``transit agency'' for clarity. FTA also proposes to replace the term
+``employee'' with ``transit worker'' for consistency with the changes
+to section 673.5 discussed below. Similarly, where FTA incorporates
+Bipartisan Infrastructure Law requirements involving transit employees
+into the regulation, FTA uses the term ``transit worker.''
+    In addition, FTA proposes three terminology changes to ensure the
+regulatory language aligns with SMS terminology commonly used in the
+transit industry. FTA would:
+     Replace the term ``risk'' with ``safety risk,''
+     Replace the term ``mitigation'' with ``safety risk
+mitigation,'' and
+
+[[Page 25338]]
+
+     Replace the term ``consequence'' with ``potential
+consequence.''
+
+Subpart A--General
+
+1.1 Applicability
+    This section sets forth the applicability of the PTASP regulation.
+Currently, the regulation applies to any State, local governmental
+authority, and any other operator of a public transportation system
+that receives Federal financial assistance under 49 U.S.C. chapter 53.
+FTA has deferred applicability to operators that only receive Federal
+financial assistance under 49 U.S.C. 5310 or 5311, or both 49 U.S.C.
+5310 and 5311.
+    Through guidance, FTA has consistently interpreted this provision
+to mean that the PTASP regulation applies to two categories of
+recipients: (1) section 5307 recipients; and (2) rail transit agencies.
+For consistency with this existing practice, FTA proposes revising
+section 673.1(b) to clarify that the exception for section 5310 and
+section 5311 recipients does not apply to operators of rail fixed
+guideway public transportation systems. Accordingly, this change
+clarifies FTA's existing practice that all rail transit agencies must
+meet the requirements of part 673 if they receive Federal financial
+assistance under chapter 53.
+1.2 Definitions
+    This section sets forth the definitions of key terms used in the
+regulation. FTA proposes several changes to this section for clarity,
+as well as several changes related to Bipartisan Infrastructure Law
+requirements.
+Amendments for Clarity
+    FTA proposes adding, amending, and deleting several definitions in
+section 673.5. These modifications provide greater clarity and are not
+intended to change the application of any existing requirements.
+    FTA would remove the definitions of ``accident,'' ``event,''
+``incident,'' ``occurrence,'' and ``serious injury'' from section
+673.5. In their place, FTA would add a single term: ``safety event.''
+This change is intended to simplify the classification of safety
+events.
+    FTA proposes to add a definition of ``emergency'' to clarify
+requirements related to emergency response and preparedness plans. This
+definition would mirror the statutory definition in 49 U.S.C. 5324.
+    FTA would replace the existing term ``Equivalent Authority'' with
+``equivalent entity'' to conform with the statutory term used in 49
+U.S.C. 5329(d)(1)(A).
+    FTA would add definitions for the terms ``near-miss'' and
+``roadway'' to clarify new requirements that FTA is proposing to the
+regulation.
+    FTA proposes to add a definition of ``public transportation.'' This
+definition mirrors the statutory definition provided in 49 U.S.C. 5302.
+Similarly, FTA would add definitions of the terms ``potential
+consequence,'' ``recipient,'' ``direct recipient,'' and
+``subrecipient'' for clarity. All of these terms are used frequently in
+the regulation, but they were not defined previously in this section.
+    FTA proposes to make minor edits to the definition of ``rail fixed
+guideway public transportation system'' for clarity.
+    FTA would modify the existing terms ``risk'' and ``risk
+mitigation'' by adding the word ``safety'' before each to ensure
+regulatory language aligns with SMS terminology commonly used in the
+transit industry.
+    FTA would modify the definition of ``Safety Management Policy,''
+``Safety Management System,'' and ``Safety Risk Management'' for
+clarity and to ensure regulatory language aligns with SMS terminology
+commonly used in the transit industry.
+    FTA would modify the definition of ``small public transportation
+provider'' to align with the definition of Tier II Provider in FTA's
+Transit Asset Management regulation (49 CFR 625). This is consistent
+with FTA's existing interpretation of small public transportation
+provider. FTA notes that certain transit agencies will meet the
+definition of both ``small public transportation provider'' and ``large
+urbanized area provider.'' This would occur if the small public
+transportation provider serves a large urbanized area. In such cases,
+the transit agency must meet all large urbanized area provider
+requirements, including establishing a Safety Committee and safety risk
+reduction program.
+    Finally, FTA would amend the definition of ``transit agency'' to
+clarify FTA's existing practice that PTASP applies only to rail transit
+agencies and section 5307 recipients and subrecipients, as discussed
+above.
+Amendments Related to the Bipartisan Infrastructure Law
+    FTA proposes adding definitions to section 673.5 related to the new
+Bipartisan Infrastructure Law PTASP requirements.
+    The Bipartisan Infrastructure Law amended 49 U.S.C. 5302 to add a
+definition of ``assault on a transit worker.'' FTA would incorporate
+the statutory definition of this term into section 673.5 without
+change.
+    FTA proposes to add a definition of ``CDC,'' which relates to the
+statutory requirement in 49 U.S.C. 5329(d)(1)(D) about minimizing
+exposure to infectious diseases. In addition, FTA proposes to add
+definitions for the terms ``joint labor-management process,'' ``safety
+committee,'' and ``safety set aside.'' Each of these terms relates to
+Bipartisan Infrastructure Law requirements for Safety Committees and
+safety risk reduction programs.
+    Many of the Bipartisan Infrastructure Law PTASP requirements only
+apply to section 5307 recipients and subrecipients that serve an
+urbanized area with a population of 200,000 or more (large urbanized
+area). FTA proposes to capture this category of transit agencies by
+adding a new defined term to section 673.5: ``large urbanized area
+provider.'' For clarity, FTA also proposes to define the term
+``urbanized area.'' The proposed definition mirrors how the term is
+defined in 49 U.S.C. 5302.
+    FTA would make a minor change to the definition of ``State Safety
+Oversight Agency'' to add a citation to the State Safety Oversight
+Agency (SSOA) inspection provision at 49 U.S.C. 5329(k), which was
+added by the Bipartisan Infrastructure Law.
+    Finally, FTA would add a definition of ``transit worker'' that
+includes employees, contractors, and volunteers working on behalf of
+the transit agency. This definition would ensure that transit worker-
+related requirements, such as training, will apply to volunteers, such
+as volunteer transit operators who are a crucial part of the staff at
+some transit agencies, especially in rural areas.
+
+Subpart B--Safety Plans
+
+673.11 General Requirements
+    This section establishes general PTASP requirements. FTA proposes
+revising section 673.11(a) to remove language about the initial
+regulatory deadline for establishing an ASP because the deadline has
+already passed. FTA also proposes to add the word ``State'' to clarify
+that States have a role in ASP development for certain small public
+transportation providers. This is a clarification that does not change
+any existing requirements.
+    The Bipartisan Infrastructure Law amended 49 U.S.C. 5329(d) to
+require that the Safety Committee of section 5307 recipients that serve
+a large urbanized area must approve the ASP and any updates to the ASP.
+Per statute, this approval must occur before the
+
+[[Page 25339]]
+
+transit agency's Board of Directors or equivalent entity approves the
+ASP or update. FTA proposes revising section 673.11(a)(1) to
+incorporate this statutory requirement. The requirement to obtain
+Safety Committee approval applies only to large urbanized area
+providers. For all other transit agencies, the existing requirement for
+Board or equivalent entity approval remains unchanged.
+    Section 673.11(a)(3) provides that ASPs must include safety
+performance targets based on the safety performance measures
+established under FTA's National Public Transportation Safety Plan
+(NSP). FTA proposes to clarify FTA's existing practice that the safety
+performance targets are set annually. FTA also proposes revising this
+section to clarify that performance targets for the safety risk
+reduction program under section 673.20 are required only for large
+urbanized providers.
+    FTA proposes revising section 673.11(a)(6) to add paragraph (ii)
+requiring rail transit agencies to include or incorporate by reference
+in their ASPs the policies and procedures regarding rail transit
+workers on the roadway. This requirement relates to FTA's forthcoming
+Roadway Worker Protection (RWP) proposed rule. This RWP proposal is
+responsive to National Transportation Safety Board (NTSB)
+recommendations related to roadway worker protection.
+    FTA also proposes revising section 673.11(a)(6) to add paragraph
+(iii) requiring rail transit agencies to include or incorporate by
+reference in their ASPs the policies and procedures to provide access
+to facilities and required data regarding the SSOA's risk-based
+inspection programs. This proposal relates to Bipartisan Infrastructure
+Law requirements regarding SSOA risk-based inspection programs at 49
+U.S.C. 5329(k).
+    FTA proposes adding section 673.11(a)(7) to require large urbanized
+area providers to include in their ASP a safety risk reduction program
+that meets the requirements of section 673.20. Agencies may choose to
+document safety risk reduction program elements in the Safety Risk
+Management and Safety Assurance sections of their ASP.
+    FTA is not proposing any changes to 673.11(d), which requires a
+State to draft and certify an ASP for a small public transportation
+provider that is located in that State. However, FTA wants to make
+clear that a small public transportation provider may also be a large
+urbanized area provider and thus required to have an ASP with the
+attendant provisions, such as a Safety Committee and risk reduction
+program. FTA proposes striking the current language at section
+673.11(e) to remove reference to the ``System Safety Program Plan''
+under part 659. The requirement to have a System Safety Program Plan
+has been replaced by the requirement to have an ASP, and FTA rescinded
+part 659 on February 7, 2022 (87 FR 6783). In response to this change,
+FTA would redesignate existing paragraph (f) as paragraph (e). In the
+new section 673.11(e), FTA proposes minor wording changes for clarity.
+673.13 Certification of Compliance
+    This section sets forth certification requirements. FTA proposes
+revising section 673.13(a) to remove an outdated initial certification
+deadline and to clarify FTA's existing practice that a direct recipient
+or State's initial PTASP certification must occur by the start of
+operations. In addition, FTA proposes to revise section 673.13 to
+clarify that only direct recipients and States must certify compliance
+with part 673. This is not a change to FTA's current practice. FTA
+notes for clarity that subrecipients are not required to certify
+compliance with PTASP; direct recipients certify on behalf of their
+subrecipients.
+673.17 Cooperation With Frontline Transit Worker Representatives
+    In a new section 673.17, FTA proposes requirements for transit
+agency cooperation with frontline transit worker representatives, as
+required by the Bipartisan Infrastructure Law. In section 673.17(a),
+FTA would incorporate the statutory requirement that a large urbanized
+area provider must establish a Safety Committee. Section 673.17(b)
+incorporates the statutory requirement that a transit agency that is
+not a large urbanized area provider must develop its ASP in cooperation
+with frontline transit worker representatives, as required by the
+Bipartisan Infrastructure Law. In this section, FTA also proposes that
+such providers must include or incorporate by reference in the ASP a
+description of how frontline transit worker representatives cooperate
+in the development and update of the ASP.
+
+Subpart C--Safety Committee and Safety Risk Reduction Program
+
+    FTA proposes creating a new subpart C, ``Safety Committee and
+Safety Risk Reduction Program'' that incorporates Bipartisan
+Infrastructure Law requirements for Safety Committees and Safety Risk
+Reduction Programs.
+673.19 Safety Committee
+    The Bipartisan Infrastructure Law requires that transit agencies
+serving a large urbanized area establish a Safety Committee that meets
+certain requirements. FTA proposes a new section 673.19(a) in response
+to the statutory requirement that the Safety Committee be convened by a
+joint-labor management process and adds a requirement that the Safety
+Committee be appropriately scaled to the size, scope, and complexity of
+the transit agency.
+    In section 673.19(b), FTA incorporates the statutory requirement
+that the Safety Committee consist of an equal number of frontline
+transit worker representatives and management representatives. FTA
+notes that there must be an equal number of frontline transit worker
+representative and management representative voting members on the
+Safety Committee. However, this requirement does not prohibit
+designation of additional non-voting participants, such as management
+representative alternates who may serve in a voting capacity in the
+event of a management representative voting member absence, or
+frontline transit worker representative alternates who may serve in a
+voting capacity in the event of a frontline transit worker
+representative voting member absence. FTA also proposes a requirement
+that the Safety Committee include frontline transit worker
+representatives from major transit service functions to the extent
+practicable.
+    The Bipartisan Infrastructure Law requires that the frontline
+transit worker representatives be selected by a labor organization
+representing the plurality of the frontline workforce. FTA incorporates
+this statutory requirement into section 673.19(b). FTA also proposes a
+requirement that the Safety Committee include frontline transit worker
+representatives from major transit service functions to the extent
+practicable. FTA also proposes that if a transit agency's frontline
+transit workers are not represented by a labor organization, the
+transit agency must adopt a mechanism to ensure that frontline transit
+workers select frontline transit worker representatives for the Safety
+Committee. FTA is proposing this requirement to ensure that in
+situations where frontline transit workers are not represented by a
+labor organization, frontline transit workers select the frontline
+transit worker representatives.
+    FTA proposes section 673.19(c), which requires that certain
+policies and procedures about the composition, responsibilities, and
+operations of the Safety Committee be included or incorporated by
+reference in the ASP. One of these proposed policies and
+
+[[Page 25340]]
+
+procedures addresses how the Safety Committee will manage disputes and
+tie votes to ensure it carries out its operations. Through outreach
+meetings with FTA, some stakeholders voiced concerns that Safety
+Committees could become deadlocked. This has the potential to delay the
+development or update of an agency's ASP and the operation of the
+agency's SMS. FTA finds this concern to be valid and therefore proposes
+that ASPs include policies or procedures to address this situation.
+Additional details about FTA's stakeholder outreach meetings can be
+found in the docket to this rulemaking.
+    FTA proposes section 673.19(d), which identifies statutorily
+required activities that the Safety Committee must take, including ASP
+review and approval, setting annual safety performance targets to
+support the safety risk reduction program, and support of SMS
+activities. The proposed activities of the Safety Committee implement
+requirements of the Bipartisan Infrastructure Law.
+673.20 Safety Risk Reduction Program
+    The Bipartisan Infrastructure Law requires recipients serving large
+urbanized areas to establish a safety risk reduction program for
+transit operations to improve safety by reducing the number and rates
+of accidents, injuries, and assaults on transit workers based on data
+submitted to the NTD, including: (1) a reduction of vehicular and
+pedestrian accidents involving buses, including measures to reduce
+visibility impairments for bus operators that contribute to accidents;
+and (2) the mitigation of assaults on transit workers, including the
+deployment of assault mitigation infrastructure and technology on
+buses. Section 5329(d)(1)(I) describes specific mitigations for
+reducing safety events, including retrofits to buses in revenue service
+and specifications for future procurements that reduce visibility
+impairments, and barriers to restrict the unwanted entry of individuals
+and objects into the workstations of bus operators.
+    To incorporate this requirement, FTA proposes a new section
+673.20(a), which requires large urbanized area providers to establish a
+safety risk reduction program that includes the two statutory areas
+discussed above. FTA proposes that a key element of this program would
+be the consideration of safety risk mitigations consistent with
+proposed sections 673.20(a)(2) through (a)(4).
+    In these sections, FTA proposes that when carrying out the Safety
+Risk Management (SRM) process for risk relating to vehicular and
+pedestrian safety events involving transit vehicles, and for risk
+relating to assaults on transit workers, a large urbanized area
+provider must consider specific mitigations. These safety risk
+mitigations are based on the mitigations listed in 49 U.S.C.
+5329(d)(1)(I) described above. However, section 673.20(a)(2) would
+require consideration of operator visibility impairment mitigations for
+any type of transit vehicles, not just buses. Similarly, section
+673.20(a)(3) would require consideration of assault mitigation
+infrastructure and technology in any type of transit vehicle and in
+transit facilities, not just buses. FTA believes that tying the safety
+risk reduction program to transit agencies' existing Safety Risk
+Management (SRM) process will support and reinforce consistent
+application of SMS practices for all safety risk mitigation, including
+for the two statutory areas identified in section 5329(d)(1)(I).
+    FTA is proposing this requirement pursuant to 49 U.S.C.
+5329(d)(1)(I) and 49 U.S.C. 5329(d)(1)(C) and (D). In using the word
+``including'' when describing the risk reduction program, 49 U.S.C.
+5329(d)(1)(I)(i) and (ii) outline a non-exclusive list of program
+elements. FTA therefore believes that requiring consideration of
+additional mitigations in the risk reduction program is appropriate. In
+addition, 49 U.S.C. 5329(d)(1)(C) and (D) require that each agency's
+ASP include ``methods for identifying and evaluating safety risks
+throughout all elements of the public transportation system,'' and
+``strategies to minimize the exposure of the public, personnel, and
+property to hazards and unsafe conditions,'' respectively. As described
+in FTA's 2018 PTASP final rule, ``[e]ach of these requirements is
+consistent with the second component of SMS--Safety Risk Management.''
+(83 FR 34418, at 34453). The proposed requirement to consider specific
+mitigations through the SRM process would enable agencies to evaluate
+visibility impairment and transit worker assault safety risks more
+effectively, and would enable them to minimize the exposure of the
+public, personnel, and property to related hazards and unsafe
+conditions. FTA believes that this requirement will lead to improved
+safety performance at all applicable transit agencies.
+    To incorporate the statutorily required role of the Safety
+Committee, FTA proposes section 673.20(a)(4). Pursuant to this section,
+when a Safety Committee performs a safety risk analysis, determines
+that particular safety risk mitigations would reduce assaults on
+transit workers and injuries to transit workers, and recommends such
+mitigations to the Accountable Executive, the transit agency must
+implement one or more of these recommended mitigations. Consistent with
+existing PTASP regulation requirements, the Accountable Executive
+retains direction over the human and capital resources needed to
+develop and maintain the ASP and has ultimate accountability for the
+agency's safety performance. Accordingly, if in exercising this
+responsibility the Accountable Executive determines that safety risk
+mitigations recommended by the Safety Committee are not feasible or
+effective in improving the agency's overall safety performance, it may
+decline to implement such mitigation. The Accountable Executive should
+document such decisions consistent with the recordkeeping requirements
+of section 673.31.
+    The Bipartisan Infrastructure Law requires that the Safety
+Committees of recipients serving large urbanized areas establish
+performance targets for the safety risk reduction program using a 3-
+year rolling average of data submitted by the recipient to the NTD. FTA
+proposes to incorporate those requirements into section 673.20(b) and
+proposes that these targets must be set on an annual basis. These
+targets will be based on performance measures and standards that FTA
+will propose in a separate action, the National Public Transportation
+Safety Plan, which is to be published for public comment at a later
+date. As required by the Bipartisan Infrastructure Law, these
+performance measures for a safety risk reduction program must be
+included in the National Public Transportation Safety Plan (49 U.S.C.
+5329(b)(2)(A)). Once those performance measures are established in the
+National Public Transportation Safety Plan, transit agencies will use
+these measures to set targets for the safety risk reduction program, as
+required by 49 U.S.C. 5329(d).
+    Some large urbanized area providers that qualify as Reduced
+Reporters for NTD reporting purposes may not currently report detailed
+safety event information to the NTD. FTA is considering revisions to
+NTD safety data forms to support more granular data collection from
+these transit agencies. However, these revisions have not gone into
+effect yet. Accordingly, for purposes of annual safety performance
+target setting for the safety risk reduction program, FTA is proposing
+to require that the Safety Committees of large urbanized area providers
+set these targets only based on the level of detail the transit agency
+is required to report
+
+[[Page 25341]]
+
+to the NTD. If a transit agency has not been required to report three
+years of data to the NTD relating to a performance measure yet, the
+Safety Committee would not set a risk reduction performance target for
+that specific measure yet. Target setting for the performance measure
+would begin once the transit agency has been required to report three
+years of data to the NTD corresponding to the performance measure.
+    FTA is not proposing to require that a defined amount of annual
+reduction be reflected in the safety risk reduction program performance
+targets. FTA believes that Safety Committees should have flexibility
+regarding the amount of annual reduction defined by their targets, as
+long as the methodology uses a three-year rolling average of data
+reported to the NTD and the targets reflect an annual reduction.
+    FTA also proposes section 673.20(d), which leverages the continuous
+improvement processes established under section 673.27(d) to require
+that transit agencies monitor their safety performance against the
+annual safety performance targets the Safety Committee sets for the
+safety risk reduction program.
+    Section 673.20(e) incorporates Bipartisan Infrastructure Law
+requirements addressing failure to meet an annual safety performance
+target set under the safety risk reduction program. This includes the
+requirement that if a large urbanized area provider does not meet one
+of the safety risk reduction performance targets, it must allocate at
+least 0.75% of its section 5307 funds in the following fiscal year to
+safety-related projects eligible under section 5307 that are reasonably
+likely to assist the agency in meeting the target in the future. FTA
+proposes that large urbanized area providers that do not meet an
+established target assess the associated safety risk using the methods
+or processes established under section 673.25(c) and mitigate
+associated safety risk based on the results of the safety risk
+assessment.
+
+Subpart D--Safety Management Systems
+
+    FTA proposes redesignating existing subpart C as subpart D, Safety
+Management Systems.
+673.23 Safety Management Policy
+    In section 673.23(a), FTA proposes adding a requirement for the
+transit agency's Safety Management Policy to include a description of
+the transit agency's Safety Committee or approach to cooperation with
+frontline transit worker representatives, as applicable. This ensures
+the policy describes the coordination with frontline transit workers
+required under the Bipartisan Infrastructure Law.
+    Section 673.23(b) currently requires agencies to establish and
+implement a safety reporting process. FTA proposes two changes to this
+paragraph. First, FTA proposes to replace the words ``safety
+conditions'' with ``safety concerns,'' and to add a few examples of
+safety concerns. This change describes the reporting process
+requirement more accurately. Second, with respect to required
+protections for transit workers who report, FTA also proposes to delete
+the words ``safety conditions to senior management.'' This wording is
+duplicative of information already conveyed in the paragraph. This is a
+minor change that does not alter any existing requirements.
+    In section 673.23(d)(1), FTA proposes adding a requirement for the
+Accountable Executive to receive and consider safety risk mitigation
+recommendations of the Safety Committee. This additional Accountable
+Executive responsibility ensures that the Safety Committee has a
+meaningful voice in safety-related decision-making. Further, in section
+673.23(d)(3), FTA proposes to require that large urbanized area
+providers establish the necessary authorities, accountabilities, and
+responsibilities for the management of safety for the Safety Committee.
+In section 673.23(d)(5), FTA proposes adding the Safety Committee to
+the list of groups which the transit agency may designate as key staff
+in developing, implementing, and operating the transit agency's SMS.
+This addition relates to Bipartisan Infrastructure Law Safety Committee
+requirements and requires large urbanized area providers to address new
+Safety Committee requirements through the Safety Management Policy
+component of their SMS.
+673.25 Safety Risk Management
+    FTA proposes amending section 673.25(b)(2) to clarify existing
+requirements for transit agencies to consider certain data and
+information as a source for hazard identification. In addition, the
+Bipartisan Infrastructure Law requires ASPs to address minimizing
+exposure to infectious diseases, consistent with guidelines from the
+CDC or a State health authority. In response to this statutory
+requirement, FTA proposes also amending section 673.25(b)(2) to require
+transit agencies to consider data and information from the CDC or a
+State health authority regarding exposure to infectious disease as a
+source for hazard identification. FTA also proposes that transit
+agencies consider safety concerns identified through the transit
+agency's Safety Assurance activities. FTA proposes this change to
+establish the link more clearly between Safety Risk Management and
+Safety Assurance activities.
+    In section 673.25(c)(2), FTA proposes wording changes to clarify
+the application of existing safety risk assessment requirements and the
+connection between safety risk assessment and safety risk mitigation.
+One of these changes clarifies that safety risk assessments should
+ultimately inform the prioritization of safety risk mitigation activity
+rather than simply the prioritization of identified hazards. This
+change is intended to clarify FTA's original intent that safety risk
+assessment activity informs the prioritization of safety resources to
+mitigate safety risk.
+    In section 673.25(d)(1), FTA proposes minor wording changes
+consistent with the changes proposed in section 673.5. FTA also
+proposes that the safety risk management process of large urbanized
+area providers must address the role of the agency's Safety Committee.
+This ensures that the SMS of these providers incorporates the Safety
+Committee's statutorily required responsibilities relating to safety
+risk management.
+    FTA proposes adding section 673.25(d)(2), which would require
+transit agencies to consider guidance provided by an oversight
+authority, if applicable, and FTA as a source for safety risk
+mitigation. In response to Bipartisan Infrastructure Law requirements,
+this paragraph would also require agencies to consider CDC or State
+health authority guidelines to prevent or control exposure to
+infectious diseases.
+673.27 Safety Assurance
+    FTA proposes amending the continuous improvement requirement in
+section 673.27(d)(1) to specify that a transit agency must establish a
+process to assess its safety performance annually. FTA proposes that
+the process include identifying deficiencies in the transit agency's
+SMS and in the agency's safety performance against its safety
+performance targets, including safety performance targets required for
+all transit agencies at section 673.11(a)(3) and safety performance
+targets set by the Safety Committees of large urbanized area providers
+for the safety risk reduction program as required at section 673.20(b).
+This updated requirement clarifies FTA's intent for the frequency and
+substance of this performance assessment, and addresses industry
+
+[[Page 25342]]
+
+concerns that the regulation did not specify a timeline for assessing
+safety performance. For large urbanized area providers, FTA also
+proposes that the continuous improvement process must address the role
+of the transit agency's Safety Committee. This ensures that the SMS of
+these providers incorporates the Safety Committee's statutorily
+required responsibilities relating to continuous improvement.
+    FTA further proposes to require that rail transit agencies must
+address internal safety review requirements established by SSOAs as
+part of the continuous improvement element of Safety Assurance. FTA
+proposes minor wording changes in section 673.25(d)(2) for clarity.
+    In section 673.27(a), FTA proposes to extend the continuous
+improvement requirements to small public transportation providers. In
+the current regulation, small public transportation providers are
+exempt from this requirement. This change is responsive to the
+Bipartisan Infrastructure Law, which requires large urbanized area
+providers to establish a Safety Committee and a safety risk reduction
+program that involves key elements of continuous improvement, such as
+safety performance target setting, safety performance monitoring, and
+the identification of safety deficiencies and safety performance
+issues. Certain small public transportation providers meet the
+definition of large urbanized area provider and are therefore subject
+to these statutory requirements. Additionally, under the existing rule,
+all small public transportation providers already are required to set
+safety performance targets based on the safety performance measures
+established in the NSP. FTA does not believe that the continuous
+improvement requirements will be burdensome for small public
+transportation providers. Based on the experience that these providers
+have gained by operating an SMS and carrying out required safety
+performance measurement activities, FTA expects they will be able to
+formalize these continuous improvement activities and document them in
+their ASP.
+    In addition, FTA proposes a change to the safety performance
+monitoring and measurement requirements in section 673.27(b). FTA
+proposes that for large urbanized area providers, these activities must
+address the role of the agency's Safety Committee. This ensures that
+the SMS of these providers incorporates the Safety Committee's
+statutorily required responsibilities relating to safety performance
+monitoring and measurement.
+673.29 Safety Promotion
+    Pursuant to 49 U.S.C. 5329(d)(1)(H), each agency's ASP must include
+a comprehensive staff training program. The Bipartisan Infrastructure
+Law amended this provision to require that large urbanized area
+providers include maintenance workers and de-escalation training in
+their training programs.
+    To incorporate the de-escalation training requirement, FTA proposes
+adding language to section 673.29(a) that would require transit
+agencies to include de-escalation training in their comprehensive
+safety training program. This requirement would apply to all agencies,
+not just large urbanized area providers. FTA is proposing this
+requirement pursuant to 49 U.S.C. 5329(d)(1)(H)(i). In using the word
+``including'' when describing the comprehensive safety training
+program, 49 U.S.C. 5329(d)(1)(H)(i) outlines a nonexclusive list of
+program elements. FTA therefore believes that requiring de-escalation
+training for operations personnel and personnel directly responsible
+for safety at all transit agencies is appropriate. FTA believes this is
+appropriate and necessary to enhance the safety outcomes for all
+transit workers and users of transportation, not just those in large
+urbanized areas.
+    FTA also proposes that the training program must include training
+on safety concern identification and reporting. This training
+requirement would address a common industry need for greater
+understanding of how to report safety concerns through safety reporting
+programs.
+    This section would also incorporate the statutory requirement that
+large urbanized area providers must include maintenance workers in
+their training programs in new section 673.29(a)(2).
+    In section 673.29(b), FTA proposes to require transit agencies to
+integrate the results of cooperation with frontline transit worker
+representatives and joint labor-management Safety Committee activities
+into their safety communication activities. FTA proposes this modified
+requirement to address the communication impacts resulting from the new
+requirements for cooperation with frontline transit worker
+representatives and joint labor-management Safety Committee activities
+and to make sure that the results of these activities are communicated
+throughout the organization.
+
+Subpart E--Safety Plan Documentation and Recordkeeping
+
+    FTA proposes establishing a new subpart E for Safety Plan
+Documentation and Recordkeeping.
+673.31 Safety Plan Documentation
+    FTA proposes a minor edit to the safety plan documentation
+requirements in section 673.31 to clarify that a transit agency must
+make documents available upon request by a State having jurisdiction.
+
+III. Regulatory Analyses and Notices
+
+Executive Order 12866 (Regulatory Planning and Review) and Executive
+Order 13563 (Improving Regulation and Regulatory Review)
+
+    Executive Order 12866 (``Regulatory Planning and Review''), as
+supplemented by Executive Order 13563 (``Improving Regulation and
+Regulatory Review''), directs Federal agencies to assess the benefits
+and costs of regulations, to select regulatory approaches that maximize
+net benefits when possible, and to consider economic, environmental,
+and distributional effects. It also directs the Office of Management
+and Budget (OMB) to review significant regulatory actions, including
+regulations with annual economic effects of $100 million or more. OMB
+has determined that the proposed rule is not significant within the
+meaning of Executive Order 12866 and has not reviewed it under that
+order.
+Overview and Need for Regulation
+    The proposed rule, which implements amendments made by the
+Bipartisan Infrastructure Law, would add requirements for transit
+agencies subject to the existing regulation for Public Transportation
+Agency Safety Plans. The applicable agencies include all rail transit
+agencies and all transit agencies receiving section 5307 funding.
+Agencies would need to incorporate de-escalation training into their
+safety training programs and would need to incorporate guidelines for
+infectious disease exposure into their safety management system
+processes. In addition, small public transportation providers would
+need to establish continuous improvement processes to assess safety
+performance; current regulation requires transit providers to establish
+processes but exempts small providers.
+    The proposed rule would also create requirements for transit
+agencies based on the urbanized areas they serve. Agencies serving
+urbanized areas with 200,000 or more people would need to establish
+safety committees, safety risk reduction programs with safety
+performance targets, and include maintenance workers in their safety
+training programs. The agencies would need to allocate at least 0.75
+percent of
+
+[[Page 25343]]
+
+their section 5307 funding to eligible safety projects. If an agency
+did not meet a safety performance target, it would need to allocate its
+set-aside funding to projects that are reasonably likely assist the
+agency in meeting the target. Agencies serving urbanized areas with
+fewer than 200,000 people would need to develop their agency safety
+plans in cooperation with frontline transit worker representatives.
+Benefits
+    The proposed rule would reduce the risk of fatalities and injuries
+for transit workers, bus passengers, drivers, and pedestrians if
+transit agencies adopt safety risk mitigations that they would not have
+adopted under current agency safety plans or spending levels. FTA
+expects that agencies would be more likely to adopt mitigations to
+reduce the risk of bus collisions and transit worker assault. Example
+mitigations include bus sensors and surveillance systems to detect
+objects and pedestrians, or bus operator barriers to protect drivers.
+At the same time, some mitigations like de-escalation training for
+transit operators have already been widely adopted. FTA currently does
+not have information to determine what additional mitigations agencies
+would adopt due to the proposed rule and has therefore not estimated
+the associated benefits.
+    FTA seeks information from commenters to estimate the benefits of
+the proposed rule. What safety interventions would agencies be more
+likely to adopt as a result of developing risk reduction programs or
+explicitly considering bus collisions and transit worker assaults?
+Costs
+    Transit agencies may incur economic costs to adopt safety
+interventions if the proposed rule leads to changes in safety plans or
+spending levels. While the proposed rule would require agencies to
+allocate at least 0.75 percent of section 5307 funds to eligible safety
+projects, the resulting changes in spending are unknown for two
+reasons. First, FTA does not have information to estimate the risk
+reduction targets agencies would set or the likelihood that agencies
+would not meet the targets. Second, if an agency spends more of its
+section 5307 funding on safety interventions but can offset the
+increased spending by spending less of its state and local funding,
+then total spending may increase by a smaller amount or even remain
+unchanged.
+    Transit agencies would also incur costs to meet the new
+administrative and reporting requirements. To estimate the costs, FTA
+subject-matter experts estimated the number of transit agencies
+affected, the number and type of staff involved, and the time needed
+(Table 1). FTA determined that the requirements would affect 428
+agencies in large urbanized areas and 280 agencies in small urbanized
+areas. Within an agency, safety managers, operations managers, and
+frontline worker representatives would spend the most time to meet the
+requirements each year. FTA then used the estimates to calculate costs
+for the first ten years of the rule from 2023--the assumed effective
+date of the rule--to 2032.
+    The estimates in Table 1 account for current transit agency
+practices. For de-escalation training, almost all agencies established
+programs after the Transportation Security Administration issued a
+security directive in January 2021 requiring mask use on public
+transportation.\2\ The directive, which is no longer in effect as of
+April 2022,\3\ required agencies to brief employees responsible for
+enforcing the directive. Agencies established de-escalation training
+programs as part of their briefings, and FTA developed free online
+training resources allowing frontline employees to complete training by
+themselves.\4\ For agency safety plans, FTA has the understanding that
+most agencies already involve frontline worker representatives; for
+that reason, the estimated hours and staff for frontline worker
+involvement only cover new reporting requirements.
+---------------------------------------------------------------------------
+
+    \2\ Transportation Security Administration (January 31, 2021).
+``Security Directive SD 1582/84-21-01.'' https://www.tsa.gov/sites/default/files/sd-1582_84-21-01.pdf.
+    \3\ Transportation Security Administration (April 18, 2022).
+``Statement regarding face mask use on public transportation.''
+https://www.tsa.gov/news/press/statements/2022/04/18/statement-regarding-face-mask-use-public-transportation.
+    \4\ Federal Transit Administration (August 2022). ``FTA-
+Sponsored Training Courses.'' https://www.transit.dot.gov/regulations-and-guidance/safety/fta-sponsored-training-courses.
+---------------------------------------------------------------------------
+
+    Some agencies also began meeting requirements after FTA issued a
+Dear Colleague letter in February 2022 describing statutory changes in
+the Bipartisan Infrastructure Law.\5\ In that case, however, FTA keeps
+the agencies in its cost analysis because agencies would not have
+incorporated the requirements without the Congressional mandate.
+---------------------------------------------------------------------------
+
+    \5\ Federal Transit Administration. February 17, 2022. ``Dear
+Colleague Letter: Bipartisan Infrastructure Law Changes to PTASP
+Requirements.'' https://www.transit.dot.gov/safety/public-transportation-agency-safety-program/dear-colleague-letter-bipartisan-infrastructure.
+
+                Table 1--Staff and Hours Needed To Meet Administrative and Reporting Requirements
+----------------------------------------------------------------------------------------------------------------
+                                                                                            First-year   Annual
+            Requirement               Affected entities                 Staff                  hours      hours
+----------------------------------------------------------------------------------------------------------------
+De-escalation training............  12,000 frontline       Frontline personnel............           2      0.25
+                                     employees (5% of
+                                     240,000 as of June
+                                     2022).
+Continuous improvement processes..  572 small public       Chief Safety Officer...........           1         4
+                                     transit providers.
+                                                           Safety manager.................           1         8
+Safety committee with frontline     428 agencies in large  HR manager.....................          24  ........
+ worker representatives.             UZAs.                 Safety manager.................          24        21
+                                                           Union representative...........          24  ........
+                                                           Operations manager.............  ..........        21
+                                                           Maintenance manager............  ..........        21
+                                                           Frontline representative.......  ..........        63
+Risk reduction program............  428 agencies in large  Chief Safety Officer...........           1         1
+                                     UZAs.
+                                                           Safety manager.................           1         2
+                                                           Data analyst...................  ..........         8
+Frontline worker involvement with   270 agencies in small  Chief Safety Officer...........  ..........         2
+ agency safety plans.                UZAs.                 Safety manager.................           4         2
+----------------------------------------------------------------------------------------------------------------
+Source: FTA analysis.
+
+    To estimate the value of staff time spent on the requirements, FTA
+used occupational wage data from the Bureau of Labor Statistics as of
+May 2021 (Table 2).\6\ FTA used median hourly wages for workers in the
+Transit and Ground
+
+[[Page 25344]]
+
+Passenger Transportation industry (North American Industry
+Classification System code 485000) as a basis for the estimates,
+multiplied by 1.62 to account for employer benefits.\7\
+---------------------------------------------------------------------------
+
+    \6\ Bureau of Labor Statistics. 2022. ``May 2021 National
+Occupational Employment and Wage Estimates: United States.'' https://www.bls.gov/oes/2021/may/oes_nat.htm.
+    \7\ Multiplier derived using Bureau of Labor Statistics data on
+employer costs for employee compensation for June 2022 (https://www.bls.gov/news.release/archives/ecec_09202022.pdf). Employer costs
+for state and local government workers averaged $55.47 an hour, with
+$34.23 for wages and $21.25 for benefit costs. To estimate full
+costs from wages, one would use a multiplier of $55.47/$34.23, or
+1.62.
+
+                       Table 2--Occupational Categories and Wages Used To Value Staff Time
+                                                     [$2021]
+----------------------------------------------------------------------------------------------------------------
+                                                                                  Median  hourly     Wage with
+                  Staff                      Occupational category        Code         wage          benefits
+----------------------------------------------------------------------------------------------------------------
+HR manager..............................  Human Resources Managers...    11-3121          $45.64          $73.77
+Safety manager..........................  Occupational Health and        19-5011           37.29           60.27
+                                           Safety Specialists.
+Union representative....................  Occupational Health and        19-5011           37.29           60.27
+                                           Safety Specialists.
+Chief Safety Officer....................  Health and Safety Engineers    17-2111           49.21           79.54
+Data analyst............................  Operations Research            15-2031           57.71           93.27
+                                           Analysts.
+Frontline worker........................  Transportation and Material    53-0000           22.10           35.72
+                                           Moving Occupations.
+Operations manager......................  General and Operations         11-1021           45.60           73.70
+                                           Manager.
+Maintenance manager.....................  Facilities Managers........    11-3013           43.88           70.92
+----------------------------------------------------------------------------------------------------------------
+Source: Bureau of Labor Statistics, May 2021 National Occupational Employment and Wage Estimates.
+
+    The administrative and reporting requirements of the proposed rule
+have estimated costs of $2.4 million in the first year in 2021 dollars
+and annual costs of $4.9 million in later years (Table 3). The largest
+annual costs are for de-escalation training ($2.2 million) and the
+safety committees ($2.1 million).
+
+  Table 3--First-Year and Annual Costs for Administrative and Reporting
+                              Requirements
+                                 [$2021]
+------------------------------------------------------------------------
+                                            First-year
+               Requirement                     costs       Annual costs
+------------------------------------------------------------------------
+De-escalation training..................        $868,000      $2,171,000
+Continuous improvement processes........          76,000         433,000
+Safety committee with frontline worker         1,374,000       2,084,000
+ representatives........................
+Risk reduction program..................          58,000         195,000
+Frontline worker involvement with agency          45,000          52,000
+ safety plans...........................
+                                         -------------------------------
+    Total...............................       2,420,000       4,934,000
+------------------------------------------------------------------------
+Totals may not sum due to rounding.
+
+Summary
+    Table 4 summarizes the economic effects of the proposed rule over
+the ten-year analysis period. The rule would have total costs of $46.8
+million in 2021 dollars and annualized costs of $3.3 million at a 7
+percent discount rate (discounted to 2023) and $3.9 million at 3
+percent. To quantify benefits and assess net benefits, FTA would need
+information on the safety interventions transit agencies would adopt.
+
+                                 Table 4--Summary of Economic Effects, 2023-2033
+                                           [$2021, discounted to 2023]
+----------------------------------------------------------------------------------------------------------------
+                                                                                    Annualized      Annualized
+                              Item                                     Total           (7%)            (3%)
+----------------------------------------------------------------------------------------------------------------
+Benefits........................................................   Unquantified   ..............  ..............
+Costs:
+De-escalation training..........................................     $20,403,000      $1,417,000      $1,677,000
+Continuous improvement processes................................       3,970,000         273,000         325,000
+Safety committee with frontline worker representatives..........      20,132,000       1,411,000       1,662,000
+Risk reduction program..........................................       1,810,000         125,000         149,000
+Frontline worker involvement with agency safety plans...........         512,000          36,000          42,000
+                                                                 -----------------------------------------------
+    Total costs.................................................      46,827,000       3,263,000       3,855,000
+    Net benefits................................................   Unquantified   ..............  ..............
+----------------------------------------------------------------------------------------------------------------
+Totals may not sum due to rounding.
+
+[[Page 25345]]
+
+Regulatory Flexibility Act
+
+    The Regulatory Flexibility Act of 1980 (RFA) (5 U.S.C. 601 et seq.)
+requires Federal agencies to assess the impact of a regulation on small
+entities unless the agency determines that the regulation is not
+expected to have a significant economic impact on a substantial number
+of small entities. FTA has determined that the proposed rule would not
+have a significant effect on a substantial number of small entities.
+    The proposed rule would require public transit agencies serving an
+urbanized area with a population of less than 200,000 to work with
+frontline transit worker representatives while developing agency safety
+plans. Most transit agencies are public-sector organizations. Under the
+Act, local governments and other public-sector organizations qualify as
+a small entity if they serve a population of less than 50,000. The rule
+would affect 280 agencies in small urbanized areas, with some
+qualifying as small entities under the Regulatory Flexibility Act.
+    FTA estimates that the requirement would have an annual cost of
+less than $300 for a transit agency. Most agencies already involve
+frontline transit worker representatives and would only need to spend
+time on associated reporting. FTA estimates that a transit agency would
+need 4 hours of staff time--2 hours for a Chief Safety Officer; 2 hours
+for a safety manager--to meet the reporting requirement. Using
+occupational wage data from the Bureau of Labor Statistics as of May
+2021, FTA estimates the value of the time spent at $265.00, which would
+not have a significant effect on the agency.
+
+Unfunded Mandates Reform Act of 1995
+
+    FTA has determined that this rule does not impose unfunded
+mandates, as defined by the Unfunded Mandates Reform Act of 1995 (Pub.
+L. 104-4, March 22, 1995). This rule does not include a Federal mandate
+that may result in the expenditure by State, local, and tribal
+governments, in the aggregate, or by the private sector of $100 million
+or more (adjusted for inflation) in any one year. Additionally, the
+definition of ``Federal mandate'' in the Unfunded Mandates Reform Act
+excludes financial assistance of the type in which State, local, or
+tribal governments have authority to adjust their participation in the
+program in accordance with changes made in the program by the Federal
+Government. The Federal Transit Act permits this type of flexibility.
+
+Executive Order 13132 (Federalism Assessment)
+
+    Executive Order 13132 requires agencies to assure meaningful and
+timely input by State and local officials in the development of
+regulatory policies that may have a substantial direct effect on the
+States, on the relationship between the national government and the
+States, or on the distribution of power and responsibilities among the
+various levels of government. This action has been analyzed in
+accordance with the principles and criteria contained in Executive
+Order 13132, dated August 4, 1999, and FTA determined this action will
+not have a substantial direct effect or sufficient federalism
+implications on the States. FTA also determined this action will not
+preempt any State law or regulation or affect the States' ability to
+discharge traditional State governmental functions.
+
+Executive Order 12372 (Intergovernmental Review)
+
+    The regulations implementing Executive Order 12372 regarding
+intergovernmental consultation on Federal programs and activities apply
+to this program.
+
+Paperwork Reduction Act
+
+    In compliance with the Paperwork Reduction Act of 1995 (44 U.S.C.
+3501 et seq.) (PRA), and the White House Office of Management and
+Budget's (OMB) implementing regulation at 5 CFR 1320.8(d), FTA is
+seeking approval from OMB for a currently approved information
+collection that is associated with a Notice of Proposed Rulemaking. The
+information collection (IC) was previously approved on October 4, 2022.
+However, this submission includes revised requirements authorized by
+the Bipartisan Infrastructure Law, including cooperation with frontline
+transit worker representatives in the development of an Agency Safety
+Plan (ASP), establishment of a Safety Committee, Safety Committee
+approval of an ASP, establishment of a risk reduction program for
+transit operations, establishment of safety performance targets for the
+risk reduction program, and establishment of strategies to minimize
+exposure to infectious diseases.
+    Type of Collection: Operators of public transportation systems.
+    Type of Review: OMB Clearance. Previously Approved Information
+Collection Request.
+    Summary of the Collection: The information collection includes (1)
+The development and certification of a Public Transportation Agency
+Safety Plan; (2) the implementation and documentation of the SMS
+approach; (3) associated recordkeeping; and (4) periodic requests.
+    Need for and Expected Use of the Information to be Collected:
+Collection of information for this program is necessary to ensure that
+operators of public transportation systems are performing their safety
+responsibilities and activities required by law at 49 U.S.C. 5329(d).
+Without the collection of this information, FTA would be unable to
+determine each recipient's and State's compliance with 49 U.S.C.
+5329(d).
+    Respondents: Respondents include operators of public transportation
+as defined under 49 U.S.C. 5302. FTA is deferring regulatory action at
+this time on recipients of FTA financial assistance under 49 U.S.C.
+5310 and/or 49 U.S.C. 5311, unless those recipients operate rail
+transit. The total number of respondents is 758. This figure includes
+186 respondents that are States, rail fixed guideway systems, or large
+bus systems that receive Urbanized Area Formula Program funds under 49
+U.S.C. 5307. This figure also includes 572 respondents that receive
+Urbanized Area Formula Program funds under 49 U.S.C. 5307, operate one
+hundred or fewer vehicles in revenue service, and do not operate rail
+fixed guideway service that may draft and certify their own safety
+plans.
+    Frequency: Annual, Periodic.
+
+National Environmental Policy Act
+
+    Federal agencies are required to adopt implementing procedures for
+the National Environmental Policy Act (NEPA) that establish specific
+criteria for, and identification of, three classes of actions: (1)
+Those that normally require preparation of an Environmental Impact
+Statement, (2) those that normally require preparation of an
+Environmental Assessment, and (3) those that are categorically excluded
+from further NEPA review (40 CFR 1507.3(b)). This rule qualifies for
+categorical exclusions under 23 CFR 771.118(c)(4) (planning and
+administrative activities that do not involve or lead directly to
+construction). FTA has evaluated whether the rule will involve unusual
+or extraordinary circumstances and has determined that it will not.
+
+Executive Order 12630 (Taking of Private Property)
+
+    FTA has analyzed this rule under Executive Order 12630,
+Governmental Actions and Interference with
+
+[[Page 25346]]
+
+Constitutionally Protected Property Rights. FTA does not believe this
+rule affects a taking of private property or otherwise has taking
+implications under Executive Order 12630.
+
+Executive Order 12988 (Civil Justice Reform)
+
+    This rule meets applicable standards in sections 3(a) and 3(b)(2)
+of Executive Order 12988, Civil Justice Reform, to minimize litigation,
+eliminate ambiguity, and reduce burden.
+
+Executive Order 13045 (Protection of Children)
+
+    FTA has analyzed this rule under Executive Order 13045, Protection
+of Children from Environmental Health Risks and Safety Risks. FTA
+certifies that this action will not cause an environmental risk to
+health or safety that might disproportionately affect children.
+
+Executive Order 13175 (Tribal Consultation)
+
+    FTA has analyzed this rule under Executive Order 13175, dated
+November 6, 2000, and believes that it will not have substantial direct
+effects on one or more Indian tribes; will not impose substantial
+direct compliance costs on Indian tribal governments; and will not
+preempt tribal laws. Therefore, a tribal summary impact statement is
+not required.
+
+Executive Order 13211 (Energy Effects)
+
+    FTA has analyzed this action under Executive Order 13211, Actions
+Concerning Regulations That Significantly Affect Energy Supply,
+Distribution, or Use. FTA has determined that this action is not a
+significant energy action under that order and is not likely to have a
+significant adverse effect on the supply, distribution, or use of
+energy. Therefore, a Statement of Energy Effects is not required.
+
+Executive Order 12898 (Environmental Justice)
+
+    Executive Order 12898 (Federal Actions to Address Environmental
+Justice in Minority Populations and Low-Income Populations) and DOT
+Order 5610.2(a) (77 FR 27534, May 10, 2012) (https://www.transportation.gov/transportation-policy/environmental-justice/department-transportation-order-56102a) require DOT agencies to achieve
+Environmental Justice (EJ) as part of their mission by identifying and
+addressing, as appropriate, disproportionately high and adverse human
+health or environmental effects, including interrelated social and
+economic effects, of their programs, policies, and activities on
+minority and low-income populations. All DOT agencies must address
+compliance with Executive Order 12898 and the DOT Order in all
+rulemaking activities. On August 15, 2012, FTA's Circular 4703.1 became
+effective, which contains guidance for recipients of FTA financial
+assistance to incorporate EJ principles into plans, projects, and
+activities (https://www.transit.dot.gov/regulations-and-guidance/fta-circulars/environmental-justice-policy-guidance-federal-transit).
+    FTA has evaluated this action under the Executive Order, the DOT
+Order, and the FTA Circular and FTA has determined that this action
+will not cause disproportionately high and adverse human health and
+environmental effects on minority or low-income populations.
+
+Regulation Identifier Number
+
+    A Regulation Identifier Number (RIN) is assigned to each regulatory
+action listed in the Unified Agenda of Federal Regulations. The
+Regulatory Information Service Center publishes the Unified Agenda in
+April and October of each year. The RIN number contained in the heading
+of this document can be used to cross-reference this rule with the
+Unified Agenda.
+
+List of Subjects in 49 CFR Part 673
+
+    Mass transportation, Safety.
+
+Nuria I. Fernandez,
+Administrator.
+
+    In consideration of the foregoing, and under the authority of 49
+U.S.C. 5329 and 5334, and the delegation of authority at 49 CFR 1.91,
+the Federal Transit Administration proposes to amend 49 CFR chapter VI
+by revising part 673 of title 49 of the Code of Federal Regulations to
+read as follows:
+
+PART 673--PUBLIC TRANSPORTATION AGENCY SAFETY PLANS
+
+Subpart A--General
+Sec.
+673.1 Applicability.
+673.3 Policy.
+673.5 Definitions.
+Subpart B--Safety Plans
+673.11 General requirements.
+673.13 Certification of compliance.
+673.15 Coordination with metropolitan, statewide, and non-
+metropolitan planning processes.
+673.17 Cooperation with frontline transit worker representatives.
+Subpart C--Safety Committee and Safety Risk Reduction Program
+673.19 Safety Committee.
+673.20 Safety risk reduction program.
+Subpart D--Safety Management Systems
+673.21 General requirements.
+673.23 Safety Management Policy.
+673.25 Safety Risk Management.
+673.27 Safety Assurance.
+673.29 Safety Promotion.
+Subpart E--Safety Plan Documentation and Recordkeeping
+673.31 Safety plan documentation.
+
+    Authority: 49 U.S.C. 5329(d), 5334; 49 CFR 1.91.
+
+Subpart A--General
+
+Sec.  673.1  Applicability.
+
+    (a) This part applies to any State, local governmental authority,
+and any other operator of a public transportation system that receives
+Federal financial assistance under 49 U.S.C. chapter 53.
+    (b) This part does not apply to an operator of a public
+transportation system that only receives Federal financial assistance
+under 49 U.S.C. 5310, 49 U.S.C. 5311, or both 49 U.S.C. 5310 and 49
+U.S.C. 5311 unless it operates a rail fixed guideway public
+transportation system.
+
+Sec.  673.3  Policy.
+
+    The Federal Transit Administration (FTA) has adopted the principles
+and methods of Safety Management Systems (SMS) as the basis for
+enhancing the safety of public transportation in the United States. FTA
+will follow the principles and methods of SMS in its development of
+rules, regulations, policies, guidance, best practices, and technical
+assistance administered under the authority of 49 U.S.C. 5329. This
+part sets standards for the Public Transportation Agency Safety Plan,
+which will be responsive to FTA's Public Transportation Safety Program,
+and reflect the specific safety objectives, standards, and priorities
+of each transit agency. Each Public Transportation Agency Safety Plan
+will incorporate SMS principles and methods tailored to the size,
+complexity, and scope of the public transportation system and the
+environment in which it operates.
+
+Sec.  673.5  Definitions.
+
+    As used in this part:
+    Accountable Executive means a single, identifiable person who has
+ultimate responsibility for carrying out the Public Transportation
+Agency Safety Plan of a transit agency; responsibility for carrying out
+the transit agency's Transit Asset Management Plan; and control or
+direction over the human and capital resources needed to develop and
+
+[[Page 25347]]
+
+maintain both the transit agency's Public Transportation Agency Safety
+Plan, in accordance with 49 U.S.C. 5329(d), and the transit agency's
+Transit Asset Management Plan in accordance with 49 U.S.C. 5326.
+    Assault on a transit worker means, as defined under 49 U.S.C. 5302,
+a circumstance in which an individual knowingly, without lawful
+authority or permission, and with intent to endanger the safety of any
+individual, or with a reckless disregard for the safety of human life,
+interferes with, disables, or incapacitates a transit worker while the
+transit worker is performing the duties of the transit worker.
+    CDC means the Centers for Disease Control and Prevention of the
+United States Department of Health and Human Services.
+    Chief Safety Officer means an adequately trained individual who has
+responsibility for safety and reports directly to a transit agency's
+chief executive officer, general manager, president, or equivalent
+officer. A Chief Safety Officer may not serve in other operational or
+maintenance capacities, unless the Chief Safety Officer is employed by
+a transit agency that is a small public transportation provider as
+defined in this part, or a public transportation provider that does not
+operate a rail fixed guideway public transportation system.
+    Direct Recipient means an entity that receives Federal financial
+assistance directly from the Federal Transit Administration.
+    Emergency means, as defined under 49 U.S.C. 5324, a natural
+disaster affecting a wide area (such as a flood, hurricane, tidal wave,
+earthquake, severe storm, or landslide) or a catastrophic failure from
+any external cause, as a result of which the Governor of a State has
+declared an emergency and the Secretary has concurred; or the President
+has declared a major disaster under section 401 of the Robert T.
+Stafford Disaster Relief and Emergency Assistance Act (42 U.S.C. 5170).
+    Equivalent entity means an entity that carries out duties similar
+to that of a Board of Directors, for a recipient or subrecipient of FTA
+funds under 49 U.S.C. chapter 53, including sufficient authority to
+review and approve a recipient or subrecipient's Public Transportation
+Agency Safety Plan.
+    FTA means the Federal Transit Administration, an operating
+administration within the United States Department of Transportation.
+    Hazard means any real or potential condition that can cause injury,
+illness, or death; damage to or loss of the facilities, equipment,
+rolling stock, or infrastructure of a public transportation system; or
+damage to the environment.
+    Investigation means the process of determining the causal and
+contributing factors of a safety event or hazard, for the purpose of
+preventing recurrence and mitigating safety risk.
+    Joint labor-management process means a formal approach to discuss
+topics affecting transit workers and the public transportation system.
+    Large urbanized area provider means a recipient or subrecipient of
+financial assistance under 49 U.S.C. 5307 that serves an urbanized area
+with a population of 200,000 or more as determined by Census data.
+    National Public Transportation Safety Plan means the plan to
+improve the safety of all public transportation systems that receive
+Federal financial assistance under 49 U.S.C. chapter 53.
+    Near-miss means a narrowly avoided safety event.
+    Operator of a public transportation system means a provider of
+public transportation.
+    Performance measure means an expression based on a quantifiable
+indicator of performance or condition that is used to establish targets
+and to assess progress toward meeting the established targets.
+    Performance target means a quantifiable level of performance or
+condition, expressed as a value for the measure, to be achieved within
+a time period required by FTA.
+    Potential Consequence means the effect of a hazard.
+    Public transportation means, as defined under 49 U.S.C. 5302,
+regular, continuing shared-ride surface transportation services that
+are open to the general public or open to a segment of the general
+public defined by age, disability, or low income; and does not include:
+    (1) Intercity passenger rail transportation provided by the entity
+described in 49 U.S.C. chapter 243 (or a successor to such entity);
+    (2) Intercity bus service;
+    (3) Charter bus service;
+    (4) School bus service;
+    (5) Sightseeing service;
+    (6) Courtesy shuttle service for patrons of one or more specific
+establishments; or
+    (7) Intra-terminal or intra-facility shuttle services.
+    Public Transportation Agency Safety Plan means the documented
+comprehensive agency safety plan for a transit agency that is required
+by 49 U.S.C. 5329 and this part.
+    Rail fixed guideway public transportation system means any fixed
+guideway system, or any such system in engineering or construction,
+that uses rail, is operated for public transportation, is within the
+jurisdiction of a State, and is not subject to the jurisdiction of the
+Federal Railroad Administration. These include but are not limited to
+rapid rail, heavy rail, light rail, monorail, trolley, inclined plane,
+funicular, and automated guideway.
+    Rail transit agency means any entity that provides services on a
+rail fixed guideway public transportation system.
+    Recipient means a State or local governmental authority, or any
+other operator of a public transportation system, that receives
+financial assistance under 49 U.S.C. chapter 53.
+    Roadway means land on which rail transit tracks and support
+infrastructure have been constructed to support the movement of rail
+transit vehicles, excluding station platforms.
+    Safety assurance means processes within a transit agency's Safety
+Management System that functions to ensure the implementation and
+effectiveness of safety risk mitigation, and to ensure that the transit
+agency meets or exceeds its safety objectives through the collection,
+analysis, and assessment of information.
+    Safety Committee means the formal joint labor-management committee
+on issues related to safety that is required by 49 U.S.C. 5329 and this
+part.
+    Safety event means an unexpected outcome resulting in injury or
+death; damage to or loss of the facilities, equipment, rolling stock,
+or infrastructure of a public transportation system; or damage to the
+environment.
+    Safety Management Policy means a transit agency's documented
+commitment to safety, which defines the transit agency's safety
+objectives and the accountabilities and responsibilities for the
+management of safety.
+    Safety Management System (SMS) means the formal, organization-wide
+approach to managing safety risk and assuring the effectiveness of a
+transit agency's safety risk mitigation. SMS includes systematic
+procedures, practices, and policies for managing hazards and safety
+risk.
+    Safety Management System (SMS) Executive means a Chief Safety
+Officer or an equivalent.
+    Safety performance target means a Performance Target related to
+safety management activities.
+    Safety Promotion means a combination of training and communication
+of safety information to support SMS as applied to the transit agency's
+public transportation system.
+    Safety risk means the composite of predicted severity and
+likelihood of a potential consequence of a hazard.
+
+[[Page 25348]]
+
+    Safety risk assessment means the formal activity whereby a transit
+agency determines Safety Risk Management priorities by establishing the
+significance or value of its safety risk.
+    Safety Risk Management means a process within a transit agency's
+Public Transportation Agency Safety Plan for identifying hazards and
+analyzing, assessing, and mitigating the safety risk of their potential
+consequences.
+    Safety risk mitigation means a method or methods to eliminate or
+reduce the severity and/or likelihood of a potential consequence of a
+hazard.
+    Safety set aside means the allocation of not less than 0.75 percent
+of assistance received by a large urbanized area provider under 49
+U.S.C. 5307 to safety-related projects eligible under 49 U.S.C. 5307.
+    Small public transportation provider means a recipient or
+subrecipient of Federal financial assistance under 49 U.S.C. 5307 that
+has one hundred (100) or fewer vehicles in peak revenue service across
+all non-rail fixed route modes or in any one non-fixed route mode and
+does not operate a rail fixed guideway public transportation system.
+    State means a State of the United States, the District of Columbia,
+Puerto Rico, the Northern Mariana Islands, Guam, American Samoa, and
+the Virgin Islands.
+    State of good repair means the condition in which a capital asset
+is able to operate at a full level of performance.
+    State Safety Oversight Agency means an agency established by a
+State that meets the requirements and performs the functions specified
+by 49 U.S.C. 5329(e) and (k) and the regulations set forth in 49 CFR
+part 674.
+    Subrecipient means an entity that receives Federal transit grant
+funds indirectly through a State or a direct recipient.
+    Transit agency means an operator of a public transportation system
+that is a recipient or subrecipient of Federal financial assistance
+under 49 U.S.C. 5307 or a rail transit agency.
+    Transit Asset Management Plan means the strategic and systematic
+practice of procuring, operating, inspecting, maintaining,
+rehabilitating, and replacing transit capital assets to manage their
+performance, risks, and costs over their life cycles, for the purpose
+of providing safe, cost-effective, and reliable public transportation,
+as required by 49 U.S.C. 5326 and 49 CFR part 625.
+    Transit worker means any employee, contractor, or volunteer working
+on behalf of the transit agency.
+    Urbanized area means, as defined under 49 U.S.C. 5302, an area
+encompassing a population of 50,000 or more that has been defined and
+designated in the most recent decennial census as an ``urbanized area''
+by the Secretary of Commerce.
+
+Subpart B--Safety Plans
+
+Sec.  673.11  General requirements.
+
+    (a) A transit agency or State must establish a Public
+Transportation Agency Safety Plan that meets the requirements of this
+part and, at a minimum, consists of the following elements:
+    (1) The Public Transportation Agency Safety Plan, and subsequent
+updates, must be signed by the Accountable Executive and approved by--
+    (i) For a large urbanized area provider, the Safety Committee
+established pursuant to Sec.  673.19, followed by the transit agency's
+Board of Directors or an equivalent entity; or
+    (ii) For all other transit agencies, the transit agency's Board of
+Directors or an equivalent entity.
+    (2) The Public Transportation Agency Safety Plan must document the
+processes and activities related to Safety Management System (SMS)
+implementation, as required under subpart D of this part.
+    (3) The Public Transportation Agency Safety Plan must include
+annual safety performance targets based on the safety performance
+measures established under the National Public Transportation Safety
+Plan. Safety performance targets for the safety risk reduction program
+are only required for large urbanized area providers.
+    (4) The Public Transportation Agency Safety Plan must address all
+applicable requirements and standards as set forth in FTA's Public
+Transportation Safety Program and the National Public Transportation
+Safety Plan. Compliance with the minimum safety performance standards
+authorized under 49 U.S.C. 5329(b)(2)(C) is not required until
+standards have been established through the public notice and comment
+process.
+    (5) Each transit agency must establish a process and timeline for
+conducting an annual review and update of the Public Transportation
+Agency Safety Plan.
+    (6) A rail transit agency must include or incorporate by reference
+in its Public Transportation Agency Safety Plan:
+    (i) An emergency preparedness and response plan or procedures that
+addresses, at a minimum, the assignment of transit worker
+responsibilities during an emergency; and coordination with Federal,
+State, regional, and local officials with roles and responsibilities
+for emergency preparedness and response in the transit agency's service
+area;
+    (ii) Any policies and procedures regarding rail transit workers on
+the roadway the rail transit agency has issued; and
+    (iii) The transit agency's policies and procedures developed in
+consultation with the State Safety Oversight Agency to provide access
+and required data for the State Safety Oversight Agency's risk-based
+inspection program.
+    (7) The Public Transportation Agency Safety Plan of each large
+urbanized area provider must include a safety risk reduction program
+that meets the requirements of Sec.  673.20.
+    (b) A transit agency may develop one Public Transportation Agency
+Safety Plan for all modes of service or may develop a Public
+Transportation Agency Safety Plan for each mode of service not subject
+to safety regulation by another Federal entity.
+    (c) A transit agency must maintain its Public Transportation Agency
+Safety Plan in accordance with the recordkeeping requirements in
+subpart E of this part.
+    (d) A State must draft and certify a Public Transportation Agency
+Safety Plan on behalf of any small public transportation provider that
+is located in that State. A State is not required to draft a Public
+Transportation Agency Safety Plan for a small public transportation
+provider if that transit agency notifies the State that it will draft
+its own plan. In each instance, the transit agency must carry out the
+plan. If a State drafts and certifies a Public Transportation Agency
+Safety Plan on behalf of a transit agency, and the transit agency later
+opts to draft and certify its own Public Transportation Agency Safety
+Plan, then the transit agency must notify the State. The transit agency
+has one year from the date of the notification to draft and certify a
+Public Transportation Agency Safety Plan that is compliant with this
+part. The Public Transportation Agency Safety Plan drafted by the State
+will remain in effect until the transit agency drafts its own Public
+Transportation Agency Safety Plan.
+    (e) Agencies that operate passenger ferries regulated by the United
+States Coast Guard (USCG) or rail fixed guideway public transportation
+service regulated by the Federal Railroad Administration (FRA) are not
+required to develop Public Transportation Agency Safety Plans for those
+modes of service.
+
+[[Page 25349]]
+
+Sec.  673.13  Certification of compliance.
+
+    (a) Each direct recipient, or State as authorized in Sec.
+673.11(d), must certify that it has established a Public Transportation
+Agency Safety Plan meeting the requirements of this part by the start
+of operations. A direct recipient must certify that it and all
+applicable subrecipients are in compliance with the requirements of
+this part. A State Safety Oversight Agency must review and approve a
+Public Transportation Agency Safety Plan developed by a rail fixed
+guideway public transportation system, as authorized in 49 U.S.C.
+5329(e) and its implementing regulations at 49 CFR part 674.
+    (b) On an annual basis, a direct recipient, or State must certify
+its compliance with this part. A direct recipient must certify that it
+and all applicable subrecipients are in compliance with the
+requirements of this part.
+
+Sec.  673.15  Coordination with metropolitan, statewide, and non-
+metropolitan planning processes.
+
+    (a) A State or transit agency must make its safety performance
+targets available to States and Metropolitan Planning Organizations to
+aid in the planning process.
+    (b) To the maximum extent practicable, a State or transit agency
+must coordinate with States and Metropolitan Planning Organizations in
+the selection of State and MPO safety performance targets.
+
+Sec.  673.17  Cooperation with frontline transit worker
+representatives.
+
+    (a) Each large urbanized area provider must establish a Safety
+Committee that meets the requirements of Sec.  673.19.
+    (b) Each transit agency that is not a large urbanized area provider
+must--
+    (1) Develop its Public Transportation Agency Safety Plan, and
+subsequent updates, in cooperation with frontline transit worker
+representatives; and
+    (2) Include or incorporate by reference in its Public
+Transportation Agency Safety Plan a description of how frontline
+transit worker representatives cooperate in the development and update
+of the Public Transportation Agency Safety Plan.
+
+Subpart C--Safety Committee and Safety Risk Reduction Program
+
+Sec.  673.19  Safety Committee.
+
+    (a) Establishing the Safety Committee. Each large urbanized area
+provider must establish and operate a Safety Committee that is--
+    (1) Appropriately scaled to the size, scope, and complexity of the
+transit agency; and
+    (2) Convened by a joint labor-management process.
+    (b) Safety Committee membership. The Safety Committee must consist
+of an equal number of frontline transit worker representatives and
+management representatives. To the extent practicable, the Safety
+Committee must include frontline transit worker representatives from
+major transit service functions, such as operations and maintenance,
+across the transit system.
+    (1) The labor organization that represents the plurality of the
+transit agency's frontline transit workers must select frontline
+transit worker representatives for the Safety Committee.
+    (2) If the transit agency's frontline transit workers are not
+represented by a labor organization, the transit agency must adopt a
+mechanism for frontline transit workers to select frontline transit
+worker representatives for the Safety Committee.
+    (c) Safety Committee procedures. Each large urbanized area provider
+must include or incorporate by reference in its Public Transportation
+Agency Safety Plan procedures regarding the composition,
+responsibilities, and operations of the Safety Committee which, at a
+minimum, must address:
+    (1) The organizational structure, size, and composition of the
+Safety Committee and how it will be chaired;
+    (2) How meeting agendas will be developed, and how meeting minutes
+will be recorded and maintained;
+    (3) Any required training for Safety Committee members related to
+the transit agency's Public Transportation Agency Safety Plan and the
+processes, activities, and tools used to support the transit agency's
+SMS;
+    (4) How the Safety Committee will access technical experts,
+including other transit workers, to serve in an advisory capacity as
+needed; transit agency information, resources, and tools; and
+submissions to the transit worker safety reporting program to support
+its deliberations;
+    (5) How the Safety Committee will vote and record decisions;
+    (6) How the Safety Committee will coordinate with the transit
+agency's Board of Directors, or equivalent entity, and the Accountable
+Executive;
+    (7) How the Safety Committee will manage disputes and tie votes to
+ensure it carries out its operations; and
+    (8) How the Safety Committee will carry out its responsibilities
+identified in paragraph (d) of this section.
+    (d) Safety Committee responsibilities. The Safety Committee must
+conduct the following activities to oversee the transit agency's safety
+performance:
+    (1) Review and approve the transit agency's Public Transportation
+Agency Safety Plan and any updates as required at Sec.  673.11(a);
+    (2) Set annual safety performance targets for the safety risk
+reduction program that meet the requirements of Sec.  673.20(b); and
+    (3) Support operation of the transit agency's SMS by:
+    (i) Identifying and recommending safety risk mitigations necessary
+to reduce the likelihood and severity of potential consequences
+identified through the transit agency's safety risk assessment,
+including safety risk mitigations associated with any instance where
+the transit agency did not meet an annual safety performance target in
+the safety risk reduction program;
+    (ii) Identifying safety risk mitigations that may be ineffective,
+inappropriate, or were not implemented as intended, including safety
+risk mitigations associated with any instance where the transit agency
+did not meet an annual safety performance target in the safety risk
+reduction program; and
+    (iii) Identifying safety deficiencies for purposes of continuous
+improvement as required at Sec.  673.27(d), including any instance
+where the transit agency did not meet an annual safety performance
+target in the safety risk reduction program.
+
+Sec.  673.20  Safety risk reduction program.
+
+    (a) Each large urbanized area provider must establish a safety risk
+reduction program for transit operations to improve safety performance
+by reducing the number and rates of safety events, injuries, and
+assaults on transit workers.
+    (1) The safety risk reduction program must, at a minimum, address:
+    (i) Reduction of vehicular and pedestrian safety events involving
+transit vehicles that includes consideration of safety risk mitigations
+consistent with paragraph (a)(2) of this section; and
+    (ii) Reduction and mitigation of assaults on transit workers that
+includes consideration of safety risk mitigations consistent with
+paragraph (a)(3) of this section and implementation of safety risk
+mitigations consistent with paragraph (a)(4) of this section.
+    (2) When carrying out the safety risk mitigation process under
+Sec.  673.25(d) for risk relating to vehicular and pedestrian safety
+events involving transit vehicles, each large urbanized area provider
+must consider mitigations to reduce visibility impairments for transit
+vehicle operators that contribute to accidents, such as retrofits to
+vehicles in revenue
+
+[[Page 25350]]
+
+service and specifications for future procurements that reduce
+visibility impairments.
+    (3) When carrying out the safety risk mitigation process under
+Sec.  673.25(d) for risk relating to assaults on transit workers, each
+large urbanized area provider must consider deployment of assault
+mitigation infrastructure and technology on transit vehicles. Assault
+mitigation infrastructure and technology includes barriers to restrict
+the unwanted entry of individuals and objects into the workstations of
+bus operators.
+    (4) When a Safety Committee recommends safety mitigations it has
+determined would reduce assaults on transit workers and injuries to
+transit workers based on a safety risk analysis conducted under Sec.
+673.25(c), the transit agency must implement one or more of those
+mitigations to reduce risk to an acceptable level, unless the
+Accountable Executive determines the mitigation will not improve the
+agency's overall safety performance.
+    (b) The Safety Committee of each large urbanized area provider must
+establish annual safety performance targets for the safety risk
+reduction program to reduce the number and rates of safety events,
+injuries, and assaults on transit workers based on the safety
+performance measures for the safety risk reduction program established
+in the National Public Transportation Safety Plan. The targets must be
+set--
+    (1) Based on a 3-year rolling average of the data submitted by the
+large urbanized area provider to the National Transit Database (NTD);
+and
+    (2) For all modes of public transportation.
+    (c) The Safety Committee of each large urbanized area provider is
+required to set targets for the safety risk reduction program only
+based on the level of detail the large urbanized area provider is
+required to report to the NTD. The Safety Committee is not required to
+set a target for a performance measure until the large urbanized area
+provider has been required to report 3 years of data to the NTD
+corresponding to such performance measure.
+    (d) A large urbanized area provider must monitor safety performance
+against annual safety performance targets set for the safety risk
+reduction program using the continuous improvement process established
+under Sec.  673.27(d);
+    (e) A large urbanized area provider that does not meet an
+established annual safety performance target set for the safety risk
+reduction program must--
+    (1) Assess associated safety risk, using the methods or processes
+established under Sec.  673.25(c).
+    (2) Mitigate associated safety risk based on the results of the
+safety risk assessment using the methods or processes established under
+Sec.  673.27(d)(1). These mitigations must be included in the plan
+described in Sec.  673.27(d)(2).
+    (3) Allocate its safety set aside in the following fiscal year to
+safety-related projects eligible under 49 U.S.C. 5307 that are
+reasonably likely to assist the transit agency in meeting the
+performance target in the future.
+
+Subpart D--Safety Management Systems
+
+Sec.  673.21  General requirements.
+
+    Each transit agency must establish and implement a Safety
+Management System under this part. A transit agency Safety Management
+System must be appropriately scaled to the size, scope and complexity
+of the transit agency and include the following elements:
+    (a) Safety Management Policy as described in Sec.  673.23;
+    (b) Safety Risk Management as described in Sec.  673.25;
+    (c) Safety assurance as described in Sec.  673.27; and
+    (d) Safety Promotion as described in Sec.  673.29.
+
+Sec.  673.23  Safety Management Policy.
+
+    (a) A transit agency must establish its organizational
+accountabilities and responsibilities and have a written statement of
+Safety Management Policy that includes the transit agency's safety
+objectives and a description of the transit agency's Safety Committee
+or approach to cooperation with frontline transit worker
+representatives.
+    (b) A transit agency must establish and implement a process that
+allows transit workers to report safety concerns, including assaults on
+transit workers, near-misses, and unsafe acts and conditions to senior
+management, includes protections for transit workers who report, and
+includes a description of transit worker behaviors that may result in
+disciplinary action.
+    (c) The Safety Management Policy must be communicated throughout
+the transit agency's organization.
+    (d) The transit agency must establish the necessary authorities,
+accountabilities, and responsibilities for the management of safety
+amongst the following individuals or groups within its organization, as
+they relate to the development and management of the transit agency's
+SMS:
+    (1) Accountable Executive. The transit agency must identify an
+Accountable Executive. The Accountable Executive is accountable for
+ensuring that the transit agency's SMS is effectively implemented
+throughout the transit agency's public transportation system. The
+Accountable Executive is accountable for ensuring action is taken, as
+necessary, to address substandard performance in the transit agency's
+SMS. The Accountable Executive receives and considers recommendations
+for safety risk mitigations from the Safety Committee, as described in
+Sec. Sec.  673.19(d) and 673.20(a)(4). The Accountable Executive may
+delegate specific responsibilities, but the ultimate accountability for
+the transit agency's safety performance cannot be delegated and always
+rests with the Accountable Executive.
+    (2) Chief Safety Officer or Safety Management System (SMS)
+Executive. The Accountable Executive must designate a Chief Safety
+Officer or SMS Executive who has the authority and responsibility for
+day-to-day implementation and operation of a transit agency's SMS. The
+Chief Safety Officer or SMS Executive must hold a direct line of
+reporting to the Accountable Executive. A transit agency may allow the
+Accountable Executive to also serve as the Chief Safety Officer or SMS
+Executive.
+    (3) Safety Committee. A large urbanized area provider must
+establish a joint labor-management Safety Committee that meets the
+requirements of Sec.  673.19.
+    (4) Transit agency leadership and executive management. A transit
+agency must identify those members of its leadership or executive
+management, other than an Accountable Executive, Chief Safety Officer,
+or SMS Executive, who have authorities or responsibilities for day-to-
+day implementation and operation of a transit agency's SMS.
+    (5) Key staff. A transit agency may designate key staff, groups of
+staff, or committees to support the Accountable Executive, Chief Safety
+Officer, Safety Committee, or SMS Executive in developing,
+implementing, and operating the transit agency's SMS.
+
+Sec.  673.25  Safety Risk Management.
+
+    (a) Safety Risk Management process. A transit agency must develop
+and implement a Safety Risk Management process for all elements of its
+public transportation system. The Safety Risk Management process must
+be comprised of the following activities: Safety hazard identification,
+safety risk assessment, and safety risk mitigation.
+    (b) Safety hazard identification. (1) A transit agency must
+establish methods
+
+[[Page 25351]]
+
+or processes to identify hazards and potential consequences of the
+hazards.
+    (2) A transit agency must consider, as a source for hazard
+identification:
+    (i) Data and information provided by an oversight authority,
+including but not limited to FTA, the State, or as applicable, the
+State Safety Oversight Agency having jurisdiction;
+    (ii) Data and information regarding exposure to infectious disease
+provided by the CDC or a State health authority; and
+    (iii) Safety concerns identified through Safety Assurance
+activities carried out under Sec.  673.27.
+    (c) Safety risk assessment. (1) A transit agency must establish
+methods or processes to assess the safety risk associated with
+identified safety hazards.
+    (2) A safety risk assessment includes an assessment of the
+likelihood and severity of the potential consequences of identified
+hazards, taking into account existing safety risk mitigations, to
+determine if safety risk mitigation is necessary and to inform
+prioritization of safety risk mitigations.
+    (d) Safety risk mitigation. (1) A transit agency must establish
+methods or processes to identify safety risk mitigations or strategies
+necessary as a result of the transit agency's safety risk assessment to
+reduce the likelihood and severity of the potential consequences. For
+large urbanized area providers, these methods or processes must address
+the role of the transit agency's Safety Committee.
+    (2) A transit agency must consider, as a source for safety risk
+mitigation:
+    (i) Guidance provided by an oversight authority, if applicable, and
+FTA; and
+    (ii) Guidelines to prevent or control exposure to infectious
+diseases provided by the CDC or a State health authority.
+
+Sec.  673.27  Safety assurance.
+
+    (a) Safety assurance process. A transit agency must develop and
+implement a safety assurance process, consistent with this subpart. A
+rail fixed guideway public transportation system, and a recipient or
+subrecipient of Federal financial assistance under 49 U.S.C. chapter 53
+that operates more than one hundred vehicles in peak revenue service,
+must include in its safety assurance process each of the requirements
+in paragraphs (b), (c), and (d) of this section. A small public
+transportation provider only must include in its safety assurance
+process the requirements in paragraphs (b) and (d) of this section.
+    (b) Safety performance monitoring and measurement. A transit agency
+must establish activities to:
+    (1) Monitor its system for compliance with, and sufficiency of, the
+transit agency's procedures for operations and maintenance;
+    (2) Monitor its operations to identify any safety risk mitigations
+that may be ineffective, inappropriate, or were not implemented as
+intended. For large urbanized area providers, these activities must
+address the role of the transit agency's Safety Committee;
+    (3) Conduct investigations of safety events to identify causal
+factors; and
+    (4) Monitor information reported through any internal safety
+reporting programs.
+    (c) Management of change. (1) A transit agency must establish a
+process for identifying and assessing changes that may introduce new
+hazards or impact the transit agency's safety performance.
+    (2) If a transit agency determines that a change may impact its
+safety performance, then the transit agency must evaluate the proposed
+change through its safety risk management process.
+    (d) Continuous improvement. (1) A transit agency must establish a
+process to assess its safety performance annually.
+    (i) This process must include the identification of deficiencies in
+the transit agency's SMS and deficiencies in the transit agency's
+performance against safety performance targets required in Sec.
+673.11(a)(3).
+    (ii) For large urbanized area providers, this process must also
+address the role of the transit agency's Safety Committee and include
+the identification of deficiencies in the transit agency's performance
+against annual safety performance targets set for the safety risk
+reduction program required under Sec.  673.20(b).
+    (iii) Rail transit agencies must also address any specific internal
+safety review requirements established by their State Safety Oversight
+Agency.
+    (2) A transit agency must develop and carry out, under the
+direction of the Accountable Executive, a plan to address any
+deficiencies identified through the safety performance assessment
+described paragraph (d)(1) of this section.
+
+Sec.  673.29  Safety Promotion.
+
+    (a) Competencies and training. (1) A transit agency must establish
+and implement a comprehensive safety training program that includes de-
+escalation training, safety concern identification and reporting
+training, and refresher training for all operations transit workers and
+transit workers directly responsible for safety in the transit agency's
+public transportation system. The training program must include
+refresher training, as necessary.
+    (2) Large urbanized area providers must include maintenance transit
+workers in the safety training program.
+    (b) Safety communication. A transit agency must communicate safety
+and safety performance information throughout the transit agency's
+organization that, at a minimum, conveys information on hazards and
+safety risk relevant to transit workers' roles and responsibilities and
+informs transit workers of safety actions taken in response to reports
+submitted through a transit worker safety reporting program. A transit
+agency must also communicate the results of cooperation with frontline
+transit worker representatives as described at Sec.  673.17(b) or the
+Safety Committee activities described in Sec.  673.19.
+
+Subpart E--Safety Plan Documentation and Recordkeeping
+
+Sec.  673.31  Safety plan documentation.
+
+    At all times, a transit agency must maintain documents that set
+forth its Public Transportation Agency Safety Plan, including those
+related to the implementation of its SMS, and results from SMS
+processes and activities. A transit agency must maintain documents that
+are included in whole, or by reference, that describe the programs,
+policies, and procedures that the transit agency uses to carry out its
+Public Transportation Agency Safety Plan. These documents must be made
+available upon request by FTA or other Federal entity, or a State or
+State Safety Oversight Agency having jurisdiction. A transit agency
+must maintain these documents for a minimum of three years after they
+are created.
+
+[FR Doc. 2023-08777 Filed 4-25-23; 8:45 am]
+BILLING CODE 4910-57-P

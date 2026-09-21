@@ -1,0 +1,391 @@
+PART 673—PUBLIC TRANSPORTATION AGENCY SAFETY PLANS
+
+Authority:
+
+49 U.S.C. 5329, 5334; 49 CFR 1.91.
+
+Source:
+
+89 FR 25738, Apr. 11, 2024, unless otherwise noted.
+
+Subpart A—General
+
+§ 673.1 Applicability.
+
+(a) This part applies to any State, local governmental authority, and any other operator of a public transportation system that receives Federal financial assistance under 49 U.S.C. chapter 53.
+
+(b) This part does not apply to an operator of a public transportation system that only receives Federal financial assistance under 49 U.S.C. 5310, 49 U.S.C. 5311, or both 49 U.S.C. 5310 and 49 U.S.C. 5311 unless it operates a rail fixed guideway public transportation system.
+
+§ 673.3 Policy.
+
+The Federal Transit Administration (FTA) has adopted the principles and methods of Safety Management Systems (SMS) as the basis for enhancing the safety of public transportation in the United States. FTA will follow the principles and methods of SMS in its development of rules, regulations, policies, guidance, best practices, and technical assistance administered under the authority of 49 U.S.C. 5329. This part sets standards for the Public Transportation Agency Safety Plan, which will be responsive to FTA's Public Transportation Safety Program, and reflect the specific safety objectives, standards, and priorities of each transit agency. Each Public Transportation Agency Safety Plan will incorporate SMS principles and methods tailored to the size, complexity, and scope of the public transportation system and the environment in which it operates.
+
+§ 673.5 Definitions.
+
+As used in this part:
+
+Accountable Executive means a single, identifiable person who has ultimate responsibility for carrying out the Public Transportation Agency Safety Plan of a transit agency; responsibility for carrying out the transit agency's Transit Asset Management Plan; and control or direction over the human and capital resources needed to develop and maintain both the transit agency's Public Transportation Agency Safety Plan, in accordance with 49 U.S.C. 5329(d), and the transit agency's Transit Asset Management Plan in accordance with 49 U.S.C. 5326.
+
+Assault on a transit worker means, as defined under 49 U.S.C. 5302, a circumstance in which an individual knowingly, without lawful authority or permission, and with intent to endanger the safety of any individual, or with a reckless disregard for the safety of human life, interferes with, disables, or incapacitates a transit worker while the transit worker is performing the duties of the transit worker.
+
+CDC means the Centers for Disease Control and Prevention of the United States Department of Health and Human Services.
+
+Chief Safety Officer means an adequately trained individual who has responsibility for safety and reports directly to a transit agency's chief executive officer, general manager, president, or equivalent officer. A Chief Safety Officer may not serve in other operational or maintenance capacities, unless the Chief Safety Officer is employed by a transit agency that is a small public transportation provider as defined in this part, or a public transportation provider that does not operate a rail fixed guideway public transportation system.
+
+Direct recipient means an entity that receives Federal financial assistance directly from the Federal Transit Administration.
+
+Emergency means, as defined under 49 U.S.C. 5324, a natural disaster affecting a wide area (such as a flood, hurricane, tidal wave, earthquake, severe storm, or landslide) or a catastrophic failure from any external cause, as a result of which the Governor of a State has declared an emergency and the Secretary has concurred; or the President has declared a major disaster under section 401 of the Robert T. Stafford Disaster Relief and Emergency Assistance Act (42 U.S.C. 5170).
+
+Equivalent entity means an entity that carries out duties similar to that of a Board of Directors, for a recipient or subrecipient of FTA funds under 49 U.S.C. chapter 53, including sufficient authority to review and approve a recipient or subrecipient's Public Transportation Agency Safety Plan.
+
+FTA means the Federal Transit Administration, an operating administration within the United States Department of Transportation.
+
+Hazard means any real or potential condition that can cause injury, illness, or death; damage to or loss of the facilities, equipment, rolling stock, or infrastructure of a public transportation system; or damage to the environment.
+
+Injury means any harm to persons as a result of an event that requires immediate medical attention away from the scene.
+
+Investigation means the process of determining the causal and contributing factors of a safety event or hazard, for the purpose of preventing recurrence and mitigating safety risk.
+
+Joint labor-management process means a formal approach to discuss topics affecting transit workers and the public transportation system.
+
+Large urbanized area provider means a recipient or subrecipient of financial assistance under 49 U.S.C. 5307 that serves an urban area with a population of 200,000 or more as determined by the most recent decennial Census.
+
+National Public Transportation Safety Plan means the plan to improve the safety of all public transportation systems that receive Federal financial assistance under 49 U.S.C. chapter 53.
+
+Near-miss means a narrowly avoided safety event.
+
+Operator of a public transportation system means a provider of public transportation.
+
+Performance measure means an expression based on a quantifiable indicator of performance or condition that is used to establish targets and to assess progress toward meeting the established targets.
+
+Potential consequence means the effect of a hazard.
+
+Public transportation means, as defined under 49 U.S.C. 5302, regular, continuing shared-ride surface transportation services that are open to the general public or open to a segment of the general public defined by age, disability, or low income; and does not include:
+
+(1) Intercity passenger rail transportation provided by the entity described in 49 U.S.C. chapter 243 (or a successor to such entity);
+
+(2) Intercity bus service;
+
+(3) Charter bus service;
+
+(4) School bus service;
+
+(5) Sightseeing service;
+
+(6) Courtesy shuttle service for patrons of one or more specific establishments; or
+
+(7) Intra-terminal or intra-facility shuttle services.
+
+Public Transportation Agency Safety Plan means the documented comprehensive agency safety plan for a transit agency that is required by 49 U.S.C. 5329 and this part.
+
+Rail fixed guideway public transportation system means any fixed guideway system, or any such system in engineering or construction, that uses rail, is operated for public transportation, is within the jurisdiction of a State, and is not subject to the jurisdiction of the Federal Railroad Administration. These include but are not limited to rapid rail, heavy rail, light rail, monorail, trolley, inclined plane, funicular, and automated guideway.
+
+Rail transit agency means any entity that provides services on a rail fixed guideway public transportation system.
+
+Recipient means a State or local governmental authority, or any other operator of a public transportation system, that receives financial assistance under 49 U.S.C. chapter 53.
+
+Roadway means land on which rail transit tracks and support infrastructure have been constructed to support the movement of rail transit vehicles, excluding station platforms.
+
+Safety Assurance means processes within a transit agency's Safety Management System that functions to ensure the implementation and effectiveness of safety risk mitigation, and to ensure that the transit agency meets or exceeds its safety objectives through the collection, analysis, and assessment of information.
+
+Safety Committee means the formal joint labor-management committee on issues related to safety that is required by 49 U.S.C. 5329 and this part.
+
+Safety event means an unexpected outcome resulting in injury or death; damage to or loss of the facilities, equipment, rolling stock, or infrastructure of a public transportation system; or damage to the environment.
+
+Safety Management Policy means a transit agency's documented commitment to safety, which defines the transit agency's safety objectives and the accountabilities and responsibilities for the management of safety.
+
+Safety Management System (SMS) means the formal, organization-wide approach to managing safety risk and assuring the effectiveness of a transit agency's safety risk mitigation. SMS includes systematic procedures, practices, and policies for managing hazards and safety risk.
+
+Safety Management System (SMS) Executive means a Chief Safety Officer or an equivalent.
+
+Safety performance target means a quantifiable level of performance or condition, expressed as a value for the measure, related to safety management activities, to be achieved within a specified time period.
+
+Safety Promotion means a combination of training and communication of safety information to support SMS as applied to the transit agency's public transportation system.
+
+Safety risk means the composite of predicted severity and likelihood of a potential consequence of a hazard.
+
+Safety risk assessment means the formal activity whereby a transit agency determines Safety Risk Management priorities by establishing the significance or value of its safety risk.
+
+Safety risk management means a process within a transit agency's Public Transportation Agency Safety Plan for identifying hazards and analyzing, assessing, and mitigating the safety risk of their potential consequences.
+
+Safety risk mitigation means a method or methods to eliminate or reduce the severity and/or likelihood of a potential consequence of a hazard.
+
+Safety set-aside means the allocation of not less than 0.75 percent of assistance received by a large urbanized area provider under 49 U.S.C. 5307 to safety-related projects eligible under 49 U.S.C. 5307.
+
+Small public transportation provider means a recipient or subrecipient of Federal financial assistance under 49 U.S.C. 5307 that has one hundred (100) or fewer vehicles in peak revenue service across all non-rail fixed route modes or in any one non-fixed route mode and does not operate a rail fixed guideway public transportation system.
+
+State means a State of the United States, the District of Columbia, Puerto Rico, the Northern Mariana Islands, Guam, American Samoa, and the Virgin Islands.
+
+State of good repair means the condition in which a capital asset is able to operate at a full level of performance.
+
+State Safety Oversight Agency means an agency established by a State that meets the requirements and performs the functions specified by 49 U.S.C. 5329(e) and (k) and the regulations set forth in 49 CFR part 674.
+
+Subrecipient means an entity that receives Federal transit grant funds indirectly through a State or a direct recipient.
+
+Transit agency means an operator of a public transportation system that is a recipient or subrecipient of Federal financial assistance under 49 U.S.C. 5307 or a rail transit agency.
+
+Transit Asset Management Plan means the strategic and systematic practice of procuring, operating, inspecting, maintaining, rehabilitating, and replacing transit capital assets to manage their performance, risks, and costs over their life cycles, for the purpose of providing safe, cost-effective, and reliable public transportation, as required by 49 U.S.C. 5326 and 49 CFR part 625.
+
+Transit worker means any employee, contractor, or volunteer working on behalf of the transit agency.
+
+Urbanized area means, as defined under 49 U.S.C. 5302, an area encompassing a population of 50,000 or more that has been defined and designated in the most recent decennial census as an urban area by the Secretary of Commerce.
+
+Subpart B—Safety Plans
+
+§ 673.11 General requirements.
+
+(a) A transit agency or State must establish a Public Transportation Agency Safety Plan that meets the requirements of this part and, at a minimum, consists of the following elements:
+
+(1) The Public Transportation Agency Safety Plan, and subsequent updates, must be signed by the Accountable Executive and approved by—
+
+(i) For a large urbanized area provider, the Safety Committee established pursuant to § 673.19, followed by the transit agency's Board of Directors or an equivalent entity; or
+
+(ii) For all other transit agencies, the transit agency's Board of Directors or an equivalent entity.
+
+(2) The Public Transportation Agency Safety Plan must document the processes and activities related to Safety Management System (SMS) implementation, as required under subpart D of this part.
+
+(3) The Public Transportation Agency Safety Plan must include annual safety performance targets based on the safety performance measures established under the National Public Transportation Safety Plan. Safety performance targets for the safety risk reduction program are only required for large urbanized area providers.
+
+(4) The Public Transportation Agency Safety Plan must address all applicable requirements and standards as set forth in FTA's Public Transportation Safety Program and the National Public Transportation Safety Plan. Compliance with the minimum safety performance standards authorized under 49 U.S.C. 5329(b)(2)(C) is not required until standards have been established through the public notice and comment process.
+
+(5) Each transit agency must establish a process and timeline for conducting an annual review and update of the Public Transportation Agency Safety Plan.
+
+(6) A rail transit agency must include or incorporate by reference in its Public Transportation Agency Safety Plan:
+
+(i) An emergency preparedness and response plan or procedures that addresses, at a minimum, the assignment of transit worker responsibilities during an emergency; and coordination with Federal, State, regional, and local officials with roles and responsibilities for emergency preparedness and response in the transit agency's service area;
+
+(ii) Any policies and procedures regarding rail transit workers on the roadway the rail transit agency has issued; and
+
+(iii) The transit agency's policies and procedures developed in consultation with the State Safety Oversight Agency to provide access and required data for the State Safety Oversight Agency's risk-based inspection program.
+
+(7) The Public Transportation Agency Safety Plan of each large urbanized area provider must include a safety risk reduction program for transit operations to improve safety performance by reducing the number and rates of safety events, injuries, and assaults on transit workers. The safety risk reduction program must, at a minimum:
+
+(i) Address the reduction and mitigation of vehicular and pedestrian safety events involving transit vehicles that includes safety risk mitigations consistent with § 673.25(d)(3);
+
+(ii) Address the reduction and mitigation of assaults on transit workers that includes safety risk mitigations consistent with § 673.25(d)(4);
+
+(iii) Include the safety performance targets set by the Safety Committee pursuant to § 673.19(d)(2) for the safety risk reduction program performance measures established in the National Public Transportation Safety Plan. These targets must be set—
+
+(A) Based on a three-year rolling average of the data submitted by the large urbanized area provider to the National Transit Database (NTD);
+
+(B) For all modes of public transportation; and
+
+(C) Based on the level of detail the large urbanized area provider is required to report to the NTD. The Safety Committee is not required to set a target for a performance measure until the large urbanized area provider has been required to report three years of data to the NTD corresponding to such performance measure.
+
+(iv) Include or incorporate by reference the safety risk mitigations identified and recommended by the Safety Committee as described in § 673.25(d)(5).
+
+(b) A transit agency may develop one Public Transportation Agency Safety Plan for all modes of service or may develop a Public Transportation Agency Safety Plan for each mode of service not subject to safety regulation by another Federal entity.
+
+(c) A transit agency must maintain its Public Transportation Agency Safety Plan in accordance with the recordkeeping requirements in subpart E of this part.
+
+(d) A State must draft and certify a Public Transportation Agency Safety Plan on behalf of any small public transportation provider that is located in that State. A State is not required to draft a Public Transportation Agency Safety Plan for a small public transportation provider if that transit agency notifies the State that it will draft its own plan. In each instance, the transit agency must carry out the plan. If a State drafts and certifies a Public Transportation Agency Safety Plan on behalf of a transit agency, and the transit agency later opts to draft and certify its own Public Transportation Agency Safety Plan, then the transit agency must notify the State. The transit agency has one year from the date of the notification to draft and certify a Public Transportation Agency Safety Plan that is compliant with this part. The Public Transportation Agency Safety Plan drafted by the State will remain in effect until the transit agency drafts its own Public Transportation Agency Safety Plan.
+
+(e) Agencies that operate passenger ferries regulated by the United States Coast Guard (USCG) or rail fixed guideway public transportation service regulated by the Federal Railroad Administration (FRA) are not required to develop Public Transportation Agency Safety Plans for those modes of service.
+
+§ 673.13 Certification of compliance.
+
+(a) Each direct recipient, or State as authorized in § 673.11(d), must certify that it has established a Public Transportation Agency Safety Plan meeting the requirements of this part by the start of operations. A direct recipient must certify that it and all applicable subrecipients are in compliance with the requirements of this part. A State Safety Oversight Agency must review and approve a Public Transportation Agency Safety Plan developed by a rail fixed guideway public transportation system, as authorized in 49 U.S.C. 5329(e) and its implementing regulations at 49 CFR part 674.
+
+(b) On an annual basis, a direct recipient or State must certify its compliance with this part. A direct recipient must certify that it and all applicable subrecipients are in compliance with the requirements of this part.
+
+§ 673.15 Coordination with metropolitan, statewide, and non-metropolitan planning processes.
+
+(a) A State or transit agency must make its safety performance targets available to States and Metropolitan Planning Organizations to aid in the planning process.
+
+(b) To the maximum extent practicable, a State or transit agency must coordinate with States and Metropolitan Planning Organizations in the selection of State and MPO safety performance targets.
+
+Subpart C—Safety Committees and Cooperation With Frontline Transit Worker Representatives
+
+§ 673.17 Cooperation with frontline transit worker representatives.
+
+(a) Each large urbanized area provider must establish a Safety Committee that meets the requirements of § 673.19.
+
+(b) Each transit agency that is not a large urbanized area provider must:
+
+(1) Develop its Public Transportation Agency Safety Plan, and subsequent updates, in cooperation with frontline transit worker representatives; and
+
+(2) Include or incorporate by reference in its Public Transportation Agency Safety Plan a description of how frontline transit worker representatives cooperate in the development and update of the Public Transportation Agency Safety Plan.
+
+§ 673.19 Safety Committees.
+
+(a) Establishing the Safety Committee. Each large urbanized area provider must establish and operate a Safety Committee that is:
+
+(1) Appropriately scaled to the size, scope, and complexity of the transit agency; and
+
+(2) Convened by a joint labor-management process.
+
+(b) Safety Committee membership. The Safety Committee must consist of an equal number of frontline transit worker representatives and management representatives. To the extent practicable, the Safety Committee must include frontline transit worker representatives from major transit service functions, such as operations and maintenance, across the transit system.
+
+(1) The labor organization that represents the plurality of the transit agency's frontline transit workers must select frontline transit worker representatives for the Safety Committee.
+
+(2) If the transit agency's frontline transit workers are not represented by a labor organization, the transit agency must adopt a mechanism for frontline transit workers to select frontline transit worker representatives for the Safety Committee.
+
+(c) Safety Committee procedures. Each large urbanized area provider must include or incorporate by reference in its Public Transportation Agency Safety Plan procedures regarding the composition, responsibilities, and operations of the Safety Committee which, at a minimum, must address:
+
+(1) The organizational structure, size, and composition of the Safety Committee and how it will be chaired;
+
+(2) How meeting agendas and notices will be developed and shared, and how meeting minutes will be recorded and maintained;
+
+(3) Any required training for Safety Committee members related to the transit agency's Public Transportation Agency Safety Plan and the processes, activities, and tools used to support the transit agency's SMS;
+
+(4) The compensation policy established by the agency for participation in Safety Committee meetings;
+
+(5) How the Safety Committee will access technical experts, including other transit workers, to serve in an advisory capacity as needed; transit agency information, resources, and tools; and submissions to the transit worker safety reporting program to support its deliberations;
+
+(6) How the Safety Committee will reach and record decisions;
+
+(7) How the Safety Committee will coordinate and communicate with the transit agency's Board of Directors, or equivalent entity, and the Accountable Executive;
+
+(8) How the Safety Committee will manage disputes to ensure it carries out its operations. The Safety Committee may use the dispute resolution or arbitration process from the transit agency's Collective Bargaining Agreement, or a different process that the Safety Committee develops and agrees upon, but the Accountable Executive may not be designated to resolve any disputes within the Safety Committee; and
+
+(9) How the Safety Committee will carry out its responsibilities identified in paragraph (d) of this section.
+
+(d) Safety Committee responsibilities. The Safety Committee must conduct the following activities to oversee the transit agency's safety performance:
+
+(1) Review and approve the transit agency's Public Transportation Agency Safety Plan and any updates as required at § 673.11(a)(1)(i);
+
+(2) Set annual safety performance targets for the safety risk reduction program as required at § 673.11(a)(7)(iii); and
+
+(3) Support operation of the transit agency's SMS by:
+
+(i) Identifying and recommending safety risk mitigations necessary to reduce the likelihood and severity of potential consequences identified through the transit agency's safety risk assessment, including safety risk mitigations associated with any instance where the transit agency did not meet an annual safety performance target in the safety risk reduction program;
+
+(ii) Identifying safety risk mitigations that may be ineffective, inappropriate, or were not implemented as intended, including safety risk mitigations associated with any instance where the transit agency did not meet an annual safety performance target in the safety risk reduction program; and
+
+(iii) Identifying safety deficiencies for purposes of continuous improvement as required at § 673.27(d), including any instance where the transit agency did not meet an annual safety performance target in the safety risk reduction program.
+
+Subpart D—Safety Management Systems
+
+§ 673.21 General requirements.
+
+Each transit agency must establish and implement a Safety Management System under this part. A transit agency Safety Management System must be appropriately scaled to the size, scope and complexity of the transit agency and include the following elements:
+
+(a) Safety Management Policy as described in § 673.23;
+
+(b) Safety Risk Management as described in § 673.25;
+
+(c) Safety Assurance as described in § 673.27; and
+
+(d) Safety Promotion as described in § 673.29.
+
+§ 673.23 Safety Management Policy.
+
+(a) A transit agency must establish its organizational accountabilities and responsibilities and have a written statement of Safety Management Policy that includes the transit agency's safety objectives and a description of the transit agency's Safety Committee or approach to cooperation with frontline transit worker representatives.
+
+(b) A transit agency must establish and implement a process that allows transit workers to report safety concerns, including assaults on transit workers, near-misses, and unsafe acts and conditions to senior management, includes protections for transit workers who report, and includes a description of transit worker behaviors that may result in disciplinary action.
+
+(c) The Safety Management Policy must be communicated throughout the transit agency's organization.
+
+(d) The transit agency must establish the necessary authorities, accountabilities, and responsibilities for the management of safety amongst the following individuals or groups within its organization, as they relate to the development and management of the transit agency's SMS:
+
+(1) Accountable Executive. The transit agency must identify an Accountable Executive. The Accountable Executive is accountable for ensuring that the transit agency's SMS is effectively implemented throughout the transit agency's public transportation system. The Accountable Executive is accountable for ensuring action is taken, as necessary, to address substandard performance in the transit agency's SMS. The Accountable Executive may delegate specific responsibilities, but the ultimate accountability for the transit agency's safety performance cannot be delegated and always rests with the Accountable Executive.
+
+(i) The Accountable Executive of a large urbanized area provider must implement safety risk mitigations for the safety risk reduction program that are included in the Agency Safety Plan under § 673.11(a)(7)(iv).
+
+(ii) The Accountable Executive of a large urbanized area provider receives and must consider all other safety risk mitigations recommended by the Safety Committee, consistent with requirements in §§ 673.19(d) and 673.25(d)(6).
+
+(2) Chief Safety Officer or Safety Management System (SMS) Executive. The Accountable Executive must designate a Chief Safety Officer or SMS Executive who has the authority and responsibility for day-to-day implementation and operation of a transit agency's SMS. The Chief Safety Officer or SMS Executive must hold a direct line of reporting to the Accountable Executive. A transit agency may allow the Accountable Executive to also serve as the Chief Safety Officer or SMS Executive.
+
+(3) Safety Committee. A large urbanized area provider must establish a joint labor-management Safety Committee that meets the requirements of § 673.19.
+
+(4) Transit agency leadership and executive management. A transit agency must identify those members of its leadership or executive management, other than an Accountable Executive, Chief Safety Officer, or SMS Executive, who have authorities or responsibilities for day-to-day implementation and operation of a transit agency's SMS.
+
+(5) Key staff. A transit agency may designate key staff, groups of staff, or committees to support the Accountable Executive, Chief Safety Officer, Safety Committee, or SMS Executive in developing, implementing, and operating the transit agency's SMS.
+
+§ 673.25 Safety Risk Management.
+
+(a) Safety Risk Management process. A transit agency must develop and implement a Safety Risk Management process for all elements of its public transportation system. The Safety Risk Management process must be comprised of the following activities: hazard identification, safety risk assessment, and safety risk mitigation.
+
+(b) Hazard identification.
+
+(1) A transit agency must establish methods or processes to identify hazards and potential consequences of the hazards.
+
+(2) A transit agency must consider, as a source for hazard identification:
+
+(i) Data and information provided by an oversight authority, including but not limited to FTA, the State, or as applicable, the State Safety Oversight Agency having jurisdiction;
+
+(ii) Data and information regarding exposure to infectious disease provided by the CDC or a State health authority; and
+
+(iii) Safety concerns identified through Safety Assurance activities carried out under § 673.27.
+
+(c) Safety risk assessment.
+
+(1) A transit agency must establish methods or processes to assess the safety risk associated with identified hazards.
+
+(2) A safety risk assessment includes an assessment of the likelihood and severity of the potential consequences of identified hazards, taking into account existing safety risk mitigations, to determine if safety risk mitigation is necessary and to inform prioritization of safety risk mitigations.
+
+(d) Safety risk mitigation.
+
+(1) A transit agency must establish methods or processes to identify safety risk mitigations or strategies necessary as a result of the transit agency's safety risk assessment to reduce the likelihood and severity of the potential consequences. For large urbanized area providers, these methods or processes must address the role of the transit agency's Safety Committee.
+
+(2) A transit agency must consider, as a source for safety risk mitigation:
+
+(i) Guidance provided by an oversight authority, if applicable, and FTA; and
+
+(ii) Guidelines to prevent or control exposure to infectious diseases provided by the CDC or a State health authority.
+
+(3) When identifying safety risk mitigations for the safety risk reduction program related to vehicular and pedestrian safety events involving transit vehicles, including to address a missed safety performance target set by the Safety Committee under § 673.19(d)(2), each large urbanized area provider and its Safety Committee must consider mitigations to reduce visibility impairments for transit vehicle operators that contribute to accidents, including retrofits to vehicles in revenue service and specifications for future procurements that reduce visibility impairments.
+
+(4) When identifying safety risk mitigations for the safety risk reduction program related to assaults on transit workers, including to address a missed safety performance target set by the Safety Committee under § 673.19(d)(2), each large urbanized area provider and its Safety Committee must consider deployment of assault mitigation infrastructure and technology on transit vehicles and in transit facilities. Assault mitigation infrastructure and technology includes barriers to restrict the unwanted entry of individuals and objects into the workstations of bus operators.
+
+(5) When a large urbanized area provider's Safety Committee, as part of the transit agency's safety risk reduction program, identifies and recommends under § 673.19(c)(6) safety risk mitigations, including mitigations relating to vehicular and pedestrian safety events involving transit vehicles or assaults on transit workers, based on a safety risk assessment conducted under § 673.25(c), the transit agency must include or incorporate by reference these safety risk mitigations in its ASP pursuant to § 673.11(a)(7)(iv).
+
+(6) When a large urbanized area provider's Safety Committee recommends a safety risk mitigation unrelated to the safety risk reduction program, and the Accountable Executive decides not to implement the safety risk mitigation, the Accountable Executive must prepare a written statement explaining their decision, pursuant to recordkeeping requirements at § 673.31. The Accountable Executive must submit and present this explanation to the transit agency's Safety Committee and Board of Directors or equivalent entity.
+
+§ 673.27 Safety Assurance.
+
+(a) Safety Assurance process. A transit agency must develop and implement a Safety Assurance process, consistent with this subpart. A rail fixed guideway public transportation system, and a recipient or subrecipient of Federal financial assistance under 49 U.S.C. chapter 53 that operates more than one hundred vehicles in peak revenue service, must include in its Safety Assurance process each of the requirements in paragraphs (b), (c), and (d) of this section. A small public transportation provider only must include in its Safety Assurance process the requirements in paragraphs (b) and (d) of this section.
+
+(b) Safety performance monitoring and measurement. A transit agency must establish activities to:
+
+(1) Monitor its system for compliance with, and sufficiency of, the transit agency's procedures for operations and maintenance;
+
+(2) Monitor its operations to identify any safety risk mitigations that may be ineffective, inappropriate, or were not implemented as intended. For large urbanized area providers, these activities must address the role of the transit agency's Safety Committee;
+
+(3) Conduct investigations of safety events to identify causal factors; and
+
+(4) Monitor information reported through any internal safety reporting programs.
+
+(c) Management of change.
+
+(1) A transit agency must establish a process for identifying and assessing changes that may introduce new hazards or impact the transit agency's safety performance.
+
+(2) If a transit agency determines that a change may impact its safety performance, then the transit agency must evaluate the proposed change through its Safety Risk Management process.
+
+(d) Continuous improvement.
+
+(1) A transit agency must establish a process to assess its safety performance annually.
+
+(i) This process must include the identification of deficiencies in the transit agency's SMS and deficiencies in the transit agency's performance against safety performance targets required in § 673.11(a)(3).
+
+(ii) For large urbanized area providers, this process must also address the role of the transit agency's Safety Committee, and include the identification of deficiencies in the transit agency's performance against annual safety performance targets set by the Safety Committee under § 673.19(d)(2) for the safety risk reduction program required in § 673.11(a)(7).
+
+(iii) Rail transit agencies must also address any specific internal safety review requirements established by their State Safety Oversight Agency.
+
+(2) A large urbanized area provider must monitor safety performance against annual safety performance targets set by the Safety Committee under § 673.19(d)(2) for the safety risk reduction program in § 673.11(a)(7).
+
+(3) A large urbanized area provider that does not meet an established annual safety performance target set by the Safety Committee under § 673.19(d)(2) for the safety risk reduction program in § 673.11(a)(7) must:
+
+(i) Assess associated safety risk, using the methods or processes established under § 673.25(c);
+
+(ii) Mitigate associated safety risk based on the results of a safety risk assessment using the methods or processes established under § 673.25(d). The transit agency must include these mitigations in the plan described at § 673.27(d)(4) and in the Agency Safety Plan as described in § 673.25(d)(5); and
+
+(iii) Allocate its safety set-aside in the following fiscal year to safety-related projects eligible under 49 U.S.C. 5307 that are reasonably likely to assist the transit agency in meeting the safety performance target in the future.
+
+(4) A transit agency must develop and carry out, under the direction of the Accountable Executive, a plan to address any deficiencies identified through the safety performance assessment as described in this section.
+
+§ 673.29 Safety Promotion.
+
+(a) Competencies and training.
+
+(1) A transit agency must establish and implement a comprehensive safety training program that includes de-escalation training, safety concern identification and reporting training, and refresher training for all operations transit workers and transit workers directly responsible for safety in the transit agency's public transportation system. The training program must include refresher training, as necessary.
+
+(2) Large urbanized area providers must include maintenance transit workers in the safety training program.
+
+(b) Safety communication. A transit agency must communicate safety and safety performance information throughout the transit agency's organization that, at a minimum, conveys information on hazards and safety risk relevant to transit workers' roles and responsibilities and informs transit workers of safety actions taken in response to reports submitted through a transit worker safety reporting program. A transit agency must also communicate the results of cooperation with frontline transit worker representatives as described at § 673.17(b) or the Safety Committee activities described in § 673.19.
+
+Subpart E—Safety Plan Documentation and Recordkeeping
+
+§ 673.31 Safety plan documentation.
+
+At all times, a transit agency must maintain documents that set forth its Public Transportation Agency Safety Plan, including those related to the implementation of its SMS, and results from SMS processes and activities. A transit agency must maintain documents that are included in whole, or by reference, that describe the programs, policies, and procedures that the transit agency uses to carry out its Public Transportation Agency Safety Plan. These documents must be made available upon request by FTA or other Federal entity, or a State or State Safety Oversight Agency having jurisdiction. A transit agency must maintain these documents for a minimum of three years after they are created.

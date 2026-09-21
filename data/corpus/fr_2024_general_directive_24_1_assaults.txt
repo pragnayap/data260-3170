@@ -1,0 +1,2108 @@
+[Federal Register Volume 89, Number 186 (Wednesday, September 25, 2024)]
+[Notices]
+[Pages 78431-78449]
+From the Federal Register Online via the Government Publishing Office [www.gpo.gov]
+[FR Doc No: 2024-21923]
+
+[[Page 78431]]
+
+-----------------------------------------------------------------------
+
+DEPARTMENT OF TRANSPORTATION
+
+Federal Transit Administration
+
+[Docket No. FTA-2023-0032]
+RIN 2132-ZA10
+
+General Directive 24-1: Required Actions Regarding Assaults on
+Transit Workers
+
+AGENCY:  Federal Transit Administration (FTA), Department of
+Transportation (DOT).
+
+ACTION:  General directive.
+
+-----------------------------------------------------------------------
+
+SUMMARY: The Federal Transit Administration (FTA) is issuing a General
+Directive to address the significant and continuing national-level
+safety risk related to assaults on transit workers. The General
+Directive requires each transit agency subject to FTA's Public
+Transportation Agency Safety Plans (PTASP) Final Rule to conduct a
+safety risk assessment, identify safety risk mitigations or strategies,
+and provide information to FTA on how it is assessing, mitigating, and
+monitoring the safety risk associated with assaults on transit workers.
+Each transit agency serving a large urbanized area must involve the
+joint labor-management Safety Committee when identifying safety risk
+mitigations.
+
+DATES: Responses to this General Directive are due December 26, 2024.
+
+ADDRESSES: FTA's Office of Transit Safety and Oversight (TSO) will host
+a webinar to discuss the requirements of General Directive 24-1. Visit
+https://www.transit.dot.gov/assaults for more information and to RSVP.
+FTA is committed to providing equal access for all webinar
+participants. If you need alternative formats, options, or services,
+contact [email protected] at least three business days prior to the
+event. If you have any questions, please email [email protected].
+
+FOR FURTHER INFORMATION CONTACT: For program matters, contact Stewart
+Mader, Office of Transit Safety and Oversight, (202) 366-9677 or
+[email protected]. For legal matters, contact Heather Ueyama,
+Office of Chief Counsel, (202) 366-7374 or [email protected].
+Office hours are from 8:30 a.m. to 5 p.m., Monday through Friday,
+except Federal holidays.
+
+SUPPLEMENTARY INFORMATION:
+I. Executive Summary
+II. Summary of General Directive and Changes From Proposed General
+Directive
+III. Notice of Proposed General Directive and Response to Comments
+    A. General
+    1. Support
+    2. Opposition
+    B. National Level Hazard/FTA's Safety Risk Assessment Process
+    C. Assault as an Issue Not Exclusive to Public Transportation
+    D. Compliance Timeframe
+    E. Burden
+    F. Funding and Technical Assistance
+    G. Applicability
+    H. Definition of Assault on a Transit Worker
+    I. Safety Risk Mitigations
+    J. Role of the Safety Committee
+    1. Role of the Safety Committee in Safety Risk Assessment
+    2. Role of the Safety Committee in Safety Risk Mitigations
+    3. Role of the Safety Committee in Monitoring Mitigation
+Effectiveness
+    4. Role of the Safety Committee in Required Reporting
+    5. Other Comments Pertaining to Safety Committee
+    K. Required Actions
+    1. Conduct a Safety Risk Assessment
+    2. Identify Safety Risk Mitigations
+    3. Submit Required Information to FTA
+    L. Follow-Up Reporting
+    M. Sensitive Security Information (SSI) and Freedom of
+Information Act (FOIA)
+    N. Oversight and Enforcement
+    1. Federal Enforcement
+    2. State Safety Oversight Agency Role
+
+I. Executive Summary
+
+    FTA is issuing a General Directive to address the significant and
+continuing safety risk associated with assaults on transit workers.\1\
+FTA has identified a national-level hazard that transit workers must
+interact with the public and, at times, must clarify or enforce agency
+policies, which can present a risk of transit workers being assaulted
+on transit vehicles and in revenue facilities. FTA has determined that
+the national-level hazard and potential consequences discussed above
+constitute an unsafe condition or practice presenting a risk of death
+or personal injury for transit workers. Accordingly, pursuant to 49 CFR
+670.25, FTA is issuing a General Directive that directs transit
+agencies to take action to address the identified national-level hazard
+and the potential consequences of the hazard.
+---------------------------------------------------------------------------
+
+    \1\ Please refer to the Public Transportation Agency Safety
+Plans (PTASP) Final Rule for definitions of ``assault on a transit
+worker'' and ``transit worker'': https://www.ecfr.gov/current/title-49/subtitle-B/chapter-VI/part-673.
+---------------------------------------------------------------------------
+
+    This General Directive is part of FTA's ongoing comprehensive
+efforts to improve transit worker safety. FTA is also undertaking other
+actions related to transit worker safety, including funding research,
+sponsoring training, soliciting public input, and providing technical
+assistance. FTA intends to use information submitted to it pursuant to
+the General Directive and other FTA initiatives to inform future FTA
+actions, including rulemakings such as the planned Transit Worker and
+Public Safety rule (RIN 2132-AB47).
+
+II. Summary of General Directive and Changes From Proposed General
+Directive
+
+    This General Directive requires each transit agency that is subject
+to the Public Transportation Agency Safety Plans (PTASP) Final Rule (49
+CFR part 673) to use the Safety Management System (SMS) processes
+documented in its Agency Safety Plan (ASP) to conduct a safety risk
+assessment related to assaults on transit workers on the public
+transportation system it operates. If a transit agency has conducted a
+safety risk assessment related to assaults on transit workers in the
+twelve months preceding the date of issuance of this General Directive,
+and if the transit agency continues to believe that the results of that
+safety risk assessment are relevant, the transit agency need not
+conduct a new assessment. This General Directive also requires each
+transit agency to use the SMS processes documented in its ASP to
+identify safety risk mitigations or strategies necessary as a result of
+the agency's safety risk assessment. As required by 49 U.S.C.
+5329(d)(5) and the PTASP Final Rule at 49 CFR 673.25(d)(1), each
+transit agency serving a large urbanized area must involve the joint
+labor-management Safety Committee when identifying safety risk
+mitigations to reduce the likelihood and severity of consequences
+identified through the agency's safety risk assessment.
+    This General Directive also requires each transit agency to provide
+information to FTA on how it is assessing, mitigating, and monitoring
+the safety risk associated with assaults on transit workers within 90
+days of issuance of this General Directive.
+    FTA has chosen this approach as part of the effort to address
+assaults on transit workers, as it is grounded in SMS principles and
+methods, which FTA has adopted as the basis for enhancing public
+transportation safety. See 49 CFR 670.3. Further, this approach will
+ensure that each transit agency is taking a formal evaluation of the
+safety risk related to assaults on transit workers on their system. FTA
+believes this approach will contribute to transit agencies and their
+joint labor-management Safety Committees identifying scalable and
+effective mitigations across the range of services they provide and
+situations that contribute to the risk of assaults on transit workers.
+
+[[Page 78432]]
+
+    FTA is finalizing the General Directive largely as proposed.
+However, in the Notice of Proposed General Directive published on
+December 20, 2023 (88 FR 88213), FTA proposed a 60-day timeframe for
+transit agencies to comply with this General Directive. In response to
+public comments, FTA has increased the compliance timeframe to 90 days
+in this General Directive. In response to public comments, FTA also has
+removed the term ``written plan'' from the Enforcement section of the
+General Directive. Additional information about these changes is
+provided in Section III below.
+    FTA notes that this directive is intended to work in conjunction
+with Occupational Safety and Health Administration (OSHA) protections
+and is not intended to preempt OSHA's standards or other enforcement
+authority.
+    The General Directive contains binding obligations, which 49 U.S.C.
+5334(k) defines as ``a substantive policy statement, rule, or guidance
+document issued by the Federal Transit Administration that grants
+rights, imposes obligations, produces significant effects on private
+interests, or effects a significant change in existing policy.'' Under
+49 U.S.C. 5334(k) FTA is authorized to issue binding obligations if it
+follows notice and comment rulemaking procedures under 5 U.S.C. 553.
+
+III. Notice of Proposed General Directive and Response to Comments
+
+    FTA published a Notice of Proposed General Directive in the Federal
+Register on December 20, 2023, which is available on the FTA website at
+https://www.transit.dot.gov/regulations-and-guidance/safety/fta-general-directives and in Docket No. FTA-2023-0032. The public comment
+period closed on February 20, 2024.
+    FTA received 66 comment submissions to the docket. Commenters
+included transit agencies, labor unions, State Safety Oversight
+Agencies (SSOAs), and individuals. FTA has considered these comments
+and addresses them in the corresponding sections below. Some comments
+were outside the scope of this General Directive, and therefore, FTA
+does not respond to those comments.
+    FTA reviewed all relevant comments and took them into consideration
+when developing the General Directive. Below, the comments and
+responses are subdivided by their corresponding sections of the General
+Directive and subject matter.
+
+A. General
+
+1. Support
+    Comments: Several commenters expressed general support for the
+General Directive, including transit agencies, labor unions,
+individuals, an industry association, and an SSOA. In general, these
+commenters emphasized the importance of efforts to address assaults on
+transit workers and voiced appreciation that FTA is taking action to
+address this issue.
+    Several commenters noted that assaults negatively impact the safety
+of workers and other individuals interacting with the transit system.
+Some provided anecdotal examples of assaults, while others noted
+factors that contribute to the problem.
+    One individual and two labor organizations stated that the General
+Directive is a step in the right direction but that additional FTA
+action is needed to address the issue.
+    FTA response: FTA appreciates the comments that expressed support
+for the General Directive. FTA acknowledges the efforts taken to date
+by the transit industry to address assaults on transit workers and
+looks forward to receiving submissions in response to the General
+Directive.
+    FTA acknowledges the comments that noted examples of assaults that
+negatively impact the safety of transit workers and comments that
+argued for additional action to address the issue. FTA notes that the
+General Directive requires each applicable transit agency to provide
+FTA information on how the transit agency is assessing, mitigating, and
+monitoring the safety risk associated with assaults on transit workers,
+which FTA intends to use to inform future Federal action to protect
+transit workers, including rulemakings such as the planned Transit
+Worker and Public Safety rule.
+2. Opposition
+    Comments: Some comments opposed FTA's proposal generally. One
+individual argued that the General Directive does not offer concrete
+ideas for how transit agencies should combat assault. Another
+individual expressed that while FTA's recognition of assaults on
+transit workers is overdue, the General Directive is burdensome and
+would do little to improve safety for transit workers.
+    One individual specifically addressed a statement in FTA's Federal
+Register notice, which articulated FTA's concern that transit agencies
+may not have completed safety risk assessments despite the presence of
+the assault risk on their systems. This commenter questioned FTA's
+statement, arguing that the likelihood of assault is remote for many
+transit agencies and that it is reasonable to conclude that some
+agencies did not identify it as an unacceptable risk in need of further
+mitigation. This commenter further questioned why FTA believes further
+action is necessary, stating that FTA appeared to be changing its
+position that assault is best addressed through the scalable PTASP
+process. This commenter argued that FTA should use the National Public
+Transportation Safety Plan (National Safety Plan) as FTA's formal
+mechanism for communicating hazard information and directing transit
+agency action, as opposed to issuing directives.
+    FTA response: FTA acknowledges the commenters that expressed
+opposition to the General Directive and notes that the General
+Directive is intended to ensure transit agencies assess and mitigate
+the risk associated with assaults on transit workers and to help FTA
+better understand the use of SMS processes to address this risk. FTA
+has limited the reporting required by the General Directive to that
+which is necessary to support FTA's understanding, in order to minimize
+the burden associated with responding to the General Directive.
+    As stated in the Notice of Proposed General Directive, FTA is
+concerned that transit agencies may not have completed a safety risk
+assessment despite the presence of the risk of assaults on the systems
+they operate. FTA has reason to believe this is the case based on an
+analysis of Special Directives on transit worker assault that FTA
+issued to nine transit agencies on October 4, 2022. Only four of these
+agencies reported completion of a safety risk assessment prior to
+issuance of the Special Directives. FTA understands the commenter's
+argument that a transit agency may have completed a safety risk
+assessment and determined that mitigation is not necessary. If that is
+the case, and the safety risk assessment was completed within 12 months
+prior to the issuance of this General Directive, the transit agency
+need not complete another safety risk assessment to comply with this
+General Directive.
+    FTA acknowledges the commenter who states that FTA appeared to be
+changing its position that assault is best addressed through the
+scalable PTASP process, and notes that the General Directive reinforces
+PTASP processes by ensuring that agencies are carrying them out to
+mitigate the risk associated with assaults on transit workers.
+    FTA acknowledges the commenter that suggested FTA should use the
+
+[[Page 78433]]
+
+National Safety Plan to direct transit agency action to address
+assaults on transit workers instead issuing a General Directive. FTA
+notes that the recently updated National Safety Plan serves as FTA's
+primary guidance document to improve transit safety performance. The
+National Safety Plan identifies safety performance measures to support
+PTASP safety performance target setting, which includes measures
+related to assaults on transit workers. FTA does not believe that the
+National Safety Plan is the appropriate mechanism to require the
+actions outlined in this General Directive.
+    FTA notes that per 49 U.S.C. 5329(f), Congress has provided FTA
+with authority to issue directives with respect to the safety of a
+recipient's transit system or the public transportation industry
+generally. In 49 CFR 670.25(a), FTA has defined the situations in which
+FTA may issue General Directives. These include when the FTA
+Administrator ``determines that an unsafe condition or practice, or a
+combination of unsafe conditions and practices, exists such that there
+is a risk of death or personal injury, or damage to property or
+equipment.'' As explained in FTA's proposal and in this General
+Directive, FTA has determined that the national-level hazard and
+potential consequences relating to assaults on transit workers
+constitute an unsafe condition or practice presenting a risk of death
+or personal injury for transit workers. FTA therefore believes that a
+General Directive is an appropriate further step to address assaults on
+transit workers. This General Directive is intended to ensure that all
+transit agencies subject to the PTASP Final Rule will complete a safety
+risk assessment and mitigate the risk of assaults based on FTA's
+identification of a national-level hazard regarding assaults on transit
+workers.
+
+B. National Level Hazard/FTA's Safety Risk Assessment Process
+
+    Comments: Two commenters provided feedback on FTA's identification
+of a national-level hazard regarding assaults on transit workers. One
+individual expressly disagreed that this is a national-level hazard,
+arguing that being in a customer-facing position is not itself a
+hazard. This individual argued that FTA's identified hazard is not
+consistent with FTA's definition of ``hazard'' at 49 CFR 673.5. The
+commenter requested that FTA work with the transit industry to define
+the hazard in a way that is more accurate, actionable, and consistent
+with FTA guidance and training. Further, the commenter requested
+additional information on likelihood determinations made during FTA's
+safety risk assessment on this topic, specifically how FTA concluded
+that 185 major assault events from 2008-2019 is a ``very high''
+likelihood.
+    A transit agency commenter agreed that there is a national-level
+hazard but stated that transit agencies need a better understanding of
+how to deploy the Safety Risk Management (SRM) process and implement
+successful mitigation measures.
+    FTA response: FTA acknowledges the commenter that disagreed with
+FTA's identification of a national-level hazard related to assaults on
+transit workers and that argued the hazard identified by FTA for this
+concern is not consistent with FTA's definition of hazard in 49 CFR
+part 673. FTA disagrees with the commenter's assertion and notes that
+the fact that transit workers must interact with the public and, at
+times, must clarify or enforce policies is a ``real or potential
+condition that can cause injury, illness, or death,''. As such, it is
+not in conflict with FTA's definition of hazard at 49 CFR 673.5, and
+FTA does not believe additional revision is necessary.
+    Regarding the likelihood determinations made during FTA's safety
+risk assessment on this topic, as explained in FTA's proposal, to
+assess the likelihood of assaults on transit workers on vehicles, FTA
+reviewed 2,225 National Transit Database (NTD) major event reports
+matching the potential consequence and found an average of 185 events
+per year. Due to the frequency of events happening on average every
+other day, FTA determined a likelihood rating of Very High (5).
+Similarly, to assess likelihood of assaults on workers in facilities,
+FTA reviewed 674 NTD major event reports from 2008 through 2020 that
+involved assaults on transit workers in revenue facilities throughout
+the country and found an average of 56.17 events per year. Due to the
+rate of occurrence, FTA determined a likelihood rating of Very High
+(5).
+    FTA acknowledges the commenter who agreed that there is a national-
+level hazard and stated that transit agencies need a better
+understanding of how to deploy the SRM process and implement successful
+mitigation measures. FTA notes that it provides comprehensive technical
+assistance to help the transit industry meet PTASP requirements and
+implement SMS processes. FTA's PTASP Technical Assistance Center (TAC)
+provides one-on-one technical assistance, conducts voluntary ASP
+technical reviews, maintains a technical assistance resource library,
+and facilitates peer-sharing via an ASP Directory. More information is
+available at https://www.transit.dot.gov/PTASP-TAC.
+
+C. Assault as an Issue Not Exclusive to Public Transportation
+
+    Comments: Several commenters noted that assault is a broad societal
+issue that is not exclusive to public transportation, with some noting
+that the General Directive does not acknowledge the many societal
+factors contributing to assaults.
+    One industry association argued that assaults should be viewed
+through a broader community-based lens, as opposed to a sole focus on
+public transportation. A transit agency suggested that FTA should form
+collaborative partnerships with other stakeholders, such as state
+agencies, local law enforcement agencies, and community members, to
+address assaults on transit workers. Another individual requested that
+the General Directive acknowledge the importance of coordinating with
+other stakeholders to combat crime generally.
+    Four commenters expressed concern with using SRM processes to
+address assaults on transit workers. An industry association argued
+that assaults on transit workers are random acts and that this
+unpredictability makes it nearly impossible to use assault data as part
+of an agency's SRM processes. One individual argued that a transit
+agency risk assessment will not solve the problem and urged FTA to
+focus on actions that FTA can control.
+    A separate individual commenter argued that FTA should address
+transit security as a separate area of focus from safety and clarify
+the distinction between these two areas. This commenter argued that
+risks related to assaults cannot be regulated through a safety lens or
+safety risk assessment, but instead should be addressed through a
+transit security and enforcement lens. The commenter argued that the
+General Directive should require the implementation of solutions that
+deliver change instead of measuring events in the context of a safety
+target. In addition, the commenter argued that Federal action on this
+topic is better addressed by Transportation Security Officials from the
+Department of Homeland Security (DHS). It recommended that FTA engage
+with DHS regarding the General Directive. Similarly, an SSOA asked what
+collaboration FTA has undertaken with security-focused agencies such as
+the Transportation Safety Administration (TSA) when developing its
+strategy for addressing assaults on transit workers.
+
+[[Page 78434]]
+
+This commenter stated that the focus of the General Directive should be
+sharing information and research relating to mitigation strategies, and
+providing assistance to agencies that are struggling to effectively
+mitigate assaults.
+    FTA response: FTA agrees with the commenters who argued that
+assault is a broader issue not exclusive to public transportation. FTA
+recognizes that social, economic, health-related, and other factors
+external to transit are contributing factors to assaults on transit
+workers, and that transit agencies alone cannot eliminate the hazards
+associated with these contributing factors. However, FTA notes that the
+PTASP Final Rule requires transit agencies to implement mitigations
+when a safety risk assessment determines that safety risk is at an
+unacceptable level. FTA also notes that mitigations can include
+collaboration with community partners who can help address factors
+external to transit that contribute to assaults on transit workers.
+    FTA acknowledges the commenters who argued against using SRM
+processes to address assaults on transit workers. FTA notes that the
+use of SRM to address assault risk is not new. FTA originally clarified
+that the transit industry should use the SRM processes required by 49
+CFR part 673 to address the safety risk associated with assaults on
+transit workers through a Federal Register Notice published on May 24,
+2019, titled ``Protecting Public Transportation Operators from the Risk
+of Assault'' (84 FR 24196). Since that time, FTA has reiterated the
+requirement for agencies to utilize existing SRM and Safety Assurance
+(SA) processes to address risk related to assaults on transit workers.
+Notably, the updated 49 CFR part 673, published on April 11, 2024,
+includes SRM- and SA-related requirements that pertain to assaults on
+transit workers. Further, the National Safety Plan published on April
+10, 2024 (89 FR 25316) establishes safety performance criteria for all
+public transportation providers that includes safety performance
+measures related to assaults on transit workers. In addition, the
+National Safety Plan identifies safety performance measures related to
+assaults on transit workers for the safety risk reduction programs of
+transit agencies serving urbanized areas with a population of 200,000
+or more.
+    FTA notes that the perceived randomness or unpredictability of
+certain concerns, such as assault, does not preclude safety risk
+assessments from being effective. To the contrary, FTA believes that
+the safety risk assessment process and subsequent SA activities allow
+transit agencies to address risk, even when it appears random or
+unpredictable, that a transit agency may not have the ability to
+eliminate by identifying mitigations or strategies that can lower the
+likelihood of a negative consequence or reduce the severity of such a
+consequence when it occurs.
+    FTA disagrees with the commenter who argued that it is
+inappropriate to conduct a safety risk assessment for a concern that is
+outside of the jurisdiction or sphere of control of a single transit
+agency. The SRM process may be applied effectively to safety concerns
+and hazards that may not have originated within the transit agency. The
+goal of SRM and SA is not to eliminate a hazard but to reduce the
+likelihood and severity of potential consequences to an acceptable
+level. SRM effectively addresses safety concerns, including those that
+involve forces outside of the transit agency's control, by working to
+reduce how often a potential consequence may occur, and to reduce the
+severity of the consequence if it does occur. For example, to mitigate
+assaults on transit workers, transit agencies may identify, implement,
+and monitor the effectiveness of mitigations, including, but not
+limited to, changes to policies and procedures, de-escalation training,
+crisis intervention and social outreach, increased surveillance, or
+modifications to operator compartments.
+    As noted in the response to comments on the PTASP Final Rule, FTA
+appreciates that some transit agencies treat assault on a transit
+worker as both a safety and a security event. Congress directed FTA to
+address assaults on transit workers through both the NTD and FTA's
+safety program as part of FTA's work to improve safety at transit
+systems across the country. The PTASP Final Rule carries out the
+Congressional mandate to address assaults on transit workers through
+PTASP, and the General Directive reinforces and leverages the
+requirements of the PTASP Final Rule.
+    In response to the commenter that recommended that the General
+Directive should require the implementation of solutions instead of
+measuring events in the context of a safety performance target, FTA
+notes that the General Directive does not prescribe mitigations for
+transit agencies, and instead relies on the transit agency's
+established SRM processes to understand the assault on transit worker
+risk and to identify appropriate safety risk mitigations. Further, FTA
+notes that the General Directive does not establish any new requirement
+for safety performance target setting. Through this General Directive,
+FTA will collect information on how the transit agency is monitoring or
+plans to monitor the effectiveness of any mitigation identified to
+address the risk of assaults on transit workers.
+    FTA also acknowledges the commenters that suggested this topic is
+better addressed by Transportation Security Officials from DHS, and
+that FTA should collaborate with DHS/TSA. FTA appreciates the
+commenter's suggestion but notes that Congress directed FTA to address
+assaults on transit workers through FTA's safety program as part of
+FTA's work to improve safety at transit systems across the country.
+
+D. Compliance Timeframe
+
+    Comments: FTA received comments from several commenters, including
+transit agencies, a state safety oversight agency, labor unions, and
+individuals, regarding the General Directive's proposed 60-day
+compliance timeframe. One transit agency that previously received a
+Special Directive on Transit Worker Assault stated that it was prepared
+to submit the required information to FTA within the proposed
+timeframe. One labor union urged that the General Directive go into
+effect by July 2024, noting that most agencies' ASP review and update
+processes will be completed by December 2024. The commenter argued that
+mitigations therefore should be identified no later than September. Two
+labor organizations urged FTA to obtain information collected through
+the General Directive without delay so that it can inform FTA's
+rulemaking on Transit Worker and Public Safety.
+    In contrast, several commenters asked FTA to allow additional time
+for agencies to carry out the required activities and submit responses.
+Some commenters expressed that 60 days is insufficient time to comply
+but did not suggest an alternative timeframe. Commenters stated that
+the timeframe is unrealistic for agencies that must involve their
+Safety Committee, with one noting that Safety Committee meetings may
+not align with the proposed 60-day timeframe. This commenter also noted
+that agencies need more time to coordinate with other stakeholders,
+such as police departments and city officials. One transit agency
+stated that its Safety Committee will only have two meetings during the
+60-day reporting window, and that compliance with the General Directive
+could delay other Safety Committee business and result in required
+overtime for Safety Committee members. This commenter also argued that
+the Safety Committee process is not
+
+[[Page 78435]]
+
+fully matured at many transit agencies. One transit agency commenter
+noted a potential overlap in the General Directive and a State law in
+California and asked FTA to consider potential conflicts with local
+legislation and extend the 60-day timeframe.
+    Three commenters recommended extending the compliance timeframe
+from 60 days to 120 days. One transit agency recommended a timeframe in
+the range of 90 to 120 days. These commenters argued that more time
+would allow agencies to conduct a thorough data-driven analysis, avoid
+overburdening agency resources, and allow for coordination with Safety
+Committees.
+    Two transit agencies recommended extending the compliance timeframe
+to six months. One of these agencies stated that this additional time
+is needed to properly evaluate the effectiveness of mitigations. The
+other agency argued that more time is needed to involve the Safety
+Committee effectively and ensure all required activities are conducted
+adequately.
+    One transit agency recommended a timeframe of at least one year,
+noting that transit agencies face unique challenges based on their
+resourcing and operation type.
+    One transit agency recommended a phased submission timeframe of up
+to five years, citing the need for a grace period to secure funding,
+train staff, and implement technology. This commenter further noted
+that regional transit agencies face challenges during off-cycle budget
+and planning periods.
+    FTA response: FTA acknowledges the commenters that provided a
+rationale for extending the 60-day compliance deadline in the proposed
+General Directive and has reviewed each comment submitted on this
+topic. Further, FTA acknowledges the urgency of the assault on transit
+workers concern as articulated by the labor union commenters. To
+balance the challenges that commenters raised with the need to maintain
+a schedule for identifying mitigations that recognizes the urgency of
+the assault on transit workers safety concern, FTA is adjusting the
+compliance timeframe to 90 days in this General Directive. The 90-day
+timeframe provides additional flexibility to agencies to coordinate
+with Safety Committees, supports annual ASP review and update processes
+in 2024, and enables the information collected to inform FTA's Transit
+Worker and Public Safety rulemaking.
+
+E. Burden
+
+    Comments: FTA received comments from transit agencies, one
+individual, and one industry association related to burden associated
+with the General Directive. Two transit agencies and an industry
+association expressed concerns at the potential financial and staffing
+burden associated the General Directive and asked for clarity on how
+FTA expects transit agencies to fund the required activities,
+particularly for smaller transit agencies. An industry association
+noted that the transit industry has faced resource challenges and a
+fiscal cliff in the wake of the COVID-19 pandemic. This commenter
+requested that FTA identify resources and funding that agencies can use
+to complete the General Directive's required actions and reporting. An
+additional transit agency expressed that FTA should ensure that
+agencies with limited resources are not inundated with reporting
+mandates that leave little time for deploying mitigations and
+strategies to combat assaults. One individual urged FTA to ensure that
+actions to protect transit operators are implementable in a quick and
+cost-effective way across transit systems of all modes and sizes.
+    One individual stated that the General Directive's reporting
+requirements are especially burdensome. This commenter asked how FTA
+would use the reported information to make transit workers safer. The
+commenter also argued that the General Directive would divert resources
+away from safety initiatives and that Federal funding for security
+improvements would be a better use of resources. One transit agency
+outlined burden-related challenges associated with the requirements of
+the General Directive for agencies that do not have automated methods
+of capturing the data. Specifically, the agency cited the burden
+related to manual data collection; acquisition, implementation, and
+maintenance of automated data collection methods; training expenses;
+and data analysis and reporting. The commenter also expressed concern
+about liability that could result from inaccurate data reporting and
+appropriate safety measures, including legal consequences, damaged
+public reputation, financial burden, and negative impact on transit
+worker well-being.
+    In contrast, one labor organization stated that the General
+Directive is not burdensome or unwarranted, given the scale of the
+assault issue.
+    FTA response: FTA acknowledges the comments submitted regarding the
+burden associated with the General Directive. FTA notes that the
+General Directive is leveraging existing SRM and SA processes that
+transit agencies already carry out to meet the requirements of the
+PTASP Final Rule. Specifically, the General Directive requirement for
+transit agencies to conduct SMS activities to address the risk of
+assaults on transit workers is the same as the SMS processes required
+under PTASP. These processes are scalable and flexible and enable
+efficient implementation of mitigations at transit agencies of all
+sizes. To further minimize burden, the General Directive permits
+agencies to submit the results of a safety risk assessment conducted
+within 12 months prior to issuance of the General Directive.
+    The General Directive imposes an additional requirement to submit
+information about how transit agencies are assessing, mitigating, and
+monitoring the safety risk related to assaults on transit workers. To
+minimize burden associated with this reporting requirement, FTA has
+developed a reporting tool called Safety Management System (SMS) Report
+to streamline the submission of information required by the General
+Directive. This new tool is built using the Transit Integrated Appian
+Development (TrIAD) platform that houses other applications transit
+agencies already use, such as Transit Award Management System (TrAMS)
+and the NTD reporting tool.
+    FTA notes that transit operators may use a variety of FTA funding
+sources for the implementation of their ASPs and SMS processes,
+including Urbanized Area Formula Grants (Section 5307), State of Good
+Repair (Section 5337), and Bus and Bus Facilities (Section 5339) funds.
+Those funding sources may be used for activities that are eligible
+under the applicable grant program. FTA encourages transit agencies to
+contact their FTA Regional Office for confirmation of specific project
+eligibility. FTA notes that the General Directive does not establish
+new NTD requirements for data collection and ongoing data reporting.
+Further, the General Directive does not require the implementation of
+any specific mitigation.
+    FTA also notes and agrees with the labor organization that
+commented stating that the General Directive is not burdensome or
+unwarranted given the scale of assaults on transit workers as an issue
+for the industry.
+    In response to the commenter that asked how FTA would use
+information collected by this General Directive to make transit workers
+safer, FTA notes that the General Directive helps FTA confirm that
+transit agencies are assessing and mitigating risk associated with
+assaults on transit workers. Additionally, the General Directive
+enables FTA to collect information on
+
+[[Page 78436]]
+
+mitigation effectiveness from a wide range of transit agencies, which
+will allow FTA to better address the safety concern at a Federal level,
+enable FTA to disseminate information to the transit industry regarding
+mitigations that have proven effective for specific transit
+applications, and inform future Federal action to protect transit
+workers, including rulemakings such as the planned Transit Worker and
+Public Safety rule.
+
+F. Funding and Technical Assistance
+
+    Comments: One individual and four transit agencies argued that
+additional Federal funding is needed to address assaults on transit
+workers. An industry association and a transit agency recommended that
+FTA allow transit agencies to use Section 5307 funds for implementation
+of mitigations identified through the safety risk assessment.
+Similarly, several commenters stated that funding is needed for
+measures such as increased security patrols on buses, new technology,
+and other safety and security measures. One transit agency and an
+industry association urged FTA to allow transit agencies to use Section
+5307 funds for consultant support for the safety risk assessment. A
+separate agency suggested that FTA establish grant programs to support
+agencies' acquisition and implementation of automated data capture
+technology. This commenter also recommended that FTA should establish
+emergency financial assistance packages to support transit agencies
+facing data collection challenges and to help agencies bridge financial
+gaps during off-cycle budget periods.
+    Two transit agencies suggested that FTA provide personnel to patrol
+transit systems, similar to the use of Federal Air Marshals or airport
+security officials. One transit agency, a city department of
+transportation, and an industry association urged FTA to consider
+funding a pilot program for the design and manufacture of buses with
+fully enclosed bus operator compartments. The industry association
+further clarified that it supported a pilot program to gather data, but
+it did not support the use of prototype buses in rehabilitation or new
+procurements.
+    One transit agency requested training about how to implement the
+General Directive through SMS. One transit agency commented that
+agencies may not have the training, resources, or ``know-how'' about
+how to turn risk assessments into action and requested further guidance
+from FTA. Another transit agency recommended that FTA should establish
+technical assistance, training, resources, and capacity building
+programs to assist transit agencies with issues such as data reporting
+and analysis. The agency further suggested that FTA establish a regular
+review process with input from transit agencies to evaluate the
+effectiveness of assault data reporting guidelines and funding
+programs, as well as a public awareness campaign about assault data
+reporting
+    One commenter suggested that FTA provide training regarding how the
+General Directive works in conjunction with standards and protections
+of the Occupational Safety and Health Administration (OSHA) and
+suggested creating a forum for agencies to discuss possible conflicts
+between the General Directive and other directives.
+    Two transit agencies, a labor union, and an SSOA submitted comments
+requesting that FTA encourage collaboration between Federal, State, and
+local entities to facilitate the collection and sharing of best
+practices related to assaults, including information on safety risk
+mitigations and their effectiveness. The SSOA and one transit agency
+suggested that FTA engage transit agencies that have fewer incidences
+of assault, noting that they may be implementing mitigations that are
+informative to other transit agencies. Another transit agency
+recommended that FTA fold the results of the General Directive into the
+data collected from FTA's 2021 RFI on assaults on transit workers.
+    FTA response: FTA appreciates comments received regarding the need
+for Federal funds and resources to address the General Directive and
+other activities related to addressing assaults on transit workers. As
+explained above, FTA notes that the General Directive is leveraging
+current SMS processes required under the PTASP Final Rule and does not
+establish any new process requirements related to SRM and SA
+activities. Instead, the General Directive requires transit agencies to
+conduct a safety risk assessment regarding assaults on transit workers
+and identify safety risk mitigations or strategies, and submit to FTA,
+via form, the results of these SMS activities relating to assault.
+Transit operators may use a variety of FTA funding sources for the
+implementation of the SMS processes defined in their ASPs, including
+Urbanized Area Formula Grants (Section 5307), State of Good Repair
+(Section 5337), and Bus and Bus Facilities (Section 5339) funds. Those
+funding sources may be used for activities that are eligible under the
+applicable grant program. FTA encourages transit agencies to contact
+their FTA Regional Office for confirmation of specific project
+eligibility. FTA appreciates the commenters' suggestions for additional
+Federal resources, including a transit version of TSA's Air Marshal
+program and additional assault prevention infrastructure focused
+grants, but notes that these suggestions are outside of the scope of
+this General Directive.
+    FTA appreciates the commenters' suggestions regarding technical
+assistance and training related to the General Directive and data
+reporting relating to assaults on transit workers. FTA will deliver a
+webinar to communicate the General Directive requirements, as well as a
+demonstration of Safety Management System (SMS) Report, the tool
+developed by FTA to facilitate reporting required by this General
+Directive. FTA also appreciates the commenters' suggestions to
+facilitate the collection and sharing of best practices and effective
+mitigations on this topic, including engagement with agencies that have
+fewer incidences of assault, aligning results from the General
+Directive with the 2021 RFI on assaults on transit workers, a review
+process for mitigations and funding, and a public awareness campaign.
+An outcome of the General Directive is FTA's collection of information
+on mitigations related to assaults on transit workers and their
+effectiveness. FTA will explore ways to share this information with the
+transit industry to support industry mitigation efforts.
+
+G. Applicability
+
+    Comment: FTA received comments from transit agencies and
+individuals regarding the applicability of the General Directive. One
+individual urged FTA to exclude rural and small urban transit systems
+from the General Directive, arguing that these systems experience
+minimal assaults and that compliance with the General Directive would
+be burdensome for them. Another transit agency requested that FTA apply
+the General Directive only to Tier I providers, reasoning that the
+PTASP Final Rule adequately addresses assaults for Tier II providers
+and that Federal requirements are burdensome for smaller agencies.
+    One individual stated that measures to protect transit workers from
+assault should apply to all transit agencies, not just large systems.
+Another commenter stated that FTA should clarify that a large urbanized
+area is defined as having a population greater than 200,000. An
+operator of an automated rail system stated that it does not have
+operators on board and therefore has no
+
+[[Page 78437]]
+
+potential of assaults on transit workers. This commenter asked how it
+should respond to comply with the General Directive.
+    FTA response: FTA appreciates the comments regarding General
+Directive applicability. In response to the commenter that suggested
+FTA exclude Tier II providers (as defined by FTA's Transit Asset
+Management rule, 49 CFR part 625) and rural and small urban systems
+from the General Directive requirements, FTA notes that the General
+Directive applies only to agencies that are subject to the PTASP Final
+Rule. Thus, recipients that receive funds only under 49 U.S.C. 5310
+and/or 49 U.S.C. 5311 are excluded from the General Directive, unless
+they operate a rail fixed guideway public transportation system. FTA
+notes that the General Directive applies to all transit agencies
+subject to the PTASP Final Rule based on FTA's identification of a
+national-level hazard regarding assaults on transit workers, which
+exists at transit agencies of all sizes and across all modes of public
+transportation, not just those in large urbanized areas.
+    FTA acknowledges the commenter who suggested that measures to
+address assaults should apply more broadly than just large transit
+systems. FTA confirms that the General Directive applies to small
+providers that are recipients or subrecipients of Section 5307 funds.
+FTA notes that these small providers are already required to have the
+SRM and SA processes in place that the General Directive draws upon.
+Further FTA notes that the SRM and SA process requirements are flexible
+and scalable and that nothing in the General Directive establishes new
+or more rigorous SRM or SA process requirements. Some smaller transit
+agencies may reach very different conclusions than some larger transit
+agencies based on their own operating realities and risk exposure.
+    Regarding clarification of a large urbanized area, FTA notes that
+the commenter slightly misstated the definition. As stated in the
+General Directive summary section, a large urbanized area is an
+urbanized area with a population of 200,000 or more. In response to the
+commenter that asked how an automated rail system that has no potential
+for assaults on transit workers should respond to comply with the
+General Directive, FTA notes that the General Directive applies to all
+transit agencies that are subject to the PTASP Final Rule, including
+those that provide automated rail service with no operators. FTA
+clarifies that the risk associated with assaults on transit workers is
+broader than just transit operators. For instance, a car cleaner or
+maintenance worker onboard an automated rail vehicle in revenue service
+may face a risk of assault similar to that of an operator on a staffed
+vehicle. A safety risk assessment can help an agency and its Safety
+Committee determine whether the level of risk is acceptable, and
+therefore that mitigation is not requited, or that the level of risk is
+unacceptable, and mitigations must be identified.
+
+H. Definition of ``Assault on a Transit Worker''
+
+    Comments: FTA received comments from several commenters regarding
+the definition of ``assault on a transit worker,'' including transit
+agencies, individuals, and a transit industry association. Commenters
+expressed concern regarding a lack of clarity related to the
+definition, and many argued that this may impact the effectiveness of
+assault data collection and analysis. Three transit agencies and one
+transit industry association requested guidance, such as illustrative
+examples, about how to interpret the phrase ``interferes with'' to
+ensure the definition is applied consistently and effectively. One of
+the transit agencies requested that FTA work with the industry to
+develop a more precise definition of the phrase. In addition, one
+transit agency specifically requested guidance about how to apply the
+``knowingly'' and ``with intent'' elements of the definition.
+    Two transit agencies requested clarification regarding whether the
+definition includes non-physical assaults. One industry association
+commented that if the definition includes verbal abuse, this could
+result in an increase in worker compensation applications, which could
+negatively impact costs and transit worker availability.
+    Several commenters urged FTA to develop guidance or technical
+assistance and training resources to help the industry interpret and
+apply the definition. Some commenters recommended that FTA collaborate
+with transit agencies and transit workers when developing such
+guidance. One individual requested that FTA provide guidance on the
+definition before requiring additional reporting through the General
+Directive.
+    One transit industry association and one transit agency urged FTA
+to consider and address how differences in State laws could affect a
+transit agency's ability to respond to the General Directive. The
+industry association noted that in some States, ``interference with a
+transit worker's duties'' may not be a crime at all. The commenter
+further noted that many states require agencies to consult with
+prosecutors when an assault occurs, and that it is unclear how the
+actions proposed in the General Directive would work in these
+situations. One transit agency asked FTA to clarify whether agencies
+should use their State law definition of ``assault'' for purposes of
+the General Directive. One transit agency argued that FTA should
+encourage transit agencies to adopt assault definitions established in
+law enforcement contexts, such as the definition used by the Federal
+Bureau of Investigation (FBI).
+    One individual requested that FTA define ``transit employee'' in
+the General Directive to include all transit employees.
+    FTA response: FTA acknowledges the comments received regarding the
+definition of ``assault on a transit worker'' and appreciates the
+challenges associated with implementing new definitions. FTA notes that
+the General Directive uses the same definition of ``assault on a
+transit worker'' that is used for purposes of 49 CFR part 673, the
+National Safety Plan, and NTD reporting. This is consistent with the
+statutory definition in 49 U.S.C 5302. FTA confirms that this statutory
+definition includes non-physical assaults. FTA disagrees with the
+commenter who suggested that FTA delay the General Directive reporting
+requirements until issuing guidance. FTA's NTD program already has
+developed training and published guidance to support transit agency
+compliance with reporting requirements and associated definitions. FTA
+may consider providing additional guidance on specific aspects of the
+definition, and additional technical assistance in collaboration with
+transit agencies to support compliance with the assault on transit
+worker reporting requirements in the General Directive.
+    FTA considered the comments regarding the varied definitions and
+treatment of assault on a transit worker by States across the country,
+and the suggestion to adopt assault definitions established in law
+enforcement contexts. FTA understands that State and local law
+enforcement may have varied approaches and classification systems for
+handling assault data. However, FTA does not believe that this impacts
+a transit agency's ability to comply with the requirements of the
+General Directive because a transit agency can use assault data, as
+reported to the NTD using the statutory definition, as inputs to a
+safety risk assessment. FTA also notes that transit
+
+[[Page 78438]]
+
+agencies should not use state law assault definitions for purposes of
+responding to the General Directive. As noted above, transit agencies
+should use the definition of ``assault on a transit worker'' in 49
+U.S.C. 5302, which is the same definition for purposes of PTASP, the
+National Safety Plan, and NTD reporting.
+    FTA notes that the General Directive does not use the term
+``transit employee,'' but rather ``transit worker.'' This term has the
+same definition as the one provided in the PTASP Final Rule at 49 CFR
+part 673.
+
+I. Safety Risk Mitigations
+
+    Comments: FTA received several comments from individuals, transit
+agencies, labor unions, an SSOA, and a transit industry association
+that suggested specific mitigations to address assaults on transit
+workers. In addition, some transit agency commenters provided examples
+of mitigations and other actions they are already implementing.
+Commenters recommended a variety of mitigations, including physical
+barriers to separate operators from passengers; fare collection
+technology and enforcement policies; revised operating procedures;
+surveillance technologies; policing/patrol strategies; public awareness
+campaigns; signage; autonomous technology; and de-escalation training.
+One commenter suggested that the National Institute for Occupational
+Safety and Health (NIOSH) hierarchy of controls is a useful tool for
+assessing and controlling exposure to hazards. This commenter expressed
+that in the long-term, FTA should focus on actions in the
+``elimination'' category of the NIOSH framework, such as increasing
+autonomous technology to eliminate or reduce transit workers' exposure
+to safety hazards.
+    A labor organization specifically recommended that FTA mandate
+certain mitigations, including fully enclosed protective barriers,
+signage, personal security training, surveillance technologies, and
+additional de-escalation training. This commenter also advocated for
+federal regulations giving transit workers the right to take personal
+security actions, as well as the creation of voluntary programs for
+transit workers to obtain personal security training and to become
+auxiliary law enforcement officers. One transit agency suggested that
+FTA require a minimum amount of safety and mental health first aid
+training hours, and that transit agencies promote their safety and
+security reporting and intervention systems publicly. An individual
+commenter advocated that FTA require transit agencies to perform
+security self-assessments about the need for uniformed resources, and
+that FTA explore creating national law enforcement partnerships and
+investigate issues related to authorities for transit police.
+    One individual expressed concern that some mitigations may conflict
+with other regulations such as the Federal Motor Vehicle Safety
+Standards (49 CFR part 571), noting also that manufacturers do not
+offer an off-the-shelf option for operator barriers.
+    FTA response: FTA appreciates the examples of safety risk
+mitigations provided through comment submissions and looks forward to
+reviewing the mitigation-related information submitted in response to
+the General Directive. FTA also notes that it is not mandating that
+transit agencies implement specific mitigations through the General
+Directive. Transit agencies and their Safety Committees must use the
+SRM process to identify mitigations appropriate to their agencies,
+which may include mitigations such as those suggested by the
+commenters. FTA notes that it does not intend for mitigations to
+conflict with other regulations, and transit agencies should ensure
+that mitigations identified as a result of their safety risk assessment
+are in compliance with other regulations to which they are subject. FTA
+is also exploring mandatory standards, and FTA intends to use responses
+to the General Directive to inform future Federal action to protect
+transit workers, including rulemakings such as the planned Transit
+Worker and Public Safety rule.
+
+J. Role of the Safety Committee
+
+    Comments: FTA received comments from several commenters, including
+labor unions, individuals, and transit agencies, regarding the role of
+the Safety Committee in the activities required by the General
+Directive. One individual noted the importance of involving the voice
+of frontline transit workers in addressing safety issues affecting
+workers. One transit agency voiced that its Safety Committee has been
+an effective forum to discuss safety information and has enabled the
+agency to better partner with and empower its frontline workers.
+1. Role of the Safety Committee in Safety Risk Assessment
+    Three labor unions and one individual recommended that FTA require
+the Safety Committee to conduct the required safety risk assessment. In
+contrast, one individual and one transit agency voiced that the Safety
+Committee should not perform safety risk assessments, arguing that the
+Safety Committee does not have the training or time to do so. The
+individual argued that the risk assessment should be created by the
+transit agency, and that the Safety Committee's role should be to vet
+the risk assessment and contribute to mitigation strategies.
+2. Role of the Safety Committee in Safety Risk Mitigations
+    Regarding the safety risk mitigation process, one labor
+organization argued that language requiring agencies to ``involve''
+Safety Committees is not strong enough, and that the Bipartisan
+Infrastructure Law requires that Safety Committees ``identify and
+recommend'' mitigations. A transit agency stated that the language in
+the proposed directive appeared to indicate that the Safety Committee
+is an advisory body and asked FTA to clarify the Safety Committee's
+role. One individual recommended that FTA consult with bus operators
+and their respective union leadership for recommendations regarding
+mitigations.
+    One labor organization and two individuals stated that Safety
+Committees should be given access to the transit agency's budget and
+grant information so that it is empowered to propose effective
+mitigations. Two of these commenters also stated that Safety Committees
+need access to safety incident documentation, with one commenter
+recommending that this should be done on a weekly basis.
+    One individual expressed concern about Question (c)(7) of the
+proposed General Directive, which would require agencies to explain why
+the Safety Committee did not identify or recommend safety risk
+mitigations identified through the agency's safety risk assessment. The
+commenter argued that this question allowed agencies to exclude their
+Safety Committee from the process and asked FTA to explain the reason
+for this. The commenter further argued that the Safety Committee's
+involvement in the process needs to be substantive. One labor
+organization recommended that FTA should clarify that if a transit
+agency's answer to this question indicates that the Safety Committee
+did not identify or recommend mitigations, the agency will be out of
+compliance with the General Directive and subject to enforcement action
+unless the transit agency comes into prompt compliance.
+    One labor organization argued that FTA should use the General
+Directive as a mechanism to confirm compliance with the Safety
+Committee-related requirements established in the PTASP
+
+[[Page 78439]]
+
+Final Rule. Specifically, the commenter urged FTA to require transit
+agencies that serve large urbanized areas to note for each anti-assault
+infrastructure mitigation, whether the Safety Committee previously
+found that the mitigation would reduce assaults on transit workers. It
+also stated that if the Safety Committee previously opined that the
+mitigation would reduce assaults, FTA should consult the transit
+agency's ASP to ensure that the safety risk reduction program includes
+a plan for implementing the mitigation. The commenter further stated
+that if the Safety Committee did not previously opine on the
+mitigation, then FTA should require prompt revision and resubmission of
+the safety risk reduction program.
+3. Role of the Safety Committee in Monitoring Mitigation Effectiveness
+    Regarding monitoring mitigation effectiveness, a labor union
+commented that FTA should specify that the Safety Committee must
+evaluate the effectiveness of all completed anti-assault mitigations.
+This commenter further argued that the statement concerning such
+effectiveness required in Question (c)(17) must come from the Safety
+Committee itself, not from management.
+4. Role of the Safety Committee in Required Reporting
+    Three labor organizations and one individual urged that FTA require
+Safety Committees to approve any agency submission made to FTA in
+response to this General Directive. One of these labor organizations
+voiced that Safety Committee approval is a mechanism for frontline
+workers to hold management accountable and is necessary to ensure the
+accuracy of reporting. This commenter urged that FTA should at a
+minimum require transit agencies to provide each Safety Committee
+member, or a frontline transit worker representative if no Safety
+Committee exists, with a copy of the report that is submitted to FTA in
+response to the General Directive. Two of these labor organizations
+voiced that if an agency does not have a Safety Committee, a frontline
+transit worker representative should be required to review and approve
+the report.
+5. Other Comments Pertaining to Safety Committee
+    One labor organization and two individuals argued that the General
+Directive must address whistleblower and retaliation protections for
+frontline transit worker representatives serving on Safety Committees.
+The labor organization also stated that if a transit agency is subject
+to state sunshine laws, there should be public access to Safety
+Committee meetings. One individual suggested that FTA add release time
+for Safety Committee members to attend transit agency meetings, such as
+meetings of the Board of Directors.
+    Several commenters addressed other Safety Committee-related issues,
+including tiebreaking mechanisms and transit agency implementation of
+mitigations recommended by the Safety Committee. One individual
+requested that FTA require documentation of Safety Committee meetings,
+involvement of frontline workers, and evidence that the transit agency
+acted on the Safety Committee's recommendations.
+    FTA response: FTA appreciates the comments received regarding the
+role of the Safety Committee and agrees that Safety Committees are an
+important way for frontline workers to improve safety at their transit
+agency.
+    FTA acknowledges the comments regarding the Safety Committee's role
+in the required safety risk assessment. FTA notes that the General
+Directive relies on the Safety Committee and SMS requirements of 49 CFR
+part 673. Transit agencies should use the safety risk assessment
+process defined in their ASP to conduct the required risk assessment.
+    FTA agrees with the commenter that stated that Safety Committees
+must ``identify and recommend'' mitigations through the transit
+agency's SRM processes. However, it does not agree that any changes are
+necessary to the General Directive to clarify this. Section B of the
+General Directive cites 49 U.S.C. 5329(d)(5), which requires Safety
+Committees to ``identify and recommend'' mitigations. Given that the
+General Directive cites the statutory requirement, FTA does not believe
+it is necessary to restate the requirement in the General Directive. As
+FTA has communicated clearly through the PTASP Final Rule, the Safety
+Committee's role is not merely an advisory one. Safety Committees must
+perform the responsibilities defined in statute and the PTASP Final
+Rule, including the responsibility to identify and recommend
+mitigations. FTA appreciates the comment that recommended FTA consult
+with bus operators and their respective union leadership for
+recommendations. FTA notes that the PTASP requirement for Safety
+Committee involvement in identifying mitigations provides a venue for
+frontline transit worker representatives to recommend mitigations.
+    FTA acknowledges the suggestions that the Safety Committee have
+access to a transit agency's budget and grant information and safety
+incident documentation. FTA notes that the General Directive does not
+create a new role or requirement for the Safety Committee and relies on
+the Safety Committee, SMS, and recordkeeping requirements of 49 CFR
+part 673. The PTASP Final Rule includes a requirement for Safety
+Committee procedures to include how the Safety Committee will access
+transit agency information, resources, and tools, as required by 49 CFR
+673.19(c)(5), which is inclusive of all data reasonably necessary for
+the Safety Committee to carry out its statutory responsibilities.
+    FTA acknowledges the comments regarding Question (c)7 of Section
+(c) of the General Directive, including the concern that this question
+allows transit agencies to not involve their Safety Committee in the
+General Directive process. FTA disagrees with this interpretation. As
+explained above, Section B of the General Directive explicitly requires
+Safety Committee involvement by stating that ``each transit agency
+serving a large urbanized area must involve the joint labor-management
+Safety Committee when identifying safety risk mitigations to reduce the
+likelihood and severity of consequences identified through the agency's
+safety risk assessment.'' FTA clarifies that Question (c)7 is intended
+merely to accommodate situations where the agency's Safety Committee
+chooses not to recommend a safety risk mitigation based on the results
+of the safety risk assessment. This question should not be interpreted
+to mean that an agency may exclude the Safety Committee from the
+General Directive process. FTA confirms that if a large urbanized area
+provider does not involve its Safety Committee in the safety risk
+mitigation process, the transit agency would be out of compliance with
+the General Directive and subject to appropriate enforcement action.
+    FTA acknowledges the suggestions that FTA require the Safety
+Committee or frontline transit workers to approve any submission made
+by the transit agency in response to the General Directive, or at a
+minimum receive a copy of the report submitted to FTA. While transit
+agencies and their Safety Committees may voluntarily adopt these
+mechanisms, FTA declines to require them. The Safety Committee's
+minimum responsibilities are provided by statute and regulation in 49
+U.S.C. 5329(d) and 49 CFR part 673. Transit agencies should use
+existing PTASP Safety Committee, SMS, and recordkeeping
+
+[[Page 78440]]
+
+processes to address General Directive requirements.
+    FTA acknowledges the comments suggesting that FTA use the General
+Directive to confirm compliance with the PTASP requirements for Safety
+Committees, such as requiring transit agencies that serve large
+urbanized areas to note whether the Safety Committee previously found
+that each anti-assault infrastructure mitigation would reduce assaults
+on transit workers, and require transit agencies to include such
+mitigations in their ASPs as part of the safety risk reduction program.
+FTA also acknowledges the commenter that recommended that FTA specify
+that the Safety Committee must evaluate the effectiveness of all
+completed anti-assault mitigations and recommended that the statement
+concerning such effectiveness required in Question (c)(17) must come
+from the Safety Committee itself, not from management. As noted above,
+the General Directive does not create a new role or requirements for
+the Safety Committee and relies on the Safety Committee and SMS
+requirements of 49 CFR part 673 that agencies subject to the PTASP
+Final Rule are already required to implement. FTA notes that transit
+agencies that are out of compliance with PTASP Final Rule or the
+requirements of this General Directive are subject to appropriate
+enforcement action.
+    FTA appreciates the suggestions regarding additional Safety
+Committee-related issues, but FTA notes that these are outside the
+scope of the proposed General Directive. FTA refers commenters to the
+PTASP Final Rule for requirements regarding tiebreaking mechanisms,
+Safety Committee responsibilities, and recordkeeping.
+
+K. Required Actions
+
+1. Conduct a Safety Risk Assessment
+I. Exemption
+    Comments: Two transit agency commenters asked for clarification
+regarding the safety risk assessment exemption for transit agencies
+that have conducted a safety risk assessment in the twelve months
+preceding the issuance of the General Directive. One of these
+commenters specifically requested clarification about what would exempt
+a transit agency from the requirement, and the time period for the
+exemption. The other commenter asked FTA to clarify whether other types
+of reviews or assessments could trigger an exemption from conducting a
+full safety risk assessment. This commenter requested that the
+exemption window should be expanded to 24 months, arguing that the
+findings of a safety risk assessment conducted prior to the 12-month
+window will most likely yield the same results as a safety risk
+assessment conducted within the window. This commenter stated that it
+has conducted several safety risk assessments within the 24-month
+window, and that requiring it to repeat them would be unduly
+burdensome.
+    FTA response: FTA acknowledges the commenters that requested
+clarification on the safety risk assessment exemption for transit
+agencies that have recently conducted a safety risk assessment on
+assaults on transit workers. FTA confirms that if a transit agency has
+completed a safety risk assessment for assaults on transit workers in
+the 12 months preceding the publication of this General Directive, and
+if the transit agency continues to believe that the results of that
+safety risk assessment are relevant, the transit agency need not
+conduct a new safety risk assessment for the purposes of this General
+Directive. FTA established this exemption to reduce the burden of
+conducting another safety risk assessment if an agency has already
+completed one within the last year. In these situations, General
+Directive submissions should contain information on the results of the
+assessment and on the implementation and effectiveness of any
+mitigations identified through the safety risk assessment.
+    FTA notes that this exemption applies only to a safety risk
+assessment conducted using the processes established under 49 CFR
+673.25(c) and defined in a transit agency's ASP. Finally, FTA disagrees
+with the commenter who recommended extending the exemption timeframe
+from 12 months to 24 months. FTA believes that given the seriousness of
+the assaults on transit workers concern and industry trends that show
+increasing numbers of assaults, a safety risk assessment conducted more
+than 12 months before the publication of the General Directive may not
+reflect the agency's current risk levels for assaults on transit
+workers. FTA therefore disagrees that a safety risk assessment
+conducted during a 24-month window would yield the same results as one
+conducted within the 12-month window. FTA understands the commenter's
+concern regarding burden, but as explained in Section E, FTA believes
+that any burden imposed by this General Directive is justified.
+II. Process
+    Several commenters, including transit agencies and one labor union,
+submitted comments related to the safety risk assessment process. One
+transit agency noted that it already has completed a safety risk
+assessment that is being reviewed by its Safety Committee. One transit
+agency supported the proposed requirement to complete a safety risk
+assessment, stating that hazard analysis and safety risk assessments
+are imperative to understand what works and to see what the industry is
+doing.
+    One labor union argued that FTA should require the safety risk
+assessments to be conducted by an independent third party to ensure
+that there will be a more objective assessment of risk and actions
+taken to protect workers.
+    One transit agency supported the requirement to perform a safety
+risk assessment but requested that FTA provide training to clarify the
+difference between this requirement and the PTASP SRM process. Another
+transit agency noted that the General Directive's collection of
+specific data in Section C could indicate that FTA is requiring
+agencies to use a process different from the SRM process defined in a
+transit agency's ASP. The commenter requested clarification on this
+point. One commenter recommended that FTA create a checklist and
+defined process regarding safety risk assessments for assaults on
+transit workers, including a conflict resolution process for
+disagreements between management and labor.
+    Two transit agencies requested that FTA provide definitions or
+thresholds for the likelihood and severity categories in an agency's
+safety risk assessment matrix, with one specifically expressing
+confusion about how to distinguish minor first aid from minor injury
+events. The other transit agency argued against using unmeasurable
+quantifiers such as ``significant'' or ``minor,'' in the assessment as
+they leave room for interpretation when considering monetary loss,
+noting it may be more effective to quantify this with tangible measures
+such as vehicle loss rather than subjective monetary calculations. One
+labor union requested clarity on how agencies should calculate overall
+risk ratings. The commenter asked FTA to confirm whether agencies
+should average the numerical ``likelihood'' values for potential
+consequences, and how an agency should calculate the overall letter
+``severity'' values. One transit agency commenter recommended that FTA
+use a different safety risk matrix for collecting General Directive
+results, arguing that the matrix used in the proposed General Directive
+differs from matrices published in other FTA technical assistance
+materials.
+
+[[Page 78441]]
+
+    One transit agency commenter argued that the required information
+in the General Directive is too broad for a single safety risk
+assessment and asked FTA to clarify whether the data should be
+aggregated by different modes of operation or as an agency-wide
+assessment. This commenter noted that in their experience, the
+associated risk is higher for bus modes than rail, and combining bus
+with rail for the purposes of the assessment would trigger additional
+reporting requirements established by the transit agency's SSOA. One
+transit agency proposed that FTA allow agencies to either conduct a
+single safety risk assessment of the risk associated with assaults on
+transit workers or compile the results of multiple safety risk
+assessments with the risk of assaults on transit workers to provide the
+information requested in the directive.
+    One transit agency argued that the General Directive should require
+or encourage the assessment of physical assault and non-physical
+assault separately, noting that there is likely to be a difference in
+both likelihood and severity for each.
+    FTA response: FTA acknowledges the commenter that noted that it
+already has completed a safety risk assessment that is being reviewed
+by its Safety Committee, and notes that if the safety risk assessment
+falls within 12 months of issuance of the General Directive, then in
+falls within the exemption for a transit agency to submit the results
+of that safety risk assessment as part of the response required by the
+General Directive. FTA appreciates the commenter that expressed support
+for the proposed requirement to complete a safety risk assessment and
+agrees that safety risk assessments are valuable.
+    FTA acknowledges the commenter that argued FTA should require the
+risk assessments to be conducted by an independent third party to
+ensure that there will be a more objective assessment of risk and
+actions taken to protect workers. FTA notes that the General Directive
+requires transit agencies to follow their own SRM and SA processes, as
+established under the PTASP Final Rule and defined in their ASP, to
+minimize the burden associated with complying with the General
+Directive. FTA notes that the PTASP Final Rule includes requirements
+for conducting safety risk assessments and for establishing and
+carrying out safety risk reduction programs, but the PTASP Final Rule
+does not require agencies to conduct safety risk assessments through
+independent third parties. The process defined in a transit agency's
+ASP may rely on an independent third party, but FTA does not require a
+transit agency to do so.
+    FTA acknowledges the commenter that asked for clarification and
+training on the difference between the General Directive requirements
+and the SRM requirements in the PTASP Final Rule, and the commenter
+that asked whether FTA's collection of information could indicate that
+FTA is requiring transit agencies to use a different process from the
+SRM process defined in a transit agency's ASP. FTA notes that the
+General Directive does not require a specific safety risk assessment
+methodology beyond what is required by the PTASP Final Rule, and FTA
+confirms that it expects agencies to use the safety risk assessment
+processes documented in their ASP to conduct the safety risk assessment
+required by the General Directive. FTA encourages agencies to visit the
+PTASP website at https://www.transit.dot.gov/ptasp for technical
+assistance resources on SRM requirements. In response to the commenter
+who argued that FTA should provide a checklist for conducting safety
+risk assessments for assaults on transit workers, including a conflict
+resolution process, FTA notes that the General Directive relies on the
+processes established by transit agencies under 49 CFR part 673. This
+provides significant flexibility to transit agencies in the development
+and deployment of safety risk assessment processes. Transit agencies
+and their Safety Committees should refer to the dispute-resolution
+requirement at 49 CFR 673.19(c)(8) for the resolution of Safety
+Committee disputes.
+    FTA acknowledges the commenter that asked FTA to provide
+definitions or thresholds for the likelihood and severity categories in
+the matrix presented in the General Directive, and noted confusion
+about how to distinguish between minor first aid and minor injury
+events. FTA disagrees with providing additional likelihood or severity
+criteria in the General Directive as transit agencies may use different
+methods or measures for quantifying likelihood and severity. By
+defining specific criteria in the General Directive, FTA could
+introduce conflicts with the safety risk assessment processes developed
+and used by transit agencies. FTA notes that the General Directive does
+not prescribe a matrix or quantifiers for purposes of conducting the
+safety risk assessment. Transit agencies should use the matrix or
+matrices they have adopted as part of their safety risk assessment
+process documented in their ASP. However, when agencies submit
+information in response to the General Directive, FTA is asking the
+transit industry to normalize their assessment results according to the
+scales in the matrix presented in the General Directive.
+    For example, a transit agency may use a matrix in which a middle
+tier of the severity scale is labeled medium, whereas in FTA's matrix
+the middle tier of the severity scale is labeled moderate. Normalizing
+by agencies at the point of submission allows for agencies to use their
+own varied processes for conducting safety risk assessments while
+submitting assessment results in a manner that supports industry-wide
+analysis and perspective. FTA has added the matrix to the General
+Directive and will add it to the Safety Management System (SMS) Report
+tool for submitting required responses to the General Directive. FTA
+acknowledges the comment that recommended that FTA use a different
+safety risk matrix for collecting General Directive results and noted
+that the matrix used in the proposed General Directive differs from
+other matrices published in FTA technical assistance materials. FTA
+disagrees with providing a different matrix because, as noted above,
+FTA's matrix sets the stage for normalizing results in a manner that
+supports industry-wide analysis and perspective.
+    In response to the commenter that asked for clarification on how
+agencies can average likelihood and severity ratings to report an
+overall risk rating for two potential consequences, FTA recommends that
+agencies select the rating reflecting the worst outcome among the
+potential consequences assessed to represent the overall risk rating.
+
+[[Page 78442]]
+
+[GRAPHIC] [TIFF OMITTED] TN25SE24.000
+
+    FTA agrees with the commenter that recommended that the General
+Directive allow for transit agencies to conduct mode-specific safety
+risk assessments and notes that the General Directive requires transit
+agencies to conduct safety risk assessments according to the safety
+risk assessment processes defined by their ASP. Similarly, FTA
+acknowledges the commenter that suggested the General Directive should
+require or encourage the assessment of physical assault and non-
+physical assault separately and the commenter that proposed that FTA
+allow agencies to either conduct a single safety risk assessment of the
+risk associated with assaults on transit workers or compile the results
+of multiple safety risk assessments with the risk of assaults on
+transit workers. FTA notes that transit agencies may take into account
+the distinction between non-physical and physical assaults when
+performing their safety risk assessment and determining likelihood and
+severity of the risk, and may take into account multiple safety risk
+assessments of the risk associated with assaults on transit workers.
+For purposes of reporting, agencies will need to enter overall risk
+ratings into the Safety Management System (SMS) Report tool for
+submitting required responses to the General Directive.
+2. Identify Safety Risk Mitigations
+    Several commenters, including three individuals and a transit
+agency, expressed concerns related to mitigation requirements and the
+ability for a mitigation to be effective across all transit
+applications, given varied operational characteristics, resource
+availability, existing mitigation landscapes, and need for coordination
+with local and State authorities. One transit agency asked for
+clarification on how the General Directive requirements differ from
+using the SRM processes required by 49 CFR part 673, including
+requirements to assess, track, monitor, and report data to FTA. One
+commenter asked FTA to include specific language that would allow for
+mitigations to be scalable to fit the size of an agency.
+    One transit agency suggested that FTA provide a categorized list of
+mitigations identified through its 2021 Request for Information (86 FR
+53143), and that transit agencies should then document in their ASP
+which of those mitigations they are implementing.
+    One industry association and one transit agency commenter argued
+that informed strategies and mitigations to address assaults on transit
+workers come from a diversity of areas within a transit agency and
+recommended that FTA expand the responsibility for identifying and
+implementing mitigations beyond the role of the Safety Committee and
+Chief Safety Officers. The industry association noted further that FTA
+should coordinate with operations and police/security departments to
+ascertain the best information and data as it pertains to the General
+Directive.
+    FTA response: FTA reiterates that the General Directive does not
+mandate any specific mitigation, and a transit agency or Safety
+Committee may determine, as a result of the safety risk assessment,
+that no mitigation is necessary to address the risk of assaults on
+transit workers. The General Directive requires transit agencies to use
+existing SRM and SA processes required by the PTASP Final Rule and
+defined in their ASP to assess safety risk related to assaults on
+transit workers, to identify any necessary safety risk mitigations, and
+to provide FTA with information about how they are assessing,
+mitigating, and monitoring the safety risk. As such, the General
+Directive reinforces the flexibility of the PTASP Final Rule and the
+ability of each transit agency and Safety Committee to determine risk
+at their transit agency and to identify mitigations that may be
+appropriate for their unique operations. In response to the commenter
+that requested clarification on how the General Directive differs from
+using the SRM and SA processes required by 49 CFR part 673 to assess,
+track, monitor, and report data, FTA confirms that the General
+Directive leverages the SRM and SA processes required by the PTASP
+Final Rule. In response to the commenter that asked FTA to include
+specific language that would allow for mitigations to be scalable to
+fit the size of an agency, FTA declines to do so, because the General
+Directive reinforces the flexibility of the PTASP Final Rule.
+    In response to the commenter that suggested FTA provide a
+categorized list of mitigations identified through its 2021 Request for
+Information, and that transit agencies should then document in their
+ASP which of those mitigations they are implementing, FTA notes that
+the General Directive lists mitigation categories. Further, Safety
+Management System (SMS) Report, the tool developed by FTA to facilitate
+reporting required by this General Directive, will allow transit
+agencies to select mitigation categories that represent the mitigations
+they have identified, and provide additional detail about how
+mitigations apply to their unique operations.
+    FTA agrees with the commenter who argued that the identification of
+mitigations and strategies to address risk associated with assaults on
+transit workers benefits from a wide perspective. For the purposes of
+identifying mitigations, transit agencies may leverage any number of
+sources within their agency, such as operations, service planning,
+hiring, and others, as well as external sources, such as industry
+associations, academia, and
+
+[[Page 78443]]
+
+consultants. The General Directive does not limit the use of sources
+for this purpose. FTA also notes that it remains the responsibility of
+the transit agency and Safety Committee to conduct the actions required
+by the General Directive.
+    FTA acknowledges the commenter who noted that a transit agency's
+safety office should coordinate with operations and police/security
+departments to ascertain the best information and data as it pertains
+to the General Directive. FTA agrees with the commenter's position that
+a transit agency can benefit from a wide perspective across the
+organization and community. FTA encourages transit agencies to use the
+appropriate subject matter experts and information sources when
+conducting safety risk assessments and identifying safety risk
+mitigations. FTA notes that the General Directive does not limit the
+use of subject matter expertise.
+3. Submit Required Information to FTA
+I. Mitigations Identified or Implemented
+    Comments: FTA received comments from several commenters, including
+transit agencies and labor unions, in response to the proposed General
+Directive requirements for transit agencies to provide information
+related to mitigations transit agencies have identified or implemented
+to address the safety risk associated with assaults on transit workers
+(Questions (c)(8) through (c)(14)).
+    Two transit agency commenters noted that the General Directive did
+not appear to allow transit agencies to provide information related to
+assault mitigations that were developed prior to the required safety
+risk assessment. One of these agencies recommended that the General
+Directive include a mechanism to acknowledge three years of prior
+mitigations that agencies have implemented. Both commenters recommended
+that FTA collect implementation and effectiveness information on these
+existing mitigations.
+    One industry association commented that many of the mitigations
+listed in Question (c)(8) already are being implemented at many transit
+agencies, and some are too costly. This commenter requested that FTA
+consider if any of the listed mitigations should be removed or added.
+It noted that self-defense training is another possible mitigation but
+would require extensive training and should be used only as a last
+resort.
+    One transit agency commenter recommended that FTA require transit
+agencies to include mitigations that jurisdictional partners are
+implementing. The agency noted that it has been actively working
+internally and with its jurisdictional partners to find holistic relief
+to the issue of assaults on transit workers. This commenter also
+recommended that the mitigations be limited to things over which a
+transit agency has control and authority.
+    A labor organization commented on two of the listed mitigations
+under ``operating policies and procedures.'' First, it stated that
+permitting discharging passengers between designated stops is
+ineffective and creates additional problems. Second, it noted that
+there is a need for policies and procedures permitting transit workers
+to discharge passengers when they engage in behavior that endangers
+workers or passengers.
+    Two transit agency commenters suggested that FTA should clarify or
+define ``personal security training'' in Question (c)(8). One of these
+commenters also suggested that FTA provide recommended training content
+for this type of training.
+    FTA response: FTA acknowledges the commenters that voiced opinions
+about the mitigations listed in Question (c)(8), including concerns
+that the mitigations are already being implemented, may be too costly
+to implement, or that transit agencies would not be able to report
+mitigations developed prior to the latest safety risk assessment. FTA
+reiterates that it is not mandating any of the mitigations listed in
+Question (c)(8). As explained above, transit agencies and their Safety
+Committees will use the existing SRM process defined in their ASP and
+have flexibility to recommend mitigations that are appropriate to a
+transit agency's unique circumstances. In addition, FTA notes that
+effective safety risk assessments take into account existing safety
+risk mitigations. Transit agencies can report safety risk mitigations
+that were in place prior to the safety risk assessment as part of their
+General Directive submission. FTA agrees that collection of information
+related to the effectiveness of these mitigations is important
+information to help transit agencies address the risk of assaults on
+transit workers and shape future FTA action. Similarly, FTA does not
+discourage transit agencies from including mitigations that may be
+implemented by jurisdictional partners external to the transit agency.
+FTA encourages transit agencies to report information on the
+mitigations that they actively monitor for effectiveness under the SA
+requirements of 49 CFR part 673.
+    FTA acknowledges the comment regarding policies and procedures
+permitting transit workers to discharge passengers between designated
+stops. FTA disagrees that discharging passengers between designated
+stops is ineffective, and notes that transit agencies are increasingly
+testing policies to permit discharging passengers between designated
+stops to increase safety and comfort for passengers by letting them
+disembark closer to their intended destination than a designated stop.
+FTA also notes that policies permitting transit workers to safely
+discharge passengers that endanger transit workers or other passengers
+can increase safety for transit workers and passengers. The General
+Directive does not require that transit agencies adopt specific
+mitigations such as policies and procedures for discharging passengers,
+but transit agencies and their Safety Committee may identify the need
+for specific policies and procedures for discharging passengers as a
+safety risk mitigation.
+    FTA appreciates the comments received requesting clarification on
+the ``personal security training'' mitigation category used in
+Section(c)(8) of the General Directive. For purposes of this mitigation
+category, transit agencies can include any personal safety or security
+training that the agency has or plans to administer to mitigate safety
+risk associated with assaults on transit workers in addition to de-
+escalation training, which should be captured under the ``de-escalation
+training'' mitigation category.
+II. Implementation Status
+    FTA received comments from transit agency commenters and one labor
+union commenter in response to General Directive requirements for
+transit agencies to report the status of a transit agency's
+implementation of mitigations chosen to address risk related to
+assaults on transit workers. One commenter argued that providing
+accurate mitigation completion dates in Questions (c)(11)-(12) would be
+extremely challenging in certain situations (e.g., installation of two-
+way radio and camera systems that have been in place for decades). It
+also argued that providing approximate percentages of completion in
+Question (c)(13) can be seen as arbitrary and will result in quickly
+outdated information. The commenter suggested instead that reporting a
+mitigation as ``Planned,'' ``In Progress,'' or ``Complete'' would be
+sufficient for the FTA to gain a high-level understanding of mitigation
+implementation status.
+    Another transit agency commenter argued that the proposed questions
+capturing information on mitigation
+
+[[Page 78444]]
+
+implementation status would not capture situations where an agency
+pivoted away from a mitigation shown to be ineffective or not viable.
+Further, the commenter argued that if an agency reported a 100%
+implementation status for mitigations, they would give the false
+impression that there would no longer be any instances of assaults on
+transit workers.
+    One transit agency requested that FTA expand Question (c)(14) to
+include information about external issues related to governance and the
+interaction between a transit agency and its jurisdiction.
+    FTA response: FTA acknowledges the comments received regarding the
+General Directive's requirement for transit agencies to report the
+implementation status of mitigations to address assaults on transit
+worker risk. FTA confirms that transit agencies will report the
+implementation status of each mitigation being implemented by the
+agency to address the risk associated with assaults on transit workers.
+FTA understands that it may be challenging to provide exact start and
+completion dates for mitigations that have been in place for several
+years, and asks that transit agencies provide the best available data
+in their responses to Questions (c)(11) and (c)(12). FTA disagrees with
+the commenter that argued that reporting implementation statuses such
+as ``Planned,'' ``In Progress,'' or ``Complete'' would be sufficient
+and that FTA should not ask for percentages in Question (c)(13). FTA
+notes that the use of percentages to approximate the level of
+implementation provides FTA with useful implementation data because it
+enables FTA to better quantify and analyze the implementation progress
+for mitigations throughout the industry. In response to the commenter
+that expressed concern regarding how FTA will interpret the
+implementation data submitted by transit agencies, FTA notes that it
+does not equate 100% mitigation implementation with 100% prevention of
+assaults on transit workers. Further, Safety Management System (SMS)
+Report, the tool developed by FTA to facilitate reporting required by
+this General Directive, will allow transit agencies to provide
+supporting context in response to Question (c)(17) to describe
+situations where an agency or its Safety Committee has identified a
+mitigation as ineffective and has slowed or stopped implementation as a
+result.
+    In response to the commenter that requested FTA expand Question
+(c)(14) to include information about external issues related to
+governance and the interaction between a transit agency and its
+jurisdiction, FTA clarifies that the language ``any external rate-
+limiting factors affecting implementation'' in the question includes
+information about issues related to governance and interaction between
+a transit agency and external organizations.
+III. Monitoring Effectiveness of Mitigations
+    Comments: FTA received comments from several commenters, including
+from a labor union and transit agencies in response to General
+Directive requirements for transit agencies to report information
+related to mitigation effectiveness monitoring (Questions (c)(15)
+through (c)(17)). One transit agency requested that FTA clarify its
+expectations for the requested effectiveness information. Another
+agency expressed concern at the challenge of evaluating the
+effectiveness of individual mitigations, noting that many agencies are
+implementing multiple interventions to address assaults. This commenter
+suggested that FTA instead should require that agencies provide an
+analysis of ``before'' and ``after'' assault data related to their
+collective interventions. Another agency argued that effectiveness
+measurement will be difficult unless agencies have access to historic
+assault on transit worker data, and effectiveness strategies therefore
+may look different in the short-term versus long-term.
+    One transit agency argued that FTA should not require agencies to
+report performance information or data used to make effectiveness
+determination in Question (c)(15), stating that it should instead rely
+on the assault on transit worker data the agencies already report to
+the NTD. This agency further argued that the effectiveness category
+options in Question (c)(16) are arbitrary, and agencies should not be
+required to report the information. This commenter noted that if
+transit agencies are required to report on effectiveness, then FTA
+should provide more details and/or guidelines to evaluate
+effectiveness, so each agency is using the same criteria to make this
+determination. Similarly, one transit agency commented that
+effectiveness metrics may not have measurable quantification.
+    One labor organization stated that mitigative effectiveness data
+should not be limited to barriers. It urged FTA to clarify that transit
+agencies must report the information in Questions (c)(11) through
+(c)(17) for each of its reported mitigations.
+    FTA response: FTA acknowledges the comments received regarding the
+General Directive's requirement for transit agencies to report
+mitigation effectiveness information to FTA. FTA expects transit
+agencies and their Safety Committees to use their existing SA
+processes, required by 49 CFR 673.27(b)(2), to monitor the
+effectiveness of their safety risk mitigations.
+    FTA disagrees with the commenter that argued the options provided
+for mitigation effectiveness in Question (c)(16) are arbitrary and
+should be more quantifiable. FTA believes that the options provided in
+the question (``Effective'', ``Ineffective'', and ``Not Yet
+Determined'') are self-explanatory. Similar to the question regarding
+risk ratings, FTA declines to provide more specific criteria, as
+transit agencies may use different measures for evaluating
+effectiveness. By defining specific criteria in the General Directive,
+FTA could introduce conflicts with the SA processes developed and used
+by transit agencies. In Question (c)(16), FTA asks that transit
+agencies normalize the reporting of their effectiveness determinations
+by reporting using the three categories listed in the question. This
+normalization will ensure that transit agencies report using consistent
+metrics. If an agency has not yet been able to make a determination
+that a mitigation is either effective or ineffective using its existing
+processes to monitor effectiveness, the agency can respond with ``Not
+Yet Determined.''
+    FTA acknowledges the commenters that raised concerns about the
+challenge of effectiveness determinations, and suggested that
+effectiveness should be based solely on the assault data that an agency
+reports to the NTD. FTA disagrees with these commenters. FTA notes that
+transit agencies and their Safety Committees may use assault event data
+reported to the NTD to measure mitigation effectiveness. However, they
+may also identify other information to determine if a specific
+mitigation is achieving a goal to reduce the risk associated with
+assaults on transit workers to an acceptable level. For example,
+agencies and their Safety Committees may measure effectiveness by
+leveraging information from transit worker safety reporting systems,
+customer feedback channels, technology-specific data outputs, and many
+other sources. FTA believes that transit agencies and their Safety
+Committees can efficiently leverage existing SMS processes to make
+effectiveness determinations.
+    In response to the commenter that urged FTA to clarify that transit
+agencies must report the information in Questions (c)(11) through
+(c)(17) for each of its reported mitigations, FTA
+
+[[Page 78445]]
+
+confirms that the General Directive requires agencies to report the
+information for each reported mitigation. Further, Safety Management
+System (SMS) Report, the tool developed by FTA to facilitate reporting
+required by this General Directive, will require transit agencies to
+enter responses for questions (c)(11) through (c)(17) for each reported
+mitigation before the agency's General Directive response can be
+submitted to FTA.
+IV. Collection of Additional Information
+    Comments: FTA received comments from several commenters including a
+labor union, transit agencies, a transit association, and an individual
+recommending FTA expand or modify data collection requirements. One
+individual suggested that the General Directive collect more detailed
+information about mitigations, including the type of barriers
+identified and deployed. This commenter also noted that the type and
+length of de-escalation training varies across transit agencies. The
+labor union suggested that FTA require transit agencies to report
+detailed information on specific mitigations related to assaults on
+transit workers, including barriers, post-incident counseling and
+employee assistance programs, de-escalation training, and workplace
+violence prevention policies. The labor union also recommended that FTA
+collect data and information related to work hours lost and
+resignations due to assaults, related compensation and benefits costs,
+communications and security emergency response times, and the absolute
+numbers and the percentages of victims of assaults on transit workers
+who have been subject to discipline in connection with assaults since
+October 2022. This labor union recommended that FTA maximize the
+General Directive to collect any and all information that will be
+relevant to the FAST Act rule and other future rulemaking. In addition,
+this commenter urged FTA to require transit agencies to compare and
+report assault data for each mitigation that the agency lists in
+Question (c)(8), and to submit any reports from transit workers about
+the effectiveness of the mitigation.
+    One transit agency requested that FTA require transit agencies to
+report a separate category on sexual harassment, noting that female
+transit workers face unique challenges in the workplace that makes it
+difficult to retain diverse staff.
+    FTA also received comments related to the current level of assault
+reporting to the NTD. One individual suggested that transit agencies
+provide an updated statistic of assaults on an annual basis. A transit
+agency and an industry association recommended that the NTD capture
+assaults on transit workers on a more granular level by breaking down
+reporting for additional categories of transit workers, arguing that
+this would provide more accurate data and assist in mitigation. One
+transit agency suggested that small agencies should report assaults on
+transit workers only once they reach a defined threshold number of
+assaults. This commenter noted that assaults at smaller agencies are
+typically non-physical assaults.
+    FTA response: FTA acknowledges the commenters that requested FTA
+require the collection of detailed data from respondents on specific
+mitigations and response activities for assaults on transit workers.
+FTA declines to add data collection requirements beyond the questions
+in the proposed General Directive to minimize the burden on transit
+agencies to respond to the General Directive. FTA understands the
+importance of the information reported through the General Directive to
+inform future FTA action, such as the planned Transit Worker and Public
+Safety rulemaking. FTA believes that the reporting required through the
+General Directive will provide FTA with necessary and useful
+information to inform these actions.
+    In response to the commenter requesting clarification, FTA confirms
+that it expects that if an agency has identified and implemented a
+safety risk mitigation in response to assaults on transit workers, the
+transit agency will provide this in its General Directive submission
+and include information on the effectiveness of the mitigation.
+    In response to the commenters requesting changes to NTD reporting
+requirements, FTA notes that changes to the NTD reporting requirements
+are outside of the scope of this General Directive.
+
+L. Follow-Up Reporting
+
+    Comments: A transit agency and a labor union submitted comments
+regarding follow-up reporting after an agency's initial required
+response to the General Directive. One labor union argued that FTA
+should require transit agencies to conduct a safety risk assessment
+related to assaults on transit workers and provide information to the
+FTA on a regular basis, suggesting every two to four years. One transit
+agency noted that it would be useful to FTA if agencies annually update
+their safety risk assessments. Similarly, the transit agency suggested
+it would be beneficial for FTA to require ongoing re-assessment at
+annual intervals and to include a mechanism and schedule for follow-up
+reporting.
+    FTA response: FTA appreciates the comments regarding requirements
+for additional follow-up reporting following the initial response
+required by the General Directive. FTA is not establishing additional
+follow-up submission requirements for transit agencies at this time to
+minimize the burden associated with responding to this General
+Directive. In the future, FTA may choose to request additional related
+information as necessary.
+
+M. Sensitive Security Information (SSI) and Freedom of Information Act
+(FOIA)
+
+    Comments: One industry association commenter expressed concern that
+the information that transit agencies are required by the General
+Directive to report to FTA may be Sensitive Security Information (SSI).
+The commenter also expressed concern about Freedom of Information Act
+(FOIA) requests and whether the information and data submitted to FTA
+would be subject to FOIA. This commenter noted concern that transit
+agency submissions to FTA could create unwarranted exposure to
+liability and lawsuits that would incentivize transit agencies to limit
+the scope of their actions under the General Directive. This commenter
+urged FTA to consider how agencies can protect the analysis that FTA is
+requiring through the General Directive, including a recommendation
+that FTA preempt state sunshine laws.
+    FTA response: FTA acknowledges the commenter and notes that if
+transit agencies believe their submissions contain SSI, they should
+contact FTA to discuss an appropriate transmission method.
+    U.S. Department of Transportation statute at 49 U.S.C. 40119 and
+regulations at 49 CFR parts 15 and 1520 prescribe procedures for
+recipients to protect SSI in their possession, through adequate
+storage, marking, and transmission of protected records only to persons
+with a need to know. In the event FTA receives a FOIA request for SSI,
+FTA may withhold SSI records that are specifically exempted from FOIA
+disclosure by law. See, 5 U.S.C. 552(b)(3); 49 CFR 7.23(c)(3).
+Recipients reduce the risk of mishandling SSI by segregating and
+marking SSI in accordance with the requirements of 49 CFR 15.13.
+
+N. Oversight and Enforcement
+
+1. Federal Enforcement
+    Comments: FTA received several comments regarding FTA's enforcement
+of the General Directive, including from
+
+[[Page 78446]]
+
+labor unions and a transit industry association. One SSOA commenter
+requested clarification on how FTA plans to approach oversight and
+enforcement of this directive. One individual stated that it supported
+increased Federal oversight of transit agencies and that transit
+agencies should face regulatory consequences if they fail to reasonably
+safeguard transit workers. A labor union commenter requested that FTA
+strengthen language within the directive to say that ``will'' take
+enforcement action rather than that FTA ``may'' take enforcement action
+related to violation of the General Directive. This labor union
+commenter also requested that FTA change language regarding its
+authority to ``withhold up to 25 percent'' of financial assistance to
+recipients to ``withhold 25 percent.'' A separate labor union commenter
+stated that FTA would likely have to take enforcement action based on
+the General Directive and should begin preparing for this possibility.
+One local labor union commenter stated that FTA should establish
+punitive measures for transit agencies that fail to take adequate
+measures to protect transit workers and that FTA should seek authority
+to take enforcement action if it determines that it does not have the
+necessary legal authority.
+    One labor union argued that FTA should strengthen the General
+Directive's enforcement provisions by establishing a mechanism for
+frontline workers and their representatives to notify FTA of
+noncompliance with the General Directive and defining a procedure by
+which FTA will accept and investigate reports of such noncompliance.
+The commenter also requested FTA define the phrase ``written plan,''
+that FTA used in the proposed General Directive when describing FTA's
+enforcement authority.
+    One transit agency asked whether FTA will deem an agency to be out
+of compliance if the reporting is too simplistic, noting that
+mitigations will either be in infancy or not yet started and the
+General Directive does not address follow-up reporting.
+    One transit agency suggested that FTA should provide recognition or
+rewards for agencies that demonstrate exceptional compliance with
+reporting requirements and that have launched innovative approaches to
+addressing safety issues and data reporting.
+    Some commenters suggested that FTA explore changing laws and
+increasing penalties related to assaults on transit workers, with some
+commenters requesting FTA provide guidance to States on this topic.
+    One transit agency commenter asked how FTA will measure the success
+of this General Directive, noting that many transit agencies already
+implement safety risk mitigations for assaults on transit workers.
+    FTA response: FTA acknowledges the comments received regarding
+oversight and enforcement of the General Directive. FTA plans to use
+its existing authorities to ensure that transit agencies are completing
+the required actions of the General Directive. Title 49 U.S.C. 5329 and
+CFR part 670 identify FTA's safety enforcement authorities, which
+includes the withholding of up to 25 percent of a recipient's Section
+5307 funds to address situations where a ``recipient has engaged in a
+pattern or practice of serious safety violations, or has otherwise
+refused to comply with the Public Transportation Safety Program, as
+codified at 49 U.S.C. 5329, or any regulation or directive issued under
+those laws for which the Administrator exercises enforcement authority
+for safety.'' 49 CFR 670.23(b). FTA exercises discretion when enforcing
+the Public Transportation Safety Program and will take enforcement
+action as appropriate. FTA therefore declines to revise the General
+Directive to state that it ``will'' take enforcement action. FTA also
+notes that the enforcement language specifying withholding of ``up to''
+25 percent of funds is rooted in statutory language, which provides
+that FTA may withhold ``not more than'' 25 percent of Section 5307
+funds. 49 U.S.C. 5329(g)(1)(E). FTA also acknowledges the commenter
+that asked FTA to consider exploring harsher penalties on individuals
+that assault transit workers but notes that FTA does not have authority
+to impose civil or criminal penalties.
+    FTA acknowledges the commenter that suggested establishing
+additional General Directive enforcement provisions and mechanisms. As
+noted above, FTA intends to exercise its existing enforcement
+authorities to ensure compliance with the General Directive. However,
+as noted in the PTASP Final Rule response to comments, FTA is
+considering the development of a mechanism to receive allegations of
+non-compliance with the PTASP requirements.
+    FTA appreciates the comment that requested clarity regarding the
+use of the term ``written plan'' to support the description of FTA's
+enforcement authority. In the proposed General Directive, the
+enforcement section noted that ``FTA may take enforcement action for
+any violation of this General Directive or the terms of any written
+plan adopted pursuant to this General Directive in accordance with
+FTA's authorities under 49 U.S.C. 5329, including but not limited to
+(1) directing a recipient to use Federal financial assistance to
+correct safety deficiencies; and (2) withholding up to 25 percent of
+financial assistance to a recipient under 49 U.S.C. 5307.'' FTA
+generally includes this reference to ``written plan'' in Special
+Directives where recipients are required to develop corrective action
+plans in response to required actions of Special Directives. This
+reference is not necessary for this General Directive, and FTA has
+removed the term ``written plan'' from the enforcement section of the
+General Directive.
+    FTA appreciates the comments that asked how FTA would measure
+success for this General Directive, asked whether FTA will deem an
+agency to be out of compliance if it reports on mitigations either
+early in implementation or not yet started, and suggested that FTA
+should provide recognition or rewards for agencies that demonstrate
+exceptional compliance or innovative approaches to addressing safety
+issues and data reporting. Success will be primarily based on full
+compliance with the General Directive, which will show that the
+industry is using SRM and SA to address and monitor safety risk.
+Additional success measures for the General Directive will be an
+improved understanding of mitigation effectiveness to allow FTA to
+focus attention on specific mitigations and strategies that are shown
+to be effective in mitigating assaults on transit workers. FTA also
+notes that the General Directive includes specific options for
+reporting that a mitigation is in planning or in progress, and an
+agency may use these options to report on the status of any mitigation.
+2. State Safety Oversight Agency Role
+    Comments: Three commenters requested clarification on the role of
+the State Safety Oversight Agency (SSOA) related to the General
+Directive, including two SSOAs and one transit agency. One SSOA
+commenter was supportive of the directive, but requested clarity as to
+the role of the SSOA in ensuring actions are taken or incorporated into
+the transit agencies' monitoring activities. A separate SSOA commenter
+asked if FTA is assuming oversight responsibility of rail transit
+agencies on behalf of SSOAs for assaults on transit workers through the
+directive. One transit agency asked for clarification about State
+oversight and enforcement, noting that assaults disproportionately
+affect bus operators but SSOAs only oversee rail transit.
+
+[[Page 78447]]
+
+    FTA response: FTA appreciates the comments received regarding
+clarification of the role of the SSOA related to the General Directive.
+FTA notes that while the General Directive does not establish any new
+oversight requirements for SSOAs, it does not remove any existing SSOA
+oversight responsibility. Safety Management System (SMS) Report, FTA's
+tool to collect responses required by this General Directive, will
+provide SSOAs with read-only access to the General Directive
+submissions made by the transit agencies they oversee under the State
+Safety Oversight Program, in order to support ongoing SSOA oversight
+activities. The General Directive does not establish any reporting or
+submission requirements for SSOAs. As the General Directive does not
+establish new reporting or oversight activities for SSOAs, SSOAs may
+choose to handle oversight of multimodal agency data in the same manner
+they currently conduct oversight activities for these agencies.
+    Authority: 49 U.S.C. 5329; 49 CFR 1.91, 670.25.
+
+Veronica Vanterpool,
+Deputy Administrator.
+
+UNITED STATES DEPARTMENT OF TRANSPORTATION
+
+Federal Transit Administration
+
+General Directive No. 24-1
+
+Required Actions Regarding Assaults on Transit Workers
+
+Summary
+
+    FTA is issuing a General Directive to address the significant and
+continuing safety risk associated with assaults on transit workers. FTA
+has identified a national-level hazard that transit workers must
+interact with the public and, at times, must clarify or enforce agency
+policies, which can present a risk of transit workers being assaulted
+on transit vehicles and in revenue facilities.
+    Each transit agency that is required to have an Agency Safety Plan
+(ASP) under the Public Transportation Agency Safety Plans (PTASP) Final
+Rule (49 CFR part 673) must use the Safety Risk Management (SRM)
+processes required by 49 CFR 673.25(c) and documented in its ASP to
+conduct a safety risk assessment related to assaults on transit workers
+on the public transportation system it operates unless the agency has
+conducted a safety risk assessment related to assaults on transit
+workers in the twelve months preceding the date of issuance of this
+General Directive. Each transit agency must use the SRM processes
+required by 49 CFR 673.25(d) and documented in its ASP to identify
+safety risk mitigations or strategies necessary as a result of the
+agency's safety risk assessment to reduce the likelihood and severity
+of the potential consequences. The joint labor-management Safety
+Committee of each transit agency serving an urbanized area with a
+population of 200,000 or more (large urbanized area) is responsible for
+identifying and recommending safety risk mitigations to reduce the
+likelihood and severity of consequences identified through the agency's
+safety risk assessment per 49 U.S.C. 5329(d)(5). Each covered transit
+agency must also provide information to FTA on how it is assessing,
+mitigating, and monitoring the safety risk associated with assaults on
+transit workers.
+
+General Directive and Required Actions
+
+    As authorized by 49 U.S.C. 5329(f)(2), 49 CFR 670.25, and Office of
+Management and Budget Control Number 2132-0580, FTA directs each
+transit agency that is required to have an ASP under the PTASP Final
+Rule at 49 CFR part 673 to take the following actions within 90 days of
+the publication of this General Directive in the Federal Register:
+
+(a) Conduct a Safety Risk Assessment
+
+    The transit agency must use the SRM process documented in its ASP,
+as defined at 49 CFR 673.25(c), to conduct a risk assessment related to
+assaults on transit workers on the public transportation system it
+operates unless the agency has conducted a safety risk assessment
+related to assaults on transit workers in the twelve (12) months
+preceding the date of issuance of this General Directive.
+
+(b) Identify Safety Risk Mitigations
+
+    The transit agency must use the SRM process documented in its ASP,
+as defined at 49 CFR 673.25(d), to identify safety risk mitigations or
+strategies necessary as a result of the agency's safety risk
+assessment. As required by 49 U.S.C. 5329(d)(5), each transit agency
+serving a large urbanized area must involve the joint labor-management
+Safety Committee when identifying safety risk mitigations to reduce the
+likelihood and severity of consequences identified through the agency's
+safety risk assessment.
+
+(c) Submit Required Information to FTA
+
+    The transit agency must submit to FTA responses to the following
+questions:
+    1. Date of completed safety risk assessment.
+    2. Hazard assessed: Transit workers must interact with the public
+and, at times, must clarify or enforce agency policies.
+    3. Potential Consequence: Transit workers are assaulted on transit
+vehicles.
+[GRAPHIC] [TIFF OMITTED] TN25SE24.001
+
+[[Page 78448]]
+
+ Likelihood (choose the rating from FTA's scale that most
+closely matches your agency's scale)
+ Severity (choose the rating from FTA's scale that most closely
+matches your agency's scale)
+
+    4. Potential Consequence: Transit workers are assaulted in revenue
+facilities.
+[GRAPHIC] [TIFF OMITTED] TN25SE24.002
+
+ Likelihood (choose the rating from FTA's scale that most
+closely matches your agency's scale)
+ Severity (choose the rating from FTA's scale that most closely
+matches your agency's scale)
+
+    5. Risk Rating (provide overall risk rating resulting from safety
+risk assessment).
+    6. For transit agencies serving a large urbanized area, did the
+joint labor-management Safety Committee identify and recommend safety
+risk mitigations to reduce the likelihood and severity of the potential
+consequences of assaults on transit workers identified through the
+agency's safety risk assessment?
+
+ Yes
+ No
+
+    7. If you answered no to Question 6, please explain.
+    8. Please share the safety risk mitigations the transit agency and/
+or Safety Committee (at agencies serving large urbanized areas) has
+identified as a result of the agency's safety risk assessment to reduce
+the likelihood and/or severity of assaults on transit workers:
+
+ Operator Area Protective Barriers
+ Signage Informing Riders of Surveillance/Penalties
+ Personal Security Training
+ De-Escalation Training
+ Operating Policies and Procedures (e.g., policies governing
+operator barrier deployment; policies and procedures to permit
+discharging passengers between designated stops upon request; policies
+that operators should only state the agency fare policy once and not
+attempt to enforce fare payment; policies on response to interference;
+policies on taking de-escalatory action during incidents)
+ Video/Audio Surveillance
+ Covert/Overt Emergency Alarms (e.g., silent button to contact
+operations control center, a system for coded/covert operator
+communication with operations control center, exterior bus signage
+alerting the public to emergency onboard/call law enforcement)
+ Automatic Vehicle Location
+ Patrol Strategies (e.g., fare enforcement, security, transit
+police, local law enforcement)
+ Communication Protocols (e.g., only request fare payment once)
+ Public Awareness Campaigns
+ Other
+
+    9. Please provide any additional information that would help FTA
+understand the details of your mitigation.
+    10. Implementation status for each safety risk mitigation
+
+ Planned
+ In Progress
+ Complete
+
+    11. Safety risk mitigation implementation start date (actual or
+projected).
+    12. Safety risk mitigation implementation completion date (actual
+or projected).
+    13. If implementation is in progress, provide approximate
+percentage toward completion.
+    14. Please provide any additional information that would help FTA
+understand the progress of your mitigation (e.g., any external rate-
+limiting factors affecting implementation).
+    15. Performance information or data that the agency is using or
+will use to make effectiveness determination.
+    16. Effectiveness of safety risk mitigation:
+ Effective
+ Ineffective
+ Not yet determined
+    17. If effectiveness of mitigation has been assessed by the agency
+or Safety Committee (at agencies serving large urbanized areas), a
+statement explaining why mitigations are either effective or
+ineffective.
+    Transit agencies must submit the required information to FTA within
+90 days of the issuance of this General Directive via the FTA Safety
+Management System (SMS) Report on the Transit Integrated Appian
+Development (TrIAD) Platform. Instructions on how to use the platform
+and submit the required information can be found at https://www.transit.dot.gov/assaults.
+
+[[Page 78449]]
+
+Enforcement
+
+    FTA may take enforcement action for any violation of this General
+Directive in accordance with FTA's authorities under 49 U.S.C. 5329,
+including but not limited to (1) directing a recipient to use Federal
+financial assistance to correct safety deficiencies; and (2)
+withholding up to 25 percent of financial assistance to a recipient
+under 49 U.S.C. 5307.
+
+Contact
+
+    For program matters, Stewart Mader, Senior Program Analyst for
+Safety Policy, FTA Office of System Safety, telephone (202) 366-9677 or
+[email protected]; for legal matters, Heather Ueyama, Attorney-
+Advisor, telephone (202) 366-7374 or [email protected].
+
+[FR Doc. 2024-21923 Filed 9-24-24; 8:45 am]
+BILLING CODE 4910-57-P

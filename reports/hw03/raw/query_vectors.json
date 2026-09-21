@@ -1,0 +1,72 @@
+{
+  "q1_sacramento_probable_cause": {
+    "question": "What did the NTSB determine was the probable cause of the collision between two Sacramento Regional Transit District light rail trains?",
+    "embed_dim": 384,
+    "first_8_values": [
+      0.0004520248039625585,
+      0.0036393608897924423,
+      0.03392928093671799,
+      0.08699952065944672,
+      -0.01126035861670971,
+      -0.013631777837872505,
+      -0.030287057161331177,
+      0.08932501822710037
+    ]
+  },
+  "q2_wmata_derailment_cause": {
+    "question": "Why did Washington Metropolitan Area Transit Authority train 407 derail south of Rosslyn Station?",
+    "embed_dim": 384,
+    "first_8_values": [
+      -0.05928859859704971,
+      0.06247517839074135,
+      0.041048940271139145,
+      0.08199770003557205,
+      -0.03453716263175011,
+      -0.0020006608683615923,
+      0.01496403943747282,
+      -0.0004799204762093723
+    ]
+  },
+  "q3_two_hour_notification": {
+    "question": "How soon after a safety event must a rail transit agency notify FTA and its State Safety Oversight Agency, and what kinds of events trigger that notification?",
+    "embed_dim": 384,
+    "first_8_values": [
+      0.004710694309324026,
+      -0.09055576473474503,
+      -0.014735186472535133,
+      0.07635615020990372,
+      0.08223249018192291,
+      0.036236174404621124,
+      0.024981094524264336,
+      -0.007716638036072254
+    ]
+  },
+  "q4_assault_directive_deadline": {
+    "question": "What does FTA General Directive 24-1 require transit agencies to do about assaults on transit workers, and by when must they respond?",
+    "embed_dim": 384,
+    "first_8_values": [
+      0.011253406293690205,
+      -0.024663589894771576,
+      0.028282474726438522,
+      0.07971556484699249,
+      0.018429361283779144,
+      0.04023571312427521,
+      -0.0029179262928664684,
+      -0.082314133644104
+    ]
+  },
+  "q5_section_5307_safety_set_aside": {
+    "question": "What share of its section 5307 funds must a large urbanized area transit provider spend on safety-related projects under the 2024 PTASP final rule?",
+    "embed_dim": 384,
+    "first_8_values": [
+      0.028049729764461517,
+      -0.03711860254406929,
+      0.090212382376194,
+      0.014502986334264278,
+      -0.00470711849629879,
+      0.03982718661427498,
+      0.03408424183726311,
+      -0.02577444724738598
+    ]
+  }
+}

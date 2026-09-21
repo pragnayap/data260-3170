@@ -1,0 +1,130 @@
+# DATA260 HW3 Part 2 - graded retrieval questions
+# DOMAIN_ID 2: Municipal Transit Incidents
+#
+# Written and committed BEFORE any retrieval was run, so the expected answers
+# could not be reverse-engineered from the output. Every expected answer was
+# taken from the source document itself, not from a model's summary of it.
+#
+# expected_source_file  - the ONE document in data/corpus/ that contains the answer
+# single_source         - true when no other document in the corpus states this fact
+#                         (the assignment requires at least two of these)
+#
+# Recall@k, in METRICS.md, is the fraction of questions whose expected_source_file
+# appears among the top-k retrieved chunks.
+
+corpus: data/corpus
+top_k: 5
+embed_model: sentence-transformers/all-MiniLM-L6-v2
+
+questions:
+
+  - id: q1_sacramento_probable_cause
+    question: >-
+      What did the NTSB determine was the probable cause of the collision
+      between two Sacramento Regional Transit District light rail trains?
+    expected_answer: >-
+      SacRT's weak administrative controls, which allowed a transportation
+      supervisor to authorize a high-speed test train onto the mainline without
+      knowing the location of passenger train 9 on the same track. Contributing
+      to the collision was senior management's failure to assess that
+      supervisor's competency in the combined controller-and-dispatcher role on
+      the evening shift.
+    expected_source_file: ntsb_rir2207_sacramento_light_rail_collision.pdf
+    single_source: true
+    notes: >-
+      The accident occurred 22 August 2019 near milepost 6.72 on the blue line;
+      thirteen people were transported to hospitals with non-life-threatening
+      injuries. No other corpus document mentions this incident.
+
+  - id: q2_wmata_derailment_cause
+    question: >-
+      Why did Washington Metropolitan Area Transit Authority train 407 derail
+      south of Rosslyn Station?
+    expected_answer: >-
+      An out-of-specification wheelset caused a wheel to depart the rail at a
+      turnout. The wheelset was out of specification because its design allowed
+      the wheels to migrate outward until they exceeded the maximum permitted
+      back-to-back measurement.
+    expected_source_file: ntsb_rir2315_wmata_rosslyn_derailment.pdf
+    single_source: true
+    notes: >-
+      Derailment of 12 October 2021, roughly 166 feet from the Rosslyn Station
+      platform in Arlington, Virginia. A mechanical probable cause, in contrast
+      to the procedural cause in q1 - the two NTSB reports are the most likely
+      pair to be confused with each other.
+
+  - id: q3_two_hour_notification
+    question: >-
+      How soon after a safety event must a rail transit agency notify FTA and
+      its State Safety Oversight Agency, and what kinds of events trigger that
+      notification?
+    expected_answer: >-
+      Within two hours. The triggering events include a fatality, two or more
+      injuries, a derailment, a collision causing one or more injuries, a
+      collision between two rail transit vehicles, a collision causing disabling
+      damage to a rail transit vehicle, an evacuation for life-safety reasons,
+      and unintended train movement. Criminal acts such as homicides and
+      assaults are excluded from the two-hour requirement.
+    expected_source_file: ecfr_49cfr674_state_safety_oversight.txt
+    single_source: true
+    notes: >-
+      49 CFR 674.33. Part 673 is about safety plans and never states this
+      deadline, so a retrieval that lands in Part 673 is confidently wrong.
+
+  - id: q4_assault_directive_deadline
+    question: >-
+      What does FTA General Directive 24-1 require transit agencies to do about
+      assaults on transit workers, and by when must they respond?
+    expected_answer: >-
+      Agencies must conduct a safety risk assessment of assaults on transit
+      workers using their existing SMS processes (an assessment completed in the
+      preceding 12 months may be reused), identify safety risk mitigations -
+      with the joint labor-management Safety Committee involved for large
+      urbanized area providers - and report to FTA how they are assessing,
+      mitigating and monitoring that risk. Responses were due 26 December 2024,
+      90 days after the directive was issued.
+    expected_source_file: fr_2024_general_directive_24_1_assaults.txt
+    single_source: true
+    notes: >-
+      The shortest document in the corpus. Assaults are also discussed at length
+      in the 2024 final rule and the 2023 proposed rule, so the wrong-document
+      pull is very likely here.
+
+  - id: q5_section_5307_safety_set_aside
+    question: >-
+      What share of its section 5307 funds must a large urbanized area transit
+      provider spend on safety-related projects under the 2024 PTASP final rule?
+    expected_answer: >-
+      At least 0.75 percent of the provider's section 5307 funds must be
+      allocated to safety-related projects, directed towards the areas where
+      the agency missed its safety performance targets.
+    expected_source_file: fr_2024_ptasp_final_rule.txt
+    single_source: false
+    notes: >-
+      Deliberately the hardest of the five. The 2023 proposed rule discusses the
+      same set-aside in near-identical language, so top-scoring chunks are
+      expected to come from the NPRM rather than the final rule. This is the
+      question most likely to surface the required confidently-scored miss.
+
+# Optional extras, added for the "does the best technique change across queries?"
+# part of the write-up. Not counted in the five graded questions.
+extra_questions:
+
+  - id: x1_ptasp_effective_date
+    question: What is the effective date of the 2024 Public Transportation Agency Safety Plans final rule?
+    expected_answer: 13 May 2024.
+    expected_source_file: fr_2024_ptasp_final_rule.txt
+    single_source: false
+
+  - id: x2_safety_committee_composition
+    question: >-
+      Who sits on a transit agency Safety Committee and what must the committee
+      approve?
+    expected_answer: >-
+      An equal number of frontline transit worker representatives - chosen by
+      the labor organization representing the plurality of the agency's workers
+      - and management representatives. The committee must approve the agency's
+      safety plan before the board considers it, and it sets safety performance
+      targets and identifies risk reduction strategies.
+    expected_source_file: fr_2024_ptasp_final_rule.txt
+    single_source: false

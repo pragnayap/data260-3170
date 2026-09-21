@@ -1,0 +1,366 @@
+/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'validate_default' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'validate_default' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+
+====================================================================================================
+HW3 Part 2 - retrieval-only RAG  |  SEED 3170  VERIFY_SEED 263170
+====================================================================================================
+embedding model : sentence-transformers/all-MiniLM-L6-v2
+top_k           : 5
+corpus          : /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/data/corpus
+questions       : /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw03/questions.yaml
+LLM is explicitly disabled. Using MockLLM.
+Loaded 105 document parts from /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/data/corpus
+  total extracted text: 948,734 characters
+    ecfr_49cfr673_agency_safety_plans.txt                         38,084 chars
+    ecfr_49cfr674_state_safety_oversight.txt                      38,424 chars
+    fr_2023_ptasp_proposed_rule.txt                              114,252 chars
+    fr_2024_general_directive_24_1_assaults.txt                  125,333 chars
+    fr_2024_national_transit_safety_plan.txt                      71,610 chars
+    fr_2024_ptasp_final_rule.txt                                 369,999 chars
+    ntsb_rir2207_sacramento_light_rail_collision.pdf              85,363 chars
+    ntsb_rir2315_wmata_rosslyn_derailment.pdf                    105,669 chars
+
+====================================================================================================
+TECHNIQUE: token  (TokenTextSplitter)
+====================================================================================================
+chunks produced     : 544
+avg chunk length    : 1980.5 chars (~361.3 tokens est.)
+min / max chunk len : 197 / 3506 chars
+chunking time       : 1.88s
+embedding time      : 29.66s
+chunks per file:
+    ecfr_49cfr673_agency_safety_plans.txt                          18
+    ecfr_49cfr674_state_safety_oversight.txt                       19
+    fr_2023_ptasp_proposed_rule.txt                                64
+    fr_2024_general_directive_24_1_assaults.txt                    63
+    fr_2024_national_transit_safety_plan.txt                       35
+    fr_2024_ptasp_final_rule.txt                                  198
+    ntsb_rir2207_sacramento_light_rail_collision.pdf               63
+    ntsb_rir2315_wmata_rosslyn_derailment.pdf                      84
+
+--- technique: token  |  question: q1_sacramento_probable_cause ------------------------------
+Q: What did the NTSB determine was the probable cause of the collision between two Sacramento
+   Regional Transit District light rail trains?
+query embedding dim : 384
+query first 8 values: [ 0.000452,  0.003639,  0.033929,  0.087000, -0.011260, -0.013632, -0.030287,  0.089325]
+expected source     : ntsb_rir2207_sacramento_light_rail_collision.pdf
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.834981    0.834981        816  YES  ntsb_rir2207_sacramento_light_rail_collision  Railroad Investigation Report NTSB/RIR-22/07 31 Appendixes Appendix A:
+   2     0.756183    0.756183        675  YES  ntsb_rir2207_sacramento_light_rail_collision  Railroad Investigation Report NTSB/RIR-22/07 28 3.2 Probable Cause The
+   3     0.753312    0.753312        722  YES  ntsb_rir2207_sacramento_light_rail_collision  Had the improvement plan not ended, SacRT management would have been r
+   4     0.747894    0.747894        670  YES  ntsb_rir2207_sacramento_light_rail_collision  Railroad Investigation Report NTSB/RIR-22/07 6 later, 50 yards south o
+   5     0.733110    0.733110        343  YES  ntsb_rir2207_sacramento_light_rail_collision  Railroad Investigation Report NTSB/RIR-22/07 30 This recommendation is
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 80.557 ms
+
+--- technique: token  |  question: q2_wmata_derailment_cause ------------------------------
+Q: Why did Washington Metropolitan Area Transit Authority train 407 derail south of Rosslyn Station?
+query embedding dim : 384
+query first 8 values: [-0.059289,  0.062475,  0.041049,  0.081998, -0.034537, -0.002001,  0.014964, -0.000480]
+expected source     : ntsb_rir2315_wmata_rosslyn_derailment.pdf
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.718317    0.718317        449  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     The National Transportation Safety Board determines that the probable 
+   2     0.709910    0.709910       1536  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     Railroad Investigation Report RIR-23-15 1 1 Factual Information 1.1 De
+   3     0.700116    0.700116       1017  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     Derailment of Washington Metropolitan Area Transit Authority Train Nea
+   4     0.639685    0.639685       2077  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     Railroad Investigation Report RIR-23-15 42 3 Conclusions 3.1 Findings 
+   5     0.608397    0.608397       1083  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     Railroad Investigation Report RIR-23-15 45 Appendixes Appendix A: Inve
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 125.530 ms
+
+--- technique: token  |  question: q3_two_hour_notification ------------------------------
+Q: How soon after a safety event must a rail transit agency notify FTA and its State Safety
+   Oversight Agency, and what kinds of events trigger that notification?
+query embedding dim : 384
+query first 8 values: [ 0.004711, -0.090556, -0.014735,  0.076356,  0.082232,  0.036236,  0.024981, -0.007717]
+expected source     : ecfr_49cfr674_state_safety_oversight.txt
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.700482    0.700482       2199  YES  ecfr_49cfr674_state_safety_oversight.txt      an RTA's compliance with its Public Transportation Agency Safety Plan.
+   2     0.671771    0.671771       2347   no  fr_2023_ptasp_proposed_rule.txt               safety performance targets based on the safety performance measures es
+   3     0.666237    0.666237       2365  YES  ecfr_49cfr674_state_safety_oversight.txt      train movement means any instance where a revenue vehicle is moving an
+   4     0.660346    0.660346       2331   no  fr_2024_national_transit_safety_plan.txt      until FTA establishes related performance [[Page 25318]] measures thro
+   5     0.656590    0.656590       2521   no  fr_2024_ptasp_final_rule.txt                  Comments: One commenter requested that FTA clarify when a transit agen
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 68.248 ms
+
+--- technique: token  |  question: q4_assault_directive_deadline ------------------------------
+Q: What does FTA General Directive 24-1 require transit agencies to do about assaults on transit
+   workers, and by when must they respond?
+query embedding dim : 384
+query first 8 values: [ 0.011253, -0.024664,  0.028282,  0.079716,  0.018429,  0.040236, -0.002918, -0.082314]
+expected source     : fr_2024_general_directive_24_1_assaults.txt
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.805733    0.805733       2392  YES  fr_2024_general_directive_24_1_assaults.txt   transit agency to provide FTA information on how the transit agency is
+   2     0.801261    0.801261       2308  YES  fr_2024_general_directive_24_1_assaults.txt   Act (FOIA) N. Oversight and Enforcement 1. Federal Enforcement 2. Stat
+   3     0.786629    0.786629       2340  YES  fr_2024_general_directive_24_1_assaults.txt   these situations. One transit agency asked FTA to clarify whether agen
+   4     0.778255    0.778255       2440  YES  fr_2024_general_directive_24_1_assaults.txt   industry association recommended that the NTD capture assaults on tran
+   5     0.776988    0.776988       2451  YES  fr_2024_general_directive_24_1_assaults.txt   Collection of Additional Information Comments: FTA received comments f
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 95.914 ms
+
+--- technique: token  |  question: q5_section_5307_safety_set_aside ------------------------------
+Q: What share of its section 5307 funds must a large urbanized area transit provider spend on
+   safety-related projects under the 2024 PTASP final rule?
+query embedding dim : 384
+query first 8 values: [ 0.028050, -0.037119,  0.090212,  0.014503, -0.004707,  0.039827,  0.034084, -0.025774]
+expected source     : fr_2024_ptasp_final_rule.txt
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.706295    0.706295        642  YES  fr_2024_ptasp_final_rule.txt                  frontline transit worker representatives. Section 5307 funding allocat
+   2     0.701721    0.701721       2057  YES  fr_2024_ptasp_final_rule.txt                  K. Section 673.29--Safety Promotion L. Section 673.31--Safety Plan Doc
+   3     0.693553    0.693553       2129   no  fr_2023_ptasp_proposed_rule.txt               of Federal financial assistance under 49 U.S.C. 5307 or a rail transit
+   4     0.687927    0.687927       2258   no  fr_2023_ptasp_proposed_rule.txt               be more likely to adopt as a result of developing risk reduction progr
+   5     0.687726    0.687726       2287  YES  fr_2024_ptasp_final_rule.txt                  to assist the recipient in meeting the missed target(s). If the ongoin
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 96.332 ms
+
+====================================================================================================
+TECHNIQUE: semantic  (SemanticSplitterNodeParser)
+====================================================================================================
+chunks produced     : 442
+avg chunk length    : 2146.5 chars (~390.7 tokens est.)
+min / max chunk len : 3 / 51993 chars
+chunking time       : 699.84s
+embedding time      : 22.87s
+chunks per file:
+    ecfr_49cfr673_agency_safety_plans.txt                          12
+    ecfr_49cfr674_state_safety_oversight.txt                       13
+    fr_2023_ptasp_proposed_rule.txt                                38
+    fr_2024_general_directive_24_1_assaults.txt                    36
+    fr_2024_national_transit_safety_plan.txt                       22
+    fr_2024_ptasp_final_rule.txt                                  126
+    ntsb_rir2207_sacramento_light_rail_collision.pdf               82
+    ntsb_rir2315_wmata_rosslyn_derailment.pdf                     113
+
+--- technique: semantic  |  question: q1_sacramento_probable_cause ------------------------------
+Q: What did the NTSB determine was the probable cause of the collision between two Sacramento
+   Regional Transit District light rail trains?
+query embedding dim : 384
+query first 8 values: [ 0.000452,  0.003639,  0.033929,  0.087000, -0.011260, -0.013632, -0.030287,  0.089325]
+expected source     : ntsb_rir2207_sacramento_light_rail_collision.pdf
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.851699    0.851699        507  YES  ntsb_rir2207_sacramento_light_rail_collision  Railroad Investigation Report NTSB/RIR-22/07 31 Appendixes Appendix A:
+   2     0.770044    0.770044        137  YES  ntsb_rir2207_sacramento_light_rail_collision  ———. 2016. Collision of Two Union Pacific Railroad Freight Trains Hoxi
+   3     0.756183    0.756183        679  YES  ntsb_rir2207_sacramento_light_rail_collision  Railroad Investigation Report NTSB/RIR-22/07 28 3.2 Probable Cause The
+   4     0.752387    0.752387        474  YES  ntsb_rir2207_sacramento_light_rail_collision  Railroad Investigation Report NTSB/RIR-22/07 v Executive Summary What 
+   5     0.751401    0.751401        404  YES  ntsb_rir2207_sacramento_light_rail_collision  Railroad Investigation Report NTSB/RIR-22/07 20 2. Analysis 2.1 Introd
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 86.130 ms
+
+--- technique: semantic  |  question: q2_wmata_derailment_cause ------------------------------
+Q: Why did Washington Metropolitan Area Transit Authority train 407 derail south of Rosslyn Station?
+query embedding dim : 384
+query first 8 values: [-0.059289,  0.062475,  0.041049,  0.081998, -0.034537, -0.002001,  0.014964, -0.000480]
+expected source     : ntsb_rir2315_wmata_rosslyn_derailment.pdf
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.709910    0.709910       1371  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     Railroad Investigation Report RIR-23-15 1 1 Factual Information 1.1 De
+   2     0.706700    0.706700        962  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     Derailment of Washington Metropolitan Area Transit Authority Train Nea
+   3     0.696375    0.696375        547  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     Railroad Investigation Report RIR-23-15 42 3 Conclusions 3.1 Findings 
+   4     0.683272    0.683272        515  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     Railroad Investigation Report RIR-23-15 vi Executive Summary What Happ
+   5     0.674413    0.674413        506  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     Railroad Investigation Report RIR-23-15 45 Appendixes Appendix A: Inve
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 130.148 ms
+
+--- technique: semantic  |  question: q3_two_hour_notification ------------------------------
+Q: How soon after a safety event must a rail transit agency notify FTA and its State Safety
+   Oversight Agency, and what kinds of events trigger that notification?
+query embedding dim : 384
+query first 8 values: [ 0.004711, -0.090556, -0.014735,  0.076356,  0.082232,  0.036236,  0.024981, -0.007717]
+expected source     : ecfr_49cfr674_state_safety_oversight.txt
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.681370    0.681370       2955   no  fr_2024_ptasp_final_rule.txt                  673.29(b), and whether this requirement applies to all relevant hazard
+   2     0.664957    0.664957       2070   no  ntsb_rir2315_wmata_rosslyn_derailment.pdf     The National Public Transportation Safety Plan also includes guidance 
+   3     0.655076    0.655076       2902  YES  ecfr_49cfr674_state_safety_oversight.txt      Administrator means the Federal Transit Administrator or the Administr
+   4     0.624771    0.624771        740   no  ecfr_49cfr673_agency_safety_plans.txt         5311 unless it operates a rail fixed guideway public transportation sy
+   5     0.619049    0.619049       2157   no  fr_2024_national_transit_safety_plan.txt      L. 117-58). On February 5, 2016, FTA first published a Federal Registe
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 61.752 ms
+
+--- technique: semantic  |  question: q4_assault_directive_deadline ------------------------------
+Q: What does FTA General Directive 24-1 require transit agencies to do about assaults on transit
+   workers, and by when must they respond?
+query embedding dim : 384
+query first 8 values: [ 0.011253, -0.024664,  0.028282,  0.079716,  0.018429,  0.040236, -0.002918, -0.082314]
+expected source     : fr_2024_general_directive_24_1_assaults.txt
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.778023    0.778023        382  YES  fr_2024_general_directive_24_1_assaults.txt   Notice of Proposed General Directive and Response to Comments FTA publ
+   2     0.774998    0.774998       3546  YES  fr_2024_general_directive_24_1_assaults.txt   Veronica Vanterpool, Deputy Administrator. UNITED STATES DEPARTMENT OF
+   3     0.756837    0.756837       1259  YES  fr_2024_general_directive_24_1_assaults.txt   ----------------------------------------------------------------------
+   4     0.754729    0.754729      10319  YES  fr_2024_general_directive_24_1_assaults.txt   FTA received 66 comment submissions to the docket. Commenters included
+   5     0.744992    0.744992        884   no  fr_2024_ptasp_final_rule.txt                  \13\ National Public Transportation Safety Plan, 88 FR 34917 (May 31, 
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 95.966 ms
+
+--- technique: semantic  |  question: q5_section_5307_safety_set_aside ------------------------------
+Q: What share of its section 5307 funds must a large urbanized area transit provider spend on
+   safety-related projects under the 2024 PTASP final rule?
+query embedding dim : 384
+query first 8 values: [ 0.028050, -0.037119,  0.090212,  0.014503, -0.004707,  0.039827,  0.034084, -0.025774]
+expected source     : fr_2024_ptasp_final_rule.txt
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.717169    0.717169       3860  YES  fr_2024_ptasp_final_rule.txt                  L. 114-94; December 4, 2015). To implement the requirements of 49 U.S.
+   2     0.711975    0.711975       2687   no  fr_2023_ptasp_proposed_rule.txt               SUPPLEMENTARY INFORMATION: Table of Contents I. Executive Summary A. P
+   3     0.710564    0.710564       1442  YES  fr_2024_ptasp_final_rule.txt                  5329(d)(4). safety risk reduction programs with safety performance tar
+   4     0.680432    0.680432       4273   no  fr_2023_ptasp_proposed_rule.txt               L. 114-94; December 4, 2015). To implement the requirements of 49 U.S.
+   5     0.667350    0.667351       2481  YES  fr_2024_ptasp_final_rule.txt                  5310 and 49 U.S.C. 5311, unless it operates a rail fixed guideway publ
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 87.059 ms
+
+====================================================================================================
+TECHNIQUE: sentence  (SentenceWindowNodeParser)
+====================================================================================================
+chunks produced     : 6008
+avg chunk length    : 157.9 chars (~28.3 tokens est.)
+min / max chunk len : 2 / 3508 chars
+chunking time       : 2.03s
+embedding time      : 510.16s
+chunks per file:
+    ecfr_49cfr673_agency_safety_plans.txt                         217
+    ecfr_49cfr674_state_safety_oversight.txt                      229
+    fr_2023_ptasp_proposed_rule.txt                               734
+    fr_2024_general_directive_24_1_assaults.txt                   684
+    fr_2024_national_transit_safety_plan.txt                      415
+    fr_2024_ptasp_final_rule.txt                                 2485
+    ntsb_rir2207_sacramento_light_rail_collision.pdf              554
+    ntsb_rir2315_wmata_rosslyn_derailment.pdf                     690
+
+--- technique: sentence  |  question: q1_sacramento_probable_cause ------------------------------
+Q: What did the NTSB determine was the probable cause of the collision between two Sacramento
+   Regional Transit District light rail trains?
+query embedding dim : 384
+query first 8 values: [ 0.000452,  0.003639,  0.033929,  0.087000, -0.011260, -0.013632, -0.030287,  0.089325]
+expected source     : ntsb_rir2207_sacramento_light_rail_collision.pdf
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.828693    0.828693        378  YES  ntsb_rir2207_sacramento_light_rail_collision  Railroad Investigation Report NTSB/RIR-22/07 31 Appendixes Appendix A:
+   2     0.823417    0.823417        479  YES  ntsb_rir2207_sacramento_light_rail_collision  Railroad Investigation Report NTSB/RIR-22/07 28 3.2 Probable Cause The
+   3     0.797674    0.797674        123  YES  ntsb_rir2207_sacramento_light_rail_collision  In April 2015, the NTSB released its report on the March 23, 2014, col
+   4     0.795702    0.795702        305  YES  ntsb_rir2207_sacramento_light_rail_collision  The NTSB concludes that none of the following were factors in this col
+   5     0.794701    0.794701        406  YES  ntsb_rir2207_sacramento_light_rail_collision  The National Transportation Safety Board determines that the probable 
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 235.088 ms
+
+--- technique: sentence  |  question: q2_wmata_derailment_cause ------------------------------
+Q: Why did Washington Metropolitan Area Transit Authority train 407 derail south of Rosslyn Station?
+query embedding dim : 384
+query first 8 values: [-0.059289,  0.062475,  0.041049,  0.081998, -0.034537, -0.002001,  0.014964, -0.000480]
+expected source     : ntsb_rir2315_wmata_rosslyn_derailment.pdf
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.760448    0.760448        402  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     Derailment of Washington Metropolitan Area Transit Authority Train Nea
+   2     0.736947    0.736947        428  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     local time, Washington Metropolitan Area Transit Authority (WMATA) tra
+   3     0.736765    0.736765        273  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     local time, Washington Metropolitan Area Transit Authority (WMATA) tra
+   4     0.724751    0.724751        268  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     3.2 Probable Cause The National Transportation Safety Board determines
+   5     0.718317    0.718317        450  YES  ntsb_rir2315_wmata_rosslyn_derailment.pdf     The National Transportation Safety Board determines that the probable 
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 267.464 ms
+
+--- technique: sentence  |  question: q3_two_hour_notification ------------------------------
+Q: How soon after a safety event must a rail transit agency notify FTA and its State Safety
+   Oversight Agency, and what kinds of events trigger that notification?
+query embedding dim : 384
+query first 8 values: [ 0.004711, -0.090556, -0.014735,  0.076356,  0.082232,  0.036236,  0.024981, -0.007717]
+expected source     : ecfr_49cfr674_state_safety_oversight.txt
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.691373    0.691373        485  YES  ecfr_49cfr674_state_safety_oversight.txt      (a) An RTA must notify FTA and the SSOA within two hours of any safety
+   2     0.685399    0.685399        254  YES  ecfr_49cfr674_state_safety_oversight.txt      (iii) The RTA must notify the SSOA at least thirty (30) days before th
+   3     0.680045    0.680045        201   no  fr_2024_national_transit_safety_plan.txt      One commenter recommended that FTA allow individual transit agencies t
+   4     0.676681    0.676681        214   no  fr_2024_ptasp_final_rule.txt                  Similarly, FTA has not established a time frame for informing transit 
+   5     0.669407    0.669407        290   no  fr_2024_national_transit_safety_plan.txt      FTA disagrees with the commenter who suggested transit agencies should
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 205.332 ms
+
+--- technique: sentence  |  question: q4_assault_directive_deadline ------------------------------
+Q: What does FTA General Directive 24-1 require transit agencies to do about assaults on transit
+   workers, and by when must they respond?
+query embedding dim : 384
+query first 8 values: [ 0.011253, -0.024664,  0.028282,  0.079716,  0.018429,  0.040236, -0.002918, -0.082314]
+expected source     : fr_2024_general_directive_24_1_assaults.txt
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.844200    0.844200        398  YES  fr_2024_general_directive_24_1_assaults.txt   FTA notes that the General Directive requires each applicable transit 
+   2     0.830669    0.830669        302  YES  fr_2024_general_directive_24_1_assaults.txt   The labor union suggested that FTA require transit agencies to report 
+   3     0.829370    0.829370        215  YES  fr_2024_general_directive_24_1_assaults.txt   FTA response: FTA acknowledges the comments received regarding the Gen
+   4     0.823232    0.823232        281  YES  fr_2024_general_directive_24_1_assaults.txt   FTA response: FTA reiterates that the General Directive does not manda
+   5     0.816228    0.816229        467  YES  fr_2024_general_directive_24_1_assaults.txt   Submit Required Information to FTA I. Mitigations Identified or Implem
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 234.077 ms
+
+--- technique: sentence  |  question: q5_section_5307_safety_set_aside ------------------------------
+Q: What share of its section 5307 funds must a large urbanized area transit provider spend on
+   safety-related projects under the 2024 PTASP final rule?
+query embedding dim : 384
+query first 8 values: [ 0.028050, -0.037119,  0.090212,  0.014503, -0.004707,  0.039827,  0.034084, -0.025774]
+expected source     : fr_2024_ptasp_final_rule.txt
+
+rank  store_score  cosine_sim  chunk_len  hit  source_file                                   preview
+----------------------------------------------------------------------------------------------------
+   1     0.779723    0.779723        238  YES  fr_2024_ptasp_final_rule.txt                  Two commenters asked how transit agencies that are not direct recipien
+   2     0.777977    0.777977        214  YES  fr_2024_ptasp_final_rule.txt                  Transit agencies' safety-related spending is not limited to the amount
+   3     0.748543    0.748543        231  YES  fr_2024_ptasp_final_rule.txt                  FTA clarifies that if [[Page 25723]] the identified projects cost less
+   4     0.736046    0.736046        365   no  fr_2023_ptasp_proposed_rule.txt               This includes the requirement that if a large urbanized area provider 
+   5     0.730672    0.730672        278   no  fr_2024_national_transit_safety_plan.txt      Applicability Comments: Two commenters expressed that the National Saf
+
+query vector shape        : (384,)
+stacked doc vectors shape : (5, 384)
+retrieval latency         : 233.752 ms
+
+====================================================================================================
+DONE
+====================================================================================================
+rows written    : 75
+raw output dir  : /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw03/raw
+next            : python code/summarize_rag_metrics.py

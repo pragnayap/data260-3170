@@ -131,6 +131,123 @@ python code/verify_hw02.py --skip-graph  # static + HTTP checks only
 ```
 Output: `reports/hw02/verification.json`
 
+## HW3 — reproducible run instructions
+
+HW3 adds session authentication to the web app (Part 1) and a retrieval-only
+RAG comparison of three LlamaIndex chunking techniques (Part 2). New
+dependencies are in `requirements.txt`:
+
+```bash
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Part 1 — Authenticated FastAPI app
+
+```bash
+cd code/web_application
+uvicorn app:app --reload --port 8470
+# visit http://localhost:8470
+```
+
+Routes live in their own `APIRouter` in `code/web_application/auth.py`:
+
+| Route | Purpose |
+|---|---|
+| `/` | public home page; links to login, or to dashboard + logout when signed in |
+| `/login` | Bootstrap login form; a Bootstrap alert on bad credentials |
+| `/dashboard` | protected; redirects to `/login?expired=1` without a live session |
+| `/logout` | destroys the session and returns to `/` |
+| `/incidents` | the HW1/HW2 incident form, moved off `/` |
+| `/api/incidents...` | the HW2 REST API, unchanged |
+
+Demo accounts (PBKDF2-SHA256, 200k iterations, per-user salt — no plaintext
+passwords are stored):
+
+```
+dispatcher / TransitOps#2026
+inspector  / SafetyFirst#2026
+```
+
+Sessions use Starlette `SessionMiddleware`, so the cookie is signed and carries
+`HttpOnly`, `Secure` and `SameSite=lax`. A signed cookie cannot be revoked on
+its own, so each login also registers a random session id server-side in
+`auth.ACTIVE_SESSIONS`; logout and idle expiry delete it, which is what makes a
+replayed cookie useless. The idle window defaults to 120 seconds:
+
+```bash
+S3170_IDLE_TIMEOUT=10 uvicorn app:app --port 8470    # short window for a demo
+S3170_COOKIE_INSECURE=1 uvicorn app:app --port 8470  # only if testing over plain-HTTP LAN
+```
+
+`Secure` is on by default; browsers treat `http://localhost` as a secure
+context, so the cookie still works locally and the screenshot shows all three
+attributes.
+
+### Part 2 — Retrieval-only RAG over the transit corpus
+
+**Step 1 — build the corpus** (eight federal documents, >200 KB):
+
+```bash
+python code/fetch_corpus.py           # downloads, hashes, writes SOURCES.md + CORPUS_MANIFEST.json
+python code/fetch_corpus.py --verify  # re-hash local files against the manifest
+```
+
+If the machine cannot reach ecfr.gov / federalregister.gov / ntsb.gov, save the
+eight source documents into `data/corpus_raw/` (the filenames the script expects
+are in its `SOURCES` table) and run `python code/fetch_corpus.py --manual-only`.
+Both routes produce an identical `data/corpus/`.
+
+**Step 2 — commit `questions.yaml` before running anything.** The assignment
+requires the expected answers to predate the results:
+
+```bash
+git add reports/hw03/questions.yaml && git commit -m "HW3: freeze retrieval questions"
+```
+
+**Step 3 — run the three pipelines:**
+
+```bash
+python code/run_rag_chunking.py --warmup         # Tiny Shakespeare smoke test
+caffeinate -i python code/run_rag_chunking.py 2>&1 | tee reports/hw03/RUN_LOG.txt
+python code/summarize_rag_metrics.py             # writes reports/hw03/METRICS.md
+```
+
+The first run downloads `sentence-transformers/all-MiniLM-L6-v2` from Hugging
+Face (~90 MB). Semantic chunking embeds every sentence to find its boundaries,
+so it is the slowest of the three by a wide margin — `caffeinate -i` keeps the
+Mac awake through it. Nothing generates text: there is no LLM in this pipeline,
+only the embedding model and nearest-neighbour search, which is why re-running
+reproduces the same scores exactly.
+
+Outputs: `reports/hw03/raw/` (`retrieval_rows.jsonl`, `retrieval_rows.csv`,
+`chunk_stats.json`, `query_vectors.json`), `reports/hw03/METRICS.md`.
+
+### Make targets
+
+The commands above are also wrapped in the `Makefile`:
+
+```bash
+make install        # pip install -r requirements.txt
+make run            # serve the authenticated app on 8470
+make corpus         # fetch + hash the corpus
+make warmup         # Tiny Shakespeare smoke test
+make rag            # run the pipelines, tee-ing RUN_LOG.txt
+make metrics        # rebuild METRICS.md from raw/
+make verify-hw03    # self-check -> verification.json
+make hw3            # corpus -> rag -> metrics -> verify-hw03
+```
+
+### Verification
+
+```bash
+python code/verify_hw03.py                # 73 checks, including a live auth flow on 8470
+python code/verify_hw03.py --skip-server  # files, corpus hashes and questions only
+```
+
+Output: `reports/hw03/verification.json`, plus the captured `Set-Cookie`
+response header at `reports/hw03/raw/set_cookie_header.txt`.
+
 ## Part 4 — Written answers
 
 **Why is prior conversation context resent with every turn?**
@@ -170,3 +287,4 @@ Output: `reports/hw02/verification.json`
 |---|---|---|
 | HW1 | [`code/`](code/), [`src/`](src/) | [`reports/hw01/`](reports/hw01/) |
 | HW2 | [`code/`](code/), [`src/`](src/) | [`reports/hw02/`](reports/hw02/) |
+| HW3 | [`code/`](code/), [`src/`](src/), [`data/corpus/`](data/corpus/) | [`reports/hw03/`](reports/hw03/) |

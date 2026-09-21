@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block title %}Dashboard &middot; Transit Incident Desk{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-10">
+
+    <div class="alert alert-success" role="alert">
+      <h1 class="h5 alert-heading mb-1">Welcome back, {{ user.display_name }}.</h1>
+      <p class="mb-0 small">
+        Signed in as <code>{{ user.username }}</code> &mdash; {{ user.role }}.
+        This page is a protected route; it is unreachable without a live session.
+      </p>
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <div class="text-uppercase text-body-secondary small">Open incidents</div>
+            <div class="display-6">2</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <div class="text-uppercase text-body-secondary small">Routes affected</div>
+            <div class="display-6">2</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <div class="text-uppercase text-body-secondary small">Idle timeout</div>
+            <div class="display-6">{{ idle_timeout }}<span class="fs-6">s</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body">
+            <div class="text-uppercase text-body-secondary small">Session expires in</div>
+            <div class="display-6">{{ seconds_left }}<span class="fs-6">s</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card border-0 shadow-sm mb-4">
+      <div class="card-header bg-white border-0 pt-3">
+        <h2 class="h6 mb-0">Recent incident reports</h2>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Route</th>
+              <th scope="col">Location</th>
+              <th scope="col">Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Line 22</td>
+              <td>Downtown Transit Center</td>
+              <td><span class="badge text-bg-warning">Delay</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>BART Red Line</td>
+              <td>Civic Center Station</td>
+              <td><span class="badge text-bg-secondary">Mechanical Failure</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <a href="/logout" class="btn btn-outline-danger">Log out</a>
+
+  </div>
+</div>
+{% endblock %}

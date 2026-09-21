@@ -4,3 +4,7 @@ __pycache__/
 .DS_Store
 reports/hw01/report.docx
 reports/hw01/~$report.docx
+
+# HW3: hand-saved originals used only to build data/corpus/
+data/corpus_raw/
+reports/hw03/raw/tinyshakespeare_input.txt

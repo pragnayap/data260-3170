@@ -9,10 +9,16 @@ Storage is a module-level list, so everything resets when the process restarts.
 That is deliberate for this assignment -- no database is required -- but it does
 mean the seed records come back on every boot.
 
+HW3 Part 1 adds session authentication. The auth routes (/, /login, /logout,
+/dashboard) live in their own APIRouter in auth.py and are included below; the
+HW1/HW2 incident form moved to /incidents so that "/" can be the new public
+home page. Sessions are handled by Starlette's SessionMiddleware.
+
 Run:
     uvicorn app:app --reload --port 8470     (from this directory)
 """
 
+import os
 from typing import List, Optional
 
 import uvicorn
@@ -20,10 +26,41 @@ from fastapi import FastAPI, HTTPException, Response
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, EmailStr, Field
+from starlette.middleware.sessions import SessionMiddleware
+
+import auth
 
 PORT_BASE = 8470  # 8000 + (3170 mod 900), fixed for the semester
 
-app = FastAPI(title="Transit Incident API", version="2.0.0")
+# A fresh random key each boot would invalidate every session on reload, which
+# makes --reload unusable; a fixed dev default keeps local runs sane, and the
+# env var is what a real deployment would set.
+SESSION_SECRET = os.environ.get("S3170_SESSION_SECRET") or "s3170-dev-secret-do-not-ship"
+
+# Secure=True is kept on by default: browsers treat http://localhost as a secure
+# context, so the cookie is still sent locally, and the screenshot then shows all
+# three attributes. Set S3170_COOKIE_INSECURE=1 if testing over a plain-HTTP LAN
+# address, where a Secure cookie would be dropped.
+COOKIE_HTTPS_ONLY = os.environ.get("S3170_COOKIE_INSECURE", "") != "1"
+
+app = FastAPI(title="Transit Incident API", version="3.0.0")
+
+# SessionMiddleware signs the session into a cookie and always marks it
+# HttpOnly; https_only adds Secure and same_site adds SameSite, so the
+# Set-Cookie response header carries all three attributes required by HW3.
+# max_age is the cookie's hard ceiling; the *idle* timeout is enforced in
+# auth.current_user(), which is a shorter, activity-based window.
+app.add_middleware(
+    SessionMiddleware,
+    secret_key=SESSION_SECRET,
+    session_cookie="s3170_session",
+    max_age=60 * 60,          # 1 hour absolute cookie lifetime
+    same_site="lax",
+    https_only=COOKIE_HTTPS_ONLY,
+)
+
+# Auth routes (/, /login, /logout, /dashboard) come from their own router.
+app.include_router(auth.router)
 
 # Serve files directly from this folder (no separate static/ subfolder, no
 # renaming) so the existing HW1 files stay exactly where/what they are.
@@ -95,8 +132,13 @@ def no_store(response: Optional[Response]) -> None:
 
 # --- Pages ---
 
-@app.get("/", include_in_schema=False)
-async def read_root():
+@app.get("/incidents", include_in_schema=False)
+async def incident_form():
+    """The HW1/HW2 incident form and list view.
+
+    This was "/" through HW2; HW3 gives "/" to the public home page defined in
+    auth.py, so the form keeps its own address instead.
+    """
     return FileResponse("HW1-PragnayaPriyadarshini.html")
 
 

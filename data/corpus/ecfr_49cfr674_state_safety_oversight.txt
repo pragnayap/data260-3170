@@ -1,0 +1,351 @@
+PART 674—STATE SAFETY OVERSIGHT
+
+Authority:
+
+49 U.S.C. 5329; 49 CFR 1.91.
+
+Source:
+
+81 FR 14256, Mar. 16, 2016, as amended at 89 FR 83981, Oct. 18, 2024, unless otherwise noted.
+
+Subpart A—General Provisions
+
+§ 674.1 Purpose.
+
+This part carries out the mandate of 49 U.S.C. 5329 for State safety oversight of rail fixed guideway public transportation systems.
+
+§ 674.3 Applicability.
+
+This part applies to States with rail fixed guideway public transportation systems; State safety oversight agencies that oversee the safety of rail fixed guideway public transportation systems; and entities that own or operate rail fixed guideway public transportation systems with Federal financial assistance authorized under 49 U.S.C. Chapter 53.
+
+§ 674.5 Policy.
+
+(a) In accordance with 49 U.S.C. 5329, a State that has a rail fixed guideway public transportation system within the State has primary responsibility for overseeing the safety of that rail fixed guideway public transportation system. A State safety oversight agency must have the authority, resources, and qualified personnel to oversee the number, size, and complexity of rail fixed guideway public transportation systems that operate within a State.
+
+(b) FTA will certify whether a State safety oversight program meets the requirements of 49 U.S.C. 5329 and is adequate to promote the purposes of the public transportation safety programs codified at 49 U.S.C. 5329.
+
+§ 674.7 Definitions.
+
+As used in this part:
+
+Accountable Executive means a single, identifiable person who has ultimate responsibility for carrying out the Public Transportation Agency Safety Plan of a transit agency; responsibility for carrying out the transit agency's Transit Asset Management Plan; and control or direction over the human and capital resources needed to develop and maintain both the transit agency's Public Transportation Agency Safety Plan, in accordance with 49 U.S.C. 5329(d), and the transit agency's Transit Asset Management Plan in accordance with 49 U.S.C. 5326.
+
+Administrator means the Federal Transit Administrator or the Administrator's designee.
+
+Collision means any impact between a rail transit vehicle and any other vehicle, object, or any person.
+
+Contractor means an entity that performs tasks on behalf of FTA, a State Safety Oversight Agency, or a Rail Transit Agency, through contract or other agreement.
+
+Corrective action plan means a plan developed by a rail transit agency that describes the actions the rail transit agency will take to address an identified deficiency or safety concern, and the schedule for taking those actions. Either a State Safety Oversight Agency or FTA may require a rail transit agency to develop and carry out a corrective action plan.
+
+Derailment for the purposes of this part means a safety event in which one or more wheels of a rail transit vehicle unintentionally leaves the rails.
+
+Designated personnel means:
+
+(1) Employees and contractors identified by a recipient whose job functions are directly responsible for safety oversight of the public transportation system of the public transportation agency; or
+
+(2) Employees and contractors of a State Safety Oversight Agency whose job functions require them to conduct reviews, inspections, examinations, and other safety oversight activities of the rail fixed guideway public transportation systems subject to the jurisdiction of the agency.
+
+Disabling damage means damage to a rail transit vehicle resulting from a collision and preventing the vehicle from operating under its own power.
+
+Evacuation for life safety reasons means a condition that occurs when persons depart from transit vehicles or facilities for life safety reasons, including self-evacuation. A life safety reason may include a situation such as a fire, the presence of smoke or noxious fumes, a fuel leak from any source, an electrical hazard, or other hazard to any person. An evacuation of passengers into the rail right of way (not at a platform or station) for any reason is presumed to be an evacuation for life safety reasons.
+
+Fatality means a death confirmed within 30 days of a safety event. Fatalities include suicides, but do not include deaths in or on transit property that are a result of drug overdose, exposure to the elements, illness, or natural causes.
+
+FRA means the Federal Railroad Administration, an operating administration within the United States Department of Transportation.
+
+FTA means the Federal Transit Administration, an operating administration within the United States Department of Transportation.
+
+Hazard means any real or potential condition that can cause injury, illness, or death; damage to or loss of the facilities, equipment, rolling stock, or infrastructure of a public transportation system; or damage to the environment.
+
+Injury means any harm to persons as a result of a safety event that requires immediate medical attention away from the scene. Does not include harm resulting from a drug overdose, exposure to the elements, illness, natural causes, or occupational safety events occurring in administrative buildings.
+
+Inspection means a physical observation of equipment, facilities, rolling stock, operations, personnel, or records for the purpose of gathering or analyzing facts or information.
+
+Investigation means the process of determining the causal and contributing factors of a safety event or hazard, for the purpose of preventing recurrence and mitigating safety risk.
+
+National Public Transportation Safety Plan means the plan to improve the safety of all public transportation systems that receive Federal financial assistance under 49 U.S.C. Chapter 53.
+
+NTSB means the National Transportation Safety Board, an independent Federal agency.
+
+Person means a passenger, employee, contractor, volunteer, official worker, pedestrian, trespasser, or any other individual on the property of a rail fixed guideway public transportation system or associated infrastructure.
+
+Potential consequence means the effect of a hazard.
+
+Public transportation has the meaning found in 49 U.S.C. 5302.
+
+Public Transportation Agency Safety Plan (PTASP) means the documented comprehensive agency safety plan for a transit agency that is required by 49 U.S.C. 5329 and part 673 of this chapter.
+
+Public Transportation Safety Certification Training Program (PTSCTP) means the certification training program that is required by 49 U.S.C. 5329(c) and part 672 of this chapter.
+
+Rail fixed guideway public transportation system means any fixed guideway system, or any such system in engineering or construction, that uses rail, is operated for public transportation, is within the jurisdiction of a State, and is not subject to the jurisdiction of the Federal Railroad Administration. These include but are not limited to rapid rail, heavy rail, light rail, monorail, trolley, inclined plane, funicular, and automated guideway.
+
+Rail transit agency (RTA) means any entity that provides services on a rail fixed guideway public transportation system.
+
+Rail transit vehicle means any rolling stock used on a rail fixed guideway public transportation system, including but not limited to passenger and maintenance vehicles.
+
+Revenue vehicle means a rail transit vehicle used to provide revenue service for passengers. This includes providing fare free service.
+
+Risk-based inspection program means an inspection program that uses qualitative and quantitative data analysis to inform ongoing inspection activities. Risk-based inspection programs are designed to prioritize inspections to address safety concerns and hazards associated with the highest levels of safety risk.
+
+Safety event means an unexpected outcome resulting in injury or death; damage to or loss of the facilities, equipment, rolling stock, or infrastructure of a public transportation system; or damage to the environment.
+
+Safety risk means the composite of predicted severity and likelihood of a potential consequence of a hazard.
+
+Safety risk mitigation means a method or methods to eliminate or reduce the severity and/or likelihood of a potential consequence of a hazard.
+
+State means a State of the United States, the District of Columbia, Puerto Rico, the Northern Mariana Islands, Guam, American Samoa, and the Virgin Islands.
+
+State Safety Oversight Agency (SSOA) means an agency established by a State that meets the requirements and performs the functions specified by 49 U.S.C. 5329(e) and (k) and the regulations set forth in this part.
+
+Unintended train movement means any instance where a revenue vehicle is moving and is not under the control of a driver (whether or not the operator is physically on the vehicle at the time). This applies regardless of whether the event occurred in revenue service.
+
+§ 674.9 [Reserved]
+
+Subpart B—Role of the State
+
+§ 674.11 State Safety Oversight Program.
+
+Every State that has a rail fixed guideway public transportation system must have a State Safety Oversight (SSO) program that has been approved by the Administrator. FTA will audit each State's compliance at least triennially, consistent with 49 U.S.C. 5329(e)(10). At minimum, an SSO program must:
+
+(a) Explicitly acknowledge the State's responsibility for overseeing the safety of the rail fixed guideway public transportation systems within the State;
+
+(b) Demonstrate the State's ability to adopt and enforce Federal and relevant State law for safety in rail fixed guideway public transportation systems;
+
+(c) Establish a State safety oversight agency, by State law, in accordance with the requirements of 49 U.S.C. 5329 and this part;
+
+(d) Demonstrate that the State has determined an appropriate staffing level for the State safety oversight agency commensurate with the number, size, and complexity of the rail fixed guideway public transportation systems in the State, and that the State has consulted with the Administrator for that purpose;
+
+(e) Demonstrate that the employees and other personnel of the State safety oversight agency who are responsible for the oversight of rail fixed guideway public transportation systems are qualified to perform their functions, based on appropriate training, including substantial progress toward or completion of the Public Transportation Safety Certification Training Program; and
+
+(f) Demonstrate that by law, the State prohibits any public transportation agency in the State from providing funds to the SSOA.
+
+§ 674.13 Designation of oversight agency.
+
+(a) Every State that must establish a State Safety Oversight program in accordance with 49 U.S.C. 5329 must also establish an SSOA for the purpose of overseeing the safety of rail fixed guideway public transportation systems within that State. Further, the State must ensure that:
+
+(1) The SSOA is financially and legally independent from any public transportation agency the SSOA is obliged to oversee;
+
+(2) The SSOA does not directly provide public transportation services in an area with a rail fixed guideway public transportation system the SSOA is obliged to oversee;
+
+(3) The SSOA does not employ any individual who is also responsible for administering a rail fixed guideway public transportation system the SSOA is obliged to oversee;
+
+(4) The SSOA has authority to review, approve, oversee, and enforce the Public Transportation Agency Safety Plan for a rail fixed guideway public transportation system required by 49 U.S.C. 5329(d) and part 673 of this chapter;
+
+(5) The SSOA has investigative, inspection, and enforcement authority with respect to the safety of all rail fixed guideway public transportation systems within the State;
+
+(6) At least once every three years, the SSOA audits every rail fixed guideway public transportation system's compliance with the Public Transportation Agency Safety Plan required by 49 U.S.C. 5329(d) and part 673 of this chapter; and
+
+(7) At least once a year, the SSOA reports the status of the safety of each rail fixed guideway public transportation system to the Governor, the FTA, and the board of directors, or equivalent entity, of the rail fixed guideway public transportation system.
+
+(b) At the request of the Governor of a State, the Administrator may waive the requirements for financial and legal independence and the prohibitions on employee conflicts of interest under paragraphs (a)(1) and (3) of this section, if the rail fixed guideway public transportation systems in design, construction, or revenue operations in the State have fewer than one million combined actual and projected rail fixed guideway revenue miles per year or provide fewer than ten million combined actual and projected unlinked passenger trips per year. However:
+
+(1) If a State shares jurisdiction over one or more rail fixed guideway public transportation systems with another State, and has one or more rail fixed guideway public transportation systems that are not shared with another State, the revenue miles and unlinked passenger trips of the rail fixed guideway public transportation system under shared jurisdiction will not be counted in the Administrator's decision whether to issue a waiver.
+
+(2) The Administrator will rescind a waiver issued under this subsection if the number of revenue miles per year or unlinked passenger trips per year increases beyond the thresholds specified in this subsection.
+
+§ 674.15 Designation of oversight agency for multi-state system.
+
+In an instance of a rail fixed guideway public transportation system that operates in more than one State, all States in which that rail fixed guideway public transportation system operates must either:
+
+(a) Ensure that uniform safety standards and procedures in compliance with 49 U.S.C. 5329 are applied to that rail fixed guideway public transportation system, through an SSO program that has been approved by the Administrator; or
+
+(b) Designate a single entity that meets the requirements for an SSOA to serve as the SSOA for that rail fixed guideway public transportation system, through an SSO program that has been approved by the Administrator.
+
+§ 674.17 Use of Federal financial assistance.
+
+(a) In accordance with 49 U.S.C. 5329(e)(6), FTA will make grants of Federal financial assistance to eligible States to help the States develop and carry out their SSO programs. This Federal financial assistance may be used for reimbursement of both the operational and administrative expenses of SSO programs, consistent with the uniform administrative requirements for grants to States under 2 CFR parts 200 and 1201. The expenses eligible for reimbursement include, specifically, the expense of employee training and the expense of establishing and maintaining an SSOA in compliance with 49 U.S.C. 5329.
+
+(b) The apportionments of available Federal financial assistance to eligible States will be made in accordance with a formula, established by the Administrator, following opportunity for public notice and comment. The formula will take into account fixed guideway vehicle revenue miles, fixed guideway route miles, and fixed guideway vehicle passenger miles attributable to all rail fixed guideway systems within each eligible State not subject to the jurisdiction of the FRA.
+
+(c) The grants of Federal financial assistance for State safety oversight shall be subject to terms and conditions as the Administrator deems appropriate.
+
+(d) The Federal share of the expenses eligible for reimbursement under a grant for State safety oversight activities shall be eighty percent of the reasonable costs incurred under that grant.
+
+(e) The non-Federal share of the expenses eligible for reimbursement under a grant for State safety oversight activities may not be comprised of Federal funds, any funds received from a public transportation agency, or any revenues earned by a public transportation agency.
+
+§ 674.19 Certification of a State Safety Oversight Program.
+
+(a) The Administrator must determine whether a State's SSO program meets the requirements of 49 U.S.C. 5329. Also, the Administrator must determine whether an SSO program is adequate to promote the purposes of 49 U.S.C. 5329, including, but not limited to, the National Public Transportation Safety Plan, the Public Transportation Safety Certification Training Program, and the Public Transportation Agency Safety Plans.
+
+(b) The Administrator must issue a certification to a State whose SSO program meets the requirements of 49 U.S.C. 5329. The Administrator must issue a denial of certification to a State whose SSO program does not meet the requirements of 49 U.S.C. 5329.
+
+(c) In an instance in which the Administrator issues a denial of certification to a State whose SSO program does not meet the requirements of 49 U.S.C. 5329, the Administrator must provide a written explanation, and allow the State an opportunity to modify and resubmit its SSO program for the Administrator's approval. In the event the State is unable to modify its SSO program to merit the Administrator's issuance of a certification, the Administrator must notify the Governor of that fact, and must ask the Governor to take all possible actions to correct the deficiencies that are precluding the issuance of a certification for the SSO program. In his or her discretion, the Administrator may also impose financial penalties as authorized by 49 U.S.C. 5329(e), which may include:
+
+(1) Withholding SSO grant funds from the State;
+
+(2) Withholding up to five percent of the 49 U.S.C. 5307 Urbanized Area formula funds appropriated for use in the State or urbanized area in the State, until such time as the SSO program can be certified; or
+
+(3) Requiring all rail fixed guideway public transportation systems governed by the SSO program to spend up to 100 percent of their Federal funding under 49 U.S.C. chapter 53 only for safety-related improvements on their systems, until such time as the SSO program can be certified.
+
+(d) When determining whether to issue a certification or a denial of certification for an SSO program, the Administrator must evaluate whether the cognizant SSOA has the authority, resources, and expertise to oversee the number, size, and complexity of the rail fixed guideway public transportation systems that operate within the State, or will attain the necessary authority, resources, and expertise in accordance with a developmental plan and schedule.
+
+§ 674.21 Withholding of Federal financial assistance for noncompliance.
+
+(a) In making a decision to impose financial penalties as authorized by 49 U.S.C. 5329(e) and determining the nature and amount of the financial penalties, the Administrator shall consider the extent and circumstances of the noncompliance; the operating budgets of the SSOA and the rail fixed guideway public transportation systems that will be affected by the financial penalties; and such other matters as justice may require.
+
+(b) If a State fails to establish an SSO program that has been approved by the Administrator prior to a rail fixed guideway public transportation system entering the engineering or construction phase of development, FTA will be prohibited from obligating Federal financial assistance authorized under 49 U.S.C. 5338 to any entity in the State that is otherwise eligible to receive that Federal financial assistance, in accordance with 49 U.S.C. 5329(e)(3).
+
+§ 674.23 Confidentiality of information.
+
+(a) A State, an SSOA, or an RTA may withhold an investigation report prepared or adopted in accordance with these regulations from being admitted as evidence or used in a civil action for damages resulting from a matter mentioned in the report.
+
+(b) This part does not require public availability of any data, information, or procedures pertaining to the security of a rail fixed guideway public transportation system or its passenger operations.
+
+Subpart C—State Safety Oversight Agencies
+
+§ 674.25 Role of the State safety oversight agency.
+
+(a) An SSOA must establish minimum standards for the safety of all rail fixed guideway public transportation systems within its oversight. These minimum standards must be consistent with the National Public Transportation Safety Plan, the Public Transportation Safety Certification Training Program, the rules for Public Transportation Agency Safety Plans and all applicable Federal and State law.
+
+(b) An SSOA must review and approve the Public Transportation Agency Safety Plan for every rail fixed guideway public transportation system within its oversight. An SSOA must oversee an RTA's execution of its Public Transportation Agency Safety Plan. An SSOA must enforce the execution of a Public Transportation Agency Safety Plan, through an order of a corrective action plan or any other means, as necessary or appropriate.
+
+(c) An SSOA has the responsibility to provide safety oversight of an RTA's project(s) in the engineering or construction phase to verify compliance with all applicable Federal and State safety requirements. For purposes of §§ 674.33 and 674.35, this is limited to safety events that involve transit-related activities such as operations, testing, simulated service or pre-revenue service, or a transit-related maintenance activity.
+
+(d) An SSOA must ensure that a Public Transportation Agency Safety Plan meets the requirements at 49 U.S.C. 5329(d) and part 673 of this chapter.
+
+(e) An SSOA has primary responsibility for the investigation of any allegation of noncompliance with a Public Transportation Agency Safety Plan. These responsibilities do not preclude the Administrator from exercising their authority under 49 U.S.C. 5329(f).
+
+(f) An SSOA has primary responsibility for the investigation of a safety event on a rail fixed guideway public transportation system. This responsibility does not preclude the Administrator from exercising his or her authority under 49 U.S.C. 5329(f).
+
+(g) An SSOA may enter into an agreement with a contractor for assistance in overseeing safety event investigations and performing independent safety event investigations; and for expertise the SSOA does not have within its own organization.
+
+(h) All designated personnel employed by an SSOA must comply with the requirements of the Public Transportation Safety Certification Training Program.
+
+§ 674.27 State safety oversight program standards.
+
+(a) An SSOA must adopt and distribute a written SSO program standard, consistent with the National Public Transportation Safety Plan and the rules for Public Transportation Agency Safety Plans. This SSO program standard must identify the processes and procedures that govern the activities of the SSOA. Also, the SSO program standard must identify the processes and procedures an RTA must have in place to comply with the standard. At minimum, the program standard must meet the following requirements:
+
+(1) Program management. The SSO program standard must explain the authority of the SSOA to oversee the safety of rail fixed guideway public transportation systems; the policies that govern the activities of the SSOA; the reporting requirements that govern both the SSOA and the rail fixed guideway public transportation systems; and the steps the SSOA will take to ensure open, on-going communication between the SSOA and every rail fixed guideway public transportation system within its oversight.
+
+(2) Program standard development. The SSO program standard must explain the SSOA's process for developing, reviewing, adopting, and revising its minimum standards for safety, and distributing those standards to the rail fixed guideway public transportation systems.
+
+(3) Disposition of RTA comments. The SSO program standard must establish a disposition process that defines how the SSOA will address any comments the RTA makes with respect to the SSO program standard.
+
+(4) Program policy and objectives. The SSO program standard must set an explicit policy and objectives for safety in rail fixed guideway public transportation throughout the State.
+
+(5) Oversight of RTA Public Transportation Agency Safety Plans and internal safety reviews. The SSO program standard must explain the role of the SSOA in overseeing an RTA's execution of its Public Transportation Agency Safety Plan and any related safety reviews of the RTA's fixed guideway public transportation system. The SSO program standard must describe the process whereby the SSOA will receive and evaluate all material submitted under the signature of an RTA's Accountable Executive. The SSO program standard must define baseline RTA internal safety review requirements including, at a minimum, the following requirements:
+
+(i) The RTA must develop and document an ongoing internal safety review process to ensure that all elements of an RTA's Public Transportation Agency Safety Plan are performing and being implemented as intended.
+
+(ii) The RTA's internal safety review process must ensure that the implementation of all elements of its Public Transportation Agency Safety Plan are reviewed within a three-year period.
+
+(iii) The RTA must notify the SSOA at least thirty (30) days before the RTA conducts an internal safety review of any aspect of the rail fixed guideway public transportation system and provide any checklists or procedures it will use during the review.
+
+(iv) The RTA must submit a report to the SSOA annually documenting the internal safety review activities and the status of subsequent findings and corrective actions.
+
+(6) Oversight of safety risk mitigations. The SSO program standard must explain the role of the SSOA in overseeing an RTA's development, implementation, and monitoring of safety risk mitigations related to rail fixed guideway transportation, including how the SSOA will track RTA safety risk mitigations. The SSO program standard must specify the frequency and format whereby the SSOA will receive and review information on RTA safety risk mitigation status and effectiveness.
+
+(7) Oversight of RTA compliance with the Public Transportation Safety Certification Training Program. The SSO program standard must explain how the SSOA will ensure that the RTA satisfies the requirements of the Public Transportation Safety Certification Training Program, including the RTA's designation of personnel and the RTA's identification of refresher training.
+
+(8) Triennial SSOA audits of RTA Public Transportation Agency Safety Plans. The SSO program standard must explain the process the SSOA will follow and the criteria the SSOA will apply in conducting a complete audit of the RTA's compliance with its Public Transportation Agency Safety Plan at least once every three years, in accordance with 49 U.S.C. 5329. Alternatively, the SSOA and RTA may agree that the SSOA will conduct its audit on an on-going basis over the three-year timeframe. The program standard must establish a procedure the SSOA and RTA will follow to manage findings and recommendations arising from the triennial audit.
+
+(9) Safety event notifications. The SSO program standard must establish requirements for RTA notifications of safety events occurring on the RTA's rail fixed guideway public transportation system, including notifications to the SSOA and to FTA. SSOA safety event notification requirements must address, specifically, the time limits for notification, methods of notification, and the nature of the information the RTA must submit to the SSOA.
+
+(10) Investigations. The SSO program standard must identify safety events that require an RTA to conduct an investigation. Also, the program standard must address how the SSOA will oversee an RTA's own internal investigation; the role of the SSOA in supporting any investigation conducted or findings and recommendations made by the NTSB or FTA; and procedures for protecting the confidentiality of the investigation reports.
+
+(11) Corrective actions. The program standard must explain the process and criteria by which the SSOA may order an RTA to develop and carry out a corrective action plan (CAP), and a procedure for the SSOA to review and approve a CAP. Also, the program standard must explain the SSOA's policy and practice for tracking and verifying an RTA's compliance with the CAP and managing any conflicts between the SSOA and RTA relating either to the development or execution of the CAP or the findings of an investigation.
+
+(12) Inspections. The SSO program standard must include or incorporate by reference a risk-based inspection program that:
+
+(i) Is commensurate with the number, size, and complexity of the rail fixed guideway public transportation systems that the State safety oversight agency oversees;
+
+(ii) Provides the SSOA with the authority and capability to enter the facilities of each rail fixed guideway public transportation system that the SSOA oversees to inspect infrastructure, equipment, records, personnel, and data, including the data that the RTA collects when identifying and evaluating safety risks; and
+
+(iii) Include policies and procedures regarding the access of the SSOA to conduct inspections of the rail fixed guideway public transportation system, including access for inspections that occur without advance notice to the RTA.
+
+(13) Vehicle maintenance and testing. The SSO program standard must include the process by which the SSOA will review an RTA's rail transit vehicle maintenance program, including the RTA's periodic testing of rail transit vehicle braking systems to ensure performance and to detect potential latent system failures.
+
+(14) Data collection. The program standard must include policies and procedures for collecting and reviewing data that the RTA uses when identifying hazards and assessing safety risk and explain how the SSOA uses collected data to support oversight of the RTA's safety risk management process. The frequency of collection shall be commensurate with the size and complexity of the rail fixed guideway public transportation system.
+
+(b) At least once a year an SSOA must submit its SSO program standard and any referenced program procedures to FTA, with an indication of any revisions made to the program standard since the last annual submittal. FTA will evaluate the SSOA's program standard as part of its continuous evaluation of the State Safety Oversight Program, and in preparing FTA's report to Congress on the certification status of that State Safety Oversight Program, in accordance with 49 U.S.C. 5329.
+
+§ 674.29 Public Transportation Agency Safety Plans: general requirements.
+
+(a) In determining whether to approve a Public Transportation Agency Safety Plan for a rail fixed guideway public transportation system, an SSOA must evaluate whether the Public Transportation Agency Safety Plan is compliant with 49 U.S.C. 5329(d) and part 673 of this chapter; is consistent with the National Public Transportation Safety Plan; and is in compliance with the SSO program standard set by the SSOA.
+
+(b) In an instance in which an SSOA does not approve a Public Transportation Agency Safety Plan, the SSOA must provide a written explanation and allow the RTA an opportunity to modify and resubmit its Public Transportation Agency Safety Plan for the SSOA's approval.
+
+§ 674.31 Triennial audits: general requirements.
+
+At least once every three years, an SSOA must conduct a complete audit of an RTA's compliance with its Public Transportation Agency Safety Plan. Alternatively, an SSOA may conduct the audit on an on-going basis over the three-year timeframe. If an SSOA audits an RTA's compliance on an ongoing basis, the SSOA shall issue interim audit reports at least annually. At the conclusion of the three-year audit cycle, the SSOA shall issue a report with findings and recommendations arising from the triennial or ongoing audit, which must include, at minimum, an analysis of the effectiveness of the Public Transportation Agency Safety Plan, recommendations for improvements, and a corrective action plan, if necessary or appropriate. The RTA must be given an opportunity to comment on the findings and recommendations.
+
+§ 674.33 Notifications of safety events.
+
+(a) An RTA must notify FTA and the SSOA within two hours of any safety event occurring on a rail fixed guideway public transportation system that results in one or more of the following:
+
+(1) Fatality
+
+(2) Two or more injuries
+
+(3) Derailment
+
+(4) Collision resulting in one or more injuries
+
+(5) Collision between two rail transit vehicles
+
+(6) Collision resulting in disabling damage to a rail transit vehicle
+
+(7) Evacuation for life safety reasons
+
+(8) Unintended train movement.
+
+(b) The two-hour notification requirement excludes criminal actions that result in fatalities or injuries, such as homicides and assaults.
+
+§ 674.35 Investigations.
+
+(a) An SSOA must investigate or require an investigation of any safety event that requires notification under § 674.33.
+
+(b) The SSOA is ultimately responsible for the sufficiency and thoroughness of all investigations, whether conducted by the SSOA or RTA. If an SSOA requires an RTA to investigate a safety event, the SSOA must conduct an independent review of the RTA's findings of causation. In any instance in which an RTA is conducting its own internal investigation of the safety event, the SSOA and the RTA must coordinate their investigations in accordance with the SSO program standard and any agreements in effect.
+
+(c) Within a reasonable time, an SSOA must issue a written report on its investigation of a safety event or review of an RTA's safety event investigation in accordance with the reporting requirements established by the SSOA. The report must describe the investigation activities; identify the factors that caused or contributed to the safety event; and set forth a corrective action plan, as necessary or appropriate. The SSOA must formally adopt the report of a safety event and transmit that report to the RTA for review and concurrence. If the RTA does not concur with an SSOA's report, the SSOA may allow the RTA to submit a written dissent from the report, which may be included in the report, at the discretion of the SSOA.
+
+(d) All personnel and contractors that conduct investigations on behalf of an SSOA must be trained to perform their functions in accordance with the Public Transportation Safety Certification Training Program.
+
+(e) The Administrator may conduct an independent investigation of any safety event or an independent review of an SSOA's or an RTA's findings of causation of a safety event.
+
+§ 674.37 Corrective action plans.
+
+(a) The SSOA must, at a minimum, require the development of a CAP for the following:
+
+(1) Results from investigations, in which the RTA or SSOA determined that causal or contributing factors require corrective action;
+
+(2) Findings of non-compliance from safety reviews and inspections performed by the SSOA; or
+
+(3) Findings of non-compliance from internal safety reviews performed by the RTA.
+
+(b) In any instance in which an RTA must develop and carry out a CAP, the SSOA must review and approve the CAP before the RTA carries out the plan. However, an exception may be made for immediate or emergency corrective actions that must be taken to ensure immediate safety, provided that the SSOA has been given timely notification, and the SSOA provides subsequent review and approval.
+
+(c) A CAP must describe, specifically, the actions the RTA will take to correct the deficiency identified by the CAP, the schedule for taking those actions, and the individuals responsible for taking those actions. The RTA must periodically report to the SSOA on its progress in carrying out the CAP. The SSOA may monitor the RTA's progress in carrying out the CAP through unannounced, on-site inspections, or any other means the SSOA deems necessary or appropriate.
+
+(d) In any instance in which a safety event on the RTA's rail fixed guideway public transportation system is the subject of an investigation by the NTSB or FTA, the SSOA must evaluate whether the findings or recommendations by the NTSB or FTA require a CAP by the RTA, and if so, the SSOA must order the RTA to develop and carry out a CAP.
+
+§ 674.39 State Safety Oversight Agency annual reporting to FTA.
+
+(a) On or before March 15 of each year, an SSOA must submit the following material to FTA:
+
+(1) The SSO program standard adopted in accordance with § 674.27, with an indication of any changes to the SSO program standard during the preceding twelve months;
+
+(2) Evidence that its designated personnel have completed the requirements of the Public Transportation Safety Certification Training Program, or, if in progress, the anticipated completion date of the training;
+
+(3) A publicly available report that summarizes its oversight activities for the preceding twelve months, describes the causal factors of safety events identified through investigation, and identifies the status of corrective actions, changes to Public Transportation Agency Safety Plans, and the level of effort by the SSOA in carrying out its oversight activities;
+
+(4) Final investigation reports for all safety events meeting one or more of the criteria specified at § 674.33;
+
+(5) A summary of the internal safety reviews conducted by RTAs during the previous twelve months, and the RTA's progress in carrying out CAPs arising under § 674.37(a)(3);
+
+(6) A summary of the triennial audits completed during the preceding twelve months, and the RTAs' progress in carrying out CAPs arising from triennial audits conducted in accordance with § 674.31;
+
+(7) Evidence that the SSOA has reviewed and approved any changes to the Public Transportation Agency Safety Plans during the preceding twelve months; and
+
+(8) A certification that the SSOA is in compliance with the requirements of this part.
+
+(b) These materials must be submitted electronically through a reporting system specified by FTA.
+
+§ 674.41 Conflicts of interest.
+
+(a) An SSOA must be financially and legally independent from any rail fixed guideway public transportation system under the oversight of the SSOA, unless the Administrator has issued a waiver of this requirement in accordance with § 674.13(b).
+
+(b) An SSOA may not employ any individual who provides services to a rail fixed guideway public transportation system under the oversight of the SSOA, unless the Administrator has issued a waiver of this requirement in accordance with § 674.13(b).
+
+(c) A contractor may not provide services to both an SSOA and a rail fixed guideway public transportation system under the oversight of that SSOA, unless the Administrator has issued a waiver of this prohibition.
