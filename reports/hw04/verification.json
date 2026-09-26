@@ -1,0 +1,173 @@
+{
+  "homework": "HW4",
+  "sid4": 3170,
+  "commit_hash": "66e83bf5b112ee58bd428723c7217e96b77d71d1",
+  "model_configuration": "Ollama qwen3:8b (local, Part 4 RAG); FastAPI + SQLAlchemy + MySQL (Parts 1-3)",
+  "seed": 3170,
+  "verify_seed": 263170,
+  "timestamp_utc": "2026-09-26T16:07:12.754944+00:00",
+  "checks": [
+    {
+      "check": "backend responds on PORT_BASE (8470)",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "protected route rejects anonymous access (401)",
+      "passed": true,
+      "skipped": false,
+      "detail": "got 401"
+    },
+    {
+      "check": "signup succeeds (201)",
+      "passed": true,
+      "skipped": false,
+      "detail": "got 201"
+    },
+    {
+      "check": "login succeeds and sets session cookie",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "authenticated /api/auth/me returns the logged-in user",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "fixed list endpoint returns data",
+      "passed": true,
+      "skipped": false,
+      "detail": "total=5000"
+    },
+    {
+      "check": "naive list endpoint returns data",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "naive and fixed agree on total row count",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "DB seeded with >= 5000 incidents (Part 3)",
+      "passed": true,
+      "skipped": false,
+      "detail": "total=5000"
+    },
+    {
+      "check": "naive issues more SQL statements than fixed at the same page size (N+1 present)",
+      "passed": true,
+      "skipped": false,
+      "detail": "naive=12 fixed=3"
+    },
+    {
+      "check": "routes table reachable and has >= 200 rows (Part 3)",
+      "passed": true,
+      "skipped": false,
+      "detail": "count=200"
+    },
+    {
+      "check": "logout clears the session (204)",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "session cookie is unusable after logout",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "reports/hw04/raw/n1_requests.csv exists",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "n1_requests.csv has 180 measured requests",
+      "passed": true,
+      "skipped": false,
+      "detail": "found 180"
+    },
+    {
+      "check": "reports/hw04/raw/index_explain.txt exists (Part 3.8)",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "reports/hw04/raw/n1_summary.md exists",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "code/seed_hw04.py exists (generator script)",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "code/rag.py exists",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "data/rag_docs/ has >= 5 documents",
+      "passed": true,
+      "skipped": false,
+      "detail": "found 5"
+    },
+    {
+      "check": "reports/hw04/raw/analysis.md exists (300-500 word analysis)",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "code/frontend/src/pages/Home.jsx exists",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "code/frontend/src/pages/Login.jsx exists",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "code/frontend/src/pages/CreateRecord.jsx exists",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "code/frontend/src/pages/UpdateRecord.jsx exists",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    },
+    {
+      "check": "code/frontend/src/pages/DeleteRecord.jsx exists",
+      "passed": true,
+      "skipped": false,
+      "detail": ""
+    }
+  ],
+  "summary": {
+    "passed": 26,
+    "failed": 0,
+    "skipped": 0,
+    "total": 26
+  }
+}
