@@ -1,0 +1,64 @@
+BAYWOOD TRANSIT AUTHORITY
+Incident Reporting Policy (Policy No. BTA-OPS-101)
+Effective 1 January 2025
+
+1. PURPOSE
+
+This policy establishes how field staff, operators, and dispatchers at Baywood
+Transit Authority (BTA) must record and escalate incidents that occur on any
+bus, light rail, or express route the Authority operates. It applies to every
+employee, contractor, and station agent who observes or responds to an
+incident while on duty.
+
+2. REQUIRED FIELDS
+
+Every incident report filed in the Authority's incident system must include:
+the routeId of the vehicle or service involved (the primary identifying
+field), the location where the incident occurred (the secondary field,
+recorded as a cross street, station name, or milepost), the submitterEmail
+of the employee filing the report, and a free-text description of at least
+25 characters. Reports missing any of these four fields are rejected by the
+intake system and returned to the submitter for correction.
+
+3. INCIDENT CATEGORIES
+
+Every incident must be classified into exactly one of four categories:
+Delay, Mechanical Failure, Accident-Collision, or Safety Hazard. The
+category determines which downstream office reviews the report and how
+quickly it must be escalated. Field staff select the category at the time
+of filing; the Safety Office may recategorize a report during review if the
+initial classification was incorrect, but the original category is retained
+in the record for audit purposes.
+
+4. FILING WINDOW
+
+Field staff must file the initial incident report within 30 minutes of the
+incident occurring, using the mobile incident app or, if unavailable, a
+radio call to dispatch followed by a written report before the end of the
+shift.
+
+5. ESCALATION TO THE SAFETY OFFICE
+
+Once a report has been filed, reports categorized as Accident-Collision or
+Safety Hazard must be escalated to the Safety Office within 2 hours of the
+report being filed in the system. This 2-hour clock starts when the report
+is submitted, not when the incident occurred, and applies regardless of
+severity. Delay and Mechanical Failure reports do not carry this 2-hour
+escalation requirement; they are reviewed during the Safety Office's normal
+weekly batch review instead, unless a Mechanical Failure report is also
+flagged Critical under the hazard severity procedure, in which case the
+hazard procedure's timeline governs instead.
+
+6. RECORD RETENTION
+
+Completed incident records, including all attachments and the escalation
+history, are retained for 5 years from the date of filing. After 5 years,
+records are archived to cold storage and are no longer editable, though they
+remain available to auditors on request.
+
+7. AMENDMENTS
+
+Any amendment to a filed report must be logged with the amending employee's
+submitterEmail and a timestamp. The original submitted version is never
+overwritten; amendments are stored as a new version linked to the original
+report.

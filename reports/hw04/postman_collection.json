@@ -1,0 +1,162 @@
+{
+  "info": {
+    "name": "HW4 - s3170 Transit Incidents API",
+    "description": "Import into Postman, run requests top to bottom inside one folder (Postman keeps cookies automatically, so Login must run before any protected request). Backend must be running: uvicorn app:app --port 8470 (from code/web_application), with the DB seeded via seed_hw04.py.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8470" },
+    { "key": "incidentId", "value": "1" },
+    { "key": "password", "value": "", "description": "Set this to your own test password before running Signup/Login. Not stored in the repo." }
+  ],
+  "item": [
+    {
+      "name": "1. Auth",
+      "item": [
+        {
+          "name": "Signup",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Lucky Priyadarshini\",\n  \"email\": \"lucky@example.com\",\n  \"password\": \"{{password}}\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/auth/signup", "host": ["{{baseUrl}}"], "path": ["api", "auth", "signup"] }
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"lucky@example.com\",\n  \"password\": \"{{password}}\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "auth", "login"] }
+          }
+        },
+        {
+          "name": "Me (current session)",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/auth/me", "host": ["{{baseUrl}}"], "path": ["api", "auth", "me"] }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/api/auth/logout", "host": ["{{baseUrl}}"], "path": ["api", "auth", "logout"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Incidents CRUD (screenshot these five)",
+      "item": [
+        {
+          "name": "POST - Create incident",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"route_id\": \"Line 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"submitter_email\": \"rider@example.com\",\n  \"description\": \"The 7:15am bus never arrived and riders waited forty minutes with no announcement.\",\n  \"category\": \"Delay\",\n  \"related_route_id\": 1\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/incidents", "host": ["{{baseUrl}}"], "path": ["api", "incidents"] }
+          }
+        },
+        {
+          "name": "GET - All incidents",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/incidents?page=1&page_size=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "incidents"],
+              "query": [{ "key": "page", "value": "1" }, { "key": "page_size", "value": "20" }]
+            }
+          }
+        },
+        {
+          "name": "GET - Incident by id",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/api/incidents/{{incidentId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "incidents", "{{incidentId}}"]
+            }
+          }
+        },
+        {
+          "name": "PUT - Update incident",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"route_id\": \"Line 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"submitter_email\": \"rider@example.com\",\n  \"description\": \"UPDATED: bus arrived 45 minutes late with no announcement.\",\n  \"category\": \"Delay\",\n  \"related_route_id\": 1\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/incidents/{{incidentId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "incidents", "{{incidentId}}"]
+            }
+          }
+        },
+        {
+          "name": "DELETE - Delete incident",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{baseUrl}}/api/incidents/{{incidentId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "incidents", "{{incidentId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. N+1 comparison (Part 3 screenshots)",
+      "item": [
+        {
+          "name": "naive - page_size 10",
+          "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/incidents?page=1&page_size=10&impl=naive", "host": ["{{baseUrl}}"], "path": ["api", "incidents"], "query": [{ "key": "page", "value": "1" }, { "key": "page_size", "value": "10" }, { "key": "impl", "value": "naive" }] } }
+        },
+        {
+          "name": "fixed - page_size 10",
+          "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/incidents?page=1&page_size=10&impl=fixed", "host": ["{{baseUrl}}"], "path": ["api", "incidents"], "query": [{ "key": "page", "value": "1" }, { "key": "page_size", "value": "10" }, { "key": "impl", "value": "fixed" }] } }
+        },
+        {
+          "name": "naive - page_size 50",
+          "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/incidents?page=1&page_size=50&impl=naive", "host": ["{{baseUrl}}"], "path": ["api", "incidents"], "query": [{ "key": "page", "value": "1" }, { "key": "page_size", "value": "50" }, { "key": "impl", "value": "naive" }] } }
+        },
+        {
+          "name": "fixed - page_size 50",
+          "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/incidents?page=1&page_size=50&impl=fixed", "host": ["{{baseUrl}}"], "path": ["api", "incidents"], "query": [{ "key": "page", "value": "1" }, { "key": "page_size", "value": "50" }, { "key": "impl", "value": "fixed" }] } }
+        },
+        {
+          "name": "naive - page_size 200",
+          "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/incidents?page=1&page_size=200&impl=naive", "host": ["{{baseUrl}}"], "path": ["api", "incidents"], "query": [{ "key": "page", "value": "1" }, { "key": "page_size", "value": "200" }, { "key": "impl", "value": "naive" }] } }
+        },
+        {
+          "name": "fixed - page_size 200",
+          "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/incidents?page=1&page_size=200&impl=fixed", "host": ["{{baseUrl}}"], "path": ["api", "incidents"], "query": [{ "key": "page", "value": "1" }, { "key": "page_size", "value": "200" }, { "key": "impl", "value": "fixed" }] } }
+        }
+      ]
+    },
+    {
+      "name": "4. Routes (reference)",
+      "item": [
+        {
+          "name": "GET - All routes",
+          "request": { "method": "GET", "url": { "raw": "{{baseUrl}}/api/routes", "host": ["{{baseUrl}}"], "path": ["api", "routes"] } }
+        }
+      ]
+    }
+  ]
+}

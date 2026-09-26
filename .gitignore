@@ -8,3 +8,14 @@ reports/hw01/~$report.docx
 # HW3: hand-saved originals used only to build data/corpus/
 data/corpus_raw/
 reports/hw03/raw/tinyshakespeare_input.txt
+
+# HW4: secrets and build artefacts
+.env
+*.env
+!.env.example
+node_modules/
+dist/
+.vite/
+
+# Local assistant state (never commit)
+.claude/

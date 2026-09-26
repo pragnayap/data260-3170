@@ -1,0 +1,17 @@
+# AI_USE.md -- HW4
+
+**1. What did you use an AI assistant for, and what did you do yourself?**
+
+I used Claude Code to implement HW4 end-to-end against the plan I set in `reports/hw04/PLAN.md`: the MySQL schema and SQLAlchemy models, the email/password auth with server-side sessions, the incident CRUD API, the naive-vs-fixed N+1 endpoints and `measure_n1.py`, the React client (Login/Home/CreateRecord/UpdateRecord/DeleteRecord), and the Part 4 RAG pipeline. I made the architectural decisions up front (keep local MySQL vs. Docker, cookie/session design, which column to add an index on, folder layout matching HW1-3), reviewed the generated code and the assignment spec against each other, and caught that the strict `db_session_basede26` variable-naming requirement and the hardware/model footer note weren't in my original plan before work started. I ran the actual verification myself by hitting the API and reading real database output rather than trusting a description of what the code should do. The Postman screenshots, browser click-through of the React app, and final PDF assembly are the parts left for me to do directly, since the assistant doesn't have a browser or Postman available to it in this environment.
+
+**2. One AI-produced output that was wrong or unsuitable, or one thing you independently verified.**
+
+The first version of `POST /api/incidents` crashed with `TypeError: 'routeId' is an invalid keyword argument for Incident`. The Pydantic schema (`IncidentBase`) uses camelCase field names with snake_case aliases (`routeId` -> `route_id`) so the API's JSON shape matches the assignment's field names, but the create/update handlers called `body.model_dump(by_alias=False)`, which serializes by field name (`routeId`), not alias -- so the dict handed to the SQLAlchemy model had the wrong keys entirely.
+
+**3. How did you detect the problem or verify the result?**
+
+By actually exercising the endpoint, not by reading the code and assuming it was correct: I ran the backend locally and sent a real `POST /api/incidents` request with `curl`, which came back `Internal Server Error`, and the traceback in the uvicorn log pointed straight at the `model_dump` call. I applied the same check to every other piece of Part 2/3 -- signup, login, protected-route 401s, full CRUD, the naive/fixed SQL-statement counts, and the EXPLAIN plan before/after adding the `category` index -- all against the live MySQL database and a running server, not inferred from the source.
+
+**4. What did you change, and why does it work now?**
+
+Changed `model_dump(by_alias=False)` to `model_dump(by_alias=True)` in both the create and update handlers (`code/web_application/routers/incidents.py`), so the dict passed to `models.Incident(**data)` uses the snake_case alias keys that actually match the SQLAlchemy column names. A related bug in `code/seed_hw04.py` had the same root cause of a wrong assumption rather than a wrong lookup: it assumed newly-inserted route IDs were contiguous from 1, which broke once `AUTO_INCREMENT` had already advanced from earlier manual testing. The fix was to `TRUNCATE` both tables before seeding (which resets MySQL's auto-increment counter) and to build an explicit `{route_id: route_name}` dict instead of doing index arithmetic on a list. Re-running `measure_n1.py` and `verify_hw04.py` afterward confirmed both fixes: incident creation now succeeds, and the seeded database has exactly the expected 200 routes / 5,000 incidents with real foreign-key references.

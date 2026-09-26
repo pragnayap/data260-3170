@@ -1,0 +1,52 @@
+BAYWOOD TRANSIT AUTHORITY
+Mechanical Failure and Preventive Maintenance Standard (Standard No. BTA-MNT-150)
+Revised June 2025
+
+1. PURPOSE
+
+This standard sets the preventive maintenance intervals and out-of-service
+thresholds intended to reduce Mechanical Failure incidents across the BTA
+bus and light rail fleet.
+
+2. PREVENTIVE MAINTENANCE INTERVALS
+
+Brake systems on all bus and light rail vehicles must be inspected every
+6,000 miles of operation. Wheel and axle assemblies on light rail vehicles
+must be inspected every 12,000 miles of operation. Door mechanisms on all
+vehicle types must be inspected every 3,000 miles or every 60 days,
+whichever comes first. Propulsion systems (engines on buses, traction
+motors on light rail vehicles) are inspected every 15,000 miles.
+
+3. OUT-OF-SERVICE THRESHOLDS
+
+Any vehicle found with brake pad or shoe wear beyond 80 percent of its rated
+service life must be pulled from service immediately and may not return to
+revenue service until the brake component is replaced and reinspected. A
+vehicle with a door mechanism that fails to fully close on 2 separate trips
+in the same day must also be pulled from service immediately, regardless of
+how recently it passed its scheduled door inspection.
+
+4. COMMON CAUSES OF MECHANICAL FAILURE INCIDENTS
+
+Based on the Authority's most recent annual maintenance review, Mechanical
+Failure incidents break down by root cause as follows: brake system issues
+account for approximately 38 percent of reported mechanical failures, door
+mechanism issues account for approximately 22 percent, propulsion system
+issues account for approximately 19 percent, and all other causes
+(electrical, HVAC, and miscellaneous) account for the remaining 21 percent.
+
+5. REPEAT-FAILURE INSPECTION RULE
+
+Any single vehicle that is the subject of 2 or more Mechanical Failure
+incident reports within a rolling 90-day period must undergo a full
+inspection by a certified mechanic before it is returned to revenue
+service, even if each individual failure was minor and the vehicle was not
+otherwise due for scheduled maintenance.
+
+6. PARTS AND DOCUMENTATION
+
+Every brake and wheel/axle inspection must be logged with the routeId the
+vehicle was most recently assigned to, the odometer reading at inspection,
+and the inspecting mechanic's employee number. These logs are retained
+alongside incident records under the Authority's standard 5-year retention
+schedule.

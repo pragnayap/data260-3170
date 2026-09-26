@@ -1,0 +1,53 @@
+BAYWOOD TRANSIT AUTHORITY
+Route and Service Standards (Standard No. BTA-SVC-200)
+Revised March 2025
+
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE TARGET
+
+The Authority's system-wide on-time performance target is that at least 90
+percent of scheduled trips must arrive within 5 minutes of their scheduled
+time at each timepoint along the route. On-time performance is measured
+monthly per route and published in the Authority's quarterly service
+report.
+
+3. DELAY LOGGING THRESHOLD
+
+Any single trip that arrives more than 10 minutes later than its scheduled
+time must be logged as an incident under the Delay category, per the
+Incident Reporting Policy. Delays of 10 minutes or less are tracked in the
+scheduling system but do not require an individual incident report.
+
+4. MISSED TRIPS AND SERVICE REVIEW
+
+If a route experiences 3 consecutive missed trips within a single service
+day, the route is automatically flagged for a service review by the
+Service Planning division. A service review examines whether the published
+schedule, vehicle assignment, or operator staffing for that route needs to
+be adjusted. Service reviews are completed within 15 business days of being
+triggered.
+
+5. VEHICLE ASSIGNMENT
+
+Light rail routes (BTA-2xx) are assigned only to rail vehicles that have
+passed the wheel and axle inspection described in the Authority's mechanical
+maintenance standard within the preceding 12,000 miles of operation. Bus
+routes (BTA-1xx and BTA-3xx) are assigned buses that have passed a current
+brake inspection.
+
+6. HOLIDAY AND REDUCED SERVICE
+
+On the six designated holidays each year, all BTA-1xx and BTA-3xx routes
+operate on a reduced Sunday schedule. BTA-2xx light rail lines continue to
+operate on their normal weekday schedule on holidays, except for the
+December 25 service suspension used for scheduled system-wide track
+maintenance.

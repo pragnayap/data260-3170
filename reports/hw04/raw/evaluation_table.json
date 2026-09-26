@@ -1,0 +1,164 @@
+[
+  {
+    "qid": "q1_single_chunk",
+    "config": "A",
+    "correct_retrieval": null,
+    "correct_answer": true,
+    "grounded": null,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='Baywood Transit Authority routes must meet a system-wide on-time performance target of 90%.'"
+  },
+  {
+    "qid": "q1_single_chunk",
+    "config": "B",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": null,
+    "notes": "answer[:100]=\"The Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent o\""
+  },
+  {
+    "qid": "q1_single_chunk",
+    "config": "C",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": null,
+    "notes": "answer[:100]=\"Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of sc\""
+  },
+  {
+    "qid": "q2_dual_fact",
+    "config": "A",
+    "correct_retrieval": null,
+    "correct_answer": true,
+    "grounded": null,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='The State Transit Safety Oversight body must be notified **immediately** following a fatal collision'"
+  },
+  {
+    "qid": "q2_dual_fact",
+    "config": "B",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='The State Transit Safety Oversight body must be notified within **4 hours** of the fatal collision. '"
+  },
+  {
+    "qid": "q2_dual_fact",
+    "config": "C",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='The State Transit Safety Oversight body must be notified within 4 hours of the incident occurring [S'"
+  },
+  {
+    "qid": "q3_overlap_disambiguation",
+    "config": "A",
+    "correct_retrieval": null,
+    "correct_answer": false,
+    "grounded": null,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='The incident must be reported to the Safety Office **as soon as possible**, typically **within 24 ho'"
+  },
+  {
+    "qid": "q3_overlap_disambiguation",
+    "config": "B",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='An Accident-Collision or Safety Hazard incident must be reported to the Safety Office **within 2 hou'"
+  },
+  {
+    "qid": "q3_overlap_disambiguation",
+    "config": "C",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='An Accident-Collision or Safety Hazard incident must be reported to the Safety Office within 2 hours'"
+  },
+  {
+    "qid": "q4_ambiguous",
+    "config": "A",
+    "correct_retrieval": null,
+    "correct_answer": true,
+    "grounded": null,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='The resolution time for an incident at Baywood Transit Authority can vary depending on the nature an'"
+  },
+  {
+    "qid": "q4_ambiguous",
+    "config": "B",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='The provided context does not specify how long it takes to resolve an incident at Baywood Transit Au'"
+  },
+  {
+    "qid": "q4_ambiguous",
+    "config": "C",
+    "correct_retrieval": true,
+    "correct_answer": false,
+    "grounded": true,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='I cannot answer this question from the provided documents'"
+  },
+  {
+    "qid": "q5_not_in_corpus",
+    "config": "A",
+    "correct_retrieval": null,
+    "correct_answer": false,
+    "grounded": null,
+    "refused_when_needed": null,
+    "notes": "answer[:100]=\"I don't have access to the most current financial data for Baywood Transit Authority. For the most a\""
+  },
+  {
+    "qid": "q5_not_in_corpus",
+    "config": "B",
+    "correct_retrieval": true,
+    "correct_answer": false,
+    "grounded": true,
+    "refused_when_needed": null,
+    "notes": "answer[:100]=\"The provided context does not include information about Baywood Transit Authority's total annual ope\""
+  },
+  {
+    "qid": "q5_not_in_corpus",
+    "config": "C",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "notes": "answer[:100]='I cannot answer this question from the provided documents'"
+  },
+  {
+    "qid": "q6_unrelated",
+    "config": "A",
+    "correct_retrieval": null,
+    "correct_answer": false,
+    "grounded": null,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='The boiling point of water at sea level is 100 degrees Celsius.'"
+  },
+  {
+    "qid": "q6_unrelated",
+    "config": "B",
+    "correct_retrieval": true,
+    "correct_answer": false,
+    "grounded": true,
+    "refused_when_needed": null,
+    "notes": "answer[:100]='The boiling point of water at sea level is 100 degrees Celsius.'"
+  },
+  {
+    "qid": "q6_unrelated",
+    "config": "C",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "notes": "answer[:100]='I cannot answer this question from the provided documents'"
+  }
+]

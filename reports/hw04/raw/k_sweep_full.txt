@@ -1,0 +1,221 @@
+--- retrieval for q1_single_chunk (sweep k=1) (top_k=1) ----------------------------------------
+Q: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.7036  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+
+
+====================================================================================================
+k=1
+====================================================================================================
+[SYSTEM PROMPT]
+You are a grounded question-answering assistant for Baywood Transit Authority documentation. You are given a QUESTION and numbered CONTEXT excerpts pulled from the Authority's policy documents. Follow these rules exactly:
+1. Use ONLY the information in the numbered CONTEXT excerpts below. Do not use any outside knowledge, even if you know the general answer.
+2. Every factual claim in your answer must be followed by the source number it came from, in the form [Source N].
+3. If the CONTEXT excerpts do not contain enough information to fully answer the QUESTION, do not guess and do not answer partially. Instead reply with exactly this sentence and nothing else -- no extra words, no punctuation added, no explanation:
+I cannot answer this question from the provided documents
+4. Keep your answer concise: 1-4 sentences unless the question explicitly asks for a list.
+
+[USER PROMPT]
+CONTEXT:
+[Source 1] (route_service_standards.txt)
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+QUESTION: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+
+ANSWER:
+
+[RAW MODEL RESPONSE]
+The provided context does not contain information about system-wide on-time performance targets. I cannot answer this question from the provided documents
+
+[ANSWER]
+The provided context does not contain information about system-wide on-time performance targets. I cannot answer this question from the provided documents
+[latency_s=12.915]
+--- retrieval for q1_single_chunk (sweep k=3) (top_k=3) ----------------------------------------
+Q: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.7036  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+   2    0.5860  route_service_standards.txt             route_service_standards_001   ermanently discontinued. 2. ON-TIME PERFORMANCE TARGET The Authority's system-wi
+   3    0.5779  route_service_standards.txt             route_service_standards_003   nes whether the published schedule, vehicle assignment, or operator staffing for
+
+
+====================================================================================================
+k=3
+====================================================================================================
+[SYSTEM PROMPT]
+You are a grounded question-answering assistant for Baywood Transit Authority documentation. You are given a QUESTION and numbered CONTEXT excerpts pulled from the Authority's policy documents. Follow these rules exactly:
+1. Use ONLY the information in the numbered CONTEXT excerpts below. Do not use any outside knowledge, even if you know the general answer.
+2. Every factual claim in your answer must be followed by the source number it came from, in the form [Source N].
+3. If the CONTEXT excerpts do not contain enough information to fully answer the QUESTION, do not guess and do not answer partially. Instead reply with exactly this sentence and nothing else -- no extra words, no punctuation added, no explanation:
+I cannot answer this question from the provided documents
+4. Keep your answer concise: 1-4 sentences unless the question explicitly asks for a list.
+
+[USER PROMPT]
+CONTEXT:
+[Source 1] (route_service_standards.txt)
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+[Source 2] (route_service_standards.txt)
+ermanently
+discontinued.
+
+2. ON-TIME PERFORMANCE TARGET
+
+The Authority's system-wide on-time performance target is that at least 90
+percent of scheduled trips must arrive within 5 minutes of their scheduled
+time at each timepoint along the route. On-time performance is measured
+monthly per route and published in the Authority's quarterly service
+report.
+
+3. DELAY LOGGING THRESHOLD
+
+Any single trip that arrives more than 10 minutes later than its scheduled
+time must be logged as an incident
+
+[Source 3] (route_service_standards.txt)
+nes whether the published
+schedule, vehicle assignment, or operator staffing for that route needs to
+be adjusted. Service reviews are completed within 15 business days of being
+triggered.
+
+5. VEHICLE ASSIGNMENT
+
+Light rail routes (BTA-2xx) are assigned only to rail vehicles that have
+passed the wheel and axle inspection described in the Authority's mechanical
+maintenance standard within the preceding 12,000 miles of operation. Bus
+routes (BTA-1xx and BTA-3xx) are assigned buses that have passed
+
+QUESTION: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+
+ANSWER:
+
+[RAW MODEL RESPONSE]
+Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minutes of their scheduled time at each timepoint along the route [Source 2].
+
+[ANSWER]
+Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minutes of their scheduled time at each timepoint along the route [Source 2].
+[latency_s=21.954]
+--- retrieval for q1_single_chunk (sweep k=5) (top_k=5) ----------------------------------------
+Q: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.7036  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+   2    0.5860  route_service_standards.txt             route_service_standards_001   ermanently discontinued. 2. ON-TIME PERFORMANCE TARGET The Authority's system-wi
+   3    0.5779  route_service_standards.txt             route_service_standards_003   nes whether the published schedule, vehicle assignment, or operator staffing for
+   4    0.5674  incident_reporting_policy.txt           incident_reporting_policy_000  1. PURPOSE This policy establishes how field staff, operators, and dispatchers a
+   5    0.5014  route_service_standards.txt             route_service_standards_004   and BTA-3xx) are assigned buses that have passed a current brake inspection. 6. 
+
+
+====================================================================================================
+k=5
+====================================================================================================
+[SYSTEM PROMPT]
+You are a grounded question-answering assistant for Baywood Transit Authority documentation. You are given a QUESTION and numbered CONTEXT excerpts pulled from the Authority's policy documents. Follow these rules exactly:
+1. Use ONLY the information in the numbered CONTEXT excerpts below. Do not use any outside knowledge, even if you know the general answer.
+2. Every factual claim in your answer must be followed by the source number it came from, in the form [Source N].
+3. If the CONTEXT excerpts do not contain enough information to fully answer the QUESTION, do not guess and do not answer partially. Instead reply with exactly this sentence and nothing else -- no extra words, no punctuation added, no explanation:
+I cannot answer this question from the provided documents
+4. Keep your answer concise: 1-4 sentences unless the question explicitly asks for a list.
+
+[USER PROMPT]
+CONTEXT:
+[Source 1] (route_service_standards.txt)
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+[Source 2] (route_service_standards.txt)
+ermanently
+discontinued.
+
+2. ON-TIME PERFORMANCE TARGET
+
+The Authority's system-wide on-time performance target is that at least 90
+percent of scheduled trips must arrive within 5 minutes of their scheduled
+time at each timepoint along the route. On-time performance is measured
+monthly per route and published in the Authority's quarterly service
+report.
+
+3. DELAY LOGGING THRESHOLD
+
+Any single trip that arrives more than 10 minutes later than its scheduled
+time must be logged as an incident
+
+[Source 3] (route_service_standards.txt)
+nes whether the published
+schedule, vehicle assignment, or operator staffing for that route needs to
+be adjusted. Service reviews are completed within 15 business days of being
+triggered.
+
+5. VEHICLE ASSIGNMENT
+
+Light rail routes (BTA-2xx) are assigned only to rail vehicles that have
+passed the wheel and axle inspection described in the Authority's mechanical
+maintenance standard within the preceding 12,000 miles of operation. Bus
+routes (BTA-1xx and BTA-3xx) are assigned buses that have passed
+
+[Source 4] (incident_reporting_policy.txt)
+1. PURPOSE
+
+This policy establishes how field staff, operators, and dispatchers at Baywood
+Transit Authority (BTA) must record and escalate incidents that occur on any
+bus, light rail, or express route the Authority operates. It applies to every
+employee, contractor, and station agent who observes or responds to an
+incident while on duty.
+
+2. REQUIRED FIELDS
+
+Every incident report filed in the Authority's incident system must include:
+the routeId of the vehicle or service involved (the primary
+
+[Source 5] (route_service_standards.txt)
+and BTA-3xx) are assigned buses that have passed a current
+brake inspection.
+
+6. HOLIDAY AND REDUCED SERVICE
+
+On the six designated holidays each year, all BTA-1xx and BTA-3xx routes
+operate on a reduced Sunday schedule. BTA-2xx light rail lines continue to
+operate on their normal weekday schedule on holidays, except for the
+December 25 service suspension used for scheduled system-wide track
+maintenance.
+
+QUESTION: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+
+ANSWER:
+
+[RAW MODEL RESPONSE]
+Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minutes of their scheduled time at each timepoint along the route [Source 2].
+
+[ANSWER]
+Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minutes of their scheduled time at each timepoint along the route [Source 2].
+[latency_s=22.536]

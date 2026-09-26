@@ -1,0 +1,68 @@
+[
+  {
+    "page_size": 10,
+    "impl": "naive",
+    "sql_statements_per_request": [
+      12
+    ],
+    "p50_ms": 27.9,
+    "p95_ms": 87.33,
+    "p99_ms": 142.96,
+    "mean_ms": 38.94
+  },
+  {
+    "page_size": 10,
+    "impl": "fixed",
+    "sql_statements_per_request": [
+      3
+    ],
+    "p50_ms": 13.52,
+    "p95_ms": 28.57,
+    "p99_ms": 413.83,
+    "mean_ms": 33.93
+  },
+  {
+    "page_size": 50,
+    "impl": "naive",
+    "sql_statements_per_request": [
+      44
+    ],
+    "p50_ms": 42.78,
+    "p95_ms": 57.59,
+    "p99_ms": 61.16,
+    "mean_ms": 44.79
+  },
+  {
+    "page_size": 50,
+    "impl": "fixed",
+    "sql_statements_per_request": [
+      3
+    ],
+    "p50_ms": 16.97,
+    "p95_ms": 19.46,
+    "p99_ms": 19.96,
+    "mean_ms": 17.23
+  },
+  {
+    "page_size": 200,
+    "impl": "naive",
+    "sql_statements_per_request": [
+      126
+    ],
+    "p50_ms": 110.99,
+    "p95_ms": 119.64,
+    "p99_ms": 143.73,
+    "mean_ms": 110.44
+  },
+  {
+    "page_size": 200,
+    "impl": "fixed",
+    "sql_statements_per_request": [
+      3
+    ],
+    "p50_ms": 38.95,
+    "p95_ms": 40.71,
+    "p99_ms": 62.26,
+    "mean_ms": 39.55
+  }
+]

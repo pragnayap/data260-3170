@@ -1,0 +1,371 @@
+HW4 RUN LOG -- Pragnaya Priyadarshini (SID4=3170)
+Generated: 2026-09-24 23:50:19 PDT
+======================================================================
+
+--- Environment ---
+$ node -v && npm -v
+v24.21.0
+11.19.0
+$ python --version (in .venv)
+Python 3.12.13
+$ mysql --version
+mysql  Ver 9.4.0 for macos14.7 on x86_64 (Homebrew)
+
+======================================================================
+PART 2/3 -- $ .venv/bin/python code/seed_hw04.py
+======================================================================
+[23:49:58] seed_hw04.py starting, SEED=3170
+[23:49:58] truncating incidents/routes (resets auto-increment)...
+[23:49:58] inserting 200 routes...
+[23:49:58] generating 5000 incidents...
+[23:49:58] inserting 5000 incidents...
+[23:49:58] done in 0.4s -- routes=200 incidents=5000
+
+======================================================================
+PART 3.8 -- Index EXPLAIN before/after
+======================================================================
+=== Query under test ===
+SELECT * FROM incidents WHERE category = 'Delay';
+
+=== EXPLAIN BEFORE adding index on category ===
+id	select_type	table	partitions	type	possible_keys	key	key_len	ref	rows	filtered	Extra
+1	SIMPLE	incidents	NULL	ALL	NULL	NULL	NULL	NULL	4901	10.00	Using where
+
+=== Adding index ===
+CREATE INDEX ix_incidents_category ON incidents (category);
+index created
+
+=== EXPLAIN AFTER adding index on category ===
+id	select_type	table	partitions	type	possible_keys	key	key_len	ref	rows	filtered	Extra
+1	SIMPLE	incidents	NULL	ref	ix_incidents_category	ix_incidents_category	162	const	1286	100.00	NULL
+
+======================================================================
+PART 3 -- $ .venv/bin/python code/measure_n1.py  (180 requests)
+======================================================================
+[23:50:05] logged in as n1-measure@example.com
+[23:50:05] backend reachable, 5000 incidents in DB
+[23:50:05] measuring page_size=10 impl=naive (30 requests)
+[23:50:05] measuring page_size=10 impl=fixed (30 requests)
+[23:50:06] measuring page_size=50 impl=naive (30 requests)
+[23:50:07] measuring page_size=50 impl=fixed (30 requests)
+[23:50:07] measuring page_size=200 impl=naive (30 requests)
+[23:50:10] measuring page_size=200 impl=fixed (30 requests)
+[23:50:11] wrote 180 raw rows -> /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw04/raw/n1_requests.csv
+[23:50:11] wrote summary -> /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw04/raw/n1_summary.json
+[23:50:11] wrote markdown summary -> /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw04/raw/n1_summary.md
+
+| Page size | Version | SQL stmts/req | p50 (ms) | p95 (ms) | p99 (ms) |
+|---|---|---|---|---|---|
+| 10 | naive | 12 | 12.98 | 13.62 | 13.79 |
+| 10 | fixed | 3 | 8.16 | 8.54 | 8.68 |
+| 50 | naive | 44 | 36.81 | 39.07 | 39.27 |
+| 50 | fixed | 3 | 13.59 | 15.82 | 29.54 |
+| 200 | naive | 126 | 103.76 | 107.03 | 119.81 |
+| 200 | fixed | 3 | 31.47 | 37.49 | 52.27 |
+
+### Speed-up (fixed vs. naive), by page size
+
+- page_size=10: naive p50=12.98ms, fixed p50=8.16ms -> **1.59x** faster
+- page_size=50: naive p50=36.81ms, fixed p50=13.59ms -> **2.71x** faster
+- page_size=200: naive p50=103.76ms, fixed p50=31.47ms -> **3.30x** faster
+
+
+======================================================================
+VERIFICATION -- $ .venv/bin/python code/verify_hw04.py
+======================================================================
+HW4 verification -- SID4=3170 SEED=3170 VERIFY_SEED=263170
+commit: 927a4355abb09d5aa169479eb85659d3ceae2405
+
+  [PASS] backend responds on PORT_BASE (8470)
+  [PASS] protected route rejects anonymous access (401) -- got 401
+  [PASS] signup succeeds (201) -- got 201
+  [PASS] login succeeds and sets session cookie
+  [PASS] authenticated /api/auth/me returns the logged-in user
+  [PASS] fixed list endpoint returns data -- total=5000
+  [PASS] naive list endpoint returns data
+  [PASS] naive and fixed agree on total row count
+  [PASS] DB seeded with >= 5000 incidents (Part 3) -- total=5000
+  [PASS] naive issues more SQL statements than fixed at the same page size (N+1 present) -- naive=12 fixed=3
+  [PASS] routes table reachable and has >= 200 rows (Part 3) -- count=200
+  [PASS] logout clears the session (204)
+  [PASS] session cookie is unusable after logout
+  [PASS] reports/hw04/raw/n1_requests.csv exists
+  [PASS] n1_requests.csv has 180 measured requests -- found 180
+  [PASS] reports/hw04/raw/index_explain.txt exists (Part 3.8)
+  [PASS] reports/hw04/raw/n1_summary.md exists
+  [PASS] code/seed_hw04.py exists (generator script)
+  [SKIP] code/rag.py exists
+  [SKIP] data/rag_docs/ has >= 5 documents -- found 0
+  [SKIP] reports/hw04/raw/analysis.md exists (300-500 word analysis)
+  [PASS] code/frontend/src/pages/Home.jsx exists
+  [PASS] code/frontend/src/pages/Login.jsx exists
+  [PASS] code/frontend/src/pages/CreateRecord.jsx exists
+  [PASS] code/frontend/src/pages/UpdateRecord.jsx exists
+  [PASS] code/frontend/src/pages/DeleteRecord.jsx exists
+
+23 passed, 0 failed, 3 skipped -> /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw04/verification.json
+
+======================================================================
+PART 4 -- $ .venv/bin/python code/rag.py  (grounded RAG, Ollama qwen3:8b)
+======================================================================
+
+====================================================================================================
+[23:54:10] HW4 Part 4 - grounded RAG  |  SEED 3170  VERIFY_SEED 263170
+====================================================================================================
+[23:54:10] corpus dir      : /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/.claude/worktrees/agent-adcbca918ebed2e43/data/rag_docs
+[23:54:10] embed model     : sentence-transformers/all-MiniLM-L6-v2
+[23:54:10] llm model       : qwen3:8b (via Ollama, localhost:11434)
+[23:54:10] top_k (baseline): 3
+[23:54:10] candidate_k (C) : 5  ->  filtered to <= 3
+[23:54:10] refusal string  : 'I cannot answer this question from the provided documents'
+/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'validate_default' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'validate_default' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+LLM is explicitly disabled. Using MockLLM.
+
+====================================================================================================
+[23:54:21] CHUNKING data/rag_docs/
+====================================================================================================
+[23:54:21]   accident_collision_investigation.txt           2493 chars -> 6 chunks
+[23:54:21]   incident_reporting_policy.txt                  2816 chars -> 7 chunks
+[23:54:21]   mechanical_failure_maintenance.txt             2296 chars -> 5 chunks
+[23:54:21]   route_service_standards.txt                    2209 chars -> 5 chunks
+[23:54:21]   safety_hazard_procedures.txt                   2591 chars -> 6 chunks
+[23:54:21] total chunks: 29
+
+====================================================================================================
+[23:54:21] BUILDING in-memory SimpleVectorStore index
+====================================================================================================
+[23:54:26] embedded 29 chunks in 5.10s
+[23:54:26] ModelClient ready: qwen3:8b @ http://localhost:11434
+
+====================================================================================================
+[23:54:26] RETRIEVAL + CONFIGS A / B / C, per question
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+[23:54:26] QUESTION q1_single_chunk: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+----------------------------------------------------------------------------------------------------
+[23:54:26] kind=single_chunk  expected_sources=['route_service_standards.txt']  must_refuse=False
+--- retrieval for q1_single_chunk (top_k=3) ----------------------------------------
+Q: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.7036  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+   2    0.5860  route_service_standards.txt             route_service_standards_001   ermanently discontinued. 2. ON-TIME PERFORMANCE TARGET The Authority's system-wi
+   3    0.5779  route_service_standards.txt             route_service_standards_003   nes whether the published schedule, vehicle assignment, or operator staffing for
+
+[23:54:27] config A (no RAG): calling qwen3:8b ...
+[turn 1] input_tokens=59 output_tokens=20 total_tokens=79
+[23:54:32]   -> (5.4s) Baywood Transit Authority routes must meet a system-wide on-time performance target of 90%.
+[23:54:32] config B (basic RAG, top-3 raw): calling qwen3:8b ...
+[turn 2] input_tokens=414 output_tokens=42 total_tokens=456
+[23:54:53]   -> (21.4s) The Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 m
+[23:54:54] config C (context-engineered, 3 survivors of 5 candidates): calling qwen3:8b ...
+[turn 3] input_tokens=600 output_tokens=45 total_tokens=645
+[23:55:26]   -> (31.6s) Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minut
+
+----------------------------------------------------------------------------------------------------
+[23:55:26] QUESTION q2_dual_fact: How soon after a fatal collision must the State Transit Safety Oversight body be notified, and how many days does an accident investigator have to determine probable cause?
+----------------------------------------------------------------------------------------------------
+[23:55:26] kind=two_chunk  expected_sources=['accident_collision_investigation.txt']  must_refuse=False
+--- retrieval for q2_dual_fact (top_k=3) ----------------------------------------
+Q: How soon after a fatal collision must the State Transit Safety Oversight body be notified, and how many days does an accident investigator have to determine probable cause?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.8303  accident_collision_investigation.txt    accident_collision_investigation_002  IGHT NOTIFICATION FOR FATALITIES If an Accident-Collision incident results in a 
+   2    0.6615  accident_collision_investigation.txt    accident_collision_investigation_001  ent that results in an injury to a passenger, employee, or third party must be r
+   3    0.6024  accident_collision_investigation.txt    accident_collision_investigation_003  tor must determine a probable cause and issue a final investigation report withi
+
+[23:55:27] config A (no RAG): calling qwen3:8b ...
+[turn 4] input_tokens=68 output_tokens=34 total_tokens=102
+[23:55:36]   -> (9.4s) The State Transit Safety Oversight body must be notified **immediately** following a fatal collision. An accident investigator typically has
+[23:55:36] config B (basic RAG, top-3 raw): calling qwen3:8b ...
+[turn 5] input_tokens=391 output_tokens=41 total_tokens=432
+[23:55:58]   -> (21.6s) The State Transit Safety Oversight body must be notified within **4 hours** of the fatal collision. 
+
+An accident investigator has **30 days
+[23:55:59] config C (context-engineered, 3 survivors of 5 candidates): calling qwen3:8b ...
+[turn 6] input_tokens=583 output_tokens=40 total_tokens=623
+[23:56:23]   -> (24.4s) The State Transit Safety Oversight body must be notified within 4 hours of the incident occurring [Source 1]. An accident investigator has 3
+
+----------------------------------------------------------------------------------------------------
+[23:56:23] QUESTION q3_overlap_disambiguation: How soon must an Accident-Collision or Safety Hazard incident be reported to the Safety Office, and does that clock start from when the incident happened or from when the report is filed?
+----------------------------------------------------------------------------------------------------
+[23:56:23] kind=cross_doc_overlap  expected_sources=['incident_reporting_policy.txt', 'safety_hazard_procedures.txt', 'accident_collision_investigation.txt']  must_refuse=False
+--- retrieval for q3_overlap_disambiguation (top_k=3) ----------------------------------------
+Q: How soon must an Accident-Collision or Safety Hazard incident be reported to the Safety Office, and does that clock start from when the incident happened or from when the report is filed?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.8133  accident_collision_investigation.txt    accident_collision_investigation_001  ent that results in an injury to a passenger, employee, or third party must be r
+   2    0.7254  incident_reporting_policy.txt           incident_reporting_policy_003  dit purposes. 4. FILING WINDOW Field staff must file the initial incident report
+   3    0.6692  accident_collision_investigation.txt    accident_collision_investigation_002  IGHT NOTIFICATION FOR FATALITIES If an Accident-Collision incident results in a 
+
+[23:56:24] config A (no RAG): calling qwen3:8b ...
+[turn 7] input_tokens=74 output_tokens=58 total_tokens=132
+[23:56:38]   -> (14.4s) The incident must be reported to the Safety Office **as soon as possible**, typically **within 24 hours** of the incident. The clock starts 
+[23:56:38] config B (basic RAG, top-3 raw): calling qwen3:8b ...
+[turn 8] input_tokens=403 output_tokens=73 total_tokens=476
+[23:57:08]   -> (29.5s) An Accident-Collision or Safety Hazard incident must be reported to the Safety Office **within 2 hours of the incident occurring**. 
+
+The 2-
+[23:57:09] config C (context-engineered, 3 survivors of 5 candidates): calling qwen3:8b ...
+[turn 9] input_tokens=592 output_tokens=44 total_tokens=636
+[23:57:34]   -> (25.3s) An Accident-Collision or Safety Hazard incident must be reported to the Safety Office within 2 hours of the report being filed in the system
+
+----------------------------------------------------------------------------------------------------
+[23:57:34] QUESTION q4_ambiguous: How long does it take to resolve an incident at Baywood Transit Authority?
+----------------------------------------------------------------------------------------------------
+[23:57:34] kind=ambiguous  expected_sources=['safety_hazard_procedures.txt', 'accident_collision_investigation.txt', 'route_service_standards.txt']  must_refuse=False
+--- retrieval for q4_ambiguous (top_k=3) ----------------------------------------
+Q: How long does it take to resolve an incident at Baywood Transit Authority?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.5679  incident_reporting_policy.txt           incident_reporting_policy_000  1. PURPOSE This policy establishes how field staff, operators, and dispatchers a
+   2    0.4836  safety_hazard_procedures.txt            safety_hazard_procedures_000  1. SCOPE This procedure governs how Baywood Transit Authority identifies, classi
+   3    0.4561  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+
+[23:57:35] config A (no RAG): calling qwen3:8b ...
+[turn 10] input_tokens=53 output_tokens=65 total_tokens=118
+[23:57:51]   -> (15.7s) The resolution time for an incident at Baywood Transit Authority can vary depending on the nature and severity of the incident. Minor issues
+[23:57:51] config B (basic RAG, top-3 raw): calling qwen3:8b ...
+[turn 11] input_tokens=395 output_tokens=71 total_tokens=466
+[23:58:20]   -> (29.0s) The provided context does not specify how long it takes to resolve an incident at Baywood Transit Authority. The information available outli
+[23:58:21] config C (context-engineered, 3 survivors of 5 candidates): calling qwen3:8b ...
+[turn 12] input_tokens=582 output_tokens=10 total_tokens=592
+[23:58:38]   -> (17.5s) I cannot answer this question from the provided documents
+
+----------------------------------------------------------------------------------------------------
+[23:58:38] QUESTION q5_not_in_corpus: What is Baywood Transit Authority's total annual operating budget?
+----------------------------------------------------------------------------------------------------
+[23:58:38] kind=not_in_corpus  expected_sources=[]  must_refuse=True
+--- retrieval for q5_not_in_corpus (top_k=3) ----------------------------------------
+Q: What is Baywood Transit Authority's total annual operating budget?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.5126  incident_reporting_policy.txt           incident_reporting_policy_000  1. PURPOSE This policy establishes how field staff, operators, and dispatchers a
+   2    0.4894  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+   3    0.3900  route_service_standards.txt             route_service_standards_003   nes whether the published schedule, vehicle assignment, or operator staffing for
+
+[23:58:39] config A (no RAG): calling qwen3:8b ...
+[turn 13] input_tokens=50 output_tokens=45 total_tokens=95
+[23:58:50]   -> (11.4s) I don't have access to the most current financial data for Baywood Transit Authority. For the most accurate and up-to-date information, I re
+[23:58:50] config B (basic RAG, top-3 raw): calling qwen3:8b ...
+[turn 14] input_tokens=402 output_tokens=19 total_tokens=421
+[23:59:04]   -> (13.8s) The provided context does not include information about Baywood Transit Authority's total annual operating budget.
+[23:59:05] config C (context-engineered, 3 survivors of 5 candidates): calling qwen3:8b ...
+[turn 15] input_tokens=587 output_tokens=10 total_tokens=597
+[23:59:19]   -> (13.7s) I cannot answer this question from the provided documents
+
+----------------------------------------------------------------------------------------------------
+[23:59:19] QUESTION q6_unrelated: What is the boiling point of water at sea level, in degrees Celsius?
+----------------------------------------------------------------------------------------------------
+[23:59:19] kind=unrelated  expected_sources=[]  must_refuse=True
+--- retrieval for q6_unrelated (top_k=3) ----------------------------------------
+Q: What is the boiling point of water at sea level, in degrees Celsius?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.1288  safety_hazard_procedures.txt            safety_hazard_procedures_000  1. SCOPE This procedure governs how Baywood Transit Authority identifies, classi
+   2    0.1048  safety_hazard_procedures.txt            safety_hazard_procedures_001  age: - Critical: an imminent risk to life or an active structural failure, such 
+   3    0.1005  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+
+[23:59:20] config A (no RAG): calling qwen3:8b ...
+[turn 16] input_tokens=53 output_tokens=17 total_tokens=70
+[23:59:24]   -> (4.5s) The boiling point of water at sea level is 100 degrees Celsius.
+[23:59:24] config B (basic RAG, top-3 raw): calling qwen3:8b ...
+[turn 17] input_tokens=398 output_tokens=17 total_tokens=415
+[23:59:43]   -> (18.3s) The boiling point of water at sea level is 100 degrees Celsius.
+[23:59:43]   config C dropped 2 candidate(s): safety_hazard_procedures_002 (low_relevance_score (0.0557 < floor 0.0708)); safety_hazard_procedures_003 (low_relevance_score (0.0428 < floor 0.0708))
+[23:59:43] config C (context-engineered, 3 survivors of 5 candidates): calling qwen3:8b ...
+[turn 18] input_tokens=588 output_tokens=10 total_tokens=598
+[00:00:02]   -> (18.4s) I cannot answer this question from the provided documents
+
+----------------------------------------------------------------------------------------------------
+[00:00:02] K-SWEEP on q1_single_chunk: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+----------------------------------------------------------------------------------------------------
+--- retrieval for q1_single_chunk (sweep k=1) (top_k=1) ----------------------------------------
+Q: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.7036  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+
+[00:00:03] sweep k=1: calling qwen3:8b ...
+[turn 19] input_tokens=352 output_tokens=25 total_tokens=377
+[00:00:15]   -> (12.9s) The provided context does not contain information about system-wide on-time performance targets. I cannot answer this question from the prov
+--- retrieval for q1_single_chunk (sweep k=3) (top_k=3) ----------------------------------------
+Q: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.7036  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+   2    0.5860  route_service_standards.txt             route_service_standards_001   ermanently discontinued. 2. ON-TIME PERFORMANCE TARGET The Authority's system-wi
+   3    0.5779  route_service_standards.txt             route_service_standards_003   nes whether the published schedule, vehicle assignment, or operator staffing for
+
+[00:00:16] sweep k=3: calling qwen3:8b ...
+[turn 20] input_tokens=600 output_tokens=45 total_tokens=645
+[00:00:38]   -> (22.0s) Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minut
+--- retrieval for q1_single_chunk (sweep k=5) (top_k=5) ----------------------------------------
+Q: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.7036  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+   2    0.5860  route_service_standards.txt             route_service_standards_001   ermanently discontinued. 2. ON-TIME PERFORMANCE TARGET The Authority's system-wi
+   3    0.5779  route_service_standards.txt             route_service_standards_003   nes whether the published schedule, vehicle assignment, or operator staffing for
+   4    0.5674  incident_reporting_policy.txt           incident_reporting_policy_000  1. PURPOSE This policy establishes how field staff, operators, and dispatchers a
+   5    0.5014  route_service_standards.txt             route_service_standards_004   and BTA-3xx) are assigned buses that have passed a current brake inspection. 6. 
+
+[00:00:39] sweep k=5: calling qwen3:8b ...
+[turn 21] input_tokens=827 output_tokens=45 total_tokens=872
+[00:01:02]   -> (22.5s) Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minut
+
+----------------------------------------------------------------------------------------------------
+[00:01:02] K-SWEEP SUMMARY
+----------------------------------------------------------------------------------------------------
+[00:01:02] k=1: scores=[0.703617]  answer[:100]='The provided context does not contain information about system-wide on-time performance targets. I c'
+[00:01:02] k=3: scores=[0.703617, 0.586011, 0.577899]  answer[:100]="Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of sc"
+[00:01:02] k=5: scores=[0.703617, 0.586011, 0.577899, 0.567437, 0.501409]  answer[:100]="Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of sc"
+
+[exit] turns=21 cumulative_input_tokens=8071 cumulative_output_tokens=776 cumulative_total_tokens=8847
+
+====================================================================================================
+[00:01:02] DONE
+====================================================================================================
+[00:01:02] raw output dir : /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/.claude/worktrees/agent-adcbca918ebed2e43/reports/hw04/raw
+[00:01:02] chunks         : 29
+[00:01:02] generations    : 18
+[00:01:02] sweep records  : 3
+
+======================================================================
+RE-VERIFICATION (after Part 4 landed) -- $ .venv/bin/python code/verify_hw04.py
+======================================================================
+HW4 verification -- SID4=3170 SEED=3170 VERIFY_SEED=263170
+commit: 927a4355abb09d5aa169479eb85659d3ceae2405
+
+  [PASS] backend responds on PORT_BASE (8470)
+  [PASS] protected route rejects anonymous access (401) -- got 401
+  [PASS] signup succeeds (201) -- got 201
+  [PASS] login succeeds and sets session cookie
+  [PASS] authenticated /api/auth/me returns the logged-in user
+  [PASS] fixed list endpoint returns data -- total=5000
+  [PASS] naive list endpoint returns data
+  [PASS] naive and fixed agree on total row count
+  [PASS] DB seeded with >= 5000 incidents (Part 3) -- total=5000
+  [PASS] naive issues more SQL statements than fixed at the same page size (N+1 present) -- naive=12 fixed=3
+  [PASS] routes table reachable and has >= 200 rows (Part 3) -- count=200
+  [PASS] logout clears the session (204)
+  [PASS] session cookie is unusable after logout
+  [PASS] reports/hw04/raw/n1_requests.csv exists
+  [PASS] n1_requests.csv has 180 measured requests -- found 180
+  [PASS] reports/hw04/raw/index_explain.txt exists (Part 3.8)
+  [PASS] reports/hw04/raw/n1_summary.md exists
+  [PASS] code/seed_hw04.py exists (generator script)
+  [PASS] code/rag.py exists
+  [PASS] data/rag_docs/ has >= 5 documents -- found 5
+  [PASS] reports/hw04/raw/analysis.md exists (300-500 word analysis)
+  [PASS] code/frontend/src/pages/Home.jsx exists
+  [PASS] code/frontend/src/pages/Login.jsx exists
+  [PASS] code/frontend/src/pages/CreateRecord.jsx exists
+  [PASS] code/frontend/src/pages/UpdateRecord.jsx exists
+  [PASS] code/frontend/src/pages/DeleteRecord.jsx exists
+
+26 passed, 0 failed, 0 skipped -> /Users/ritchit/Desktop/DATA 260--Agentic AI/data260-3170/reports/hw04/verification.json

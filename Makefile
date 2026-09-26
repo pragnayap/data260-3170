@@ -7,7 +7,8 @@ PY      ?= .venv/bin/python
 PORT    ?= 8470
 APP_DIR := code/web_application
 
-.PHONY: help install nltk run corpus corpus-verify warmup rag metrics verify-hw03 hw3 clean-hw3
+.PHONY: help install nltk run corpus corpus-verify warmup rag metrics verify-hw03 hw3 clean-hw3 \
+        seed-hw04 n1-hw04 verify-hw04 frontend-install frontend-dev hw4
 
 help:
 	@echo "install       install deps from requirements.txt, then the NLTK data"
@@ -20,6 +21,12 @@ help:
 	@echo "metrics       recompute reports/hw03/METRICS.md from reports/hw03/raw/"
 	@echo "verify-hw03   run the HW3 self-check -> reports/hw03/verification.json"
 	@echo "hw3           corpus -> rag -> metrics -> verify-hw03"
+	@echo "seed-hw04     seed MySQL with 5,000 incidents + 200 routes from SEED"
+	@echo "n1-hw04       run the 180-request N+1 measurement -> reports/hw04/raw/"
+	@echo "verify-hw04   run the HW4 self-check -> reports/hw04/verification.json"
+	@echo "frontend-install  npm install in code/frontend"
+	@echo "frontend-dev  run the Vite dev server on 8471"
+	@echo "hw4           seed-hw04 -> n1-hw04 -> verify-hw04 (backend must already be running: make run)"
 
 install:
 	$(PY) -m pip install -r requirements.txt
@@ -64,3 +71,23 @@ hw3: corpus rag metrics verify-hw03
 clean-hw3:
 	rm -f reports/hw03/raw/retrieval_rows.* reports/hw03/raw/chunk_stats.json \
 	      reports/hw03/raw/query_vectors.json reports/hw03/METRICS.md
+
+seed-hw04:
+	$(PY) code/seed_hw04.py
+
+n1-hw04:
+	$(PY) code/measure_n1.py
+
+verify-hw04:
+	$(PY) code/verify_hw04.py
+
+frontend-install:
+	cd code/frontend && npm install
+
+frontend-dev:
+	cd code/frontend && npm run dev
+
+# Assumes the backend is already running (`make run` in another terminal) --
+# unlike hw3, this can't boot+measure+shut-down in one shot because the N+1
+# measurement needs a live server the whole time.
+hw4: seed-hw04 n1-hw04 verify-hw04

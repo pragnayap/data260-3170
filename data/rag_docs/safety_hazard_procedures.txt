@@ -1,0 +1,59 @@
+BAYWOOD TRANSIT AUTHORITY
+Safety Hazard Identification and Response Procedures (Procedure No. BTA-SAF-310)
+Effective 1 January 2025
+
+1. SCOPE
+
+This procedure governs how Baywood Transit Authority identifies, classifies,
+and resolves safety hazards reported under the Safety Hazard incident
+category. A hazard is any condition with the potential to cause injury,
+property damage, or service disruption, whether or not an injury has
+actually occurred yet.
+
+2. HAZARD SEVERITY LEVELS
+
+Every hazard reported to the Safety Office is assigned one of four severity
+levels at the time of triage:
+
+  - Critical: an imminent risk to life or an active structural failure,
+    such as an exposed electrical conductor, a collapsed platform section,
+    or a rail with a visible fracture.
+  - High: a serious but not immediately life-threatening condition, such as
+    a malfunctioning door that can trap a passenger, or a station stairway
+    with a broken handrail.
+  - Medium: a condition that increases risk over time if unaddressed, such
+    as worn platform edge tiles or a flickering station light.
+  - Low: a minor condition with negligible safety impact, such as cosmetic
+    damage to a station bench.
+
+3. DISCOVERY-TO-REPORT WINDOW FOR CRITICAL HAZARDS
+
+Any hazard assessed as Critical must be reported to the Safety Office within
+2 hours of the hazard being discovered, not from when a formal report is
+filed in the incident system. This discovery-based clock is distinct from
+the report-filing-based escalation described in the Incident Reporting
+Policy, and Safety Office staff are trained to use the earlier of the two
+timestamps when both apply to the same event.
+
+4. RESOLUTION TIMELINES
+
+Once triaged, hazards must be resolved or mitigated within the following
+windows: Critical hazards within 24 hours of discovery; High hazards within
+5 business days; Medium hazards within 30 calendar days; Low hazards within
+90 calendar days or at the next scheduled maintenance visit, whichever comes
+first. "Mitigated" means a temporary control, such as a barrier or reduced
+speed order, has been put in place even if full repair takes longer.
+
+5. REPEAT HAZARD TRACKING
+
+If the same hazard location generates 2 or more Medium or higher severity
+reports within any 180-day period, the location is placed on the Repeat
+Hazard Watch List and receives a full engineering inspection regardless of
+the current severity of the most recent report.
+
+6. ESCALATION BEYOND THE SAFETY OFFICE
+
+Critical hazards that remain unresolved 24 hours after discovery are
+automatically escalated to the Accountable Executive, who must either
+authorize emergency repair funding or order the affected route segment
+closed until the hazard is mitigated.

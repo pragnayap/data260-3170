@@ -23,12 +23,19 @@ from typing import List, Optional
 
 import uvicorn
 from fastapi import FastAPI, HTTPException, Response
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, EmailStr, Field
 from starlette.middleware.sessions import SessionMiddleware
 
 import auth
+from database import Base, engine
+from routers import auth_db, incidents, routes
+
+# HW4 Part 2: create the MySQL tables on boot if they don't exist yet. Actual
+# row data (seed_hw04.py) is a separate step -- this only creates schema.
+Base.metadata.create_all(bind=engine)
 
 PORT_BASE = 8470  # 8000 + (3170 mod 900), fixed for the semester
 
@@ -43,7 +50,20 @@ SESSION_SECRET = os.environ.get("S3170_SESSION_SECRET") or "s3170-dev-secret-do-
 # address, where a Secure cookie would be dropped.
 COOKIE_HTTPS_ONLY = os.environ.get("S3170_COOKIE_INSECURE", "") != "1"
 
-app = FastAPI(title="Transit Incident API", version="3.0.0")
+app = FastAPI(title="Transit Incident API", version="4.0.0")
+
+# HW4 Part 1: the React dev server runs on a different origin (8471), so it
+# needs CORS explicitly. allow_credentials=True is what lets the browser send
+# the session cookie cross-origin; "*" is rejected by browsers once credentials
+# are involved, so the origin has to be listed exactly.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:8471", "http://127.0.0.1:8471"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+    expose_headers=["X-SQL-Statements"],
+)
 
 # SessionMiddleware signs the session into a cookie and always marks it
 # HttpOnly; https_only adds Secure and same_site adds SameSite, so the
@@ -61,6 +81,11 @@ app.add_middleware(
 
 # Auth routes (/, /login, /logout, /dashboard) come from their own router.
 app.include_router(auth.router)
+
+# HW4: MySQL-backed email/password auth (React) and incident CRUD.
+app.include_router(auth_db.router)
+app.include_router(incidents.router)
+app.include_router(routes.router)
 
 # Serve files directly from this folder (no separate static/ subfolder, no
 # renaming) so the existing HW1 files stay exactly where/what they are.

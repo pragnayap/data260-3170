@@ -1,0 +1,55 @@
+BAYWOOD TRANSIT AUTHORITY
+Accident and Collision Investigation Procedures (Procedure No. BTA-SAF-320)
+Effective 1 January 2025
+
+1. SCOPE
+
+This procedure applies to every incident classified under the
+Accident-Collision category: a collision between a BTA vehicle and another
+vehicle, a pedestrian, a cyclist, another BTA vehicle, or a fixed object,
+as well as any onboard accident that causes a passenger or employee injury
+without an external collision (for example, a fall caused by hard braking).
+
+2. IMMEDIATE NOTIFICATION FOR INJURY COLLISIONS
+
+Any Accident-Collision incident that results in an injury to a passenger,
+employee, or third party must be reported to the Safety Office within 2
+hours of the incident occurring. This 2-hour window is measured from the
+moment of the collision itself, not from when the written report is later
+filed, which distinguishes it from the report-filing-based clock used for
+non-injury Accident-Collision and Safety Hazard reports under the Incident
+Reporting Policy.
+
+3. EXTERNAL OVERSIGHT NOTIFICATION FOR FATALITIES
+
+If an Accident-Collision incident results in a fatality, the Safety Office
+must additionally notify the State Transit Safety Oversight body within 4
+hours of the incident occurring, separate from and in addition to the
+2-hour internal Safety Office notification described above.
+
+4. INVESTIGATION AND PROBABLE CAUSE
+
+Every Accident-Collision incident is assigned an investigator from the
+Safety Office. The investigator must determine a probable cause and issue a
+final investigation report within 30 days of the incident. Each
+investigation classifies the collision as either Preventable, meaning BTA
+operator action or vehicle condition contributed to the cause, or
+Non-preventable, meaning the cause originated entirely outside BTA's
+control, such as a third-party driver running a red light.
+
+5. VEHICLE HOLD DURING INVESTIGATION
+
+A vehicle involved in an Accident-Collision incident that results in injury
+or a fatality is held out of revenue service until the assigned investigator
+completes an initial inspection, which must occur within 24 hours of the
+incident. The vehicle may be returned to service after that inspection
+unless mechanical involvement is suspected, in which case it remains held
+until the maintenance standard's inspection requirements are also
+satisfied.
+
+6. DRIVER AND OPERATOR STATEMENTS
+
+Any BTA operator involved in an Accident-Collision incident must provide a
+written statement to the assigned investigator within 48 hours of the
+incident, separate from the initial incident report filed under the
+Incident Reporting Policy.

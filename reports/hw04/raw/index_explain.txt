@@ -1,0 +1,14 @@
+=== Query under test ===
+SELECT * FROM incidents WHERE category = 'Delay';
+
+=== EXPLAIN BEFORE adding index on category ===
+id	select_type	table	partitions	type	possible_keys	key	key_len	ref	rows	filtered	Extra
+1	SIMPLE	incidents	NULL	ALL	NULL	NULL	NULL	NULL	4901	10.00	Using where
+
+=== Adding index ===
+CREATE INDEX ix_incidents_category ON incidents (category);
+index created
+
+=== EXPLAIN AFTER adding index on category ===
+id	select_type	table	partitions	type	possible_keys	key	key_len	ref	rows	filtered	Extra
+1	SIMPLE	incidents	NULL	ref	ix_incidents_category	ix_incidents_category	162	const	1286	100.00	NULL

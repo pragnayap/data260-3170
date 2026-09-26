@@ -1,0 +1,48 @@
+--- retrieval for q1_single_chunk (top_k=3) ----------------------------------------
+Q: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.7036  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+   2    0.5860  route_service_standards.txt             route_service_standards_001   ermanently discontinued. 2. ON-TIME PERFORMANCE TARGET The Authority's system-wi
+   3    0.5779  route_service_standards.txt             route_service_standards_003   nes whether the published schedule, vehicle assignment, or operator staffing for
+
+--- retrieval for q2_dual_fact (top_k=3) ----------------------------------------
+Q: How soon after a fatal collision must the State Transit Safety Oversight body be notified, and how many days does an accident investigator have to determine probable cause?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.8303  accident_collision_investigation.txt    accident_collision_investigation_002  IGHT NOTIFICATION FOR FATALITIES If an Accident-Collision incident results in a 
+   2    0.6615  accident_collision_investigation.txt    accident_collision_investigation_001  ent that results in an injury to a passenger, employee, or third party must be r
+   3    0.6024  accident_collision_investigation.txt    accident_collision_investigation_003  tor must determine a probable cause and issue a final investigation report withi
+
+--- retrieval for q3_overlap_disambiguation (top_k=3) ----------------------------------------
+Q: How soon must an Accident-Collision or Safety Hazard incident be reported to the Safety Office, and does that clock start from when the incident happened or from when the report is filed?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.8133  accident_collision_investigation.txt    accident_collision_investigation_001  ent that results in an injury to a passenger, employee, or third party must be r
+   2    0.7254  incident_reporting_policy.txt           incident_reporting_policy_003  dit purposes. 4. FILING WINDOW Field staff must file the initial incident report
+   3    0.6692  accident_collision_investigation.txt    accident_collision_investigation_002  IGHT NOTIFICATION FOR FATALITIES If an Accident-Collision incident results in a 
+
+--- retrieval for q4_ambiguous (top_k=3) ----------------------------------------
+Q: How long does it take to resolve an incident at Baywood Transit Authority?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.5679  incident_reporting_policy.txt           incident_reporting_policy_000  1. PURPOSE This policy establishes how field staff, operators, and dispatchers a
+   2    0.4836  safety_hazard_procedures.txt            safety_hazard_procedures_000  1. SCOPE This procedure governs how Baywood Transit Authority identifies, classi
+   3    0.4561  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+
+--- retrieval for q5_not_in_corpus (top_k=3) ----------------------------------------
+Q: What is Baywood Transit Authority's total annual operating budget?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.5126  incident_reporting_policy.txt           incident_reporting_policy_000  1. PURPOSE This policy establishes how field staff, operators, and dispatchers a
+   2    0.4894  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+   3    0.3900  route_service_standards.txt             route_service_standards_003   nes whether the published schedule, vehicle assignment, or operator staffing for
+
+--- retrieval for q6_unrelated (top_k=3) ----------------------------------------
+Q: What is the boiling point of water at sea level, in degrees Celsius?
+rank     score  source                                  chunk_id                      preview
+---------------------------------------------------------------------------------------------
+   1    0.1288  safety_hazard_procedures.txt            safety_hazard_procedures_000  1. SCOPE This procedure governs how Baywood Transit Authority identifies, classi
+   2    0.1048  safety_hazard_procedures.txt            safety_hazard_procedures_001  age: - Critical: an imminent risk to life or an active structural failure, such 
+   3    0.1005  route_service_standards.txt             route_service_standards_000   1. ROUTE IDENTIFIER SCHEME Every route operated by Baywood Transit Authority is 
+

@@ -1,0 +1,828 @@
+
+====================================================================================================
+q1_single_chunk / config A / k_used=0
+====================================================================================================
+[SYSTEM PROMPT]
+You are a helpful assistant. Answer the user's question directly and concisely.
+
+[USER PROMPT]
+What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+
+[RAW MODEL RESPONSE]
+Baywood Transit Authority routes must meet a system-wide on-time performance target of 90%.
+
+[ANSWER (think-stripped)]
+Baywood Transit Authority routes must meet a system-wide on-time performance target of 90%.
+[latency_s=5.43  timestamp=2026-09-24T23:54:32]
+
+====================================================================================================
+q1_single_chunk / config B / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+Answer the user's question. Context that may or may not be relevant is provided below; use it if it helps.
+
+[USER PROMPT]
+Context:
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+ermanently
+discontinued.
+
+2. ON-TIME PERFORMANCE TARGET
+
+The Authority's system-wide on-time performance target is that at least 90
+percent of scheduled trips must arrive within 5 minutes of their scheduled
+time at each timepoint along the route. On-time performance is measured
+monthly per route and published in the Authority's quarterly service
+report.
+
+3. DELAY LOGGING THRESHOLD
+
+Any single trip that arrives more than 10 minutes later than its scheduled
+time must be logged as an incident
+
+nes whether the published
+schedule, vehicle assignment, or operator staffing for that route needs to
+be adjusted. Service reviews are completed within 15 business days of being
+triggered.
+
+5. VEHICLE ASSIGNMENT
+
+Light rail routes (BTA-2xx) are assigned only to rail vehicles that have
+passed the wheel and axle inspection described in the Authority's mechanical
+maintenance standard within the preceding 12,000 miles of operation. Bus
+routes (BTA-1xx and BTA-3xx) are assigned buses that have passed
+
+Question: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+
+[RAW MODEL RESPONSE]
+The Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minutes of their scheduled time at each timepoint along the route.
+
+[ANSWER (think-stripped)]
+The Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minutes of their scheduled time at each timepoint along the route.
+[latency_s=21.409  timestamp=2026-09-24T23:54:53]
+
+====================================================================================================
+q1_single_chunk / config C / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+You are a grounded question-answering assistant for Baywood Transit Authority documentation. You are given a QUESTION and numbered CONTEXT excerpts pulled from the Authority's policy documents. Follow these rules exactly:
+1. Use ONLY the information in the numbered CONTEXT excerpts below. Do not use any outside knowledge, even if you know the general answer.
+2. Every factual claim in your answer must be followed by the source number it came from, in the form [Source N].
+3. If the CONTEXT excerpts do not contain enough information to fully answer the QUESTION, do not guess and do not answer partially. Instead reply with exactly this sentence and nothing else -- no extra words, no punctuation added, no explanation:
+I cannot answer this question from the provided documents
+4. Keep your answer concise: 1-4 sentences unless the question explicitly asks for a list.
+
+[USER PROMPT]
+CONTEXT:
+[Source 1] (route_service_standards.txt)
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+[Source 2] (route_service_standards.txt)
+ermanently
+discontinued.
+
+2. ON-TIME PERFORMANCE TARGET
+
+The Authority's system-wide on-time performance target is that at least 90
+percent of scheduled trips must arrive within 5 minutes of their scheduled
+time at each timepoint along the route. On-time performance is measured
+monthly per route and published in the Authority's quarterly service
+report.
+
+3. DELAY LOGGING THRESHOLD
+
+Any single trip that arrives more than 10 minutes later than its scheduled
+time must be logged as an incident
+
+[Source 3] (route_service_standards.txt)
+nes whether the published
+schedule, vehicle assignment, or operator staffing for that route needs to
+be adjusted. Service reviews are completed within 15 business days of being
+triggered.
+
+5. VEHICLE ASSIGNMENT
+
+Light rail routes (BTA-2xx) are assigned only to rail vehicles that have
+passed the wheel and axle inspection described in the Authority's mechanical
+maintenance standard within the preceding 12,000 miles of operation. Bus
+routes (BTA-1xx and BTA-3xx) are assigned buses that have passed
+
+QUESTION: What system-wide on-time performance target must Baywood Transit Authority routes meet, according to the service standards?
+
+ANSWER:
+
+[RAW MODEL RESPONSE]
+Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minutes of their scheduled time at each timepoint along the route [Source 2].
+
+[ANSWER (think-stripped)]
+Baywood Transit Authority's system-wide on-time performance target is that at least 90 percent of scheduled trips must arrive within 5 minutes of their scheduled time at each timepoint along the route [Source 2].
+[latency_s=31.594  timestamp=2026-09-24T23:55:26]
+
+====================================================================================================
+q2_dual_fact / config A / k_used=0
+====================================================================================================
+[SYSTEM PROMPT]
+You are a helpful assistant. Answer the user's question directly and concisely.
+
+[USER PROMPT]
+How soon after a fatal collision must the State Transit Safety Oversight body be notified, and how many days does an accident investigator have to determine probable cause?
+
+[RAW MODEL RESPONSE]
+The State Transit Safety Oversight body must be notified **immediately** following a fatal collision. An accident investigator typically has **30 days** to determine probable cause.
+
+[ANSWER (think-stripped)]
+The State Transit Safety Oversight body must be notified **immediately** following a fatal collision. An accident investigator typically has **30 days** to determine probable cause.
+[latency_s=9.376  timestamp=2026-09-24T23:55:36]
+
+====================================================================================================
+q2_dual_fact / config B / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+Answer the user's question. Context that may or may not be relevant is provided below; use it if it helps.
+
+[USER PROMPT]
+Context:
+IGHT NOTIFICATION FOR FATALITIES
+
+If an Accident-Collision incident results in a fatality, the Safety Office
+must additionally notify the State Transit Safety Oversight body within 4
+hours of the incident occurring, separate from and in addition to the
+2-hour internal Safety Office notification described above.
+
+4. INVESTIGATION AND PROBABLE CAUSE
+
+Every Accident-Collision incident is assigned an investigator from the
+Safety Office. The investigator must determine a probable cause and issue
+
+ent that results in an injury to a passenger,
+employee, or third party must be reported to the Safety Office within 2
+hours of the incident occurring. This 2-hour window is measured from the
+moment of the collision itself, not from when the written report is later
+filed, which distinguishes it from the report-filing-based clock used for
+non-injury Accident-Collision and Safety Hazard reports under the Incident
+Reporting Policy.
+
+3. EXTERNAL OVERSIGHT NOTIFICATION FOR FATALITIES
+
+If an
+
+tor must determine a probable cause and issue a
+final investigation report within 30 days of the incident. Each
+investigation classifies the collision as either Preventable, meaning BTA
+operator action or vehicle condition contributed to the cause, or
+Non-preventable, meaning the cause originated entirely outside BTA's
+control, such as a third-party driver running a red light.
+
+5. VEHICLE HOLD DURING INVESTIGATION
+
+A vehicle involved in an Accident-Collision incident that results in injury
+or a
+
+Question: How soon after a fatal collision must the State Transit Safety Oversight body be notified, and how many days does an accident investigator have to determine probable cause?
+
+[RAW MODEL RESPONSE]
+The State Transit Safety Oversight body must be notified within **4 hours** of the fatal collision. 
+
+An accident investigator has **30 days** to determine probable cause and issue a final investigation report.
+
+[ANSWER (think-stripped)]
+The State Transit Safety Oversight body must be notified within **4 hours** of the fatal collision. 
+
+An accident investigator has **30 days** to determine probable cause and issue a final investigation report.
+[latency_s=21.625  timestamp=2026-09-24T23:55:58]
+
+====================================================================================================
+q2_dual_fact / config C / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+You are a grounded question-answering assistant for Baywood Transit Authority documentation. You are given a QUESTION and numbered CONTEXT excerpts pulled from the Authority's policy documents. Follow these rules exactly:
+1. Use ONLY the information in the numbered CONTEXT excerpts below. Do not use any outside knowledge, even if you know the general answer.
+2. Every factual claim in your answer must be followed by the source number it came from, in the form [Source N].
+3. If the CONTEXT excerpts do not contain enough information to fully answer the QUESTION, do not guess and do not answer partially. Instead reply with exactly this sentence and nothing else -- no extra words, no punctuation added, no explanation:
+I cannot answer this question from the provided documents
+4. Keep your answer concise: 1-4 sentences unless the question explicitly asks for a list.
+
+[USER PROMPT]
+CONTEXT:
+[Source 1] (accident_collision_investigation.txt)
+IGHT NOTIFICATION FOR FATALITIES
+
+If an Accident-Collision incident results in a fatality, the Safety Office
+must additionally notify the State Transit Safety Oversight body within 4
+hours of the incident occurring, separate from and in addition to the
+2-hour internal Safety Office notification described above.
+
+4. INVESTIGATION AND PROBABLE CAUSE
+
+Every Accident-Collision incident is assigned an investigator from the
+Safety Office. The investigator must determine a probable cause and issue
+
+[Source 2] (accident_collision_investigation.txt)
+ent that results in an injury to a passenger,
+employee, or third party must be reported to the Safety Office within 2
+hours of the incident occurring. This 2-hour window is measured from the
+moment of the collision itself, not from when the written report is later
+filed, which distinguishes it from the report-filing-based clock used for
+non-injury Accident-Collision and Safety Hazard reports under the Incident
+Reporting Policy.
+
+3. EXTERNAL OVERSIGHT NOTIFICATION FOR FATALITIES
+
+If an
+
+[Source 3] (accident_collision_investigation.txt)
+tor must determine a probable cause and issue a
+final investigation report within 30 days of the incident. Each
+investigation classifies the collision as either Preventable, meaning BTA
+operator action or vehicle condition contributed to the cause, or
+Non-preventable, meaning the cause originated entirely outside BTA's
+control, such as a third-party driver running a red light.
+
+5. VEHICLE HOLD DURING INVESTIGATION
+
+A vehicle involved in an Accident-Collision incident that results in injury
+or a
+
+QUESTION: How soon after a fatal collision must the State Transit Safety Oversight body be notified, and how many days does an accident investigator have to determine probable cause?
+
+ANSWER:
+
+[RAW MODEL RESPONSE]
+The State Transit Safety Oversight body must be notified within 4 hours of the incident occurring [Source 1]. An accident investigator has 30 days to determine probable cause [Source 3].
+
+[ANSWER (think-stripped)]
+The State Transit Safety Oversight body must be notified within 4 hours of the incident occurring [Source 1]. An accident investigator has 30 days to determine probable cause [Source 3].
+[latency_s=24.401  timestamp=2026-09-24T23:56:23]
+
+====================================================================================================
+q3_overlap_disambiguation / config A / k_used=0
+====================================================================================================
+[SYSTEM PROMPT]
+You are a helpful assistant. Answer the user's question directly and concisely.
+
+[USER PROMPT]
+How soon must an Accident-Collision or Safety Hazard incident be reported to the Safety Office, and does that clock start from when the incident happened or from when the report is filed?
+
+[RAW MODEL RESPONSE]
+The incident must be reported to the Safety Office **as soon as possible**, typically **within 24 hours** of the incident. The clock starts from when the incident occurred, not from when the report is filed. Prompt reporting is crucial for proper investigation and prevention of future incidents.
+
+[ANSWER (think-stripped)]
+The incident must be reported to the Safety Office **as soon as possible**, typically **within 24 hours** of the incident. The clock starts from when the incident occurred, not from when the report is filed. Prompt reporting is crucial for proper investigation and prevention of future incidents.
+[latency_s=14.38  timestamp=2026-09-24T23:56:38]
+
+====================================================================================================
+q3_overlap_disambiguation / config B / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+Answer the user's question. Context that may or may not be relevant is provided below; use it if it helps.
+
+[USER PROMPT]
+Context:
+ent that results in an injury to a passenger,
+employee, or third party must be reported to the Safety Office within 2
+hours of the incident occurring. This 2-hour window is measured from the
+moment of the collision itself, not from when the written report is later
+filed, which distinguishes it from the report-filing-based clock used for
+non-injury Accident-Collision and Safety Hazard reports under the Incident
+Reporting Policy.
+
+3. EXTERNAL OVERSIGHT NOTIFICATION FOR FATALITIES
+
+If an
+
+dit purposes.
+
+4. FILING WINDOW
+
+Field staff must file the initial incident report within 30 minutes of the
+incident occurring, using the mobile incident app or, if unavailable, a
+radio call to dispatch followed by a written report before the end of the
+shift.
+
+5. ESCALATION TO THE SAFETY OFFICE
+
+Once a report has been filed, reports categorized as Accident-Collision or
+Safety Hazard must be escalated to the Safety Office within 2 hours of the
+report being filed in the system. This 2-hour clock
+
+IGHT NOTIFICATION FOR FATALITIES
+
+If an Accident-Collision incident results in a fatality, the Safety Office
+must additionally notify the State Transit Safety Oversight body within 4
+hours of the incident occurring, separate from and in addition to the
+2-hour internal Safety Office notification described above.
+
+4. INVESTIGATION AND PROBABLE CAUSE
+
+Every Accident-Collision incident is assigned an investigator from the
+Safety Office. The investigator must determine a probable cause and issue
+
+Question: How soon must an Accident-Collision or Safety Hazard incident be reported to the Safety Office, and does that clock start from when the incident happened or from when the report is filed?
+
+[RAW MODEL RESPONSE]
+An Accident-Collision or Safety Hazard incident must be reported to the Safety Office **within 2 hours of the incident occurring**. 
+
+The 2-hour clock **starts from the moment of the incident**, not from when the report is filed. This is distinct from the report-filing-based clock used for non-injury Accident-Collision and Safety Hazard reports.
+
+[ANSWER (think-stripped)]
+An Accident-Collision or Safety Hazard incident must be reported to the Safety Office **within 2 hours of the incident occurring**. 
+
+The 2-hour clock **starts from the moment of the incident**, not from when the report is filed. This is distinct from the report-filing-based clock used for non-injury Accident-Collision and Safety Hazard reports.
+[latency_s=29.527  timestamp=2026-09-24T23:57:08]
+
+====================================================================================================
+q3_overlap_disambiguation / config C / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+You are a grounded question-answering assistant for Baywood Transit Authority documentation. You are given a QUESTION and numbered CONTEXT excerpts pulled from the Authority's policy documents. Follow these rules exactly:
+1. Use ONLY the information in the numbered CONTEXT excerpts below. Do not use any outside knowledge, even if you know the general answer.
+2. Every factual claim in your answer must be followed by the source number it came from, in the form [Source N].
+3. If the CONTEXT excerpts do not contain enough information to fully answer the QUESTION, do not guess and do not answer partially. Instead reply with exactly this sentence and nothing else -- no extra words, no punctuation added, no explanation:
+I cannot answer this question from the provided documents
+4. Keep your answer concise: 1-4 sentences unless the question explicitly asks for a list.
+
+[USER PROMPT]
+CONTEXT:
+[Source 1] (accident_collision_investigation.txt)
+ent that results in an injury to a passenger,
+employee, or third party must be reported to the Safety Office within 2
+hours of the incident occurring. This 2-hour window is measured from the
+moment of the collision itself, not from when the written report is later
+filed, which distinguishes it from the report-filing-based clock used for
+non-injury Accident-Collision and Safety Hazard reports under the Incident
+Reporting Policy.
+
+3. EXTERNAL OVERSIGHT NOTIFICATION FOR FATALITIES
+
+If an
+
+[Source 2] (incident_reporting_policy.txt)
+dit purposes.
+
+4. FILING WINDOW
+
+Field staff must file the initial incident report within 30 minutes of the
+incident occurring, using the mobile incident app or, if unavailable, a
+radio call to dispatch followed by a written report before the end of the
+shift.
+
+5. ESCALATION TO THE SAFETY OFFICE
+
+Once a report has been filed, reports categorized as Accident-Collision or
+Safety Hazard must be escalated to the Safety Office within 2 hours of the
+report being filed in the system. This 2-hour clock
+
+[Source 3] (accident_collision_investigation.txt)
+IGHT NOTIFICATION FOR FATALITIES
+
+If an Accident-Collision incident results in a fatality, the Safety Office
+must additionally notify the State Transit Safety Oversight body within 4
+hours of the incident occurring, separate from and in addition to the
+2-hour internal Safety Office notification described above.
+
+4. INVESTIGATION AND PROBABLE CAUSE
+
+Every Accident-Collision incident is assigned an investigator from the
+Safety Office. The investigator must determine a probable cause and issue
+
+QUESTION: How soon must an Accident-Collision or Safety Hazard incident be reported to the Safety Office, and does that clock start from when the incident happened or from when the report is filed?
+
+ANSWER:
+
+[RAW MODEL RESPONSE]
+An Accident-Collision or Safety Hazard incident must be reported to the Safety Office within 2 hours of the report being filed in the system, and the clock starts from when the report is filed [Source 2].
+
+[ANSWER (think-stripped)]
+An Accident-Collision or Safety Hazard incident must be reported to the Safety Office within 2 hours of the report being filed in the system, and the clock starts from when the report is filed [Source 2].
+[latency_s=25.31  timestamp=2026-09-24T23:57:34]
+
+====================================================================================================
+q4_ambiguous / config A / k_used=0
+====================================================================================================
+[SYSTEM PROMPT]
+You are a helpful assistant. Answer the user's question directly and concisely.
+
+[USER PROMPT]
+How long does it take to resolve an incident at Baywood Transit Authority?
+
+[RAW MODEL RESPONSE]
+The resolution time for an incident at Baywood Transit Authority can vary depending on the nature and severity of the incident. Minor issues may be resolved within a few hours, while more complex or critical incidents could take longer, sometimes up to several days. For specific details, it's best to contact Baywood Transit Authority directly.
+
+[ANSWER (think-stripped)]
+The resolution time for an incident at Baywood Transit Authority can vary depending on the nature and severity of the incident. Minor issues may be resolved within a few hours, while more complex or critical incidents could take longer, sometimes up to several days. For specific details, it's best to contact Baywood Transit Authority directly.
+[latency_s=15.699  timestamp=2026-09-24T23:57:51]
+
+====================================================================================================
+q4_ambiguous / config B / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+Answer the user's question. Context that may or may not be relevant is provided below; use it if it helps.
+
+[USER PROMPT]
+Context:
+1. PURPOSE
+
+This policy establishes how field staff, operators, and dispatchers at Baywood
+Transit Authority (BTA) must record and escalate incidents that occur on any
+bus, light rail, or express route the Authority operates. It applies to every
+employee, contractor, and station agent who observes or responds to an
+incident while on duty.
+
+2. REQUIRED FIELDS
+
+Every incident report filed in the Authority's incident system must include:
+the routeId of the vehicle or service involved (the primary
+
+1. SCOPE
+
+This procedure governs how Baywood Transit Authority identifies, classifies,
+and resolves safety hazards reported under the Safety Hazard incident
+category. A hazard is any condition with the potential to cause injury,
+property damage, or service disruption, whether or not an injury has
+actually occurred yet.
+
+2. HAZARD SEVERITY LEVELS
+
+Every hazard reported to the Safety Office is assigned one of four severity
+levels at the time of triage:
+
+  - Critical: an imminent risk to life or
+
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+Question: How long does it take to resolve an incident at Baywood Transit Authority?
+
+[RAW MODEL RESPONSE]
+The provided context does not specify how long it takes to resolve an incident at Baywood Transit Authority. The information available outlines procedures for reporting incidents, classifying safety hazards, and identifying routes, but it does not mention timelines or resolution processes for incidents. To determine resolution times, you would need additional information or policies related to incident response and resolution timelines.
+
+[ANSWER (think-stripped)]
+The provided context does not specify how long it takes to resolve an incident at Baywood Transit Authority. The information available outlines procedures for reporting incidents, classifying safety hazards, and identifying routes, but it does not mention timelines or resolution processes for incidents. To determine resolution times, you would need additional information or policies related to incident response and resolution timelines.
+[latency_s=29.039  timestamp=2026-09-24T23:58:20]
+
+====================================================================================================
+q4_ambiguous / config C / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+You are a grounded question-answering assistant for Baywood Transit Authority documentation. You are given a QUESTION and numbered CONTEXT excerpts pulled from the Authority's policy documents. Follow these rules exactly:
+1. Use ONLY the information in the numbered CONTEXT excerpts below. Do not use any outside knowledge, even if you know the general answer.
+2. Every factual claim in your answer must be followed by the source number it came from, in the form [Source N].
+3. If the CONTEXT excerpts do not contain enough information to fully answer the QUESTION, do not guess and do not answer partially. Instead reply with exactly this sentence and nothing else -- no extra words, no punctuation added, no explanation:
+I cannot answer this question from the provided documents
+4. Keep your answer concise: 1-4 sentences unless the question explicitly asks for a list.
+
+[USER PROMPT]
+CONTEXT:
+[Source 1] (incident_reporting_policy.txt)
+1. PURPOSE
+
+This policy establishes how field staff, operators, and dispatchers at Baywood
+Transit Authority (BTA) must record and escalate incidents that occur on any
+bus, light rail, or express route the Authority operates. It applies to every
+employee, contractor, and station agent who observes or responds to an
+incident while on duty.
+
+2. REQUIRED FIELDS
+
+Every incident report filed in the Authority's incident system must include:
+the routeId of the vehicle or service involved (the primary
+
+[Source 2] (safety_hazard_procedures.txt)
+1. SCOPE
+
+This procedure governs how Baywood Transit Authority identifies, classifies,
+and resolves safety hazards reported under the Safety Hazard incident
+category. A hazard is any condition with the potential to cause injury,
+property damage, or service disruption, whether or not an injury has
+actually occurred yet.
+
+2. HAZARD SEVERITY LEVELS
+
+Every hazard reported to the Safety Office is assigned one of four severity
+levels at the time of triage:
+
+  - Critical: an imminent risk to life or
+
+[Source 3] (route_service_standards.txt)
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+QUESTION: How long does it take to resolve an incident at Baywood Transit Authority?
+
+ANSWER:
+
+[RAW MODEL RESPONSE]
+I cannot answer this question from the provided documents
+
+[ANSWER (think-stripped)]
+I cannot answer this question from the provided documents
+[latency_s=17.545  timestamp=2026-09-24T23:58:38]
+
+====================================================================================================
+q5_not_in_corpus / config A / k_used=0
+====================================================================================================
+[SYSTEM PROMPT]
+You are a helpful assistant. Answer the user's question directly and concisely.
+
+[USER PROMPT]
+What is Baywood Transit Authority's total annual operating budget?
+
+[RAW MODEL RESPONSE]
+I don't have access to the most current financial data for Baywood Transit Authority. For the most accurate and up-to-date information, I recommend checking their official website, annual reports, or contacting their administrative office directly.
+
+[ANSWER (think-stripped)]
+I don't have access to the most current financial data for Baywood Transit Authority. For the most accurate and up-to-date information, I recommend checking their official website, annual reports, or contacting their administrative office directly.
+[latency_s=11.437  timestamp=2026-09-24T23:58:50]
+
+====================================================================================================
+q5_not_in_corpus / config B / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+Answer the user's question. Context that may or may not be relevant is provided below; use it if it helps.
+
+[USER PROMPT]
+Context:
+1. PURPOSE
+
+This policy establishes how field staff, operators, and dispatchers at Baywood
+Transit Authority (BTA) must record and escalate incidents that occur on any
+bus, light rail, or express route the Authority operates. It applies to every
+employee, contractor, and station agent who observes or responds to an
+incident while on duty.
+
+2. REQUIRED FIELDS
+
+Every incident report filed in the Authority's incident system must include:
+the routeId of the vehicle or service involved (the primary
+
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+nes whether the published
+schedule, vehicle assignment, or operator staffing for that route needs to
+be adjusted. Service reviews are completed within 15 business days of being
+triggered.
+
+5. VEHICLE ASSIGNMENT
+
+Light rail routes (BTA-2xx) are assigned only to rail vehicles that have
+passed the wheel and axle inspection described in the Authority's mechanical
+maintenance standard within the preceding 12,000 miles of operation. Bus
+routes (BTA-1xx and BTA-3xx) are assigned buses that have passed
+
+Question: What is Baywood Transit Authority's total annual operating budget?
+
+[RAW MODEL RESPONSE]
+The provided context does not include information about Baywood Transit Authority's total annual operating budget.
+
+[ANSWER (think-stripped)]
+The provided context does not include information about Baywood Transit Authority's total annual operating budget.
+[latency_s=13.767  timestamp=2026-09-24T23:59:04]
+
+====================================================================================================
+q5_not_in_corpus / config C / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+You are a grounded question-answering assistant for Baywood Transit Authority documentation. You are given a QUESTION and numbered CONTEXT excerpts pulled from the Authority's policy documents. Follow these rules exactly:
+1. Use ONLY the information in the numbered CONTEXT excerpts below. Do not use any outside knowledge, even if you know the general answer.
+2. Every factual claim in your answer must be followed by the source number it came from, in the form [Source N].
+3. If the CONTEXT excerpts do not contain enough information to fully answer the QUESTION, do not guess and do not answer partially. Instead reply with exactly this sentence and nothing else -- no extra words, no punctuation added, no explanation:
+I cannot answer this question from the provided documents
+4. Keep your answer concise: 1-4 sentences unless the question explicitly asks for a list.
+
+[USER PROMPT]
+CONTEXT:
+[Source 1] (incident_reporting_policy.txt)
+1. PURPOSE
+
+This policy establishes how field staff, operators, and dispatchers at Baywood
+Transit Authority (BTA) must record and escalate incidents that occur on any
+bus, light rail, or express route the Authority operates. It applies to every
+employee, contractor, and station agent who observes or responds to an
+incident while on duty.
+
+2. REQUIRED FIELDS
+
+Every incident report filed in the Authority's incident system must include:
+the routeId of the vehicle or service involved (the primary
+
+[Source 2] (route_service_standards.txt)
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+[Source 3] (route_service_standards.txt)
+nes whether the published
+schedule, vehicle assignment, or operator staffing for that route needs to
+be adjusted. Service reviews are completed within 15 business days of being
+triggered.
+
+5. VEHICLE ASSIGNMENT
+
+Light rail routes (BTA-2xx) are assigned only to rail vehicles that have
+passed the wheel and axle inspection described in the Authority's mechanical
+maintenance standard within the preceding 12,000 miles of operation. Bus
+routes (BTA-1xx and BTA-3xx) are assigned buses that have passed
+
+QUESTION: What is Baywood Transit Authority's total annual operating budget?
+
+ANSWER:
+
+[RAW MODEL RESPONSE]
+I cannot answer this question from the provided documents
+
+[ANSWER (think-stripped)]
+I cannot answer this question from the provided documents
+[latency_s=13.74  timestamp=2026-09-24T23:59:19]
+
+====================================================================================================
+q6_unrelated / config A / k_used=0
+====================================================================================================
+[SYSTEM PROMPT]
+You are a helpful assistant. Answer the user's question directly and concisely.
+
+[USER PROMPT]
+What is the boiling point of water at sea level, in degrees Celsius?
+
+[RAW MODEL RESPONSE]
+The boiling point of water at sea level is 100 degrees Celsius.
+
+[ANSWER (think-stripped)]
+The boiling point of water at sea level is 100 degrees Celsius.
+[latency_s=4.483  timestamp=2026-09-24T23:59:24]
+
+====================================================================================================
+q6_unrelated / config B / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+Answer the user's question. Context that may or may not be relevant is provided below; use it if it helps.
+
+[USER PROMPT]
+Context:
+1. SCOPE
+
+This procedure governs how Baywood Transit Authority identifies, classifies,
+and resolves safety hazards reported under the Safety Hazard incident
+category. A hazard is any condition with the potential to cause injury,
+property damage, or service disruption, whether or not an injury has
+actually occurred yet.
+
+2. HAZARD SEVERITY LEVELS
+
+Every hazard reported to the Safety Office is assigned one of four severity
+levels at the time of triage:
+
+  - Critical: an imminent risk to life or
+
+age:
+
+  - Critical: an imminent risk to life or an active structural failure,
+    such as an exposed electrical conductor, a collapsed platform section,
+    or a rail with a visible fracture.
+  - High: a serious but not immediately life-threatening condition, such as
+    a malfunctioning door that can trap a passenger, or a station stairway
+    with a broken handrail.
+  - Medium: a condition that increases risk over time if unaddressed, such
+    as worn platform edge tiles or a flickering
+
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+Question: What is the boiling point of water at sea level, in degrees Celsius?
+
+[RAW MODEL RESPONSE]
+The boiling point of water at sea level is 100 degrees Celsius.
+
+[ANSWER (think-stripped)]
+The boiling point of water at sea level is 100 degrees Celsius.
+[latency_s=18.3  timestamp=2026-09-24T23:59:43]
+
+====================================================================================================
+q6_unrelated / config C / k_used=3
+====================================================================================================
+[SYSTEM PROMPT]
+You are a grounded question-answering assistant for Baywood Transit Authority documentation. You are given a QUESTION and numbered CONTEXT excerpts pulled from the Authority's policy documents. Follow these rules exactly:
+1. Use ONLY the information in the numbered CONTEXT excerpts below. Do not use any outside knowledge, even if you know the general answer.
+2. Every factual claim in your answer must be followed by the source number it came from, in the form [Source N].
+3. If the CONTEXT excerpts do not contain enough information to fully answer the QUESTION, do not guess and do not answer partially. Instead reply with exactly this sentence and nothing else -- no extra words, no punctuation added, no explanation:
+I cannot answer this question from the provided documents
+4. Keep your answer concise: 1-4 sentences unless the question explicitly asks for a list.
+
+[USER PROMPT]
+CONTEXT:
+[Source 1] (safety_hazard_procedures.txt)
+1. SCOPE
+
+This procedure governs how Baywood Transit Authority identifies, classifies,
+and resolves safety hazards reported under the Safety Hazard incident
+category. A hazard is any condition with the potential to cause injury,
+property damage, or service disruption, whether or not an injury has
+actually occurred yet.
+
+2. HAZARD SEVERITY LEVELS
+
+Every hazard reported to the Safety Office is assigned one of four severity
+levels at the time of triage:
+
+  - Critical: an imminent risk to life or
+
+[Source 2] (safety_hazard_procedures.txt)
+age:
+
+  - Critical: an imminent risk to life or an active structural failure,
+    such as an exposed electrical conductor, a collapsed platform section,
+    or a rail with a visible fracture.
+  - High: a serious but not immediately life-threatening condition, such as
+    a malfunctioning door that can trap a passenger, or a station stairway
+    with a broken handrail.
+  - Medium: a condition that increases risk over time if unaddressed, such
+    as worn platform edge tiles or a flickering
+
+[Source 3] (route_service_standards.txt)
+1. ROUTE IDENTIFIER SCHEME
+
+Every route operated by Baywood Transit Authority is assigned a routeId in
+the form BTA-XYY, where the leading digit indicates the mode of service.
+Routes numbered BTA-1xx are local bus routes. Routes numbered BTA-2xx are
+light rail lines. Routes numbered BTA-3xx are limited-stop express bus
+routes that run only during peak commute hours. This numbering scheme is
+fixed; a routeId is retired, not reused, if a route is permanently
+discontinued.
+
+2. ON-TIME PERFORMANCE
+
+QUESTION: What is the boiling point of water at sea level, in degrees Celsius?
+
+ANSWER:
+
+[RAW MODEL RESPONSE]
+I cannot answer this question from the provided documents
+
+[ANSWER (think-stripped)]
+I cannot answer this question from the provided documents
+[latency_s=18.413  timestamp=2026-09-25T00:00:02]
