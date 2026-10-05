@@ -1,0 +1,365 @@
+{
+  "homework": 5,
+  "sid4": 3170,
+  "prefix": "s3170",
+  "port_base": 8470,
+  "domain_id": 2,
+  "seed": 3170,
+  "verify_seed": 263170,
+  "commit_hash": "02c02f453465e628213d2e2d2fa9f918eea174a2",
+  "git_tags_at_head": "",
+  "timestamp_utc": "2026-10-05T21:35:05Z",
+  "model_configuration": {
+    "llm": "qwen3:8b",
+    "ollama_url": "http://localhost:11434",
+    "temperature": 0.0,
+    "reasoning": false,
+    "retry_policy": {
+      "max_attempts": 3,
+      "base_delay_s": 0.05,
+      "max_delay_s": 0.4,
+      "timeout_s": 2.0,
+      "jitter": true
+    }
+  },
+  "passed": 41,
+  "failed": 0,
+  "skipped": 0,
+  "total_checks": 41,
+  "summary": {
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "total": 41
+  },
+  "checks": [
+    {
+      "part": "1.I",
+      "check": "models declare the four new columns",
+      "passed": true,
+      "skipped": false,
+      "detail": "incident_code, riders_affected, created_at, updated_at",
+      "elapsed_ms": 0.1
+    },
+    {
+      "part": "1.I",
+      "check": "foreign key is ON DELETE RESTRICT",
+      "passed": true,
+      "skipped": false,
+      "detail": "ON DELETE RESTRICT present in generated DDL",
+      "elapsed_ms": 258.5
+    },
+    {
+      "part": "1.I",
+      "check": "both unique fields are indexed unique",
+      "passed": true,
+      "skipped": false,
+      "detail": "incident_code and route_code both unique",
+      "elapsed_ms": 0.0
+    },
+    {
+      "part": "1.I",
+      "check": "riders_affected has a non-null default",
+      "passed": true,
+      "skipped": false,
+      "detail": "server_default=0",
+      "elapsed_ms": 0.0
+    },
+    {
+      "part": "1.I",
+      "check": "seed produced 200 routes and 5000 incidents",
+      "passed": true,
+      "skipped": false,
+      "detail": "200 routes, 5000 incidents",
+      "elapsed_ms": 45.6
+    },
+    {
+      "part": "1.I",
+      "check": "every incident_code is distinct",
+      "passed": true,
+      "skipped": false,
+      "detail": "5000 distinct codes",
+      "elapsed_ms": 7.5
+    },
+    {
+      "part": "1.II",
+      "check": "backend answers on PORT_BASE",
+      "passed": true,
+      "skipped": false,
+      "detail": "http://127.0.0.1:8470 answered 200",
+      "elapsed_ms": 147.3
+    },
+    {
+      "part": "1.II",
+      "check": "all 11 CRUD operations are registered",
+      "passed": true,
+      "skipped": false,
+      "detail": "5 paths, 11 operations present",
+      "elapsed_ms": 26.5
+    },
+    {
+      "part": "1.II",
+      "check": "endpoints require a session",
+      "passed": true,
+      "skipped": false,
+      "detail": "unauthenticated GET /api/incidents -> 401",
+      "elapsed_ms": 2.7
+    },
+    {
+      "part": "1.II",
+      "check": "GET /api/routes is paginated",
+      "passed": true,
+      "skipped": false,
+      "detail": "page object, total=200",
+      "elapsed_ms": 190.8
+    },
+    {
+      "part": "1.II",
+      "check": "relationship query returns only that route's incidents",
+      "passed": true,
+      "skipped": false,
+      "detail": "route 1 -> 24 incidents",
+      "elapsed_ms": 210.3
+    },
+    {
+      "part": "1.II",
+      "check": "unknown route id returns 404",
+      "passed": true,
+      "skipped": false,
+      "detail": "GET /api/routes/999999 -> 404",
+      "elapsed_ms": 191.4
+    },
+    {
+      "part": "1.II",
+      "check": "malformed unique field returns 422",
+      "passed": true,
+      "skipped": false,
+      "detail": "malformed incident_code -> 422",
+      "elapsed_ms": 188.1
+    },
+    {
+      "part": "1.II",
+      "check": "duplicate unique field returns 409",
+      "passed": true,
+      "skipped": false,
+      "detail": "duplicate incident_code -> 409",
+      "elapsed_ms": 181.8
+    },
+    {
+      "part": "1.II",
+      "check": "deleting an in-use route returns 409",
+      "passed": true,
+      "skipped": false,
+      "detail": "route 1 holds 24 incidents -> 409",
+      "elapsed_ms": 188.1
+    },
+    {
+      "part": "1.III",
+      "check": "redux store module exists",
+      "passed": true,
+      "skipped": false,
+      "detail": "store/index.js and store/incidentsSlice.js present",
+      "elapsed_ms": 0.2
+    },
+    {
+      "part": "1.III",
+      "check": "four async thunks are defined",
+      "passed": true,
+      "skipped": false,
+      "detail": "fetch/create/update/delete, via createAsyncThunk",
+      "elapsed_ms": 0.4
+    },
+    {
+      "part": "1.III",
+      "check": "redux packages are declared",
+      "passed": true,
+      "skipped": false,
+      "detail": "@reduxjs/toolkit ^2.13.0, react-redux ^9.3.0",
+      "elapsed_ms": 0.4
+    },
+    {
+      "part": "1.III",
+      "check": "Provider wraps the app",
+      "passed": true,
+      "skipped": false,
+      "detail": "<Provider store={store}> in main.jsx",
+      "elapsed_ms": 0.4
+    },
+    {
+      "part": "2",
+      "check": "the envelope is defined once and reused",
+      "passed": true,
+      "skipped": false,
+      "detail": "ok/err/Envelope, imported by transit_tools, execute_tool, retry",
+      "elapsed_ms": 0.3
+    },
+    {
+      "part": "2",
+      "check": "no STDIO server writes to stdout",
+      "passed": true,
+      "skipped": false,
+      "detail": "no print() in either server or the tool module",
+      "elapsed_ms": 0.8
+    },
+    {
+      "part": "2.A",
+      "check": "meals server starts and answers a tool call",
+      "passed": true,
+      "skipped": false,
+      "detail": "4 tools, search returned 1 meal(s)",
+      "elapsed_ms": 2008.2
+    },
+    {
+      "part": "2.B",
+      "check": "transit server starts and answers a tool call",
+      "passed": true,
+      "skipped": false,
+      "detail": "3 tools, aggregate returned 4 categories",
+      "elapsed_ms": 1287.9
+    },
+    {
+      "part": "3",
+      "check": "retry policy is bounded on both axes",
+      "passed": true,
+      "skipped": false,
+      "detail": "max_attempts=3, max_delay=0.4s, timeout=2.0s",
+      "elapsed_ms": 11.2
+    },
+    {
+      "part": "3",
+      "check": "backoff doubles and respects its ceiling",
+      "passed": true,
+      "skipped": false,
+      "detail": "delays [0.1, 0.2, 0.4, 0.4] (doubling, capped at 0.4s)",
+      "elapsed_ms": 0.1
+    },
+    {
+      "part": "3",
+      "check": "fault injection reproduces from VERIFY_SEED",
+      "passed": true,
+      "skipped": false,
+      "detail": "40 draws reproduce exactly from VERIFY_SEED=263170",
+      "elapsed_ms": 0.3
+    },
+    {
+      "part": "3",
+      "check": "150 calls recorded, 50 per rate",
+      "passed": true,
+      "skipped": false,
+      "detail": "150 calls, 50 at each of 0.0, 0.2, 0.5",
+      "elapsed_ms": 1.9
+    },
+    {
+      "part": "3",
+      "check": "summary records success rate, mean and p99",
+      "passed": true,
+      "skipped": false,
+      "detail": "success rate, mean and p99 recorded for each rate",
+      "elapsed_ms": 0.9
+    },
+    {
+      "part": "3",
+      "check": "tool contracts documented for all three tools",
+      "passed": true,
+      "skipped": false,
+      "detail": "197 lines, all three tools",
+      "elapsed_ms": 0.9
+    },
+    {
+      "part": "4",
+      "check": "execute_tool returns a JSON string envelope",
+      "passed": true,
+      "skipped": false,
+      "detail": "JSON string carrying {ok, data, error}",
+      "elapsed_ms": 4.0
+    },
+    {
+      "part": "4",
+      "check": "execute_tool never raises on bad input",
+      "passed": true,
+      "skipped": false,
+      "detail": "5 malformed calls, all clean error envelopes",
+      "elapsed_ms": 0.2
+    },
+    {
+      "part": "4",
+      "check": "offline test suite passes",
+      "passed": true,
+      "skipped": false,
+      "detail": "18 passed, 0 failed",
+      "elapsed_ms": 490.8
+    },
+    {
+      "part": "5.I",
+      "check": "safety rule blocks reporter contact details",
+      "passed": true,
+      "skipped": false,
+      "detail": "rule 'no-reporter-pii' blocks both forms",
+      "elapsed_ms": 0.4
+    },
+    {
+      "part": "5.I",
+      "check": "the equivalent allowed call still works",
+      "passed": true,
+      "skipped": false,
+      "detail": "plain lookup succeeds and carries no submitter_email",
+      "elapsed_ms": 12.9
+    },
+    {
+      "part": "5.II",
+      "check": "agent loop stops at max_steps",
+      "passed": true,
+      "skipped": false,
+      "detail": "MockModel loop halted at the 3-step ceiling",
+      "elapsed_ms": 3.8
+    },
+    {
+      "part": "5.II",
+      "check": "agent loop completes when answered",
+      "passed": true,
+      "skipped": false,
+      "detail": "the same loop completes when the model answers",
+      "elapsed_ms": 0.5
+    },
+    {
+      "part": "5.II",
+      "check": "agent loop stops on a safety block",
+      "passed": true,
+      "skipped": false,
+      "detail": "a blocked tool call ends the run with stop_reason=safety_block",
+      "elapsed_ms": 0.2
+    },
+    {
+      "part": "5.IV",
+      "check": "agent_runs.jsonl has at least 4 scenarios",
+      "passed": true,
+      "skipped": false,
+      "detail": "6 runs, stop reasons: completed, safety_block",
+      "elapsed_ms": 0.9
+    },
+    {
+      "part": "5.V",
+      "check": "REFLECTION.md is 200-300 words",
+      "passed": true,
+      "skipped": false,
+      "detail": "287 words",
+      "elapsed_ms": 0.9
+    },
+    {
+      "part": "submission",
+      "check": "no .env file is tracked by git",
+      "passed": true,
+      "skipped": false,
+      "detail": "136 tracked files, no .env among them",
+      "elapsed_ms": 30.6
+    },
+    {
+      "part": "submission",
+      "check": "reports/hw05 contains no source code",
+      "passed": true,
+      "skipped": false,
+      "detail": "reports/hw05 holds evidence only",
+      "elapsed_ms": 0.7
+    }
+  ]
+}

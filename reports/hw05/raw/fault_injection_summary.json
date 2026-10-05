@@ -1,0 +1,48 @@
+{
+  "seed": 263170,
+  "sid4": 3170,
+  "calls_per_rate": 50,
+  "total_calls": 150,
+  "policy": {
+    "max_attempts": 3,
+    "base_delay_s": 0.05,
+    "max_delay_s": 0.4,
+    "timeout_s": 2.0,
+    "jitter": true
+  },
+  "results": [
+    {
+      "injected_failure_rate": 0.0,
+      "calls": 50,
+      "successes": 50,
+      "success_rate": 1.0,
+      "mean_latency_ms": 10.07,
+      "p99_latency_ms": 363.52,
+      "median_latency_ms": 2.69,
+      "mean_attempts": 1.0,
+      "total_attempts": 50
+    },
+    {
+      "injected_failure_rate": 0.2,
+      "calls": 50,
+      "successes": 50,
+      "success_rate": 1.0,
+      "mean_latency_ms": 5.5,
+      "p99_latency_ms": 59.37,
+      "median_latency_ms": 2.74,
+      "mean_attempts": 1.1,
+      "total_attempts": 55
+    },
+    {
+      "injected_failure_rate": 0.5,
+      "calls": 50,
+      "successes": 47,
+      "success_rate": 0.94,
+      "mean_latency_ms": 32.15,
+      "p99_latency_ms": 125.04,
+      "median_latency_ms": 18.62,
+      "mean_attempts": 1.8,
+      "total_attempts": 90
+    }
+  ]
+}

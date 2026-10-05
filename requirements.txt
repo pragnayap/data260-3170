@@ -54,3 +54,8 @@ PyYAML==6.0.2
 # cryptography, and the retrieval run dies on that file.
 pypdf==5.1.0
 cryptography>=42.0
+
+# HW5 Part 2 - MCP servers. Stay on 1.x: mcp 2.x pulls starlette>=0.49,
+# which breaks the fastapi==0.109.0 pin above (needs starlette<0.36).
+mcp[cli]>=1.20,<2
+starlette>=0.35,<0.36

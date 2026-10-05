@@ -1,3 +1,12 @@
+/**
+ * HW4 + HW5 - the axios layer.
+ *
+ * This file is unchanged from HW4 except for routesApi.list(), which now
+ * unwraps the paginated envelope. The Redux thunks in store/incidentsSlice.js
+ * call these functions; keeping the HTTP details here means the slice has no
+ * axios knowledge and the API has no Redux knowledge.
+ */
+
 import axios from "axios";
 
 // withCredentials is what makes the browser send the s3170_db_session cookie
@@ -29,7 +38,19 @@ export const incidentsApi = {
 };
 
 export const routesApi = {
-  list: () => client.get("/api/routes").then((r) => r.data),
+  // HW5: GET /api/routes is paginated now -- {items, total, page, page_size}.
+  // The dropdown only wants the rows, so unwrap here rather than in every caller.
+  list: () => client.get("/api/routes").then((r) => r.data.items),
+
+  // HW5 Part 1.II additions, available for the relationship-query demo.
+  get: (id) => client.get(`/api/routes/${id}`).then((r) => r.data),
+  create: (route) => client.post("/api/routes", route).then((r) => r.data),
+  update: (id, route) => client.put(`/api/routes/${id}`, route).then((r) => r.data),
+  remove: (id) => client.delete(`/api/routes/${id}`),
+  incidents: (id, page = 1, pageSize = 20) =>
+    client
+      .get(`/api/routes/${id}/incidents`, { params: { page, page_size: pageSize } })
+      .then((r) => r.data),
 };
 
 export default client;

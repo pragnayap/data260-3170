@@ -19,3 +19,9 @@ dist/
 
 # Local assistant state (never commit)
 .claude/
+
+# HW5: local working files (never commit)
+CLAUDE.md
+reports/hw05/SCREENSHOT_STEPS.md
+reports/hw05/*.docx
+~$*.docx

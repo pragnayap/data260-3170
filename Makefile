@@ -8,7 +8,8 @@ PORT    ?= 8470
 APP_DIR := code/web_application
 
 .PHONY: help install nltk run corpus corpus-verify warmup rag metrics verify-hw03 hw3 clean-hw3 \
-        seed-hw04 n1-hw04 verify-hw04 frontend-install frontend-dev hw4
+        seed-hw04 n1-hw04 verify-hw04 frontend-install frontend-dev hw4 \
+        seed-hw05 faults-hw05 contracts-hw05 test-hw05 safety-hw05 agent-scenarios verify-hw05
 
 help:
 	@echo "install       install deps from requirements.txt, then the NLTK data"
@@ -27,6 +28,13 @@ help:
 	@echo "frontend-install  npm install in code/frontend"
 	@echo "frontend-dev  run the Vite dev server on 8471"
 	@echo "hw4           seed-hw04 -> n1-hw04 -> verify-hw04 (backend must already be running: make run)"
+	@echo "seed-hw05     seed MySQL for HW5: 200 routes + 5,000 incidents (new columns, RESTRICT FK)"
+	@echo "faults-hw05   150-call seeded fault injection -> reports/hw05/raw/"
+	@echo "contracts-hw05  tool contracts from the live MCP schemas -> reports/hw05/raw/tool_contracts.md"
+	@echo "test-hw05     offline Part 4/5 test runner (no DB, no network, no LLM)"
+	@echo "safety-hw05   Part 5.I allowed vs blocked call demo"
+	@echo "agent-scenarios  Ollama agent scenarios -> METRICS.md + raw/agent_runs.jsonl"
+	@echo "verify-hw05   run the HW5 self-check -> reports/hw05/verification.json"
 
 install:
 	$(PY) -m pip install -r requirements.txt
@@ -91,3 +99,24 @@ frontend-dev:
 # unlike hw3, this can't boot+measure+shut-down in one shot because the N+1
 # measurement needs a live server the whole time.
 hw4: seed-hw04 n1-hw04 verify-hw04
+
+seed-hw05:
+	$(PY) -u code/seed_hw05.py
+
+faults-hw05:
+	$(PY) -u code/mcp_servers/fault_injection.py
+
+contracts-hw05:
+	$(PY) -u code/mcp_servers/tool_contracts.py
+
+test-hw05:
+	$(PY) -u code/mcp_servers/test_tools.py
+
+safety-hw05:
+	$(PY) -u code/mcp_servers/agent_loop.py --demo-safety
+
+agent-scenarios:
+	$(PY) -u code/mcp_servers/agent_loop.py --scenarios
+
+verify-hw05:
+	$(PY) -u code/verify_hw05.py

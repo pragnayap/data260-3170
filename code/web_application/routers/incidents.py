@@ -1,11 +1,20 @@
 """
-HW4 Part 2/3 - MySQL-backed incident CRUD, plus the naive/fixed list toggle
-Part 3's N+1 measurement drives via ?impl=naive|fixed.
+HW4 Part 2/3 + HW5 Part 1.II - MySQL-backed incident CRUD for the PRIMARY
+domain entity.
 
-Every route requires a live session (require_session), per the HW4 spec
-("require_session on every CRUD route, not just list"). The list endpoint
-also reports how many SQL statements it issued via the X-SQL-Statements
-response header, which measure_n1.py reads directly instead of parsing logs.
+HW4 content kept: the naive/fixed list toggle (?impl=naive|fixed) that Part
+3's N+1 measurement drives, and the X-SQL-Statements response header
+measure_n1.py reads instead of parsing logs.
+
+HW5 adds proper error semantics:
+    404  incident id does not exist
+    404  related_route_id points at a route that does not exist
+    409  incident_code collides with an existing row
+    422  Pydantic rejected the body (bad incident_code format, description
+         under 25 chars, negative riders_affected, ...)
+
+Every route requires a live session (require_session on the router, not just
+on list), per the HW4 spec.
 """
 
 from __future__ import annotations
@@ -19,7 +28,11 @@ from database import get_db, get_query_count, reset_query_count
 from routers.auth_db import require_session
 from schemas_db import IncidentCreate, IncidentOut, IncidentPage, IncidentUpdate
 
-router = APIRouter(prefix="/api/incidents", tags=["incidents"], dependencies=[Depends(require_session)])
+router = APIRouter(
+    prefix="/api/incidents",
+    tags=["incidents"],
+    dependencies=[Depends(require_session)],
+)
 
 
 def _no_store(response: Response) -> None:
@@ -32,6 +45,17 @@ def _get_or_404(db: Session, incident_id: int) -> models.Incident:
     if incident is None:
         raise HTTPException(status_code=404, detail=f"Incident {incident_id} not found")
     return incident
+
+
+def _require_route(db: Session, related_route_id: int) -> None:
+    """A create/update naming a non-existent route is a client mistake about a
+    resource, not a schema violation -- so 404, not 422. Without this check
+    MySQL would raise a raw foreign-key error and FastAPI would answer 500.
+    """
+    if crud.get_route(db, related_route_id) is None:
+        raise HTTPException(
+            status_code=404, detail=f"Route {related_route_id} not found"
+        )
 
 
 @router.get("", response_model=IncidentPage)
@@ -63,7 +87,14 @@ def get_incident(incident_id: int, response: Response, db: Session = Depends(get
 @router.post("", response_model=IncidentOut, status_code=201)
 def create_incident(body: IncidentCreate, response: Response, db: Session = Depends(get_db)):
     _no_store(response)
-    return crud.create_incident(db, body.model_dump(by_alias=True))
+    _require_route(db, body.relatedRouteId)
+    try:
+        return crud.create_incident(db, body.model_dump(by_alias=True))
+    except crud.DuplicateCodeError:
+        raise HTTPException(
+            status_code=409,
+            detail=f"incident_code '{body.incidentCode}' already exists",
+        )
 
 
 @router.put("/{incident_id}", response_model=IncidentOut)
@@ -72,7 +103,14 @@ def update_incident(
 ):
     _no_store(response)
     incident = _get_or_404(db, incident_id)
-    return crud.update_incident(db, incident, body.model_dump(by_alias=True))
+    _require_route(db, body.relatedRouteId)
+    try:
+        return crud.update_incident(db, incident, body.model_dump(by_alias=True))
+    except crud.DuplicateCodeError:
+        raise HTTPException(
+            status_code=409,
+            detail=f"incident_code '{body.incidentCode}' already belongs to another incident",
+        )
 
 
 @router.delete("/{incident_id}", status_code=204)

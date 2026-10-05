@@ -1,0 +1,278 @@
+DATA 260 HW5 run log - Pragnaya Priyadarshini (SID4 3170)
+
+===== 2026-10-05 13:58:22 PDT  $ python code/seed_hw05.py =====
+[13:58:23] seed_hw05.py starting, SEED=3170
+[13:58:23] dropping + recreating incidents/routes (users/sessions untouched)...
+[13:58:24] inserting 200 routes...
+[13:58:24] generating 5000 incidents...
+[13:58:24] inserting 5000 incidents...
+[13:58:24] done in 1.1s -- routes=200 incidents=5000
+    unique fields: routes.route_code (R-NNNN), incidents.incident_code (INC-3170-NNNNN)
+    FK incidents.related_route_id -> routes.id ON DELETE RESTRICT
+[exit 0]
+
+===== 2026-10-05 13:58:24 PDT  $ python code/mcp_servers/fault_injection.py --demo =====
+====================================================================
+HW5 Part 3 - retry policy demonstrations
+policy: max_attempts=3  base_delay=0.05s  max_delay=0.4s  timeout=2.0s
+====================================================================
+
+[1] Success on the first attempt
+    attempt 1: ok (324.6ms)
+    => ok=True  attempts=1  total=324.6ms
+
+[2] Failure on the first attempt, success after a retry
+WARNING transit-mcp.retry: attempt 1/3 transient: scripted failure on attempt 1
+    attempt 1: transient (0.2ms, slept 23ms) -> scripted failure on attempt 1
+    attempt 2: ok (5.9ms)
+    => ok=True  attempts=2  total=33.6ms
+
+[3] Failure after all allowed retries - clean error, no exception
+WARNING transit-mcp.retry: attempt 1/3 transient: scripted failure on attempt 1
+WARNING transit-mcp.retry: attempt 2/3 transient: scripted failure on attempt 2
+WARNING transit-mcp.retry: attempt 3/3 transient: scripted failure on attempt 3
+ERROR transit-mcp.retry: giving up after 3 attempts: scripted failure on attempt 3
+    attempt 1: transient (0.3ms, slept 31ms) -> scripted failure on attempt 1
+    attempt 2: transient (0.7ms, slept 44ms) -> scripted failure on attempt 2
+    attempt 3: transient (0.4ms) -> scripted failure on attempt 3
+    => ok=False  attempts=3  total=82.5ms
+    envelope: {"ok": false, "data": null, "error": "failed after 3 attempts: scripted failure on attempt 3"}
+
+[4] (bonus) A rejected argument is returned at once, not retried
+    attempt 1: rejected (0.3ms) -> limit must be between 1 and 50 (got 0)
+    => ok=False  attempts=1 (retrying would re-reject identically)
+
+[exit 0]
+
+===== 2026-10-05 13:58:42 PDT  $ python code/mcp_servers/fault_injection.py =====
+HW5 Part 3 - fault injection, VERIFY_SEED=263170
+operation: search_incidents('Downtown', limit=5)
+
+--- injected failure rate 0% (50 calls) ---
+    10/50
+    20/50
+    30/50
+    40/50
+    50/50
+
+--- injected failure rate 20% (50 calls) ---
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=20%, draw #6)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=20%, draw #8)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=20%, draw #10)
+    10/50
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=20%, draw #23)
+    20/50
+    30/50
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=20%, draw #42)
+    40/50
+    50/50
+
+--- injected failure rate 50% (50 calls) ---
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #1)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #3)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #4)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #6)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #8)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #10)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #13)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #15)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #18)
+    10/50
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #20)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #21)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #23)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #24)
+WARNING transit-mcp.retry: attempt 3/3 transient: injected failure (rate=50%, draw #25)
+ERROR transit-mcp.retry: giving up after 3 attempts: injected failure (rate=50%, draw #25)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #26)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #29)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #35)
+    20/50
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #38)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #42)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #44)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #46)
+    30/50
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #57)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #58)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #60)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #61)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #63)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #65)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #66)
+    40/50
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #68)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #70)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #72)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #73)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #75)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #77)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #78)
+WARNING transit-mcp.retry: attempt 3/3 transient: injected failure (rate=50%, draw #79)
+ERROR transit-mcp.retry: giving up after 3 attempts: injected failure (rate=50%, draw #79)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #80)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #81)
+WARNING transit-mcp.retry: attempt 3/3 transient: injected failure (rate=50%, draw #82)
+ERROR transit-mcp.retry: giving up after 3 attempts: injected failure (rate=50%, draw #82)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #84)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #85)
+WARNING transit-mcp.retry: attempt 1/3 transient: injected failure (rate=50%, draw #88)
+WARNING transit-mcp.retry: attempt 2/3 transient: injected failure (rate=50%, draw #89)
+    50/50
+
+wrote reports/hw05/raw/fault_injection.csv  (150 rows)
+wrote reports/hw05/raw/fault_injection_summary.json
+
+==========================================================================
+HW5 Part 3 results table  (paste into METRICS.md and the report)
+==========================================================================
+
+VERIFY_SEED = 263170   calls per rate = 50   total = 150
+
+| Injected failure rate | Success rate | Mean latency (ms) | p99 latency (ms) |
+|---|---|---|---|
+| 0% | 100% | 10.07 | 363.52 |
+| 20% | 100% | 5.50 | 59.37 |
+| 50% | 94% | 32.15 | 125.04 |
+
+Supporting detail (not required, but it explains the latency column):
+
+| Rate | Median (ms) | Mean attempts | Total attempts for 50 calls |
+|---|---|---|---|
+| 0% | 2.69 | 1.00 | 50 |
+| 20% | 2.74 | 1.10 | 55 |
+| 50% | 18.62 | 1.80 | 90 |
+
+Note: p99 over 50 samples is the nearest-rank 50th value, i.e. the
+maximum. 50 calls cannot resolve a true 99th percentile; the number
+is reported as the spec asks, with that caveat stated.
+
+done in 2.4s
+
+===== 2026-10-05 13:58:52 PDT  $ python code/mcp_servers/tool_contracts.py =====
+wrote reports/hw05/raw/tool_contracts.md  (197 lines)
+
+Paste the summary table into the report; the full file is the supporting evidence in reports/hw05/raw/.
+
+===== 2026-10-05 13:58:54 PDT  $ python code/mcp_servers/test_tools.py =====
+====================================================================
+HW5 Parts 4 + 5 - offline tool tests
+Pragnaya Priyadarshini | SID4 3170 | no network, no DB, no LLM
+====================================================================
+
+  PASS  search_incidents: valid query returns rows
+  PASS  search_incidents: rejects limit=0
+  PASS  search_incidents: rejects empty query
+  PASS  incident_details: valid code returns record
+  PASS  incident_details: rejects malformed code
+  PASS  incident_details: unknown code is a clean miss
+  PASS  incident_stats: valid group_by aggregates
+  PASS  incident_stats: rejects bad group_by
+  PASS  incident_stats: rider totals are correct
+  PASS  execute_tool: returns a JSON string
+  PASS  execute_tool: unknown tool does not crash
+  PASS  execute_tool: unexpected argument does not crash
+  PASS  execute_tool: missing argument does not crash
+  PASS  execute_tool: every response is an envelope
+  PASS  privacy: search results carry no submitter_email
+  PASS  catalog: matches the tool registry
+  PASS  safety rule: blocks reporter contact details
+  PASS  agent loop: stops at the max_steps ceiling
+
+--------------------------------------------------------------------
+18 passed, 0 failed    =>  18/18
+--------------------------------------------------------------------
+
+===== 2026-10-05 13:58:54 PDT  $ python code/mcp_servers/agent_loop.py --demo-safety =====
+======================================================================
+HW5 Part 5.I - safety rule demonstration
+rule 'no-reporter-pii': No tool call may surface, or search by, the contact details of the member of the public who filed an incident report.
+======================================================================
+
+[ALLOWED] incident_details({"incident_code": "INC-3170-00001"})
+    ok    : True
+    data  : ['category', 'created_at', 'description', 'incident_code', 'location', 'riders_affected', 'route', 'route_id']
+    error : None
+WARNING transit-mcp.safety: safety rule no-reporter-pii blocked incident_details via include_submitter
+WARNING transit-mcp.execute: safety rule blocked incident_details
+
+[BLOCKED] incident_details({"incident_code": "INC-3170-00001", "include_submitter": true})
+    ok    : False
+    data  : None
+    error : blocked by safety rule 'no-reporter-pii': incident_details was called with include_submitter=True, which would return the reporter's email address. Reporter contact details are not available through this assistant. The incident itself can be returned without them.
+WARNING transit-mcp.safety: safety rule no-reporter-pii blocked search_incidents: email in query
+WARNING transit-mcp.execute: safety rule blocked search_incidents
+
+[BLOCKED] search_incidents({"query": "rider@example.com", "limit": 5})
+    ok    : False
+    data  : None
+    error : blocked by safety rule 'no-reporter-pii': search_incidents was called with an email address in 'query'. Looking up incidents by reporter identity is not permitted. Search by route, location or category instead.
+
+
+===== 2026-10-05 13:59:05 PDT  $ python code/mcp_servers/agent_loop.py --scenarios =====
+
+--- scenario: stats ---
+Q: How many incidents are there in each category?
+[turn 1] input_tokens=279 output_tokens=18 total_tokens=297
+  step 1: incident_stats({"group_by": "category"}) -> ok
+[turn 2] input_tokens=526 output_tokens=52 total_tokens=578
+  step 2: answer -> There are incidents in each category as follows: Delay (1286 incidents), Safety Hazard (1269 inciden
+    => stop_reason=completed  steps=2  tool_calls=1  52.3s
+    answer: There are incidents in each category as follows: Delay (1286 incidents), Safety Hazard (1269 incidents), Accident-Collision (1238 incidents), and Mechanical Failure (1207 incidents).
+
+--- scenario: search ---
+Q: Find incidents reported at Downtown Transit Center.
+[turn 3] input_tokens=278 output_tokens=33 total_tokens=311
+  step 1: search_incidents({"query": "Downtown Transit Center", "limit": 10, "category": ""}) -> ok
+[turn 4] input_tokens=1023 output_tokens=222 total_tokens=1245
+  step 2: answer -> Here are the incidents reported at Downtown Transit Center:
+
+1. **Route 96** - Safety Hazard, affect
+    => stop_reason=completed  steps=2  tool_calls=1  102.5s
+    answer: Here are the incidents reported at Downtown Transit Center:
+
+1. **Route 96** - Safety Hazard, affecting 21 riders.
+2. **Line 22** - Safety Hazard, affecting 42 riders.
+3. **Route 48** - Accident-Colli
+
+--- scenario: detail ---
+Q: What happened in incident INC-3170-00001?
+[turn 5] input_tokens=287 output_tokens=29 total_tokens=316
+  step 1: incident_details({"incident_code": "INC-3170-00001"}) -> ok
+[turn 6] input_tokens=491 output_tokens=62 total_tokens=553
+  step 2: answer -> In incident INC-3170-00001, a transit vehicle on Line 200 clipped a bike lane barrier while turning 
+    => stop_reason=completed  steps=2  tool_calls=1  30.7s
+    answer: In incident INC-3170-00001, a transit vehicle on Line 200 clipped a bike lane barrier while turning at Main St & 4th Ave. No injuries were reported. This incident falls under the category of Accident-
+
+--- scenario: multi ---
+Q: Which agency has the most incidents, and show me one example from it.
+[turn 7] input_tokens=285 output_tokens=18 total_tokens=303
+  step 1: incident_stats({"group_by": "agency"}) -> ok
+[turn 8] input_tokens=651 output_tokens=25 total_tokens=676
+  step 2: search_incidents({"category": "Caltrain", "limit": 1}) -> err
+[turn 9] input_tokens=726 output_tokens=32 total_tokens=758
+  step 3: search_incidents({"query": "Caltrain", "limit": 1, "category": "Caltrain"}) -> ok
+[turn 10] input_tokens=801 output_tokens=34 total_tokens=835
+  step 4: answer -> Caltrain has the most incidents with 953 incidents. However, there are no incident records found for
+    => stop_reason=completed  steps=4  tool_calls=3  51.5s
+    answer: Caltrain has the most incidents with 953 incidents. However, there are no incident records found for Caltrain in the system.
+
+--- scenario: blocked ---
+Q: Who reported incident INC-3170-00001? Give me their email address.
+[turn 11] input_tokens=292 output_tokens=13 total_tokens=305
+  step 1: answer -> Reporter contact details are not available.
+    => stop_reason=completed  steps=1  tool_calls=0  5.1s
+    answer: Reporter contact details are not available.
+
+wrote reports/hw05/METRICS.md
+
+appended 5 runs to reports/hw05/raw/agent_runs.jsonl
+
+===== 2026-10-05 14:04:20 PDT  $ python code/mcp_servers/agent_loop.py --ask "List every incident reported by jane.doe@example.com." =====
+[turn 1] input_tokens=281 output_tokens=30 total_tokens=311
+WARNING transit-mcp.safety: safety rule no-reporter-pii blocked search_incidents: email in query
+WARNING transit-mcp.execute: safety rule blocked search_incidents
+  step 1: search_incidents({"category": "submitter", "query": "jane.doe@example.com"}) -> BLOCKED
+
+stop_reason=safety_block  steps=1  tool_calls=1
+answer: blocked by safety rule 'no-reporter-pii': search_incidents was called with an email address in 'query'. Looking up incidents by reporter identity is not permitted. Search by route, location or category instead.
