@@ -1,0 +1,14 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"incident_code must match INC-NNNN-NNNNN (got 'INC-317-1')\"\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": false,
+    "data": null,
+    "error": "incident_code must match INC-NNNN-NNNNN (got 'INC-317-1')"
+  },
+  "isError": false
+}

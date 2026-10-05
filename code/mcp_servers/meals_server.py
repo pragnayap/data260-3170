@@ -230,11 +230,11 @@ def random_meal() -> dict[str, Any]:
 # --- tool 4 ----------------------------------------------------------------
 
 @mcp.tool()
-def meal_details(id: str) -> dict[str, Any]:
+def meal_details(id: str | int) -> dict[str, Any]:
     """Full recipe for one meal id.
 
     Args:
-        id: the meal id from a search result, e.g. "52771".
+        id: the meal id from a search result, e.g. "52771" or 52771 (spec: str | int).
 
     Returns {meal, message} where meal carries id, name, category, area,
     instructions, image, source, youtube and ingredients[{name, measure}].

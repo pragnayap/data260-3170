@@ -55,7 +55,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1400px;  /* wide enough that the Actions column (Edit/Delete) is visible without scrolling */
   margin: 0 auto;
   padding: 1.5rem 1rem;
 }
@@ -135,8 +135,8 @@ body {
 
 .incident-table td.description-cell {
   white-space: normal;
-  min-width: 260px;
-  max-width: 360px;
+  min-width: 200px;
+  max-width: 280px;
 }
 
 .actions,

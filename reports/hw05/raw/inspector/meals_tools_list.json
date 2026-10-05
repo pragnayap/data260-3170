@@ -1,0 +1,101 @@
+{
+  "tools": [
+    {
+      "name": "search_meals_by_name",
+      "description": "Search meals by name.\n\n    Args:\n        query: the dish name to search for, e.g. \"Arrabiata\".\n        limit: how many meals to return, 1-25.\n\n    Returns {query, count, meals[], message}. Each meal carries id, name,\n    area, category and thumb; use the id with meal_details for the full recipe.\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "title": "Query",
+            "type": "string"
+          },
+          "limit": {
+            "default": 5,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "search_meals_by_nameArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "search_meals_by_nameDictOutput"
+      }
+    },
+    {
+      "name": "meals_by_ingredient",
+      "description": "List meals that use a main ingredient.\n\n    Args:\n        ingredient: the main ingredient, e.g. \"chicken\".\n        limit: how many meals to return, 1-25.\n\n    Returns {ingredient, count, meals[], message}. The filter endpoint gives\n    only id, name and thumb -- call meal_details for anything more.\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ingredient": {
+            "title": "Ingredient",
+            "type": "string"
+          },
+          "limit": {
+            "default": 12,
+            "title": "Limit",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "ingredient"
+        ],
+        "title": "meals_by_ingredientArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "meals_by_ingredientDictOutput"
+      }
+    },
+    {
+      "name": "random_meal",
+      "description": "Return one random meal, in the same shape as meal_details.\n\n    Takes no arguments.\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "random_mealArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "random_mealDictOutput"
+      }
+    },
+    {
+      "name": "meal_details",
+      "description": "Full recipe for one meal id.\n\n    Args:\n        id: the meal id from a search result, e.g. \"52771\" or 52771 (spec: str | int).\n\n    Returns {meal, message} where meal carries id, name, category, area,\n    instructions, image, source, youtube and ingredients[{name, measure}].\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "title": "Id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "title": "meal_detailsArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "additionalProperties": true,
+        "title": "meal_detailsDictOutput"
+      }
+    }
+  ]
+}

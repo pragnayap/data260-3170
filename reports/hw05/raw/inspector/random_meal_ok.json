@@ -1,0 +1,48 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"meal\": {\n    \"id\": \"53436\",\n    \"name\": \"Jajek\",\n    \"category\": \"Side\",\n    \"area\": null,\n    \"instructions\": \"Place yogurt, water, garlic and salt in food processor and process for a few seconds. Transfer to a bowl and mix with mint and cucumber.  Best served chilled for a few hours. \\r\\n\\r\\nWhen serving, add a few ice cubes to add additional refreshment!  Makes about four servings.\",\n    \"image\": \"https://www.themealdb.com/images/media/meals/8x0vgs1780090328.jpg\",\n    \"source\": \"https://www.armenianmuseum.org/armenian-recipes/jajek\",\n    \"youtube\": \"\",\n    \"ingredients\": [\n      {\n        \"name\": \"Yogurt\",\n        \"measure\": \"2 cups\"\n      },\n      {\n        \"name\": \"Cold Water\",\n        \"measure\": \"1 cup\"\n      },\n      {\n        \"name\": \"Garlic\",\n        \"measure\": \"1 clove peeled crushed\"\n      },\n      {\n        \"name\": \"Salt\",\n        \"measure\": \"1/2 tsp\"\n      },\n      {\n        \"name\": \"Dried Mint\",\n        \"measure\": \"1 tsp\"\n      },\n      {\n        \"name\": \"Cucumber\",\n        \"measure\": \"1\"\n      }\n    ]\n  },\n  \"message\": null\n}"
+    }
+  ],
+  "structuredContent": {
+    "meal": {
+      "id": "53436",
+      "name": "Jajek",
+      "category": "Side",
+      "area": null,
+      "instructions": "Place yogurt, water, garlic and salt in food processor and process for a few seconds. Transfer to a bowl and mix with mint and cucumber.  Best served chilled for a few hours. \r\n\r\nWhen serving, add a few ice cubes to add additional refreshment!  Makes about four servings.",
+      "image": "https://www.themealdb.com/images/media/meals/8x0vgs1780090328.jpg",
+      "source": "https://www.armenianmuseum.org/armenian-recipes/jajek",
+      "youtube": "",
+      "ingredients": [
+        {
+          "name": "Yogurt",
+          "measure": "2 cups"
+        },
+        {
+          "name": "Cold Water",
+          "measure": "1 cup"
+        },
+        {
+          "name": "Garlic",
+          "measure": "1 clove peeled crushed"
+        },
+        {
+          "name": "Salt",
+          "measure": "1/2 tsp"
+        },
+        {
+          "name": "Dried Mint",
+          "measure": "1 tsp"
+        },
+        {
+          "name": "Cucumber",
+          "measure": "1"
+        }
+      ]
+    },
+    "message": null
+  },
+  "isError": false
+}

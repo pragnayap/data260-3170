@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"query\": \"Arrabiata\",\n  \"count\": 1,\n  \"meals\": [\n    {\n      \"id\": \"52771\",\n      \"name\": \"Spicy Arrabiata Penne\",\n      \"area\": \"Italian\",\n      \"category\": \"Vegetarian\",\n      \"thumb\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\"\n    }\n  ],\n  \"message\": null\n}"
+    }
+  ],
+  "structuredContent": {
+    "query": "Arrabiata",
+    "count": 1,
+    "meals": [
+      {
+        "id": "52771",
+        "name": "Spicy Arrabiata Penne",
+        "area": "Italian",
+        "category": "Vegetarian",
+        "thumb": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"
+      }
+    ],
+    "message": null
+  },
+  "isError": false
+}

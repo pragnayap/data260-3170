@@ -1,0 +1,28 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"incident_code\": \"INC-3170-00001\",\n    \"route_id\": \"Line 200\",\n    \"location\": \"Main St & 4th Ave\",\n    \"description\": \"Transit vehicle on this route clipped a bike lane barrier while turning, no injuries reported.\",\n    \"category\": \"Accident-Collision\",\n    \"riders_affected\": 0,\n    \"created_at\": \"2026-01-01T00:00:00\",\n    \"route\": {\n      \"route_code\": \"R-0200\",\n      \"route_name\": \"Line 200\",\n      \"agency\": \"BART\",\n      \"route_type\": \"Commuter Rail\"\n    }\n  },\n  \"error\": null\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": true,
+    "data": {
+      "incident_code": "INC-3170-00001",
+      "route_id": "Line 200",
+      "location": "Main St & 4th Ave",
+      "description": "Transit vehicle on this route clipped a bike lane barrier while turning, no injuries reported.",
+      "category": "Accident-Collision",
+      "riders_affected": 0,
+      "created_at": "2026-01-01T00:00:00",
+      "route": {
+        "route_code": "R-0200",
+        "route_name": "Line 200",
+        "agency": "BART",
+        "route_type": "Commuter Rail"
+      }
+    },
+    "error": null
+  },
+  "isError": false
+}

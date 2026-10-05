@@ -1,0 +1,475 @@
+{
+  "info": {
+    "name": "HW5 s3170 Transit API",
+    "description": "DATA 260 HW5 Part 1.II. Run the requests top to bottom: 1.6/1.9 use the id saved by 1.5, and 1.12/1.13 use the id saved by 1.11.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "0 - Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}/api/auth/login",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        },
+        "description": "Run first. Postman keeps the s3170_db_session cookie for every later request.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"pragnaya.hw5@example.com\",\n  \"password\": \"hw5password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "1.3 - GET routes (paginated)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base}}/api/routes?page=1&page_size=5",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "routes"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "page_size",
+              "value": "5"
+            }
+          ]
+        },
+        "description": ""
+      }
+    },
+    {
+      "name": "1.4 - GET one route",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base}}/api/routes/1",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "routes",
+            "1"
+          ]
+        },
+        "description": ""
+      }
+    },
+    {
+      "name": "1.5 - POST route (201)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}/api/routes",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "routes"
+          ]
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"route_code\": \"R-9001\",\n  \"route_name\": \"Route 9001 Test Line\",\n  \"agency\": \"VTA\",\n  \"route_type\": \"bus\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (pm.response.code === 201) { pm.collectionVariables.set('new_route_id', pm.response.json().id); }"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "1.6 - PUT route (200)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}/api/routes/{{new_route_id}}",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "routes",
+            "{{new_route_id}}"
+          ]
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"route_code\": \"R-9001\",\n  \"route_name\": \"Route 9001 Express\",\n  \"agency\": \"VTA\",\n  \"route_type\": \"bus\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "1.7 - GET route incidents (relationship)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base}}/api/routes/1/incidents",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "routes",
+            "1",
+            "incidents"
+          ]
+        },
+        "description": ""
+      }
+    },
+    {
+      "name": "1.8 - DELETE in-use route (409)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base}}/api/routes/1",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "routes",
+            "1"
+          ]
+        },
+        "description": ""
+      }
+    },
+    {
+      "name": "1.9 - DELETE new route (204)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base}}/api/routes/{{new_route_id}}",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "routes",
+            "{{new_route_id}}"
+          ]
+        },
+        "description": ""
+      }
+    },
+    {
+      "name": "1.10a - GET incidents (paginated)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base}}/api/incidents?page=1&page_size=5",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "incidents"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "page_size",
+              "value": "5"
+            }
+          ]
+        },
+        "description": ""
+      }
+    },
+    {
+      "name": "1.10b - GET one incident",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base}}/api/incidents/1",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "incidents",
+            "1"
+          ]
+        },
+        "description": ""
+      }
+    },
+    {
+      "name": "1.11 - POST incident (201)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}/api/incidents",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "incidents"
+          ]
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"incident_code\": \"INC-3170-90001\",\n  \"route_id\": \"Route 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"submitter_email\": \"rider@example.com\",\n  \"description\": \"Bus doors failed to close at the stop, causing a twelve minute delay.\",\n  \"category\": \"Mechanical Failure\",\n  \"riders_affected\": 35,\n  \"related_route_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (pm.response.code === 201) { pm.collectionVariables.set('new_incident_id', pm.response.json().id); }"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "1.12 - PUT incident (200)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}/api/incidents/{{new_incident_id}}",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "incidents",
+            "{{new_incident_id}}"
+          ]
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"incident_code\": \"INC-3170-90001\",\n  \"route_id\": \"Route 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"submitter_email\": \"rider@example.com\",\n  \"description\": \"Bus doors failed to close at the stop, causing a twelve minute delay.\",\n  \"category\": \"Mechanical Failure\",\n  \"riders_affected\": 40,\n  \"related_route_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "1.13 - DELETE incident (204)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base}}/api/incidents/{{new_incident_id}}",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "incidents",
+            "{{new_incident_id}}"
+          ]
+        },
+        "description": ""
+      }
+    },
+    {
+      "name": "1.14a - POST malformed incident_code (422)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}/api/incidents",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "incidents"
+          ]
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"incident_code\": \"INC-317-1\",\n  \"route_id\": \"Route 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"submitter_email\": \"rider@example.com\",\n  \"description\": \"Bus doors failed to close at the stop, causing a twelve minute delay.\",\n  \"category\": \"Mechanical Failure\",\n  \"riders_affected\": 35,\n  \"related_route_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "1.14b - POST unknown related_route_id (404)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}/api/incidents",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "incidents"
+          ]
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"incident_code\": \"INC-3170-90001\",\n  \"route_id\": \"Route 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"submitter_email\": \"rider@example.com\",\n  \"description\": \"Bus doors failed to close at the stop, causing a twelve minute delay.\",\n  \"category\": \"Mechanical Failure\",\n  \"riders_affected\": 35,\n  \"related_route_id\": 99999\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "1.14c - POST duplicate incident_code (409)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base}}/api/incidents",
+          "host": [
+            "{{base}}"
+          ],
+          "path": [
+            "api",
+            "incidents"
+          ]
+        },
+        "description": "",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"incident_code\": \"INC-3170-00001\",\n  \"route_id\": \"Route 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"submitter_email\": \"rider@example.com\",\n  \"description\": \"Bus doors failed to close at the stop, causing a twelve minute delay.\",\n  \"category\": \"Mechanical Failure\",\n  \"riders_affected\": 35,\n  \"related_route_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base",
+      "value": "http://localhost:8470"
+    },
+    {
+      "key": "new_route_id",
+      "value": ""
+    },
+    {
+      "key": "new_incident_id",
+      "value": ""
+    }
+  ]
+}

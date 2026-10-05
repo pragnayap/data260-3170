@@ -1,0 +1,173 @@
+{
+  "tools": [
+    {
+      "name": "search_incidents",
+      "description": "Search transit incidents by route or location.\n\n    Args:\n        query: text to match against the route name or the stop/station.\n        limit: how many results to return, 1-50.\n        category: optional exact filter -- Delay, Mechanical Failure,\n            Accident-Collision or Safety Hazard.\n\n    Returns the {ok, data, error} envelope. On success, data holds\n    {query, count, results[]}.\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "title": "Query",
+            "type": "string"
+          },
+          "limit": {
+            "default": 10,
+            "title": "Limit",
+            "type": "integer"
+          },
+          "category": {
+            "default": "",
+            "title": "Category",
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "search_incidentsArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "title": "Ok",
+            "type": "boolean"
+          },
+          "data": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          }
+        },
+        "required": [
+          "ok",
+          "data",
+          "error"
+        ],
+        "title": "Envelope"
+      }
+    },
+    {
+      "name": "incident_details",
+      "description": "Look up one incident by its unique code, e.g. INC-3170-00001.\n\n    Args:\n        incident_code: the unique code, format INC-NNNN-NNNNN.\n        include_submitter: include the reporter's email address. Off by\n            default; the Part 5 safety rule refuses to turn it on.\n\n    Returns the {ok, data, error} envelope. On success, data holds the full\n    record including its route.\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "incident_code": {
+            "title": "Incident Code",
+            "type": "string"
+          },
+          "include_submitter": {
+            "default": false,
+            "title": "Include Submitter",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "incident_code"
+        ],
+        "title": "incident_detailsArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "title": "Ok",
+            "type": "boolean"
+          },
+          "data": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          }
+        },
+        "required": [
+          "ok",
+          "data",
+          "error"
+        ],
+        "title": "Envelope"
+      }
+    },
+    {
+      "name": "incident_stats",
+      "description": "Aggregate incident counts and rider impact.\n\n    Args:\n        group_by: one of \"category\", \"agency\" or \"route_type\". The last two\n            join through to the routes table.\n\n    Returns the {ok, data, error} envelope. On success, data holds\n    {group_by, total_incidents, groups[]}.\n    ",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "group_by": {
+            "default": "category",
+            "title": "Group By",
+            "type": "string"
+          }
+        },
+        "title": "incident_statsArguments"
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "title": "Ok",
+            "type": "boolean"
+          },
+          "data": {
+            "anyOf": [
+              {},
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          }
+        },
+        "required": [
+          "ok",
+          "data",
+          "error"
+        ],
+        "title": "Envelope"
+      }
+    }
+  ]
+}

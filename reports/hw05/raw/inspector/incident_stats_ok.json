@@ -1,0 +1,61 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"group_by\": \"agency\",\n    \"total_incidents\": 4998,\n    \"groups\": [\n      {\n        \"group\": \"Caltrain\",\n        \"incidents\": 953,\n        \"total_riders_affected\": 85190,\n        \"avg_riders_affected\": 89.4\n      },\n      {\n        \"group\": \"SamTrans\",\n        \"incidents\": 878,\n        \"total_riders_affected\": 79796,\n        \"avg_riders_affected\": 90.9\n      },\n      {\n        \"group\": \"AC Transit\",\n        \"incidents\": 735,\n        \"total_riders_affected\": 66622,\n        \"avg_riders_affected\": 90.6\n      },\n      {\n        \"group\": \"SJ Transit\",\n        \"incidents\": 674,\n        \"total_riders_affected\": 59740,\n        \"avg_riders_affected\": 88.6\n      },\n      {\n        \"group\": \"BART\",\n        \"incidents\": 645,\n        \"total_riders_affected\": 55692,\n        \"avg_riders_affected\": 86.3\n      },\n      {\n        \"group\": \"Muni\",\n        \"incidents\": 606,\n        \"total_riders_affected\": 53577,\n        \"avg_riders_affected\": 88.4\n      },\n      {\n        \"group\": \"VTA\",\n        \"incidents\": 507,\n        \"total_riders_affected\": 46296,\n        \"avg_riders_affected\": 91.3\n      }\n    ]\n  },\n  \"error\": null\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": true,
+    "data": {
+      "group_by": "agency",
+      "total_incidents": 4998,
+      "groups": [
+        {
+          "group": "Caltrain",
+          "incidents": 953,
+          "total_riders_affected": 85190,
+          "avg_riders_affected": 89.4
+        },
+        {
+          "group": "SamTrans",
+          "incidents": 878,
+          "total_riders_affected": 79796,
+          "avg_riders_affected": 90.9
+        },
+        {
+          "group": "AC Transit",
+          "incidents": 735,
+          "total_riders_affected": 66622,
+          "avg_riders_affected": 90.6
+        },
+        {
+          "group": "SJ Transit",
+          "incidents": 674,
+          "total_riders_affected": 59740,
+          "avg_riders_affected": 88.6
+        },
+        {
+          "group": "BART",
+          "incidents": 645,
+          "total_riders_affected": 55692,
+          "avg_riders_affected": 86.3
+        },
+        {
+          "group": "Muni",
+          "incidents": 606,
+          "total_riders_affected": 53577,
+          "avg_riders_affected": 88.4
+        },
+        {
+          "group": "VTA",
+          "incidents": 507,
+          "total_riders_affected": 46296,
+          "avg_riders_affected": 91.3
+        }
+      ]
+    },
+    "error": null
+  },
+  "isError": false
+}

@@ -95,7 +95,7 @@ class IncidentBase(BaseModel):
         ge=0,
         description="Numeric field. Defaults to 0 when the reporter gives no estimate.",
     )
-    relatedRouteId: int = Field(..., alias="related_route_id")
+    relatedRouteId: int = Field(..., alias="related_route_id", gt=0)
 
     model_config = {"str_strip_whitespace": True, "populate_by_name": True}
 

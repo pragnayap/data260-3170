@@ -1,0 +1,59 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": true,\n  \"data\": {\n    \"query\": \"Downtown\",\n    \"count\": 5,\n    \"results\": [\n      {\n        \"incident_code\": \"INC-3170-00004\",\n        \"route_id\": \"Route 96\",\n        \"location\": \"Downtown Transit Center\",\n        \"category\": \"Safety Hazard\",\n        \"riders_affected\": 21,\n        \"route_name\": \"Route 96\"\n      },\n      {\n        \"incident_code\": \"INC-3170-00007\",\n        \"route_id\": \"Line 22\",\n        \"location\": \"Downtown Transit Center\",\n        \"category\": \"Safety Hazard\",\n        \"riders_affected\": 42,\n        \"route_name\": \"Line 22\"\n      },\n      {\n        \"incident_code\": \"INC-3170-00018\",\n        \"route_id\": \"Route 48\",\n        \"location\": \"Downtown Transit Center\",\n        \"category\": \"Accident-Collision\",\n        \"riders_affected\": 119,\n        \"route_name\": \"Route 48\"\n      },\n      {\n        \"incident_code\": \"INC-3170-00019\",\n        \"route_id\": \"Route 127\",\n        \"location\": \"Downtown Transit Center\",\n        \"category\": \"Accident-Collision\",\n        \"riders_affected\": 126,\n        \"route_name\": \"Route 127\"\n      },\n      {\n        \"incident_code\": \"INC-3170-00032\",\n        \"route_id\": \"SamTrans Line 146\",\n        \"location\": \"Downtown Transit Center\",\n        \"category\": \"Accident-Collision\",\n        \"riders_affected\": 37,\n        \"route_name\": \"SamTrans Line 146\"\n      }\n    ]\n  },\n  \"error\": null\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": true,
+    "data": {
+      "query": "Downtown",
+      "count": 5,
+      "results": [
+        {
+          "incident_code": "INC-3170-00004",
+          "route_id": "Route 96",
+          "location": "Downtown Transit Center",
+          "category": "Safety Hazard",
+          "riders_affected": 21,
+          "route_name": "Route 96"
+        },
+        {
+          "incident_code": "INC-3170-00007",
+          "route_id": "Line 22",
+          "location": "Downtown Transit Center",
+          "category": "Safety Hazard",
+          "riders_affected": 42,
+          "route_name": "Line 22"
+        },
+        {
+          "incident_code": "INC-3170-00018",
+          "route_id": "Route 48",
+          "location": "Downtown Transit Center",
+          "category": "Accident-Collision",
+          "riders_affected": 119,
+          "route_name": "Route 48"
+        },
+        {
+          "incident_code": "INC-3170-00019",
+          "route_id": "Route 127",
+          "location": "Downtown Transit Center",
+          "category": "Accident-Collision",
+          "riders_affected": 126,
+          "route_name": "Route 127"
+        },
+        {
+          "incident_code": "INC-3170-00032",
+          "route_id": "SamTrans Line 146",
+          "location": "Downtown Transit Center",
+          "category": "Accident-Collision",
+          "riders_affected": 37,
+          "route_name": "SamTrans Line 146"
+        }
+      ]
+    },
+    "error": null
+  },
+  "isError": false
+}

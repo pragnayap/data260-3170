@@ -1,0 +1,14 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": false,\n  \"data\": null,\n  \"error\": \"group_by must be one of category, agency, route_type (got 'banana')\"\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": false,
+    "data": null,
+    "error": "group_by must be one of category, agency, route_type (got 'banana')"
+  },
+  "isError": false
+}
