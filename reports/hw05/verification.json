@@ -6,9 +6,9 @@
   "domain_id": 2,
   "seed": 3170,
   "verify_seed": 263170,
-  "commit_hash": "02c02f453465e628213d2e2d2fa9f918eea174a2",
-  "git_tags_at_head": "",
-  "timestamp_utc": "2026-10-05T21:35:05Z",
+  "commit_hash": "b41f64beb83cea904dc2a31049c39db2146c41a5",
+  "git_tags_at_head": "hw5",
+  "timestamp_utc": "2026-10-05T23:05:48Z",
   "model_configuration": {
     "llm": "qwen3:8b",
     "ollama_url": "http://localhost:11434",
@@ -39,7 +39,7 @@
       "passed": true,
       "skipped": false,
       "detail": "incident_code, riders_affected, created_at, updated_at",
-      "elapsed_ms": 0.1
+      "elapsed_ms": 0.7
     },
     {
       "part": "1.I",
@@ -47,7 +47,7 @@
       "passed": true,
       "skipped": false,
       "detail": "ON DELETE RESTRICT present in generated DDL",
-      "elapsed_ms": 258.5
+      "elapsed_ms": 263.1
     },
     {
       "part": "1.I",
@@ -71,7 +71,7 @@
       "passed": true,
       "skipped": false,
       "detail": "200 routes, 5000 incidents",
-      "elapsed_ms": 45.6
+      "elapsed_ms": 38.7
     },
     {
       "part": "1.I",
@@ -79,7 +79,7 @@
       "passed": true,
       "skipped": false,
       "detail": "5000 distinct codes",
-      "elapsed_ms": 7.5
+      "elapsed_ms": 7.7
     },
     {
       "part": "1.II",
@@ -87,7 +87,7 @@
       "passed": true,
       "skipped": false,
       "detail": "http://127.0.0.1:8470 answered 200",
-      "elapsed_ms": 147.3
+      "elapsed_ms": 147.9
     },
     {
       "part": "1.II",
@@ -95,7 +95,7 @@
       "passed": true,
       "skipped": false,
       "detail": "5 paths, 11 operations present",
-      "elapsed_ms": 26.5
+      "elapsed_ms": 23.0
     },
     {
       "part": "1.II",
@@ -103,7 +103,7 @@
       "passed": true,
       "skipped": false,
       "detail": "unauthenticated GET /api/incidents -> 401",
-      "elapsed_ms": 2.7
+      "elapsed_ms": 7.6
     },
     {
       "part": "1.II",
@@ -111,7 +111,7 @@
       "passed": true,
       "skipped": false,
       "detail": "page object, total=200",
-      "elapsed_ms": 190.8
+      "elapsed_ms": 222.4
     },
     {
       "part": "1.II",
@@ -119,7 +119,7 @@
       "passed": true,
       "skipped": false,
       "detail": "route 1 -> 24 incidents",
-      "elapsed_ms": 210.3
+      "elapsed_ms": 198.3
     },
     {
       "part": "1.II",
@@ -127,7 +127,7 @@
       "passed": true,
       "skipped": false,
       "detail": "GET /api/routes/999999 -> 404",
-      "elapsed_ms": 191.4
+      "elapsed_ms": 184.1
     },
     {
       "part": "1.II",
@@ -135,7 +135,7 @@
       "passed": true,
       "skipped": false,
       "detail": "malformed incident_code -> 422",
-      "elapsed_ms": 188.1
+      "elapsed_ms": 193.3
     },
     {
       "part": "1.II",
@@ -143,7 +143,7 @@
       "passed": true,
       "skipped": false,
       "detail": "duplicate incident_code -> 409",
-      "elapsed_ms": 181.8
+      "elapsed_ms": 191.1
     },
     {
       "part": "1.II",
@@ -151,7 +151,7 @@
       "passed": true,
       "skipped": false,
       "detail": "route 1 holds 24 incidents -> 409",
-      "elapsed_ms": 188.1
+      "elapsed_ms": 199.9
     },
     {
       "part": "1.III",
@@ -159,7 +159,7 @@
       "passed": true,
       "skipped": false,
       "detail": "store/index.js and store/incidentsSlice.js present",
-      "elapsed_ms": 0.2
+      "elapsed_ms": 0.1
     },
     {
       "part": "1.III",
@@ -167,7 +167,7 @@
       "passed": true,
       "skipped": false,
       "detail": "fetch/create/update/delete, via createAsyncThunk",
-      "elapsed_ms": 0.4
+      "elapsed_ms": 0.5
     },
     {
       "part": "1.III",
@@ -183,7 +183,7 @@
       "passed": true,
       "skipped": false,
       "detail": "<Provider store={store}> in main.jsx",
-      "elapsed_ms": 0.4
+      "elapsed_ms": 0.3
     },
     {
       "part": "2",
@@ -191,7 +191,7 @@
       "passed": true,
       "skipped": false,
       "detail": "ok/err/Envelope, imported by transit_tools, execute_tool, retry",
-      "elapsed_ms": 0.3
+      "elapsed_ms": 1.7
     },
     {
       "part": "2",
@@ -199,7 +199,7 @@
       "passed": true,
       "skipped": false,
       "detail": "no print() in either server or the tool module",
-      "elapsed_ms": 0.8
+      "elapsed_ms": 1.1
     },
     {
       "part": "2.A",
@@ -207,7 +207,7 @@
       "passed": true,
       "skipped": false,
       "detail": "4 tools, search returned 1 meal(s)",
-      "elapsed_ms": 2008.2
+      "elapsed_ms": 1670.2
     },
     {
       "part": "2.B",
@@ -215,7 +215,7 @@
       "passed": true,
       "skipped": false,
       "detail": "3 tools, aggregate returned 4 categories",
-      "elapsed_ms": 1287.9
+      "elapsed_ms": 1175.7
     },
     {
       "part": "3",
@@ -223,7 +223,7 @@
       "passed": true,
       "skipped": false,
       "detail": "max_attempts=3, max_delay=0.4s, timeout=2.0s",
-      "elapsed_ms": 11.2
+      "elapsed_ms": 5.5
     },
     {
       "part": "3",
@@ -231,7 +231,7 @@
       "passed": true,
       "skipped": false,
       "detail": "delays [0.1, 0.2, 0.4, 0.4] (doubling, capped at 0.4s)",
-      "elapsed_ms": 0.1
+      "elapsed_ms": 0.0
     },
     {
       "part": "3",
@@ -239,7 +239,7 @@
       "passed": true,
       "skipped": false,
       "detail": "40 draws reproduce exactly from VERIFY_SEED=263170",
-      "elapsed_ms": 0.3
+      "elapsed_ms": 0.2
     },
     {
       "part": "3",
@@ -247,7 +247,7 @@
       "passed": true,
       "skipped": false,
       "detail": "150 calls, 50 at each of 0.0, 0.2, 0.5",
-      "elapsed_ms": 1.9
+      "elapsed_ms": 1.2
     },
     {
       "part": "3",
@@ -255,7 +255,7 @@
       "passed": true,
       "skipped": false,
       "detail": "success rate, mean and p99 recorded for each rate",
-      "elapsed_ms": 0.9
+      "elapsed_ms": 0.5
     },
     {
       "part": "3",
@@ -263,7 +263,7 @@
       "passed": true,
       "skipped": false,
       "detail": "197 lines, all three tools",
-      "elapsed_ms": 0.9
+      "elapsed_ms": 0.7
     },
     {
       "part": "4",
@@ -271,7 +271,7 @@
       "passed": true,
       "skipped": false,
       "detail": "JSON string carrying {ok, data, error}",
-      "elapsed_ms": 4.0
+      "elapsed_ms": 3.4
     },
     {
       "part": "4",
@@ -287,7 +287,7 @@
       "passed": true,
       "skipped": false,
       "detail": "18 passed, 0 failed",
-      "elapsed_ms": 490.8
+      "elapsed_ms": 512.6
     },
     {
       "part": "5.I",
@@ -303,7 +303,7 @@
       "passed": true,
       "skipped": false,
       "detail": "plain lookup succeeds and carries no submitter_email",
-      "elapsed_ms": 12.9
+      "elapsed_ms": 14.5
     },
     {
       "part": "5.II",
@@ -311,7 +311,7 @@
       "passed": true,
       "skipped": false,
       "detail": "MockModel loop halted at the 3-step ceiling",
-      "elapsed_ms": 3.8
+      "elapsed_ms": 3.7
     },
     {
       "part": "5.II",
@@ -319,7 +319,7 @@
       "passed": true,
       "skipped": false,
       "detail": "the same loop completes when the model answers",
-      "elapsed_ms": 0.5
+      "elapsed_ms": 0.4
     },
     {
       "part": "5.II",
@@ -335,7 +335,7 @@
       "passed": true,
       "skipped": false,
       "detail": "6 runs, stop reasons: completed, safety_block",
-      "elapsed_ms": 0.9
+      "elapsed_ms": 1.0
     },
     {
       "part": "5.V",
@@ -343,15 +343,15 @@
       "passed": true,
       "skipped": false,
       "detail": "287 words",
-      "elapsed_ms": 0.9
+      "elapsed_ms": 1.0
     },
     {
       "part": "submission",
       "check": "no .env file is tracked by git",
       "passed": true,
       "skipped": false,
-      "detail": "136 tracked files, no .env among them",
-      "elapsed_ms": 30.6
+      "detail": "173 tracked files, no .env among them",
+      "elapsed_ms": 38.4
     },
     {
       "part": "submission",
@@ -359,7 +359,7 @@
       "passed": true,
       "skipped": false,
       "detail": "reports/hw05 holds evidence only",
-      "elapsed_ms": 0.7
+      "elapsed_ms": 1.0
     }
   ]
 }
