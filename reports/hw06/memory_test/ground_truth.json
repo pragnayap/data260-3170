@@ -1,0 +1,52 @@
+{
+  "_comment": "Written BEFORE consolidation was run. Used only to grade the consolidator's contradiction decisions.",
+  "contradictions": [
+    {
+      "id": "C1_backend_port",
+      "a": "port 8470 (assigned by SID4, do not change)",
+      "b": "backend runs on port 8000 for local development",
+      "correct": "keep a",
+      "why": "8470 is the assigned, fixed port; the newer 8000 note is a stray local tweak. Newest-wins is the WRONG rule here.",
+      "a_match": "port 8470",
+      "b_match": "port 8000"
+    },
+    {
+      "id": "C2_vite_port",
+      "a": "Vite dev server uses port 5173",
+      "b": "Vite dev server uses port 8471 with strictPort true",
+      "correct": "keep b",
+      "why": "8471 + strictPort is the current, documented setting.",
+      "a_match": "port 5173",
+      "b_match": "port 8471"
+    },
+    {
+      "id": "C3_mongo_install",
+      "a": "MongoDB runs locally, installed through Homebrew",
+      "b": "MongoDB runs in a Docker container named s3170_mongo",
+      "correct": "keep b",
+      "why": "Homebrew had no mongod; the container is what actually runs.",
+      "a_match": "installed through Homebrew",
+      "b_match": "Docker container"
+    },
+    {
+      "id": "C4_secrets",
+      "a": "MySQL root password is documented in the README",
+      "b": "Secrets live only in gitignored .env files",
+      "correct": "keep b",
+      "why": "Never put secrets in the README.",
+      "a_match": "root password is documented",
+      "b_match": "gitignored .env"
+    },
+    {
+      "id": "C5_secure_cookie",
+      "a": "Safari rejects Secure cookies over plain http, so Secure stays off in development",
+      "b": "Session cookies must always set Secure=True",
+      "correct": "keep both (scoped)",
+      "why": "Not a real contradiction: dev over http vs production over https. Dropping the dev rule is WRONG.",
+      "a_match": "Secure stays off",
+      "b_match": "always set Secure=True"
+    }
+  ],
+  "expected_exact_or_near_duplicate_groups": 9,
+  "expected_obsolete_notes": 5
+}
