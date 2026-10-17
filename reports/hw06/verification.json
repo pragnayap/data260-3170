@@ -6,7 +6,7 @@
   "SEED": 3170,
   "VERIFY_SEED": 263170,
   "DOMAIN_ID": 2,
-  "commit": "ac39e42cdab2f3791fb494078ff37d2cc8a633a9",
+  "commit": "d697ffdb5ac6ae89a9260fd8cc6506dc3b35190e",
   "working_tree_clean": false,
   "model_configuration": {
     "model": "qwen3:8b (Ollama, via src/model_client.py)",
@@ -17,7 +17,7 @@
     "mongodb": "mongo:7.0 (Docker)",
     "offline_only": false
   },
-  "generated_at": "2026-10-17T01:13:52+00:00",
+  "generated_at": "2026-10-17T01:48:45+00:00",
   "passed": 14,
   "failed": 0,
   "skipped": 0,
@@ -66,7 +66,7 @@
     {
       "check": "file-memory unit tests (thresholds, consolidation logic, /compact, /dream, /help)",
       "status": "PASS",
-      "detail": "19 passed in 0.05s"
+      "detail": "19 passed in 0.09s"
     },
     {
       "check": "consolidation trigger: >40 non-empty non-comment lines OR >24 h",
