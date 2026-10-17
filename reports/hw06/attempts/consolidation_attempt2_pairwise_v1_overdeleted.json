@@ -1,0 +1,1965 @@
+{
+  "lines_before": 55,
+  "lines_after": 1,
+  "under_40": true,
+  "llm_ok": true,
+  "notes": [
+    "87 candidate pairs at cosine >= 0.3",
+    "pair verdicts: SAME=10, CONFLICT=3, SCOPED=58, UNRELATED=16",
+    "8 duplicate groups, 52 contradiction decisions, 47 temporary notes"
+  ],
+  "pair_verdicts": [
+    {
+      "a": 43,
+      "b": 44,
+      "cosine": 0.956,
+      "verdict": "SAME",
+      "keep": "B",
+      "reason": "Both statements describe the same content about HW3 chunking comparison."
+    },
+    {
+      "a": 11,
+      "b": 12,
+      "cosine": 0.904,
+      "verdict": "CONFLICT",
+      "keep": "B",
+      "reason": "Both entries refer to the same Vite dev server but use different ports, which cannot both be true at the same time."
+    },
+    {
+      "a": 30,
+      "b": 31,
+      "cosine": 0.888,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different homework sessions with different cookie names."
+    },
+    {
+      "a": 9,
+      "b": 10,
+      "cosine": 0.858,
+      "verdict": "SAME",
+      "keep": "A",
+      "reason": "Both state the FastAPI backend must use port 8470, with A specifying it's assigned and not to be changed."
+    },
+    {
+      "a": 7,
+      "b": 8,
+      "cosine": 0.854,
+      "verdict": "SAME",
+      "keep": "B",
+      "reason": "Both statements confirm the domain is Municipal Transit Incidents."
+    },
+    {
+      "a": 18,
+      "b": 19,
+      "cosine": 0.842,
+      "verdict": "SAME",
+      "keep": "B",
+      "reason": "Both statements confirm the same relationship between an Intel Mac and Homebrew's installation path."
+    },
+    {
+      "a": 21,
+      "b": 22,
+      "cosine": 0.83,
+      "verdict": "SAME",
+      "keep": "B",
+      "reason": "Both statements enforce the same restriction on the sentence-transformers version."
+    },
+    {
+      "a": 17,
+      "b": 48,
+      "cosine": 0.737,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of HW6: one specifies the database name, the other describes features added."
+    },
+    {
+      "a": 1,
+      "b": 5,
+      "cosine": 0.695,
+      "verdict": "SAME",
+      "keep": "B",
+      "reason": "Both statements confirm that Lucky is the name the student goes by."
+    },
+    {
+      "a": 36,
+      "b": 37,
+      "cosine": 0.684,
+      "verdict": "SAME",
+      "keep": "B",
+      "reason": "B is more specific and concise, making A redundant."
+    },
+    {
+      "a": 26,
+      "b": 27,
+      "cosine": 0.658,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They apply to different environments (development vs production) regarding secure cookie settings."
+    },
+    {
+      "a": 27,
+      "b": 32,
+      "cosine": 0.634,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They address different aspects of cookie security and session management."
+    },
+    {
+      "a": 24,
+      "b": 25,
+      "cosine": 0.615,
+      "verdict": "SAME",
+      "keep": "B",
+      "reason": "Both statements confirm the use of the same MiniLM model for embeddings."
+    },
+    {
+      "a": 15,
+      "b": 16,
+      "cosine": 0.605,
+      "verdict": "CONFLICT",
+      "keep": "B",
+      "reason": "Both describe MongoDB but in different environments, newer entry takes precedence."
+    },
+    {
+      "a": 9,
+      "b": 13,
+      "cosine": 0.572,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different environments (production vs local development)."
+    },
+    {
+      "a": 15,
+      "b": 19,
+      "cosine": 0.554,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They describe different aspects of the setup on an Intel Mac."
+    },
+    {
+      "a": 10,
+      "b": 13,
+      "cosine": 0.54,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different environments (production vs local development)."
+    },
+    {
+      "a": 15,
+      "b": 18,
+      "cosine": 0.531,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They describe different dates and contexts but both relate to the same machine setup."
+    },
+    {
+      "a": 11,
+      "b": 13,
+      "cosine": 0.529,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different ports for separate services in local development."
+    },
+    {
+      "a": 29,
+      "b": 37,
+      "cosine": 0.505,
+      "verdict": "SAME",
+      "keep": "B",
+      "reason": "Both emphasize not committing .env files, but B is more specific and recent."
+    },
+    {
+      "a": 15,
+      "b": 17,
+      "cosine": 0.505,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "One refers to MongoDB installation and the other to a specific database used for HW6."
+    },
+    {
+      "a": 25,
+      "b": 45,
+      "cosine": 0.503,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different components (embedding model vs retrieval method) from the same HW3 project."
+    },
+    {
+      "a": 12,
+      "b": 13,
+      "cosine": 0.501,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different ports for different services in local development."
+    },
+    {
+      "a": 14,
+      "b": 16,
+      "cosine": 0.49,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They describe different database systems used in separate contexts."
+    },
+    {
+      "a": 10,
+      "b": 12,
+      "cosine": 0.49,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different services (FastAPI vs Vite) using adjacent ports for distinct environments."
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "cosine": 0.475,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of the same date, one about the student's program and the other about the course."
+    },
+    {
+      "a": 16,
+      "b": 17,
+      "cosine": 0.47,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They describe different aspects of the MongoDB setup: container configuration vs database name."
+    },
+    {
+      "a": 31,
+      "b": 32,
+      "cosine": 0.464,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They address different aspects of session management in a web application."
+    },
+    {
+      "a": 26,
+      "b": 32,
+      "cosine": 0.462,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They address different cookie security aspects in different environments."
+    },
+    {
+      "a": 27,
+      "b": 31,
+      "cosine": 0.462,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of session cookies."
+    },
+    {
+      "a": 30,
+      "b": 32,
+      "cosine": 0.452,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They address different aspects of session management."
+    },
+    {
+      "a": 14,
+      "b": 28,
+      "cosine": 0.44,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of the MySQL setup."
+    },
+    {
+      "a": 27,
+      "b": 30,
+      "cosine": 0.439,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of session cookies."
+    },
+    {
+      "a": 45,
+      "b": 48,
+      "cosine": 0.421,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different homework assignments and memory systems used in separate contexts."
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "cosine": 0.418,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different attributes of the student on consecutive dates."
+    },
+    {
+      "a": 29,
+      "b": 36,
+      "cosine": 0.417,
+      "verdict": "SAME",
+      "keep": "B",
+      "reason": "Both emphasize not committing sensitive files like .env to version control."
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "cosine": 0.414,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One refers to a course and the other to a student ID, unrelated topics."
+    },
+    {
+      "a": 10,
+      "b": 11,
+      "cosine": 0.41,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different services using different ports in different contexts."
+    },
+    {
+      "a": 9,
+      "b": 12,
+      "cosine": 0.408,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different services (FastAPI vs Vite) using adjacent ports for development environments."
+    },
+    {
+      "a": 15,
+      "b": 48,
+      "cosine": 0.408,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "One describes installation, the other describes usage in a specific assignment."
+    },
+    {
+      "a": 13,
+      "b": 18,
+      "cosine": 0.405,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "One describes the backend port for development, the other describes the machine setup."
+    },
+    {
+      "a": 43,
+      "b": 45,
+      "cosine": 0.402,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of HW3 - chunking methods vs retrieval setup."
+    },
+    {
+      "a": 25,
+      "b": 30,
+      "cosine": 0.402,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of the project (model usage vs. session cookie)."
+    },
+    {
+      "a": 17,
+      "b": 31,
+      "cosine": 0.396,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "They refer to different homeworks and different database/session components."
+    },
+    {
+      "a": 17,
+      "b": 45,
+      "cosine": 0.393,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different homework assignments and different database setups."
+    },
+    {
+      "a": 17,
+      "b": 25,
+      "cosine": 0.391,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One refers to a database name for HW6, the other to an embedding model used in HW3."
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "cosine": 0.39,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They provide different details about the same student in the same program."
+    },
+    {
+      "a": 13,
+      "b": 19,
+      "cosine": 0.39,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They relate to different aspects of the setup: one about the backend port, the other about Homebrew location."
+    },
+    {
+      "a": 2,
+      "b": 5,
+      "cosine": 0.387,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of the student's identity."
+    },
+    {
+      "a": 14,
+      "b": 15,
+      "cosine": 0.386,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They describe different database systems used in different contexts."
+    },
+    {
+      "a": 30,
+      "b": 35,
+      "cosine": 0.384,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different homework submissions and their respective session cookies."
+    },
+    {
+      "a": 44,
+      "b": 45,
+      "cosine": 0.383,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of HW3 - chunking methods vs retrieval setup."
+    },
+    {
+      "a": 4,
+      "b": 5,
+      "cosine": 0.367,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different attributes of the student."
+    },
+    {
+      "a": 25,
+      "b": 35,
+      "cosine": 0.364,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of the project timeline and tasks."
+    },
+    {
+      "a": 18,
+      "b": 20,
+      "cosine": 0.363,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "A describes the hardware and environment, while B explains a dependency constraint specific to Intel Macs."
+    },
+    {
+      "a": 13,
+      "b": 15,
+      "cosine": 0.363,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "One refers to backend port and the other to MongoDB setup, both for local development."
+    },
+    {
+      "a": 9,
+      "b": 11,
+      "cosine": 0.36,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different services (FastAPI vs Vite) using different ports for distinct purposes."
+    },
+    {
+      "a": 25,
+      "b": 43,
+      "cosine": 0.356,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of the project - model usage and chunking methods."
+    },
+    {
+      "a": 43,
+      "b": 48,
+      "cosine": 0.356,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One discusses chunking methods in HW3, the other covers MongoDB and memory systems in HW6."
+    },
+    {
+      "a": 26,
+      "b": 30,
+      "cosine": 0.355,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They relate to different contexts (development vs. session cookie naming)."
+    },
+    {
+      "a": 17,
+      "b": 30,
+      "cosine": 0.355,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "They refer to different homeworks and different data types."
+    },
+    {
+      "a": 25,
+      "b": 31,
+      "cosine": 0.354,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One refers to an embedding model and the other to a session cookie, unrelated topics."
+    },
+    {
+      "a": 37,
+      "b": 38,
+      "cosine": 0.35,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One is about committing files, the other about restarting a server."
+    },
+    {
+      "a": 1,
+      "b": 4,
+      "cosine": 0.347,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They provide different attributes about the same student in the same timeframe."
+    },
+    {
+      "a": 13,
+      "b": 23,
+      "cosine": 0.347,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "One refers to backend port for development, the other to a local chat model."
+    },
+    {
+      "a": 34,
+      "b": 47,
+      "cosine": 0.34,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "A describes a general process, while B details specific features added to HW5."
+    },
+    {
+      "a": 26,
+      "b": 31,
+      "cosine": 0.338,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They relate to different contexts: one about secure cookies in development, the other about a specific session cookie name."
+    },
+    {
+      "a": 33,
+      "b": 40,
+      "cosine": 0.336,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They relate to report submission but apply to different dates and contexts."
+    },
+    {
+      "a": 19,
+      "b": 20,
+      "cosine": 0.332,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "A refers to Homebrew location, B refers to PyTorch version support for Intel Macs."
+    },
+    {
+      "a": 4,
+      "b": 9,
+      "cosine": 0.331,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They relate to different aspects of the system configuration."
+    },
+    {
+      "a": 30,
+      "b": 45,
+      "cosine": 0.329,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of the HW3 implementation."
+    },
+    {
+      "a": 31,
+      "b": 48,
+      "cosine": 0.328,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One refers to a session cookie for HW4, the other to features added in HW6."
+    },
+    {
+      "a": 25,
+      "b": 48,
+      "cosine": 0.326,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of the project - model usage vs new features added."
+    },
+    {
+      "a": 29,
+      "b": 41,
+      "cosine": 0.324,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One discusses security practices, the other mentions a pending git stash."
+    },
+    {
+      "a": 28,
+      "b": 29,
+      "cosine": 0.322,
+      "verdict": "CONFLICT",
+      "keep": "B",
+      "reason": "B contradicts A by stating secrets should not be in README."
+    },
+    {
+      "a": 17,
+      "b": 35,
+      "cosine": 0.322,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One refers to a MongoDB database for HW6, the other to tagging submitted states for different homeworks."
+    },
+    {
+      "a": 15,
+      "b": 36,
+      "cosine": 0.317,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "One relates to setup and the other to commit practices, both applicable in different contexts."
+    },
+    {
+      "a": 31,
+      "b": 35,
+      "cosine": 0.312,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One refers to a session cookie name, the other to tagging submitted states."
+    },
+    {
+      "a": 30,
+      "b": 48,
+      "cosine": 0.312,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One refers to a session cookie for HW3, the other to features added in HW6."
+    },
+    {
+      "a": 24,
+      "b": 45,
+      "cosine": 0.311,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different components (embeddings vs retrieval) in separate contexts."
+    },
+    {
+      "a": 11,
+      "b": 18,
+      "cosine": 0.311,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One describes a dev server port, the other describes machine specifications."
+    },
+    {
+      "a": 39,
+      "b": 47,
+      "cosine": 0.31,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One discusses a running script, the other describes a feature addition."
+    },
+    {
+      "a": 13,
+      "b": 14,
+      "cosine": 0.306,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "One refers to the backend port for local development, the other to the database configuration."
+    },
+    {
+      "a": 17,
+      "b": 18,
+      "cosine": 0.305,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One describes a database setup, the other describes hardware and software environment."
+    },
+    {
+      "a": 25,
+      "b": 44,
+      "cosine": 0.304,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different aspects of the project - model usage and chunking methods."
+    },
+    {
+      "a": 33,
+      "b": 41,
+      "cosine": 0.302,
+      "verdict": "UNRELATED",
+      "keep": "B",
+      "reason": "One refers to deliverables location, the other to a git stash issue."
+    },
+    {
+      "a": 14,
+      "b": 17,
+      "cosine": 0.302,
+      "verdict": "SCOPED",
+      "keep": "B",
+      "reason": "They refer to different databases (MySQL vs MongoDB) for different purposes (general use vs HW6)."
+    }
+  ],
+  "merges": [
+    {
+      "kept": 4,
+      "removed": [
+        6
+      ],
+      "how": "exact"
+    },
+    {
+      "kept": 1,
+      "removed": [
+        5
+      ],
+      "how": "model",
+      "merged_text": "The student is Pragnaya Priyadarshini and goes by Lucky."
+    },
+    {
+      "kept": 7,
+      "removed": [
+        8
+      ],
+      "how": "model",
+      "merged_text": "The project domain is Municipal Transit Incidents (DOMAIN_ID 2)."
+    },
+    {
+      "kept": 9,
+      "removed": [
+        10
+      ],
+      "how": "model",
+      "merged_text": "The FastAPI backend runs on port 8470 (assigned by SID4, do not change)."
+    },
+    {
+      "kept": 18,
+      "removed": [
+        19
+      ],
+      "how": "model",
+      "merged_text": "The machine is an Intel x86_64 Mac with Homebrew at /usr/local."
+    },
+    {
+      "kept": 21,
+      "removed": [
+        22
+      ],
+      "how": "model",
+      "merged_text": "sentence-transformers must stay at 3.0.1 on this machine."
+    },
+    {
+      "kept": 24,
+      "removed": [
+        25
+      ],
+      "how": "model",
+      "merged_text": "The embedding model is the same MiniLM model used in HW3."
+    },
+    {
+      "kept": 29,
+      "removed": [
+        36,
+        37
+      ],
+      "how": "model",
+      "merged_text": "Secrets live only in gitignored .env files and never in the README."
+    },
+    {
+      "kept": 43,
+      "removed": [
+        44
+      ],
+      "how": "model",
+      "merged_text": "HW3 chunking comparison covered fixed-size, semantic and sentence-window chunkers."
+    }
+  ],
+  "resolutions": [
+    {
+      "ids": [
+        11,
+        12
+      ],
+      "kept": 12,
+      "dropped": 11,
+      "reason": "Both entries refer to the same Vite dev server but use different ports, which cannot both be true at the same time."
+    },
+    {
+      "ids": [
+        30,
+        31
+      ],
+      "kept": "both",
+      "reason": "They refer to different homework sessions with different cookie names."
+    },
+    {
+      "ids": [
+        17,
+        48
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of HW6: one specifies the database name, the other describes features added."
+    },
+    {
+      "ids": [
+        26,
+        27
+      ],
+      "kept": "both",
+      "reason": "They apply to different environments (development vs production) regarding secure cookie settings."
+    },
+    {
+      "ids": [
+        27,
+        32
+      ],
+      "kept": "both",
+      "reason": "They address different aspects of cookie security and session management."
+    },
+    {
+      "ids": [
+        15,
+        16
+      ],
+      "kept": 16,
+      "dropped": 15,
+      "reason": "Both describe MongoDB but in different environments, newer entry takes precedence."
+    },
+    {
+      "ids": [
+        9,
+        13
+      ],
+      "kept": "both",
+      "reason": "They refer to different environments (production vs local development)."
+    },
+    {
+      "ids": [
+        24,
+        45
+      ],
+      "kept": "both",
+      "reason": "They refer to different components (embedding model vs retrieval method) from the same HW3 project."
+    },
+    {
+      "ids": [
+        12,
+        13
+      ],
+      "kept": "both",
+      "reason": "They refer to different ports for different services in local development."
+    },
+    {
+      "ids": [
+        14,
+        16
+      ],
+      "kept": "both",
+      "reason": "They describe different database systems used in separate contexts."
+    },
+    {
+      "ids": [
+        9,
+        12
+      ],
+      "kept": "both",
+      "reason": "They refer to different services (FastAPI vs Vite) using adjacent ports for distinct environments."
+    },
+    {
+      "ids": [
+        2,
+        3
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of the same date, one about the student's program and the other about the course."
+    },
+    {
+      "ids": [
+        16,
+        17
+      ],
+      "kept": "both",
+      "reason": "They describe different aspects of the MongoDB setup: container configuration vs database name."
+    },
+    {
+      "ids": [
+        31,
+        32
+      ],
+      "kept": "both",
+      "reason": "They address different aspects of session management in a web application."
+    },
+    {
+      "ids": [
+        26,
+        32
+      ],
+      "kept": "both",
+      "reason": "They address different cookie security aspects in different environments."
+    },
+    {
+      "ids": [
+        27,
+        31
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of session cookies."
+    },
+    {
+      "ids": [
+        30,
+        32
+      ],
+      "kept": "both",
+      "reason": "They address different aspects of session management."
+    },
+    {
+      "ids": [
+        14,
+        28
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of the MySQL setup."
+    },
+    {
+      "ids": [
+        27,
+        30
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of session cookies."
+    },
+    {
+      "ids": [
+        45,
+        48
+      ],
+      "kept": "both",
+      "reason": "They refer to different homework assignments and memory systems used in separate contexts."
+    },
+    {
+      "ids": [
+        2,
+        4
+      ],
+      "kept": "both",
+      "reason": "They refer to different attributes of the student on consecutive dates."
+    },
+    {
+      "ids": [
+        13,
+        18
+      ],
+      "kept": "both",
+      "reason": "One describes the backend port for development, the other describes the machine setup."
+    },
+    {
+      "ids": [
+        43,
+        45
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of HW3 - chunking methods vs retrieval setup."
+    },
+    {
+      "ids": [
+        24,
+        30
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of the project (model usage vs. session cookie)."
+    },
+    {
+      "ids": [
+        17,
+        45
+      ],
+      "kept": "both",
+      "reason": "They refer to different homework assignments and different database setups."
+    },
+    {
+      "ids": [
+        1,
+        2
+      ],
+      "kept": "both",
+      "reason": "They provide different details about the same student in the same program."
+    },
+    {
+      "ids": [
+        2,
+        1
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of the student's identity."
+    },
+    {
+      "ids": [
+        30,
+        35
+      ],
+      "kept": "both",
+      "reason": "They refer to different homework submissions and their respective session cookies."
+    },
+    {
+      "ids": [
+        4,
+        1
+      ],
+      "kept": "both",
+      "reason": "They refer to different attributes of the student."
+    },
+    {
+      "ids": [
+        24,
+        35
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of the project timeline and tasks."
+    },
+    {
+      "ids": [
+        18,
+        20
+      ],
+      "kept": "both",
+      "reason": "A describes the hardware and environment, while B explains a dependency constraint specific to Intel Macs."
+    },
+    {
+      "ids": [
+        24,
+        43
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of the project - model usage and chunking methods."
+    },
+    {
+      "ids": [
+        26,
+        30
+      ],
+      "kept": "both",
+      "reason": "They relate to different contexts (development vs. session cookie naming)."
+    },
+    {
+      "ids": [
+        1,
+        4
+      ],
+      "kept": "both",
+      "reason": "They provide different attributes about the same student in the same timeframe."
+    },
+    {
+      "ids": [
+        13,
+        23
+      ],
+      "kept": "both",
+      "reason": "One refers to backend port for development, the other to a local chat model."
+    },
+    {
+      "ids": [
+        34,
+        47
+      ],
+      "kept": "both",
+      "reason": "A describes a general process, while B details specific features added to HW5."
+    },
+    {
+      "ids": [
+        26,
+        31
+      ],
+      "kept": "both",
+      "reason": "They relate to different contexts: one about secure cookies in development, the other about a specific session cookie name."
+    },
+    {
+      "ids": [
+        33,
+        40
+      ],
+      "kept": "both",
+      "reason": "They relate to report submission but apply to different dates and contexts."
+    },
+    {
+      "ids": [
+        4,
+        9
+      ],
+      "kept": "both",
+      "reason": "They relate to different aspects of the system configuration."
+    },
+    {
+      "ids": [
+        30,
+        45
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of the HW3 implementation."
+    },
+    {
+      "ids": [
+        24,
+        48
+      ],
+      "kept": "both",
+      "reason": "They refer to different aspects of the project - model usage vs new features added."
+    },
+    {
+      "ids": [
+        28,
+        29
+      ],
+      "kept": 29,
+      "dropped": 28,
+      "reason": "B contradicts A by stating secrets should not be in README."
+    },
+    {
+      "ids": [
+        13,
+        14
+      ],
+      "kept": "both",
+      "reason": "One refers to the backend port for local development, the other to the database configuration."
+    },
+    {
+      "ids": [
+        14,
+        17
+      ],
+      "kept": "both",
+      "reason": "They refer to different databases (MySQL vs MongoDB) for different purposes (general use vs HW6)."
+    }
+  ],
+  "archived": [
+    {
+      "id": 6,
+      "fact": "- [2026-09-03] The student's SID4 is 3170.",
+      "reason": "exact duplicate of F4"
+    },
+    {
+      "id": 5,
+      "fact": "- [2026-09-03] Lucky is the name the student goes by.",
+      "reason": "near-duplicate merged into F1"
+    },
+    {
+      "id": 8,
+      "fact": "- [2026-09-05] The assigned domain is Municipal Transit Incidents.",
+      "reason": "near-duplicate merged into F7"
+    },
+    {
+      "id": 10,
+      "fact": "- [2026-09-02] The FastAPI backend must listen on port 8470.",
+      "reason": "near-duplicate merged into F9"
+    },
+    {
+      "id": 19,
+      "fact": "- [2026-09-06] This is an Intel Mac, so Homebrew lives in /usr/local.",
+      "reason": "near-duplicate merged into F18"
+    },
+    {
+      "id": 22,
+      "fact": "- [2026-09-07] Do not upgrade sentence-transformers beyond 3.0.1.",
+      "reason": "near-duplicate merged into F21"
+    },
+    {
+      "id": 25,
+      "fact": "- [2026-10-14] The embedding model is the same MiniLM model used in HW3.",
+      "reason": "near-duplicate merged into F24"
+    },
+    {
+      "id": 36,
+      "fact": "- [2026-09-11] Never commit .env, node_modules, dist or data/corpus_raw.",
+      "reason": "near-duplicate merged into F29"
+    },
+    {
+      "id": 37,
+      "fact": "- [2026-09-11] Never commit the .env file.",
+      "reason": "near-duplicate merged into F29"
+    },
+    {
+      "id": 44,
+      "fact": "- [2026-09-18] HW3 chunking comparison covered fixed-size, semantic and sentence-window chunkers.",
+      "reason": "near-duplicate merged into F43"
+    },
+    {
+      "id": 11,
+      "fact": "- [2026-09-15] The Vite dev server uses port 5173.",
+      "reason": "lost contradiction to F12: Both entries refer to the same Vite dev server but use different ports, which cannot both be true at the same time."
+    },
+    {
+      "id": 15,
+      "fact": "- [2026-10-01] MongoDB runs locally, installed through Homebrew.",
+      "reason": "lost contradiction to F16: Both describe MongoDB but in different environments, newer entry takes precedence."
+    },
+    {
+      "id": 28,
+      "fact": "- [2026-09-05] The MySQL root password is documented in the README for convenience.",
+      "reason": "lost contradiction to F29: B contradicts A by stating secrets should not be in README."
+    },
+    {
+      "id": 1,
+      "fact": "- [2026-09-03] The student is Pragnaya Priyadarshini and goes by Lucky.",
+      "reason": "obsolete: pending task for today's review"
+    },
+    {
+      "id": 2,
+      "fact": "- [2026-09-01] The student is in the SJSU MS Applied Data Intelligence program.",
+      "reason": "obsolete: it's a current status about the student's program enrollment."
+    },
+    {
+      "id": 3,
+      "fact": "- [2026-09-01] The course is DATA 260 Agentic AI.",
+      "reason": "obsolete: it's a current course reference, not a permanent project fact."
+    },
+    {
+      "id": 4,
+      "fact": "- [2026-09-03] The student's SID4 is 3170.",
+      "reason": "obsolete: SID4 is a temporary identifier for the student."
+    },
+    {
+      "id": 7,
+      "fact": "- [2026-09-05] The project domain is Municipal Transit Incidents (DOMAIN_ID 2).",
+      "reason": "obsolete: Pending action for today's incident review."
+    },
+    {
+      "id": 9,
+      "fact": "- [2026-09-02] The FastAPI backend runs on port 8470 (assigned by SID4, do not change).",
+      "reason": "obsolete: port assignment is a temporary setup detail."
+    },
+    {
+      "id": 12,
+      "fact": "- [2026-09-25] The Vite dev server uses port 8471 with strictPort true.",
+      "reason": "obsolete: It's a configuration detail that can change based on setup or environment."
+    },
+    {
+      "id": 13,
+      "fact": "- [2026-10-09] The backend runs on port 8000 for local development.",
+      "reason": "obsolete: it's a configuration detail for local development."
+    },
+    {
+      "id": 14,
+      "fact": "- [2026-09-04] MySQL runs on localhost:3306 and the database is s3170_rel.",
+      "reason": "obsolete: current setup details for immediate use."
+    },
+    {
+      "id": 16,
+      "fact": "- [2026-10-12] MongoDB runs in a Docker container named s3170_mongo on port 27017.",
+      "reason": "obsolete: it describes a current setup that may change."
+    },
+    {
+      "id": 17,
+      "fact": "- [2026-10-12] The MongoDB database for HW6 is s3170_doc.",
+      "reason": "obsolete: it's a current setup detail for a specific task."
+    },
+    {
+      "id": 18,
+      "fact": "- [2026-09-06] The machine is an Intel x86_64 Mac with Homebrew at /usr/local.",
+      "reason": "obsolete: specific to current setup and environment."
+    },
+    {
+      "id": 20,
+      "fact": "- [2026-09-06] PyTorch is pinned to 2.2.2 because newer versions do not support Intel Macs.",
+      "reason": "obsolete: until Intel Mac support is added in future PyTorch versions."
+    },
+    {
+      "id": 21,
+      "fact": "- [2026-09-07] sentence-transformers must stay at 3.0.1 on this machine.",
+      "reason": "obsolete: specific version constraint for a temporary setup."
+    },
+    {
+      "id": 23,
+      "fact": "- [2026-09-08] The local chat model is qwen3:8b served by Ollama.",
+      "reason": "obsolete: indicates current setup and may change."
+    },
+    {
+      "id": 24,
+      "fact": "- [2026-10-14] The embedding model is the same MiniLM model used in HW3.",
+      "reason": "obsolete: until a different model is decided upon."
+    },
+    {
+      "id": 26,
+      "fact": "- [2026-09-12] Safari rejects Secure cookies over plain http, so Secure stays off in development.",
+      "reason": "obsolete: until secure cookies are properly handled in production."
+    },
+    {
+      "id": 27,
+      "fact": "- [2026-10-03] Session cookies must always set Secure=True.",
+      "reason": "obsolete: It's a security setting that needs to be applied now and may change later."
+    },
+    {
+      "id": 29,
+      "fact": "- [2026-10-02] Secrets live only in gitignored .env files and never in the README.",
+      "reason": "obsolete: it's a reminder about current practices, not a permanent fact."
+    },
+    {
+      "id": 30,
+      "fact": "- [2026-09-20] The HW3 session cookie is named s3170_session.",
+      "reason": "obsolete: it's a specific detail about a current session, not a permanent project fact."
+    },
+    {
+      "id": 31,
+      "fact": "- [2026-10-04] The HW4 session cookie is named s3170_db_session.",
+      "reason": "obsolete: it's a specific detail about a current session, not a permanent project fact."
+    },
+    {
+      "id": 32,
+      "fact": "- [2026-09-20] Signed cookies are not revocable, so logout needs a server-side session record.",
+      "reason": "obsolete: pending implementation or reminder for session management."
+    },
+    {
+      "id": 33,
+      "fact": "- [2026-09-10] Deliverables go in reports/hwNN/.",
+      "reason": "obsolete: pending action for deliverables placement."
+    },
+    {
+      "id": 34,
+      "fact": "- [2026-09-10] Each homework gets a verify_hwNN.py script and a make target.",
+      "reason": "obsolete: it's a process detail for current setup."
+    },
+    {
+      "id": 35,
+      "fact": "- [2026-09-10] Tag the submitted state hw1, hw2, hw3 and so on.",
+      "reason": "obsolete: pending submission of homework assignments"
+    },
+    {
+      "id": 38,
+      "fact": "- [2026-10-13] Remember to restart uvicorn after editing app.py today.",
+      "reason": "obsolete: It's a reminder to perform an action today."
+    },
+    {
+      "id": 39,
+      "fact": "- [2026-10-13] The sweep script is still running in the background right now.",
+      "reason": "obsolete: indicates an ongoing process that will eventually stop."
+    },
+    {
+      "id": 40,
+      "fact": "- [2026-10-13] Ask the TA about the report formatting on Thursday.",
+      "reason": "obsolete: It's a pending action with a specific deadline."
+    },
+    {
+      "id": 41,
+      "fact": "- [2026-10-14] There is a pending git stash from this morning to review.",
+      "reason": "obsolete: Pending git stash needs review soon."
+    },
+    {
+      "id": 42,
+      "fact": "- [2026-10-14] Lucky is currently waiting for the Docker image to finish pulling.",
+      "reason": "obsolete: It's a current status that will change once the Docker image is pulled."
+    },
+    {
+      "id": 43,
+      "fact": "- [2026-09-18] HW3 chunking comparison covered fixed-size, semantic and sentence-window chunkers.",
+      "reason": "obsolete: it's a record of a comparison done, not a lasting project fact."
+    },
+    {
+      "id": 45,
+      "fact": "- [2026-09-19] Retrieval in HW3 used an in-memory SimpleVectorStore, not faiss.",
+      "reason": "obsolete: indicates a current implementation detail that may change."
+    },
+    {
+      "id": 46,
+      "fact": "- [2026-09-22] NTSB RIR2315.pdf is AES-encrypted and needs the cryptography package.",
+      "reason": "obsolete: It's a current issue that requires immediate attention to access the file."
+    },
+    {
+      "id": 47,
+      "fact": "- [2026-10-05] HW5 added MCP servers, retries and an agent loop with execute_tool.",
+      "reason": "obsolete: This note describes recent changes made to the project, indicating a temporary status rather than a lasting fact."
+    },
+    {
+      "id": 48,
+      "fact": "- [2026-10-12] HW6 adds MongoDB documents, chat memory and file-based memory.",
+      "reason": "obsolete: pending implementation details"
+    }
+  ],
+  "contradiction_grading": [
+    {
+      "id": "C1_backend_port",
+      "expected": "a",
+      "actual_kept": "neither",
+      "correct": false,
+      "why_expected": "8470 is the assigned, fixed port; the newer 8000 note is a stray local tweak. Newest-wins is the WRONG rule here."
+    },
+    {
+      "id": "C2_vite_port",
+      "expected": "b",
+      "actual_kept": "neither",
+      "correct": false,
+      "why_expected": "8471 + strictPort is the current, documented setting."
+    },
+    {
+      "id": "C3_mongo_install",
+      "expected": "b",
+      "actual_kept": "neither",
+      "correct": false,
+      "why_expected": "Homebrew had no mongod; the container is what actually runs."
+    },
+    {
+      "id": "C4_secrets",
+      "expected": "b",
+      "actual_kept": "neither",
+      "correct": false,
+      "why_expected": "Never put secrets in the README."
+    },
+    {
+      "id": "C5_secure_cookie",
+      "expected": "both",
+      "actual_kept": "neither",
+      "correct": false,
+      "why_expected": "Not a real contradiction: dev over http vs production over https. Dropping the dev rule is WRONG."
+    }
+  ],
+  "contradictions_resolved_incorrectly": [
+    "C1_backend_port",
+    "C2_vite_port",
+    "C3_mongo_install",
+    "C4_secrets",
+    "C5_secure_cookie"
+  ],
+  "model_calls": [
+    {
+      "seconds": 13.4,
+      "reply": "VERDICT: SAME  \nKEEP: BOTH  \nREASON: Both statements describe the same content about HW3 chunking comparison."
+    },
+    {
+      "seconds": 13.9,
+      "reply": "VERDICT: CONFLICT\nKEEP: B\nREASON: Both entries refer to the same Vite dev server but use different ports, which cannot both be true at the same time."
+    },
+    {
+      "seconds": 11.9,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different homework sessions with different cookie names."
+    },
+    {
+      "seconds": 15.2,
+      "reply": "VERDICT: SAME  \nKEEP: A  \nREASON: Both state the FastAPI backend must use port 8470, with A specifying it's assigned and not to be changed."
+    },
+    {
+      "seconds": 12.0,
+      "reply": "VERDICT: SAME  \nKEEP: BOTH  \nREASON: Both statements confirm the domain is Municipal Transit Incidents."
+    },
+    {
+      "seconds": 13.5,
+      "reply": "VERDICT: SAME  \nKEEP: BOTH  \nREASON: Both statements confirm the same relationship between an Intel Mac and Homebrew's installation path."
+    },
+    {
+      "seconds": 12.5,
+      "reply": "VERDICT: SAME  \nKEEP: BOTH  \nREASON: Both statements enforce the same restriction on the sentence-transformers version."
+    },
+    {
+      "seconds": 14.7,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of HW6: one specifies the database name, the other describes features added."
+    },
+    {
+      "seconds": 12.4,
+      "reply": "VERDICT: SAME  \nKEEP: BOTH  \nREASON: Both statements confirm that Lucky is the name the student goes by."
+    },
+    {
+      "seconds": 11.8,
+      "reply": "VERDICT: SAME  \nKEEP: B  \nREASON: B is more specific and concise, making A redundant."
+    },
+    {
+      "seconds": 13.3,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They apply to different environments (development vs production) regarding secure cookie settings."
+    },
+    {
+      "seconds": 12.4,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They address different aspects of cookie security and session management."
+    },
+    {
+      "seconds": 12.7,
+      "reply": "VERDICT: SAME  \nKEEP: BOTH  \nREASON: Both statements confirm the use of the same MiniLM model for embeddings."
+    },
+    {
+      "seconds": 12.9,
+      "reply": "VERDICT: CONFLICT\nKEEP: B\nREASON: Both describe MongoDB but in different environments, newer entry takes precedence."
+    },
+    {
+      "seconds": 12.7,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different environments (production vs local development)."
+    },
+    {
+      "seconds": 12.5,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They describe different aspects of the setup on an Intel Mac."
+    },
+    {
+      "seconds": 12.3,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different environments (production vs local development)."
+    },
+    {
+      "seconds": 13.6,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They describe different dates and contexts but both relate to the same machine setup."
+    },
+    {
+      "seconds": 12.9,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different ports for separate services in local development."
+    },
+    {
+      "seconds": 13.0,
+      "reply": "VERDICT: SAME  \nKEEP: B  \nREASON: Both emphasize not committing .env files, but B is more specific and recent."
+    },
+    {
+      "seconds": 13.7,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: One refers to MongoDB installation and the other to a specific database used for HW6."
+    },
+    {
+      "seconds": 14.2,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different components (embedding model vs retrieval method) from the same HW3 project."
+    },
+    {
+      "seconds": 13.0,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different ports for different services in local development."
+    },
+    {
+      "seconds": 12.9,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They describe different database systems used in separate contexts."
+    },
+    {
+      "seconds": 14.5,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different services (FastAPI vs Vite) using adjacent ports for distinct environments."
+    },
+    {
+      "seconds": 15.0,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of the same date, one about the student's program and the other about the course."
+    },
+    {
+      "seconds": 14.1,
+      "reply": "VERDICT: SCOPED\nKEEP: BOTH\nREASON: They describe different aspects of the MongoDB setup: container configuration vs database name."
+    },
+    {
+      "seconds": 12.7,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They address different aspects of session management in a web application."
+    },
+    {
+      "seconds": 12.5,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They address different cookie security aspects in different environments."
+    },
+    {
+      "seconds": 12.1,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of session cookies."
+    },
+    {
+      "seconds": 12.3,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They address different aspects of session management."
+    },
+    {
+      "seconds": 12.3,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of the MySQL setup."
+    },
+    {
+      "seconds": 11.8,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of session cookies."
+    },
+    {
+      "seconds": 13.4,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different homework assignments and memory systems used in separate contexts."
+    },
+    {
+      "seconds": 12.8,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different attributes of the student on consecutive dates."
+    },
+    {
+      "seconds": 11.5,
+      "reply": "VERDICT: SAME  \nKEEP: BOTH  \nREASON: Both emphasize not committing sensitive files like .env to version control."
+    },
+    {
+      "seconds": 13.2,
+      "reply": "VERDICT: UNRELATED  \nKEEP: BOTH  \nREASON: One refers to a course and the other to a student ID, unrelated topics."
+    },
+    {
+      "seconds": 12.9,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different services using different ports in different contexts."
+    },
+    {
+      "seconds": 13.5,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different services (FastAPI vs Vite) using adjacent ports for development environments."
+    },
+    {
+      "seconds": 12.7,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: One describes installation, the other describes usage in a specific assignment."
+    },
+    {
+      "seconds": 13.6,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: One describes the backend port for development, the other describes the machine setup."
+    },
+    {
+      "seconds": 13.8,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of HW3 - chunking methods vs retrieval setup."
+    },
+    {
+      "seconds": 13.5,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of the project (model usage vs. session cookie)."
+    },
+    {
+      "seconds": 12.5,
+      "reply": "VERDICT: UNRELATED  \nKEEP: BOTH  \nREASON: They refer to different homeworks and different database/session components."
+    },
+    {
+      "seconds": 12.1,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different homework assignments and different database setups."
+    },
+    {
+      "seconds": 16.2,
+      "reply": "VERDICT: UNRELATED\nKEEP: BOTH\nREASON: One refers to a database name for HW6, the other to an embedding model used in HW3."
+    },
+    {
+      "seconds": 12.2,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They provide different details about the same student in the same program."
+    },
+    {
+      "seconds": 15.0,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They relate to different aspects of the setup: one about the backend port, the other about Homebrew location."
+    },
+    {
+      "seconds": 11.3,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of the student's identity."
+    },
+    {
+      "seconds": 11.3,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They describe different database systems used in different contexts."
+    },
+    {
+      "seconds": 13.0,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different homework submissions and their respective session cookies."
+    },
+    {
+      "seconds": 14.0,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of HW3 - chunking methods vs retrieval setup."
+    },
+    {
+      "seconds": 12.0,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different attributes of the student."
+    },
+    {
+      "seconds": 12.8,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of the project timeline and tasks."
+    },
+    {
+      "seconds": 14.1,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: A describes the hardware and environment, while B explains a dependency constraint specific to Intel Macs."
+    },
+    {
+      "seconds": 13.6,
+      "reply": "VERDICT: SCOPED\nKEEP: BOTH\nREASON: One refers to backend port and the other to MongoDB setup, both for local development."
+    },
+    {
+      "seconds": 13.1,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different services (FastAPI vs Vite) using different ports for distinct purposes."
+    },
+    {
+      "seconds": 13.6,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of the project - model usage and chunking methods."
+    },
+    {
+      "seconds": 14.3,
+      "reply": "VERDICT: UNRELATED  \nKEEP: BOTH  \nREASON: One discusses chunking methods in HW3, the other covers MongoDB and memory systems in HW6."
+    },
+    {
+      "seconds": 12.2,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They relate to different contexts (development vs. session cookie naming)."
+    },
+    {
+      "seconds": 12.4,
+      "reply": "VERDICT: UNRELATED  \nKEEP: BOTH  \nREASON: They refer to different homeworks and different data types."
+    },
+    {
+      "seconds": 13.5,
+      "reply": "VERDICT: UNRELATED  \nKEEP: BOTH  \nREASON: One refers to an embedding model and the other to a session cookie, unrelated topics."
+    },
+    {
+      "seconds": 12.5,
+      "reply": "VERDICT: UNRELATED\nKEEP: BOTH\nREASON: One is about committing files, the other about restarting a server."
+    },
+    {
+      "seconds": 13.1,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They provide different attributes about the same student in the same timeframe."
+    },
+    {
+      "seconds": 13.7,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: One refers to backend port for development, the other to a local chat model."
+    },
+    {
+      "seconds": 13.6,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: A describes a general process, while B details specific features added to HW5."
+    },
+    {
+      "seconds": 15.0,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They relate to different contexts: one about secure cookies in development, the other about a specific session cookie name."
+    },
+    {
+      "seconds": 12.6,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They relate to report submission but apply to different dates and contexts."
+    },
+    {
+      "seconds": 14.5,
+      "reply": "VERDICT: SCOPED\nKEEP: BOTH\nREASON: A refers to Homebrew location, B refers to PyTorch version support for Intel Macs."
+    },
+    {
+      "seconds": 12.4,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They relate to different aspects of the system configuration."
+    },
+    {
+      "seconds": 12.6,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of the HW3 implementation."
+    },
+    {
+      "seconds": 13.9,
+      "reply": "VERDICT: UNRELATED  \nKEEP: BOTH  \nREASON: One refers to a session cookie for HW4, the other to features added in HW6."
+    },
+    {
+      "seconds": 13.7,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of the project - model usage vs new features added."
+    },
+    {
+      "seconds": 12.5,
+      "reply": "VERDICT: UNRELATED\nKEEP: BOTH\nREASON: One discusses security practices, the other mentions a pending git stash."
+    },
+    {
+      "seconds": 12.7,
+      "reply": "VERDICT: CONFLICT\nKEEP: B\nREASON: B contradicts A by stating secrets should not be in README."
+    },
+    {
+      "seconds": 14.7,
+      "reply": "VERDICT: UNRELATED  \nKEEP: BOTH  \nREASON: One refers to a MongoDB database for HW6, the other to tagging submitted states for different homeworks."
+    },
+    {
+      "seconds": 13.5,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: One relates to setup and the other to commit practices, both applicable in different contexts."
+    },
+    {
+      "seconds": 13.4,
+      "reply": "VERDICT: UNRELATED  \nKEEP: BOTH  \nREASON: One refers to a session cookie name, the other to tagging submitted states."
+    },
+    {
+      "seconds": 14.1,
+      "reply": "VERDICT: UNRELATED  \nKEEP: BOTH  \nREASON: One refers to a session cookie for HW3, the other to features added in HW6."
+    },
+    {
+      "seconds": 13.2,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different components (embeddings vs retrieval) in separate contexts."
+    },
+    {
+      "seconds": 12.8,
+      "reply": "VERDICT: UNRELATED\nKEEP: BOTH\nREASON: One describes a dev server port, the other describes machine specifications."
+    },
+    {
+      "seconds": 13.0,
+      "reply": "VERDICT: UNRELATED  \nKEEP: BOTH  \nREASON: One discusses a running script, the other describes a feature addition."
+    },
+    {
+      "seconds": 13.8,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: One refers to the backend port for local development, the other to the database configuration."
+    },
+    {
+      "seconds": 13.0,
+      "reply": "VERDICT: UNRELATED\nKEEP: BOTH\nREASON: One describes a database setup, the other describes hardware and software environment."
+    },
+    {
+      "seconds": 12.5,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different aspects of the project - model usage and chunking methods."
+    },
+    {
+      "seconds": 12.9,
+      "reply": "VERDICT: UNRELATED\nKEEP: BOTH\nREASON: One refers to deliverables location, the other to a git stash issue."
+    },
+    {
+      "seconds": 13.7,
+      "reply": "VERDICT: SCOPED  \nKEEP: BOTH  \nREASON: They refer to different databases (MySQL vs MongoDB) for different purposes (general use vs HW6)."
+    },
+    {
+      "seconds": 6.1,
+      "reply": "TEMPORARY - pending task for today's review"
+    },
+    {
+      "seconds": 5.7,
+      "reply": "TEMPORARY - it's a current status about the student's program enrollment."
+    },
+    {
+      "seconds": 5.9,
+      "reply": "TEMPORARY - it's a current course reference, not a permanent project fact."
+    },
+    {
+      "seconds": 5.4,
+      "reply": "TEMPORARY - SID4 is a temporary identifier for the student."
+    },
+    {
+      "seconds": 5.6,
+      "reply": "TEMPORARY - it's a personal detail about the student's preferred name."
+    },
+    {
+      "seconds": 4.9,
+      "reply": "TEMPORARY - Pending action for today's incident review."
+    },
+    {
+      "seconds": 5.9,
+      "reply": "TEMPORARY - It's a current assignment that may change as the project progresses."
+    },
+    {
+      "seconds": 5.4,
+      "reply": "TEMPORARY - port assignment is a temporary setup detail."
+    },
+    {
+      "seconds": 5.8,
+      "reply": "TEMPORARY - It's a configuration setting that can be changed as needed."
+    },
+    {
+      "seconds": 5.4,
+      "reply": "TEMPORARY - it's a current setup detail that may change."
+    },
+    {
+      "seconds": 6.1,
+      "reply": "TEMPORARY - It's a configuration detail that can change based on setup or environment."
+    },
+    {
+      "seconds": 5.2,
+      "reply": "TEMPORARY - it's a configuration detail for local development."
+    },
+    {
+      "seconds": 5.0,
+      "reply": "TEMPORARY - current setup details for immediate use."
+    },
+    {
+      "seconds": 5.2,
+      "reply": "TEMPORARY - indicates current setup, not a permanent project fact."
+    },
+    {
+      "seconds": 5.5,
+      "reply": "TEMPORARY - it describes a current setup that may change."
+    },
+    {
+      "seconds": 5.6,
+      "reply": "TEMPORARY - it's a current setup detail for a specific task."
+    },
+    {
+      "seconds": 5.0,
+      "reply": "TEMPORARY - specific to current setup and environment."
+    },
+    {
+      "seconds": 4.8,
+      "reply": "TEMPORARY - specific to the current environment setup."
+    },
+    {
+      "seconds": 6.5,
+      "reply": "TEMPORARY - until Intel Mac support is added in future PyTorch versions."
+    },
+    {
+      "seconds": 5.1,
+      "reply": "TEMPORARY - specific version constraint for a temporary setup."
+    },
+    {
+      "seconds": 7.1,
+      "reply": "TEMPORARY - It's a specific action item to prevent an upgrade, not a permanent project fact."
+    },
+    {
+      "seconds": 4.7,
+      "reply": "TEMPORARY - indicates current setup and may change."
+    },
+    {
+      "seconds": 5.0,
+      "reply": "TEMPORARY - until a different model is decided upon."
+    },
+    {
+      "seconds": 5.8,
+      "reply": "TEMPORARY - it's a current setup reference, not a permanent project fact."
+    },
+    {
+      "seconds": 5.6,
+      "reply": "TEMPORARY - until secure cookies are properly handled in production."
+    },
+    {
+      "seconds": 6.7,
+      "reply": "TEMPORARY - It's a security setting that needs to be applied now and may change later."
+    },
+    {
+      "seconds": 6.2,
+      "reply": "TEMPORARY - It's a reminder or pending action, not a permanent project fact."
+    },
+    {
+      "seconds": 6.1,
+      "reply": "TEMPORARY - it's a reminder about current practices, not a permanent fact."
+    },
+    {
+      "seconds": 6.7,
+      "reply": "TEMPORARY - it's a specific detail about a current session, not a permanent project fact."
+    },
+    {
+      "seconds": 6.8,
+      "reply": "TEMPORARY - it's a specific detail about a current session, not a permanent project fact."
+    },
+    {
+      "seconds": 5.2,
+      "reply": "TEMPORARY - pending implementation or reminder for session management."
+    },
+    {
+      "seconds": 4.6,
+      "reply": "TEMPORARY - pending action for deliverables placement."
+    },
+    {
+      "seconds": 5.4,
+      "reply": "TEMPORARY - it's a process detail for current setup."
+    },
+    {
+      "seconds": 4.4,
+      "reply": "TEMPORARY - pending submission of homework assignments"
+    },
+    {
+      "seconds": 6.8,
+      "reply": "TEMPORARY - It's a reminder about what not to commit, not a permanent project fact."
+    },
+    {
+      "seconds": 6.1,
+      "reply": "TEMPORARY - it's a reminder about current practices, not a permanent project fact."
+    },
+    {
+      "seconds": 5.3,
+      "reply": "TEMPORARY - It's a reminder to perform an action today."
+    },
+    {
+      "seconds": 5.0,
+      "reply": "TEMPORARY - indicates an ongoing process that will eventually stop."
+    },
+    {
+      "seconds": 5.4,
+      "reply": "TEMPORARY - It's a pending action with a specific deadline."
+    },
+    {
+      "seconds": 4.9,
+      "reply": "TEMPORARY - Pending git stash needs review soon."
+    },
+    {
+      "seconds": 6.4,
+      "reply": "TEMPORARY - It's a current status that will change once the Docker image is pulled."
+    },
+    {
+      "seconds": 6.5,
+      "reply": "TEMPORARY - it's a record of a comparison done, not a lasting project fact."
+    },
+    {
+      "seconds": 5.6,
+      "reply": "TEMPORARY - This note refers to a specific task completed recently."
+    },
+    {
+      "seconds": 5.3,
+      "reply": "TEMPORARY - indicates a current implementation detail that may change."
+    },
+    {
+      "seconds": 6.5,
+      "reply": "TEMPORARY - It's a current issue that requires immediate attention to access the file."
+    },
+    {
+      "seconds": 8.0,
+      "reply": "TEMPORARY - This note describes recent changes made to the project, indicating a temporary status rather than a lasting fact."
+    },
+    {
+      "seconds": 3.9,
+      "reply": "TEMPORARY - pending implementation details"
+    }
+  ],
+  "due_after": null
+}

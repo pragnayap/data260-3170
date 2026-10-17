@@ -1,0 +1,108 @@
+{
+  "lines_before": 55,
+  "lines_after": 51,
+  "under_40": false,
+  "llm_ok": true,
+  "notes": [],
+  "merges": [
+    {
+      "kept": 4,
+      "removed": [
+        6
+      ],
+      "how": "exact"
+    },
+    {
+      "kept": 1,
+      "removed": [
+        5
+      ],
+      "how": "model",
+      "merged_text": "The student goes by the name Lucky."
+    }
+  ],
+  "resolutions": [
+    {
+      "ids": [
+        27,
+        26
+      ],
+      "kept": 27,
+      "dropped": 26,
+      "reason": "F27 explicitly states that session cookies must set Secure=True, which contradicts F26's note to keep Secure off in development. F27 is more recent and specific."
+    }
+  ],
+  "archived": [
+    {
+      "id": 6,
+      "fact": "- [2026-09-03] The student's SID4 is 3170.",
+      "reason": "exact duplicate of F4"
+    },
+    {
+      "id": 5,
+      "fact": "- [2026-09-03] Lucky is the name the student goes by.",
+      "reason": "near-duplicate merged into F1"
+    },
+    {
+      "id": 26,
+      "fact": "- [2026-09-12] Safari rejects Secure cookies over plain http, so Secure stays off in development.",
+      "reason": "lost contradiction to F27: F27 explicitly states that session cookies must set Secure=True, which contradicts F26's note to keep Secure off in development. F27 is more recent and specific."
+    },
+    {
+      "id": 3,
+      "fact": "- [2026-09-01] The course is DATA 260 Agentic AI.",
+      "reason": "obsolete: This fact is outdated as it was replaced by more recent facts about the project domain."
+    }
+  ],
+  "contradiction_grading": [
+    {
+      "id": "C1_backend_port",
+      "expected": "a",
+      "actual_kept": "both",
+      "correct": false,
+      "why_expected": "8470 is the assigned, fixed port; the newer 8000 note is a stray local tweak. Newest-wins is the WRONG rule here."
+    },
+    {
+      "id": "C2_vite_port",
+      "expected": "b",
+      "actual_kept": "both",
+      "correct": false,
+      "why_expected": "8471 + strictPort is the current, documented setting."
+    },
+    {
+      "id": "C3_mongo_install",
+      "expected": "b",
+      "actual_kept": "both",
+      "correct": false,
+      "why_expected": "Homebrew had no mongod; the container is what actually runs."
+    },
+    {
+      "id": "C4_secrets",
+      "expected": "b",
+      "actual_kept": "both",
+      "correct": false,
+      "why_expected": "Never put secrets in the README."
+    },
+    {
+      "id": "C5_secure_cookie",
+      "expected": "both",
+      "actual_kept": "b",
+      "correct": false,
+      "why_expected": "Not a real contradiction: dev over http vs production over https. Dropping the dev rule is WRONG."
+    }
+  ],
+  "contradictions_resolved_incorrectly": [
+    "C1_backend_port",
+    "C2_vite_port",
+    "C3_mongo_install",
+    "C4_secrets",
+    "C5_secure_cookie"
+  ],
+  "model_calls": [
+    {
+      "seconds": 122.4,
+      "reply": "{\n  \"duplicate_groups\": [\n    {\"ids\": [1, 5], \"merged\": \"The student goes by the name Lucky.\"}\n  ],\n  \"contradictions\": [\n    {\"ids\": [27, 26], \"keep\": 27, \"reason\": \"F27 explicitly states that session cookies must set Secure=True, which contradicts F26's note to keep Secure off in development. F27 is more recent and specific.\"}\n  ],\n  \"obsolete\": [\n    {\"id\": 3, \"reason\": \"This fact is outdated as it was replaced by more recent facts about the project domain.\"}\n  ]\n}"
+    }
+  ],
+  "due_after": "51 non-empty, non-comment lines (limit 40)"
+}

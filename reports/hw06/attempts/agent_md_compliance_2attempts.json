@@ -1,0 +1,187 @@
+{
+  "task": "Write a Python function named normalize_route_id that takes a raw transit route string such as '  line   22 ' and returns the canonical form 'LINE 22' (upper-case, single spaces, no leading or trailing whitespace). Reject an empty or whitespace-only string by raising ValueError. Reply with the complete Python module in one ```python block and nothing else.",
+  "with_agent_md": {
+    "label": "with_agent_md",
+    "attempts": [
+      {
+        "attempt": 1,
+        "passed": [
+          "snake_case_names",
+          "type_hints",
+          "docstring",
+          "no_print",
+          "line_length_100",
+          "no_eval_exec",
+          "no_hardcoded_secret"
+        ],
+        "failed": [
+          "has_test_function",
+          "tests_pass"
+        ],
+        "details": {
+          "snake_case_names": true,
+          "type_hints": true,
+          "docstring": true,
+          "no_print": true,
+          "line_length_100": true,
+          "no_eval_exec": true,
+          "no_hardcoded_secret": true,
+          "has_test_function": false,
+          "tests_pass": false,
+          "_pytest_tail": [
+            "no tests ran in 0.00s"
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "passed": [
+          "snake_case_names",
+          "type_hints",
+          "docstring",
+          "no_print",
+          "line_length_100",
+          "no_eval_exec",
+          "no_hardcoded_secret",
+          "has_test_function"
+        ],
+        "failed": [
+          "tests_pass"
+        ],
+        "details": {
+          "snake_case_names": true,
+          "type_hints": true,
+          "docstring": true,
+          "no_print": true,
+          "line_length_100": true,
+          "no_eval_exec": true,
+          "no_hardcoded_secret": true,
+          "has_test_function": true,
+          "tests_pass": false,
+          "_pytest_tail": [
+            "1 failed in 0.07s"
+          ]
+        }
+      }
+    ],
+    "passed": [
+      "snake_case_names",
+      "type_hints",
+      "docstring",
+      "no_print",
+      "line_length_100",
+      "no_eval_exec",
+      "no_hardcoded_secret",
+      "has_test_function"
+    ],
+    "failed": [
+      "tests_pass"
+    ],
+    "details": {
+      "snake_case_names": true,
+      "type_hints": true,
+      "docstring": true,
+      "no_print": true,
+      "line_length_100": true,
+      "no_eval_exec": true,
+      "no_hardcoded_secret": true,
+      "has_test_function": true,
+      "tests_pass": false,
+      "_pytest_tail": [
+        "1 failed in 0.07s"
+      ]
+    }
+  },
+  "control_without_agent_md": {
+    "label": "control_without_agent_md",
+    "attempts": [
+      {
+        "attempt": 1,
+        "passed": [
+          "snake_case_names",
+          "type_hints",
+          "no_print",
+          "line_length_100",
+          "no_eval_exec",
+          "no_hardcoded_secret"
+        ],
+        "failed": [
+          "docstring",
+          "has_test_function",
+          "tests_pass"
+        ],
+        "details": {
+          "snake_case_names": true,
+          "type_hints": true,
+          "docstring": false,
+          "no_print": true,
+          "line_length_100": true,
+          "no_eval_exec": true,
+          "no_hardcoded_secret": true,
+          "has_test_function": false,
+          "tests_pass": false,
+          "_pytest_tail": [
+            "no tests ran in 0.00s"
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "passed": [
+          "snake_case_names",
+          "type_hints",
+          "docstring",
+          "no_print",
+          "no_eval_exec",
+          "no_hardcoded_secret",
+          "has_test_function",
+          "tests_pass"
+        ],
+        "failed": [
+          "line_length_100"
+        ],
+        "details": {
+          "snake_case_names": true,
+          "type_hints": true,
+          "docstring": true,
+          "no_print": true,
+          "line_length_100": false,
+          "no_eval_exec": true,
+          "no_hardcoded_secret": true,
+          "has_test_function": true,
+          "tests_pass": true,
+          "_pytest_tail": [
+            "1 passed in 0.01s"
+          ]
+        }
+      }
+    ],
+    "passed": [
+      "snake_case_names",
+      "type_hints",
+      "docstring",
+      "no_print",
+      "no_eval_exec",
+      "no_hardcoded_secret",
+      "has_test_function",
+      "tests_pass"
+    ],
+    "failed": [
+      "line_length_100"
+    ],
+    "details": {
+      "snake_case_names": true,
+      "type_hints": true,
+      "docstring": true,
+      "no_print": true,
+      "line_length_100": false,
+      "no_eval_exec": true,
+      "no_hardcoded_secret": true,
+      "has_test_function": true,
+      "tests_pass": true,
+      "_pytest_tail": [
+        "1 passed in 0.01s"
+      ]
+    }
+  }
+}
