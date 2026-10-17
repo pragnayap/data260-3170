@@ -1,6 +1,6 @@
 ========================================================================
 DATA 260 HW6 - file-based memory demo     Student: Pragnaya Priyadarshini (Lucky)
-2026-10-15T04:19:27   working copy: /var/folders/3f/tdml5q_91f115lk9r2z9lzcw0000gn/T/hw6_filemem_ijosqfqj
+2026-10-16T17:46:03   working copy: /var/folders/3f/tdml5q_91f115lk9r2z9lzcw0000gn/T/hw6_filemem_anpd_oty
 ========================================================================
 Loaded AGENT.md (1828 chars) and MEMORY.md (55 content lines).
 [startup check] consolidation required: 55 non-empty, non-comment lines (limit 40)
@@ -35,21 +35,22 @@ You: /dream
 You: /compact
 [/compact] conversation messages: 6 -> 1
 [/compact] MEMORY.md content lines: 61 -> 39
-[/compact] merged groups: 11, contradictions resolved: 5 (+20 scoped pairs kept as-is), archived facts: 22 (see MEMORY.archive.md)
+[/compact] merged groups: 10, contradictions resolved: 5 (+21 scoped pairs kept as-is), archived facts: 22 (see MEMORY.archive.md)
 
 --- MEMORY.md after /compact (first 20 lines) ---
 # MEMORY.md
-<!-- last_consolidated: 2026-10-15T11:19:27+00:00 -->
+<!-- last_consolidated: 2026-10-17T00:46:03+00:00 -->
 
 ## Identity and course
 - [2026-09-03] The student is Pragnaya Priyadarshini and goes by Lucky.
 - [2026-09-01] The student is in the SJSU MS Applied Data Intelligence program.
 - [2026-09-01] The course is DATA 260 Agentic AI.
 - [2026-09-03] The student's SID4 is 3170.
-- [2026-10-15] The project domain is Municipal Transit Incidents (DOMAIN_ID 2).
+- [2026-10-17] The project domain is Municipal Transit Incidents (DOMAIN_ID 2).
 
 ## Ports and servers
-- [2026-09-02] The FastAPI backend runs on port 8470 (assigned by SID4, do not change).
+- [2026-10-17] The FastAPI backend runs on port 8470 (assigned by SID4, do not change).
+<!-- resolved contradiction: kept "The FastAPI backend runs on port 8470 (assigned by SID4, do not change)." over "The backend runs on port 8000 for local development." (Both facts refer to the backend port, but different ports are specified.) -->
 - [2026-09-25] The Vite dev server uses port 8471 with strictPort true.
 <!-- resolved contradiction: kept "The Vite dev server uses port 8471 with strictPort true." over "The Vite dev server uses port 5173." (Both facts refer to the same setting (Vite dev server port) but with different values.) -->
 - [2026-09-04] MySQL runs on localhost:3306 and the database is s3170_rel.
@@ -57,6 +58,5 @@ You: /compact
 <!-- resolved contradiction: kept "MongoDB runs in a Docker container named s3170_mongo on port 27017." over "MongoDB runs locally, installed through Homebrew." (Both describe MongoDB setup, but B specifies a Docker container and port, while A describes a local installation.) -->
 - [2026-10-12] HW6 adds MongoDB documents, chat memory and file-based memory.
 
-## Models and machine
 
 [post-check] consolidation required now: None
