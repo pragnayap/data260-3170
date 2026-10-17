@@ -1,0 +1,67 @@
+{
+  "label": "N4",
+  "settings": {
+    "short_term_n": 4,
+    "policy": "none"
+  },
+  "user_id": "hw6_N4_20261015013742",
+  "session_id": "sess_N4_20261015013742",
+  "mean_score": 5.0,
+  "probes": [
+    {
+      "probe": "P1_route",
+      "score": 5.0,
+      "matched": {
+        "route": true,
+        "boarding_stop": true
+      },
+      "refused": false,
+      "question": "Remind me: which route do I take to campus each morning, and where do I board it?",
+      "reply": "You take Line 22 bus to campus each morning, boarding at Downtown Transit Center around 7:15 AM. Make sure to check that the bus has a working bike rack since you bring a folding bike."
+    },
+    {
+      "probe": "P2_identity",
+      "score": 5.0,
+      "matched": {
+        "name": true,
+        "university": true
+      },
+      "refused": false,
+      "question": "What name do I go by, and which university do I attend?",
+      "reply": "You go by the name Lucky, and you attend San Jose State University (SJSU)."
+    },
+    {
+      "probe": "P3_equipment",
+      "score": 5.0,
+      "matched": {
+        "item": true,
+        "feature": true
+      },
+      "refused": false,
+      "question": "What do I bring on the bus with me, and what bus feature does that mean I need?",
+      "reply": "You bring a folding bike on the bus, which means you need a bus with a working bike rack. This ensures your bike is securely stored during your commute."
+    },
+    {
+      "probe": "P4_past_incident",
+      "score": 5.0,
+      "matched": {
+        "station": true,
+        "line": true
+      },
+      "refused": false,
+      "question": "Which station had the elevator outage I reported earlier, and on which line?",
+      "reply": "The elevator outage you reported earlier was at Civic Center Station on the BART Red Line."
+    },
+    {
+      "probe": "P5_contact",
+      "score": 5.0,
+      "matched": {
+        "channel": true,
+        "address": true
+      },
+      "refused": false,
+      "question": "How do I prefer to be contacted about my reports, and at what address?",
+      "reply": "You prefer to be contacted via email at lucky.rider@example.com, and you do not want text messages."
+    }
+  ]
+}

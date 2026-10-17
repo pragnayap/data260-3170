@@ -31,7 +31,8 @@ from starlette.middleware.sessions import SessionMiddleware
 
 import auth
 from database import Base, engine
-from routers import auth_db, incidents, routes
+from routers import auth_db, chat, incidents, incidents_doc, routes
+import mongo_db
 
 # HW4 Part 2: create the MySQL tables on boot if they don't exist yet. Actual
 # row data (seed_hw04.py) is a separate step -- this only creates schema.
@@ -86,6 +87,16 @@ app.include_router(auth.router)
 app.include_router(auth_db.router)
 app.include_router(incidents.router)
 app.include_router(routes.router)
+
+# HW6: MongoDB document API (Part 1) and memory-aware chat (Part 2). The Mongo
+# schema is created on boot; if mongod is down the app still starts and only
+# the /api/doc/* and chat routes answer 503.
+try:
+    mongo_db.ensure_schema()
+except Exception as exc:  # noqa: BLE001 - boot must survive a missing mongod
+    print(f"[hw6] MongoDB unavailable at startup: {exc.__class__.__name__}")
+app.include_router(incidents_doc.router)
+app.include_router(chat.router)
 
 # Serve files directly from this folder (no separate static/ subfolder, no
 # renaming) so the existing HW1 files stay exactly where/what they are.

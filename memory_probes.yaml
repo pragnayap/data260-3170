@@ -1,0 +1,75 @@
+# HW6 Part 3.2 - five fixed memory probes, written BEFORE any sweep run.
+#
+# Each probe is asked at turn 31-35 of the 30-message conversation in
+# code/hw6/conversation.py (same session, same user). The facts being probed are
+# stated by the user in messages 1-6, so a small short-term window has long
+# since dropped them: only the session summary, the lifetime summary or episodic
+# retrieval can bring them back.
+#
+# Scoring is mechanical so it is repeatable (no model-as-judge):
+#   elements  - things a correct answer must contain; each has regex alternatives
+#               (case-insensitive); an element counts if ANY alternative matches
+#   score     = 1 + 4 * (elements matched / elements total), range 1.0 - 5.0
+#   cap       - if the reply matches a `refusal` pattern ("I don't know", ...) the
+#               score is forced to 1 even if an element matched by accident
+
+rubric:
+  5: every expected element present
+  4: three quarters present (only possible with 4+ elements)
+  3: half of the expected elements present
+  2: a quarter present
+  1: nothing expected present, or the reply says it does not know / asks the user again
+
+refusal:
+  - "don't (know|have|recall|remember)"
+  - "do not (know|have|recall|remember)"
+  - "no (record|information|memory) of"
+  - "haven't (told|mentioned|shared)"
+  - "could you (tell|remind)"
+  - "can you (tell|remind)"
+
+probes:
+  - id: P1_route
+    question: "Remind me: which route do I take to campus each morning, and where do I board it?"
+    planted_in_message: 2
+    elements:
+      - name: route
+        any: ["line\\s*22", "\\b22\\b"]
+      - name: boarding_stop
+        any: ["downtown transit center"]
+
+  - id: P2_identity
+    question: "What name do I go by, and which university do I attend?"
+    planted_in_message: 1
+    elements:
+      - name: name
+        any: ["\\blucky\\b"]
+      - name: university
+        any: ["sjsu", "san jos[eé] state"]
+
+  - id: P3_equipment
+    question: "What do I bring on the bus with me, and what bus feature does that mean I need?"
+    planted_in_message: 3
+    elements:
+      - name: item
+        any: ["folding bike", "bike"]
+      - name: feature
+        any: ["rack"]
+
+  - id: P4_past_incident
+    question: "Which station had the elevator outage I reported earlier, and on which line?"
+    planted_in_message: 5
+    elements:
+      - name: station
+        any: ["civic center"]
+      - name: line
+        any: ["bart", "red line"]
+
+  - id: P5_contact
+    question: "How do I prefer to be contacted about my reports, and at what address?"
+    planted_in_message: 4
+    elements:
+      - name: channel
+        any: ["e-?mail"]
+      - name: address
+        any: ["lucky\\.rider@example\\.com"]

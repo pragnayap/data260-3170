@@ -50,6 +50,9 @@ class ModelClient:
 
         self.turn_count = 0
         self.cumulative = TokenUsage()
+        # HW6: usage of the most recent complete() call, so callers that need
+        # per-request token accounting don't have to parse the printed line.
+        self.last_usage = TokenUsage()
 
     def complete(self, messages: List[Dict[str, str]], tools: Optional[List[Any]] = None) -> str:
         lc_messages = []
@@ -68,6 +71,7 @@ class ModelClient:
         input_tokens = usage.get("input_tokens", 0) or 0
         output_tokens = usage.get("output_tokens", 0) or 0
 
+        self.last_usage = TokenUsage(input_tokens, output_tokens)
         self.turn_count += 1
         self.cumulative.input_tokens += input_tokens
         self.cumulative.output_tokens += output_tokens

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HW6 Memory Chat - Lucky (s3170)</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1c2230; --muted:#667085; --line:#d9dee7; --user:#dbeafe; --bot:#eef2f6; }
+  body { margin:0; font:14px/1.45 system-ui, sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:10px 16px; background:#1c2230; color:#fff; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  header b { font-size:15px; }
+  header label { font-size:12px; opacity:.85; }
+  header input { padding:3px 6px; border-radius:4px; border:0; width:140px; }
+  main { display:grid; grid-template-columns: 1fr 1fr; gap:12px; padding:12px; max-width:1200px; margin:auto; }
+  @media (max-width:800px) { main { grid-template-columns:1fr; } }
+  section { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px; min-height:300px; }
+  #log { height:420px; overflow:auto; display:flex; flex-direction:column; gap:8px; }
+  .m { padding:8px 10px; border-radius:8px; max-width:90%; white-space:pre-wrap; }
+  .u { background:var(--user); align-self:flex-end; } .a { background:var(--bot); }
+  form { display:flex; gap:8px; margin-top:10px; }
+  form input { flex:1; padding:8px; border:1px solid var(--line); border-radius:6px; }
+  button { padding:8px 14px; border:0; border-radius:6px; background:#2563eb; color:#fff; cursor:pointer; }
+  button:disabled { opacity:.5; }
+  pre { margin:0; font:12px/1.4 ui-monospace, monospace; white-space:pre-wrap; max-height:470px; overflow:auto; }
+  h2 { margin:0 0 8px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+</style>
+</head>
+<body>
+<header>
+  <b>HW6 memory chat</b>
+  <label>user_id <input id="uid" value="lucky_demo"></label>
+  <label>session_id <input id="sid" placeholder="(new)"></label>
+  <label>SHORT_TERM_N <input id="n" value="12" size="3"></label>
+</header>
+<main>
+  <section>
+    <h2>Conversation</h2>
+    <div id="log"></div>
+    <form id="f"><input id="msg" autocomplete="off" placeholder="Type a message..." autofocus><button id="go">Send</button></form>
+  </section>
+  <section>
+    <h2>Memory used for the last turn</h2>
+    <pre id="mem">(send a message)</pre>
+  </section>
+</main>
+<script>
+  const log = document.getElementById('log');
+  function add(cls, text) {
+    const d = document.createElement('div'); d.className = 'm ' + cls; d.textContent = text;
+    log.appendChild(d); log.scrollTop = log.scrollHeight;
+  }
+  document.getElementById('f').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const msg = document.getElementById('msg'), go = document.getElementById('go');
+    const text = msg.value.trim(); if (!text) return;
+    add('u', text); msg.value = ''; go.disabled = true;
+    try {
+      const body = { user_id: document.getElementById('uid').value, message: text,
+                     short_term_n: parseInt(document.getElementById('n').value || '12', 10) };
+      const sid = document.getElementById('sid').value.trim(); if (sid) body.session_id = sid;
+      const r = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      const d = await r.json();
+      if (!r.ok) { add('a', 'Error ' + r.status + ': ' + JSON.stringify(d.detail)); return; }
+      document.getElementById('sid').value = d.session_id;
+      add('a', d.reply);
+      document.getElementById('mem').textContent = JSON.stringify({ memory_used: d.memory_used, memory_written: d.memory_written, metrics: d.metrics }, null, 2);
+    } catch (err) { add('a', 'Request failed: ' + err); }
+    finally { go.disabled = false; msg.focus(); }
+  });
+</script>
+</body>
+</html>

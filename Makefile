@@ -9,7 +9,8 @@ APP_DIR := code/web_application
 
 .PHONY: help install nltk run corpus corpus-verify warmup rag metrics verify-hw03 hw3 clean-hw3 \
         seed-hw04 n1-hw04 verify-hw04 frontend-install frontend-dev hw4 \
-        seed-hw05 faults-hw05 contracts-hw05 test-hw05 safety-hw05 agent-scenarios verify-hw05
+        seed-hw05 faults-hw05 contracts-hw05 test-hw05 safety-hw05 agent-scenarios verify-hw05 \
+        mongo-up sweep-hw06 consolidate-hw06 agent-check-hw06 metrics-hw06 test-hw06 file-memory verify-hw06
 
 help:
 	@echo "install       install deps from requirements.txt, then the NLTK data"
@@ -35,6 +36,14 @@ help:
 	@echo "safety-hw05   Part 5.I allowed vs blocked call demo"
 	@echo "agent-scenarios  Ollama agent scenarios -> METRICS.md + raw/agent_runs.jsonl"
 	@echo "verify-hw05   run the HW5 self-check -> reports/hw05/verification.json"
+	@echo "mongo-up      start the s3170_mongo Docker container (MongoDB 7) on 27017"
+	@echo "sweep-hw06   Part 3: 4 settings x (30-message conversation + 5 probes) -> reports/hw06/raw/"
+	@echo "consolidate-hw06  Part 4: consolidate the 55-line MEMORY test file -> reports/hw06/memory_test/"
+	@echo "agent-check-hw06  Part 4: generate a function under AGENT.md and check it complies"
+	@echo "metrics-hw06 rebuild reports/hw06/METRICS.md from raw/"
+	@echo "test-hw06    offline file-memory unit tests"
+	@echo "file-memory  interactive CLI with /memory /compact /dream /help"
+	@echo "verify-hw06  run the HW6 self-check -> reports/hw06/verification.json"
 
 install:
 	$(PY) -m pip install -r requirements.txt
@@ -120,3 +129,32 @@ agent-scenarios:
 
 verify-hw05:
 	$(PY) -u code/verify_hw05.py
+
+# --- HW6 ---------------------------------------------------------------
+# MongoDB runs in Docker (Homebrew has no mongod formula for this machine).
+# `docker start` first so an existing container keeps its data volume.
+mongo-up:
+	docker start s3170_mongo 2>/dev/null || docker run -d --name s3170_mongo --restart unless-stopped \
+	    -p 27017:27017 -v s3170_mongo_data:/data/db mongo:7.0
+
+# Backend must be running (make run), plus MongoDB and Ollama. python -u + tee so the log streams.
+sweep-hw06:
+	$(PY) -u code/hw6/run_memory_sweep.py 2>&1 | tee -a reports/hw06/RUN_LOG.txt
+
+consolidate-hw06:
+	$(PY) -u code/hw6/run_consolidation_test.py 2>&1 | tee -a reports/hw06/RUN_LOG.txt
+
+agent-check-hw06:
+	$(PY) -u code/hw6/check_agent_compliance.py 2>&1 | tee -a reports/hw06/RUN_LOG.txt
+
+metrics-hw06:
+	$(PY) code/hw6/summarize_hw6.py
+
+test-hw06:
+	cd code/hw6 && ../../$(PY) -m pytest -q test_file_memory.py
+
+file-memory:
+	$(PY) code/hw6/file_memory_cli.py
+
+verify-hw06:
+	$(PY) -u code/verify_hw06.py

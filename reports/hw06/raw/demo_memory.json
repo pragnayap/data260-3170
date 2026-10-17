@@ -1,0 +1,259 @@
+{
+  "user_id": "lucky_demo",
+  "messages": [
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "user",
+      "content": "Is that a mechanical failure or a safety hazard?",
+      "created_at": "2026-10-17T00:23:33.231000+00:00",
+      "id": "6ad2c0052b0a55f03dd16284"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "assistant",
+      "content": "The elevator issue at Civic Center Station was classified as a safety hazard, not a mechanical failure. We\u2019re actively addressing it to ensure the safety of all riders, and you\u2019ll receive updates via email at lucky.rider@example.com. Let me know if you\u2019d like more details!",
+      "created_at": "2026-10-17T00:24:16.324000+00:00",
+      "id": "6ad2c0302b0a55f03dd16285"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "user",
+      "content": "What should I put in the description of the report?",
+      "created_at": "2026-10-17T00:24:17.935000+00:00",
+      "id": "6ad2c0312b0a55f03dd16286"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "assistant",
+      "content": "When describing your report, include details like the date, time, location, and any specific observations about the issue. Since you mentioned the elevator issue at Civic Center Station on the BART Red Line, you can note that it was classified as a safety hazard. Keep it clear and concise, and feel free to mention your preference for email communication. Let me know if you\u2019d like help drafting it!",
+      "created_at": "2026-10-17T00:24:57.789000+00:00",
+      "id": "6ad2c0592b0a55f03dd16287"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "user",
+      "content": "Yesterday my bus arrived twenty minutes late. Is that a delay?",
+      "created_at": "2026-10-17T00:24:59.225000+00:00",
+      "id": "6ad2c05b2b0a55f03dd16288"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "assistant",
+      "content": "Yes, a bus arriving twenty minutes late is considered a delay. We\u2019re reviewing the Line 22 service to identify the cause and improve reliability. You\u2019ll receive an update via email at lucky.rider@example.com. Let me know if you\u2019d like to report this as a separate incident!",
+      "created_at": "2026-10-17T00:25:35.361000+00:00",
+      "id": "6ad2c07f2b0a55f03dd16289"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "user",
+      "content": "How long does the agency take to respond?",
+      "created_at": "2026-10-17T00:25:43.121000+00:00",
+      "id": "6ad2c0872b0a55f03dd1628b"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "assistant",
+      "content": "The agency typically responds within 24\u201348 hours for most reports, though urgent issues like safety hazards may receive faster attention. You\u2019ll receive an email update at lucky.rider@example.com once action is taken. Let me know if you\u2019d like to check the status of your previous report!",
+      "created_at": "2026-10-17T00:26:15.746000+00:00",
+      "id": "6ad2c0a72b0a55f03dd1628c"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "user",
+      "content": "Can I attach a photo to the report?",
+      "created_at": "2026-10-17T00:26:56.031000+00:00",
+      "id": "6ad2c0d02b0a55f03dd1628e"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "assistant",
+      "content": "Yes, you can attach a photo to your report to provide visual details about the issue. Please ensure the photo is clear and relevant to the problem you\u2019re reporting. Let me know if you\u2019d like help formatting your report with the photo!",
+      "created_at": "2026-10-17T00:27:24.015000+00:00",
+      "id": "6ad2c0ec2b0a55f03dd1628f"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "user",
+      "content": "What happens after a report is marked Investigating?",
+      "created_at": "2026-10-17T00:27:25.692000+00:00",
+      "id": "6ad2c0ed2b0a55f03dd16290"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "assistant",
+      "content": "After a report is marked as \"Investigating,\" our team reviews the details and gathers additional information to determine the cause and next steps. You\u2019ll receive updates via email at lucky.rider@example.com as the investigation progresses. Let me know if you\u2019d like to check the status of your report!",
+      "created_at": "2026-10-17T00:27:54.859000+00:00",
+      "id": "6ad2c10a2b0a55f03dd16291"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "user",
+      "content": "Which route do I usually ride, and where do I board it?",
+      "created_at": "2026-10-17T00:27:56.251000+00:00",
+      "id": "6ad2c10c2b0a55f03dd16292"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "assistant",
+      "content": "You usually ride Line 22 and board it at the Downtown Transit Center. Let me know if you need help with anything related to your route or bike rack access!",
+      "created_at": "2026-10-17T00:28:19.386000+00:00",
+      "id": "6ad2c1232b0a55f03dd16293"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "user",
+      "content": "How should you contact me about my reports?",
+      "created_at": "2026-10-17T00:28:27.291000+00:00",
+      "id": "6ad2c12b2b0a55f03dd16295"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "role": "assistant",
+      "content": "We will contact you via email at lucky.rider@example.com for updates and follow-ups on your reports. You can also check the status of your reports through your account on our transit system\u2019s website. Let me know if you\u2019d like to receive notifications via another method!",
+      "created_at": "2026-10-17T00:28:52.638000+00:00",
+      "id": "6ad2c1442b0a55f03dd16296"
+    }
+  ],
+  "latest_session_summary": {
+    "user_id": "lucky_demo",
+    "session_id": "demo_session_1",
+    "scope": "session",
+    "text": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+    "created_at": "2026-10-17T00:29:34.246000+00:00",
+    "id": "6ad2c16e2b0a55f03dd16297"
+  },
+  "latest_lifetime_summary": {
+    "user_id": "lucky_demo",
+    "session_id": null,
+    "scope": "user",
+    "text": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+    "created_at": "2026-10-17T00:30:46.451000+00:00",
+    "id": "6ad2c1b62b0a55f03dd16298"
+  },
+  "episodes": [
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "The user is asking about their usual riding route and boarding location.",
+      "importance": 1.0,
+      "created_at": "2026-10-17T00:28:27.280000+00:00",
+      "id": "6ad2c12b2b0a55f03dd16294",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "The user reported a bus delay of twenty minutes.",
+      "importance": 1.0,
+      "created_at": "2026-10-17T00:25:43.110000+00:00",
+      "id": "6ad2c0872b0a55f03dd1628a",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "The user experienced elevator outages at Civic Center Station on the BART Red Line last Friday morning.",
+      "importance": 1.0,
+      "created_at": "2026-10-17T00:22:53.256000+00:00",
+      "id": "6ad2bfdd2b0a55f03dd16282",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "The user prioritizes having a functional bike rack.",
+      "importance": 1.0,
+      "created_at": "2026-10-17T00:21:26.828000+00:00",
+      "id": "6ad2bf862b0a55f03dd1627a",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "The user relies on a folding bike for transportation.",
+      "importance": 1.0,
+      "created_at": "2026-10-17T00:21:26.677000+00:00",
+      "id": "6ad2bf862b0a55f03dd16279",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+      "importance": 1.0,
+      "created_at": "2026-10-17T00:20:44.209000+00:00",
+      "id": "6ad2bf5c2b0a55f03dd16276",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "The user is asking about their usual riding route and boarding location.",
+      "importance": 1.0,
+      "created_at": "2026-10-15T11:06:36.349000+00:00",
+      "id": "6ad0b3bc5b819152e892bfdf",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "The user reported a bus delay of twenty minutes.",
+      "importance": 1.0,
+      "created_at": "2026-10-15T11:04:16.232000+00:00",
+      "id": "6ad0b3305b819152e892bfd5",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "The user experienced elevator outages at Civic Center Station on the BART Red Line last Friday morning.",
+      "importance": 1.0,
+      "created_at": "2026-10-15T11:02:16.911000+00:00",
+      "id": "6ad0b2b85b819152e892bfcd",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "The user prioritizes having a functional bike rack.",
+      "importance": 1.0,
+      "created_at": "2026-10-15T11:01:19.879000+00:00",
+      "id": "6ad0b27f5b819152e892bfc8",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "The user relies on a folding bike for transportation.",
+      "importance": 1.0,
+      "created_at": "2026-10-15T11:01:19.834000+00:00",
+      "id": "6ad0b27f5b819152e892bfc7",
+      "embedding_dim": 384
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+      "importance": 1.0,
+      "created_at": "2026-10-15T11:00:53.137000+00:00",
+      "id": "6ad0b2655b819152e892bfc4",
+      "embedding_dim": 384
+    }
+  ]
+}

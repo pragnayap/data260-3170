@@ -1,0 +1,636 @@
+{
+  "info": {
+    "name": "DATA260 HW6 - s3170 (Pragnaya Priyadarshini)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base",
+      "value": "http://localhost:8470"
+    },
+    {
+      "key": "incident_id",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Part 1 - CRUD",
+      "item": [
+        {
+          "name": "1.1 POST create (201)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"routeId\": \"Line 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"description\": \"Bus never arrived and riders waited forty minutes.\",\n  \"status\": \"Open\",\n  \"category\": \"Delay\",\n  \"occurredAt\": \"2026-10-14T07:15:00Z\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));",
+                  "pm.collectionVariables.set('incident_id', pm.response.json().id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "1.2 GET all (200)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "1.3 GET one (200)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents/{{incident_id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents",
+                "{{incident_id}}"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "1.4 PUT update (200)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents/{{incident_id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents",
+                "{{incident_id}}"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"routeId\": \"Line 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"description\": \"Bus never arrived and riders waited forty minutes.\",\n  \"status\": \"Resolved\",\n  \"category\": \"Delay\",\n  \"occurredAt\": \"2026-10-14T07:15:00Z\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('updatedAt moved', () => pm.expect(pm.response.json().updatedAt > pm.response.json().createdAt).to.be.true);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "1.5 DELETE (204)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents/{{incident_id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents",
+                "{{incident_id}}"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 204', () => pm.response.to.have.status(204));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "1.6 GET after delete (404)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents/{{incident_id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents",
+                "{{incident_id}}"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 404', () => pm.response.to.have.status(404));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "1.7 GET malformed id (400)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents/not-an-id",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents",
+                "not-an-id"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 400', () => pm.response.to.have.status(400));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Part 1.III - validation (all 422)",
+      "item": [
+        {
+          "name": "V1 missing routeId",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"location\": \"Downtown Transit Center\",\n  \"description\": \"Bus never arrived and riders waited forty minutes.\",\n  \"status\": \"Open\",\n  \"category\": \"Delay\",\n  \"occurredAt\": \"2026-10-14T07:15:00Z\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 422', () => pm.response.to.have.status(422));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "V2 invalid category enum",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"routeId\": \"Line 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"description\": \"Bus never arrived and riders waited forty minutes.\",\n  \"status\": \"Open\",\n  \"category\": \"Nope\",\n  \"occurredAt\": \"2026-10-14T07:15:00Z\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 422', () => pm.response.to.have.status(422));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "V3 invalid status enum",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"routeId\": \"Line 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"description\": \"Bus never arrived and riders waited forty minutes.\",\n  \"status\": \"Closed\",\n  \"category\": \"Delay\",\n  \"occurredAt\": \"2026-10-14T07:15:00Z\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 422', () => pm.response.to.have.status(422));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "V4 bad date format",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"routeId\": \"Line 22\",\n  \"location\": \"Downtown Transit Center\",\n  \"description\": \"Bus never arrived and riders waited forty minutes.\",\n  \"status\": \"Open\",\n  \"category\": \"Delay\",\n  \"occurredAt\": \"yesterday\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 422', () => pm.response.to.have.status(422));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "V5 routeId over 100 chars",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"routeId\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"location\": \"Downtown Transit Center\",\n  \"description\": \"Bus never arrived and riders waited forty minutes.\",\n  \"status\": \"Open\",\n  \"category\": \"Delay\",\n  \"occurredAt\": \"2026-10-14T07:15:00Z\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 422', () => pm.response.to.have.status(422));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "V6 wrong type (routeId number)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/doc/incidents",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "doc",
+                "incidents"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"routeId\": 12345,\n  \"location\": \"Downtown Transit Center\",\n  \"description\": \"Bus never arrived and riders waited forty minutes.\",\n  \"status\": \"Open\",\n  \"category\": \"Delay\",\n  \"occurredAt\": \"2026-10-14T07:15:00Z\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 422', () => pm.response.to.have.status(422));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Part 2 - memory chat",
+      "item": [
+        {
+          "name": "2.1 POST /api/chat",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/chat",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "chat"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_id\": \"lucky_postman\",\n  \"session_id\": \"postman_1\",\n  \"message\": \"Hi, I'm Lucky. I ride the Line 22 bus every morning.\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('has memory_used', () => pm.expect(pm.response.json()).to.have.property('memory_used'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "2.2 GET /api/memory/{user_id}",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/memory/lucky_postman",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "memory",
+                "lucky_postman"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "2.3 GET /api/aggregate/{user_id}",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/aggregate/lucky_postman",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "aggregate",
+                "lucky_postman"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

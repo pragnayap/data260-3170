@@ -25,3 +25,8 @@ CLAUDE.md
 reports/hw05/SCREENSHOT_STEPS.md
 reports/hw05/*.docx
 ~$*.docx
+
+# HW6: local working files (never commit)
+reports/hw06/SCREENSHOT_STEPS.md
+reports/hw06/*.docx
+reports/hw06/memory_test/llm_cache.json

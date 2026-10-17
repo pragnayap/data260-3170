@@ -1,0 +1,957 @@
+# HW6 Part 3 sweep -- started 2026-10-14T22:35:28-07:00 on Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz, model qwen3:8b via Ollama (CPU)
+[2026-10-14T22:35:29] === N4 {'short_term_n': 4, 'policy': 'none'} user_id=hw6_N4_20261014223529
+[2026-10-14T22:36:11] N4 turn  1 [conversation] prompt=118 completion=35 latency=26274ms window=0 episodes=0
+[2026-10-14T22:36:55] N4 turn  2 [conversation] prompt=213 completion=41 latency=19017ms window=2 episodes=2
+[2026-10-14T22:37:37] N4 turn  3 [conversation] prompt=308 completion=43 latency=22303ms window=4 episodes=3
+[2026-10-14T22:38:06] N4 turn  4 [conversation] prompt=296 completion=37 latency=19880ms window=4 episodes=3
+[2026-10-14T22:38:44] N4 turn  5 [conversation] prompt=306 completion=58 latency=22993ms window=4 episodes=3
+[2026-10-14T22:41:33] N4 turn  6 [conversation] prompt=321 completion=46 latency=25240ms window=4 episodes=3
+[2026-10-14T22:42:29] N4 turn  7 [conversation] prompt=495 completion=55 latency=54682ms window=4 episodes=3
+[2026-10-14T22:42:56] N4 turn  8 [conversation] prompt=462 completion=48 latency=25241ms window=4 episodes=3
+[2026-10-14T22:43:27] N4 turn  9 [conversation] prompt=479 completion=34 latency=28665ms window=4 episodes=3
+[2026-10-14T22:44:00] N4 turn 10 [conversation] prompt=440 completion=71 latency=30955ms window=4 episodes=3
+[2026-10-14T22:45:51] N4 turn 11 [conversation] prompt=487 completion=39 latency=66748ms window=4 episodes=3
+[2026-10-14T22:48:46] N4 turn 12 [conversation] prompt=481 completion=45 latency=36809ms window=4 episodes=3
+[2026-10-14T22:49:54] N4 turn 13 [conversation] prompt=461 completion=35 latency=64417ms window=4 episodes=3
+[2026-10-14T22:52:02] N4 turn 14 [conversation] prompt=449 completion=50 latency=125035ms window=4 episodes=3
+[2026-10-14T22:53:19] N4 turn 15 [conversation] prompt=445 completion=53 latency=75932ms window=4 episodes=3
+[2026-10-14T22:53:55] N4 turn 16 [conversation] prompt=470 completion=49 latency=33487ms window=4 episodes=3
+[2026-10-14T22:54:59] N4 turn 17 [conversation] prompt=470 completion=66 latency=62692ms window=4 episodes=3
+[2026-10-14T23:04:48] N4 turn 18 [conversation] prompt=493 completion=60 latency=38518ms window=4 episodes=3
+[2026-10-14T23:06:03] N4 turn 19 [conversation] prompt=738 completion=67 latency=73251ms window=4 episodes=3
+[2026-10-14T23:06:49] N4 turn 20 [conversation] prompt=736 completion=69 latency=44284ms window=4 episodes=3
+[2026-10-14T23:07:26] N4 turn 21 [conversation] prompt=747 completion=69 latency=35625ms window=4 episodes=3
+[2026-10-14T23:08:22] N4 turn 22 [conversation] prompt=745 completion=63 latency=54478ms window=4 episodes=3
+[2026-10-14T23:10:24] N4 turn 23 [conversation] prompt=751 completion=50 latency=118564ms window=4 episodes=3
+[2026-10-14T23:15:15] N4 turn 24 [conversation] prompt=730 completion=50 latency=31833ms window=4 episodes=3
+[2026-10-14T23:16:15] N4 turn 25 [conversation] prompt=868 completion=63 latency=57377ms window=4 episodes=3
+[2026-10-14T23:17:33] N4 turn 26 [conversation] prompt=871 completion=45 latency=74845ms window=4 episodes=3
+[2026-10-14T23:19:21] N4 turn 27 [conversation] prompt=872 completion=60 latency=106027ms window=4 episodes=3
+[2026-10-14T23:20:52] N4 turn 28 [conversation] prompt=874 completion=50 latency=87224ms window=4 episodes=3
+[2026-10-14T23:22:40] N4 turn 29 [conversation] prompt=875 completion=58 latency=106278ms window=4 episodes=3
+[2026-10-14T23:29:56] N4 turn 30 [conversation] prompt=881 completion=55 latency=168169ms window=4 episodes=3
+[2026-10-14T23:31:10] N4 turn 31 [probe] prompt=831 completion=37 latency=49442ms window=4 episodes=3
+[2026-10-14T23:31:10] N4 probe P1_route score=5.0 matched={'route': True, 'boarding_stop': True}
+[2026-10-14T23:31:35] N4 turn 32 [probe] prompt=801 completion=29 latency=21893ms window=4 episodes=3
+[2026-10-14T23:31:35] N4 probe P2_identity score=5.0 matched={'name': True, 'university': True}
+[2026-10-14T23:32:02] N4 turn 33 [probe] prompt=781 completion=37 latency=24912ms window=4 episodes=3
+[2026-10-14T23:32:02] N4 probe P3_equipment score=5.0 matched={'item': True, 'feature': True}
+[2026-10-14T23:32:41] N4 turn 34 [probe] prompt=774 completion=30 latency=21023ms window=4 episodes=3
+[2026-10-14T23:32:41] N4 probe P4_past_incident score=5.0 matched={'station': True, 'line': True}
+[2026-10-14T23:33:13] N4 turn 35 [probe] prompt=774 completion=35 latency=22007ms window=4 episodes=3
+[2026-10-14T23:33:13] N4 probe P5_contact score=5.0 matched={'channel': True, 'address': True}
+[2026-10-14T23:33:13] === N4 done: mean probe score 5.00
+[2026-10-14T23:33:13] === N12 {'short_term_n': 12, 'policy': 'none'} user_id=hw6_N12_20261014233313
+[2026-10-14T23:33:18-07:00] NOTE: first N4 run was under CPU contention from other processes (latency inflated); kept as *_N4_contended, N4 re-run at end
+[2026-10-14T23:33:49] N12 turn  1 [conversation] prompt=118 completion=35 latency=18607ms window=0 episodes=0
+[2026-10-14T23:34:31] N12 turn  2 [conversation] prompt=213 completion=41 latency=18007ms window=2 episodes=2
+[2026-10-14T23:35:13] N12 turn  3 [conversation] prompt=308 completion=47 latency=21046ms window=4 episodes=3
+[2026-10-14T23:35:44] N12 turn  4 [conversation] prompt=368 completion=26 latency=20778ms window=6 episodes=3
+[2026-10-14T23:36:17] N12 turn  5 [conversation] prompt=441 completion=52 latency=21772ms window=8 episodes=3
+[2026-10-14T23:37:45] N12 turn  6 [conversation] prompt=520 completion=37 latency=29891ms window=10 episodes=3
+[2026-10-14T23:38:39] N12 turn  7 [conversation] prompt=704 completion=48 latency=52190ms window=12 episodes=3
+[2026-10-14T23:39:19] N12 turn  8 [conversation] prompt=685 completion=46 latency=38317ms window=12 episodes=3
+[2026-10-14T23:40:01] N12 turn  9 [conversation] prompt=699 completion=42 latency=40381ms window=12 episodes=3
+[2026-10-14T23:40:52] N12 turn 10 [conversation] prompt=672 completion=69 latency=47744ms window=12 episodes=3
+[2026-10-14T23:42:08] N12 turn 11 [conversation] prompt=728 completion=48 latency=52497ms window=12 episodes=3
+[2026-10-14T23:44:30] N12 turn 12 [conversation] prompt=707 completion=48 latency=41253ms window=12 episodes=3
+[2026-10-14T23:45:24] N12 turn 13 [conversation] prompt=747 completion=41 latency=52440ms window=12 episodes=3
+[2026-10-14T23:46:25] N12 turn 14 [conversation] prompt=738 completion=57 latency=59371ms window=12 episodes=3
+[2026-10-14T23:47:17] N12 turn 15 [conversation] prompt=747 completion=58 latency=49960ms window=12 episodes=3
+[2026-10-14T23:49:24] N12 turn 16 [conversation] prompt=764 completion=59 latency=125036ms window=12 episodes=3
+[2026-10-14T23:51:09] N12 turn 17 [conversation] prompt=754 completion=52 latency=103388ms window=12 episodes=3
+[2026-10-14T23:54:57] N12 turn 18 [conversation] prompt=759 completion=43 latency=45124ms window=12 episodes=3
+[2026-10-14T23:56:15] N12 turn 19 [conversation] prompt=1008 completion=52 latency=76356ms window=12 episodes=3
+[2026-10-14T23:57:15] N12 turn 20 [conversation] prompt=1019 completion=63 latency=58328ms window=12 episodes=3
+[2026-10-14T23:58:04] N12 turn 21 [conversation] prompt=1029 completion=47 latency=46789ms window=12 episodes=3
+[2026-10-14T23:59:05] N12 turn 22 [conversation] prompt=1015 completion=66 latency=60071ms window=12 episodes=3
+[2026-10-14T23:59:57] N12 turn 23 [conversation] prompt=1034 completion=53 latency=49569ms window=12 episodes=3
+[2026-10-15T00:03:28] N12 turn 24 [conversation] prompt=1032 completion=58 latency=66337ms window=12 episodes=3
+[2026-10-15T00:04:26] N12 turn 25 [conversation] prompt=1184 completion=55 latency=56480ms window=12 episodes=3
+[2026-10-15T00:05:34] N12 turn 26 [conversation] prompt=1183 completion=54 latency=66365ms window=12 episodes=3
+[2026-10-15T00:06:18] N12 turn 27 [conversation] prompt=1179 completion=56 latency=42360ms window=12 episodes=3
+[2026-10-15T00:07:01] N12 turn 28 [conversation] prompt=1193 completion=54 latency=42133ms window=12 episodes=3
+[2026-10-15T00:07:44] N12 turn 29 [conversation] prompt=1179 completion=64 latency=41829ms window=12 episodes=3
+[2026-10-15T00:10:57] N12 turn 30 [conversation] prompt=1195 completion=51 latency=39647ms window=12 episodes=3
+[2026-10-15T00:12:15] N12 turn 31 [probe] prompt=1332 completion=36 latency=58354ms window=12 episodes=3
+[2026-10-15T00:12:15] N12 probe P1_route score=5.0 matched={'route': True, 'boarding_stop': True}
+[2026-10-15T00:12:51] N12 turn 32 [probe] prompt=1307 completion=30 latency=35319ms window=12 episodes=3
+[2026-10-15T00:12:51] N12 probe P2_identity score=5.0 matched={'name': True, 'university': True}
+[2026-10-15T00:13:34] N12 turn 33 [probe] prompt=1293 completion=32 latency=39927ms window=12 episodes=3
+[2026-10-15T00:13:34] N12 probe P3_equipment score=5.0 matched={'item': True, 'feature': True}
+[2026-10-15T00:14:22] N12 turn 34 [probe] prompt=1268 completion=30 latency=34692ms window=12 episodes=3
+[2026-10-15T00:14:22] N12 probe P4_past_incident score=5.0 matched={'station': True, 'line': True}
+[2026-10-15T00:15:03] N12 turn 35 [probe] prompt=1242 completion=32 latency=32580ms window=12 episodes=3
+[2026-10-15T00:15:03] N12 probe P5_contact score=5.0 matched={'channel': True, 'address': True}
+[2026-10-15T00:15:03] === N12 done: mean probe score 5.00
+[2026-10-15T00:15:03] === N30 {'short_term_n': 30, 'policy': 'none'} user_id=hw6_N30_20261015001503
+[2026-10-15T00:15:33] N30 turn  1 [conversation] prompt=118 completion=35 latency=17622ms window=0 episodes=0
+[2026-10-15T00:16:08] N30 turn  2 [conversation] prompt=213 completion=41 latency=14696ms window=2 episodes=2
+[2026-10-15T00:16:35] N30 turn  3 [conversation] prompt=308 completion=43 latency=10273ms window=4 episodes=3
+[2026-10-15T00:16:54] N30 turn  4 [conversation] prompt=364 completion=35 latency=11269ms window=6 episodes=3
+[2026-10-15T00:17:24] N30 turn  5 [conversation] prompt=446 completion=52 latency=18863ms window=8 episodes=3
+[2026-10-15T00:18:39] N30 turn  6 [conversation] prompt=525 completion=47 latency=22676ms window=10 episodes=3
+[2026-10-15T00:19:24] N30 turn  7 [conversation] prompt=720 completion=59 latency=42676ms window=12 episodes=3
+[2026-10-15T00:20:08] N30 turn  8 [conversation] prompt=780 completion=63 latency=42493ms window=14 episodes=3
+[2026-10-15T00:20:51] N30 turn  9 [conversation] prompt=885 completion=38 latency=41363ms window=16 episodes=3
+[2026-10-15T00:21:53] N30 turn 10 [conversation] prompt=928 completion=73 latency=60496ms window=18 episodes=3
+[2026-10-15T00:23:04] N30 turn 11 [conversation] prompt=1043 completion=46 latency=51857ms window=20 episodes=3
+[2026-10-15T00:25:32] N30 turn 12 [conversation] prompt=1103 completion=43 latency=62585ms window=22 episodes=3
+[2026-10-15T00:26:43] N30 turn 13 [conversation] prompt=1221 completion=41 latency=70299ms window=24 episodes=3
+[2026-10-15T00:27:05] N30 turn 14 [conversation] prompt=1283 completion=57 latency=20553ms window=26 episodes=3
+[2026-10-15T00:28:31] N30 turn 15 [conversation] prompt=1356 completion=55 latency=82974ms window=28 episodes=3
+[2026-10-15T00:29:59] N30 turn 16 [conversation] prompt=1437 completion=47 latency=86049ms window=30 episodes=3
+[2026-10-15T00:31:22] N30 turn 17 [conversation] prompt=1438 completion=48 latency=82076ms window=30 episodes=3
+[2026-10-15T00:34:44] N30 turn 18 [conversation] prompt=1442 completion=45 latency=80734ms window=30 episodes=3
+[2026-10-15T00:36:25] N30 turn 19 [conversation] prompt=1601 completion=68 latency=100064ms window=30 episodes=3
+[2026-10-15T00:37:48] N30 turn 20 [conversation] prompt=1624 completion=50 latency=81170ms window=30 episodes=3
+[2026-10-15T00:39:17] N30 turn 21 [conversation] prompt=1616 completion=62 latency=87445ms window=30 episodes=3
+[2026-10-15T00:40:41] N30 turn 22 [conversation] prompt=1621 completion=56 latency=81802ms window=30 episodes=3
+[2026-10-15T00:42:03] N30 turn 23 [conversation] prompt=1629 completion=47 latency=80809ms window=30 episodes=3
+[2026-10-15T00:45:00] N30 turn 24 [conversation] prompt=1614 completion=49 latency=79937ms window=30 episodes=3
+[2026-10-15T00:46:34] N30 turn 25 [conversation] prompt=1755 completion=45 latency=91361ms window=30 episodes=3
+[2026-10-15T00:48:03] N30 turn 26 [conversation] prompt=1722 completion=60 latency=87112ms window=30 episodes=3
+[2026-10-15T00:49:32] N30 turn 27 [conversation] prompt=1734 completion=61 latency=87366ms window=30 episodes=3
+[2026-10-15T00:50:59] N30 turn 28 [conversation] prompt=1753 completion=47 latency=85427ms window=30 episodes=3
+[2026-10-15T00:52:25] N30 turn 29 [conversation] prompt=1759 completion=49 latency=84908ms window=30 episodes=3
+[2026-10-15T00:56:18] N30 turn 30 [conversation] prompt=1762 completion=51 latency=86282ms window=30 episodes=3
+[2026-10-15T00:58:39] N30 turn 31 [probe] prompt=1945 completion=46 latency=121052ms window=30 episodes=3
+[2026-10-15T00:58:39] N30 probe P1_route score=5.0 matched={'route': True, 'boarding_stop': True}
+[2026-10-15T01:00:10] N30 turn 32 [probe] prompt=1937 completion=42 latency=89529ms window=30 episodes=3
+[2026-10-15T01:00:10] N30 probe P2_identity score=5.0 matched={'name': True, 'university': True}
+[2026-10-15T01:01:44] N30 turn 33 [probe] prompt=1942 completion=42 latency=90978ms window=30 episodes=3
+[2026-10-15T01:01:44] N30 probe P3_equipment score=5.0 matched={'item': True, 'feature': True}
+[2026-10-15T01:03:28] N30 turn 34 [probe] prompt=1939 completion=44 latency=90862ms window=30 episodes=3
+[2026-10-15T01:03:28] N30 probe P4_past_incident score=5.0 matched={'station': True, 'line': True}
+[2026-10-15T01:05:01] N30 turn 35 [probe] prompt=1916 completion=31 latency=84496ms window=30 episodes=3
+[2026-10-15T01:05:01] N30 probe P5_contact score=5.0 matched={'channel': True, 'address': True}
+[2026-10-15T01:05:01] === N30 done: mean probe score 5.00
+[2026-10-15T01:05:02] === N30_evict {'short_term_n': 30, 'policy': 'evict_old_assistant'} user_id=hw6_N30_evict_20261015010502
+[2026-10-15T01:05:26] N30_evict turn  1 [conversation] prompt=118 completion=35 latency=12104ms window=0 episodes=0
+[2026-10-15T01:06:01] N30_evict turn  2 [conversation] prompt=213 completion=41 latency=14497ms window=2 episodes=2
+[2026-10-15T01:06:28] N30_evict turn  3 [conversation] prompt=308 completion=43 latency=10170ms window=4 episodes=3
+[2026-10-15T01:06:49] N30_evict turn  4 [conversation] prompt=320 completion=30 latency=13915ms window=5 episodes=3
+[2026-10-15T01:07:17] N30_evict turn  5 [conversation] prompt=347 completion=47 latency=18328ms window=6 episodes=3
+[2026-10-15T01:08:21] N30_evict turn  6 [conversation] prompt=369 completion=44 latency=18271ms window=7 episodes=3
+[2026-10-15T01:08:52] N30_evict turn  7 [conversation] prompt=521 completion=51 latency=29491ms window=8 episodes=3
+[2026-10-15T01:09:21] N30_evict turn  8 [conversation] prompt=517 completion=64 latency=27712ms window=9 episodes=3
+[2026-10-15T01:09:48] N30_evict turn  9 [conversation] prompt=570 completion=44 latency=25688ms window=10 episodes=3
+[2026-10-15T01:10:18] N30_evict turn 10 [conversation] prompt=559 completion=61 latency=28805ms window=11 episodes=3
+[2026-10-15T01:11:05] N30_evict turn 11 [conversation] prompt=589 completion=51 latency=28093ms window=12 episodes=3
+[2026-10-15T01:12:53] N30_evict turn 12 [conversation] prompt=601 completion=68 latency=31968ms window=13 episodes=3
+[2026-10-15T01:13:33] N30_evict turn 13 [conversation] prompt=643 completion=50 latency=38190ms window=14 episodes=3
+[2026-10-15T01:14:03] N30_evict turn 14 [conversation] prompt=654 completion=81 latency=28093ms window=15 episodes=3
+[2026-10-15T01:14:42] N30_evict turn 15 [conversation] prompt=674 completion=82 latency=38517ms window=16 episodes=3
+[2026-10-15T01:15:18] N30_evict turn 16 [conversation] prompt=723 completion=56 latency=34418ms window=17 episodes=3
+[2026-10-15T01:15:56] N30_evict turn 17 [conversation] prompt=687 completion=72 latency=36637ms window=17 episodes=3
+[2026-10-15T01:19:12] N30_evict turn 18 [conversation] prompt=674 completion=64 latency=33867ms window=17 episodes=3
+[2026-10-15T01:20:12] N30_evict turn 19 [conversation] prompt=1001 completion=60 latency=58687ms window=17 episodes=3
+[2026-10-15T01:20:51] N30_evict turn 20 [conversation] prompt=979 completion=68 latency=37368ms window=17 episodes=3
+[2026-10-15T01:21:30] N30_evict turn 21 [conversation] prompt=977 completion=70 latency=37671ms window=17 episodes=3
+[2026-10-15T01:22:07] N30_evict turn 22 [conversation] prompt=977 completion=61 latency=35179ms window=17 episodes=3
+[2026-10-15T01:22:41] N30_evict turn 23 [conversation] prompt=981 completion=46 latency=32059ms window=17 episodes=3
+[2026-10-15T01:26:07] N30_evict turn 24 [conversation] prompt=958 completion=58 latency=33985ms window=17 episodes=3
+[2026-10-15T01:27:08] N30_evict turn 25 [conversation] prompt=1219 completion=71 latency=59587ms window=17 episodes=3
+[2026-10-15T01:27:46] N30_evict turn 26 [conversation] prompt=1239 completion=56 latency=36946ms window=17 episodes=3
+[2026-10-15T01:28:28] N30_evict turn 27 [conversation] prompt=1235 completion=71 latency=40315ms window=17 episodes=3
+[2026-10-15T01:29:09] N30_evict turn 28 [conversation] prompt=1236 completion=70 latency=39721ms window=17 episodes=3
+[2026-10-15T01:29:50] N30_evict turn 29 [conversation] prompt=1250 completion=69 latency=39357ms window=17 episodes=3
+[2026-10-15T01:33:53] N30_evict turn 30 [conversation] prompt=1259 completion=62 latency=37721ms window=17 episodes=3
+[2026-10-15T01:35:25] N30_evict turn 31 [probe] prompt=1316 completion=44 latency=72796ms window=17 episodes=3
+[2026-10-15T01:35:25] N30_evict probe P1_route score=5.0 matched={'route': True, 'boarding_stop': True}
+[2026-10-15T01:35:53] N30_evict turn 32 [probe] prompt=1284 completion=20 latency=27398ms window=17 episodes=3
+[2026-10-15T01:35:53] N30_evict probe P2_identity score=5.0 matched={'name': True, 'university': True}
+[2026-10-15T01:36:24] N30_evict turn 33 [probe] prompt=1253 completion=27 latency=28437ms window=17 episodes=3
+[2026-10-15T01:36:24] N30_evict probe P3_equipment score=5.0 matched={'item': True, 'feature': True}
+[2026-10-15T01:37:03] N30_evict turn 34 [probe] prompt=1236 completion=19 latency=25328ms window=17 episodes=3
+[2026-10-15T01:37:03] N30_evict probe P4_past_incident score=5.0 matched={'station': True, 'line': True}
+[2026-10-15T01:37:36] N30_evict turn 35 [probe] prompt=1236 completion=21 latency=25013ms window=17 episodes=3
+[2026-10-15T01:37:36] N30_evict probe P5_contact score=5.0 matched={'channel': True, 'address': True}
+[2026-10-15T01:37:36] === N30_evict done: mean probe score 5.00
+[2026-10-15T01:37:42-07:00] re-running N4 on a quiet machine
+[2026-10-15T01:37:42] === N4 {'short_term_n': 4, 'policy': 'none'} user_id=hw6_N4_20261015013742
+[2026-10-15T01:38:07] N4 turn  1 [conversation] prompt=118 completion=35 latency=11871ms window=0 episodes=0
+[2026-10-15T01:38:39] N4 turn  2 [conversation] prompt=213 completion=36 latency=12867ms window=2 episodes=2
+[2026-10-15T01:39:09] N4 turn  3 [conversation] prompt=303 completion=35 latency=13476ms window=4 episodes=3
+[2026-10-15T01:39:32] N4 turn  4 [conversation] prompt=283 completion=32 latency=15010ms window=4 episodes=3
+[2026-10-15T01:39:58] N4 turn  5 [conversation] prompt=293 completion=44 latency=15962ms window=4 episodes=3
+[2026-10-15T01:41:08] N4 turn  6 [conversation] prompt=302 completion=55 latency=18892ms window=4 episodes=3
+[2026-10-15T01:41:38] N4 turn  7 [conversation] prompt=449 completion=61 latency=28762ms window=4 episodes=3
+[2026-10-15T01:42:01] N4 turn  8 [conversation] prompt=436 completion=54 latency=21670ms window=4 episodes=3
+[2026-10-15T01:42:25] N4 turn  9 [conversation] prompt=450 completion=55 latency=22644ms window=4 episodes=3
+[2026-10-15T01:42:51] N4 turn 10 [conversation] prompt=426 completion=70 latency=24643ms window=4 episodes=3
+[2026-10-15T01:43:34] N4 turn 11 [conversation] prompt=466 completion=58 latency=24047ms window=4 episodes=3
+[2026-10-15T01:45:15] N4 turn 12 [conversation] prompt=458 completion=62 latency=23733ms window=4 episodes=3
+[2026-10-15T01:45:41] N4 turn 13 [conversation] prompt=463 completion=56 latency=24867ms window=4 episodes=3
+[2026-10-15T01:46:04] N4 turn 14 [conversation] prompt=453 completion=59 latency=21722ms window=4 episodes=3
+[2026-10-15T01:46:30] N4 turn 15 [conversation] prompt=441 completion=67 latency=24979ms window=4 episodes=3
+[2026-10-15T01:46:53] N4 turn 16 [conversation] prompt=459 completion=49 latency=21362ms window=4 episodes=3
+[2026-10-15T01:47:19] N4 turn 17 [conversation] prompt=450 completion=62 latency=23909ms window=4 episodes=3
+[2026-10-15T01:49:47] N4 turn 18 [conversation] prompt=455 completion=52 latency=21504ms window=4 episodes=3
+[2026-10-15T01:50:30] N4 turn 19 [conversation] prompt=678 completion=59 latency=41744ms window=4 episodes=3
+[2026-10-15T01:50:54] N4 turn 20 [conversation] prompt=672 completion=53 latency=22923ms window=4 episodes=3
+[2026-10-15T01:51:21] N4 turn 21 [conversation] prompt=675 completion=63 latency=25586ms window=4 episodes=3
+[2026-10-15T01:51:46] N4 turn 22 [conversation] prompt=675 completion=56 latency=23841ms window=4 episodes=3
+[2026-10-15T01:52:12] N4 turn 23 [conversation] prompt=690 completion=53 latency=23866ms window=4 episodes=3
+[2026-10-15T01:54:15] N4 turn 24 [conversation] prompt=678 completion=57 latency=24067ms window=4 episodes=3
+[2026-10-15T01:54:54] N4 turn 25 [conversation] prompt=794 completion=69 latency=37034ms window=4 episodes=3
+[2026-10-15T01:55:22] N4 turn 26 [conversation] prompt=800 completion=60 latency=26404ms window=4 episodes=3
+[2026-10-15T01:55:51] N4 turn 27 [conversation] prompt=809 completion=64 latency=27868ms window=4 episodes=3
+[2026-10-15T01:56:19] N4 turn 28 [conversation] prompt=809 completion=60 latency=26482ms window=4 episodes=3
+[2026-10-15T01:56:44] N4 turn 29 [conversation] prompt=805 completion=52 latency=23060ms window=4 episodes=3
+[2026-10-15T01:59:13] N4 turn 30 [conversation] prompt=801 completion=58 latency=24308ms window=4 episodes=3
+[2026-10-15T02:00:09] N4 turn 31 [probe] prompt=883 completion=45 latency=36776ms window=4 episodes=3
+[2026-10-15T02:00:09] N4 probe P1_route score=5.0 matched={'route': True, 'boarding_stop': True}
+[2026-10-15T02:00:26] N4 turn 32 [probe] prompt=867 completion=20 latency=15973ms window=4 episodes=3
+[2026-10-15T02:00:26] N4 probe P2_identity score=5.0 matched={'name': True, 'university': True}
+[2026-10-15T02:00:47] N4 turn 33 [probe] prompt=835 completion=33 latency=18566ms window=4 episodes=3
+[2026-10-15T02:00:47] N4 probe P3_equipment score=5.0 matched={'item': True, 'feature': True}
+[2026-10-15T02:01:15] N4 turn 34 [probe] prompt=816 completion=19 latency=14253ms window=4 episodes=3
+[2026-10-15T02:01:15] N4 probe P4_past_incident score=5.0 matched={'station': True, 'line': True}
+[2026-10-15T02:01:37] N4 turn 35 [probe] prompt=814 completion=23 latency=14416ms window=4 episodes=3
+[2026-10-15T02:01:37] N4 probe P5_contact score=5.0 matched={'channel': True, 'address': True}
+[2026-10-15T02:01:37] === N4 done: mean probe score 5.00
+[2026-10-15T02:01:38-07:00] ALL SWEEP RUNS COMPLETE
+[2026-10-15T02:01:43] original: 55 content lines; due: 55 non-empty, non-comment lines (limit 40)
+[turn 1] input_tokens=1670 output_tokens=140 total_tokens=1810
+lines 55 -> 51  (<40: False)
+  C1_backend_port    expected=a     got=both    WRONG
+  C2_vite_port       expected=b     got=both    WRONG
+  C3_mongo_install   expected=b     got=both    WRONG
+  C4_secrets         expected=b     got=both    WRONG
+  C5_secure_cookie   expected=both  got=b       WRONG
+[turn 1] input_tokens=534 output_tokens=192 total_tokens=726
+[turn 1] input_tokens=91 output_tokens=60 total_tokens=151
+with_agent_md: 7/9 passed; failed=['has_test_function', 'tests_pass']
+control_without_agent_md: 6/9 passed; failed=['docstring', 'has_test_function', 'tests_pass']
+[2026-10-15T02:07:09] original: 55 content lines; due: 55 non-empty, non-comment lines (limit 40)
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+[2026-10-15T02:07:15-07:00] NOTE: attempt 1 (single-prompt consolidation: 55->51 lines, 0/5 contradictions correct; generated function missed the test rule) kept in reports/hw06/attempts/. Redesigned to pairwise decisions; re-running below.
+[turn 1] input_tokens=205 output_tokens=27 total_tokens=232
+[turn 1] input_tokens=206 output_tokens=40 total_tokens=246
+[turn 1] input_tokens=205 output_tokens=27 total_tokens=232
+[turn 1] input_tokens=212 output_tokens=41 total_tokens=253
+[turn 1] input_tokens=199 output_tokens=25 total_tokens=224
+[turn 1] input_tokens=211 output_tokens=31 total_tokens=242
+[turn 1] input_tokens=206 output_tokens=27 total_tokens=233
+[turn 1] input_tokens=203 output_tokens=37 total_tokens=240
+[turn 1] input_tokens=201 output_tokens=27 total_tokens=228
+[turn 1] input_tokens=199 output_tokens=25 total_tokens=224
+[turn 1] input_tokens=199 output_tokens=31 total_tokens=230
+[turn 1] input_tokens=201 output_tokens=27 total_tokens=228
+[turn 1] input_tokens=202 output_tokens=28 total_tokens=230
+[turn 1] input_tokens=208 output_tokens=28 total_tokens=236
+[turn 1] input_tokens=212 output_tokens=27 total_tokens=239
+[turn 1] input_tokens=200 output_tokens=28 total_tokens=228
+[turn 1] input_tokens=204 output_tokens=27 total_tokens=231
+[turn 1] input_tokens=205 output_tokens=31 total_tokens=236
+[turn 1] input_tokens=203 output_tokens=28 total_tokens=231
+[turn 1] input_tokens=198 output_tokens=30 total_tokens=228
+[turn 1] input_tokens=199 output_tokens=33 total_tokens=232
+[turn 1] input_tokens=207 output_tokens=35 total_tokens=242
+[turn 1] input_tokens=207 output_tokens=28 total_tokens=235
+[turn 1] input_tokens=219 output_tokens=26 total_tokens=245
+[turn 1] input_tokens=207 output_tokens=35 total_tokens=242
+[turn 1] input_tokens=202 output_tokens=39 total_tokens=241
+[turn 1] input_tokens=213 output_tokens=31 total_tokens=244
+[turn 1] input_tokens=208 output_tokens=28 total_tokens=236
+[turn 1] input_tokens=208 output_tokens=26 total_tokens=234
+[turn 1] input_tokens=199 output_tokens=25 total_tokens=224
+[turn 1] input_tokens=207 output_tokens=24 total_tokens=231
+[turn 1] input_tokens=208 output_tokens=26 total_tokens=234
+[turn 1] input_tokens=198 output_tokens=25 total_tokens=223
+[turn 1] input_tokens=206 output_tokens=30 total_tokens=236
+[turn 1] input_tokens=202 output_tokens=28 total_tokens=230
+[turn 1] input_tokens=207 output_tokens=27 total_tokens=234
+[turn 1] input_tokens=200 output_tokens=31 total_tokens=231
+[turn 1] input_tokens=203 output_tokens=28 total_tokens=231
+[turn 1] input_tokens=215 output_tokens=35 total_tokens=250
+[turn 1] input_tokens=198 output_tokens=29 total_tokens=227
+[turn 1] input_tokens=210 output_tokens=31 total_tokens=241
+[turn 1] input_tokens=206 output_tokens=32 total_tokens=238
+[turn 1] input_tokens=204 output_tokens=32 total_tokens=236
+[turn 1] input_tokens=205 output_tokens=27 total_tokens=232
+[turn 1] input_tokens=207 output_tokens=27 total_tokens=234
+[turn 1] input_tokens=204 output_tokens=36 total_tokens=240
+[turn 1] input_tokens=206 output_tokens=29 total_tokens=235
+[turn 1] input_tokens=205 output_tokens=38 total_tokens=243
+[turn 1] input_tokens=199 output_tokens=27 total_tokens=226
+[turn 1] input_tokens=205 output_tokens=26 total_tokens=231
+[turn 1] input_tokens=206 output_tokens=28 total_tokens=234
+[turn 1] input_tokens=209 output_tokens=32 total_tokens=241
+[turn 1] input_tokens=197 output_tokens=25 total_tokens=222
+[turn 1] input_tokens=206 output_tokens=28 total_tokens=234
+[turn 1] input_tokens=218 output_tokens=35 total_tokens=253
+[turn 1] input_tokens=199 output_tokens=33 total_tokens=232
+[turn 1] input_tokens=211 output_tokens=35 total_tokens=246
+[turn 1] input_tokens=203 output_tokens=32 total_tokens=235
+[turn 1] input_tokens=202 output_tokens=35 total_tokens=237
+[turn 1] input_tokens=205 output_tokens=29 total_tokens=234
+[turn 1] input_tokens=204 output_tokens=26 total_tokens=230
+[turn 1] input_tokens=205 output_tokens=32 total_tokens=237
+[turn 1] input_tokens=194 output_tokens=28 total_tokens=222
+[turn 1] input_tokens=204 output_tokens=29 total_tokens=233
+[turn 1] input_tokens=207 output_tokens=32 total_tokens=239
+[turn 1] input_tokens=205 output_tokens=32 total_tokens=237
+[turn 1] input_tokens=206 output_tokens=38 total_tokens=244
+[turn 1] input_tokens=195 output_tokens=29 total_tokens=224
+[turn 1] input_tokens=213 output_tokens=36 total_tokens=249
+[turn 1] input_tokens=210 output_tokens=26 total_tokens=236
+[turn 1] input_tokens=207 output_tokens=27 total_tokens=234
+[turn 1] input_tokens=204 output_tokens=34 total_tokens=238
+[turn 1] input_tokens=203 output_tokens=32 total_tokens=235
+[turn 1] input_tokens=203 output_tokens=28 total_tokens=231
+[turn 1] input_tokens=203 output_tokens=28 total_tokens=231
+[turn 1] input_tokens=206 output_tokens=36 total_tokens=242
+[turn 1] input_tokens=201 output_tokens=33 total_tokens=234
+[turn 1] input_tokens=207 output_tokens=30 total_tokens=237
+[turn 1] input_tokens=203 output_tokens=34 total_tokens=237
+[turn 1] input_tokens=205 output_tokens=31 total_tokens=236
+[turn 1] input_tokens=209 output_tokens=28 total_tokens=237
+[turn 1] input_tokens=203 output_tokens=28 total_tokens=231
+[turn 1] input_tokens=210 output_tokens=33 total_tokens=243
+[turn 1] input_tokens=210 output_tokens=29 total_tokens=239
+[turn 1] input_tokens=206 output_tokens=32 total_tokens=238
+[turn 1] input_tokens=197 output_tokens=30 total_tokens=227
+[turn 1] input_tokens=210 output_tokens=36 total_tokens=246
+[turn 1] input_tokens=93 output_tokens=11 total_tokens=104
+[turn 1] input_tokens=91 output_tokens=17 total_tokens=108
+[turn 1] input_tokens=89 output_tokens=18 total_tokens=107
+[turn 1] input_tokens=89 output_tokens=15 total_tokens=104
+[turn 1] input_tokens=86 output_tokens=17 total_tokens=103
+[turn 1] input_tokens=91 output_tokens=13 total_tokens=104
+[turn 1] input_tokens=86 output_tokens=18 total_tokens=104
+[turn 1] input_tokens=99 output_tokens=13 total_tokens=112
+[turn 1] input_tokens=91 output_tokens=17 total_tokens=108
+[turn 1] input_tokens=90 output_tokens=15 total_tokens=105
+[turn 1] input_tokens=94 output_tokens=19 total_tokens=113
+[turn 1] input_tokens=91 output_tokens=14 total_tokens=105
+[turn 1] input_tokens=97 output_tokens=12 total_tokens=109
+[turn 1] input_tokens=86 output_tokens=15 total_tokens=101
+[turn 1] input_tokens=100 output_tokens=14 total_tokens=114
+[turn 1] input_tokens=91 output_tokens=16 total_tokens=107
+[turn 1] input_tokens=97 output_tokens=12 total_tokens=109
+[turn 1] input_tokens=92 output_tokens=12 total_tokens=104
+[turn 1] input_tokens=99 output_tokens=18 total_tokens=117
+[turn 1] input_tokens=93 output_tokens=13 total_tokens=106
+[turn 1] input_tokens=91 output_tokens=22 total_tokens=113
+[turn 1] input_tokens=94 output_tokens=12 total_tokens=106
+[turn 1] input_tokens=89 output_tokens=13 total_tokens=102
+[turn 1] input_tokens=91 output_tokens=18 total_tokens=109
+[turn 1] input_tokens=92 output_tokens=14 total_tokens=106
+[turn 1] input_tokens=85 output_tokens=21 total_tokens=106
+[turn 1] input_tokens=89 output_tokens=19 total_tokens=108
+[turn 1] input_tokens=92 output_tokens=18 total_tokens=110
+[turn 1] input_tokens=91 output_tokens=21 total_tokens=112
+[turn 1] input_tokens=92 output_tokens=21 total_tokens=113
+[turn 1] input_tokens=94 output_tokens=13 total_tokens=107
+[turn 1] input_tokens=86 output_tokens=12 total_tokens=98
+[turn 1] input_tokens=91 output_tokens=14 total_tokens=105
+[turn 1] input_tokens=93 output_tokens=10 total_tokens=103
+[turn 1] input_tokens=93 output_tokens=21 total_tokens=114
+[turn 1] input_tokens=84 output_tokens=19 total_tokens=103
+[turn 1] input_tokens=88 output_tokens=15 total_tokens=103
+[turn 1] input_tokens=89 output_tokens=14 total_tokens=103
+[turn 1] input_tokens=87 output_tokens=15 total_tokens=102
+[turn 1] input_tokens=89 output_tokens=12 total_tokens=101
+[turn 1] input_tokens=89 output_tokens=20 total_tokens=109
+[turn 1] input_tokens=90 output_tokens=20 total_tokens=110
+[turn 1] input_tokens=93 output_tokens=15 total_tokens=108
+[turn 1] input_tokens=94 output_tokens=14 total_tokens=108
+[turn 1] input_tokens=97 output_tokens=19 total_tokens=116
+[turn 1] input_tokens=92 output_tokens=25 total_tokens=117
+[turn 1] input_tokens=90 output_tokens=8 total_tokens=98
+lines 55 -> 1  (<40: True)
+  C1_backend_port    expected=a     got=neither WRONG
+  C2_vite_port       expected=b     got=neither WRONG
+  C3_mongo_install   expected=b     got=neither WRONG
+  C4_secrets         expected=b     got=neither WRONG
+  C5_secure_cookie   expected=both  got=neither WRONG
+[turn 1] input_tokens=534 output_tokens=192 total_tokens=726
+[turn 1] input_tokens=767 output_tokens=192 total_tokens=959
+[turn 1] input_tokens=91 output_tokens=83 total_tokens=174
+[turn 1] input_tokens=218 output_tokens=330 total_tokens=548
+with_agent_md attempt 1: 7/9 passed; failed=['has_test_function', 'tests_pass']
+with_agent_md attempt 2: 7/9 passed; failed=['has_test_function', 'tests_pass']
+control_without_agent_md attempt 1: 6/9 passed; failed=['docstring', 'has_test_function', 'tests_pass']
+control_without_agent_md attempt 2: 6/9 passed; failed=['no_print', 'line_length_100', 'tests_pass']
+[2026-10-15T02:35:07-07:00] NOTE: pairwise v1 over-deleted (55->1 lines: model flagged 47/55 facts TEMPORARY, 58/87 pairs SCOPED). Kept in attempts/. Added prompt examples + 45% archive guard; re-running.
+[2026-10-15T02:35:07] original: 55 content lines; due: 55 non-empty, non-comment lines (limit 40)
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+[turn 1] input_tokens=478 output_tokens=28 total_tokens=506
+[turn 1] input_tokens=479 output_tokens=37 total_tokens=516
+[turn 1] input_tokens=478 output_tokens=30 total_tokens=508
+[turn 1] input_tokens=485 output_tokens=36 total_tokens=521
+[turn 1] input_tokens=472 output_tokens=30 total_tokens=502
+[turn 1] input_tokens=484 output_tokens=29 total_tokens=513
+[turn 1] input_tokens=479 output_tokens=29 total_tokens=508
+[turn 1] input_tokens=476 output_tokens=31 total_tokens=507
+[turn 1] input_tokens=474 output_tokens=24 total_tokens=498
+[turn 1] input_tokens=472 output_tokens=30 total_tokens=502
+[turn 1] input_tokens=472 output_tokens=30 total_tokens=502
+[turn 1] input_tokens=474 output_tokens=24 total_tokens=498
+[turn 1] input_tokens=475 output_tokens=25 total_tokens=500
+[turn 1] input_tokens=481 output_tokens=36 total_tokens=517
+[turn 1] input_tokens=485 output_tokens=38 total_tokens=523
+[turn 1] input_tokens=473 output_tokens=32 total_tokens=505
+[turn 1] input_tokens=477 output_tokens=56 total_tokens=533
+[turn 1] input_tokens=478 output_tokens=38 total_tokens=516
+[turn 1] input_tokens=476 output_tokens=37 total_tokens=513
+[turn 1] input_tokens=471 output_tokens=32 total_tokens=503
+[turn 1] input_tokens=472 output_tokens=32 total_tokens=504
+[turn 1] input_tokens=480 output_tokens=38 total_tokens=518
+[turn 1] input_tokens=480 output_tokens=32 total_tokens=512
+[turn 1] input_tokens=492 output_tokens=29 total_tokens=521
+[turn 1] input_tokens=480 output_tokens=33 total_tokens=513
+[turn 1] input_tokens=475 output_tokens=24 total_tokens=499
+[turn 1] input_tokens=486 output_tokens=34 total_tokens=520
+[turn 1] input_tokens=481 output_tokens=33 total_tokens=514
+[turn 1] input_tokens=481 output_tokens=35 total_tokens=516
+[turn 1] input_tokens=472 output_tokens=32 total_tokens=504
+[turn 1] input_tokens=480 output_tokens=30 total_tokens=510
+[turn 1] input_tokens=481 output_tokens=29 total_tokens=510
+[turn 1] input_tokens=471 output_tokens=33 total_tokens=504
+[turn 1] input_tokens=479 output_tokens=33 total_tokens=512
+[turn 1] input_tokens=475 output_tokens=23 total_tokens=498
+[turn 1] input_tokens=480 output_tokens=31 total_tokens=511
+[turn 1] input_tokens=473 output_tokens=35 total_tokens=508
+[turn 1] input_tokens=476 output_tokens=34 total_tokens=510
+[turn 1] input_tokens=488 output_tokens=35 total_tokens=523
+[turn 1] input_tokens=471 output_tokens=31 total_tokens=502
+[turn 1] input_tokens=483 output_tokens=28 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=31 total_tokens=510
+[turn 1] input_tokens=477 output_tokens=25 total_tokens=502
+[turn 1] input_tokens=478 output_tokens=32 total_tokens=510
+[turn 1] input_tokens=480 output_tokens=30 total_tokens=510
+[turn 1] input_tokens=477 output_tokens=35 total_tokens=512
+[turn 1] input_tokens=479 output_tokens=33 total_tokens=512
+[turn 1] input_tokens=478 output_tokens=25 total_tokens=503
+[turn 1] input_tokens=472 output_tokens=23 total_tokens=495
+[turn 1] input_tokens=478 output_tokens=33 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=33 total_tokens=512
+[turn 1] input_tokens=482 output_tokens=30 total_tokens=512
+[turn 1] input_tokens=470 output_tokens=23 total_tokens=493
+[turn 1] input_tokens=479 output_tokens=36 total_tokens=515
+[turn 1] input_tokens=491 output_tokens=32 total_tokens=523
+[turn 1] input_tokens=472 output_tokens=30 total_tokens=502
+[turn 1] input_tokens=484 output_tokens=23 total_tokens=507
+[turn 1] input_tokens=476 output_tokens=38 total_tokens=514
+[turn 1] input_tokens=475 output_tokens=31 total_tokens=506
+[turn 1] input_tokens=478 output_tokens=31 total_tokens=509
+[turn 1] input_tokens=477 output_tokens=31 total_tokens=508
+[turn 1] input_tokens=478 output_tokens=37 total_tokens=515
+[turn 1] input_tokens=467 output_tokens=23 total_tokens=490
+[turn 1] input_tokens=477 output_tokens=41 total_tokens=518
+[turn 1] input_tokens=480 output_tokens=31 total_tokens=511
+[turn 1] input_tokens=478 output_tokens=28 total_tokens=506
+[turn 1] input_tokens=479 output_tokens=30 total_tokens=509
+[turn 1] input_tokens=468 output_tokens=31 total_tokens=499
+[turn 1] input_tokens=486 output_tokens=33 total_tokens=519
+[turn 1] input_tokens=483 output_tokens=42 total_tokens=525
+[turn 1] input_tokens=480 output_tokens=25 total_tokens=505
+[turn 1] input_tokens=477 output_tokens=31 total_tokens=508
+[turn 1] input_tokens=476 output_tokens=31 total_tokens=507
+[turn 1] input_tokens=476 output_tokens=29 total_tokens=505
+[turn 1] input_tokens=476 output_tokens=27 total_tokens=503
+[turn 1] input_tokens=479 output_tokens=31 total_tokens=510
+[turn 1] input_tokens=474 output_tokens=30 total_tokens=504
+[turn 1] input_tokens=480 output_tokens=31 total_tokens=511
+[turn 1] input_tokens=476 output_tokens=37 total_tokens=513
+[turn 1] input_tokens=478 output_tokens=40 total_tokens=518
+[turn 1] input_tokens=482 output_tokens=21 total_tokens=503
+[turn 1] input_tokens=476 output_tokens=30 total_tokens=506
+[turn 1] input_tokens=483 output_tokens=27 total_tokens=510
+[turn 1] input_tokens=483 output_tokens=28 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=39 total_tokens=518
+[turn 1] input_tokens=470 output_tokens=31 total_tokens=501
+[turn 1] input_tokens=483 output_tokens=34 total_tokens=517
+[turn 1] input_tokens=213 output_tokens=53 total_tokens=266
+[turn 1] input_tokens=211 output_tokens=19 total_tokens=230
+[turn 1] input_tokens=209 output_tokens=14 total_tokens=223
+[turn 1] input_tokens=209 output_tokens=21 total_tokens=230
+[turn 1] input_tokens=206 output_tokens=16 total_tokens=222
+[turn 1] input_tokens=211 output_tokens=12 total_tokens=223
+[turn 1] input_tokens=206 output_tokens=20 total_tokens=226
+[turn 1] input_tokens=219 output_tokens=15 total_tokens=234
+[turn 1] input_tokens=211 output_tokens=39 total_tokens=250
+[turn 1] input_tokens=210 output_tokens=28 total_tokens=238
+[turn 1] input_tokens=214 output_tokens=18 total_tokens=232
+[turn 1] input_tokens=211 output_tokens=13 total_tokens=224
+[turn 1] input_tokens=217 output_tokens=13 total_tokens=230
+[turn 1] input_tokens=206 output_tokens=20 total_tokens=226
+[turn 1] input_tokens=220 output_tokens=17 total_tokens=237
+[turn 1] input_tokens=211 output_tokens=24 total_tokens=235
+[turn 1] input_tokens=217 output_tokens=17 total_tokens=234
+[turn 1] input_tokens=212 output_tokens=16 total_tokens=228
+[turn 1] input_tokens=219 output_tokens=14 total_tokens=233
+[turn 1] input_tokens=213 output_tokens=16 total_tokens=229
+[turn 1] input_tokens=211 output_tokens=14 total_tokens=225
+[turn 1] input_tokens=214 output_tokens=22 total_tokens=236
+[turn 1] input_tokens=209 output_tokens=19 total_tokens=228
+[turn 1] input_tokens=211 output_tokens=26 total_tokens=237
+[turn 1] input_tokens=212 output_tokens=17 total_tokens=229
+[turn 1] input_tokens=205 output_tokens=16 total_tokens=221
+[turn 1] input_tokens=209 output_tokens=18 total_tokens=227
+[turn 1] input_tokens=212 output_tokens=19 total_tokens=231
+[turn 1] input_tokens=211 output_tokens=14 total_tokens=225
+[turn 1] input_tokens=212 output_tokens=14 total_tokens=226
+[turn 1] input_tokens=214 output_tokens=19 total_tokens=233
+[turn 1] input_tokens=206 output_tokens=16 total_tokens=222
+[turn 1] input_tokens=211 output_tokens=15 total_tokens=226
+[turn 1] input_tokens=213 output_tokens=13 total_tokens=226
+[turn 1] input_tokens=213 output_tokens=14 total_tokens=227
+[turn 1] input_tokens=204 output_tokens=13 total_tokens=217
+[turn 1] input_tokens=208 output_tokens=22 total_tokens=230
+[turn 1] input_tokens=209 output_tokens=20 total_tokens=229
+[turn 1] input_tokens=207 output_tokens=15 total_tokens=222
+[turn 1] input_tokens=209 output_tokens=17 total_tokens=226
+[turn 1] input_tokens=209 output_tokens=13 total_tokens=222
+[turn 1] input_tokens=210 output_tokens=14 total_tokens=224
+[turn 1] input_tokens=213 output_tokens=16 total_tokens=229
+[turn 1] input_tokens=214 output_tokens=17 total_tokens=231
+[turn 1] input_tokens=217 output_tokens=20 total_tokens=237
+[turn 1] input_tokens=212 output_tokens=20 total_tokens=232
+[turn 1] input_tokens=210 output_tokens=17 total_tokens=227
+lines 55 -> 55  (<40: False)
+  C1_backend_port    expected=a     got=both    WRONG
+  C2_vite_port       expected=b     got=both    WRONG
+  C3_mongo_install   expected=b     got=both    WRONG
+  C4_secrets         expected=b     got=both    WRONG
+  C5_secure_cookie   expected=both  got=both    OK
+[turn 1] input_tokens=534 output_tokens=192 total_tokens=726
+[turn 1] input_tokens=829 output_tokens=382 total_tokens=1211
+[turn 1] input_tokens=91 output_tokens=83 total_tokens=174
+[turn 1] input_tokens=291 output_tokens=384 total_tokens=675
+with_agent_md attempt 1: 7/9 passed; failed=['has_test_function', 'tests_pass']
+with_agent_md attempt 2: 8/9 passed; failed=['tests_pass']
+control_without_agent_md attempt 1: 6/9 passed; failed=['docstring', 'has_test_function', 'tests_pass']
+control_without_agent_md attempt 2: 8/9 passed; failed=['line_length_100']
+[2026-10-15T03:17:45-07:00] NOTE: pairwise v2 aborted by guard (model flagged 39/48 facts TEMPORARY). Now TEMPORARY requires model verdict AND an explicit time/to-do cue word; re-running consolidation only.
+[2026-10-15T03:17:45] original: 55 content lines; due: 55 non-empty, non-comment lines (limit 40)
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+[turn 1] input_tokens=478 output_tokens=28 total_tokens=506
+[turn 1] input_tokens=479 output_tokens=34 total_tokens=513
+[turn 1] input_tokens=478 output_tokens=30 total_tokens=508
+[turn 1] input_tokens=485 output_tokens=36 total_tokens=521
+[turn 1] input_tokens=472 output_tokens=30 total_tokens=502
+[turn 1] input_tokens=484 output_tokens=27 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=29 total_tokens=508
+[turn 1] input_tokens=476 output_tokens=31 total_tokens=507
+[turn 1] input_tokens=474 output_tokens=24 total_tokens=498
+[turn 1] input_tokens=472 output_tokens=30 total_tokens=502
+[turn 1] input_tokens=472 output_tokens=32 total_tokens=504
+[turn 1] input_tokens=474 output_tokens=31 total_tokens=505
+[turn 1] input_tokens=475 output_tokens=34 total_tokens=509
+[turn 1] input_tokens=481 output_tokens=36 total_tokens=517
+[turn 1] input_tokens=485 output_tokens=35 total_tokens=520
+[turn 1] input_tokens=473 output_tokens=32 total_tokens=505
+[turn 1] input_tokens=477 output_tokens=56 total_tokens=533
+[turn 1] input_tokens=478 output_tokens=38 total_tokens=516
+[turn 1] input_tokens=476 output_tokens=37 total_tokens=513
+[turn 1] input_tokens=471 output_tokens=31 total_tokens=502
+[turn 1] input_tokens=472 output_tokens=32 total_tokens=504
+[turn 1] input_tokens=480 output_tokens=27 total_tokens=507
+[turn 1] input_tokens=480 output_tokens=32 total_tokens=512
+[turn 1] input_tokens=492 output_tokens=29 total_tokens=521
+[turn 1] input_tokens=480 output_tokens=33 total_tokens=513
+[turn 1] input_tokens=475 output_tokens=24 total_tokens=499
+[turn 1] input_tokens=486 output_tokens=34 total_tokens=520
+[turn 1] input_tokens=481 output_tokens=33 total_tokens=514
+[turn 1] input_tokens=481 output_tokens=30 total_tokens=511
+[turn 1] input_tokens=472 output_tokens=32 total_tokens=504
+[turn 1] input_tokens=480 output_tokens=30 total_tokens=510
+[turn 1] input_tokens=481 output_tokens=29 total_tokens=510
+[turn 1] input_tokens=471 output_tokens=34 total_tokens=505
+[turn 1] input_tokens=479 output_tokens=33 total_tokens=512
+[turn 1] input_tokens=475 output_tokens=27 total_tokens=502
+[turn 1] input_tokens=480 output_tokens=31 total_tokens=511
+[turn 1] input_tokens=473 output_tokens=31 total_tokens=504
+[turn 1] input_tokens=476 output_tokens=34 total_tokens=510
+[turn 1] input_tokens=488 output_tokens=35 total_tokens=523
+[turn 1] input_tokens=471 output_tokens=31 total_tokens=502
+[turn 1] input_tokens=483 output_tokens=28 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=31 total_tokens=510
+[turn 1] input_tokens=477 output_tokens=25 total_tokens=502
+[turn 1] input_tokens=478 output_tokens=32 total_tokens=510
+[turn 1] input_tokens=480 output_tokens=30 total_tokens=510
+[turn 1] input_tokens=477 output_tokens=35 total_tokens=512
+[turn 1] input_tokens=479 output_tokens=33 total_tokens=512
+[turn 1] input_tokens=478 output_tokens=25 total_tokens=503
+[turn 1] input_tokens=472 output_tokens=23 total_tokens=495
+[turn 1] input_tokens=478 output_tokens=33 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=33 total_tokens=512
+[turn 1] input_tokens=482 output_tokens=35 total_tokens=517
+[turn 1] input_tokens=470 output_tokens=23 total_tokens=493
+[turn 1] input_tokens=479 output_tokens=35 total_tokens=514
+[turn 1] input_tokens=491 output_tokens=32 total_tokens=523
+[turn 1] input_tokens=472 output_tokens=30 total_tokens=502
+[turn 1] input_tokens=484 output_tokens=30 total_tokens=514
+[turn 1] input_tokens=476 output_tokens=38 total_tokens=514
+[turn 1] input_tokens=475 output_tokens=31 total_tokens=506
+[turn 1] input_tokens=478 output_tokens=31 total_tokens=509
+[turn 1] input_tokens=477 output_tokens=31 total_tokens=508
+[turn 1] input_tokens=478 output_tokens=34 total_tokens=512
+[turn 1] input_tokens=467 output_tokens=23 total_tokens=490
+[turn 1] input_tokens=477 output_tokens=41 total_tokens=518
+[turn 1] input_tokens=480 output_tokens=32 total_tokens=512
+[turn 1] input_tokens=478 output_tokens=28 total_tokens=506
+[turn 1] input_tokens=479 output_tokens=30 total_tokens=509
+[turn 1] input_tokens=468 output_tokens=31 total_tokens=499
+[turn 1] input_tokens=486 output_tokens=33 total_tokens=519
+[turn 1] input_tokens=483 output_tokens=42 total_tokens=525
+[turn 1] input_tokens=480 output_tokens=25 total_tokens=505
+[turn 1] input_tokens=477 output_tokens=31 total_tokens=508
+[turn 1] input_tokens=476 output_tokens=31 total_tokens=507
+[turn 1] input_tokens=476 output_tokens=29 total_tokens=505
+[turn 1] input_tokens=476 output_tokens=27 total_tokens=503
+[turn 1] input_tokens=479 output_tokens=31 total_tokens=510
+[turn 1] input_tokens=474 output_tokens=30 total_tokens=504
+[turn 1] input_tokens=480 output_tokens=31 total_tokens=511
+[turn 1] input_tokens=476 output_tokens=37 total_tokens=513
+[turn 1] input_tokens=478 output_tokens=40 total_tokens=518
+[turn 1] input_tokens=482 output_tokens=21 total_tokens=503
+[turn 1] input_tokens=476 output_tokens=35 total_tokens=511
+[turn 1] input_tokens=483 output_tokens=27 total_tokens=510
+[turn 1] input_tokens=483 output_tokens=28 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=38 total_tokens=517
+[turn 1] input_tokens=470 output_tokens=31 total_tokens=501
+[turn 1] input_tokens=483 output_tokens=34 total_tokens=517
+[turn 1] input_tokens=213 output_tokens=53 total_tokens=266
+[turn 1] input_tokens=211 output_tokens=19 total_tokens=230
+[turn 1] input_tokens=209 output_tokens=14 total_tokens=223
+[turn 1] input_tokens=209 output_tokens=21 total_tokens=230
+[turn 1] input_tokens=206 output_tokens=16 total_tokens=222
+[turn 1] input_tokens=211 output_tokens=12 total_tokens=223
+[turn 1] input_tokens=206 output_tokens=20 total_tokens=226
+[turn 1] input_tokens=219 output_tokens=15 total_tokens=234
+[turn 1] input_tokens=211 output_tokens=39 total_tokens=250
+[turn 1] input_tokens=210 output_tokens=28 total_tokens=238
+[turn 1] input_tokens=214 output_tokens=18 total_tokens=232
+[turn 1] input_tokens=211 output_tokens=13 total_tokens=224
+[turn 1] input_tokens=217 output_tokens=13 total_tokens=230
+[turn 1] input_tokens=206 output_tokens=20 total_tokens=226
+[turn 1] input_tokens=220 output_tokens=17 total_tokens=237
+[turn 1] input_tokens=211 output_tokens=24 total_tokens=235
+[turn 1] input_tokens=217 output_tokens=17 total_tokens=234
+[turn 1] input_tokens=212 output_tokens=16 total_tokens=228
+[turn 1] input_tokens=219 output_tokens=14 total_tokens=233
+[turn 1] input_tokens=213 output_tokens=16 total_tokens=229
+[turn 1] input_tokens=211 output_tokens=14 total_tokens=225
+[turn 1] input_tokens=214 output_tokens=22 total_tokens=236
+[turn 1] input_tokens=209 output_tokens=19 total_tokens=228
+[turn 1] input_tokens=211 output_tokens=26 total_tokens=237
+[turn 1] input_tokens=212 output_tokens=17 total_tokens=229
+[turn 1] input_tokens=205 output_tokens=16 total_tokens=221
+[turn 1] input_tokens=209 output_tokens=18 total_tokens=227
+[turn 1] input_tokens=212 output_tokens=19 total_tokens=231
+[turn 1] input_tokens=211 output_tokens=14 total_tokens=225
+[turn 1] input_tokens=212 output_tokens=14 total_tokens=226
+[turn 1] input_tokens=214 output_tokens=19 total_tokens=233
+[turn 1] input_tokens=206 output_tokens=16 total_tokens=222
+[turn 1] input_tokens=211 output_tokens=15 total_tokens=226
+[turn 1] input_tokens=213 output_tokens=13 total_tokens=226
+[turn 1] input_tokens=213 output_tokens=14 total_tokens=227
+[turn 1] input_tokens=204 output_tokens=13 total_tokens=217
+[turn 1] input_tokens=208 output_tokens=22 total_tokens=230
+[turn 1] input_tokens=209 output_tokens=20 total_tokens=229
+[turn 1] input_tokens=207 output_tokens=15 total_tokens=222
+[turn 1] input_tokens=209 output_tokens=17 total_tokens=226
+[turn 1] input_tokens=209 output_tokens=13 total_tokens=222
+[turn 1] input_tokens=210 output_tokens=14 total_tokens=224
+[turn 1] input_tokens=213 output_tokens=16 total_tokens=229
+[turn 1] input_tokens=214 output_tokens=17 total_tokens=231
+[turn 1] input_tokens=217 output_tokens=20 total_tokens=237
+[turn 1] input_tokens=212 output_tokens=20 total_tokens=232
+[turn 1] input_tokens=210 output_tokens=17 total_tokens=227
+lines 55 -> 55  (<40: False)
+  C1_backend_port    expected=a     got=both    WRONG
+  C2_vite_port       expected=b     got=both    WRONG
+  C3_mongo_install   expected=b     got=both    WRONG
+  C4_secrets         expected=b     got=both    WRONG
+  C5_secure_cookie   expected=both  got=both    OK
+[2026-10-15T03:34:14-07:00] NOTE: pairwise v3 found 5 temp + 9 dup groups but guard aborted at 24/48 archived; added proposed_archive to report + LLM reply cache; re-running.
+[2026-10-15T03:34:15] original: 55 content lines; due: 55 non-empty, non-comment lines (limit 40)
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+[turn 1] input_tokens=478 output_tokens=28 total_tokens=506
+[turn 1] input_tokens=479 output_tokens=34 total_tokens=513
+[turn 1] input_tokens=478 output_tokens=30 total_tokens=508
+[turn 1] input_tokens=485 output_tokens=36 total_tokens=521
+[turn 1] input_tokens=472 output_tokens=30 total_tokens=502
+[turn 1] input_tokens=484 output_tokens=27 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=29 total_tokens=508
+[turn 1] input_tokens=476 output_tokens=31 total_tokens=507
+[turn 1] input_tokens=474 output_tokens=24 total_tokens=498
+[turn 1] input_tokens=472 output_tokens=30 total_tokens=502
+[turn 1] input_tokens=472 output_tokens=32 total_tokens=504
+[turn 1] input_tokens=474 output_tokens=31 total_tokens=505
+[turn 1] input_tokens=475 output_tokens=34 total_tokens=509
+[turn 1] input_tokens=481 output_tokens=36 total_tokens=517
+[turn 1] input_tokens=485 output_tokens=35 total_tokens=520
+[turn 1] input_tokens=473 output_tokens=32 total_tokens=505
+[turn 1] input_tokens=477 output_tokens=56 total_tokens=533
+[turn 1] input_tokens=478 output_tokens=38 total_tokens=516
+[turn 1] input_tokens=476 output_tokens=37 total_tokens=513
+[turn 1] input_tokens=471 output_tokens=31 total_tokens=502
+[turn 1] input_tokens=472 output_tokens=32 total_tokens=504
+[turn 1] input_tokens=480 output_tokens=27 total_tokens=507
+[turn 1] input_tokens=480 output_tokens=32 total_tokens=512
+[turn 1] input_tokens=492 output_tokens=29 total_tokens=521
+[turn 1] input_tokens=480 output_tokens=33 total_tokens=513
+[turn 1] input_tokens=475 output_tokens=24 total_tokens=499
+[turn 1] input_tokens=486 output_tokens=34 total_tokens=520
+[turn 1] input_tokens=481 output_tokens=33 total_tokens=514
+[turn 1] input_tokens=481 output_tokens=30 total_tokens=511
+[turn 1] input_tokens=472 output_tokens=32 total_tokens=504
+[turn 1] input_tokens=480 output_tokens=30 total_tokens=510
+[turn 1] input_tokens=481 output_tokens=29 total_tokens=510
+[turn 1] input_tokens=471 output_tokens=34 total_tokens=505
+[turn 1] input_tokens=479 output_tokens=33 total_tokens=512
+[turn 1] input_tokens=475 output_tokens=27 total_tokens=502
+[turn 1] input_tokens=480 output_tokens=31 total_tokens=511
+[turn 1] input_tokens=473 output_tokens=31 total_tokens=504
+[turn 1] input_tokens=476 output_tokens=34 total_tokens=510
+[turn 1] input_tokens=488 output_tokens=35 total_tokens=523
+[turn 1] input_tokens=471 output_tokens=31 total_tokens=502
+[turn 1] input_tokens=483 output_tokens=28 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=31 total_tokens=510
+[turn 1] input_tokens=477 output_tokens=25 total_tokens=502
+[turn 1] input_tokens=478 output_tokens=32 total_tokens=510
+[turn 1] input_tokens=480 output_tokens=30 total_tokens=510
+[turn 1] input_tokens=477 output_tokens=35 total_tokens=512
+[turn 1] input_tokens=479 output_tokens=33 total_tokens=512
+[turn 1] input_tokens=478 output_tokens=25 total_tokens=503
+[turn 1] input_tokens=472 output_tokens=23 total_tokens=495
+[turn 1] input_tokens=478 output_tokens=33 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=33 total_tokens=512
+[turn 1] input_tokens=482 output_tokens=35 total_tokens=517
+[turn 1] input_tokens=470 output_tokens=23 total_tokens=493
+[turn 1] input_tokens=479 output_tokens=35 total_tokens=514
+[turn 1] input_tokens=491 output_tokens=32 total_tokens=523
+[turn 1] input_tokens=472 output_tokens=30 total_tokens=502
+[turn 1] input_tokens=484 output_tokens=30 total_tokens=514
+[turn 1] input_tokens=476 output_tokens=38 total_tokens=514
+[turn 1] input_tokens=475 output_tokens=31 total_tokens=506
+[turn 1] input_tokens=478 output_tokens=31 total_tokens=509
+[turn 1] input_tokens=477 output_tokens=31 total_tokens=508
+[turn 1] input_tokens=478 output_tokens=34 total_tokens=512
+[turn 1] input_tokens=467 output_tokens=23 total_tokens=490
+[turn 1] input_tokens=477 output_tokens=41 total_tokens=518
+[turn 1] input_tokens=480 output_tokens=32 total_tokens=512
+[turn 1] input_tokens=478 output_tokens=28 total_tokens=506
+[turn 1] input_tokens=479 output_tokens=30 total_tokens=509
+[turn 1] input_tokens=468 output_tokens=31 total_tokens=499
+[turn 1] input_tokens=486 output_tokens=33 total_tokens=519
+[turn 1] input_tokens=483 output_tokens=42 total_tokens=525
+[turn 1] input_tokens=480 output_tokens=25 total_tokens=505
+[turn 1] input_tokens=477 output_tokens=31 total_tokens=508
+[turn 1] input_tokens=476 output_tokens=31 total_tokens=507
+[turn 1] input_tokens=476 output_tokens=29 total_tokens=505
+[turn 1] input_tokens=476 output_tokens=27 total_tokens=503
+[turn 1] input_tokens=479 output_tokens=31 total_tokens=510
+[turn 1] input_tokens=474 output_tokens=30 total_tokens=504
+[turn 1] input_tokens=480 output_tokens=31 total_tokens=511
+[turn 1] input_tokens=476 output_tokens=37 total_tokens=513
+[turn 1] input_tokens=478 output_tokens=40 total_tokens=518
+[turn 1] input_tokens=482 output_tokens=21 total_tokens=503
+[turn 1] input_tokens=476 output_tokens=35 total_tokens=511
+[turn 1] input_tokens=483 output_tokens=27 total_tokens=510
+[turn 1] input_tokens=483 output_tokens=28 total_tokens=511
+[turn 1] input_tokens=479 output_tokens=38 total_tokens=517
+[turn 1] input_tokens=470 output_tokens=31 total_tokens=501
+[turn 1] input_tokens=483 output_tokens=34 total_tokens=517
+[turn 1] input_tokens=213 output_tokens=53 total_tokens=266
+[turn 1] input_tokens=211 output_tokens=19 total_tokens=230
+[turn 1] input_tokens=209 output_tokens=14 total_tokens=223
+[turn 1] input_tokens=209 output_tokens=21 total_tokens=230
+[turn 1] input_tokens=206 output_tokens=16 total_tokens=222
+[turn 1] input_tokens=211 output_tokens=12 total_tokens=223
+[turn 1] input_tokens=206 output_tokens=20 total_tokens=226
+[turn 1] input_tokens=219 output_tokens=15 total_tokens=234
+[turn 1] input_tokens=211 output_tokens=39 total_tokens=250
+[turn 1] input_tokens=210 output_tokens=28 total_tokens=238
+[turn 1] input_tokens=214 output_tokens=18 total_tokens=232
+[turn 1] input_tokens=211 output_tokens=13 total_tokens=224
+[turn 1] input_tokens=217 output_tokens=13 total_tokens=230
+[turn 1] input_tokens=206 output_tokens=20 total_tokens=226
+[turn 1] input_tokens=220 output_tokens=17 total_tokens=237
+[turn 1] input_tokens=211 output_tokens=24 total_tokens=235
+[turn 1] input_tokens=217 output_tokens=17 total_tokens=234
+[turn 1] input_tokens=212 output_tokens=16 total_tokens=228
+[turn 1] input_tokens=219 output_tokens=14 total_tokens=233
+[turn 1] input_tokens=213 output_tokens=16 total_tokens=229
+[turn 1] input_tokens=211 output_tokens=14 total_tokens=225
+[turn 1] input_tokens=214 output_tokens=22 total_tokens=236
+[turn 1] input_tokens=209 output_tokens=19 total_tokens=228
+[turn 1] input_tokens=211 output_tokens=26 total_tokens=237
+[turn 1] input_tokens=212 output_tokens=17 total_tokens=229
+[turn 1] input_tokens=205 output_tokens=16 total_tokens=221
+[turn 1] input_tokens=209 output_tokens=18 total_tokens=227
+[turn 1] input_tokens=212 output_tokens=19 total_tokens=231
+[turn 1] input_tokens=211 output_tokens=14 total_tokens=225
+[turn 1] input_tokens=212 output_tokens=14 total_tokens=226
+[turn 1] input_tokens=214 output_tokens=19 total_tokens=233
+[turn 1] input_tokens=206 output_tokens=16 total_tokens=222
+[turn 1] input_tokens=211 output_tokens=15 total_tokens=226
+[turn 1] input_tokens=213 output_tokens=13 total_tokens=226
+[turn 1] input_tokens=213 output_tokens=14 total_tokens=227
+[turn 1] input_tokens=204 output_tokens=13 total_tokens=217
+[turn 1] input_tokens=208 output_tokens=22 total_tokens=230
+[turn 1] input_tokens=209 output_tokens=20 total_tokens=229
+[turn 1] input_tokens=207 output_tokens=15 total_tokens=222
+[turn 1] input_tokens=209 output_tokens=17 total_tokens=226
+[turn 1] input_tokens=209 output_tokens=13 total_tokens=222
+[turn 1] input_tokens=210 output_tokens=14 total_tokens=224
+[turn 1] input_tokens=213 output_tokens=16 total_tokens=229
+[turn 1] input_tokens=214 output_tokens=17 total_tokens=231
+[turn 1] input_tokens=217 output_tokens=20 total_tokens=237
+[turn 1] input_tokens=212 output_tokens=20 total_tokens=232
+[turn 1] input_tokens=210 output_tokens=17 total_tokens=227
+lines 55 -> 55  (<40: False)
+  C1_backend_port    expected=a     got=both    WRONG
+  C2_vite_port       expected=b     got=both    WRONG
+  C3_mongo_install   expected=b     got=both    WRONG
+  C4_secrets         expected=b     got=both    WRONG
+  C5_secure_cookie   expected=both  got=both    OK
+[2026-10-15T03:51:13-07:00] NOTE: audit of v4 proposal found wrong merges (Homebrew facts chained) and a bogus conflict that would archive the assigned 8470 fact. Changes: SAME needs cosine>=0.6, star grouping, one conflict decision per fact. Re-running (cached model replies).
+[2026-10-15T03:51:13] original: 55 content lines; due: 55 non-empty, non-comment lines (limit 40)
+lines 55 -> 35  (<40: True)
+  C1_backend_port    expected=a     got=a       OK
+  C2_vite_port       expected=b     got=b       OK
+  C3_mongo_install   expected=b     got=b       OK
+  C4_secrets         expected=b     got=b       OK
+  C5_secure_cookie   expected=both  got=b       WRONG
+[2026-10-15T03:52:11-07:00] FINAL consolidation run (cached model replies): 55 -> 35 lines, C1-C4 correct, C5 (dev-only Secure cookie rule) resolved incorrectly; old wording of merged facts now archived.
+[turn 1] input_tokens=534 output_tokens=192 total_tokens=726
+[turn 1] input_tokens=829 output_tokens=382 total_tokens=1211
+[turn 1] input_tokens=1269 output_tokens=379 total_tokens=1648
+[turn 1] input_tokens=91 output_tokens=83 total_tokens=174
+[turn 1] input_tokens=291 output_tokens=384 total_tokens=675
+[turn 1] input_tokens=723 output_tokens=384 total_tokens=1107
+with_agent_md attempt 1: 7/9 passed; failed=['has_test_function', 'tests_pass']
+with_agent_md attempt 2: 8/9 passed; failed=['tests_pass']
+with_agent_md attempt 3: 8/9 passed; failed=['tests_pass']
+control_without_agent_md attempt 1: 6/9 passed; failed=['docstring', 'has_test_function', 'tests_pass']
+control_without_agent_md attempt 2: 8/9 passed; failed=['line_length_100']
+control_without_agent_md attempt 3: 7/9 passed; failed=['line_length_100', 'tests_pass']
+========================================================================
+DATA 260 HW6 - memory chat demo     Student: Pragnaya Priyadarshini (Lucky)
+2026-10-15T04:00:27   user_id=lucky_demo   session_id=demo_session_1
+========================================================================
+
+[ 1] You: Hi, I'm Lucky. I take the Line 22 bus from Downtown Transit Center every morning.
+     Assistant: Hello, Lucky! I'm here to help with any issues you encounter on your Line 22 bus from the Downtown Transit Center. Please let me know if you need assistance with delays, safety concerns, or any other transit-related matters.
+     memory used -> window=0 msgs, episodic=0, session_summary=no, lifetime_summary=no
+
+[ 2] You: I always bring my folding bike, so a working bike rack matters to me.
+     Assistant: That's great to hear! We appreciate riders like you who use alternative transportation. If you ever have issues with the bike racks on Line 22, please let me know so we can address them promptly.
+     memory used -> window=2 msgs, episodic=1, session_summary=no, lifetime_summary=no
+
+[ 3] You: Please email me at lucky.rider@example.com, not text messages.
+     Assistant: Sure, I'll email you at lucky.rider@example.com. Please feel free to reach out if you have any questions or need to report an issue with the Line 22 bus or bike racks. Have a great day!
+     memory used -> window=4 msgs, episodic=3, session_summary=no, lifetime_summary=no
+
+[ 4] You: Last Friday the elevators at Civic Center Station on the BART Red Line were out all morning.
+     Assistant: I'm sorry to hear about the elevator outage at Civic Center Station on the BART Red Line. We're working to ensure such issues are resolved quickly. Please let me know if you need further assistance or have additional details to share.
+     memory used -> window=6 msgs, episodic=3, session_summary=no, lifetime_summary=no
+
+[ 5] You: Is that a mechanical failure or a safety hazard?
+     Assistant: The elevator outage at Civic Center Station was classified as a safety hazard due to the impact on accessibility. We are prioritizing repairs to ensure safe and reliable service for all riders. Let me know if you'd like updates on this issue.
+     memory used -> window=6 msgs, episodic=3, session_summary=yes, lifetime_summary=no
+
+[ 6] You: What should I put in the description of the report?
+     Assistant: For the report, include the date, time, location (Civic Center Station, BART Red Line), and a brief description of the issue (elevator outage). Mention any impact on your commute or accessibility, and note that you rely on functional bike racks and alternative transportation. Let me know if you'd like help drafting the full report.
+     memory used -> window=6 msgs, episodic=3, session_summary=yes, lifetime_summary=no
+
+[ 7] You: Yesterday my bus arrived twenty minutes late. Is that a delay?
+     Assistant: Yes, a bus arriving twenty minutes late is considered a delay. It’s important for us to track such incidents to improve service reliability. Would you like to report this delay?
+     memory used -> window=6 msgs, episodic=3, session_summary=yes, lifetime_summary=no
+
+[ 8] You: How long does the agency take to respond?
+     Assistant: The agency typically responds within 24-48 hours for most reports, though urgent issues like safety hazards may receive faster attention. You’ll receive an email confirmation with next steps and a tracking number if you submit a formal report. Would you like to proceed with submitting this delay?
+     memory used -> window=6 msgs, episodic=3, session_summary=yes, lifetime_summary=no
+
+[ 9] You: Can I attach a photo to the report?
+     Assistant: Yes, you can attach a photo to the report to provide visual details of the issue. Please ensure the photo is clear and relevant to the incident. Would you like to proceed with submitting the report now?
+     memory used -> window=6 msgs, episodic=3, session_summary=yes, lifetime_summary=no
+
+[10] You: What happens after a report is marked Investigating?
+     Assistant: Once a report is marked as "Investigating," the agency will review the details, gather additional information if needed, and determine the appropriate course of action. You’ll receive updates via email as the investigation progresses. Would you like to submit this report now?
+     memory used -> window=6 msgs, episodic=3, session_summary=yes, lifetime_summary=no
+
+[11] You: Which route do I usually ride, and where do I board it?
+     Assistant: You usually ride the Line 22 bus and board it from the Downtown Transit Center. Let me know if you need assistance with anything else!
+     memory used -> window=6 msgs, episodic=3, session_summary=yes, lifetime_summary=no
+
+[12] You: How should you contact me about my reports?
+     Assistant: We will contact you via email at lucky.rider@example.com for updates on your reports. You can also check your account dashboard for real-time updates. Let me know if you'd like to submit a new report!
+     memory used -> window=6 msgs, episodic=3, session_summary=yes, lifetime_summary=no
+
+saved demo_transcript.json, demo_memory.json, demo_aggregate.json in /Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/reports/hw06/raw
+messages stored: 16 (last 16), episodes: 6, daily counts: [{'date': '2026-10-15', 'count': 24}]
+========================================================================
+DATA 260 HW6 - file-based memory demo     Student: Pragnaya Priyadarshini (Lucky)
+2026-10-15T04:08:33   working copy: /var/folders/3f/tdml5q_91f115lk9r2z9lzcw0000gn/T/hw6_filemem_tsskn3mr
+========================================================================
+Loaded AGENT.md (1828 chars) and MEMORY.md (55 content lines).
+[startup check] consolidation required: 55 non-empty, non-comment lines (limit 40)
+
+You: /help
+Commands:
+  /memory   show the current file-based memory (AGENT.md summary + MEMORY.md)
+  /compact  consolidate MEMORY.md (merge duplicates, resolve contradictions, archive the rest)
+            and compact the conversation; reports message counts before and after
+  /dream    identify durable facts in the recent conversation and add them to MEMORY.md
+  /help     show this help
+  /exit     quit
+
+You: I prefer short answers. My project uses the Transit Incident domain with routeId as the primary field.
+Assistant: - Your project uses the Transit Incident domain with `routeId` as the primary field.
+
+You: Remember that I always run the backend on port 8470 and the frontend on 8471.
+Assistant: - You run the backend on port 8470 and the frontend on 8471.
+
+You: Which port do I use for the backend?
+Assistant: - You use port 8470 for the backend.
+
+You: /dream
+[/dream] added to MEMORY.md:
+  + The user prefers short answers
+  + The project uses the Transit Incident domain
+  + routeId is the primary field
+  + The backend runs on port 8470
+  + The frontend runs on port 8471
+[/dream] consolidation now due: 61 non-empty, non-comment lines (limit 40) (run /compact)
+
+You: /compact
+[/compact] conversation messages: 6 -> 1
+[/compact] MEMORY.md content lines: 61 -> 39
+[/compact] merged groups: 11, contradictions resolved: 25, archived facts: 22 (see MEMORY.archive.md)
+
+--- MEMORY.md after /compact (first 20 lines) ---
+# MEMORY.md
+<!-- last_consolidated: 2026-10-15T11:10:34+00:00 -->
+
+## Identity and course
+- [2026-09-03] The student is Pragnaya Priyadarshini and goes by Lucky.
+- [2026-09-01] The student is in the SJSU MS Applied Data Intelligence program.
+- [2026-09-01] The course is DATA 260 Agentic AI.
+- [2026-09-03] The student's SID4 is 3170.
+- [2026-10-15] The project domain is Municipal Transit Incidents (DOMAIN_ID 2).
+
+## Ports and servers
+- [2026-09-02] The FastAPI backend runs on port 8470 (assigned by SID4, do not change).
+- [2026-09-25] The Vite dev server uses port 8471 with strictPort true.
+<!-- resolved contradiction: kept "The Vite dev server uses port 8471 with strictPort true." over "The Vite dev server uses port 5173." (Both facts refer to the same setting (Vite dev server port) but with different values.) -->
+- [2026-09-04] MySQL runs on localhost:3306 and the database is s3170_rel.
+- [2026-10-12] MongoDB runs in a Docker container named s3170_mongo on port 27017.
+<!-- resolved contradiction: kept "MongoDB runs in a Docker container named s3170_mongo on port 27017." over "MongoDB runs locally, installed through Homebrew." (Both describe MongoDB setup, but B specifies a Docker container and port, while A describes a local installation.) -->
+- [2026-10-12] HW6 adds MongoDB documents, chat memory and file-based memory.
+
+## Models and machine
+
+[post-check] consolidation required now: None
+saved /Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/reports/hw06/raw/demo_file_memory.txt

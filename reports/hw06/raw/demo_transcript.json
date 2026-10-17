@@ -1,0 +1,1019 @@
+[
+  {
+    "turn": 1,
+    "user": "Hi, I'm Lucky. I take the Line 22 bus from Downtown Transit Center every morning.",
+    "reply": "Hello, Lucky! I'm glad to hear from you. You take the Line 22 bus from Downtown Transit Center every morning, and we appreciate your consistent feedback and support. Let me know if you need assistance with anything!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "What happens after a report is marked Investigating?"
+        },
+        {
+          "role": "assistant",
+          "content": "Once a report is marked as \"Investigating,\" the agency will review the details, gather additional information if needed, and determine the appropriate course of action. You\u2019ll receive updates via email as the investigation progresses. Would you like to submit this report now?"
+        },
+        {
+          "role": "user",
+          "content": "Which route do I usually ride, and where do I board it?"
+        },
+        {
+          "role": "assistant",
+          "content": "You usually ride the Line 22 bus and board it from the Downtown Transit Center. Let me know if you need assistance with anything else!"
+        },
+        {
+          "role": "user",
+          "content": "How should you contact me about my reports?"
+        },
+        {
+          "role": "assistant",
+          "content": "We will contact you via email at lucky.rider@example.com for updates on your reports. You can also check your account dashboard for real-time updates. Let me know if you'd like to submit a new report!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+          "importance": 1.0,
+          "score": 0.8056
+        },
+        {
+          "fact": "The user experienced elevator outages at Civic Center Station on the BART Red Line last Friday morning.",
+          "importance": 1.0,
+          "score": 0.2871
+        },
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.2797
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": [
+        {
+          "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+          "importance": 1.0
+        }
+      ]
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:20:44.217976+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 603,
+      "completion_tokens": 47,
+      "component_tokens": {
+        "system_primer": 84,
+        "long_term_summary": 273,
+        "episodic_facts": 60,
+        "short_term_window": 168,
+        "current_message": 18
+      },
+      "latency_ms": 62045,
+      "total_latency_ms": 75979,
+      "overhead_tokens": {
+        "extraction_in": 135,
+        "extraction_out": 31,
+        "summary_in": 0,
+        "summary_out": 0
+      }
+    }
+  },
+  {
+    "turn": 2,
+    "user": "I always bring my folding bike, so a working bike rack matters to me.",
+    "reply": "That\u2019s great to hear, Lucky! Your folding bike and reliance on working bike racks are important to us too. We\u2019ll make sure to keep you informed about any updates related to bike rack maintenance and safety. Let me know if you need anything else!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Which route do I usually ride, and where do I board it?"
+        },
+        {
+          "role": "assistant",
+          "content": "You usually ride the Line 22 bus and board it from the Downtown Transit Center. Let me know if you need assistance with anything else!"
+        },
+        {
+          "role": "user",
+          "content": "How should you contact me about my reports?"
+        },
+        {
+          "role": "assistant",
+          "content": "We will contact you via email at lucky.rider@example.com for updates on your reports. You can also check your account dashboard for real-time updates. Let me know if you'd like to submit a new report!"
+        },
+        {
+          "role": "user",
+          "content": "Hi, I'm Lucky. I take the Line 22 bus from Downtown Transit Center every morning."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello, Lucky! I'm glad to hear from you. You take the Line 22 bus from Downtown Transit Center every morning, and we appreciate your consistent feedback and support. Let me know if you need assistance with anything!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "The user prioritizes having a functional bike rack.",
+          "importance": 1.0,
+          "score": 0.6891
+        },
+        {
+          "fact": "The user relies on a folding bike for transportation.",
+          "importance": 1.0,
+          "score": 0.5125
+        },
+        {
+          "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+          "importance": 1.0,
+          "score": 0.2075
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": [
+        {
+          "fact": "The user relies on a folding bike for transportation.",
+          "importance": 1.0
+        },
+        {
+          "fact": "The user prioritizes having a functional bike rack.",
+          "importance": 1.0
+        }
+      ]
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:21:26.833226+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 593,
+      "completion_tokens": 52,
+      "component_tokens": {
+        "system_primer": 85,
+        "long_term_summary": 278,
+        "episodic_facts": 50,
+        "short_term_window": 164,
+        "current_message": 15
+      },
+      "latency_ms": 28952,
+      "total_latency_ms": 42523,
+      "overhead_tokens": {
+        "extraction_in": 130,
+        "extraction_out": 48,
+        "summary_in": 0,
+        "summary_out": 0
+      }
+    }
+  },
+  {
+    "turn": 3,
+    "user": "Please email me at lucky.rider@example.com, not text messages.",
+    "reply": "We\u2019ll ensure all communication regarding your reports goes to your preferred email address, lucky.rider@example.com. You\u2019ll receive updates directly via email, and we\u2019ll avoid using text messages unless absolutely necessary. Let me know if you\u2019d like to submit a new report or check on existing ones!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "How should you contact me about my reports?"
+        },
+        {
+          "role": "assistant",
+          "content": "We will contact you via email at lucky.rider@example.com for updates on your reports. You can also check your account dashboard for real-time updates. Let me know if you'd like to submit a new report!"
+        },
+        {
+          "role": "user",
+          "content": "Hi, I'm Lucky. I take the Line 22 bus from Downtown Transit Center every morning."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello, Lucky! I'm glad to hear from you. You take the Line 22 bus from Downtown Transit Center every morning, and we appreciate your consistent feedback and support. Let me know if you need assistance with anything!"
+        },
+        {
+          "role": "user",
+          "content": "I always bring my folding bike, so a working bike rack matters to me."
+        },
+        {
+          "role": "assistant",
+          "content": "That\u2019s great to hear, Lucky! Your folding bike and reliance on working bike racks are important to us too. We\u2019ll make sure to keep you informed about any updates related to bike rack maintenance and safety. Let me know if you need anything else!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+          "importance": 1.0,
+          "score": 0.313
+        },
+        {
+          "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+          "importance": 1.0,
+          "score": 0.313
+        },
+        {
+          "fact": "The user is asking about their usual riding route and boarding location.",
+          "importance": 1.0,
+          "score": 0.2591
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": []
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:22:06.571665+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 623,
+      "completion_tokens": 59,
+      "component_tokens": {
+        "system_primer": 85,
+        "long_term_summary": 276,
+        "episodic_facts": 58,
+        "short_term_window": 190,
+        "current_message": 14
+      },
+      "latency_ms": 27018,
+      "total_latency_ms": 39724,
+      "overhead_tokens": {
+        "extraction_in": 128,
+        "extraction_out": 2,
+        "summary_in": 0,
+        "summary_out": 0
+      }
+    }
+  },
+  {
+    "turn": 4,
+    "user": "Last Friday the elevators at Civic Center Station on the BART Red Line were out all morning.",
+    "reply": "Thank you for the update, Lucky. We\u2019re sorry to hear about the elevator outages at Civic Center Station on the BART Red Line last Friday. We\u2019re following up on that issue as a safety hazard and will keep you informed via email. Let me know if you\u2019d like to check on the status or submit another report!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Hi, I'm Lucky. I take the Line 22 bus from Downtown Transit Center every morning."
+        },
+        {
+          "role": "assistant",
+          "content": "Hello, Lucky! I'm glad to hear from you. You take the Line 22 bus from Downtown Transit Center every morning, and we appreciate your consistent feedback and support. Let me know if you need assistance with anything!"
+        },
+        {
+          "role": "user",
+          "content": "I always bring my folding bike, so a working bike rack matters to me."
+        },
+        {
+          "role": "assistant",
+          "content": "That\u2019s great to hear, Lucky! Your folding bike and reliance on working bike racks are important to us too. We\u2019ll make sure to keep you informed about any updates related to bike rack maintenance and safety. Let me know if you need anything else!"
+        },
+        {
+          "role": "user",
+          "content": "Please email me at lucky.rider@example.com, not text messages."
+        },
+        {
+          "role": "assistant",
+          "content": "We\u2019ll ensure all communication regarding your reports goes to your preferred email address, lucky.rider@example.com. You\u2019ll receive updates directly via email, and we\u2019ll avoid using text messages unless absolutely necessary. Let me know if you\u2019d like to submit a new report or check on existing ones!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "The user experienced elevator outages at Civic Center Station on the BART Red Line last Friday morning.",
+          "importance": 1.0,
+          "score": 0.7516
+        },
+        {
+          "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+          "importance": 1.0,
+          "score": 0.3302
+        },
+        {
+          "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+          "importance": 1.0,
+          "score": 0.3302
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": [
+        {
+          "fact": "The user experienced elevator outages at Civic Center Station on the BART Red Line last Friday morning.",
+          "importance": 1.0
+        }
+      ],
+      "session_summary": true
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:23:33.221518+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 656,
+      "completion_tokens": 68,
+      "component_tokens": {
+        "system_primer": 84,
+        "long_term_summary": 273,
+        "episodic_facts": 65,
+        "short_term_window": 215,
+        "current_message": 20
+      },
+      "latency_ms": 36441,
+      "total_latency_ms": 86625,
+      "overhead_tokens": {
+        "extraction_in": 134,
+        "extraction_out": 35,
+        "summary_in": 486,
+        "summary_out": 98
+      }
+    }
+  },
+  {
+    "turn": 5,
+    "user": "Is that a mechanical failure or a safety hazard?",
+    "reply": "The elevator issue at Civic Center Station was classified as a safety hazard, not a mechanical failure. We\u2019re actively addressing it to ensure the safety of all riders, and you\u2019ll receive updates via email at lucky.rider@example.com. Let me know if you\u2019d like more details!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "I always bring my folding bike, so a working bike rack matters to me."
+        },
+        {
+          "role": "assistant",
+          "content": "That\u2019s great to hear, Lucky! Your folding bike and reliance on working bike racks are important to us too. We\u2019ll make sure to keep you informed about any updates related to bike rack maintenance and safety. Let me know if you need anything else!"
+        },
+        {
+          "role": "user",
+          "content": "Please email me at lucky.rider@example.com, not text messages."
+        },
+        {
+          "role": "assistant",
+          "content": "We\u2019ll ensure all communication regarding your reports goes to your preferred email address, lucky.rider@example.com. You\u2019ll receive updates directly via email, and we\u2019ll avoid using text messages unless absolutely necessary. Let me know if you\u2019d like to submit a new report or check on existing ones!"
+        },
+        {
+          "role": "user",
+          "content": "Last Friday the elevators at Civic Center Station on the BART Red Line were out all morning."
+        },
+        {
+          "role": "assistant",
+          "content": "Thank you for the update, Lucky. We\u2019re sorry to hear about the elevator outages at Civic Center Station on the BART Red Line last Friday. We\u2019re following up on that issue as a safety hazard and will keep you informed via email. Let me know if you\u2019d like to check on the status or submit another report!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "The user relies on a folding bike for transportation.",
+          "importance": 1.0,
+          "score": 0.2742
+        },
+        {
+          "fact": "The user relies on a folding bike for transportation.",
+          "importance": 1.0,
+          "score": 0.2742
+        },
+        {
+          "fact": "The user experienced elevator outages at Civic Center Station on the BART Red Line last Friday morning.",
+          "importance": 1.0,
+          "score": 0.2598
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": []
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:24:17.895408+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 656,
+      "completion_tokens": 57,
+      "component_tokens": {
+        "system_primer": 83,
+        "long_term_summary": 271,
+        "episodic_facts": 57,
+        "short_term_window": 235,
+        "current_message": 10
+      },
+      "latency_ms": 43095,
+      "total_latency_ms": 44663,
+      "overhead_tokens": {
+        "extraction_in": 124,
+        "extraction_out": 2,
+        "summary_in": 0,
+        "summary_out": 0
+      }
+    }
+  },
+  {
+    "turn": 6,
+    "user": "What should I put in the description of the report?",
+    "reply": "When describing your report, include details like the date, time, location, and any specific observations about the issue. Since you mentioned the elevator issue at Civic Center Station on the BART Red Line, you can note that it was classified as a safety hazard. Keep it clear and concise, and feel free to mention your preference for email communication. Let me know if you\u2019d like help drafting it!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Please email me at lucky.rider@example.com, not text messages."
+        },
+        {
+          "role": "assistant",
+          "content": "We\u2019ll ensure all communication regarding your reports goes to your preferred email address, lucky.rider@example.com. You\u2019ll receive updates directly via email, and we\u2019ll avoid using text messages unless absolutely necessary. Let me know if you\u2019d like to submit a new report or check on existing ones!"
+        },
+        {
+          "role": "user",
+          "content": "Last Friday the elevators at Civic Center Station on the BART Red Line were out all morning."
+        },
+        {
+          "role": "assistant",
+          "content": "Thank you for the update, Lucky. We\u2019re sorry to hear about the elevator outages at Civic Center Station on the BART Red Line last Friday. We\u2019re following up on that issue as a safety hazard and will keep you informed via email. Let me know if you\u2019d like to check on the status or submit another report!"
+        },
+        {
+          "role": "user",
+          "content": "Is that a mechanical failure or a safety hazard?"
+        },
+        {
+          "role": "assistant",
+          "content": "The elevator issue at Civic Center Station was classified as a safety hazard, not a mechanical failure. We\u2019re actively addressing it to ensure the safety of all riders, and you\u2019ll receive updates via email at lucky.rider@example.com. Let me know if you\u2019d like more details!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.2922
+        },
+        {
+          "fact": "The user is asking about their usual riding route and boarding location.",
+          "importance": 1.0,
+          "score": 0.2018
+        },
+        {
+          "fact": "The user prioritizes having a functional bike rack.",
+          "importance": 1.0,
+          "score": 0.0986
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": []
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:24:59.218343+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 649,
+      "completion_tokens": 81,
+      "component_tokens": {
+        "system_primer": 83,
+        "long_term_summary": 271,
+        "episodic_facts": 48,
+        "short_term_window": 236,
+        "current_message": 11
+      },
+      "latency_ms": 39856,
+      "total_latency_ms": 41282,
+      "overhead_tokens": {
+        "extraction_in": 125,
+        "extraction_out": 2,
+        "summary_in": 0,
+        "summary_out": 0
+      }
+    }
+  },
+  {
+    "turn": 7,
+    "user": "Yesterday my bus arrived twenty minutes late. Is that a delay?",
+    "reply": "Yes, a bus arriving twenty minutes late is considered a delay. We\u2019re reviewing the Line 22 service to identify the cause and improve reliability. You\u2019ll receive an update via email at lucky.rider@example.com. Let me know if you\u2019d like to report this as a separate incident!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Last Friday the elevators at Civic Center Station on the BART Red Line were out all morning."
+        },
+        {
+          "role": "assistant",
+          "content": "Thank you for the update, Lucky. We\u2019re sorry to hear about the elevator outages at Civic Center Station on the BART Red Line last Friday. We\u2019re following up on that issue as a safety hazard and will keep you informed via email. Let me know if you\u2019d like to check on the status or submit another report!"
+        },
+        {
+          "role": "user",
+          "content": "Is that a mechanical failure or a safety hazard?"
+        },
+        {
+          "role": "assistant",
+          "content": "The elevator issue at Civic Center Station was classified as a safety hazard, not a mechanical failure. We\u2019re actively addressing it to ensure the safety of all riders, and you\u2019ll receive updates via email at lucky.rider@example.com. Let me know if you\u2019d like more details!"
+        },
+        {
+          "role": "user",
+          "content": "What should I put in the description of the report?"
+        },
+        {
+          "role": "assistant",
+          "content": "When describing your report, include details like the date, time, location, and any specific observations about the issue. Since you mentioned the elevator issue at Civic Center Station on the BART Red Line, you can note that it was classified as a safety hazard. Keep it clear and concise, and feel free to mention your preference for email communication. Let me know if you\u2019d like help drafting it!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.717
+        },
+        {
+          "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+          "importance": 1.0,
+          "score": 0.3218
+        },
+        {
+          "fact": "Lucky uses the Line 22 bus from Downtown Transit Center every morning.",
+          "importance": 1.0,
+          "score": 0.3218
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": [
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0
+        }
+      ]
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:25:43.115267+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 677,
+      "completion_tokens": 60,
+      "component_tokens": {
+        "system_primer": 84,
+        "long_term_summary": 272,
+        "episodic_facts": 52,
+        "short_term_window": 256,
+        "current_message": 14
+      },
+      "latency_ms": 36138,
+      "total_latency_ms": 43888,
+      "overhead_tokens": {
+        "extraction_in": 127,
+        "extraction_out": 25,
+        "summary_in": 0,
+        "summary_out": 0
+      }
+    }
+  },
+  {
+    "turn": 8,
+    "user": "How long does the agency take to respond?",
+    "reply": "The agency typically responds within 24\u201348 hours for most reports, though urgent issues like safety hazards may receive faster attention. You\u2019ll receive an email update at lucky.rider@example.com once action is taken. Let me know if you\u2019d like to check the status of your previous report!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Is that a mechanical failure or a safety hazard?"
+        },
+        {
+          "role": "assistant",
+          "content": "The elevator issue at Civic Center Station was classified as a safety hazard, not a mechanical failure. We\u2019re actively addressing it to ensure the safety of all riders, and you\u2019ll receive updates via email at lucky.rider@example.com. Let me know if you\u2019d like more details!"
+        },
+        {
+          "role": "user",
+          "content": "What should I put in the description of the report?"
+        },
+        {
+          "role": "assistant",
+          "content": "When describing your report, include details like the date, time, location, and any specific observations about the issue. Since you mentioned the elevator issue at Civic Center Station on the BART Red Line, you can note that it was classified as a safety hazard. Keep it clear and concise, and feel free to mention your preference for email communication. Let me know if you\u2019d like help drafting it!"
+        },
+        {
+          "role": "user",
+          "content": "Yesterday my bus arrived twenty minutes late. Is that a delay?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, a bus arriving twenty minutes late is considered a delay. We\u2019re reviewing the Line 22 service to identify the cause and improve reliability. You\u2019ll receive an update via email at lucky.rider@example.com. Let me know if you\u2019d like to report this as a separate incident!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.3242
+        },
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.3242
+        },
+        {
+          "fact": "The user is asking about their usual riding route and boarding location.",
+          "importance": 1.0,
+          "score": 0.1181
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": [],
+      "session_summary": true
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:26:56.017251+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 651,
+      "completion_tokens": 61,
+      "component_tokens": {
+        "system_primer": 83,
+        "long_term_summary": 270,
+        "episodic_facts": 48,
+        "short_term_window": 242,
+        "current_message": 9
+      },
+      "latency_ms": 32626,
+      "total_latency_ms": 72894,
+      "overhead_tokens": {
+        "extraction_in": 123,
+        "extraction_out": 2,
+        "summary_in": 491,
+        "summary_out": 98
+      }
+    }
+  },
+  {
+    "turn": 9,
+    "user": "Can I attach a photo to the report?",
+    "reply": "Yes, you can attach a photo to your report to provide visual details about the issue. Please ensure the photo is clear and relevant to the problem you\u2019re reporting. Let me know if you\u2019d like help formatting your report with the photo!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "What should I put in the description of the report?"
+        },
+        {
+          "role": "assistant",
+          "content": "When describing your report, include details like the date, time, location, and any specific observations about the issue. Since you mentioned the elevator issue at Civic Center Station on the BART Red Line, you can note that it was classified as a safety hazard. Keep it clear and concise, and feel free to mention your preference for email communication. Let me know if you\u2019d like help drafting it!"
+        },
+        {
+          "role": "user",
+          "content": "Yesterday my bus arrived twenty minutes late. Is that a delay?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, a bus arriving twenty minutes late is considered a delay. We\u2019re reviewing the Line 22 service to identify the cause and improve reliability. You\u2019ll receive an update via email at lucky.rider@example.com. Let me know if you\u2019d like to report this as a separate incident!"
+        },
+        {
+          "role": "user",
+          "content": "How long does the agency take to respond?"
+        },
+        {
+          "role": "assistant",
+          "content": "The agency typically responds within 24\u201348 hours for most reports, though urgent issues like safety hazards may receive faster attention. You\u2019ll receive an email update at lucky.rider@example.com once action is taken. Let me know if you\u2019d like to check the status of your previous report!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.1538
+        },
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.1538
+        },
+        {
+          "fact": "The user relies on a folding bike for transportation.",
+          "importance": 1.0,
+          "score": 0.0443
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": []
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:27:25.662339+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 651,
+      "completion_tokens": 49,
+      "component_tokens": {
+        "system_primer": 83,
+        "long_term_summary": 271,
+        "episodic_facts": 44,
+        "short_term_window": 245,
+        "current_message": 8
+      },
+      "latency_ms": 27987,
+      "total_latency_ms": 29630,
+      "overhead_tokens": {
+        "extraction_in": 123,
+        "extraction_out": 2,
+        "summary_in": 0,
+        "summary_out": 0
+      }
+    }
+  },
+  {
+    "turn": 10,
+    "user": "What happens after a report is marked Investigating?",
+    "reply": "After a report is marked as \"Investigating,\" our team reviews the details and gathers additional information to determine the cause and next steps. You\u2019ll receive updates via email at lucky.rider@example.com as the investigation progresses. Let me know if you\u2019d like to check the status of your report!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Yesterday my bus arrived twenty minutes late. Is that a delay?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, a bus arriving twenty minutes late is considered a delay. We\u2019re reviewing the Line 22 service to identify the cause and improve reliability. You\u2019ll receive an update via email at lucky.rider@example.com. Let me know if you\u2019d like to report this as a separate incident!"
+        },
+        {
+          "role": "user",
+          "content": "How long does the agency take to respond?"
+        },
+        {
+          "role": "assistant",
+          "content": "The agency typically responds within 24\u201348 hours for most reports, though urgent issues like safety hazards may receive faster attention. You\u2019ll receive an email update at lucky.rider@example.com once action is taken. Let me know if you\u2019d like to check the status of your previous report!"
+        },
+        {
+          "role": "user",
+          "content": "Can I attach a photo to the report?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, you can attach a photo to your report to provide visual details about the issue. Please ensure the photo is clear and relevant to the problem you\u2019re reporting. Let me know if you\u2019d like help formatting your report with the photo!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.1693
+        },
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.1693
+        },
+        {
+          "fact": "The user is asking about their usual riding route and boarding location.",
+          "importance": 1.0,
+          "score": 0.0644
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": []
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:27:56.243150+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 621,
+      "completion_tokens": 61,
+      "component_tokens": {
+        "system_primer": 84,
+        "long_term_summary": 272,
+        "episodic_facts": 48,
+        "short_term_window": 206,
+        "current_message": 11
+      },
+      "latency_ms": 29170,
+      "total_latency_ms": 30550,
+      "overhead_tokens": {
+        "extraction_in": 124,
+        "extraction_out": 2,
+        "summary_in": 0,
+        "summary_out": 0
+      }
+    }
+  },
+  {
+    "turn": 11,
+    "user": "Which route do I usually ride, and where do I board it?",
+    "reply": "You usually ride Line 22 and board it at the Downtown Transit Center. Let me know if you need help with anything related to your route or bike rack access!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "How long does the agency take to respond?"
+        },
+        {
+          "role": "assistant",
+          "content": "The agency typically responds within 24\u201348 hours for most reports, though urgent issues like safety hazards may receive faster attention. You\u2019ll receive an email update at lucky.rider@example.com once action is taken. Let me know if you\u2019d like to check the status of your previous report!"
+        },
+        {
+          "role": "user",
+          "content": "Can I attach a photo to the report?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, you can attach a photo to your report to provide visual details about the issue. Please ensure the photo is clear and relevant to the problem you\u2019re reporting. Let me know if you\u2019d like help formatting your report with the photo!"
+        },
+        {
+          "role": "user",
+          "content": "What happens after a report is marked Investigating?"
+        },
+        {
+          "role": "assistant",
+          "content": "After a report is marked as \"Investigating,\" our team reviews the details and gathers additional information to determine the cause and next steps. You\u2019ll receive updates via email at lucky.rider@example.com as the investigation progresses. Let me know if you\u2019d like to check the status of your report!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "The user is asking about their usual riding route and boarding location.",
+          "importance": 1.0,
+          "score": 0.5752
+        },
+        {
+          "fact": "The user relies on a folding bike for transportation.",
+          "importance": 1.0,
+          "score": 0.3344
+        },
+        {
+          "fact": "The user relies on a folding bike for transportation.",
+          "importance": 1.0,
+          "score": 0.3344
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": [
+        {
+          "fact": "The user is asking about their usual riding route and boarding location.",
+          "importance": 1.0
+        }
+      ]
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:28:27.288039+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 623,
+      "completion_tokens": 35,
+      "component_tokens": {
+        "system_primer": 83,
+        "long_term_summary": 270,
+        "episodic_facts": 50,
+        "short_term_window": 208,
+        "current_message": 12
+      },
+      "latency_ms": 23138,
+      "total_latency_ms": 31036,
+      "overhead_tokens": {
+        "extraction_in": 128,
+        "extraction_out": 28,
+        "summary_in": 0,
+        "summary_out": 0
+      }
+    }
+  },
+  {
+    "turn": 12,
+    "user": "How should you contact me about my reports?",
+    "reply": "We will contact you via email at lucky.rider@example.com for updates and follow-ups on your reports. You can also check the status of your reports through your account on our transit system\u2019s website. Let me know if you\u2019d like to receive notifications via another method!",
+    "session_id": "demo_session_1",
+    "memory_used": {
+      "short_term_count": 6,
+      "short_term": [
+        {
+          "role": "user",
+          "content": "Can I attach a photo to the report?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, you can attach a photo to your report to provide visual details about the issue. Please ensure the photo is clear and relevant to the problem you\u2019re reporting. Let me know if you\u2019d like help formatting your report with the photo!"
+        },
+        {
+          "role": "user",
+          "content": "What happens after a report is marked Investigating?"
+        },
+        {
+          "role": "assistant",
+          "content": "After a report is marked as \"Investigating,\" our team reviews the details and gathers additional information to determine the cause and next steps. You\u2019ll receive updates via email at lucky.rider@example.com as the investigation progresses. Let me know if you\u2019d like to check the status of your report!"
+        },
+        {
+          "role": "user",
+          "content": "Which route do I usually ride, and where do I board it?"
+        },
+        {
+          "role": "assistant",
+          "content": "You usually ride Line 22 and board it at the Downtown Transit Center. Let me know if you need help with anything related to your route or bike rack access!"
+        }
+      ],
+      "session_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "long_term_summary": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "episodic_facts": [
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.1949
+        },
+        {
+          "fact": "The user reported a bus delay of twenty minutes.",
+          "importance": 1.0,
+          "score": 0.1949
+        },
+        {
+          "fact": "The user is asking about their usual riding route and boarding location.",
+          "importance": 1.0,
+          "score": 0.1411
+        }
+      ]
+    },
+    "memory_written": {
+      "new_episodes": [],
+      "session_summary": true,
+      "lifetime_summary": true
+    },
+    "metrics": {
+      "ts": "2026-10-17T00:30:46.454658+00:00",
+      "run_label": "demo",
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "short_term_n": 6,
+      "policy": "none",
+      "prompt_tokens": 597,
+      "completion_tokens": 55,
+      "component_tokens": {
+        "system_primer": 84,
+        "long_term_summary": 272,
+        "episodic_facts": 48,
+        "short_term_window": 184,
+        "current_message": 9
+      },
+      "latency_ms": 25357,
+      "total_latency_ms": 139162,
+      "overhead_tokens": {
+        "extraction_in": 123,
+        "extraction_out": 2,
+        "summary_in": 1148,
+        "summary_out": 234
+      }
+    }
+  }
+]

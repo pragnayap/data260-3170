@@ -59,3 +59,9 @@ cryptography>=42.0
 # which breaks the fastapi==0.109.0 pin above (needs starlette<0.36).
 mcp[cli]>=1.20,<2
 starlette>=0.35,<0.36
+
+# HW6 Part 1/2 - MongoDB document API and memory collections
+pymongo>=4.6,<5
+
+# HW6 Part 4 tests
+pytest

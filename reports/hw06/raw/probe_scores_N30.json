@@ -1,0 +1,67 @@
+{
+  "label": "N30",
+  "settings": {
+    "short_term_n": 30,
+    "policy": "none"
+  },
+  "user_id": "hw6_N30_20261015001503",
+  "session_id": "sess_N30_20261015001503",
+  "mean_score": 5.0,
+  "probes": [
+    {
+      "probe": "P1_route",
+      "score": 5.0,
+      "matched": {
+        "route": true,
+        "boarding_stop": true
+      },
+      "refused": false,
+      "question": "Remind me: which route do I take to campus each morning, and where do I board it?",
+      "reply": "You take Line 22 bus to campus each morning, boarding at Downtown Transit Center around 7:15. I'll remind you and follow up via email at lucky.rider@example.com. Have a great day!"
+    },
+    {
+      "probe": "P2_identity",
+      "score": 5.0,
+      "matched": {
+        "name": true,
+        "university": true
+      },
+      "refused": false,
+      "question": "What name do I go by, and which university do I attend?",
+      "reply": "You go by Lucky, and you attend San Jose State University (SJSU). I'll keep your details in mind and follow up via email at lucky.rider@example.com. Have a great day!"
+    },
+    {
+      "probe": "P3_equipment",
+      "score": 5.0,
+      "matched": {
+        "item": true,
+        "feature": true
+      },
+      "refused": false,
+      "question": "What do I bring on the bus with me, and what bus feature does that mean I need?",
+      "reply": "You bring a folding bike, which means you need buses with working bike racks. I'll ensure your report includes this detail and follow up via email at lucky.rider@example.com. Have a great day!"
+    },
+    {
+      "probe": "P4_past_incident",
+      "score": 5.0,
+      "matched": {
+        "station": true,
+        "line": true
+      },
+      "refused": false,
+      "question": "Which station had the elevator outage I reported earlier, and on which line?",
+      "reply": "The elevator outage you reported earlier was at Civic Center Station on the BART Red Line. I'll include this detail in your report and follow up via email at lucky.rider@example.com. Have a great day!"
+    },
+    {
+      "probe": "P5_contact",
+      "score": 5.0,
+      "matched": {
+        "channel": true,
+        "address": true
+      },
+      "refused": false,
+      "question": "How do I prefer to be contacted about my reports, and at what address?",
+      "reply": "You prefer to be contacted via email at lucky.rider@example.com. I'll ensure all updates are sent to this address. Have a great day!"
+    }
+  ]
+}

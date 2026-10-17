@@ -1,0 +1,55 @@
+{
+  "user_id": "lucky_demo",
+  "daily_message_counts": [
+    {
+      "date": "2026-10-15",
+      "count": 24
+    },
+    {
+      "date": "2026-10-17",
+      "count": 24
+    }
+  ],
+  "recent_summaries": [
+    {
+      "user_id": "lucky_demo",
+      "session_id": null,
+      "scope": "user",
+      "text": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "created_at": "2026-10-17T00:30:46.451000+00:00",
+      "id": "6ad2c1b62b0a55f03dd16298"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "scope": "session",
+      "text": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "created_at": "2026-10-17T00:29:34.246000+00:00",
+      "id": "6ad2c16e2b0a55f03dd16297"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "scope": "session",
+      "text": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "created_at": "2026-10-17T00:26:56.013000+00:00",
+      "id": "6ad2c0d02b0a55f03dd1628d"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": "demo_session_1",
+      "scope": "session",
+      "text": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.",
+      "created_at": "2026-10-17T00:23:33.216000+00:00",
+      "id": "6ad2c0052b0a55f03dd16283"
+    },
+    {
+      "user_id": "lucky_demo",
+      "session_id": null,
+      "scope": "user",
+      "text": "- Lucky takes the Line 22 bus from Downtown Transit Center every morning.  \n- Lucky always brings a folding bike and relies on working bike racks.  \n- Lucky prefers to be contacted via email at lucky.rider@example.com.  \n- Lucky reported the elevator issue at Civic Center Station on the BART Red Line, classified as a safety hazard.  \n- Lucky was assured assistance would follow after reporting the elevator issue.  \n- Lucky uses alternative transportation and values reliable transit infrastructure.  \n- Last Friday, elevators at Civic Center Station on the BART Red Line were out all morning.  \n- The elevator issue at Civic Center Station was identified as a safety hazard.",
+      "created_at": "2026-10-15T11:08:17.251000+00:00",
+      "id": "6ad0b4215b819152e892bfe3"
+    }
+  ]
+}
