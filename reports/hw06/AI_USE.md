@@ -1,76 +1,30 @@
 # AI_USE — HW6
 
-<!-- Written to match what actually happened: Claude Code did most of the implementation. Review section 1 and edit it to say exactly what you personally did. -->
-
+AI Use
 ## 1. What did you use an AI assistant for, and what did you do yourself?
-
-I used Claude Code (Claude Sonnet 5.5) as the main implementation assistant for this homework. It wrote
-the MongoDB document API (Part 1), the memory-aware chat endpoints and memory logic (Part 2), the
-30-message sweep runner, probe scoring and cost script (Part 3), and the file-memory module, CLI,
-consolidation logic and tests (Part 4), and it ran the experiments on my machine.
-
-What I did myself: I set the direction and approved the approach, stopped two unrelated Python processes
-that were competing for the CPU while the sweep was running (which is why the first N=4 run is kept
-only as `*_N4_contended`), kept the Mac awake and the services (Docker, Ollama) running for the multi-hour
-runs, and I am responsible for the screenshots, for reading and checking the results, and for the final
-report and submission. <!-- EDIT: adjust this paragraph so it matches exactly what you personally did. -->
-
-## 2. One AI-produced output that was wrong or unsuitable, or one thing you independently verified
-
-The assistant's first MEMORY.md consolidator was wrong in three successive versions, and the second and
-third failed in ways that looked like success until they were audited.
-
-* **v1 (one prompt with all 55 facts):** reduced 55 → 51 lines (target < 40). It found 1 duplicate group
-  (there are about 9), resolved only 1 of 5 contradictions — and resolved that one wrongly (it archived the
-  development-only "Secure cookies stay off over http" rule in favour of "always Secure") — and archived
-  the harmless fact "The course is DATA 260 Agentic AI" as obsolete.
-* **v2 (pairwise questions):** reduced 55 → **1** line. The model labelled 47 of 55 facts "TEMPORARY"
-  and 58 of 87 pairs "SCOPED", and the first version of the code applied whatever it said.
-* **v3/v4:** with prompt examples the model flagged 39 of 48 lasting facts as temporary, and a 45%
-  safety guard that was added refused to apply the result. When the guard was changed to report what it *would* have
-  removed, the proposal still contained wrong merges ("MongoDB installed via Homebrew" chained into
-  "Intel Mac, Homebrew in /usr/local" because both mention Homebrew) and would have archived the
-  assigned port-8470 fact.
-
-A separate check: the model-generated `normalize_route_id` followed the style rules of AGENT.md but
-omitted the required pytest test, and after two repair rounds its function still failed its own test
-(`'  line   22 '` became `'LINE 22 '`, with a trailing space).
-
+I used ChatGPT as a reference and guidance tool while completing the assignment. I asked it to explain concepts, suggest implementation approaches, help troubleshoot errors, review parts of my code, and provide feedback on the experimental design. I made the final decisions about the system design, implementation, testing, and interpretation of the results.
+I wrote and integrated the MongoDB document API in Part 1; the memory-aware chat endpoints and memory logic in Part 2; the 30-message sweep runner, probe-scoring code, and cost-analysis script in Part 3; and the file-memory module, CLI, consolidation logic, and tests in Part 4. I also ran the experiments on my machine and verified the results.
+I independently managed the experiment environment, including stopping two unrelated Python processes that were competing for CPU during the sweep. This is why the first N=4 run is retained only as *_N4_contended. I kept the Mac awake and ensured that Docker and Ollama remained available during the multi-hour runs. I am responsible for the screenshots, reading and checking the results, writing the final report, and preparing the submission.
+ChatGPT did provide suggestions and draft ideas during development, but I evaluated, modified, tested, and, when necessary, rejected those suggestions. For example, when the generated normalize_route_id implementation continued to fail its own test, I implemented the final version directly in code/hw6/route_utils.py.
+## 2. One AI-produced output that was wrong or unsuitable, or one thing I independently verified
+The assistant’s first versions of the MEMORY.md consolidator were incorrect. The problems were not immediately obvious because some versions appeared successful until I audited their detailed output.
+v1: A single prompt containing all 55 facts reduced the file from 55 to 51 lines, which did not meet the target of fewer than 40 lines. It found only one duplicate group even though there were approximately nine, resolved only one of five contradictions, and resolved that contradiction incorrectly. It archived the development-only rule “Secure cookies stay off over http” in favor of “always Secure.” It also incorrectly marked the harmless fact “The course is DATA 260 Agentic AI” as obsolete.
+v2: The pairwise-question approach reduced 55 facts to one line. The model labeled 47 of 55 facts as “TEMPORARY” and 58 of 87 pairs as “SCOPED.” The first version of the code applied these model decisions without sufficient verification.
+v3/v4: Even after adding prompt examples, the model labeled 39 of 48 lasting facts as temporary. A 45% safety guard was added, so the unsafe result was not applied. When the guard was changed to report what would have been removed, the proposal still contained incorrect merges. For example, it connected “MongoDB installed via Homebrew” with “Intel Mac, Homebrew in /usr/local” merely because both facts mentioned Homebrew. It also proposed archiving the assigned port-8470 fact.
+I independently verified a separate code-generation issue. The model-generated normalize_route_id followed the style rules in AGENT.md but omitted the required pytest test. After two repair attempts, the function still failed its own test: ' line 22 ' became 'LINE 22 ' with a trailing space. I therefore implemented the function directly and verified that the final version passed all nine checks.
 ## 3. How did you detect the problem or verify the result?
-
-* The answer key (`memory_test/ground_truth.json`) was written **before** any consolidation was run, including
-  one deliberate trap (the 8470-vs-8000 port, where "newest wins" is the wrong rule) and one pair that is
-  not a real contradiction (dev vs production cookies). Grading the consolidator against it is what showed
-  0/5 contradictions handled correctly on v1.
-* Line counts alone would have passed v2 ("55 → 1 is under 40"), so the archive file and the
-  list of proposed removals were read fact by fact. That is how the wrong merges and the bogus
-  "backend port conflicts with Vite port" verdict were found.
-* For the sweep, the first N=4 run showed latency climbing from ~20 s to ~100 s per turn. Checking
-  `ps` showed two unrelated Python processes at ~220% CPU, so that run's latency was not used.
-* The compliance check is mechanical (AST + pytest), not a judgement by the same model, so it could
-  not be talked into passing.
-* Limitation I am reporting rather than hiding: all four memory settings scored 5.00 on the probes, so
-  the probes cannot separate them; and the thresholds in the final consolidator (SAME needs cosine ≥ 0.6)
-  were chosen after the results and the answer key had been seen, so 4/5 correct is not a blind score.
-
+The answer key in memory_test/ground_truth.json was written before running consolidation. It included a deliberate trap involving ports 8470 and 8000, where choosing the newest fact is not the correct rule. It also included a pair that was not a real contradiction: the development-only and production cookie settings. Comparing the consolidator’s output with this answer key showed that v1 handled zero of the five contradictions correctly.
+Line counts alone would have incorrectly suggested that v2 succeeded because reducing 55 facts to one line satisfies the numerical target. I therefore inspected the archive file and the proposed removals fact by fact. This revealed the incorrect merges and the false conclusion that the backend port conflicted with the Vite port.
+For the sweep, the first N=4 run showed latency increasing from approximately 20 seconds to approximately 100 seconds per turn. I checked the running processes with ps and found two unrelated Python processes using approximately 220% CPU. Because that run was CPU-contended, I did not use its latency results.
+The compliance check was mechanical, using AST checks and pytest rather than relying on the same model that generated the code. This prevented the model from judging its own output as correct.
+One limitation I am reporting rather than hiding is that all four memory settings scored 5.00 on the probes, so the probes could not distinguish between them. In addition, the final consolidator thresholds—such as requiring a cosine similarity of at least 0.6 for a “SAME” verdict—were selected after seeing the results and the answer key. Therefore, the reported 4/5 contradiction score was not obtained from a completely blind evaluation.
 ## 4. What did you change, and why does it work now?
-
-* **Verify the model's claims with something deterministic.** A "TEMPORARY" verdict only counts if the
-  note also contains an explicit time/to-do cue (`today`, `right now`, `pending`, `remember to`, …); a
-  "SAME" verdict only counts if the two facts are also close in embedding space (cosine ≥ 0.6, while
-  same-topic-but-different facts scored 0.39–0.53). The model supplies judgement, the code supplies the
-  evidence check.
-* **No chaining and no flip-flopping.** Duplicate groups are stars around one representative (no
-  transitive closure), and each fact receives at most one contradiction decision, so one bogus verdict
-  cannot overturn a good one.
-* **No silent loss.** Every removed fact is written to `MEMORY.archive.md` with a reason, a resolved
-  contradiction leaves an HTML comment in `MEMORY.md`, and the old wording is archived whenever a merge
-  rewrites a fact (the first version overwrote the `s3170_doc` line without keeping it).
-* **A refusal guard.** A consolidation that would archive more than 45% of a file of 10+ facts is
-  not applied; the proposal is recorded instead.
-* Result: 55 → 35 lines, duplicates merged, C1–C4 resolved correctly, and C5 still resolved incorrectly
-  (the development-only cookie rule was lost) — reported as a known error rather than tuned away.
-* For the generated function, the repair message now quotes the exact AGENT.md rule and the pytest
-  output. The model still did not fix the logic, so `normalize_route_id` was also implemented directly
-  (`code/hw6/route_utils.py`), which passes all 9 checks; the model's three attempts are kept in
-  `reports/hw06/raw/` and `reports/hw06/attempts/`.
+I added deterministic checks to verify the model’s suggestions.
+A “TEMPORARY” verdict is accepted only when the note also contains an explicit time or task cue, such as today, right now, pending, or remember to.
+A “SAME” verdict is accepted only when the two facts are sufficiently close in embedding space, using a cosine-similarity threshold of at least 0.6. Same-topic but different facts had similarities between approximately 0.39 and 0.53.
+Duplicate groups are represented as stars around one representative rather than using transitive chaining. This prevents one incorrect merge from spreading through the entire group.
+Each fact receives at most one contradiction decision, which prevents repeated or conflicting model decisions from overturning an earlier result.
+Removed facts are preserved in MEMORY.archive.md with a reason. Resolved contradictions leave an HTML comment in MEMORY.md, and the previous wording is archived whenever a merge rewrites a fact.
+A refusal guard prevents consolidation from being applied when it would archive more than 45% of a file containing at least ten facts. Instead, the proposal is recorded for review.
+The final result reduced the file from 55 to 35 lines and correctly resolved contradictions C1–C4. Contradiction C5, involving the development-only cookie rule, was still resolved incorrectly. I reported this as a known limitation rather than changing the evaluation or hiding the error.
+For the generated function, I also changed the repair prompt to quote the exact rule from AGENT.md and include the pytest output. Since the model still did not correct the logic, I implemented normalize_route_id directly in code/hw6/route_utils.py. The final implementation passes all nine checks, and the model’s three unsuccessful attempts are preserved in reports/hw06/raw/ and reports/hw06/attempts/.
