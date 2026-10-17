@@ -1,0 +1,97 @@
+{
+  "homework": 6,
+  "SID4": 3170,
+  "PORT_BASE": 8470,
+  "PREFIX": "s3170",
+  "SEED": 3170,
+  "VERIFY_SEED": 263170,
+  "DOMAIN_ID": 2,
+  "commit": "ee613c1e8a93141308f9099b2c652dfa31b54e63",
+  "working_tree_clean": false,
+  "model_configuration": {
+    "model": "qwen3:8b (Ollama, via src/model_client.py)",
+    "SHORT_TERM_N_default": 12,
+    "SUMMARIZE_EVERY_USER_MSGS": 6,
+    "EPISODE_TOP_K": 3,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "mongodb": "mongo:7.0 (Docker)",
+    "offline_only": false
+  },
+  "generated_at": "2026-10-17T00:51:00+00:00",
+  "passed": 14,
+  "failed": 0,
+  "skipped": 0,
+  "total_checks": 14,
+  "checks": [
+    {
+      "check": "backend responds on PORT_BASE 8470 and exposes the HW6 routes",
+      "status": "PASS",
+      "detail": "HTTP 200; routes present: ['/api/doc/incidents', '/api/chat', '/api/memory/{user_id}', '/api/aggregate/{user_id}']"
+    },
+    {
+      "check": "MongoDB s3170_doc has the 4 collections and a $jsonSchema validator",
+      "status": "PASS",
+      "detail": "collections ['episodes', 'messages', 'summaries', 'transit_incidents']; $jsonSchema validator: True"
+    },
+    {
+      "check": "CRUD cycle: 201/200/200/200/204/404, default status, timestamps behave",
+      "status": "PASS",
+      "detail": "GET 200, list 200, PUT 200, DELETE 204, GET-after-delete 404"
+    },
+    {
+      "check": "validation: invalid bodies -> 422, malformed id -> 400, unknown id -> 404",
+      "status": "PASS",
+      "detail": "{\"missing routeId\": 422, \"bad category enum\": 422, \"bad status enum\": 422, \"bad date\": 422, \"routeId too long\": 422, \"wrong type\": 422, \"unknown field\": 422, \"malformed id\": 400, \"unknown id\": 404}"
+    },
+    {
+      "check": "POST /api/chat returns a reply + memory_used; turn 2 sees the 2 earlier messages",
+      "status": "PASS",
+      "detail": "turn-2 short_term_count=2, episodic_retrieved=1, prompt_tokens=189"
+    },
+    {
+      "check": "GET /api/memory and /api/aggregate agree on message counts",
+      "status": "PASS",
+      "detail": "4 messages, daily counts sum 4, 1 episodes"
+    },
+    {
+      "check": "cleanup of verify-only chat documents",
+      "status": "PASS",
+      "detail": "removed 5 verify-only documents"
+    },
+    {
+      "check": "memory_probes.yaml: 5 probes with expected elements + 1-5 rubric",
+      "status": "PASS",
+      "detail": "5 probes, rubric levels [1, 2, 3, 4, 5]"
+    },
+    {
+      "check": "file-memory unit tests (thresholds, consolidation logic, /compact, /dream, /help)",
+      "status": "PASS",
+      "detail": "19 passed in 0.07s"
+    },
+    {
+      "check": "consolidation trigger: >40 non-empty non-comment lines OR >24 h",
+      "status": "PASS",
+      "detail": "{\"41 lines\": true, \"40 lines\": true, \"25h old\": true, \"23h old\": true}"
+    },
+    {
+      "check": "AGENT.md has >=5 instructions across >=3 required categories",
+      "status": "PASS",
+      "detail": "14 bullets; categories: ['project description', 'technology stack', 'coding conventions', 'testing approach', 'prohibited actions']"
+    },
+    {
+      "check": "Part 3 raw data: 4 settings x (30 conversation turns + 5 probes)",
+      "status": "PASS",
+      "detail": "{\"N4\": \"30 conv turns, 5 probes, mean 5.0\", \"N12\": \"30 conv turns, 5 probes, mean 5.0\", \"N30\": \"30 conv turns, 5 probes, mean 5.0\", \"N30_evict\": \"30 conv turns, 5 probes, mean 5.0\"}"
+    },
+    {
+      "check": "original MEMORY.md = 55 lines, consolidated < 40, both committed",
+      "status": "PASS",
+      "detail": "original 55 lines, consolidated 35 lines, both tracked in git: True"
+    },
+    {
+      "check": "reports/hw06 has RUN_LOG.txt, METRICS.md, AI_USE.md, raw/",
+      "status": "PASS",
+      "detail": "all present"
+    }
+  ]
+}
