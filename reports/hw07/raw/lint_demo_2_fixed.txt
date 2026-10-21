@@ -1,0 +1,10 @@
+$ .venv/bin/ruff check --fix code/web_application/jwt_auth.py   # fixes I001 + F401
+Found 2 errors (2 fixed, 0 remaining).
+$ git commit -m "HW7 Part 1: JWT auth, roles, Ruff + pre-commit"  # attempt 2
+ruff (lint)..............................................................Passed
+[hw07-work 4163ce1] HW7 Part 1: JWT auth, roles, Ruff + pre-commit
+ 10 files changed, 315 insertions(+), 20 deletions(-)
+ create mode 100644 .pre-commit-config.yaml
+ create mode 100644 code/seed_hw07.py
+ create mode 100644 code/web_application/jwt_auth.py
+ create mode 100644 ruff.toml
