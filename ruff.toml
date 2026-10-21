@@ -1,0 +1,24 @@
+# HW7 Part 1.V - Ruff configuration. Lints the code that HW7 touches; earlier
+# homeworks' scripts are left out so the hook gates new work without forcing a
+# rewrite of tagged history.
+line-length = 100
+target-version = "py312"
+extend-exclude = ["code/frontend", "data", ".claude", "reports"]
+
+[lint]
+# E/W pycodestyle, F pyflakes (unused imports/variables), I import order, B bugbear.
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501"]  # long lines in older docstrings; the formatter is not enforced
+
+[lint.per-file-ignores]
+# seed/verify scripts add web_application to sys.path before importing it.
+"code/seed_hw0*.py" = ["E402"]
+
+[lint.isort]
+# Flat-module imports resolved from code/web_application (not packages).
+known-first-party = ["models", "session_crud", "database", "jwt_auth", "crud", "schemas_db",
+                     "schemas_doc", "auth", "mongo_db", "chat_memory", "routers"]
+
+[lint.flake8-bugbear]
+# FastAPI's Depends()/Query()/Form() in argument defaults is the framework's idiom.
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.Form", "fastapi.Cookie"]

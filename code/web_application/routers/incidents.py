@@ -13,8 +13,9 @@ HW5 adds proper error semantics:
     422  Pydantic rejected the body (bad incident_code format, description
          under 25 chars, negative riders_affected, ...)
 
-Every route requires a live session (require_session on the router, not just
-on list), per the HW4 spec.
+HW7: every route requires a JWT bearer token (401 otherwise). Roles: read and
+list - any authenticated role; create and update - writer or moderator (403 for
+reader); delete - moderator only (403 for reader and writer).
 """
 
 from __future__ import annotations
@@ -25,13 +26,13 @@ from sqlalchemy.orm import Session
 import crud
 import models
 from database import get_db, get_query_count, reset_query_count
-from routers.auth_db import require_session
+from jwt_auth import DELETE_ROLES, READ_ROLES, WRITE_ROLES, require_roles
 from schemas_db import IncidentCreate, IncidentOut, IncidentPage, IncidentUpdate
 
 router = APIRouter(
     prefix="/api/incidents",
     tags=["incidents"],
-    dependencies=[Depends(require_session)],
+    dependencies=[Depends(require_roles(*READ_ROLES))],
 )
 
 
@@ -84,7 +85,12 @@ def get_incident(incident_id: int, response: Response, db: Session = Depends(get
     return _get_or_404(db, incident_id)
 
 
-@router.post("", response_model=IncidentOut, status_code=201)
+@router.post(
+    "",
+    response_model=IncidentOut,
+    status_code=201,
+    dependencies=[Depends(require_roles(*WRITE_ROLES))],
+)
 def create_incident(body: IncidentCreate, response: Response, db: Session = Depends(get_db)):
     _no_store(response)
     _require_route(db, body.relatedRouteId)
@@ -94,10 +100,14 @@ def create_incident(body: IncidentCreate, response: Response, db: Session = Depe
         raise HTTPException(
             status_code=409,
             detail=f"incident_code '{body.incidentCode}' already exists",
-        )
+        ) from None
 
 
-@router.put("/{incident_id}", response_model=IncidentOut)
+@router.put(
+    "/{incident_id}",
+    response_model=IncidentOut,
+    dependencies=[Depends(require_roles(*WRITE_ROLES))],
+)
 def update_incident(
     incident_id: int, body: IncidentUpdate, response: Response, db: Session = Depends(get_db)
 ):
@@ -110,10 +120,14 @@ def update_incident(
         raise HTTPException(
             status_code=409,
             detail=f"incident_code '{body.incidentCode}' already belongs to another incident",
-        )
+        ) from None
 
 
-@router.delete("/{incident_id}", status_code=204)
+@router.delete(
+    "/{incident_id}",
+    status_code=204,
+    dependencies=[Depends(require_roles(*DELETE_ROLES))],
+)
 def delete_incident(incident_id: int, response: Response, db: Session = Depends(get_db)):
     _no_store(response)
     incident = _get_or_404(db, incident_id)

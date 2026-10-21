@@ -95,3 +95,16 @@ def purge_expired_sessions(db: OrmSession) -> int:
         db.delete(session)
     db.commit()
     return len(stale)
+
+
+def verify_username_login(db: OrmSession, username: str, password: str) -> models.User | None:
+    """HW7: same PBKDF2 check as verify_login, keyed by username."""
+    user = db.query(models.User).filter(models.User.username == username).first()
+    if user is None:
+        _hash_password(password, "00" * 16)  # equalise timing, as in verify_login
+        return None
+
+    salt, _, stored_hash = user.password_hash.partition("$")
+    if not hmac.compare_digest(_hash_password(password, salt), stored_hash):
+        return None
+    return user

@@ -26,7 +26,7 @@ from sqlalchemy.orm import Session
 import crud
 import models
 from database import get_db
-from routers.auth_db import require_session
+from jwt_auth import DELETE_ROLES, READ_ROLES, WRITE_ROLES, require_roles
 from schemas_db import (
     IncidentPage,
     RouteCreate,
@@ -41,7 +41,7 @@ from schemas_db import (
 router = APIRouter(
     prefix="/api/routes",
     tags=["routes"],
-    dependencies=[Depends(require_session)],
+    dependencies=[Depends(require_roles(*READ_ROLES))],
 )
 
 
@@ -57,7 +57,7 @@ def _get_or_404(db: Session, route_id: int) -> models.Route:
     return route
 
 
-# --- list / retrieve 
+# --- list / retrieve
 
 @router.get("", response_model=RoutePage)
 def list_routes(
@@ -112,7 +112,12 @@ def incidents_for_route(
 
 # --- create / update / delete ---------------------------------------------
 
-@router.post("", response_model=RouteOut, status_code=201)
+@router.post(
+    "",
+    response_model=RouteOut,
+    status_code=201,
+    dependencies=[Depends(require_roles(*WRITE_ROLES))],
+)
 def create_route(body: RouteCreate, response: Response, db: Session = Depends(get_db)):
     _no_store(response)
     try:
@@ -121,10 +126,14 @@ def create_route(body: RouteCreate, response: Response, db: Session = Depends(ge
         raise HTTPException(
             status_code=409,
             detail=f"route_code '{body.route_code}' already exists",
-        )
+        ) from None
 
 
-@router.put("/{route_id}", response_model=RouteOut)
+@router.put(
+    "/{route_id}",
+    response_model=RouteOut,
+    dependencies=[Depends(require_roles(*WRITE_ROLES))],
+)
 def update_route(
     route_id: int, body: RouteUpdate, response: Response, db: Session = Depends(get_db)
 ):
@@ -136,10 +145,14 @@ def update_route(
         raise HTTPException(
             status_code=409,
             detail=f"route_code '{body.route_code}' already belongs to another route",
-        )
+        ) from None
 
 
-@router.delete("/{route_id}", status_code=204)
+@router.delete(
+    "/{route_id}",
+    status_code=204,
+    dependencies=[Depends(require_roles(*DELETE_ROLES))],
+)
 def delete_route(route_id: int, response: Response, db: Session = Depends(get_db)):
     """Refuses with 409 while incidents still reference this route.
 
@@ -158,5 +171,5 @@ def delete_route(route_id: int, response: Response, db: Session = Depends(get_db
                 f"Route {route_id} still has {exc.incident_count} incident(s). "
                 "Delete or reassign them first (no cascade is implemented)."
             ),
-        )
+        ) from None
     return Response(status_code=204)

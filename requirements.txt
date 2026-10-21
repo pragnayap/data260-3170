@@ -65,3 +65,8 @@ pymongo>=4.6,<5
 
 # HW6 Part 4 tests
 pytest
+
+# HW7 Part 1 - auth + linting
+PyJWT>=2.8
+ruff
+pre-commit

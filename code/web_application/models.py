@@ -119,6 +119,13 @@ class User(Base):
     name: Mapped[str] = mapped_column(String(120))
     email: Mapped[str] = mapped_column(String(255), unique=True, index=True)
 
+    # HW7 Part 1: JWT login is by username, and authorization is by role
+    # (reader / writer / moderator). Both are nullable so HW4's email-only
+    # signup rows stay valid; migrate_hw07.py adds the columns to an existing
+    # table, since create_all() never alters one.
+    username: Mapped[str | None] = mapped_column(String(64), unique=True, index=True, nullable=True)
+    role: Mapped[str] = mapped_column(String(20), default="reader", server_default="reader")
+
     # HW5 Part 1.I: "do not store plain-text passwords". This column holds
     # "salt$hash" from session_crud.py -- PBKDF2-HMAC-SHA256, 200,000
     # iterations, per-user salt. The plain password is never persisted.

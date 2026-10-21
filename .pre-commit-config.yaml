@@ -1,0 +1,11 @@
+# HW7 Part 1.V - runs Ruff on every commit. Install once with:
+#     .venv/bin/pre-commit install
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff (lint)
+        entry: .venv/bin/ruff check --force-exclude
+        language: system
+        types: [python]
+        files: ^code/(web_application/(jwt_auth|session_crud|models|app)\.py|web_application/routers/(incidents|routes)\.py|(seed|verify)_hw07\.py|hw07/.*\.py)$

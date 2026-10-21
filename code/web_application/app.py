@@ -30,9 +30,10 @@ from pydantic import BaseModel, EmailStr, Field
 from starlette.middleware.sessions import SessionMiddleware
 
 import auth
+import jwt_auth
+import mongo_db
 from database import Base, engine
 from routers import auth_db, chat, incidents, incidents_doc, routes
-import mongo_db
 
 # HW4 Part 2: create the MySQL tables on boot if they don't exist yet. Actual
 # row data (seed_hw04.py) is a separate step -- this only creates schema.
@@ -83,7 +84,10 @@ app.add_middleware(
 # Auth routes (/, /login, /logout, /dashboard) come from their own router.
 app.include_router(auth.router)
 
-# HW4: MySQL-backed email/password auth (React) and incident CRUD.
+# HW7: JWT bearer auth (/auth/login, /auth/me) guards the incident and route
+# routers below. HW4's cookie router stays mounted only so /api/auth/* keeps
+# answering; no HW7 route depends on it.
+app.include_router(jwt_auth.router)
 app.include_router(auth_db.router)
 app.include_router(incidents.router)
 app.include_router(routes.router)
