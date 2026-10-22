@@ -1,0 +1,28 @@
+{
+  "runs": 12,
+  "model": "qwen3:8b",
+  "temperature": 0.7,
+  "original": {
+    "task_success": "8/12",
+    "unsupported_claims": 4,
+    "retry_rate": "0.00",
+    "tool_calls": 33,
+    "tokens": 30112,
+    "latency_ms": 758632,
+    "verifier_false_rejections": 0
+  },
+  "reflexion": {
+    "task_success": "12/12",
+    "unsupported_claims": 0,
+    "retry_rate": "0.50",
+    "tool_calls": 57,
+    "tokens": 54326,
+    "latency_ms": 1299026,
+    "verifier_false_rejections": 0
+  },
+  "stop_reasons": {
+    "success": 12,
+    "budget_exhausted": 0,
+    "human_review": 0
+  }
+}

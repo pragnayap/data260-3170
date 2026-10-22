@@ -1,0 +1,10 @@
+
+=== pay_per_use_wins: light_rider.csv
+  [  15.7s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "annual membership price per year billed", "k": 4} -> ok
+  [  65.6s] #2 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "unlock fee per minute classic ebike 45 minutes free", "k": 4} -> ok
+  [ 145.1s] #3 csv_sql {"sql": "SELECT COUNT(*) AS rides, SUM(CASE WHEN rideable_type='electric_bike' THEN 0 ELSE duration_min END) AS classic_minutes, SUM(CASE WHEN rideabl -> ok
+  [ 189.3s] #4 csv_sql {"sql": "SELECT (CAST(strftime('%Y',MAX(started_at)) AS INT) - CAST(strftime('%Y',MIN(started_at)) AS INT))*12 + CAST(strftime('%m',MAX(started_at)) A -> ok
+  [ 220.0s] #5 calculator {"expression": "525 * 1 + 3181.68 * 0.15 + 523.99 * 0.35", "units": null} -> ok
+  [ 241.2s] #6 calculator {"expression": "0 + 523.99 * 0.15", "units": null} -> ok
+  [ 262.9s] #7 calculator {"expression": "(120 / 12) * 162 + 78.5985", "units": null} -> ok
+  decision=Pay Per Ride/Minute stop=completed steps=7 time=340.1s checks={'answer_self_consistent': True, 'decision_matches_reference': True, 'pay_per_use_total_matches': True, 'membership_total_matches': True}

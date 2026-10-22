@@ -32,6 +32,7 @@ from pathlib import Path
 
 DEFENSES = {"sql_guard": True}
 MAX_ROWS = 200
+MIN_SNIPPETS = 3
 
 # policy_retriever fetches a URL the caller supplied, so it must not be a way to reach
 # internal addresses: only the official host, or fixture files under FIXTURE_ROOT.
@@ -138,6 +139,9 @@ def csv_sql(db: TripDB, sql: str) -> dict:
     src = "uploaded.csv"
     if not isinstance(sql, str) or not sql.strip():
         return _fail("sql must be a non-empty string", src)
+    if re.search(r"<[A-Z_]{3,}>", sql):
+        return _fail("the SQL still contains <PLACEHOLDER> text; replace every <...> with the "
+                     "actual number copied from the pricing snippets, then retry", src)
     if DEFENSES["sql_guard"]:
         reason = sql_is_single_select(sql)
         if reason:
@@ -192,7 +196,7 @@ def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-_WORD = re.compile(r"[a-z0-9$.%/]+")
+_WORD = re.compile(r"[a-z0-9$.%]+")   # "/" splits, so "$120/year" matches "year"
 _STOP = {"the", "a", "an", "of", "for", "and", "or", "to", "in", "is", "are", "what", "how"}
 
 
@@ -211,6 +215,7 @@ def policy_retriever(url: str, query: str, k: int = 4) -> dict:
         text = fetch_text(url)
     except Exception as exc:  # noqa: BLE001 - tools never raise
         return _fail(f"could not fetch page: {type(exc).__name__}: {exc}", url)
+    k = max(k, MIN_SNIPPETS)   # fewer than 3 snippets routinely cuts the rates off
     terms = {w for w in _WORD.findall(query.lower()) if w not in _STOP}
     scored = []
     for p in _passages(text):

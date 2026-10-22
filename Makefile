@@ -10,7 +10,8 @@ APP_DIR := code/web_application
 .PHONY: help install nltk run corpus corpus-verify warmup rag metrics verify-hw03 hw3 clean-hw3 \
         seed-hw04 n1-hw04 verify-hw04 frontend-install frontend-dev hw4 \
         seed-hw05 faults-hw05 contracts-hw05 test-hw05 safety-hw05 agent-scenarios verify-hw05 \
-        mongo-up sweep-hw06 consolidate-hw06 agent-check-hw06 metrics-hw06 test-hw06 file-memory verify-hw06
+        mongo-up sweep-hw06 consolidate-hw06 agent-check-hw06 metrics-hw06 test-hw06 file-memory verify-hw06 \
+        seed-hw07 test-hw07 demo-hw07 reliability-hw07 reflexion-hw07 bike-data-hw07 snapshots-hw07 attacks-hw07 verify-hw07
 
 help:
 	@echo "install       install deps from requirements.txt, then the NLTK data"
@@ -44,6 +45,15 @@ help:
 	@echo "test-hw06    offline file-memory unit tests"
 	@echo "file-memory  interactive CLI with /memory /compact /dream /help"
 	@echo "verify-hw06  run the HW6 self-check -> reports/hw06/verification.json"
+	@echo "seed-hw07    add username/role to users and seed reader/writer/moderator (JWT login)"
+	@echo "test-hw07    Part 6 file tools + safety-gate test (no model)"
+	@echo "demo-hw07    Part 2 tasks A/B/C + nonexistent-ID case (needs Ollama)"
+	@echo "reliability-hw07  Part 2 20-attempt reliability run -> reports/hw07/raw/ (needs Ollama)"
+	@echo "reflexion-hw07    Part 3 original-vs-Reflexion comparison -> reports/hw07/raw/ (needs Ollama)"
+	@echo "bike-data-hw07    Part 4 build the two Capital Bikeshare datasets (downloads public files)"
+	@echo "snapshots-hw07    Part 4 freeze the pricing page (text + SHA-256 + access time)"
+	@echo "attacks-hw07      Part 5 prompt-injection before/after table (needs Ollama)"
+	@echo "verify-hw07  run the HW7 self-check -> reports/hw07/verification.json"
 
 install:
 	$(PY) -m pip install -r requirements.txt
@@ -158,3 +168,30 @@ file-memory:
 
 verify-hw06:
 	$(PY) -u code/verify_hw06.py
+
+seed-hw07:
+	$(PY) code/seed_hw07.py
+
+test-hw07:
+	$(PY) -u code/hw07/test_part6.py
+
+demo-hw07:
+	$(PY) -u code/hw07/part2_demo.py
+
+reliability-hw07:
+	$(PY) -u code/hw07/reliability.py
+
+reflexion-hw07:
+	$(PY) -u code/hw07/part3_compare.py
+
+bike-data-hw07:
+	$(PY) -u code/hw07/bike/build_data.py
+
+snapshots-hw07:
+	$(PY) code/hw07/bike/snapshot.py
+
+attacks-hw07:
+	$(PY) -u code/hw07/bike/part5_attacks.py
+
+verify-hw07:
+	$(PY) -u code/verify_hw07.py

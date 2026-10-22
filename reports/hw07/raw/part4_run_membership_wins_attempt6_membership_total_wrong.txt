@@ -1,0 +1,11 @@
+
+=== membership_wins: heavy_rider.csv
+  [  12.5s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "annual membership price per year billed", "k": 4} -> ok
+  [  63.4s] #2 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "unlock fee per minute classic ebike 45 minutes free", "k": 4} -> ok
+  [ 141.8s] #3 csv_sql {"sql": "SELECT COUNT(*) AS rides, SUM(CASE WHEN rideable_type='electric_bike' THEN 0 ELSE duration_min END) AS classic_minutes, SUM(CASE WHEN rideabl -> ok
+  [ 189.5s] #4 csv_sql {"sql": "SELECT (CAST(strftime('%Y',MAX(started_at)) AS INT) - CAST(strftime('%Y',MIN(started_at)) AS INT))*12 + CAST(strftime('%m',MAX(started_at)) A -> ok
+  [ 223.8s] #5 calculator {"expression": "600 * 1 + 21091.41 * 0.15 + 4834.87 * 0.35", "units": null} -> ok
+  [ 254.3s] #6 calculator {"expression": "21091.41 - 45 * 600 + 8282.9 * 0.05 + 4834.87 * 0.15", "units": null} -> ok
+  [ 279.8s] #7 calculator {"expression": "(120 / 12) * 1 + (-4769.2145)", "units": null} -> ok
+  [ 604.0s] #8 self_check {"problem": "Your decision 'Pay Per Ride/Minute' contradicts your own totals (pay_per_use_total=5455.92, membership_total=-4759.21): the lower total w -> ok
+  decision=Buy Monthly Membership stop=completed steps=8 time=604.0s checks={'answer_self_consistent': True, 'decision_matches_reference': True, 'pay_per_use_total_matches': True, 'membership_total_matches': False}

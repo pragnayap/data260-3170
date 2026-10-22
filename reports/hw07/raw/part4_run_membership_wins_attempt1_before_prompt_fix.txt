@@ -1,0 +1,9 @@
+
+=== membership_wins: heavy_rider.csv
+  [  42.3s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "membership price unlock fee per minute", "k": 5} -> ok
+  [ 110.5s] #2 csv_sql {"sql": "SELECT COUNT(*) AS ride_count, SUM(duration_min) AS total_minutes, MIN(started_at) AS first_trip_date, MAX(ended_at) AS last_trip_date, SUM(C -> ok
+  [ 144.2s] #3 calculator {"expression": "25926.28 * 0.15 + 4834.87 * 0.35", "units": "USD"} -> ok
+  [ 170.4s] #4 calculator {"expression": "(25926.28 - 45 * 600) * 0.05 + 4834.87 * 0.35", "units": "USD"} -> ok
+  [ 198.3s] #5 calculator {"expression": "(25926.28 - 45 * 600) * 0.05 + 4834.87 * 0.35", "units": "USD"} -> ok
+  [ 227.7s] #6 calculator {"expression": "(25926.28 - 45 * 600) * 0.05 + 4834.87 * 0.35", "units": "USD"} -> ok
+  decision=Buy Monthly Membership stop=completed steps=6 time=299.3s checks={'decision_matches_reference': True, 'pay_per_use_total_matches': False, 'membership_total_matches': False}

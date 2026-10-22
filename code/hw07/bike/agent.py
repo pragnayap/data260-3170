@@ -60,16 +60,37 @@ def system_prompt(url: str) -> str:
         "`trips`), calculator (arithmetic). Do all arithmetic with the calculator or SQL, "
         "never in your head.",
         "",
+        "Make ONE tool call per reply and wait for its result before the next. Every number "
+        "you use must be copied from a tool result - never invent or recall a rate.",
+        "",
         "Procedure:",
-        "1. policy_retriever for the prices: non-member unlock fee and per-minute rates "
-        "(classic and e-bike), member included minutes and overage, and the membership price.",
-        "2. csv_sql to get: ride count, total minutes, first and last trip date, and the rides "
-        "and minutes split by rideable_type; and, for classic rides, minutes beyond the member's "
-        "free 45 minutes per ride.",
-        "3. Work out the total under pay-per-use, and the membership cost for the months the "
-        "trips span (the page quotes an ANNUAL price: use annual/12 per month and say so) "
-        "plus any residual overage charges.",
-        "4. Reply with ONE JSON object and nothing else:",
+        "1. policy_retriever (k=4) with query 'annual membership price per year billed'.",
+        "2. policy_retriever (k=4) with query 'unlock fee per minute classic ebike 45 minutes "
+        "free'. From the snippets note: the non-member unlock fee; the non-member classic and "
+        "e-bike per-minute rates; the member's included free minutes per classic ride and the "
+        "overage rate after them; the member e-bike per-minute rate; the annual membership price.",
+        "3. csv_sql - copy this query EXACTLY (it has no blanks; if the page gives a different "
+        "number of included free minutes than 45, use that number instead of 45):",
+        "   SELECT COUNT(*) AS rides, SUM(CASE WHEN rideable_type='electric_bike' THEN 0 ELSE "
+        "duration_min END) AS classic_minutes, SUM(CASE WHEN rideable_type='electric_bike' THEN "
+        "duration_min ELSE 0 END) AS ebike_minutes, SUM(CASE WHEN rideable_type='electric_bike' "
+        "THEN 0 ELSE MAX(0, duration_min - 45) END) AS classic_minutes_over_free FROM trips",
+        "4. csv_sql - copy this query EXACTLY:",
+        "   SELECT (CAST(strftime('%Y',MAX(started_at)) AS INT) - CAST(strftime('%Y',"
+        "MIN(started_at)) AS INT))*12 + CAST(strftime('%m',MAX(started_at)) AS INT) - "
+        "CAST(strftime('%m',MIN(started_at)) AS INT) + 1 AS months FROM trips",
+        "5. calculator, pay-per-use total = rides * unlock_fee + classic_minutes * "
+        "nonmember_classic_rate + ebike_minutes * nonmember_ebike_rate. Write the numbers "
+        "straight into the expression.",
+        "6. calculator, member residual = classic_minutes_over_free * overage_rate + "
+        "ebike_minutes * member_ebike_rate. Use classic_minutes_over_free EXACTLY as returned by "
+        "step 3 (it already subtracts the free minutes per ride); do NOT subtract anything "
+        "yourself and do NOT use classic_minutes here.",
+        "7. calculator, membership total = (annual_price / 12) * months + the residual from step "
+        "6 (type the residual number you got). The page quotes an ANNUAL price, so state the /12 "
+        "amortisation as an assumption. A total can never be negative.",
+        "8. The lower total wins; your decision MUST agree with your two totals. Reply with ONE "
+        "JSON object and nothing else:",
         '   {"decision": "Buy Monthly Membership" | "Pay Per Ride/Minute",',
         '    "justification": "3-6 sentences quoting the pricing snippets, with the source URL",',
         '    "pay_per_use_total": <number>, "membership_total": <number>,',
@@ -131,6 +152,13 @@ def _parse_final(text: str) -> dict | None:
     return obj if isinstance(obj, dict) else None
 
 
+def _consistent_decision(ans: dict) -> str | None:
+    ppu, mem = ans.get("pay_per_use_total"), ans.get("membership_total")
+    if not all(isinstance(v, (int, float)) and not isinstance(v, bool) for v in (ppu, mem)):
+        return None
+    return "Buy Monthly Membership" if mem < ppu else "Pay Per Ride/Minute"
+
+
 def run_bike_agent(csv_text: str, url: str, *, snapshot: dict | None = None,
                    model: Any = None, on_event: Callable[[dict], None] | None = None) -> dict:
     """Run the agent on one CSV + pricing URL and return the full result record."""
@@ -152,7 +180,7 @@ def run_bike_agent(csv_text: str, url: str, *, snapshot: dict | None = None,
             on_event(ev)
 
     agent = create_react_agent(model, build_tools(db, record), prompt=system_prompt(url))
-    stop, final_text, tokens = "completed", "", 0
+    stop, final_text, tokens, history = "completed", "", 0, []
     try:
         for chunk in agent.stream(
             {"messages": [("user", f"Trips are loaded ({db.count()} rows). Pricing page: {url}. "
@@ -161,6 +189,7 @@ def run_bike_agent(csv_text: str, url: str, *, snapshot: dict | None = None,
         ):
             for node, upd in chunk.items():
                 for m in upd.get("messages", []):
+                    history.append(m)
                     usage = getattr(m, "usage_metadata", None) or {}
                     tokens += usage.get("total_tokens", 0)
                     if node == "agent" and not getattr(m, "tool_calls", None):
@@ -169,6 +198,30 @@ def run_bike_agent(csv_text: str, url: str, *, snapshot: dict | None = None,
         stop = "recursion_limit" if "recursion" in str(exc).lower() else f"error: {type(exc).__name__}"
 
     answer = _parse_final(final_text)
+    repaired = False
+    if answer and stop == "completed":
+        want = _consistent_decision(answer)
+        if want and answer.get("decision") != want:
+            # One bounded repair: the model's own two totals disagree with its decision.
+            note = (f"Your decision {answer.get('decision')!r} contradicts your own totals "
+                    f"(pay_per_use_total={answer.get('pay_per_use_total')}, membership_total="
+                    f"{answer.get('membership_total')}): the lower total wins, which is "
+                    f"{want!r}. Reply again with the corrected JSON object only.")
+            try:
+                fixed = model.invoke([("system", system_prompt(url)),
+                                      ("user", f"Trips are loaded ({db.count()} rows). Pricing "
+                                               f"page: {url}. Recommend membership or "
+                                               "pay-per-use."), *history, ("user", note)])
+                usage = getattr(fixed, "usage_metadata", None) or {}
+                tokens += usage.get("total_tokens", 0)
+                retry = _parse_final(fixed.content)
+                record({"type": "tool", "tool": "self_check", "input": {"problem": note[:160]},
+                        "observation": f"corrected decision: {(retry or {}).get('decision')}",
+                        "success": bool(retry)})
+                if retry:
+                    answer, repaired = retry, True
+            except Exception:  # noqa: BLE001 - a failed repair keeps the original answer
+                pass
     if answer is None and stop == "completed":
         stop = "unparseable_answer"
     reference = costs.reference_costs(csv_text)
@@ -177,7 +230,13 @@ def run_bike_agent(csv_text: str, url: str, *, snapshot: dict | None = None,
     def close(a, b):
         return isinstance(a, (int, float)) and abs(a - b) <= max(0.02 * b, 0.5)
 
+    ans = answer or {}
+    ppu, mem = ans.get("pay_per_use_total"), ans.get("membership_total")
+    consistent = (isinstance(ppu, (int, float)) and isinstance(mem, (int, float))
+                  and ans.get("decision") == ("Buy Monthly Membership" if mem < ppu
+                                              else "Pay Per Ride/Minute"))
     checks = {
+        "answer_self_consistent": consistent,
         "decision_matches_reference": agent_decision == reference["decision"],
         "pay_per_use_total_matches": close((answer or {}).get("pay_per_use_total"),
                                            reference["pay_per_use_total"]),
@@ -190,5 +249,6 @@ def run_bike_agent(csv_text: str, url: str, *, snapshot: dict | None = None,
         "timeline": timeline, "step_count": len(timeline),
         "total_time_s": round(time.perf_counter() - t0, 1), "stop_reason": stop,
         "tokens": tokens, "citations": [{"url": url, **(snapshot or {})}],
+        "self_consistency_repair": repaired,
         "defenses": {"prompt_label": PROMPT_DEFENSE, "sql_guard": tools.DEFENSES["sql_guard"]},
     }

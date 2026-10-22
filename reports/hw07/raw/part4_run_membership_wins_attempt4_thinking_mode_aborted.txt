@@ -1,0 +1,3 @@
+
+=== membership_wins: heavy_rider.csv
+  [ 216.5s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "annual membership price per year billed", "k": 4} -> ok

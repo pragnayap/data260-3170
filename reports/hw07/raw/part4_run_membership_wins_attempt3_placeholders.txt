@@ -1,0 +1,9 @@
+
+=== membership_wins: heavy_rider.csv
+  [  58.5s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "annual membership price per year billed", "k": 4} -> ok
+  [ 109.7s] #2 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "unlock fee per minute classic ebike 45 minutes free", "k": 4} -> ok
+  [ 179.3s] #3 csv_sql {"sql": "SELECT ROUND(SUM(<NONMEMBER_UNLOCK> + CASE WHEN rideable_type='electric_bike' THEN <NONMEMBER_EBIKE_RATE> ELSE <NONMEMBER_CLASSIC_RATE> END * -> ERR
+  [ 221.8s] #4 csv_sql {"sql": "SELECT ROUND(SUM(CASE WHEN rideable_type='electric_bike' THEN <NONMEMBER_EBIKE_RATE> ELSE <NONMEMBER_CLASSIC_RATE> END * duration_min + <NONM -> ERR
+  [ 264.6s] #5 csv_sql {"sql": "SELECT ROUND(SUM(CASE WHEN rideable_type='electric_bike' THEN <NONMEMBER_EBIKE_RATE> ELSE <NONMEMBER_CLASSIC_RATE> END * duration_min + <NONM -> ERR
+  [ 310.6s] #6 csv_sql {"sql": "SELECT ROUND(SUM(CASE WHEN rideable_type='electric_bike' THEN <NONMEMBER_EBIKE_RATE> ELSE <NONMEMBER_CLASSIC_RATE> END * duration_min + <NONM -> ERR
+  decision=None stop=unparseable_answer steps=6 time=339.9s checks={'answer_self_consistent': False, 'decision_matches_reference': False, 'pay_per_use_total_matches': False, 'membership_total_matches': False}
