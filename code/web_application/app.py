@@ -33,7 +33,7 @@ import auth
 import jwt_auth
 import mongo_db
 from database import Base, engine
-from routers import auth_db, chat, incidents, incidents_doc, routes
+from routers import auth_db, bike, chat, incidents, incidents_doc, routes
 
 # HW4 Part 2: create the MySQL tables on boot if they don't exist yet. Actual
 # row data (seed_hw04.py) is a separate step -- this only creates schema.
@@ -88,6 +88,8 @@ app.include_router(auth.router)
 # routers below. HW4's cookie router stays mounted only so /api/auth/* keeps
 # answering; no HW7 route depends on it.
 app.include_router(jwt_auth.router)
+app.include_router(bike.page)
+app.include_router(bike.router)
 app.include_router(auth_db.router)
 app.include_router(incidents.router)
 app.include_router(routes.router)

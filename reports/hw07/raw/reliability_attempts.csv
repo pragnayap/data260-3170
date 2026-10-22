@@ -1,0 +1,21 @@
+attempt,task,passed,check,stop_reason,turns,turns_first_ok,turns_final_ok,repairs,failure_class,problems,tool_calls,tokens,elapsed_ms
+1,A,True,detailed first result INC-3170-00001,completed,3,3,3,0,,,2,1460,38479
+2,A,True,detailed first result INC-3170-00001,completed,3,3,3,0,,,2,1460,37335
+3,A,True,detailed first result INC-3170-00001,completed,3,3,3,0,,,2,1460,37873
+4,A,True,detailed first result INC-3170-00001,completed,3,3,3,0,,,2,1460,37472
+5,A,True,detailed first result INC-3170-00001,completed,3,3,3,0,,,2,1460,36970
+6,A,True,detailed first result INC-3170-00001,completed,3,3,3,0,,,2,2676,66742
+7,A,True,detailed first result INC-3170-00001,completed,3,3,3,0,,,2,1460,37316
+8,B,False,no example lookup for top category 'Delay',completed,3,2,3,1,lost_chain,malformed_arguments,3,2303,49599
+9,B,False,no example lookup for top category 'Delay',completed,3,2,3,1,lost_chain,malformed_arguments,3,2291,45504
+10,B,False,no example lookup for top category 'Delay',completed,3,2,3,1,lost_chain,malformed_arguments,3,2291,45836
+11,B,False,no example lookup for top category 'Delay',completed,3,2,3,1,lost_chain,malformed_arguments,3,2291,44913
+12,B,False,no example lookup for top category 'Delay',completed,3,2,3,1,lost_chain,malformed_arguments,3,2298,44216
+13,B,False,no example lookup for top category 'Delay',completed,3,2,3,1,lost_chain,malformed_arguments,3,2291,43891
+14,B,False,no example lookup for top category 'Delay',completed,3,2,3,1,lost_chain,malformed_arguments,3,2291,58235
+15,C,True,INC-3170-00022 affected more riders,completed,4,4,4,0,,,3,2648,71291
+16,C,False,"answer does not name INC-3170-00022, which affected more riders",completed,4,4,4,0,lost_chain,,3,2619,64724
+17,C,False,"answer does not name INC-3170-00022, which affected more riders",completed,4,4,4,0,lost_chain,,3,2619,72351
+18,C,True,INC-3170-00022 affected more riders,completed,4,4,4,0,,,3,2648,69087
+19,C,True,INC-3170-00022 affected more riders,completed,4,4,4,0,,,3,2648,70878
+20,C,False,"answer does not name INC-3170-00022, which affected more riders",completed,4,4,4,0,lost_chain,,3,2619,123582

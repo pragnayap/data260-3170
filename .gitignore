@@ -30,3 +30,6 @@ reports/hw05/*.docx
 reports/hw06/SCREENSHOT_STEPS.md
 reports/hw06/*.docx
 reports/hw06/memory_test/llm_cache.json
+
+# HW7: downloaded Capital Bikeshare zips (re-fetched by build_data.py)
+data/hw07_raw/
