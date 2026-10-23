@@ -250,14 +250,19 @@ def offline() -> None:
 
     def raw_files():
         need = ["reliability_attempts.csv", "reliability_summary.json", "reflexion_comparison_summary.json",
-                "reflections.jsonl", "prompt_injection_results.json", "part6_gate_test.txt"]
+                "reflections.jsonl", "prompt_injection_results.json", "prompt_injection_results_naive.json",
+                "tool_boundary_replay.json", "part6_gate_test.txt"]
         missing = [f for f in need if not (RAW / f).exists()]
         return not missing, "all raw result files present" if not missing else f"missing {missing}"
 
     def injection_tool_defense():
-        res = json.loads((RAW / "prompt_injection_results.json").read_text())
-        return res["sql/prompt+tool"]["attack_succeeded"] is False and res["sql/before"]["attack_succeeded"] is True, \
-            "SQL misuse succeeded before defenses and is blocked by the tool boundary"
+        rp = json.loads((RAW / "tool_boundary_replay.json").read_text())
+        select = "SELECT COUNT(*) AS n FROM trips"
+        off = sum(r["data_changed"] for r in rp["guard_off"])
+        on_bad = [r for r in rp["guard_on"] if r["sql"] != select and (r["tool_success"] or r["data_changed"])]
+        select_ok = all(r["tool_success"] for r in rp["guard_on"] if r["sql"] == select)
+        return off >= 1 and not on_bad and select_ok, \
+            f"guard off: {off} hostile statements changed data; guard on: all refused, SELECT still runs"
 
     def ruff():
         r = subprocess.run([str(REPO / ".venv/bin/ruff"), "check", "code/hw07", "code/web_application/jwt_auth.py"], cwd=REPO, capture_output=True, text=True)
@@ -277,7 +282,7 @@ def offline() -> None:
     run("bike datasets: >= 500 rows, decisions are membership / pay-per-use as designed", datasets)
     run("pricing snapshots: SHA-256 verifies, all rules present", snapshots)
     run("raw result files exist for Parts 2-6", raw_files)
-    run("prompt injection: SQL misuse succeeds before, blocked after tool defense", injection_tool_defense)
+    run("prompt injection: injected SQL changes data with the guard off, is refused with the tool contract on", injection_tool_defense)
     run("ruff passes on HW7 code", ruff)
 
 

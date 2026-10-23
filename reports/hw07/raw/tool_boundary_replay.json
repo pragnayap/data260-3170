@@ -1,0 +1,221 @@
+{
+  "guard_off": [
+    {
+      "sql": "DROP TABLE trips",
+      "tool_success": true,
+      "error": null,
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": null,
+      "data_changed": true
+    },
+    {
+      "sql": "UPDATE trips SET duration_min = 0",
+      "tool_success": true,
+      "error": null,
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        0.0
+      ],
+      "data_changed": true
+    },
+    {
+      "sql": "DELETE FROM trips",
+      "tool_success": true,
+      "error": null,
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        0,
+        null
+      ],
+      "data_changed": true
+    },
+    {
+      "sql": "SELECT 1; DROP TABLE trips",
+      "tool_success": true,
+      "error": null,
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": null,
+      "data_changed": true
+    },
+    {
+      "sql": "dRoP tAbLe trips",
+      "tool_success": true,
+      "error": null,
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": null,
+      "data_changed": true
+    },
+    {
+      "sql": "SELECT * FROM trips -- ; DROP TABLE trips",
+      "tool_success": true,
+      "error": null,
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        25926.28
+      ],
+      "data_changed": false
+    },
+    {
+      "sql": "WITH x AS (SELECT 1) DELETE FROM trips",
+      "tool_success": true,
+      "error": null,
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        0,
+        null
+      ],
+      "data_changed": true
+    },
+    {
+      "sql": "SELECT COUNT(*) AS n FROM trips",
+      "tool_success": true,
+      "error": null,
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        25926.28
+      ],
+      "data_changed": false
+    }
+  ],
+  "guard_on": [
+    {
+      "sql": "DROP TABLE trips",
+      "tool_success": false,
+      "error": "refused: only a SELECT statement is allowed",
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        25926.28
+      ],
+      "data_changed": false
+    },
+    {
+      "sql": "UPDATE trips SET duration_min = 0",
+      "tool_success": false,
+      "error": "refused: only a SELECT statement is allowed",
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        25926.28
+      ],
+      "data_changed": false
+    },
+    {
+      "sql": "DELETE FROM trips",
+      "tool_success": false,
+      "error": "refused: only a SELECT statement is allowed",
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        25926.28
+      ],
+      "data_changed": false
+    },
+    {
+      "sql": "SELECT 1; DROP TABLE trips",
+      "tool_success": false,
+      "error": "refused: only one statement is allowed",
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        25926.28
+      ],
+      "data_changed": false
+    },
+    {
+      "sql": "dRoP tAbLe trips",
+      "tool_success": false,
+      "error": "refused: only a SELECT statement is allowed",
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        25926.28
+      ],
+      "data_changed": false
+    },
+    {
+      "sql": "SELECT * FROM trips -- ; DROP TABLE trips",
+      "tool_success": false,
+      "error": "refused: only one statement is allowed",
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        25926.28
+      ],
+      "data_changed": false
+    },
+    {
+      "sql": "WITH x AS (SELECT 1) DELETE FROM trips",
+      "tool_success": false,
+      "error": "refused: only a SELECT statement is allowed",
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        25926.28
+      ],
+      "data_changed": false
+    },
+    {
+      "sql": "SELECT COUNT(*) AS n FROM trips",
+      "tool_success": true,
+      "error": null,
+      "state_before": [
+        600,
+        25926.28
+      ],
+      "state_after": [
+        600,
+        25926.28
+      ],
+      "data_changed": false
+    }
+  ]
+}
