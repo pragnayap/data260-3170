@@ -117,17 +117,21 @@ def live_auth() -> None:
             body = {"incidentCode": code, "routeId": "Line 22", "location": "Verify St",
                     "submitterEmail": "verify@example.com", "description": "Verification probe incident record",
                     "category": "Delay", "ridersAffected": 1, "relatedRouteId": 1}
-            if c.post("/api/incidents", headers=h("writer"), json=body).status_code != 409:
+            created = c.post("/api/incidents", headers=h("writer"), json=body)
+            if created.status_code != 409:
                 break
         got = {"list_reader": c.get("/api/incidents?page_size=1", headers=h("reader")).status_code,
                "create_reader": c.post("/api/incidents", headers=h("reader"), json={**body, "incidentCode": code}).status_code}
-        r = c.get("/api/incidents?page_size=5000", headers=h("moderator"))
-        iid = next((i["id"] for i in r.json()["items"] if i["incident_code"] == code), None)
+        iid = created.json().get("id")   # from the create response; the list's first page misses new rows
         got["delete_writer"] = c.delete(f"/api/incidents/{iid}", headers=h("writer")).status_code
         got["delete_moderator"] = c.delete(f"/api/incidents/{iid}", headers=h("moderator")).status_code
+        if got["delete_moderator"] != 204 and iid:   # never leave the probe incident behind
+            c.delete(f"/api/incidents/{iid}", headers=h("moderator"))
         got["no_token_list"] = c.get("/api/incidents").status_code
         want = {"list_reader": 200, "create_reader": 403, "delete_writer": 403, "delete_moderator": 204, "no_token_list": 401}
-        return got == want, f"{got} (writer create was 201 on first POST)"
+        want["create_writer"] = got["create_writer"] = created.status_code
+        want["create_writer"] = 201
+        return got == want, f"{got}; writer create -> {created.status_code}"
 
     def hashed():
         need()

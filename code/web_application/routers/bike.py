@@ -28,7 +28,7 @@ BIKE_DIR = Path(__file__).resolve().parents[2] / "hw07" / "bike"
 UI_FILE = Path(__file__).resolve().parents[1] / "bike_ui.html"
 sys.path.insert(0, str(BIKE_DIR))
 
-import agent as bike_agent  # noqa: E402
+import bike_agent  # noqa: E402
 import snapshot  # noqa: E402
 
 REQUIRED_COLUMNS = {"started_at", "ended_at", "duration_min"}

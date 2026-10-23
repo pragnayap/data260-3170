@@ -27,6 +27,7 @@ SECTIONS = [
     ("Part 4 - pay-per-use-wins scenario (final run)", "part4_run_pay_per_use_wins.txt"),
     ("Part 5 - round 1, structured-prompt agent: 3 attacks x 3 defense levels", "part5_attacks_run_raw.txt"),
     ("Part 5 - round 2, naive-prompt baseline agent: 3 attacks x 3 defense levels", "part5_attacks_naive_run_raw.txt"),
+    ("Self-check - make verify-hw07 (live backend, live model)", "verify_hw07_run.txt"),
 ]
 DEV = sorted(p.name for p in RAW.glob("part4_run_*attempt*.txt")) + ["part5_attacks_attempt1_stalled_on_cell3.txt"]
 

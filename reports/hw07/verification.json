@@ -1,0 +1,133 @@
+{
+  "homework": 7,
+  "SID4": 3170,
+  "PORT_BASE": 8470,
+  "PREFIX": "s3170",
+  "SEED": 3170,
+  "VERIFY_SEED": 263170,
+  "DOMAIN_ID": 2,
+  "commit": "2aeb2ad587e08c3c83d652bce0b8957ac4925ea5",
+  "working_tree_clean": false,
+  "model_configuration": {
+    "model": "qwen3:8b (Ollama, via src/model_client.py)",
+    "reliability_temperature": 0.7,
+    "demo_temperature": 0.0,
+    "max_steps": 8,
+    "max_failed_repairs": 2,
+    "reflexion_max_retries": 2,
+    "jwt": "HS256, 60 min",
+    "offline_only": false
+  },
+  "generated_at": "2026-10-23T06:40:49+00:00",
+  "passed": 21,
+  "failed": 0,
+  "skipped": 0,
+  "total_checks": 21,
+  "checks": [
+    {
+      "check": "login: valid credentials return a JWT, invalid get 401",
+      "status": "PASS",
+      "detail": "reader, writer, moderator each got a token; wrong password 401, unknown user 401"
+    },
+    {
+      "check": "GET /auth/me: 401 without token / invalid / expired token, 200 with valid",
+      "status": "PASS",
+      "detail": "no token 401, garbage 401, expired 401, valid -> {'id': 37, 'username': 'writer', 'role': 'writer'}"
+    },
+    {
+      "check": "role matrix on /api/incidents: 200 list, 403 reader create, 403 writer delete, 204 moderator delete, 401 no token",
+      "status": "PASS",
+      "detail": "{'list_reader': 200, 'create_reader': 403, 'delete_writer': 403, 'delete_moderator': 204, 'no_token_list': 401, 'create_writer': 201}; writer create -> 201"
+    },
+    {
+      "check": "users.password_hash holds a salted hash, never the plaintext",
+      "status": "PASS",
+      "detail": "3 users; password_hash is salt$pbkdf2, plaintext not stored"
+    },
+    {
+      "check": "agent loop: multi-step task completes, tool results appended as tool-role messages",
+      "status": "PASS",
+      "detail": "completed, 2 tool calls, tool-role messages=2"
+    },
+    {
+      "check": "repair path: unknown tool is reprompted with the specific problem and recovers",
+      "status": "PASS",
+      "detail": "first_ok=False, problem=unknown_tool, repaired"
+    },
+    {
+      "check": "loop is bounded: repair_exhausted and max_steps stop cleanly",
+      "status": "PASS",
+      "detail": "repair_exhausted / max_steps"
+    },
+    {
+      "check": "nonexistent ID: execute_tool returns a useful message and the agent answers",
+      "status": "PASS",
+      "detail": "tool said 'no incident found with code INC-3170-99999'; agent still answered"
+    },
+    {
+      "check": "Reflexion: hostile reflection cannot change system prompt or safety gates",
+      "status": "PASS",
+      "detail": "hostile reflection: not in system prompt, safety gate still blocks, scoped per user+run"
+    },
+    {
+      "check": "safety gate: pass/block contract incl. regression false-allows",
+      "status": "PASS",
+      "detail": "5 pass / 11 blocked all correct; auto_approve does not override destructive"
+    },
+    {
+      "check": "file tools: glob->search->read finds DEBUG, edit returns diff, sandbox enforced",
+      "status": "PASS",
+      "detail": "glob->search->read found b.py:1:DEBUG = True; diff returned; sandbox escape refused"
+    },
+    {
+      "check": "csv_sql tool boundary: only a single SELECT runs",
+      "status": "PASS",
+      "detail": "non-SELECT refused, SELECT ok, table intact"
+    },
+    {
+      "check": "calculator: whitelist enforced, no eval",
+      "status": "PASS",
+      "detail": "arithmetic ok; non-whitelisted input rejected"
+    },
+    {
+      "check": "policy_retriever: only official host or fixtures are fetchable",
+      "status": "PASS",
+      "detail": "file outside fixtures and non-allow-listed host both refused"
+    },
+    {
+      "check": "tools return the common {success, ts, ...} shape",
+      "status": "PASS",
+      "detail": "every result carries success + ts"
+    },
+    {
+      "check": "bike datasets: >= 500 rows, decisions are membership / pay-per-use as designed",
+      "status": "PASS",
+      "detail": "both datasets have >= 500 rows; heavy -> membership, light -> pay-per-use"
+    },
+    {
+      "check": "pricing snapshots: SHA-256 verifies, all rules present",
+      "status": "PASS",
+      "detail": "both frozen snapshots match their SHA-256 and contain every pricing rule used"
+    },
+    {
+      "check": "raw result files exist for Parts 2-6",
+      "status": "PASS",
+      "detail": "all raw result files present"
+    },
+    {
+      "check": "prompt injection: injected SQL changes data with the guard off, is refused with the tool contract on",
+      "status": "PASS",
+      "detail": "guard off: 6 hostile statements changed data; guard on: all refused, SELECT still runs"
+    },
+    {
+      "check": "ruff passes on HW7 code",
+      "status": "PASS",
+      "detail": "All checks passed!"
+    },
+    {
+      "check": "hand-written agent loop completes verification task A with the real model (temperature 0)",
+      "status": "PASS",
+      "detail": "completed, 2 tool calls, check: detailed first result INC-3170-00001"
+    }
+  ]
+}

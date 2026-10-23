@@ -26,7 +26,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import agent as bike_agent  # noqa: E402
+import bike_agent  # noqa: E402
 import tools  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[3]
