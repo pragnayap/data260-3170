@@ -6,8 +6,8 @@
   "SEED": 3170,
   "VERIFY_SEED": 263170,
   "DOMAIN_ID": 2,
-  "commit": "2aeb2ad587e08c3c83d652bce0b8957ac4925ea5",
-  "working_tree_clean": false,
+  "commit": "25f1a258238c2addadbf62ca4a19f45b0a084d7f",
+  "working_tree_clean": true,
   "model_configuration": {
     "model": "qwen3:8b (Ollama, via src/model_client.py)",
     "reliability_temperature": 0.7,
@@ -18,11 +18,11 @@
     "jwt": "HS256, 60 min",
     "offline_only": false
   },
-  "generated_at": "2026-10-23T06:40:49+00:00",
-  "passed": 21,
+  "generated_at": "2026-10-23T18:04:22+00:00",
+  "passed": 22,
   "failed": 0,
   "skipped": 0,
-  "total_checks": 21,
+  "total_checks": 22,
   "checks": [
     {
       "check": "login: valid credentials return a JWT, invalid get 401",
@@ -108,6 +108,11 @@
       "check": "pricing snapshots: SHA-256 verifies, all rules present",
       "status": "PASS",
       "detail": "both frozen snapshots match their SHA-256 and contain every pricing rule used"
+    },
+    {
+      "check": "Part 3: stored reflections carry evidence (tool calls, verifier result) for failed-then-retried attempts",
+      "status": "PASS",
+      "detail": "6 stored reflections, each with tool-call evidence and a verifier result, <= 400 chars"
     },
     {
       "check": "raw result files exist for Parts 2-6",
