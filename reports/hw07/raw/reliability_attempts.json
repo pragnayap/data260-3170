@@ -12,8 +12,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 1460,
-    "elapsed_ms": 38479
+    "tokens": 1568,
+    "elapsed_ms": 38785
   },
   {
     "attempt": 2,
@@ -28,8 +28,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 1460,
-    "elapsed_ms": 37335
+    "tokens": 2798,
+    "elapsed_ms": 69393
   },
   {
     "attempt": 3,
@@ -44,8 +44,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 1460,
-    "elapsed_ms": 37873
+    "tokens": 2798,
+    "elapsed_ms": 68162
   },
   {
     "attempt": 4,
@@ -60,8 +60,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 1460,
-    "elapsed_ms": 37472
+    "tokens": 2798,
+    "elapsed_ms": 68848
   },
   {
     "attempt": 5,
@@ -76,8 +76,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 1460,
-    "elapsed_ms": 36970
+    "tokens": 2784,
+    "elapsed_ms": 66339
   },
   {
     "attempt": 6,
@@ -92,8 +92,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 2676,
-    "elapsed_ms": 66742
+    "tokens": 2798,
+    "elapsed_ms": 69361
   },
   {
     "attempt": 7,
@@ -108,134 +108,134 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 1460,
-    "elapsed_ms": 37316
+    "tokens": 2784,
+    "elapsed_ms": 66425
   },
   {
     "attempt": 8,
     "task": "B",
-    "passed": false,
-    "check": "no example lookup for top category 'Delay'",
+    "passed": true,
+    "check": "top category Delay",
     "stop_reason": "completed",
     "turns": 3,
     "turns_first_ok": 2,
     "turns_final_ok": 3,
     "repairs": 1,
-    "failure_class": "lost_chain",
+    "failure_class": null,
     "problems": [
       "malformed_arguments"
     ],
     "tool_calls": 3,
-    "tokens": 2303,
-    "elapsed_ms": 49599
+    "tokens": 2440,
+    "elapsed_ms": 46859
   },
   {
     "attempt": 9,
     "task": "B",
-    "passed": false,
-    "check": "no example lookup for top category 'Delay'",
+    "passed": true,
+    "check": "top category Delay",
     "stop_reason": "completed",
     "turns": 3,
     "turns_first_ok": 2,
     "turns_final_ok": 3,
     "repairs": 1,
-    "failure_class": "lost_chain",
+    "failure_class": null,
     "problems": [
       "malformed_arguments"
     ],
     "tool_calls": 3,
-    "tokens": 2291,
-    "elapsed_ms": 45504
+    "tokens": 2430,
+    "elapsed_ms": 45028
   },
   {
     "attempt": 10,
     "task": "B",
-    "passed": false,
-    "check": "no example lookup for top category 'Delay'",
+    "passed": true,
+    "check": "top category Delay",
     "stop_reason": "completed",
     "turns": 3,
     "turns_first_ok": 2,
     "turns_final_ok": 3,
     "repairs": 1,
-    "failure_class": "lost_chain",
+    "failure_class": null,
     "problems": [
       "malformed_arguments"
     ],
     "tool_calls": 3,
-    "tokens": 2291,
-    "elapsed_ms": 45836
+    "tokens": 2433,
+    "elapsed_ms": 45833
   },
   {
     "attempt": 11,
     "task": "B",
-    "passed": false,
-    "check": "no example lookup for top category 'Delay'",
+    "passed": true,
+    "check": "top category Delay",
     "stop_reason": "completed",
     "turns": 3,
     "turns_first_ok": 2,
     "turns_final_ok": 3,
     "repairs": 1,
-    "failure_class": "lost_chain",
+    "failure_class": null,
     "problems": [
       "malformed_arguments"
     ],
     "tool_calls": 3,
-    "tokens": 2291,
-    "elapsed_ms": 44913
+    "tokens": 2440,
+    "elapsed_ms": 46417
   },
   {
     "attempt": 12,
     "task": "B",
-    "passed": false,
-    "check": "no example lookup for top category 'Delay'",
+    "passed": true,
+    "check": "top category Delay",
     "stop_reason": "completed",
     "turns": 3,
     "turns_first_ok": 2,
     "turns_final_ok": 3,
     "repairs": 1,
-    "failure_class": "lost_chain",
+    "failure_class": null,
     "problems": [
       "malformed_arguments"
     ],
     "tool_calls": 3,
-    "tokens": 2298,
-    "elapsed_ms": 44216
+    "tokens": 2435,
+    "elapsed_ms": 45915
   },
   {
     "attempt": 13,
     "task": "B",
-    "passed": false,
-    "check": "no example lookup for top category 'Delay'",
+    "passed": true,
+    "check": "top category Delay",
     "stop_reason": "completed",
     "turns": 3,
     "turns_first_ok": 2,
     "turns_final_ok": 3,
     "repairs": 1,
-    "failure_class": "lost_chain",
+    "failure_class": null,
     "problems": [
       "malformed_arguments"
     ],
     "tool_calls": 3,
-    "tokens": 2291,
-    "elapsed_ms": 43891
+    "tokens": 2429,
+    "elapsed_ms": 45013
   },
   {
     "attempt": 14,
     "task": "B",
-    "passed": false,
-    "check": "no example lookup for top category 'Delay'",
+    "passed": true,
+    "check": "top category Delay",
     "stop_reason": "completed",
     "turns": 3,
     "turns_first_ok": 2,
     "turns_final_ok": 3,
     "repairs": 1,
-    "failure_class": "lost_chain",
+    "failure_class": null,
     "problems": [
       "malformed_arguments"
     ],
     "tool_calls": 3,
-    "tokens": 2291,
-    "elapsed_ms": 58235
+    "tokens": 2429,
+    "elapsed_ms": 44968
   },
   {
     "attempt": 15,
@@ -250,40 +250,40 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2648,
-    "elapsed_ms": 71291
+    "tokens": 2764,
+    "elapsed_ms": 65551
   },
   {
     "attempt": 16,
     "task": "C",
-    "passed": false,
-    "check": "answer does not name INC-3170-00022, which affected more riders",
+    "passed": true,
+    "check": "INC-3170-00022 affected more riders",
     "stop_reason": "completed",
     "turns": 4,
     "turns_first_ok": 4,
     "turns_final_ok": 4,
     "repairs": 0,
-    "failure_class": "lost_chain",
+    "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2619,
-    "elapsed_ms": 64724
+    "tokens": 2763,
+    "elapsed_ms": 63696
   },
   {
     "attempt": 17,
     "task": "C",
-    "passed": false,
-    "check": "answer does not name INC-3170-00022, which affected more riders",
+    "passed": true,
+    "check": "INC-3170-00022 affected more riders",
     "stop_reason": "completed",
     "turns": 4,
     "turns_first_ok": 4,
     "turns_final_ok": 4,
     "repairs": 0,
-    "failure_class": "lost_chain",
+    "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2619,
-    "elapsed_ms": 72351
+    "tokens": 2763,
+    "elapsed_ms": 63271
   },
   {
     "attempt": 18,
@@ -298,8 +298,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2648,
-    "elapsed_ms": 69087
+    "tokens": 2763,
+    "elapsed_ms": 64055
   },
   {
     "attempt": 19,
@@ -314,23 +314,23 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2648,
-    "elapsed_ms": 70878
+    "tokens": 2763,
+    "elapsed_ms": 63553
   },
   {
     "attempt": 20,
     "task": "C",
-    "passed": false,
-    "check": "answer does not name INC-3170-00022, which affected more riders",
+    "passed": true,
+    "check": "INC-3170-00022 affected more riders",
     "stop_reason": "completed",
     "turns": 4,
     "turns_first_ok": 4,
     "turns_final_ok": 4,
     "repairs": 0,
-    "failure_class": "lost_chain",
+    "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2619,
-    "elapsed_ms": 123582
+    "tokens": 2763,
+    "elapsed_ms": 63293
   }
 ]

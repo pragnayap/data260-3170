@@ -1,0 +1,42 @@
+##### variant stats_only
+[turn 1] input_tokens=335 output_tokens=19 total_tokens=354
+[turn 2] input_tokens=1080 output_tokens=36 total_tokens=1116
+[turn 3] input_tokens=1288 output_tokens=40 total_tokens=1328
+  [answer] The incident code is INC-3170-00001, the category is Accident-Collision, and the route is Line 200.
+  [done] stop_reason=completed total_tool_calls=2 model_calls=3 tokens=2798 70528ms
+  task A: PASS - detailed first result INC-3170-00001 | calls=[('search_incidents', None, None), ('incident_details', None, 'INC-3170-00001')]
+[turn 4] input_tokens=328 output_tokens=18 total_tokens=346
+[turn 5] input_tokens=572 output_tokens=24 total_tokens=596
+[turn 6] input_tokens=678 output_tokens=30 total_tokens=708
+[turn 7] input_tokens=747 output_tokens=43 total_tokens=790
+  [answer] The category with the most incidents overall is 'Delay' with 1286 incidents. However, there were no incidents found with the category 'Delay' in the search results.
+  [done] stop_reason=completed total_tool_calls=3 model_calls=4 tokens=2440 48667ms
+  task B: PASS - top category Delay | calls=[('incident_stats', None, None), ('search_incidents', 1, None), ('search_incidents', 1, None)]
+[turn 8] input_tokens=337 output_tokens=35 total_tokens=372
+[turn 9] input_tokens=553 output_tokens=36 total_tokens=589
+[turn 10] input_tokens=761 output_tokens=36 total_tokens=797
+[turn 11] input_tokens=965 output_tokens=40 total_tokens=1005
+  [answer] The incident on Line 80 affected more riders, with 147 riders impacted compared to 0 riders affected by the incident on Line 200.
+  [done] stop_reason=completed total_tool_calls=3 model_calls=4 tokens=2763 65767ms
+  task C: PASS - INC-3170-00022 affected more riders | calls=[('search_incidents', 2, None), ('incident_details', None, 'INC-3170-00001'), ('incident_details', None, 'INC-3170-00022')]
+##### variant example_limit
+[turn 12] input_tokens=426 output_tokens=30 total_tokens=456
+[turn 13] input_tokens=565 output_tokens=36 total_tokens=601
+[turn 14] input_tokens=773 output_tokens=40 total_tokens=813
+  [answer] The incident code is INC-3170-00001, the category is Accident-Collision, and the route is Line 200.
+  [done] stop_reason=completed total_tool_calls=2 model_calls=3 tokens=1870 47276ms
+  task A: PASS - detailed first result INC-3170-00001 | calls=[('search_incidents', 1, None), ('incident_details', None, 'INC-3170-00001')]
+[turn 15] input_tokens=419 output_tokens=18 total_tokens=437
+[turn 16] input_tokens=663 output_tokens=30 total_tokens=693
+[turn 17] input_tokens=732 output_tokens=30 total_tokens=762
+[turn 18] input_tokens=861 output_tokens=65 total_tokens=926
+  [answer] The incident category with the most incidents overall is 'Delay' with 1286 incidents. One example incident of this category is incident code 'INC-3170-00002', which affected 7 riders on Line 47 at the North Yard Depot.
+  [done] stop_reason=completed total_tool_calls=3 model_calls=4 tokens=2818 56342ms
+  task B: PASS - top category Delay | calls=[('incident_stats', None, None), ('search_incidents', 1, None), ('search_incidents', 1, None)]
+[turn 19] input_tokens=428 output_tokens=30 total_tokens=458
+[turn 20] input_tokens=639 output_tokens=36 total_tokens=675
+[turn 21] input_tokens=847 output_tokens=36 total_tokens=883
+[turn 22] input_tokens=1051 output_tokens=37 total_tokens=1088
+  [answer] The incident on Line 80 affected more riders, with 147 riders impacted compared to 0 riders affected on Line 200.
+  [done] stop_reason=completed total_tool_calls=3 model_calls=4 tokens=3104 65075ms
+  task C: PASS - INC-3170-00022 affected more riders | calls=[('search_incidents', 2, None), ('incident_details', None, 'INC-3170-00001'), ('incident_details', None, 'INC-3170-00022')]

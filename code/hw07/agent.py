@@ -40,6 +40,16 @@ from agent_loop import MockModel, build_system_prompt, parse_reply  # noqa: E402
 from execute_tool import TOOLS, execute_tool  # noqa: E402
 
 MAX_STEPS = 8
+
+# Added after the first reliability run (task B failed 0/7: the model misread the order of the
+# stats list). One sentence only: a longer set of notes (how search_incidents takes a query, "pass
+# limit=N") made task C regress at temperature 0 - see raw/part2_demo_run_toolnotes_attempt*.txt and
+# raw/prompt_variant_trials.txt.
+TOOL_NOTES = (
+    "\nTool notes:\n"
+    "  - incident_stats returns its groups sorted from MOST to FEWEST incidents, so the FIRST "
+    "group is the top one. Read its name and count exactly as returned."
+)
 MAX_FAILED_REPAIRS = 2
 
 _TOOL_ERROR_KINDS = (
@@ -138,7 +148,7 @@ def run_agent(
 
     run = AgentRun(user_input)
     run.messages = [
-        {"role": "system", "content": build_system_prompt()},
+        {"role": "system", "content": build_system_prompt() + TOOL_NOTES},
         {"role": "user", "content": user_input},
     ]
     if untrusted_note:

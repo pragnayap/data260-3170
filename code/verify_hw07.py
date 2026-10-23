@@ -252,9 +252,17 @@ def offline() -> None:
                 return False, f"{s}: hash mismatch or rule missing"
         return True, "both frozen snapshots match their SHA-256 and contain every pricing rule used"
 
+    def reflections_stored():
+        lines = [json.loads(x) for x in (RAW / "v1_initial" / "reflections.jsonl").read_text().splitlines() if x.strip()]
+        ok = bool(lines) and all({"user", "run_id", "failure", "evidence", "reflection"} <= set(r) and
+                                 r["evidence"]["tool_calls"] and r["evidence"]["verifier_result"] and
+                                 len(r["reflection"]) <= 400 for r in lines)
+        return ok, f"{len(lines)} stored reflections, each with tool-call evidence and a verifier result, <= 400 chars"
+
     def raw_files():
         need = ["reliability_attempts.csv", "reliability_summary.json", "reflexion_comparison_summary.json",
                 "reflections.jsonl", "prompt_injection_results.json", "prompt_injection_results_naive.json",
+                "prompt_injection_results_naive_strong.json", "v1_initial/reliability_summary.json",
                 "tool_boundary_replay.json", "part6_gate_test.txt"]
         missing = [f for f in need if not (RAW / f).exists()]
         return not missing, "all raw result files present" if not missing else f"missing {missing}"
@@ -285,6 +293,7 @@ def offline() -> None:
     run("tools return the common {success, ts, ...} shape", tool_shape)
     run("bike datasets: >= 500 rows, decisions are membership / pay-per-use as designed", datasets)
     run("pricing snapshots: SHA-256 verifies, all rules present", snapshots)
+    run("Part 3: stored reflections carry evidence (tool calls, verifier result) for failed-then-retried attempts", reflections_stored)
     run("raw result files exist for Parts 2-6", raw_files)
     run("prompt injection: injected SQL changes data with the guard off, is refused with the tool contract on", injection_tool_defense)
     run("ruff passes on HW7 code", ruff)

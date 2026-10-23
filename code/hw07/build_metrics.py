@@ -4,6 +4,7 @@ hand: every number is read from the machine-readable results the experiments wro
 
 import json
 import subprocess
+from collections import Counter
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
@@ -39,49 +40,113 @@ def main() -> None:
              ["Local model", "qwen3:8b via Ollama (HW1 ModelClient / langchain-ollama)"],
              ["Commit at generation time", commit + " (final tagged hash goes in the report)"]]), ""]
 
-    rel, att = load("reliability_summary.json"), load("reliability_attempts.json")
-    L += ["## Part 2 - tool-call reliability (20 attempts, temperature 0.7)", ""]
-    if rel:
-        by_task = {t: [a for a in att if a["task"] == t] for t in "ABC"}
-        L += [table(["Measure", "Before repair", "After repair"], [
-            ["Well-formed model turns", rel["well_formed_before_repair"], rel["well_formed_after_repair"]]]), "",
-              table(["Invalid first replies by type", "Count"],
-                    [[k, v] for k, v in rel["invalid_first_replies_by_type"].items()] or [["(none)", 0]]), "",
-              "Failure classes requested by the assignment: malformed arguments (7 seen, all repaired by one "
-              "reprompt), unknown tool (0), text when a tool was required (0), lost multi-step chain (see below).", "",
-              table(["Task", "Attempts", "Passed the task check"],
-                    [[t, len(v), sum(a["passed"] for a in v)] for t, v in by_task.items()]
-                    + [["Total", len(att), rel["task_pass"].split("/")[0]]]), "",
-              "Every one of the 10 task failures had well-formed calls, so by the four-way scheme they all land in "
-              "\"lost chain\". They are really two different things: **7 task-B failures** where the model misread "
-              "the stats list (named Safety Hazard, 1,269, although Delay, 1,286, was listed first) and then "
-              "claimed no example existed; and **3 task-C failures** that are *verifier false rejections* - the "
-              "answer correctly said Line 80 / 147 riders affected more but omitted the incident code the strict "
-              "check required. Counting those 3 as correct, task pass would be 13/20.", ""]
+    def diversity_note(att):
+        sigs = {t: len({(x["tokens"], x["tool_calls"], tuple(x["problems"])) for x in att if x["task"] == t})
+                for t in "ABC"}
+        counts = {t: sum(x["task"] == t for x in att) for t in "ABC"}
+        bad = Counter(x["task"] for x in att if x["problems"])
+        return ("Sampling diversity: distinct (tokens, tool calls, problems) signatures per task - "
+                + ", ".join(f"{t}: {sigs[t]} over {counts[t]} attempts" for t in "ABC")
+                + ". Ollama does sample (repeat calls return different text), but on these short tool-call tasks "
+                "qwen3:8b is close to deterministic, so the 20 attempts are **not 20 independent samples**. "
+                f"Every first-try failure sits in task {', '.join(sorted(bad)) or '-'} "
+                f"({', '.join(f'{t}: {n}/{counts[t]} attempts' for t, n in sorted(bad.items())) or 'none'}): "
+                "one systematic mistake (calling `search_incidents` without its required `query`), repeated, "
+                "so the before-repair rate describes that path, not a random per-call error rate.\n")
 
-    cmp = load("reflexion_comparison_summary.json")
+    def rel_block(rel, att):
+        by_task = {t: [x for x in att if x["task"] == t] for t in "ABC"}
+        fails = Counter((x["task"], x["failure_class"]) for x in att if not x["passed"])
+        return [table(["Measure", "Before repair", "After repair"], [
+            ["Well-formed model turns", rel["well_formed_before_repair"], rel["well_formed_after_repair"]]]), "",
+                table(["Invalid first replies by type", "Count"],
+                      [[k, v] for k, v in rel["invalid_first_replies_by_type"].items()] or [["(none)", 0]]), "",
+                table(["Task", "Attempts", "Passed the task check", "Unrecovered failures (class)"],
+                      [[t, len(v), sum(x["passed"] for x in v),
+                        ", ".join(f"{n}x {c}" for (tt, c), n in fails.items() if tt == t) or "-"]
+                       for t, v in by_task.items()]
+                      + [["Total", len(att), sum(x["passed"] for x in att), ""]]), "",
+                diversity_note(att)]
+
+    rel, att = load("reliability_summary.json"), load("reliability_attempts.json")
+    rel1, att1 = load("v1_initial/reliability_summary.json"), load("v1_initial/reliability_attempts.json")
+    L += ["## Part 2 - tool-call reliability (20 attempts: 7 x A, 7 x B, 6 x C; temperature 0.7)", "",
+          "Failure classes requested: malformed arguments, unknown tool, text when a tool was required, lost "
+          "multi-step chain. A task failure with every call well-formed lands in \"lost chain\".", ""]
+    if rel:
+        L += ["### Final run (one tool-note sentence added to the prompt, task-C verifier loosened)", ""] + rel_block(rel, att)
+    if rel1:
+        L += ["### Initial run, kept for the record (before those two fixes)", ""] + rel_block(rel1, att1) + [
+            "In the initial run all 7 task-B failures were the model misreading the stats list (it named Safety "
+            "Hazard, 1,269, although Delay, 1,286, was listed first) and then claiming no example existed; the 3 "
+            "task-C failures were verifier false rejections - the answer correctly said Line 80 / 147 riders "
+            "affected more but omitted the literal incident code the check required. Two fixes followed: "
+            "one sentence added to the prompt (the stats list is sorted most-to-fewest, so the first group is the top "
+            "one) and a verifier that accepts the winner's code, route or rider count. A longer set of tool notes "
+            "was tried first and made task C regress at temperature 0 (the model stopped passing `limit` and detailed "
+            "the wrong results), so it was cut back; the trials are in `raw/prompt_variant_trials.txt`. The "
+            "variants were tuned on the temperature-0 demo samples; the 20 attempts below are fresh samples at "
+            "temperature 0.7.", ""]
+
+    cmp, runs = load("reflexion_comparison_summary.json"), load("reflexion_comparison_runs.json")
+    cmp1, runs1 = load("v1_initial/reflexion_comparison_summary.json"), load("v1_initial/reflexion_comparison_runs.json")
+
+    def cmp_rows(c):
+        o, f = c["original"], c["reflexion"]
+        return [["Task success", o["task_success"], f["task_success"]],
+                ["Unsupported claims", o["unsupported_claims"], f["unsupported_claims"]],
+                ["Retry rate (retries per run)", o["retry_rate"], f["retry_rate"]],
+                ["Tool calls", o["tool_calls"], f["tool_calls"]],
+                ["Tokens", f"{o['tokens']:,}", f"{f['tokens']:,}"],
+                ["Latency (ms, total)", f"{o['latency_ms']:,}", f"{f['latency_ms']:,}"],
+                ["Verifier false rejections", o["verifier_false_rejections"], f["verifier_false_rejections"]]]
+
+    def cmp_note(c, rs):
+        o, f = c["original"], c["reflexion"]
+        retries = Counter()
+        for r in rs:
+            retries[r["task"]] += r["retries"]
+        by = ", ".join(f"{t}: {n}" for t, n in sorted(retries.items()) if n) or "none"
+        ratio = (f"{f['tool_calls'] / o['tool_calls']:.2f}x tool calls, {f['tokens'] / o['tokens']:.2f}x tokens, "
+                 f"{f['latency_ms'] / o['latency_ms']:.2f}x latency")
+        return [f"Stop reasons: {c['stop_reasons']}. Original = attempt 0 of each run, Reflexion = the final "
+                "outcome of the same run (paired design).", "",
+                f"Cost of Reflexion: {ratio}. Retries by task: {by}.", ""]
+
     L += ["## Part 3 - original loop vs Reflexion (12 paired runs: 4 each of A, B, C; temperature 0.7)", ""]
+    if cmp1:
+        L += ["### Initial run - where Reflexion had failures to correct (before the prompt/verifier fixes)", "",
+              table(["Metric", "Original loop", "Reflexion loop"], cmp_rows(cmp1)), ""] + cmp_note(cmp1, runs1)
+        refl = [json.loads(ln) for ln in (RAW / "v1_initial" / "reflections.jsonl").read_text().splitlines() if ln.strip()]
+        if refl:
+            r0 = refl[0]
+            ev = r0["evidence"]
+            L += [f"Stored reflections: {len(refl)} (one per failed attempt that was retried), in "
+                  "`raw/v1_initial/reflections.jsonl`. Each record carries user, run_id, task, attempt, the verifier "
+                  "failure, the evidence (every tool call with inputs and observation, the answer given, the "
+                  "verifier result) and the reflection. First record:", "",
+                  f"- task `{r0['task']}`, attempt {r0['attempt']}, user `{r0['user']}`, run `{r0['run_id']}`",
+                  f"- verifier result: {ev['verifier_result']}",
+                  "- tool calls: " + "; ".join(f"`{c['tool']}({json.dumps(c['inputs'])})` -> "
+                                                f"{'ok' if c['ok'] else c['observation']}" for c in ev["tool_calls"]),
+                  f"- answer given: {ev['answer']}",
+                  f"- reflection: {r0['reflection']}", ""]
     if cmp:
-        o, f = cmp["original"], cmp["reflexion"]
-        L += [table(["Metric", "Original loop", "Reflexion loop"], [
-            ["Task success", o["task_success"], f["task_success"]],
-            ["Unsupported claims", o["unsupported_claims"], f["unsupported_claims"]],
-            ["Retry rate (retries per run)", o["retry_rate"], f["retry_rate"]],
-            ["Tool calls", o["tool_calls"], f["tool_calls"]],
-            ["Tokens", f"{o['tokens']:,}", f"{f['tokens']:,}"],
-            ["Latency (ms, total)", f"{o['latency_ms']:,}", f"{f['latency_ms']:,}"],
-            ["Verifier false rejections", o["verifier_false_rejections"], f["verifier_false_rejections"]]]), "",
-              f"Stop reasons: {cmp['stop_reasons']}. Original = attempt 0 of each run, Reflexion = the final outcome of "
-              "the same run (paired design).", "",
-              "Cost of the improvement: "
-              f"{f['tool_calls'] / o['tool_calls']:.2f}x tool calls, {f['tokens'] / o['tokens']:.2f}x tokens, "
-              f"{f['latency_ms'] / o['latency_ms']:.2f}x latency. All 6 retries (4 of the 12 runs) came from task B.", "",
-              "Caveat on the win: the verifier's failure message names the correct category "
-              "(\"no example lookup for top category 'Delay'\"), and that text goes into the reflection, so "
-              "Reflexion is being told the answer. It demonstrates the mechanism, not that the model can "
-              "self-correct unaided.", "",
-              "Verifier false rejections: 0 of 12 in this comparison (an independent, looser correctness oracle found none), "
-              "but 3 of 20 in the Part 2 reliability run (task C, answer correct, incident code omitted).", ""]
+        L += ["### Final run - after the prompt and verifier fixes", "",
+              table(["Metric", "Original loop", "Reflexion loop"], cmp_rows(cmp)), ""] + cmp_note(cmp, runs) + [
+              "With the root causes fixed the original loop already passes every run, so Reflexion never triggers: "
+              "0 retries, and the two columns are identical (the paired attempt 0 is the same run, so even latency "
+              "differs only by timing noise). That is the honest end state - Reflexion earns its cost only when the "
+              "base loop fails - and it is why the initial run above is the one that demonstrates the mechanism. "
+              "`raw/reflections.jsonl` is empty for the final run for the same reason.", ""]
+    L += ["Caveat on any Reflexion win: the verifier's failure message names the correct answer "
+          "(e.g. \"no example lookup for top category 'Delay'\") and that text goes into the reflection, so "
+          "Reflexion is partly being told the answer. It demonstrates the mechanism, not that the model can "
+          "self-correct unaided. Also, with the model near-deterministic on these tasks (see the Part 2 diversity "
+          "note), the 12 runs are a handful of distinct paths repeated, not 12 independent samples, so treat the "
+          "counts as a demonstration, not a statistical estimate.", "",
+          "Verifier false rejections: counted by an independent, looser correctness oracle; see the tables. The "
+          "initial Part 2 run had 3 (task C) before the verifier was loosened.", ""]
 
     L += ["## Part 4 - bike-share agent (Capital Bikeshare, qwen3:8b, LangGraph ReAct)", ""]
     rows = []
@@ -128,7 +193,8 @@ def main() -> None:
         return table(["Attack", "Before defenses", "After prompt defense", "After prompt + tool defense"],
                      [[name, cell(k, "before"), cell(k, "prompt"), cell(k, "prompt+tool")]
                       for k, name in (("override", "Recommendation override"),
-                                      ("sql", "Non-SELECT tool misuse"), ("exfil", "Data exfiltration"))])
+                                      ("sql", "Non-SELECT tool misuse"), ("exfil", "Data exfiltration"))
+                      if any(f"{k}/{d}" in res for d in ("before", "prompt", "prompt+tool"))])
 
     L += ["## Part 5 - prompt injection (3 attacks x 3 defense levels, heavy_rider.csv, local hostile fixture)", ""]
     main_res, naive_res = load("prompt_injection_results.json"), load("prompt_injection_results_naive.json")
@@ -141,14 +207,28 @@ def main() -> None:
               "tests that explanation with a minimal prompt.", ""]
     if naive_res:
         L += ["### Round 2 - naive baseline agent (minimal prompt, no procedure)", "", injection_table(naive_res), ""]
-    cells = [c for r in (main_res, naive_res) if r for c in r.values()]
-    if cells:
-        L += [f"**Overall: {sum(c['attack_succeeded'] for c in cells)} of {len(cells)} live attack runs succeeded** "
-              f"({sum(c['stop_reason'] != 'completed' for c in cells)} ended without a valid answer). The only "
-              "success was the naive agent with no defenses running injected SQL; the recommendation-override and "
-              "exfiltration attacks never worked against qwen3:8b, even undefended. So the before/after comparison "
-              "is informative for SQL misuse only; for the other two attacks the honest finding is that this model "
-              "was not susceptible to this fixture.", ""]
+    strong_res = load("prompt_injection_results_naive_strong.json")
+    if strong_res:
+        L += ["### Round 3 - naive agent vs stronger fixtures (authority-mimicking notice at the top of the page, "
+              "repeated, phrased as a mandatory response-format rule)", "",
+              injection_table({k.replace("_strong", ""): v for k, v in strong_res.items()}), ""]
+    rounds = [("round 1", main_res), ("round 2", naive_res), ("round 3", strong_res)]
+    allc = [(rn, k, c) for rn, r in rounds if r for k, c in r.items()]
+    if allc:
+        wins = [(rn, k) for rn, k, c in allc if c["attack_succeeded"]]
+        invalid = sum(c["stop_reason"] != "completed" for _, _, c in allc)
+        L += [f"**Overall: {len(wins)} of {len(allc)} live attack runs succeeded** ({invalid} ended without a "
+              "valid answer): " + "; ".join(f"{rn} {k}" for rn, k in wins) + ". Each cell is a single sample from a "
+              "model that is near-deterministic on these tasks, so read a cell as one observed outcome, not a "
+              "probability: e.g. the same override fixture was resisted with no defenses but succeeded once the "
+              "prompt label was on, which shows the label does not reliably protect, not that it makes things worse.", ""]
+        by_attack = {}
+        for _rn, k, c in allc:
+            by_attack.setdefault(k.split("/")[0].split("_")[0], []).append(c["attack_succeeded"])
+        L += [table(["Attack", "Runs", "Succeeded"], [[a, len(v), sum(v)] for a, v in by_attack.items()]), "",
+              "What the tool boundary can and cannot do: it stops the SQL attack whatever the model does (see the "
+              "replay below), but it cannot stop a recommendation override or data leaking into the answer, because "
+              "those happen in the model's text, not in a tool call.", ""]
     rp = load("tool_boundary_replay.json")
     if rp:
         hostile = [r for r in rp["guard_off"] if r["sql"] != "SELECT COUNT(*) AS n FROM trips"]

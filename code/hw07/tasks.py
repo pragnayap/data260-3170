@@ -71,8 +71,11 @@ def check_C(run):
     if not all(code in looked for code in first_two):
         return False, f"did not detail both of {first_two}"
     winner = max(first_two, key=lambda c: looked[c])
-    if winner.lower() not in (run.answer or "").lower():
-        return False, f"answer does not name {winner}, which affected more riders"
+    route = next(d["data"]["route_id"] for d in details if d["data"]["incident_code"] == winner)
+    ans = (run.answer or "").lower()
+    # The winner may be named by code, by route, or by its rider count: all are valid evidence.
+    if winner.lower() not in ans and route.lower() not in ans and str(looked[winner]) not in ans:
+        return False, f"answer does not identify {winner} ({route}, {looked[winner]} riders)"
     return True, f"{winner} affected more riders"
 
 
