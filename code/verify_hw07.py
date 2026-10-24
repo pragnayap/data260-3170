@@ -261,7 +261,7 @@ def offline() -> None:
 
     def raw_files():
         need = ["reliability_attempts.csv", "reliability_summary.json", "reflexion_comparison_summary.json",
-                "reflections.jsonl", "prompt_injection_results.json", "prompt_injection_results_naive.json",
+                "v1_initial/reflections.jsonl", "prompt_injection_results.json", "prompt_injection_results_naive.json",
                 "prompt_injection_results_naive_strong.json", "v1_initial/reliability_summary.json",
                 "tool_boundary_replay.json", "part6_gate_test.txt"]
         missing = [f for f in need if not (RAW / f).exists()]

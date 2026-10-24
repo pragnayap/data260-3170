@@ -1,0 +1,644 @@
+{
+  "info": {
+    "name": "HW7 - JWT auth, roles (s3170)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Run folders in order. Needs the backend on 8470 (make run) and the seeded users (make seed-hw07). Screenshot each response with the status code visible."
+  },
+  "variable": [
+    {
+      "key": "base",
+      "value": "http://localhost:8470"
+    },
+    {
+      "key": "expired_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ3cml0ZXIiLCJyb2xlIjoid3JpdGVyIiwiaWF0IjoxNzkyODEzNDk5LCJleHAiOjE3OTI4MTMxOTl9.vq222sPYuuDSGK9H_fSm118xVLU0QbQxmnbFDudy7T8"
+    },
+    {
+      "key": "reader_token",
+      "value": ""
+    },
+    {
+      "key": "writer_token",
+      "value": ""
+    },
+    {
+      "key": "moderator_token",
+      "value": ""
+    },
+    {
+      "key": "incident_code",
+      "value": ""
+    },
+    {
+      "key": "incident_id",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "1.1 Login",
+      "item": [
+        {
+          "name": "Login as reader (200 + JWT)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/auth/login",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"reader\",\n  \"password\": \"ReaderPass#2026\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 and token returned\", function(){ pm.response.to.have.status(200); pm.expect(pm.response.json().access_token).to.be.a(\"string\"); });",
+                  "pm.collectionVariables.set(\"reader_token\", pm.response.json().access_token);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Login as writer (200 + JWT)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/auth/login",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"writer\",\n  \"password\": \"WriterPass#2026\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 and token returned\", function(){ pm.response.to.have.status(200); pm.expect(pm.response.json().access_token).to.be.a(\"string\"); });",
+                  "pm.collectionVariables.set(\"writer_token\", pm.response.json().access_token);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Login as moderator (200 + JWT)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/auth/login",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"moderator\",\n  \"password\": \"ModPass#2026\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"200 and token returned\", function(){ pm.response.to.have.status(200); pm.expect(pm.response.json().access_token).to.be.a(\"string\"); });",
+                  "pm.collectionVariables.set(\"moderator_token\", pm.response.json().access_token);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Login with a wrong password (401)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/auth/login",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "auth": {
+              "type": "noauth"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"writer\",\n  \"password\": \"wrong\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 401\", function(){ pm.response.to.have.status(401); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "1.2-1.3 /auth/me",
+      "item": [
+        {
+          "name": "GET /auth/me - no token (401)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/auth/me",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "auth",
+                "me"
+              ]
+            },
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 401\", function(){ pm.response.to.have.status(401); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /auth/me - invalid token (401)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/auth/me",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "auth",
+                "me"
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "not.a.valid.token",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 401\", function(){ pm.response.to.have.status(401); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /auth/me - expired token (401)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/auth/me",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "auth",
+                "me"
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{expired_token}}",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 401\", function(){ pm.response.to.have.status(401); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /auth/me - valid writer token (200)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/auth/me",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "auth",
+                "me"
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{writer_token}}",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function(){ pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "1.4 Create",
+      "item": [
+        {
+          "name": "POST /api/incidents as reader (403)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/incidents",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "incidents"
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{reader_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"incidentCode\": \"{{incident_code}}\",\n  \"routeId\": \"Line 22\",\n  \"location\": \"5th & Main\",\n  \"submitterEmail\": \"lucky@example.com\",\n  \"description\": \"Brake failure reported near the station\",\n  \"category\": \"Mechanical Failure\",\n  \"ridersAffected\": 3,\n  \"relatedRouteId\": 1\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"incident_code\", \"INC-3170-\" + (90000 + Math.floor(Math.random()*9999)));"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 403\", function(){ pm.response.to.have.status(403); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /api/incidents as writer (201)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}/api/incidents",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "incidents"
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{writer_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"incidentCode\": \"{{incident_code}}\",\n  \"routeId\": \"Line 22\",\n  \"location\": \"5th & Main\",\n  \"submitterEmail\": \"lucky@example.com\",\n  \"description\": \"Brake failure reported near the station\",\n  \"category\": \"Mechanical Failure\",\n  \"ridersAffected\": 3,\n  \"relatedRouteId\": 1\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"incident_code\", \"INC-3170-\" + (90000 + Math.floor(Math.random()*9999)));"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 201\", function(){ pm.response.to.have.status(201); });",
+                  "pm.collectionVariables.set(\"incident_id\", pm.response.json().id);"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "1.5 Delete",
+      "item": [
+        {
+          "name": "DELETE /api/incidents/{id} as writer (403)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/incidents/{{incident_id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "incidents",
+                "{{incident_id}}"
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{writer_token}}",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 403\", function(){ pm.response.to.have.status(403); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "DELETE /api/incidents/{id} as moderator (204)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/incidents/{{incident_id}}",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "incidents",
+                "{{incident_id}}"
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{moderator_token}}",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 204\", function(){ pm.response.to.have.status(204); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "1.6 List",
+      "item": [
+        {
+          "name": "GET /api/incidents as reader (200)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/incidents?page_size=5",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "incidents"
+              ],
+              "query": [
+                {
+                  "key": "page_size",
+                  "value": "5"
+                }
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{reader_token}}",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 200\", function(){ pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /api/incidents - no token (401)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}/api/incidents?page_size=5",
+              "host": [
+                "{{base}}"
+              ],
+              "path": [
+                "api",
+                "incidents"
+              ],
+              "query": [
+                {
+                  "key": "page_size",
+                  "value": "5"
+                }
+              ]
+            },
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"status is 401\", function(){ pm.response.to.have.status(401); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

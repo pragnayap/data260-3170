@@ -84,7 +84,7 @@ def main() -> None:
             "one sentence added to the prompt (the stats list is sorted most-to-fewest, so the first group is the top "
             "one) and a verifier that accepts the winner's code, route or rider count. A longer set of tool notes "
             "was tried first and made task C regress at temperature 0 (the model stopped passing `limit` and detailed "
-            "the wrong results), so it was cut back; the trials are in `raw/prompt_variant_trials.txt`. The "
+            "the wrong results), so it was cut back; the trials are in `raw/dev_history/prompt_variant_trials.txt`. The "
             "variants were tuned on the temperature-0 demo samples; the 20 attempts below are fresh samples at "
             "temperature 0.7.", ""]
 
@@ -138,7 +138,7 @@ def main() -> None:
               "0 retries, and the two columns are identical (the paired attempt 0 is the same run, so even latency "
               "differs only by timing noise). That is the honest end state - Reflexion earns its cost only when the "
               "base loop fails - and it is why the initial run above is the one that demonstrates the mechanism. "
-              "`raw/reflections.jsonl` is empty for the final run for the same reason.", ""]
+              "There are therefore no stored reflections for the final run; they are in `raw/v1_initial/`.", ""]
     L += ["Caveat on any Reflexion win: the verifier's failure message names the correct answer "
           "(e.g. \"no example lookup for top category 'Delay'\") and that text goes into the reflection, so "
           "Reflexion is partly being told the answer. It demonstrates the mechanism, not that the model can "
@@ -175,7 +175,7 @@ def main() -> None:
               "(amortised /12 = $10/month, an assumption - the page lists no monthly price), non-member $1 unlock + "
               "$0.15/min classic or $0.35/min e-bike, member free unlock, classic 45 min free then $0.05/min, "
               "e-bike $0.15/min.", ""]
-    earlier = sorted(p.name for p in RAW.glob("bike_run_*attempt*.json"))
+    earlier = sorted(p.name for p in (RAW / "dev_history").glob("bike_run_*attempt*.json"))
     if earlier:
         L += [f"Development history kept on disk ({len(earlier)} earlier runs that failed, each named for its "
               "failure): " + ", ".join(f"`{n}`" for n in earlier), ""]

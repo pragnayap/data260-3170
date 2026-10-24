@@ -43,8 +43,8 @@ MAX_STEPS = 8
 
 # Added after the first reliability run (task B failed 0/7: the model misread the order of the
 # stats list). One sentence only: a longer set of notes (how search_incidents takes a query, "pass
-# limit=N") made task C regress at temperature 0 - see raw/part2_demo_run_toolnotes_attempt*.txt and
-# raw/prompt_variant_trials.txt.
+# limit=N") made task C regress at temperature 0 - see raw/dev_history/part2_demo_run_toolnotes_attempt*.txt
+# and raw/dev_history/prompt_variant_trials.txt.
 TOOL_NOTES = (
     "\nTool notes:\n"
     "  - incident_stats returns its groups sorted from MOST to FEWEST incidents, so the FIRST "

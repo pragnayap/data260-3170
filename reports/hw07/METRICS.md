@@ -14,7 +14,7 @@ All numbers below are generated from `reports/hw07/raw/` by `code/hw07/build_met
 | DOMAIN_ID | 2 (Municipal Transit Incidents) |
 | Hardware | Intel Core i9-9880H x86_64, 16 GB RAM, macOS 15.x, CPU-only inference |
 | Local model | qwen3:8b via Ollama (HW1 ModelClient / langchain-ollama) |
-| Commit at generation time | 25f1a25 (final tagged hash goes in the report) |
+| Commit at generation time | d1300a3 (final tagged hash goes in the report) |
 
 ## Part 2 - tool-call reliability (20 attempts: 7 x A, 7 x B, 6 x C; temperature 0.7)
 
@@ -58,7 +58,7 @@ Sampling diversity: distinct (tokens, tool calls, problems) signatures per task 
 
 Sampling diversity: distinct (tokens, tool calls, problems) signatures per task - A: 2 over 7 attempts, B: 3 over 7 attempts, C: 2 over 6 attempts. Ollama does sample (repeat calls return different text), but on these short tool-call tasks qwen3:8b is close to deterministic, so the 20 attempts are **not 20 independent samples**. Every first-try failure sits in task B (B: 7/7 attempts): one systematic mistake (calling `search_incidents` without its required `query`), repeated, so the before-repair rate describes that path, not a random per-call error rate.
 
-In the initial run all 7 task-B failures were the model misreading the stats list (it named Safety Hazard, 1,269, although Delay, 1,286, was listed first) and then claiming no example existed; the 3 task-C failures were verifier false rejections - the answer correctly said Line 80 / 147 riders affected more but omitted the literal incident code the check required. Two fixes followed: one sentence added to the prompt (the stats list is sorted most-to-fewest, so the first group is the top one) and a verifier that accepts the winner's code, route or rider count. A longer set of tool notes was tried first and made task C regress at temperature 0 (the model stopped passing `limit` and detailed the wrong results), so it was cut back; the trials are in `raw/prompt_variant_trials.txt`. The variants were tuned on the temperature-0 demo samples; the 20 attempts below are fresh samples at temperature 0.7.
+In the initial run all 7 task-B failures were the model misreading the stats list (it named Safety Hazard, 1,269, although Delay, 1,286, was listed first) and then claiming no example existed; the 3 task-C failures were verifier false rejections - the answer correctly said Line 80 / 147 riders affected more but omitted the literal incident code the check required. Two fixes followed: one sentence added to the prompt (the stats list is sorted most-to-fewest, so the first group is the top one) and a verifier that accepts the winner's code, route or rider count. A longer set of tool notes was tried first and made task C regress at temperature 0 (the model stopped passing `limit` and detailed the wrong results), so it was cut back; the trials are in `raw/dev_history/prompt_variant_trials.txt`. The variants were tuned on the temperature-0 demo samples; the 20 attempts below are fresh samples at temperature 0.7.
 
 ## Part 3 - original loop vs Reflexion (12 paired runs: 4 each of A, B, C; temperature 0.7)
 
@@ -102,7 +102,7 @@ Stop reasons: {'success': 12, 'budget_exhausted': 0, 'human_review': 0}. Origina
 
 Cost of Reflexion: 1.00x tool calls, 1.00x tokens, 1.00x latency. Retries by task: none.
 
-With the root causes fixed the original loop already passes every run, so Reflexion never triggers: 0 retries, and the two columns are identical (the paired attempt 0 is the same run, so even latency differs only by timing noise). That is the honest end state - Reflexion earns its cost only when the base loop fails - and it is why the initial run above is the one that demonstrates the mechanism. `raw/reflections.jsonl` is empty for the final run for the same reason.
+With the root causes fixed the original loop already passes every run, so Reflexion never triggers: 0 retries, and the two columns are identical (the paired attempt 0 is the same run, so even latency differs only by timing noise). That is the honest end state - Reflexion earns its cost only when the base loop fails - and it is why the initial run above is the one that demonstrates the mechanism. There are therefore no stored reflections for the final run; they are in `raw/v1_initial/`.
 
 Caveat on any Reflexion win: the verifier's failure message names the correct answer (e.g. "no example lookup for top category 'Delay'") and that text goes into the reflection, so Reflexion is partly being told the answer. It demonstrates the mechanism, not that the model can self-correct unaided. Also, with the model near-deterministic on these tasks (see the Part 2 diversity note), the 12 runs are a handful of distinct paths repeated, not 12 independent samples, so treat the counts as a demonstration, not a statistical estimate.
 

@@ -31,10 +31,11 @@ SECTIONS = [
     ("Self-check - make verify-hw07 (live backend, live model)", "verify_hw07_run.txt"),
 ]
 DEV = (["v1_initial/part2_demo_run.txt", "v1_initial/part2_reliability_run.txt", "v1_initial/part3_compare_run_raw.txt"]
-       + ["part2_demo_run_toolnotes_attempt1_taskC_regression.txt",
-          "part2_demo_run_toolnotes_attempt2_taskC_still_fails.txt", "prompt_variant_trials.txt"]
-       + sorted(p.name for p in RAW.glob("part4_run_*attempt*.txt"))
-       + ["part5_attacks_attempt1_stalled_on_cell3.txt"])
+       + [f"dev_history/{n}" for n in (
+           "part2_demo_run_toolnotes_attempt1_taskC_regression.txt",
+           "part2_demo_run_toolnotes_attempt2_taskC_still_fails.txt", "prompt_variant_trials.txt")]
+       + sorted(f"dev_history/{p.name}" for p in (RAW / "dev_history").glob("part4_run_*attempt*.txt"))
+       + ["dev_history/part5_attacks_attempt1_stalled_on_cell3.txt"])
 
 
 def clean(text: str) -> str:

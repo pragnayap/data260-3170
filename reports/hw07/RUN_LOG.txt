@@ -1307,8 +1307,8 @@ source: reports/hw07/raw/v1_initial/part3_compare_run_raw.txt
 }
 
 ====================================================================================================
-Development history - part2_demo_run_toolnotes_attempt1_taskC_regression.txt
-source: reports/hw07/raw/part2_demo_run_toolnotes_attempt1_taskC_regression.txt
+Development history - dev_history/part2_demo_run_toolnotes_attempt1_taskC_regression.txt
+source: reports/hw07/raw/dev_history/part2_demo_run_toolnotes_attempt1_taskC_regression.txt
 ====================================================================================================
 # HW7 Part 2 demo - 2026-10-23 09:34:49 - Pragnaya Priyadarshini SID4 3170 - model qwen3:8b temperature 0.0
 
@@ -1353,8 +1353,8 @@ source: reports/hw07/raw/part2_demo_run_toolnotes_attempt1_taskC_regression.txt
   [check] PASS - tool said: 'no incident found with code INC-3170-99999'; agent answered
 
 ====================================================================================================
-Development history - part2_demo_run_toolnotes_attempt2_taskC_still_fails.txt
-source: reports/hw07/raw/part2_demo_run_toolnotes_attempt2_taskC_still_fails.txt
+Development history - dev_history/part2_demo_run_toolnotes_attempt2_taskC_still_fails.txt
+source: reports/hw07/raw/dev_history/part2_demo_run_toolnotes_attempt2_taskC_still_fails.txt
 ====================================================================================================
 # HW7 Part 2 demo - 2026-10-23 09:39:30 - Pragnaya Priyadarshini SID4 3170 - model qwen3:8b temperature 0.0
 
@@ -1399,8 +1399,8 @@ source: reports/hw07/raw/part2_demo_run_toolnotes_attempt2_taskC_still_fails.txt
   [check] PASS - tool said: 'no incident found with code INC-3170-99999'; agent answered
 
 ====================================================================================================
-Development history - prompt_variant_trials.txt
-source: reports/hw07/raw/prompt_variant_trials.txt
+Development history - dev_history/prompt_variant_trials.txt
+source: reports/hw07/raw/dev_history/prompt_variant_trials.txt
 ====================================================================================================
 ##### variant stats_only
 [turn 1] input_tokens=335 output_tokens=19 total_tokens=354
@@ -1446,8 +1446,8 @@ source: reports/hw07/raw/prompt_variant_trials.txt
   task C: PASS - INC-3170-00022 affected more riders | calls=[('search_incidents', 2, None), ('incident_details', None, 'INC-3170-00001'), ('incident_details', None, 'INC-3170-00022')]
 
 ====================================================================================================
-Development history - part4_run_membership_wins_attempt1_before_prompt_fix.txt
-source: reports/hw07/raw/part4_run_membership_wins_attempt1_before_prompt_fix.txt
+Development history - dev_history/part4_run_membership_wins_attempt1_before_prompt_fix.txt
+source: reports/hw07/raw/dev_history/part4_run_membership_wins_attempt1_before_prompt_fix.txt
 ====================================================================================================
 === membership_wins: heavy_rider.csv
   [  42.3s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "membership price unlock fee per minute", "k": 5} -> ok
@@ -1459,8 +1459,8 @@ source: reports/hw07/raw/part4_run_membership_wins_attempt1_before_prompt_fix.tx
   decision=Buy Monthly Membership stop=completed steps=6 time=299.3s checks={'decision_matches_reference': True, 'pay_per_use_total_matches': False, 'membership_total_matches': False}
 
 ====================================================================================================
-Development history - part4_run_membership_wins_attempt2_wrong_decision.txt
-source: reports/hw07/raw/part4_run_membership_wins_attempt2_wrong_decision.txt
+Development history - dev_history/part4_run_membership_wins_attempt2_wrong_decision.txt
+source: reports/hw07/raw/dev_history/part4_run_membership_wins_attempt2_wrong_decision.txt
 ====================================================================================================
 === membership_wins: heavy_rider.csv
   [ 129.9s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "annual membership price per year billed", "k": 1} -> ok
@@ -1473,8 +1473,8 @@ source: reports/hw07/raw/part4_run_membership_wins_attempt2_wrong_decision.txt
   decision=Pay Per Ride/Minute stop=completed steps=7 time=319.5s checks={'decision_matches_reference': False, 'pay_per_use_total_matches': False, 'membership_total_matches': False}
 
 ====================================================================================================
-Development history - part4_run_membership_wins_attempt3_placeholders.txt
-source: reports/hw07/raw/part4_run_membership_wins_attempt3_placeholders.txt
+Development history - dev_history/part4_run_membership_wins_attempt3_placeholders.txt
+source: reports/hw07/raw/dev_history/part4_run_membership_wins_attempt3_placeholders.txt
 ====================================================================================================
 === membership_wins: heavy_rider.csv
   [  58.5s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "annual membership price per year billed", "k": 4} -> ok
@@ -1486,15 +1486,15 @@ source: reports/hw07/raw/part4_run_membership_wins_attempt3_placeholders.txt
   decision=None stop=unparseable_answer steps=6 time=339.9s checks={'answer_self_consistent': False, 'decision_matches_reference': False, 'pay_per_use_total_matches': False, 'membership_total_matches': False}
 
 ====================================================================================================
-Development history - part4_run_membership_wins_attempt4_thinking_mode_aborted.txt
-source: reports/hw07/raw/part4_run_membership_wins_attempt4_thinking_mode_aborted.txt
+Development history - dev_history/part4_run_membership_wins_attempt4_thinking_mode_aborted.txt
+source: reports/hw07/raw/dev_history/part4_run_membership_wins_attempt4_thinking_mode_aborted.txt
 ====================================================================================================
 === membership_wins: heavy_rider.csv
   [ 216.5s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "annual membership price per year billed", "k": 4} -> ok
 
 ====================================================================================================
-Development history - part4_run_membership_wins_attempt5_decision_contradicted_totals.txt
-source: reports/hw07/raw/part4_run_membership_wins_attempt5_decision_contradicted_totals.txt
+Development history - dev_history/part4_run_membership_wins_attempt5_decision_contradicted_totals.txt
+source: reports/hw07/raw/dev_history/part4_run_membership_wins_attempt5_decision_contradicted_totals.txt
 ====================================================================================================
 === membership_wins: heavy_rider.csv
   [  70.4s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "annual membership price per year billed", "k": 4} -> ok
@@ -1507,8 +1507,8 @@ source: reports/hw07/raw/part4_run_membership_wins_attempt5_decision_contradicte
   decision=Pay Per Ride/Minute stop=completed steps=7 time=403.6s checks={'answer_self_consistent': False, 'decision_matches_reference': False, 'pay_per_use_total_matches': True, 'membership_total_matches': True}
 
 ====================================================================================================
-Development history - part4_run_membership_wins_attempt6_membership_total_wrong.txt
-source: reports/hw07/raw/part4_run_membership_wins_attempt6_membership_total_wrong.txt
+Development history - dev_history/part4_run_membership_wins_attempt6_membership_total_wrong.txt
+source: reports/hw07/raw/dev_history/part4_run_membership_wins_attempt6_membership_total_wrong.txt
 ====================================================================================================
 === membership_wins: heavy_rider.csv
   [  12.5s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "annual membership price per year billed", "k": 4} -> ok
@@ -1522,8 +1522,8 @@ source: reports/hw07/raw/part4_run_membership_wins_attempt6_membership_total_wro
   decision=Buy Monthly Membership stop=completed steps=8 time=604.0s checks={'answer_self_consistent': True, 'decision_matches_reference': True, 'pay_per_use_total_matches': True, 'membership_total_matches': False}
 
 ====================================================================================================
-Development history - part4_run_pay_per_use_wins_attempt6_membership_total_wrong.txt
-source: reports/hw07/raw/part4_run_pay_per_use_wins_attempt6_membership_total_wrong.txt
+Development history - dev_history/part4_run_pay_per_use_wins_attempt6_membership_total_wrong.txt
+source: reports/hw07/raw/dev_history/part4_run_pay_per_use_wins_attempt6_membership_total_wrong.txt
 ====================================================================================================
 === pay_per_use_wins: light_rider.csv
   [  15.1s] #1 policy_retriever {"url": "https://capitalbikeshare.com/pricing", "query": "annual membership price per year billed", "k": 4} -> ok
@@ -1535,8 +1535,8 @@ source: reports/hw07/raw/part4_run_pay_per_use_wins_attempt6_membership_total_wr
   decision=Pay Per Ride/Minute stop=completed steps=6 time=334.8s checks={'answer_self_consistent': True, 'decision_matches_reference': True, 'pay_per_use_total_matches': True, 'membership_total_matches': False}
 
 ====================================================================================================
-Development history - part5_attacks_attempt1_stalled_on_cell3.txt
-source: reports/hw07/raw/part5_attacks_attempt1_stalled_on_cell3.txt
+Development history - dev_history/part5_attacks_attempt1_stalled_on_cell3.txt
+source: reports/hw07/raw/dev_history/part5_attacks_attempt1_stalled_on_cell3.txt
 ====================================================================================================
 # HW7 Part 5 - 2026-10-22 10:01:03 - Pragnaya Priyadarshini SID4 3170
 

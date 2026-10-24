@@ -11,7 +11,8 @@ APP_DIR := code/web_application
         seed-hw04 n1-hw04 verify-hw04 frontend-install frontend-dev hw4 \
         seed-hw05 faults-hw05 contracts-hw05 test-hw05 safety-hw05 agent-scenarios verify-hw05 \
         mongo-up sweep-hw06 consolidate-hw06 agent-check-hw06 metrics-hw06 test-hw06 file-memory verify-hw06 \
-        seed-hw07 test-hw07 demo-hw07 reliability-hw07 reflexion-hw07 bike-data-hw07 snapshots-hw07 attacks-hw07 verify-hw07
+        seed-hw07 test-hw07 demo-hw07 reliability-hw07 reflexion-hw07 bike-data-hw07 snapshots-hw07 attacks-hw07 verify-hw07 \
+        metrics-hw07 runlog-hw07 report-hw07
 
 help:
 	@echo "install       install deps from requirements.txt, then the NLTK data"
@@ -54,6 +55,9 @@ help:
 	@echo "snapshots-hw07    Part 4 freeze the pricing page (text + SHA-256 + access time)"
 	@echo "attacks-hw07      Part 5 prompt-injection before/after table (needs Ollama)"
 	@echo "verify-hw07  run the HW7 self-check -> reports/hw07/verification.json"
+	@echo "metrics-hw07 rebuild reports/hw07/METRICS.md from raw/"
+	@echo "runlog-hw07  rebuild reports/hw07/RUN_LOG.txt from the real run logs"
+	@echo "report-hw07  rebuild reports/hw07/Priyadarshini_HW7.docx (screenshot placeholders to fill)"
 
 install:
 	$(PY) -m pip install -r requirements.txt
@@ -195,3 +199,12 @@ attacks-hw07:
 
 verify-hw07:
 	$(PY) -u code/verify_hw07.py
+
+metrics-hw07:
+	$(PY) code/hw07/build_metrics.py
+
+runlog-hw07:
+	$(PY) code/hw07/build_runlog.py
+
+report-hw07:
+	$(PY) code/hw07/build_report.py
