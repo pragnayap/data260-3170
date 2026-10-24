@@ -14,13 +14,32 @@ All numbers below are generated from `reports/hw07/raw/` by `code/hw07/build_met
 | DOMAIN_ID | 2 (Municipal Transit Incidents) |
 | Hardware | Intel Core i9-9880H x86_64, 16 GB RAM, macOS 15.x, CPU-only inference |
 | Local model | qwen3:8b via Ollama (HW1 ModelClient / langchain-ollama) |
-| Commit at generation time | 7b6aa35 (final tagged hash goes in the report) |
+| Commit at generation time | dee904c (final tagged hash goes in the report) |
 
 ## Part 2 - tool-call reliability (20 attempts: 7 x A, 7 x B, 6 x C; temperature 0.7)
 
 Failure classes requested: malformed arguments, unknown tool, text when a tool was required, lost multi-step chain. A task failure with every call well-formed lands in "lost chain".
 
-### Final run (one tool-note sentence added to the prompt, task-C verifier loosened)
+### Final run (stricter task-B check, tool notes on stats order and on finding an example, task-C verifier loosened)
+
+| Measure | Before repair | After repair |
+|---|---|---|
+| Well-formed model turns | 66/66 = 100.0% | 66/66 = 100.0% |
+
+| Invalid first replies by type | Count |
+|---|---|
+| (none) | 0 |
+
+| Task | Attempts | Passed the task check | Unrecovered failures (class) |
+|---|---|---|---|
+| A | 7 | 7 | - |
+| B | 7 | 7 | - |
+| C | 6 | 6 | - |
+| Total | 20 | 20 |  |
+
+Sampling diversity: distinct (tokens, tool calls, problems) signatures per task - A: 1 over 7 attempts, B: 3 over 7 attempts, C: 4 over 6 attempts. Ollama does sample (repeat calls return different text), but on these short tool-call tasks qwen3:8b is close to deterministic, so the 20 attempts are **not 20 independent samples**. There were no first-try failures in this run, so the before- and after-repair rates are equal.
+
+### Intermediate run, kept for the record (reported 20/20, but the task-B check was too weak)
 
 | Measure | Before repair | After repair |
 |---|---|---|
@@ -39,7 +58,9 @@ Failure classes requested: malformed arguments, unknown tool, text when a tool w
 
 Sampling diversity: distinct (tokens, tool calls, problems) signatures per task - A: 3 over 7 attempts, B: 5 over 7 attempts, C: 2 over 6 attempts. Ollama does sample (repeat calls return different text), but on these short tool-call tasks qwen3:8b is close to deterministic, so the 20 attempts are **not 20 independent samples**. Every first-try failure sits in task B (B: 7/7 attempts): one systematic mistake (calling `search_incidents` without its required `query`), repeated, so the before-repair rate describes that path, not a random per-call error rate.
 
-### Initial run, kept for the record (before those two fixes)
+This run passed 20/20 under a task-B check that only required a search call for the top category - not that an example was found. In 7 of 7 task-B runs the model's own answer said no example incident was found (`search_incidents` matches only route_id and location, so the query 'Delay' returns nothing). The check was tightened to require a real example of the top category that the answer cites, and the prompt gained a note on how to find one (query 'Line' plus the category). The final run above is under the stricter check.
+
+### Initial run, kept for the record (before those fixes)
 
 | Measure | Before repair | After repair |
 |---|---|---|
@@ -58,7 +79,7 @@ Sampling diversity: distinct (tokens, tool calls, problems) signatures per task 
 
 Sampling diversity: distinct (tokens, tool calls, problems) signatures per task - A: 2 over 7 attempts, B: 3 over 7 attempts, C: 2 over 6 attempts. Ollama does sample (repeat calls return different text), but on these short tool-call tasks qwen3:8b is close to deterministic, so the 20 attempts are **not 20 independent samples**. Every first-try failure sits in task B (B: 7/7 attempts): one systematic mistake (calling `search_incidents` without its required `query`), repeated, so the before-repair rate describes that path, not a random per-call error rate.
 
-In the initial run all 7 task-B failures were the model misreading the stats list (it named Safety Hazard, 1,269, although Delay, 1,286, was listed first) and then claiming no example existed; the 3 task-C failures were verifier false rejections - the answer correctly said Line 80 / 147 riders affected more but omitted the literal incident code the check required. Two fixes followed: one sentence added to the prompt (the stats list is sorted most-to-fewest, so the first group is the top one) and a verifier that accepts the winner's code, route or rider count. A longer set of tool notes was tried first and made task C regress at temperature 0 (the model stopped passing `limit` and detailed the wrong results), so it was cut back; the trials are in `raw/dev_history/prompt_variant_trials.txt`. The variants were tuned on the temperature-0 demo samples; the 20 attempts below are fresh samples at temperature 0.7.
+In the initial run all 7 task-B failures were the model misreading the stats list (it named Safety Hazard, 1,269, although Delay, 1,286, was listed first) and then claiming no example existed; the 3 task-C failures were verifier false rejections - the answer correctly said Line 80 / 147 riders affected more but omitted the literal incident code the check required. Two fixes followed: a prompt note that the stats list is sorted most-to-fewest, and a verifier that accepts the winner's code, route or rider count. A longer set of notes (including "pass limit=N") made task C regress at temperature 0, so notes were cut back and re-tested; trials are in `raw/dev_history/prompt_variant_trials*.txt`. Variants were tuned on the temperature-0 demo samples; the 20 attempts are fresh samples at temperature 0.7.
 
 ## Part 3 - original loop vs Reflexion (12 paired runs: 4 each of A, B, C; temperature 0.7)
 
@@ -86,7 +107,7 @@ Stored reflections: 6 (one per failed attempt that was retried), in `raw/v1_init
 - answer given: The category with the most incidents overall is 'Safety Hazard' with 1269 incidents. However, no example incident was found in this category.
 - reflection: The previous answer incorrectly identified 'Safety Hazard' as the top category when 'Delay' had more incidents. A better strategy is to first determine the category with the highest incident count using incident_stats, then use search_incidents with the correct category and query parameters to find an example incident.
 
-### Final run - after the prompt and verifier fixes
+### Intermediate run (weak task-B check; kept for the record)
 
 | Metric | Original loop | Reflexion loop |
 |---|---|---|
@@ -98,11 +119,25 @@ Stored reflections: 6 (one per failed attempt that was retried), in `raw/v1_init
 | Latency (ms, total) | 691,725 | 691,799 |
 | Verifier false rejections | 0 | 0 |
 
+These 12/12 results were produced under the weaker task-B check described in Part 2, so they overstate task B: the "examples" were not found. Superseded by the final run below.
+
+### Final run - stricter task-B check, tool notes and loosened task-C verifier
+
+| Metric | Original loop | Reflexion loop |
+|---|---|---|
+| Task success | 12/12 | 12/12 |
+| Unsupported claims | 0 | 0 |
+| Retry rate (retries per run) | 0.00 | 0.00 |
+| Tool calls | 28 | 28 |
+| Tokens | 27,974 | 27,974 |
+| Latency (ms, total) | 639,408 | 639,479 |
+| Verifier false rejections | 0 | 0 |
+
 Stop reasons: {'success': 12, 'budget_exhausted': 0, 'human_review': 0}. Original = attempt 0 of each run, Reflexion = the final outcome of the same run (paired design).
 
 Cost of Reflexion: 1.00x tool calls, 1.00x tokens, 1.00x latency. Retries by task: none.
 
-With the root causes fixed the original loop already passes every run, so Reflexion never triggers: 0 retries, and the two columns are identical (the paired attempt 0 is the same run, so even latency differs only by timing noise). That is the honest end state - Reflexion earns its cost only when the base loop fails - and it is why the initial run above is the one that demonstrates the mechanism. There are therefore no stored reflections for the final run; they are in `raw/v1_initial/`.
+With the root causes fixed the original loop already passes every run, so Reflexion never triggers: 0 retries, and the two columns are identical (attempt 0 is the same run, so even latency differs only by timing noise). Reflexion earns its cost only when the base loop fails, which is why the initial run above is the one that demonstrates the mechanism. There are therefore no stored reflections for the final run; they are in `raw/v1_initial/`.
 
 Caveat on any Reflexion win: the verifier's failure message names the correct answer (e.g. "no example lookup for top category 'Delay'") and that text goes into the reflection, so Reflexion is partly being told the answer. It demonstrates the mechanism, not that the model can self-correct unaided. Also, with the model near-deterministic on these tasks (see the Part 2 diversity note), the 12 runs are a handful of distinct paths repeated, not 12 independent samples, so treat the counts as a demonstration, not a statistical estimate.
 

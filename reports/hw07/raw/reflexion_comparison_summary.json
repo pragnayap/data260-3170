@@ -6,18 +6,18 @@
     "task_success": "12/12",
     "unsupported_claims": 0,
     "retry_rate": "0.00",
-    "tool_calls": 32,
-    "tokens": 30755,
-    "latency_ms": 691725,
+    "tool_calls": 28,
+    "tokens": 27974,
+    "latency_ms": 639408,
     "verifier_false_rejections": 0
   },
   "reflexion": {
     "task_success": "12/12",
     "unsupported_claims": 0,
     "retry_rate": "0.00",
-    "tool_calls": 32,
-    "tokens": 30755,
-    "latency_ms": 691799,
+    "tool_calls": 28,
+    "tokens": 27974,
+    "latency_ms": 639479,
     "verifier_false_rejections": 0
   },
   "stop_reasons": {

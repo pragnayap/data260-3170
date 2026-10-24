@@ -95,8 +95,9 @@ def main() -> None:
             {"attempts": [{k: v for k, v in a.items() if k != "run"} for a in r["attempts"]]}
             for r in results]
     (RAW / "reflexion_comparison_runs.json").write_text(json.dumps(slim, indent=2))
-    with (RAW / "reflections.jsonl").open("w") as fh:
-        fh.writelines(json.dumps(r) + "\n" for r in reflections)
+    if reflections:    # no empty file when the base loop never needed a retry
+        with (RAW / "reflections.jsonl").open("w") as fh:
+            fh.writelines(json.dumps(r) + "\n" for r in reflections)
 
     n = len(results)
 

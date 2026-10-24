@@ -160,6 +160,7 @@ def git(*a):
 
 rel, att = J("reliability_summary.json"), J("reliability_attempts.json")
 rel1, att1 = J("v1_initial/reliability_summary.json"), J("v1_initial/reliability_attempts.json")
+rel2, att2 = J("v2_lax_check/reliability_summary.json"), J("v2_lax_check/reliability_attempts.json")
 cmp, cmp1 = J("reflexion_comparison_summary.json"), J("v1_initial/reflexion_comparison_summary.json")
 runs1 = J("v1_initial/reflexion_comparison_runs.json")
 refl1 = [json.loads(x) for x in (RAW / "v1_initial" / "reflections.jsonl").read_text().splitlines() if x.strip()]
@@ -256,10 +257,11 @@ bullet("Repair path: a reply that is not a JSON call/answer (text_instead_of_too
 bullet("Every tool invocation is logged with name and inputs and the total is reported at the end.")
 bullet("Three fixed tasks — A: search then look up the first result; B: aggregate then one supporting example; C: search + "
        "two detail lookups to compare — each checked by a deterministic verifier. Nonexistent ID handled without a crash.")
-bullet("Measured 20 attempts (7 A, 7 B, 6 C, temperature 0.7). The first run passed 10/20: task B misread the stats list "
-       "and task C hit 3 verifier false rejections. Fix: one sentence in the prompt (stats are sorted most-to-fewest) and a "
-       "verifier that accepts the winner's code, route or rider count. A longer prompt note made task C regress, so it was "
-       "cut back. Final run: 20/20.")
+bullet("Measured 20 attempts (7 A, 7 B, 6 C, temperature 0.7) in three rounds. Round 1 passed 10/20: task B misread the "
+       "stats list and task C hit 3 verifier false rejections. Round 2 passed 20/20 — but its task-B check was too weak: "
+       "the answers said no example was found (search_incidents matches only route_id/location). Fix: the check now "
+       "requires a real example the answer cites, and the prompt notes how to find one (query 'Line' + category). Final "
+       "round: 20/20 under the stricter check.")
 h2("Evidence required")
 code(E.between("code/hw07/agent.py", "for step in range(1, max_steps + 1):", 'run.stop_reason = "max_steps"'))
 excerpt = [clip(ln, 150) for ln in T("part2_demo_run.txt").splitlines()
@@ -271,9 +273,12 @@ shot("2.3: agent completing task C")
 shot("2.4: error-recovery case (nonexistent ID) handled without crashing")
 bt = {t: [x for x in att if x["task"] == t] for t in "ABC"}
 bt1 = {t: [x for x in att1 if x["task"] == t] for t in "ABC"}
+bt2 = {t: [x for x in att2 if x["task"] == t] for t in "ABC"}
 table(["20 attempts", "Well-formed before repair", "Well-formed after repair", "Task A", "Task B", "Task C", "Total"], [
     ["Final run", rel["well_formed_before_repair"], rel["well_formed_after_repair"],
      *[f"{sum(x['passed'] for x in bt[t])}/{len(bt[t])}" for t in "ABC"], rel["task_pass"]],
+    ["Round 2 (weak B check)", rel2["well_formed_before_repair"], rel2["well_formed_after_repair"],
+     *[f"{sum(x['passed'] for x in bt2[t])}/{len(bt2[t])}" for t in "ABC"], rel2["task_pass"]],
     ["Initial run", rel1["well_formed_before_repair"], rel1["well_formed_after_repair"],
      *[f"{sum(x['passed'] for x in bt1[t])}/{len(bt1[t])}" for t in "ABC"], rel1["task_pass"]]], size=9)
 table(["Failure class", "First-try failures", "Unrecovered after repair"], [
@@ -282,10 +287,11 @@ table(["Failure class", "First-try failures", "Unrecovered after repair"], [
     ["text when a tool was required", sum("text_instead_of_tool" in x["problems"] for x in att), sum(x["failure_class"] == "text_instead_of_tool" for x in att)],
     ["lost multi-step chain", "—", sum(x["failure_class"] == "lost_chain" for x in att)]], size=9)
 sigs = {t: len({(x["tokens"], x["tool_calls"], tuple(x["problems"])) for x in att if x["task"] == t}) for t in "ABC"}
-body(f"Per-attempt data: raw/reliability_attempts.csv/.json. Note: the model is near-deterministic here (the 20 attempts "
-     f"collapse to {sigs['A']}/{sigs['B']}/{sigs['C']} distinct paths for A/B/C), so they are not 20 independent samples; all "
-     "7 first-try failures are the same mistake (search_incidents without its required query), fixed by one reprompt.",
-     italic=True)
+ft = sum(bool(x["problems"]) for x in att)
+body(f"Per-attempt data: raw/reliability_attempts.csv/.json. In the final run {ft} of 20 attempts had a first-try failure "
+     "(round 1 had 7: search_incidents called without its required query, each fixed by one reprompt; the new tool note "
+     f"removed that mistake). The model is near-deterministic on these tasks (the attempts collapse to {sigs['A']}/{sigs['B']}/"
+     f"{sigs['C']} distinct paths for A/B/C), so they are not 20 independent samples.", italic=True)
 
 # ============================================================================================
 # Part 3

@@ -41,23 +41,29 @@ def check_A(run):
 
 
 def check_B(run):
-    """Aggregate (most common category), then one supporting example."""
+    """Aggregate (most common category), then ONE supporting example that was actually found."""
     top = _tool("incident_stats", group_by="category")["groups"][0]["group"]
     stats = [c for c in _calls(run, "incident_stats") if c["inputs"].get("group_by") == "category"]
     if not stats:
         return False, "lost chain: no incident_stats(group_by=category) call"
-    if len(run.tool_log) < 2:
-        return False, "lost chain: no supporting-example lookup"
-    example = any(
-        (c["tool"] == "search_incidents" and c["inputs"].get("category") == top)
-        or (c["tool"] == "incident_details" and c["ok"] and c["data"]["category"] == top)
-        for c in run.tool_log
-    )
-    if not example:
-        return False, f"no example lookup for top category {top!r}"
     if top.lower() not in (run.answer or "").lower():
         return False, f"answer does not name the top category {top!r}"
-    return True, f"top category {top}"
+    # An example is a real incident of the top category that a tool returned.
+    found = []
+    for c in run.tool_log:
+        if not c["ok"]:
+            continue
+        if c["tool"] == "search_incidents" and c["inputs"].get("category") == top:
+            found += [r for r in c["data"]["results"] if r["category"] == top]
+        elif c["tool"] == "incident_details" and c["data"]["category"] == top:
+            found.append(c["data"])
+    if not found:
+        return False, f"no example incident of {top!r} was found (the lookup returned nothing)"
+    ans = (run.answer or "").lower()
+    if not any(f["incident_code"].lower() in ans or f["route_id"].lower() in ans
+               or f["location"].lower() in ans for f in found):
+        return False, "answer does not cite the example incident (code, route or location)"
+    return True, f"top category {top}; example {found[0]['incident_code']}"
 
 
 def check_C(run):

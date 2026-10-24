@@ -3,6 +3,7 @@
 hand: every number is read from the machine-readable results the experiments wrote."""
 
 import json
+import re
 import subprocess
 from collections import Counter
 from pathlib import Path
@@ -49,10 +50,13 @@ def main() -> None:
                 + ", ".join(f"{t}: {sigs[t]} over {counts[t]} attempts" for t in "ABC")
                 + ". Ollama does sample (repeat calls return different text), but on these short tool-call tasks "
                 "qwen3:8b is close to deterministic, so the 20 attempts are **not 20 independent samples**. "
-                f"Every first-try failure sits in task {', '.join(sorted(bad)) or '-'} "
-                f"({', '.join(f'{t}: {n}/{counts[t]} attempts' for t, n in sorted(bad.items())) or 'none'}): "
-                "one systematic mistake (calling `search_incidents` without its required `query`), repeated, "
-                "so the before-repair rate describes that path, not a random per-call error rate.\n")
+                + (
+                    f"Every first-try failure sits in task {', '.join(sorted(bad))} "
+                    f"({', '.join(f'{t}: {n}/{counts[t]} attempts' for t, n in sorted(bad.items()))}): one systematic "
+                    "mistake (calling `search_incidents` without its required `query`), repeated, so the before-repair "
+                    "rate describes that path, not a random per-call error rate.\n"
+                    if bad else
+                    "There were no first-try failures in this run, so the before- and after-repair rates are equal.\n"))
 
     def rel_block(rel, att):
         by_task = {t: [x for x in att if x["task"] == t] for t in "ABC"}
@@ -70,26 +74,39 @@ def main() -> None:
 
     rel, att = load("reliability_summary.json"), load("reliability_attempts.json")
     rel1, att1 = load("v1_initial/reliability_summary.json"), load("v1_initial/reliability_attempts.json")
+    rel2, att2 = load("v2_lax_check/reliability_summary.json"), load("v2_lax_check/reliability_attempts.json")
     L += ["## Part 2 - tool-call reliability (20 attempts: 7 x A, 7 x B, 6 x C; temperature 0.7)", "",
           "Failure classes requested: malformed arguments, unknown tool, text when a tool was required, lost "
           "multi-step chain. A task failure with every call well-formed lands in \"lost chain\".", ""]
     if rel:
-        L += ["### Final run (one tool-note sentence added to the prompt, task-C verifier loosened)", ""] + rel_block(rel, att)
+        L += ["### Final run (stricter task-B check, tool notes on stats order and on finding an example, task-C verifier loosened)", ""] + rel_block(rel, att)
+    if rel2:
+        lax = (RAW / "v2_lax_check" / "part2_reliability_run.txt").read_text(errors="ignore")
+        b_runs = [b for b in re.split(r"\n=== attempt \d+/20 task ", lax)[1:] if b.startswith("B")]
+        claims = sum(bool(re.search(r"\[answer\].*(no example|no incident|not found|were no)", b, re.I)) for b in b_runs)
+        L += ["### Intermediate run, kept for the record (reported 20/20, but the task-B check was too weak)", ""] + \
+            rel_block(rel2, att2) + [
+            f"This run passed 20/20 under a task-B check that only required a search call for the top category - not that "
+            f"an example was found. In {claims} of {len(b_runs)} task-B runs the model's own answer said no example "
+            "incident was found (`search_incidents` matches only route_id and location, so the query 'Delay' returns "
+            "nothing). The check was tightened to require a real example of the top category that the answer cites, "
+            "and the prompt gained a note on how to find one (query 'Line' plus the category). The final run above is "
+            "under the stricter check.", ""]
     if rel1:
-        L += ["### Initial run, kept for the record (before those two fixes)", ""] + rel_block(rel1, att1) + [
+        L += ["### Initial run, kept for the record (before those fixes)", ""] + rel_block(rel1, att1) + [
             "In the initial run all 7 task-B failures were the model misreading the stats list (it named Safety "
             "Hazard, 1,269, although Delay, 1,286, was listed first) and then claiming no example existed; the 3 "
             "task-C failures were verifier false rejections - the answer correctly said Line 80 / 147 riders "
             "affected more but omitted the literal incident code the check required. Two fixes followed: "
-            "one sentence added to the prompt (the stats list is sorted most-to-fewest, so the first group is the top "
-            "one) and a verifier that accepts the winner's code, route or rider count. A longer set of tool notes "
-            "was tried first and made task C regress at temperature 0 (the model stopped passing `limit` and detailed "
-            "the wrong results), so it was cut back; the trials are in `raw/dev_history/prompt_variant_trials.txt`. The "
-            "variants were tuned on the temperature-0 demo samples; the 20 attempts below are fresh samples at "
+            "a prompt note that the stats list is sorted most-to-fewest, and a verifier that accepts the winner's code, "
+            "route or rider count. A longer set of notes (including \"pass limit=N\") made task C regress at "
+            "temperature 0, so notes were cut back and re-tested; trials are in `raw/dev_history/prompt_variant_trials*.txt`. "
+            "Variants were tuned on the temperature-0 demo samples; the 20 attempts are fresh samples at "
             "temperature 0.7.", ""]
 
     cmp, runs = load("reflexion_comparison_summary.json"), load("reflexion_comparison_runs.json")
     cmp1, runs1 = load("v1_initial/reflexion_comparison_summary.json"), load("v1_initial/reflexion_comparison_runs.json")
+    cmp2 = load("v2_lax_check/reflexion_comparison_summary.json")
 
     def cmp_rows(c):
         o, f = c["original"], c["reflexion"]
@@ -131,14 +148,21 @@ def main() -> None:
                                                 f"{'ok' if c['ok'] else c['observation']}" for c in ev["tool_calls"]),
                   f"- answer given: {ev['answer']}",
                   f"- reflection: {r0['reflection']}", ""]
+    if cmp2:
+        L += ["### Intermediate run (weak task-B check; kept for the record)", "",
+              table(["Metric", "Original loop", "Reflexion loop"], cmp_rows(cmp2)), "",
+              "These 12/12 results were produced under the weaker task-B check described in Part 2, so they overstate "
+              "task B: the \"examples\" were not found. Superseded by the final run below.", ""]
     if cmp:
-        L += ["### Final run - after the prompt and verifier fixes", "",
+        never = cmp["reflexion"]["retry_rate"] == "0.00"
+        L += ["### Final run - stricter task-B check, tool notes and loosened task-C verifier", "",
               table(["Metric", "Original loop", "Reflexion loop"], cmp_rows(cmp)), ""] + cmp_note(cmp, runs) + [
-              "With the root causes fixed the original loop already passes every run, so Reflexion never triggers: "
-              "0 retries, and the two columns are identical (the paired attempt 0 is the same run, so even latency "
-              "differs only by timing noise). That is the honest end state - Reflexion earns its cost only when the "
-              "base loop fails - and it is why the initial run above is the one that demonstrates the mechanism. "
-              "There are therefore no stored reflections for the final run; they are in `raw/v1_initial/`.", ""]
+              ("With the root causes fixed the original loop already passes every run, so Reflexion never triggers: "
+               "0 retries, and the two columns are identical (attempt 0 is the same run, so even latency differs only "
+               "by timing noise). Reflexion earns its cost only when the base loop fails, which is why the initial run "
+               "above is the one that demonstrates the mechanism. There are therefore no stored reflections for the "
+               "final run; they are in `raw/v1_initial/`.") if never else
+              ("Reflexion triggered in the final run; its stored reflections are in `raw/reflections.jsonl`."), ""]
     L += ["Caveat on any Reflexion win: the verifier's failure message names the correct answer "
           "(e.g. \"no example lookup for top category 'Delay'\") and that text goes into the reflection, so "
           "Reflexion is partly being told the answer. It demonstrates the mechanism, not that the model can "

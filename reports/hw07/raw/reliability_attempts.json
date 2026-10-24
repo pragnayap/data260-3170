@@ -12,8 +12,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 1568,
-    "elapsed_ms": 38785
+    "tokens": 1763,
+    "elapsed_ms": 40285
   },
   {
     "attempt": 2,
@@ -28,8 +28,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 2798,
-    "elapsed_ms": 69393
+    "tokens": 1763,
+    "elapsed_ms": 37916
   },
   {
     "attempt": 3,
@@ -44,8 +44,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 2798,
-    "elapsed_ms": 68162
+    "tokens": 1763,
+    "elapsed_ms": 38351
   },
   {
     "attempt": 4,
@@ -60,8 +60,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 2798,
-    "elapsed_ms": 68848
+    "tokens": 1763,
+    "elapsed_ms": 38482
   },
   {
     "attempt": 5,
@@ -76,8 +76,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 2784,
-    "elapsed_ms": 66339
+    "tokens": 1763,
+    "elapsed_ms": 38344
   },
   {
     "attempt": 6,
@@ -92,8 +92,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 2798,
-    "elapsed_ms": 69361
+    "tokens": 1763,
+    "elapsed_ms": 38136
   },
   {
     "attempt": 7,
@@ -108,134 +108,120 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 2,
-    "tokens": 2784,
-    "elapsed_ms": 66425
+    "tokens": 1763,
+    "elapsed_ms": 38355
   },
   {
     "attempt": 8,
     "task": "B",
     "passed": true,
-    "check": "top category Delay",
+    "check": "top category Delay; example INC-3170-00002",
     "stop_reason": "completed",
     "turns": 3,
-    "turns_first_ok": 2,
+    "turns_first_ok": 3,
     "turns_final_ok": 3,
-    "repairs": 1,
+    "repairs": 0,
     "failure_class": null,
-    "problems": [
-      "malformed_arguments"
-    ],
-    "tool_calls": 3,
-    "tokens": 2440,
-    "elapsed_ms": 46859
+    "problems": [],
+    "tool_calls": 2,
+    "tokens": 1909,
+    "elapsed_ms": 46648
   },
   {
     "attempt": 9,
     "task": "B",
     "passed": true,
-    "check": "top category Delay",
+    "check": "top category Delay; example INC-3170-00002",
     "stop_reason": "completed",
     "turns": 3,
-    "turns_first_ok": 2,
+    "turns_first_ok": 3,
     "turns_final_ok": 3,
-    "repairs": 1,
+    "repairs": 0,
     "failure_class": null,
-    "problems": [
-      "malformed_arguments"
-    ],
-    "tool_calls": 3,
-    "tokens": 2430,
-    "elapsed_ms": 45028
+    "problems": [],
+    "tool_calls": 2,
+    "tokens": 1909,
+    "elapsed_ms": 54632
   },
   {
     "attempt": 10,
     "task": "B",
     "passed": true,
-    "check": "top category Delay",
+    "check": "top category Delay; example INC-3170-00002",
     "stop_reason": "completed",
     "turns": 3,
-    "turns_first_ok": 2,
+    "turns_first_ok": 3,
     "turns_final_ok": 3,
-    "repairs": 1,
+    "repairs": 0,
     "failure_class": null,
-    "problems": [
-      "malformed_arguments"
-    ],
-    "tool_calls": 3,
-    "tokens": 2433,
-    "elapsed_ms": 45833
+    "problems": [],
+    "tool_calls": 2,
+    "tokens": 1914,
+    "elapsed_ms": 46657
   },
   {
     "attempt": 11,
     "task": "B",
     "passed": true,
-    "check": "top category Delay",
+    "check": "top category Delay; example INC-3170-00002",
     "stop_reason": "completed",
     "turns": 3,
-    "turns_first_ok": 2,
+    "turns_first_ok": 3,
     "turns_final_ok": 3,
-    "repairs": 1,
+    "repairs": 0,
     "failure_class": null,
-    "problems": [
-      "malformed_arguments"
-    ],
-    "tool_calls": 3,
-    "tokens": 2440,
-    "elapsed_ms": 46417
+    "problems": [],
+    "tool_calls": 2,
+    "tokens": 1909,
+    "elapsed_ms": 43983
   },
   {
     "attempt": 12,
     "task": "B",
     "passed": true,
-    "check": "top category Delay",
+    "check": "top category Delay; example INC-3170-00002",
     "stop_reason": "completed",
     "turns": 3,
-    "turns_first_ok": 2,
+    "turns_first_ok": 3,
     "turns_final_ok": 3,
-    "repairs": 1,
+    "repairs": 0,
     "failure_class": null,
-    "problems": [
-      "malformed_arguments"
-    ],
-    "tool_calls": 3,
-    "tokens": 2435,
-    "elapsed_ms": 45915
+    "problems": [],
+    "tool_calls": 2,
+    "tokens": 1909,
+    "elapsed_ms": 46037
   },
   {
     "attempt": 13,
     "task": "B",
     "passed": true,
-    "check": "top category Delay",
+    "check": "top category Delay; example INC-3170-00002",
     "stop_reason": "completed",
     "turns": 3,
-    "turns_first_ok": 2,
+    "turns_first_ok": 3,
     "turns_final_ok": 3,
-    "repairs": 1,
+    "repairs": 0,
     "failure_class": null,
-    "problems": [
-      "malformed_arguments"
-    ],
-    "tool_calls": 3,
-    "tokens": 2429,
-    "elapsed_ms": 45013
+    "problems": [],
+    "tool_calls": 2,
+    "tokens": 2494,
+    "elapsed_ms": 81551
   },
   {
     "attempt": 14,
     "task": "B",
     "passed": true,
-    "check": "top category Delay",
+    "check": "top category Delay; example INC-3170-00002",
     "stop_reason": "completed",
     "turns": 3,
-    "turns_first_ok": 2,
+    "turns_first_ok": 3,
     "turns_final_ok": 3,
-    "repairs": 1,
+    "repairs": 0,
     "failure_class": null,
-    "problems": [
-      "malformed_arguments"
-    ],
-    "tool_calls": 3,
-    "tokens": 2429,
-    "elapsed_ms": 44968
+    "problems": [],
+    "tool_calls": 2,
+    "tokens": 1909,
+    "elapsed_ms": 45068
   },
   {
     "attempt": 15,
@@ -250,8 +236,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2764,
-    "elapsed_ms": 65551
+    "tokens": 3024,
+    "elapsed_ms": 69971
   },
   {
     "attempt": 16,
@@ -266,8 +252,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2763,
-    "elapsed_ms": 63696
+    "tokens": 3021,
+    "elapsed_ms": 66080
   },
   {
     "attempt": 17,
@@ -282,8 +268,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2763,
-    "elapsed_ms": 63271
+    "tokens": 3020,
+    "elapsed_ms": 65208
   },
   {
     "attempt": 18,
@@ -298,8 +284,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2763,
-    "elapsed_ms": 64055
+    "tokens": 3021,
+    "elapsed_ms": 66102
   },
   {
     "attempt": 19,
@@ -314,8 +300,8 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2763,
-    "elapsed_ms": 63553
+    "tokens": 3019,
+    "elapsed_ms": 65856
   },
   {
     "attempt": 20,
@@ -330,7 +316,7 @@
     "failure_class": null,
     "problems": [],
     "tool_calls": 3,
-    "tokens": 2763,
-    "elapsed_ms": 63293
+    "tokens": 3021,
+    "elapsed_ms": 67486
   }
 ]

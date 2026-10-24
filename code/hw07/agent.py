@@ -41,14 +41,19 @@ from execute_tool import TOOLS, execute_tool  # noqa: E402
 
 MAX_STEPS = 8
 
-# Added after the first reliability run (task B failed 0/7: the model misread the order of the
-# stats list). One sentence only: a longer set of notes (how search_incidents takes a query, "pass
-# limit=N") made task C regress at temperature 0 - see raw/dev_history/part2_demo_run_toolnotes_attempt*.txt
-# and raw/dev_history/prompt_variant_trials.txt.
+# Prompt notes, added after the first reliability run (task B failed 0/7: the model misread the order of the
+# stats list) and extended after a second finding: with the first one-sentence version, task-B "passes" never
+# actually found an example (search_incidents matches only route_id/location, so query 'Delay' returns
+# nothing) - the check was too weak. The final notes say how to find an example. A third note about
+# "pass limit=N" is NOT included: it was not needed. Trials: raw/dev_history/prompt_variant_trials*.txt.
 TOOL_NOTES = (
     "\nTool notes:\n"
     "  - incident_stats returns its groups sorted from MOST to FEWEST incidents, so the FIRST "
-    "group is the top one. Read its name and count exactly as returned."
+    "group is the top one. Read its name and count exactly as returned.\n"
+    "  - search_incidents needs a non-empty query, matched as a substring against route_id and "
+    "location (the query 'Line' matches every route). To find an example incident of a category, "
+    "call it with query 'Line' and category set to the exact category name, then cite that "
+    "incident's code in your answer."
 )
 MAX_FAILED_REPAIRS = 2
 
