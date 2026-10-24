@@ -14,7 +14,7 @@ All numbers below are generated from `reports/hw07/raw/` by `code/hw07/build_met
 | DOMAIN_ID | 2 (Municipal Transit Incidents) |
 | Hardware | Intel Core i9-9880H x86_64, 16 GB RAM, macOS 15.x, CPU-only inference |
 | Local model | qwen3:8b via Ollama (HW1 ModelClient / langchain-ollama) |
-| Commit at generation time | dee904c (final tagged hash goes in the report) |
+| Commit at generation time | ae9868e (final tagged hash goes in the report) |
 
 ## Part 2 - tool-call reliability (20 attempts: 7 x A, 7 x B, 6 x C; temperature 0.7)
 
@@ -218,4 +218,4 @@ First version of `confirm_bash` used `command.startswith(SAFE_PREFIXES)`. The re
 
 ## Self-check
 
-`verification.json`: 22 passed, 0 failed, 0 skipped of 22 (generated 2026-10-24T03:47:53+00:00).
+`verification.json`: 22 passed, 0 failed, 0 skipped of 22 (generated 2026-10-24T20:54:05+00:00).
