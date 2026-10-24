@@ -3,20 +3,20 @@
 [PASS] role matrix on /api/incidents: 200 list, 403 reader create, 403 writer delete, 204 moderator delete, 401 no token -- {'list_reader': 200, 'create_reader': 403, 'delete_writer': 403, 'delete_moderator': 204, 'no_token_list': 401, 'create_writer': 201}; writer create -> 201
 [PASS] users.password_hash holds a salted hash, never the plaintext -- 3 users; password_hash is salt$pbkdf2, plaintext not stored
   [answer] done
-  [done] stop_reason=completed total_tool_calls=2 model_calls=3 tokens=0 15ms
+  [done] stop_reason=completed total_tool_calls=2 model_calls=3 tokens=0 19ms
 [PASS] agent loop: multi-step task completes, tool results appended as tool-role messages -- completed, 2 tool calls, tool-role messages=2
   [answer] x
-  [done] stop_reason=completed total_tool_calls=1 model_calls=3 tokens=0 40ms
+  [done] stop_reason=completed total_tool_calls=1 model_calls=3 tokens=0 20ms
 [PASS] repair path: unknown tool is reprompted with the specific problem and recovers -- first_ok=False, problem=unknown_tool, repaired
   [done] stop_reason=repair_exhausted total_tool_calls=0 model_calls=3 tokens=0 0ms
-  [done] stop_reason=max_steps total_tool_calls=3 model_calls=3 tokens=0 39ms
+  [done] stop_reason=max_steps total_tool_calls=3 model_calls=3 tokens=0 52ms
 [PASS] loop is bounded: repair_exhausted and max_steps stop cleanly -- repair_exhausted / max_steps
   [answer] none
-  [done] stop_reason=completed total_tool_calls=1 model_calls=2 tokens=0 3ms
+  [done] stop_reason=completed total_tool_calls=1 model_calls=2 tokens=0 2ms
 [PASS] nonexistent ID: execute_tool returns a useful message and the agent answers -- tool said 'no incident found with code INC-3170-99999'; agent still answered
 safety rule no-reporter-pii blocked incident_details via include_submitter
 safety rule blocked incident_details
-  [done] stop_reason=safety_block total_tool_calls=1 model_calls=1 tokens=0 1ms
+  [done] stop_reason=safety_block total_tool_calls=1 model_calls=1 tokens=0 0ms
 safety rule no-reporter-pii blocked incident_details via include_submitter
 safety rule blocked incident_details
 reflection isolation: OK (not in system prompt, safety gate still blocks, scoped per user+run)
@@ -37,7 +37,7 @@ reflection isolation: OK (not in system prompt, safety gate still blocks, scoped
 [turn 2] input_tokens=1080 output_tokens=36 total_tokens=1116
 [turn 3] input_tokens=1288 output_tokens=40 total_tokens=1328
   [answer] The incident code is INC-3170-00001, the category is Accident-Collision, and the route is Line 200.
-  [done] stop_reason=completed total_tool_calls=2 model_calls=3 tokens=2798 70594ms
+  [done] stop_reason=completed total_tool_calls=2 model_calls=3 tokens=2798 120821ms
 [PASS] hand-written agent loop completes verification task A with the real model (temperature 0) -- completed, 2 tool calls, check: detailed first result INC-3170-00001
 
 22 passed, 0 failed, 0 skipped of 22 -> /Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/reports/hw07/verification.json

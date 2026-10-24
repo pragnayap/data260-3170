@@ -6,7 +6,7 @@
   "SEED": 3170,
   "VERIFY_SEED": 263170,
   "DOMAIN_ID": 2,
-  "commit": "25f1a258238c2addadbf62ca4a19f45b0a084d7f",
+  "commit": "7b6aa350fc89b7645f51771e26d244877cad8519",
   "working_tree_clean": true,
   "model_configuration": {
     "model": "qwen3:8b (Ollama, via src/model_client.py)",
@@ -18,7 +18,7 @@
     "jwt": "HS256, 60 min",
     "offline_only": false
   },
-  "generated_at": "2026-10-23T18:04:22+00:00",
+  "generated_at": "2026-10-24T03:47:53+00:00",
   "passed": 22,
   "failed": 0,
   "skipped": 0,
