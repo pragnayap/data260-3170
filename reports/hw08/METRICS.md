@@ -15,7 +15,7 @@ Generated from `reports/hw08/raw/` by `code/hw08/build_metrics.py`.
 | Hardware | Intel Core i9-9880H x86_64, 16 GB RAM, macOS 15, Docker Desktop (7.6 GB) |
 | Local model (Part 2 agents) | qwen3:8b via Ollama, CPU-only; failure tests use stub drafts |
 | Kafka | apache/kafka:3.8.0 (KRaft, single broker) in Docker; client confluent-kafka 2.16.1 |
-| Commit at generation time | c6fbf89 (final tagged hash goes in the report) |
+| Commit at generation time | a76e45f (final tagged hash goes in the report) |
 
 ## Part 1 - request/response over Kafka
 
@@ -116,3 +116,7 @@ Bugs found in my own code while building the failure tests, kept as evidence in 
 4. **A real Writer bug - the idempotency state file was rewritten through one shared temp name**, so two Writers in a group raced; the loser's `ENOENT` made the retry loop re-run the whole message and deliver its draft twice (21 messages processed instead of 20 in the ordering run). Fix: append-only state log, and retries now cover only work + delivery, with bookkeeping afterwards and never retried.
 
 Files: `failure_tests_run1_harness_bugs.txt`, `failure_tests_run2_before_deadletter_count_fix.txt`, `failure_tests_run3_state_file_race_and_warmup_partition.txt`, `failure_tests_run4_repeatability_first_of_two.txt`, `failure_tests_summary_run1_harness_bugs.json`, `failure_tests_summary_run2.json`, `failure_tests_summary_run3.json`
+
+## Self-check
+
+`verification.json`: 16 passed, 0 failed, 0 skipped of 16 (generated 2026-10-30T17:01:31+00:00).

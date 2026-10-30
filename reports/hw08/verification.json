@@ -1,0 +1,105 @@
+{
+  "homework": 8,
+  "SID4": 3170,
+  "PORT_BASE": 8470,
+  "PREFIX": "s3170",
+  "SEED": 3170,
+  "VERIFY_SEED": 263170,
+  "DOMAIN_ID": 2,
+  "commit": "a76e45f43eeb6f0dbe334a9dd73e6aba4dbe025a",
+  "working_tree_clean": false,
+  "model_configuration": {
+    "kafka": "apache/kafka:3.8.0 (KRaft, single broker, via Docker)",
+    "client": "confluent-kafka 2.16.1",
+    "entity": "Transit Incident (CREATE_INCIDENT / GET_INCIDENT)",
+    "agents_model": "qwen3:8b via Ollama (checks use stub mode)",
+    "quick_mode": false
+  },
+  "generated_at": "2026-10-30T17:01:31+00:00",
+  "passed": 16,
+  "failed": 0,
+  "skipped": 0,
+  "total_checks": 16,
+  "checks": [
+    {
+      "check": "required HW8 files exist (worker, API, demo, planner, writer, reviewer, send_question, compose, Dockerfile)",
+      "status": "PASS",
+      "detail": "all required files present"
+    },
+    {
+      "check": "ruff passes on HW8 code",
+      "status": "PASS",
+      "detail": "All checks passed!"
+    },
+    {
+      "check": "topics: the 7 s3170_* topics exist; s3170_tasks has 2 partitions, the rest 1",
+      "status": "PASS",
+      "detail": "{'s3170_entity_requests': 1, 's3170_entity_responses': 1, 's3170_inbox': 1, 's3170_tasks': 2, 's3170_drafts': 1, 's3170_final': 1, 's3170_dead_letter': 1}"
+    },
+    {
+      "check": "CREATE_INCIDENT -> GET_INCIDENT round-trips through Kafka (UUID id, fields intact, correlation_id preserved)",
+      "status": "PASS",
+      "detail": "incident_id=338cd405-d59e-4caa-bfb2-e4de535f0073; both correlation_ids preserved; stored fields match"
+    },
+    {
+      "check": "GET_INCIDENT with an unknown id -> success false, 'Incident not found', correlation_id preserved",
+      "status": "PASS",
+      "detail": "error='Incident not found'"
+    },
+    {
+      "check": "unknown operation -> success false, 'Unknown operation', correlation_id preserved",
+      "status": "PASS",
+      "detail": "error='Unknown operation'"
+    },
+    {
+      "check": "invalid CREATE_INCIDENT payloads (6 kinds) are rejected with a clean error and the correlation_id",
+      "status": "PASS",
+      "detail": "6/6 invalid inputs rejected with an error + correlation_id"
+    },
+    {
+      "check": "malformed request (no data, no reply_to) gets an error response, worker keeps running",
+      "status": "PASS",
+      "detail": "error='Missing required field: incident_id'"
+    },
+    {
+      "check": "FastAPI wrapper: POST /incidents 201, GET 200, unknown id 404, X-Correlation-Id header",
+      "status": "PASS",
+      "detail": "POST 201, GET 200, unknown id 404, X-Correlation-Id header present"
+    },
+    {
+      "check": "docker ps shows the Kafka, worker and FastAPI containers",
+      "status": "PASS",
+      "detail": "running: ['s3170_api', 's3170_kafka', 's3170_worker']"
+    },
+    {
+      "check": "worker log has 'Consumer is ready and listening...' and the API log has its 127.0.0.1:8470 start line",
+      "status": "PASS",
+      "detail": "worker ready line: True; API started line: True"
+    },
+    {
+      "check": "three-agent pipeline: inbox -> planner -> writer -> reviewer -> final, status approved, correlation_id preserved",
+      "status": "PASS",
+      "detail": "final status=approved, correlation_id preserved through inbox->tasks->drafts->final"
+    },
+    {
+      "check": "duplicate delivery: replay creates 2 drafts before the fix, 1 after (state survives a restart)",
+      "status": "PASS",
+      "detail": "{\"passed\": true}"
+    },
+    {
+      "check": "consumer death: auto-commit loses the in-flight message; commit-after redelivers and completes it",
+      "status": "PASS",
+      "detail": "{\"passed\": true}"
+    },
+    {
+      "check": "poison message: unbounded retries block the partition; bounded retries + s3170_dead_letter unblock it",
+      "status": "PASS",
+      "detail": "{\"passed\": true}"
+    },
+    {
+      "check": "ordering: unkeyed run has out-of-order entities; keyed run keeps each entity in one partition, in order",
+      "status": "PASS",
+      "detail": "unkeyed out-of-order=3, keyed out-of-order=0"
+    }
+  ]
+}
