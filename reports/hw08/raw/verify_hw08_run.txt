@@ -1,7 +1,7 @@
 [PASS] required HW8 files exist (worker, API, demo, planner, writer, reviewer, send_question, compose, Dockerfile) -- all required files present
 [PASS] ruff passes on HW8 code -- All checks passed!
 [PASS] topics: the 7 s3170_* topics exist; s3170_tasks has 2 partitions, the rest 1 -- {'s3170_entity_requests': 1, 's3170_entity_responses': 1, 's3170_inbox': 1, 's3170_tasks': 2, 's3170_drafts': 1, 's3170_final': 1, 's3170_dead_letter': 1}
-[PASS] CREATE_INCIDENT -> GET_INCIDENT round-trips through Kafka (UUID id, fields intact, correlation_id preserved) -- incident_id=338cd405-d59e-4caa-bfb2-e4de535f0073; both correlation_ids preserved; stored fields match
+[PASS] CREATE_INCIDENT -> GET_INCIDENT round-trips through Kafka (UUID id, fields intact, correlation_id preserved) -- incident_id=155927da-4293-4401-b21d-9c386e1c3751; both correlation_ids preserved; stored fields match
 [PASS] GET_INCIDENT with an unknown id -> success false, 'Incident not found', correlation_id preserved -- error='Incident not found'
 [PASS] unknown operation -> success false, 'Unknown operation', correlation_id preserved -- error='Unknown operation'
 [PASS] invalid CREATE_INCIDENT payloads (6 kinds) are rejected with a clean error and the correlation_id -- 6/6 invalid inputs rejected with an error + correlation_id

@@ -6,8 +6,8 @@
   "SEED": 3170,
   "VERIFY_SEED": 263170,
   "DOMAIN_ID": 2,
-  "commit": "a76e45f43eeb6f0dbe334a9dd73e6aba4dbe025a",
-  "working_tree_clean": false,
+  "commit": "d30496eebe3adf197558e89da3d6bbd3d71baca5",
+  "working_tree_clean": true,
   "model_configuration": {
     "kafka": "apache/kafka:3.8.0 (KRaft, single broker, via Docker)",
     "client": "confluent-kafka 2.16.1",
@@ -15,7 +15,7 @@
     "agents_model": "qwen3:8b via Ollama (checks use stub mode)",
     "quick_mode": false
   },
-  "generated_at": "2026-10-30T17:01:31+00:00",
+  "generated_at": "2026-10-30T17:09:29+00:00",
   "passed": 16,
   "failed": 0,
   "skipped": 0,
@@ -39,7 +39,7 @@
     {
       "check": "CREATE_INCIDENT -> GET_INCIDENT round-trips through Kafka (UUID id, fields intact, correlation_id preserved)",
       "status": "PASS",
-      "detail": "incident_id=338cd405-d59e-4caa-bfb2-e4de535f0073; both correlation_ids preserved; stored fields match"
+      "detail": "incident_id=155927da-4293-4401-b21d-9c386e1c3751; both correlation_ids preserved; stored fields match"
     },
     {
       "check": "GET_INCIDENT with an unknown id -> success false, 'Incident not found', correlation_id preserved",

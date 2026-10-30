@@ -15,7 +15,7 @@ Generated from `reports/hw08/raw/` by `code/hw08/build_metrics.py`.
 | Hardware | Intel Core i9-9880H x86_64, 16 GB RAM, macOS 15, Docker Desktop (7.6 GB) |
 | Local model (Part 2 agents) | qwen3:8b via Ollama, CPU-only; failure tests use stub drafts |
 | Kafka | apache/kafka:3.8.0 (KRaft, single broker) in Docker; client confluent-kafka 2.16.1 |
-| Commit at generation time | a76e45f (final tagged hash goes in the report) |
+| Commit at generation time | d30496e (final tagged hash goes in the report) |
 
 ## Part 1 - request/response over Kafka
 
@@ -119,4 +119,4 @@ Files: `failure_tests_run1_harness_bugs.txt`, `failure_tests_run2_before_deadlet
 
 ## Self-check
 
-`verification.json`: 16 passed, 0 failed, 0 skipped of 16 (generated 2026-10-30T17:01:31+00:00).
+`verification.json`: 16 passed, 0 failed, 0 skipped of 16 (generated 2026-10-30T17:09:29+00:00).
