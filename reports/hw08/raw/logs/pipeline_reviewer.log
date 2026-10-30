@@ -1,0 +1,4 @@
+09:35:16.893 [REVIEWER] ready - listening on s3170_drafts
+09:38:31.572 [REVIEWER] RECV  topic=s3170_drafts partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+09:38:31.578 [REVIEWER] REVIEW correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a status=approved (draft passes length and content checks)
+09:38:31.593 [REVIEWER] SEND  topic=s3170_final partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a

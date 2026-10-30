@@ -1,0 +1,20 @@
+09:45:06.887 [writer-B] Consumer is ready and listening... group=s3170_ord_keyed_1030093925 partitions=[1] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:45:10.013 [writer-B] RECV  topic=s3170_tasks partition=1 offset=16 correlation_id=ord-02-1030093925 entity=INC-2393 seq=1
+09:45:10.101 [writer-B] SEND  topic=s3170_drafts partition=0 offset=27 correlation_id=ord-02-1030093925
+09:45:10.104 [writer-B] COMMIT offset 17 on partition 1 (after successful processing)
+09:45:10.104 [writer-B] RECV  topic=s3170_tasks partition=1 offset=17 correlation_id=ord-06-1030093925 entity=INC-2393 seq=2
+09:45:10.436 [writer-B] SEND  topic=s3170_drafts partition=0 offset=29 correlation_id=ord-06-1030093925
+09:45:10.439 [writer-B] COMMIT offset 18 on partition 1 (after successful processing)
+09:45:10.439 [writer-B] RECV  topic=s3170_tasks partition=1 offset=18 correlation_id=ord-07-1030093925 entity=INC-2393 seq=3
+09:45:10.500 [writer-B] SEND  topic=s3170_drafts partition=0 offset=31 correlation_id=ord-07-1030093925
+09:45:10.502 [writer-B] COMMIT offset 19 on partition 1 (after successful processing)
+09:45:10.503 [writer-B] RECV  topic=s3170_tasks partition=1 offset=19 correlation_id=ord-15-1030093925 entity=INC-2393 seq=4
+09:45:10.614 [writer-B] SEND  topic=s3170_drafts partition=0 offset=32 correlation_id=ord-15-1030093925
+09:45:10.616 [writer-B] COMMIT offset 20 on partition 1 (after successful processing)
+09:45:10.616 [writer-B] RECV  topic=s3170_tasks partition=1 offset=20 correlation_id=ord-17-1030093925 entity=INC-2393 seq=5
+09:45:10.892 [writer-B] SEND  topic=s3170_drafts partition=0 offset=34 correlation_id=ord-17-1030093925
+09:45:10.895 [writer-B] COMMIT offset 21 on partition 1 (after successful processing)
+09:45:10.895 [writer-B] RECV  topic=s3170_tasks partition=1 offset=21 correlation_id=ord-18-1030093925 entity=INC-2393 seq=6
+09:45:11.010 [writer-B] SEND  topic=s3170_drafts partition=0 offset=35 correlation_id=ord-18-1030093925
+09:45:11.013 [writer-B] COMMIT offset 22 on partition 1 (after successful processing)
+09:45:15.092 [writer-B] writer stopped

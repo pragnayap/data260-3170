@@ -8,4 +8,4 @@ repos:
         entry: .venv/bin/ruff check --force-exclude
         language: system
         types: [python]
-        files: ^code/(web_application/(jwt_auth|session_crud|models|app)\.py|web_application/routers/(incidents|routes)\.py|(seed|verify)_hw07\.py|hw07/.*\.py)$
+        files: ^code/(web_application/(jwt_auth|session_crud|models|app)\.py|web_application/routers/(incidents|routes)\.py|(seed|verify)_hw07\.py|hw07/.*\.py|hw08/.*\.py|verify_hw08\.py)$

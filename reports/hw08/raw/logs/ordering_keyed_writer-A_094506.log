@@ -1,0 +1,44 @@
+09:45:06.887 [writer-A] Consumer is ready and listening... group=s3170_ord_keyed_1030093925 partitions=[0] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:45:10.011 [writer-A] RECV  topic=s3170_tasks partition=0 offset=19 correlation_id=ord-00-1030093925 entity=INC-5457 seq=1
+09:45:10.327 [writer-A] SEND  topic=s3170_drafts partition=0 offset=28 correlation_id=ord-00-1030093925
+09:45:10.330 [writer-A] COMMIT offset 20 on partition 0 (after successful processing)
+09:45:10.330 [writer-A] RECV  topic=s3170_tasks partition=0 offset=20 correlation_id=ord-01-1030093925 entity=INC-8446 seq=1
+09:45:10.472 [writer-A] SEND  topic=s3170_drafts partition=0 offset=30 correlation_id=ord-01-1030093925
+09:45:10.475 [writer-A] COMMIT offset 21 on partition 0 (after successful processing)
+09:45:10.475 [writer-A] RECV  topic=s3170_tasks partition=0 offset=21 correlation_id=ord-03-1030093925 entity=INC-5457 seq=2
+09:45:10.857 [writer-A] SEND  topic=s3170_drafts partition=0 offset=33 correlation_id=ord-03-1030093925
+09:45:10.860 [writer-A] COMMIT offset 22 on partition 0 (after successful processing)
+09:45:10.861 [writer-A] RECV  topic=s3170_tasks partition=0 offset=22 correlation_id=ord-04-1030093925 entity=INC-4412 seq=1
+09:45:11.142 [writer-A] SEND  topic=s3170_drafts partition=0 offset=36 correlation_id=ord-04-1030093925
+09:45:11.144 [writer-A] COMMIT offset 23 on partition 0 (after successful processing)
+09:45:11.144 [writer-A] RECV  topic=s3170_tasks partition=0 offset=23 correlation_id=ord-05-1030093925 entity=INC-8206 seq=1
+09:45:11.297 [writer-A] SEND  topic=s3170_drafts partition=0 offset=37 correlation_id=ord-05-1030093925
+09:45:11.301 [writer-A] COMMIT offset 24 on partition 0 (after successful processing)
+09:45:11.301 [writer-A] RECV  topic=s3170_tasks partition=0 offset=24 correlation_id=ord-08-1030093925 entity=INC-4412 seq=2
+09:45:11.600 [writer-A] SEND  topic=s3170_drafts partition=0 offset=38 correlation_id=ord-08-1030093925
+09:45:11.603 [writer-A] COMMIT offset 25 on partition 0 (after successful processing)
+09:45:11.603 [writer-A] RECV  topic=s3170_tasks partition=0 offset=25 correlation_id=ord-09-1030093925 entity=INC-5457 seq=3
+09:45:11.849 [writer-A] SEND  topic=s3170_drafts partition=0 offset=39 correlation_id=ord-09-1030093925
+09:45:11.853 [writer-A] COMMIT offset 26 on partition 0 (after successful processing)
+09:45:11.853 [writer-A] RECV  topic=s3170_tasks partition=0 offset=26 correlation_id=ord-10-1030093925 entity=INC-5457 seq=4
+09:45:12.140 [writer-A] SEND  topic=s3170_drafts partition=0 offset=40 correlation_id=ord-10-1030093925
+09:45:12.142 [writer-A] COMMIT offset 27 on partition 0 (after successful processing)
+09:45:12.142 [writer-A] RECV  topic=s3170_tasks partition=0 offset=27 correlation_id=ord-11-1030093925 entity=INC-5457 seq=5
+09:45:12.266 [writer-A] SEND  topic=s3170_drafts partition=0 offset=41 correlation_id=ord-11-1030093925
+09:45:12.268 [writer-A] COMMIT offset 28 on partition 0 (after successful processing)
+09:45:12.268 [writer-A] RECV  topic=s3170_tasks partition=0 offset=28 correlation_id=ord-12-1030093925 entity=INC-5457 seq=6
+09:45:12.628 [writer-A] SEND  topic=s3170_drafts partition=0 offset=42 correlation_id=ord-12-1030093925
+09:45:12.632 [writer-A] COMMIT offset 29 on partition 0 (after successful processing)
+09:45:12.632 [writer-A] RECV  topic=s3170_tasks partition=0 offset=29 correlation_id=ord-13-1030093925 entity=INC-4412 seq=3
+09:45:12.897 [writer-A] SEND  topic=s3170_drafts partition=0 offset=43 correlation_id=ord-13-1030093925
+09:45:12.900 [writer-A] COMMIT offset 30 on partition 0 (after successful processing)
+09:45:12.900 [writer-A] RECV  topic=s3170_tasks partition=0 offset=30 correlation_id=ord-14-1030093925 entity=INC-8206 seq=2
+09:45:13.226 [writer-A] SEND  topic=s3170_drafts partition=0 offset=44 correlation_id=ord-14-1030093925
+09:45:13.230 [writer-A] COMMIT offset 31 on partition 0 (after successful processing)
+09:45:13.230 [writer-A] RECV  topic=s3170_tasks partition=0 offset=31 correlation_id=ord-16-1030093925 entity=INC-4412 seq=4
+09:45:13.277 [writer-A] SEND  topic=s3170_drafts partition=0 offset=45 correlation_id=ord-16-1030093925
+09:45:13.281 [writer-A] COMMIT offset 32 on partition 0 (after successful processing)
+09:45:13.281 [writer-A] RECV  topic=s3170_tasks partition=0 offset=32 correlation_id=ord-19-1030093925 entity=INC-4412 seq=5
+09:45:13.343 [writer-A] SEND  topic=s3170_drafts partition=0 offset=46 correlation_id=ord-19-1030093925
+09:45:13.346 [writer-A] COMMIT offset 33 on partition 0 (after successful processing)
+09:45:14.366 [writer-A] writer stopped

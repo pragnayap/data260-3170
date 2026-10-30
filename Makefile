@@ -12,7 +12,8 @@ APP_DIR := code/web_application
         seed-hw05 faults-hw05 contracts-hw05 test-hw05 safety-hw05 agent-scenarios verify-hw05 \
         mongo-up sweep-hw06 consolidate-hw06 agent-check-hw06 metrics-hw06 test-hw06 file-memory verify-hw06 \
         seed-hw07 test-hw07 demo-hw07 reliability-hw07 reflexion-hw07 bike-data-hw07 snapshots-hw07 attacks-hw07 verify-hw07 \
-        metrics-hw07 runlog-hw07 report-hw07
+        metrics-hw07 runlog-hw07 report-hw07 \
+        kafka-up-hw08 topics-hw08 demo-hw08 agents-hw08 failures-hw08 verify-hw08 down-hw08
 
 help:
 	@echo "install       install deps from requirements.txt, then the NLTK data"
@@ -58,6 +59,13 @@ help:
 	@echo "metrics-hw07 rebuild reports/hw07/METRICS.md from raw/"
 	@echo "runlog-hw07  rebuild reports/hw07/RUN_LOG.txt from the real run logs"
 	@echo "report-hw07  rebuild reports/hw07/Priyadarshini_HW7.docx (screenshot placeholders to fill)"
+	@echo "kafka-up-hw08  docker compose up: Kafka + worker + FastAPI (port 8470; stop local uvicorn first)"
+	@echo "topics-hw08    create the 7 s3170_* topics with the Kafka CLI"
+	@echo "demo-hw08      Part 1 homework_demo.py (CREATE_INCIDENT -> GET_INCIDENT over Kafka)"
+	@echo "agents-hw08    Part 2: start planner, writer, reviewer (3 terminals) / send_question.py"
+	@echo "failures-hw08  Part 3: duplicate, consumer death, poison message, ordering - before and after"
+	@echo "verify-hw08    run the HW8 self-check -> reports/hw08/verification.json"
+	@echo "down-hw08      docker compose down"
 
 install:
 	$(PY) -m pip install -r requirements.txt
@@ -208,3 +216,35 @@ runlog-hw07:
 
 report-hw07:
 	$(PY) code/hw07/build_report.py
+
+kafka-up-hw08:
+	docker compose up -d --build
+
+topics-hw08:
+	docker exec s3170_kafka /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic s3170_entity_requests --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+	docker exec s3170_kafka /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic s3170_entity_responses --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+	docker exec s3170_kafka /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic s3170_inbox --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+	docker exec s3170_kafka /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic s3170_tasks --partitions 2 --replication-factor 1 --bootstrap-server localhost:9092
+	docker exec s3170_kafka /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic s3170_drafts --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+	docker exec s3170_kafka /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic s3170_final --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+	docker exec s3170_kafka /opt/kafka/bin/kafka-topics.sh --create --if-not-exists --topic s3170_dead_letter --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+	docker exec s3170_kafka /opt/kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+demo-hw08:
+	cd code/hw08 && ../../$(PY) -u homework_demo.py
+
+agents-hw08:
+	@echo "Run each in its own terminal (cd code/hw08 first):"
+	@echo "  ../../.venv/bin/python planner.py"
+	@echo "  ../../.venv/bin/python writer.py"
+	@echo "  ../../.venv/bin/python reviewer.py"
+	@echo "  ../../.venv/bin/python send_question.py"
+
+failures-hw08:
+	cd code/hw08 && ../../$(PY) -u failure_tests.py all
+
+verify-hw08:
+	$(PY) -u code/verify_hw08.py
+
+down-hw08:
+	docker compose down

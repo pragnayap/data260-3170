@@ -1,0 +1,192 @@
+Pragnaya Priyadarshini (Lucky) - HW8 - failure_tests.py all
+
+====================================================================================================
+PART 3.I  DUPLICATE DELIVERY - replay one message with the same correlation_id
+====================================================================================================
+09:53:29.382 [TEST    ] [BEFORE] idempotency OFF: sending the SAME task twice (correlation_id=dup-before-1030095328)
+09:53:29.389 [TEST    ]   send #1 -> s3170_tasks partition=1 offset=61
+09:53:29.390 [TEST    ]   send #2 -> s3170_tasks partition=1 offset=62
+  --- [BEFORE] writer log
+      09:53:29.389 [writer-1] RECV  topic=s3170_tasks partition=1 offset=61 correlation_id=dup-before-1030095328
+      09:53:29.394 [writer-1] SEND  topic=s3170_drafts partition=0 offset=141 correlation_id=dup-before-1030095328
+      09:53:29.396 [writer-1] COMMIT offset 62 on partition 1 (after successful processing)
+      09:53:29.396 [writer-1] RECV  topic=s3170_tasks partition=1 offset=62 correlation_id=dup-before-1030095328
+      09:53:29.397 [writer-1] SEND  topic=s3170_drafts partition=0 offset=142 correlation_id=dup-before-1030095328
+      09:53:29.399 [writer-1] COMMIT offset 63 on partition 1 (after successful processing)
+09:53:34.847 [TEST    ] [BEFORE] drafts on s3170_drafts for this correlation_id: 2   side effects recorded: 2
+09:53:35.976 [TEST    ] [AFTER] idempotency ON: sending the SAME task twice (correlation_id=dup-after-1030095328)
+09:53:35.979 [TEST    ]   send #1 -> s3170_tasks partition=1 offset=63
+09:53:35.980 [TEST    ]   send #2 -> s3170_tasks partition=1 offset=64
+09:53:39.066 [TEST    ] [AFTER] writer restarted; replaying the same message a third time (state must survive)
+  --- [AFTER] writer log
+      09:53:35.979 [writer-1] RECV  topic=s3170_tasks partition=1 offset=63 correlation_id=dup-after-1030095328
+      09:53:35.984 [writer-1] SEND  topic=s3170_drafts partition=0 offset=143 correlation_id=dup-after-1030095328
+      09:53:35.986 [writer-1] COMMIT offset 64 on partition 1 (after successful processing)
+      09:53:35.986 [writer-1] RECV  topic=s3170_tasks partition=1 offset=64 correlation_id=dup-after-1030095328
+      09:53:35.986 [writer-1] DUPLICATE correlation_id=dup-after-1030095328 already completed - ignored, no side effect
+      --- writer restarted ---
+      09:53:39.363 [writer-1] Consumer is ready and listening... group=s3170_dup_after_1030095328 partitions=[0, 1] mode=stub idempotent=1 commit=after max_retries=3 dlq=1
+      09:53:39.478 [writer-1] RECV  topic=s3170_tasks partition=1 offset=65 correlation_id=dup-after-1030095328
+      09:53:39.478 [writer-1] DUPLICATE correlation_id=dup-after-1030095328 already completed - ignored, no side effect
+09:53:42.968 [TEST    ] [AFTER] drafts on s3170_drafts for this correlation_id: 1   side effects recorded: 1
+09:53:43.638 [TEST    ] RESULT duplicate: before=2 drafts, after=1 draft -> PASS
+
+====================================================================================================
+PART 3.II  CONSUMER DEATH - kill the Writer mid-processing
+====================================================================================================
+09:53:44.054 [TEST    ] [BEFORE] commit mode = AUTO (offset committed on a timer, before the work is done)
+09:53:45.769 [TEST    ] [BEFORE] sent a task that takes 8 s to process (correlation_id=death-before-1030095328)
+09:53:47.478 [TEST    ] writer-1: SIGKILL sent (process died without cleaning up)
+  --- [BEFORE] consumer group right after the kill (CURRENT-OFFSET = committed, LAG = unprocessed)
+      GROUP                         TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                  HOST            CLIENT-ID
+      s3170_death_before_1030095328 s3170_tasks     0          104             104             0               rdkafka-fd101d45-15c7-4ab9-990b-98cd73e64027 /192.168.65.1   rdkafka
+      s3170_death_before_1030095328 s3170_tasks     1          -               66              -               rdkafka-fd101d45-15c7-4ab9-990b-98cd73e64027 /192.168.65.1   rdkafka
+09:53:49.388 [TEST    ] [BEFORE] restarting the Writer (same group, same state)
+  --- [BEFORE] restarted writer log
+      09:53:56.967 [writer-1] Consumer is ready and listening... group=s3170_death_before_1030095328 partitions=[0, 1] mode=stub idempotent=1 commit=auto max_retries=3 dlq=1
+  --- [BEFORE] consumer group after the restart
+      GROUP                         TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                  HOST            CLIENT-ID
+      s3170_death_before_1030095328 s3170_tasks     0          104             104             0               rdkafka-35381ebe-4d4b-4388-85ef-5fa5fb2b2841 /192.168.65.1   rdkafka
+      s3170_death_before_1030095328 s3170_tasks     1          -               66              -               rdkafka-35381ebe-4d4b-4388-85ef-5fa5fb2b2841 /192.168.65.1   rdkafka
+09:54:40.827 [TEST    ] [BEFORE] message redelivered after restart: False; drafts for it: 0
+09:54:42.115 [TEST    ] [AFTER] commit mode = AFTER successful processing
+09:54:43.829 [TEST    ] [AFTER] sent a task that takes 8 s to process (correlation_id=death-after-1030095328)
+09:54:45.337 [TEST    ] writer-1: SIGKILL sent (process died without cleaning up)
+  --- [AFTER] consumer group right after the kill (CURRENT-OFFSET = committed, LAG = unprocessed)
+      GROUP                        TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                  HOST            CLIENT-ID
+      s3170_death_after_1030095328 s3170_tasks     0          105             106             1               rdkafka-0bf00b59-61a7-4ff7-a05c-471cb150cd2e /192.168.65.1   rdkafka
+      s3170_death_after_1030095328 s3170_tasks     1          -               66              -               rdkafka-0bf00b59-61a7-4ff7-a05c-471cb150cd2e /192.168.65.1   rdkafka
+09:54:47.378 [TEST    ] [AFTER] restarting the Writer (same group, same state)
+  --- [AFTER] restarted writer log
+      09:54:55.079 [writer-1] Consumer is ready and listening... group=s3170_death_after_1030095328 partitions=[0, 1] mode=stub idempotent=1 commit=after max_retries=3 dlq=1
+      09:54:55.079 [writer-1] RECV  topic=s3170_tasks partition=0 offset=105 correlation_id=death-after-1030095328
+      09:54:55.079 [writer-1] WORKING correlation_id=death-after-1030095328 - busy for 8000 ms (kill this process now to simulate a crash mid-work)
+      09:55:03.088 [writer-1] SEND  topic=s3170_drafts partition=0 offset=146 correlation_id=death-after-1030095328
+      09:55:03.091 [writer-1] COMMIT offset 106 on partition 0 (after successful processing)
+  --- [AFTER] consumer group after the restart
+      GROUP                        TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                  HOST            CLIENT-ID
+      s3170_death_after_1030095328 s3170_tasks     0          106             106             0               rdkafka-3c275b16-2a3c-4733-af2c-fed98cc5fbb7 /192.168.65.1   rdkafka
+      s3170_death_after_1030095328 s3170_tasks     1          -               66              -               rdkafka-3c275b16-2a3c-4733-af2c-fed98cc5fbb7 /192.168.65.1   rdkafka
+09:55:09.048 [TEST    ] [AFTER] message redelivered after restart: True; drafts for it: 1
+09:55:09.281 [TEST    ] RESULT death: before -> message lost (0 drafts); after -> redelivered and completed (1 draft) -> PASS
+
+====================================================================================================
+PART 3.III  POISON MESSAGE - bounded retries, dead-letter topic, no head-of-line blocking
+====================================================================================================
+09:55:09.695 [TEST    ] [BEFORE] unbounded retries, no dead-letter topic
+09:55:09.703 [TEST    ] [BEFORE] sent to partition 0: a poison task, then a GOOD task (after-poison-before-1030095328)
+  --- [BEFORE] writer log (retries / dead-letter / what happened next)
+      09:55:09.702 [writer-1] RECV  topic=s3170_tasks partition=0 offset=106 correlation_id=poison-before-1030095328
+      09:55:09.702 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 1 (no limit) error=task has no plan
+      09:55:10.705 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 2 (no limit) error=task has no plan
+      09:55:11.709 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 3 (no limit) error=task has no plan
+      09:55:12.714 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 4 (no limit) error=task has no plan
+      09:55:13.718 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 5 (no limit) error=task has no plan
+      09:55:14.722 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 6 (no limit) error=task has no plan
+      09:55:15.727 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 7 (no limit) error=task has no plan
+      09:55:16.731 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 8 (no limit) error=task has no plan
+      09:55:17.733 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 9 (no limit) error=task has no plan
+      09:55:18.738 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 10 (no limit) error=task has no plan
+      09:55:19.741 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 11 (no limit) error=task has no plan
+      09:55:20.745 [writer-1] RETRY topic=s3170_tasks partition=0 offset=106 attempt 12 (no limit) error=task has no plan
+09:55:24.954 [TEST    ] [BEFORE] retries logged: 12; GOOD task processed: False; dead-letter records: 0
+09:55:24.956 [TEST    ] writer-1: SIGKILL sent (process died without cleaning up)
+09:55:25.370 [TEST    ] [AFTER] MAX_RETRIES=3 + s3170_dead_letter
+09:55:25.375 [TEST    ] [AFTER] sent to partition 0: a poison task, an unparseable message, then a GOOD task (after-poison-after-1030095328)
+  --- [AFTER] writer log (retries / dead-letter / what happened next)
+      09:55:25.373 [writer-1] RECV  topic=s3170_tasks partition=0 offset=108 correlation_id=poison-after-1030095328
+      09:55:25.373 [writer-1] RETRY topic=s3170_tasks partition=0 offset=108 attempt 1/3 error=task has no plan
+      09:55:25.678 [writer-1] RETRY topic=s3170_tasks partition=0 offset=108 attempt 2/3 error=task has no plan
+      09:55:26.281 [writer-1] GIVE UP topic=s3170_tasks partition=0 offset=108 after 3 attempts error=task has no plan
+      09:55:26.284 [writer-1] DEAD-LETTER topic=s3170_dead_letter partition=0 offset=4 correlation_id=poison-after-1030095328
+      09:55:26.286 [writer-1] COMMIT offset 109 on partition 0 (after successful processing)
+      09:55:26.287 [writer-1] RECV  topic=s3170_tasks partition=0 offset=109 correlation_id=None
+      09:55:26.287 [writer-1] RETRY topic=s3170_tasks partition=0 offset=109 attempt 1/3 error=message is not valid JSON
+      09:55:26.591 [writer-1] RETRY topic=s3170_tasks partition=0 offset=109 attempt 2/3 error=message is not valid JSON
+      09:55:27.194 [writer-1] GIVE UP topic=s3170_tasks partition=0 offset=109 after 3 attempts error=message is not valid JSON
+      09:55:27.196 [writer-1] DEAD-LETTER topic=s3170_dead_letter partition=0 offset=5 correlation_id=None
+      09:55:27.198 [writer-1] COMMIT offset 110 on partition 0 (after successful processing)
+      09:55:27.198 [writer-1] RECV  topic=s3170_tasks partition=0 offset=110 correlation_id=after-poison-after-1030095328
+      09:55:27.200 [writer-1] SEND  topic=s3170_drafts partition=0 offset=147 correlation_id=after-poison-after-1030095328
+      09:55:27.202 [writer-1] COMMIT offset 111 on partition 0 (after successful processing)
+09:55:34.716 [TEST    ] [AFTER] retries logged: 4; GOOD task processed: True; dead-letter records: 2
+  --- dead-letter topic contents
+      {"correlation_id": "poison-after-1030095328", "error": "task has no plan", "attempts": 3, "source": {"topic": "s3170_tasks", "partition": 0, "offset": 108}, "_partition": 0, "_offset": 4}
+      {"correlation_id": null, "error": "message is not valid JSON", "attempts": 3, "source": {"topic": "s3170_tasks", "partition": 0, "offset": 109}, "_partition": 0, "_offset": 5}
+09:55:35.389 [TEST    ] RESULT poison: before -> later message BLOCKED; after -> dead-lettered and later message processed -> PASS
+
+====================================================================================================
+PART 3.IV  ORDERING - 20 related messages from VERIFY_SEED=263170, 2 partitions, 2 writers in one group
+====================================================================================================
+  --- [UNKEYED] the two writers' partition assignments
+      09:55:35.672 [writer-A] Consumer is ready and listening... group=s3170_ord_unkeyed_1030095328 partitions=[0] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+      09:55:35.672 [writer-B] Consumer is ready and listening... group=s3170_ord_unkeyed_1030095328 partitions=[1] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:55:38.840 [TEST    ] [UNKEYED] sent 20 messages (NO key, round-robin); partitions used per entity: INC-2393:[0, 1], INC-4412:[0, 1], INC-5457:[0, 1], INC-8206:[0, 1], INC-8446:[1]
+  --- [UNKEYED] order in which messages were PROCESSED (time-sorted across both writers)
+      #  time          writer    partition  entity     seq
+      1  09:55:38.968  writer-B          1  INC-8446     1
+      2  09:55:39.141  writer-A          0  INC-5457     1
+      3  09:55:39.234  writer-A          0  INC-2393     1
+      4  09:55:39.353  writer-B          1  INC-5457     2
+      5  09:55:39.513  writer-B          1  INC-8206     1
+      6  09:55:39.516  writer-A          0  INC-4412     1
+      7  09:55:39.574  writer-B          1  INC-2393     3
+      8  09:55:39.822  writer-B          1  INC-5457     3
+      9  09:55:39.849  writer-A          0  INC-2393     2
+     10  09:55:39.943  writer-B          1  INC-5457     5
+     11  09:55:40.149  writer-A          0  INC-4412     2
+     12  09:55:40.212  writer-B          1  INC-4412     3
+     13  09:55:40.325  writer-B          1  INC-2393     4
+     14  09:55:40.437  writer-A          0  INC-5457     4
+     15  09:55:40.601  writer-B          1  INC-2393     5
+     16  09:55:40.665  writer-B          1  INC-4412     5
+     17  09:55:40.799  writer-A          0  INC-5457     6
+     18  09:55:41.126  writer-A          0  INC-8206     2
+     19  09:55:41.173  writer-A          0  INC-4412     4
+     20  09:55:41.291  writer-A          0  INC-2393     6
+09:55:41.367 [TEST    ] [UNKEYED] INC-2393: partitions=[0, 1] processed seq order=[1, 3, 2, 4, 5, 6] -> OUT OF ORDER
+09:55:41.367 [TEST    ] [UNKEYED] INC-4412: partitions=[0, 1] processed seq order=[1, 2, 3, 5, 4] -> OUT OF ORDER
+09:55:41.367 [TEST    ] [UNKEYED] INC-5457: partitions=[0, 1] processed seq order=[1, 2, 3, 5, 4, 6] -> OUT OF ORDER
+09:55:41.367 [TEST    ] [UNKEYED] INC-8206: partitions=[0, 1] processed seq order=[1, 2] -> IN ORDER
+09:55:41.367 [TEST    ] [UNKEYED] INC-8446: partitions=[1] processed seq order=[1] -> IN ORDER
+  --- [KEYED] the two writers' partition assignments
+      09:55:43.027 [writer-A] Consumer is ready and listening... group=s3170_ord_keyed_1030095328 partitions=[1] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+      09:55:43.027 [writer-B] Consumer is ready and listening... group=s3170_ord_keyed_1030095328 partitions=[0] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:55:46.186 [TEST    ] [KEYED] sent 20 messages (key = entity); partitions used per entity: INC-2393:[1], INC-4412:[0], INC-5457:[0], INC-8206:[0], INC-8446:[0]
+  --- [KEYED] order in which messages were PROCESSED (time-sorted across both writers)
+      #  time          writer    partition  entity     seq
+      1  09:55:46.260  writer-A          1  INC-2393     1
+      2  09:55:46.483  writer-B          0  INC-5457     1
+      3  09:55:46.594  writer-A          1  INC-2393     2
+      4  09:55:46.629  writer-B          0  INC-8446     1
+      5  09:55:46.655  writer-A          1  INC-2393     3
+      6  09:55:46.766  writer-A          1  INC-2393     4
+      7  09:55:47.012  writer-B          0  INC-5457     2
+      8  09:55:47.041  writer-A          1  INC-2393     5
+      9  09:55:47.157  writer-A          1  INC-2393     6
+     10  09:55:47.296  writer-B          0  INC-4412     1
+     11  09:55:47.457  writer-B          0  INC-8206     1
+     12  09:55:47.758  writer-B          0  INC-4412     2
+     13  09:55:48.007  writer-B          0  INC-5457     3
+     14  09:55:48.297  writer-B          0  INC-5457     4
+     15  09:55:48.424  writer-B          0  INC-5457     5
+     16  09:55:48.788  writer-B          0  INC-5457     6
+     17  09:55:49.058  writer-B          0  INC-4412     3
+     18  09:55:49.386  writer-B          0  INC-8206     2
+     19  09:55:49.437  writer-B          0  INC-4412     4
+     20  09:55:49.502  writer-B          0  INC-4412     5
+09:55:49.720 [TEST    ] [KEYED] INC-2393: partitions=[1] processed seq order=[1, 2, 3, 4, 5, 6] -> IN ORDER
+09:55:49.720 [TEST    ] [KEYED] INC-4412: partitions=[0] processed seq order=[1, 2, 3, 4, 5] -> IN ORDER
+09:55:49.720 [TEST    ] [KEYED] INC-5457: partitions=[0] processed seq order=[1, 2, 3, 4, 5, 6] -> IN ORDER
+09:55:49.720 [TEST    ] [KEYED] INC-8206: partitions=[0] processed seq order=[1, 2] -> IN ORDER
+09:55:49.720 [TEST    ] [KEYED] INC-8446: partitions=[0] processed seq order=[1] -> IN ORDER
+09:55:50.569 [TEST    ] RESULT ordering: unkeyed -> 3 of 5 entities out of order; keyed -> 0 out of order, 5/5 entities in a single partition -> PASS
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+09:55:50.570 [TEST    ] duplicate  PASS
+09:55:50.570 [TEST    ] death      PASS
+09:55:50.570 [TEST    ] poison     PASS
+09:55:50.570 [TEST    ] ordering   PASS
+09:55:50.570 [TEST    ] wrote /Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/reports/hw08/raw/failure_tests_summary.json

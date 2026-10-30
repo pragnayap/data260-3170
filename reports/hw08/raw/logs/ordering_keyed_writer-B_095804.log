@@ -1,0 +1,20 @@
+09:58:04.817 [writer-B] Consumer is ready and listening... group=s3170_ord_keyed_1030095550 partitions=[1] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:58:07.957 [writer-B] RECV  topic=s3170_tasks partition=1 offset=92 correlation_id=ord-02-1030095550 entity=INC-2393 seq=1
+09:58:08.045 [writer-B] SEND  topic=s3170_drafts partition=0 offset=215 correlation_id=ord-02-1030095550
+09:58:08.048 [writer-B] COMMIT offset 93 on partition 1 (after successful processing)
+09:58:08.048 [writer-B] RECV  topic=s3170_tasks partition=1 offset=93 correlation_id=ord-06-1030095550 entity=INC-2393 seq=2
+09:58:08.376 [writer-B] SEND  topic=s3170_drafts partition=0 offset=217 correlation_id=ord-06-1030095550
+09:58:08.379 [writer-B] COMMIT offset 94 on partition 1 (after successful processing)
+09:58:08.379 [writer-B] RECV  topic=s3170_tasks partition=1 offset=94 correlation_id=ord-07-1030095550 entity=INC-2393 seq=3
+09:58:08.439 [writer-B] SEND  topic=s3170_drafts partition=0 offset=219 correlation_id=ord-07-1030095550
+09:58:08.442 [writer-B] COMMIT offset 95 on partition 1 (after successful processing)
+09:58:08.442 [writer-B] RECV  topic=s3170_tasks partition=1 offset=95 correlation_id=ord-15-1030095550 entity=INC-2393 seq=4
+09:58:08.552 [writer-B] SEND  topic=s3170_drafts partition=0 offset=220 correlation_id=ord-15-1030095550
+09:58:08.555 [writer-B] COMMIT offset 96 on partition 1 (after successful processing)
+09:58:08.555 [writer-B] RECV  topic=s3170_tasks partition=1 offset=96 correlation_id=ord-17-1030095550 entity=INC-2393 seq=5
+09:58:08.830 [writer-B] SEND  topic=s3170_drafts partition=0 offset=222 correlation_id=ord-17-1030095550
+09:58:08.833 [writer-B] COMMIT offset 97 on partition 1 (after successful processing)
+09:58:08.833 [writer-B] RECV  topic=s3170_tasks partition=1 offset=97 correlation_id=ord-18-1030095550 entity=INC-2393 seq=6
+09:58:08.950 [writer-B] SEND  topic=s3170_drafts partition=0 offset=223 correlation_id=ord-18-1030095550
+09:58:08.952 [writer-B] COMMIT offset 98 on partition 1 (after successful processing)
+09:58:13.026 [writer-B] writer stopped

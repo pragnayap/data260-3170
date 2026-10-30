@@ -1,0 +1,34 @@
+09:51:51.579 [writer-A] Consumer is ready and listening... group=s3170_ord_unkeyed_1030094914 partitions=[1] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:51:54.716 [writer-A] RECV  topic=s3170_tasks partition=1 offset=45 correlation_id=ord-01-1030094914 entity=INC-8446 seq=1
+09:51:54.860 [writer-A] SEND  topic=s3170_drafts partition=0 offset=100 correlation_id=ord-01-1030094914
+09:51:54.863 [writer-A] COMMIT offset 46 on partition 1 (after successful processing)
+09:51:54.863 [writer-A] RECV  topic=s3170_tasks partition=1 offset=46 correlation_id=ord-03-1030094914 entity=INC-5457 seq=2
+09:51:55.244 [writer-A] SEND  topic=s3170_drafts partition=0 offset=103 correlation_id=ord-03-1030094914
+09:51:55.246 [writer-A] COMMIT offset 47 on partition 1 (after successful processing)
+09:51:55.247 [writer-A] RECV  topic=s3170_tasks partition=1 offset=47 correlation_id=ord-05-1030094914 entity=INC-8206 seq=1
+09:51:55.401 [writer-A] SEND  topic=s3170_drafts partition=0 offset=104 correlation_id=ord-05-1030094914
+09:51:55.403 [writer-A] RETRY topic=s3170_tasks partition=1 offset=47 attempt 1/3 error=[Errno 2] No such file or directory: '/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/data/hw08_state/ordering_1030094914/processed_s3170_ord_unkeyed_1030094914.tmp' -> '/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/data/hw08_state/ordering_1030094914/processed_s3170_ord_unkeyed_1030094914.json'
+09:51:55.864 [writer-A] SEND  topic=s3170_drafts partition=0 offset=107 correlation_id=ord-05-1030094914
+09:51:55.866 [writer-A] COMMIT offset 48 on partition 1 (after successful processing)
+09:51:55.866 [writer-A] RECV  topic=s3170_tasks partition=1 offset=48 correlation_id=ord-07-1030094914 entity=INC-2393 seq=3
+09:51:55.924 [writer-A] SEND  topic=s3170_drafts partition=0 offset=108 correlation_id=ord-07-1030094914
+09:51:55.926 [writer-A] COMMIT offset 49 on partition 1 (after successful processing)
+09:51:55.926 [writer-A] RECV  topic=s3170_tasks partition=1 offset=49 correlation_id=ord-09-1030094914 entity=INC-5457 seq=3
+09:51:56.172 [writer-A] SEND  topic=s3170_drafts partition=0 offset=110 correlation_id=ord-09-1030094914
+09:51:56.174 [writer-A] COMMIT offset 50 on partition 1 (after successful processing)
+09:51:56.174 [writer-A] RECV  topic=s3170_tasks partition=1 offset=50 correlation_id=ord-11-1030094914 entity=INC-5457 seq=5
+09:51:56.294 [writer-A] SEND  topic=s3170_drafts partition=0 offset=111 correlation_id=ord-11-1030094914
+09:51:56.297 [writer-A] COMMIT offset 51 on partition 1 (after successful processing)
+09:51:56.297 [writer-A] RECV  topic=s3170_tasks partition=1 offset=51 correlation_id=ord-13-1030094914 entity=INC-4412 seq=3
+09:51:56.565 [writer-A] SEND  topic=s3170_drafts partition=0 offset=113 correlation_id=ord-13-1030094914
+09:51:56.567 [writer-A] COMMIT offset 52 on partition 1 (after successful processing)
+09:51:56.567 [writer-A] RECV  topic=s3170_tasks partition=1 offset=52 correlation_id=ord-15-1030094914 entity=INC-2393 seq=4
+09:51:56.678 [writer-A] SEND  topic=s3170_drafts partition=0 offset=114 correlation_id=ord-15-1030094914
+09:51:56.680 [writer-A] COMMIT offset 53 on partition 1 (after successful processing)
+09:51:56.680 [writer-A] RECV  topic=s3170_tasks partition=1 offset=53 correlation_id=ord-17-1030094914 entity=INC-2393 seq=5
+09:51:56.951 [writer-A] SEND  topic=s3170_drafts partition=0 offset=116 correlation_id=ord-17-1030094914
+09:51:56.953 [writer-A] COMMIT offset 54 on partition 1 (after successful processing)
+09:51:56.954 [writer-A] RECV  topic=s3170_tasks partition=1 offset=54 correlation_id=ord-19-1030094914 entity=INC-4412 seq=5
+09:51:57.015 [writer-A] SEND  topic=s3170_drafts partition=0 offset=118 correlation_id=ord-19-1030094914
+09:51:57.018 [writer-A] COMMIT offset 55 on partition 1 (after successful processing)
+09:51:58.041 [writer-A] writer stopped

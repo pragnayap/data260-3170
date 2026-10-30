@@ -1,0 +1,218 @@
+{
+  "run": "1030094620",
+  "verify_seed": 263170,
+  "results": {
+    "duplicate": {
+      "before": {
+        "correlation_id": "dup-before-1030094620",
+        "messages_sent": 2,
+        "drafts_produced": 2,
+        "side_effects": 2,
+        "duplicates_ignored": 0
+      },
+      "after": {
+        "correlation_id": "dup-after-1030094620",
+        "messages_sent": 3,
+        "drafts_produced": 1,
+        "side_effects": 1,
+        "duplicates_ignored": 2
+      },
+      "passed": true
+    },
+    "death": {
+      "before": {
+        "commit_mode": "auto",
+        "redelivered_after_restart": false,
+        "drafts_produced": 0,
+        "group_after_kill": [
+          "GROUP                         TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                  HOST            CLIENT-ID",
+          "s3170_death_before_1030094620 s3170_tasks     0          35              35              0               rdkafka-e4e83b91-54e7-4ef6-8cf7-5ede60add7b1 /192.168.65.1   rdkafka",
+          "s3170_death_before_1030094620 s3170_tasks     1          -               27              -               rdkafka-e4e83b91-54e7-4ef6-8cf7-5ede60add7b1 /192.168.65.1   rdkafka"
+        ],
+        "group_after_restart": [
+          "GROUP                         TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                  HOST            CLIENT-ID",
+          "s3170_death_before_1030094620 s3170_tasks     0          35              35              0               rdkafka-accf3076-5856-4d2c-9c43-c1edc9faecdd /192.168.65.1   rdkafka",
+          "s3170_death_before_1030094620 s3170_tasks     1          -               27              -               rdkafka-accf3076-5856-4d2c-9c43-c1edc9faecdd /192.168.65.1   rdkafka"
+        ]
+      },
+      "after": {
+        "commit_mode": "after",
+        "redelivered_after_restart": true,
+        "drafts_produced": 1,
+        "group_after_kill": [
+          "GROUP                        TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                  HOST            CLIENT-ID",
+          "s3170_death_after_1030094620 s3170_tasks     0          36              37              1               rdkafka-0f476c02-28b4-4d1d-9bb4-dc05a6a45882 /192.168.65.1   rdkafka",
+          "s3170_death_after_1030094620 s3170_tasks     1          -               27              -               rdkafka-0f476c02-28b4-4d1d-9bb4-dc05a6a45882 /192.168.65.1   rdkafka"
+        ],
+        "group_after_restart": [
+          "GROUP                        TOPIC           PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                  HOST            CLIENT-ID",
+          "s3170_death_after_1030094620 s3170_tasks     0          37              37              0               rdkafka-fdf7dc27-9f34-4f3c-a0b0-90f40d79bb73 /192.168.65.1   rdkafka",
+          "s3170_death_after_1030094620 s3170_tasks     1          -               27              -               rdkafka-fdf7dc27-9f34-4f3c-a0b0-90f40d79bb73 /192.168.65.1   rdkafka"
+        ]
+      },
+      "passed": true
+    },
+    "poison": {
+      "before": {
+        "retries_logged": 12,
+        "good_message_processed": false,
+        "dead_letter_records": 0,
+        "max_retries": null
+      },
+      "after": {
+        "retries_logged": 4,
+        "good_message_processed": true,
+        "dead_letter_records": 1,
+        "max_retries": 3
+      },
+      "passed": true
+    },
+    "ordering": {
+      "before": {
+        "keyed": false,
+        "messages_processed": 20,
+        "entities_out_of_order": 3,
+        "entities_in_one_partition": 1,
+        "entities": 5,
+        "per_entity": {
+          "INC-2393": {
+            "processed_seq_order": [
+              1,
+              3,
+              2,
+              4,
+              5,
+              6
+            ],
+            "partitions": [
+              0,
+              1
+            ],
+            "in_order": false
+          },
+          "INC-4412": {
+            "processed_seq_order": [
+              1,
+              2,
+              3,
+              5,
+              4
+            ],
+            "partitions": [
+              0,
+              1
+            ],
+            "in_order": false
+          },
+          "INC-5457": {
+            "processed_seq_order": [
+              1,
+              2,
+              3,
+              5,
+              4,
+              6
+            ],
+            "partitions": [
+              0,
+              1
+            ],
+            "in_order": false
+          },
+          "INC-8206": {
+            "processed_seq_order": [
+              1,
+              2
+            ],
+            "partitions": [
+              0,
+              1
+            ],
+            "in_order": true
+          },
+          "INC-8446": {
+            "processed_seq_order": [
+              1
+            ],
+            "partitions": [
+              1
+            ],
+            "in_order": true
+          }
+        },
+        "csv": "reports/hw08/raw/ordering_unkeyed.csv"
+      },
+      "after": {
+        "keyed": true,
+        "messages_processed": 20,
+        "entities_out_of_order": 0,
+        "entities_in_one_partition": 5,
+        "entities": 5,
+        "per_entity": {
+          "INC-2393": {
+            "processed_seq_order": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "partitions": [
+              1
+            ],
+            "in_order": true
+          },
+          "INC-4412": {
+            "processed_seq_order": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "partitions": [
+              0
+            ],
+            "in_order": true
+          },
+          "INC-5457": {
+            "processed_seq_order": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "partitions": [
+              0
+            ],
+            "in_order": true
+          },
+          "INC-8206": {
+            "processed_seq_order": [
+              1,
+              2
+            ],
+            "partitions": [
+              0
+            ],
+            "in_order": true
+          },
+          "INC-8446": {
+            "processed_seq_order": [
+              1
+            ],
+            "partitions": [
+              0
+            ],
+            "in_order": true
+          }
+        },
+        "csv": "reports/hw08/raw/ordering_keyed.csv"
+      },
+      "passed": true
+    }
+  }
+}

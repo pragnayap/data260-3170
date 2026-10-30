@@ -1,0 +1,20 @@
+09:51:58.530 [writer-A] Consumer is ready and listening... group=s3170_ord_keyed_1030094914 partitions=[1] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:52:01.664 [writer-A] RECV  topic=s3170_tasks partition=1 offset=55 correlation_id=ord-02-1030094914 entity=INC-2393 seq=1
+09:52:01.755 [writer-A] SEND  topic=s3170_drafts partition=0 offset=121 correlation_id=ord-02-1030094914
+09:52:01.758 [writer-A] COMMIT offset 56 on partition 1 (after successful processing)
+09:52:01.758 [writer-A] RECV  topic=s3170_tasks partition=1 offset=56 correlation_id=ord-06-1030094914 entity=INC-2393 seq=2
+09:52:02.089 [writer-A] SEND  topic=s3170_drafts partition=0 offset=123 correlation_id=ord-06-1030094914
+09:52:02.092 [writer-A] COMMIT offset 57 on partition 1 (after successful processing)
+09:52:02.092 [writer-A] RECV  topic=s3170_tasks partition=1 offset=57 correlation_id=ord-07-1030094914 entity=INC-2393 seq=3
+09:52:02.153 [writer-A] SEND  topic=s3170_drafts partition=0 offset=125 correlation_id=ord-07-1030094914
+09:52:02.156 [writer-A] COMMIT offset 58 on partition 1 (after successful processing)
+09:52:02.156 [writer-A] RECV  topic=s3170_tasks partition=1 offset=58 correlation_id=ord-15-1030094914 entity=INC-2393 seq=4
+09:52:02.267 [writer-A] SEND  topic=s3170_drafts partition=0 offset=126 correlation_id=ord-15-1030094914
+09:52:02.270 [writer-A] COMMIT offset 59 on partition 1 (after successful processing)
+09:52:02.270 [writer-A] RECV  topic=s3170_tasks partition=1 offset=59 correlation_id=ord-17-1030094914 entity=INC-2393 seq=5
+09:52:02.544 [writer-A] SEND  topic=s3170_drafts partition=0 offset=128 correlation_id=ord-17-1030094914
+09:52:02.547 [writer-A] COMMIT offset 60 on partition 1 (after successful processing)
+09:52:02.547 [writer-A] RECV  topic=s3170_tasks partition=1 offset=60 correlation_id=ord-18-1030094914 entity=INC-2393 seq=6
+09:52:02.664 [writer-A] SEND  topic=s3170_drafts partition=0 offset=129 correlation_id=ord-18-1030094914
+09:52:02.667 [writer-A] COMMIT offset 61 on partition 1 (after successful processing)
+09:52:05.730 [writer-A] writer stopped

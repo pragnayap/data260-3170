@@ -1,0 +1,14 @@
+Pragnaya Priyadarshini (Lucky) - HW8 - docker evidence
+$ docker ps
+NAMES          IMAGE                 STATUS                    PORTS
+s3170_worker   data260-3170-worker   Up 19 minutes             
+s3170_api      data260-3170-api      Up 19 minutes             0.0.0.0:8470->8470/tcp, [::]:8470->8470/tcp
+s3170_kafka    apache/kafka:3.8.0    Up 20 minutes (healthy)   0.0.0.0:9092->9092/tcp, [::]:9092->9092/tcp
+
+$ docker logs s3170_worker | grep -i "ready"
+09:34:46.455 [WORKER  ] subscribed to s3170_entity_requests; replies go to the topic named by each request's reply_to
+09:34:46.520 [WORKER  ] Consumer is ready and listening...
+
+$ docker logs s3170_api | grep started
+09:34:46.938 [API     ] FastAPI server started at http://127.0.0.1:8470
+INFO:     Uvicorn running on http://0.0.0.0:8470 (Press CTRL+C to quit)

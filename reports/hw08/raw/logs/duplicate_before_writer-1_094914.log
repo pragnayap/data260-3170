@@ -1,0 +1,8 @@
+09:49:15.287 [writer-1] Consumer is ready and listening... group=s3170_dup_before_1030094914 partitions=[0, 1] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:49:15.392 [writer-1] RECV  topic=s3170_tasks partition=0 offset=66 correlation_id=dup-before-1030094914
+09:49:15.405 [writer-1] SEND  topic=s3170_drafts partition=0 offset=94 correlation_id=dup-before-1030094914
+09:49:15.409 [writer-1] COMMIT offset 67 on partition 0 (after successful processing)
+09:49:15.409 [writer-1] RECV  topic=s3170_tasks partition=0 offset=67 correlation_id=dup-before-1030094914
+09:49:15.411 [writer-1] SEND  topic=s3170_drafts partition=0 offset=95 correlation_id=dup-before-1030094914
+09:49:15.415 [writer-1] COMMIT offset 68 on partition 0 (after successful processing)
+09:49:21.526 [writer-1] writer stopped

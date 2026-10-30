@@ -1,0 +1,18 @@
+09:57:31.741 [writer-1] Consumer is ready and listening... group=s3170_poison_before_1030095550 partitions=[0, 1] mode=stub idempotent=1 commit=after max_retries=0 dlq=0
+09:57:31.862 [writer-1] RECV  topic=s3170_tasks partition=0 offset=144 correlation_id=poison-before-1030095550
+09:57:31.862 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 1 (no limit) error=task has no plan
+09:57:32.865 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 2 (no limit) error=task has no plan
+09:57:33.868 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 3 (no limit) error=task has no plan
+09:57:34.873 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 4 (no limit) error=task has no plan
+09:57:35.873 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 5 (no limit) error=task has no plan
+09:57:36.877 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 6 (no limit) error=task has no plan
+09:57:37.882 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 7 (no limit) error=task has no plan
+09:57:38.887 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 8 (no limit) error=task has no plan
+09:57:39.893 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 9 (no limit) error=task has no plan
+09:57:40.897 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 10 (no limit) error=task has no plan
+09:57:41.903 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 11 (no limit) error=task has no plan
+09:57:42.907 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 12 (no limit) error=task has no plan
+09:57:43.910 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 13 (no limit) error=task has no plan
+09:57:44.911 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 14 (no limit) error=task has no plan
+09:57:45.915 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 15 (no limit) error=task has no plan
+09:57:46.919 [writer-1] RETRY topic=s3170_tasks partition=0 offset=144 attempt 16 (no limit) error=task has no plan

@@ -1,0 +1,33 @@
+09:57:57.839 [writer-B] Consumer is ready and listening... group=s3170_ord_unkeyed_1030095550 partitions=[0] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:58:00.967 [writer-B] RECV  topic=s3170_tasks partition=0 offset=149 correlation_id=ord-00-1030095550 entity=INC-5457 seq=1
+09:58:01.284 [writer-B] SEND  topic=s3170_drafts partition=0 offset=196 correlation_id=ord-00-1030095550
+09:58:01.287 [writer-B] COMMIT offset 150 on partition 0 (after successful processing)
+09:58:01.287 [writer-B] RECV  topic=s3170_tasks partition=0 offset=150 correlation_id=ord-02-1030095550 entity=INC-2393 seq=1
+09:58:01.376 [writer-B] SEND  topic=s3170_drafts partition=0 offset=197 correlation_id=ord-02-1030095550
+09:58:01.378 [writer-B] COMMIT offset 151 on partition 0 (after successful processing)
+09:58:01.378 [writer-B] RECV  topic=s3170_tasks partition=0 offset=151 correlation_id=ord-04-1030095550 entity=INC-4412 seq=1
+09:58:01.658 [writer-B] SEND  topic=s3170_drafts partition=0 offset=200 correlation_id=ord-04-1030095550
+09:58:01.660 [writer-B] COMMIT offset 152 on partition 0 (after successful processing)
+09:58:01.660 [writer-B] RECV  topic=s3170_tasks partition=0 offset=152 correlation_id=ord-06-1030095550 entity=INC-2393 seq=2
+09:58:01.991 [writer-B] SEND  topic=s3170_drafts partition=0 offset=203 correlation_id=ord-06-1030095550
+09:58:01.994 [writer-B] COMMIT offset 153 on partition 0 (after successful processing)
+09:58:01.994 [writer-B] RECV  topic=s3170_tasks partition=0 offset=153 correlation_id=ord-08-1030095550 entity=INC-4412 seq=2
+09:58:02.294 [writer-B] SEND  topic=s3170_drafts partition=0 offset=205 correlation_id=ord-08-1030095550
+09:58:02.296 [writer-B] COMMIT offset 154 on partition 0 (after successful processing)
+09:58:02.297 [writer-B] RECV  topic=s3170_tasks partition=0 offset=154 correlation_id=ord-10-1030095550 entity=INC-5457 seq=4
+09:58:02.583 [writer-B] SEND  topic=s3170_drafts partition=0 offset=208 correlation_id=ord-10-1030095550
+09:58:02.585 [writer-B] COMMIT offset 155 on partition 0 (after successful processing)
+09:58:02.586 [writer-B] RECV  topic=s3170_tasks partition=0 offset=155 correlation_id=ord-12-1030095550 entity=INC-5457 seq=6
+09:58:02.945 [writer-B] SEND  topic=s3170_drafts partition=0 offset=211 correlation_id=ord-12-1030095550
+09:58:02.947 [writer-B] COMMIT offset 156 on partition 0 (after successful processing)
+09:58:02.947 [writer-B] RECV  topic=s3170_tasks partition=0 offset=156 correlation_id=ord-14-1030095550 entity=INC-8206 seq=2
+09:58:03.273 [writer-B] SEND  topic=s3170_drafts partition=0 offset=212 correlation_id=ord-14-1030095550
+09:58:03.276 [writer-B] COMMIT offset 157 on partition 0 (after successful processing)
+09:58:03.276 [writer-B] RECV  topic=s3170_tasks partition=0 offset=157 correlation_id=ord-16-1030095550 entity=INC-4412 seq=4
+09:58:03.323 [writer-B] SEND  topic=s3170_drafts partition=0 offset=213 correlation_id=ord-16-1030095550
+09:58:03.325 [writer-B] COMMIT offset 158 on partition 0 (after successful processing)
+09:58:03.326 [writer-B] RECV  topic=s3170_tasks partition=0 offset=158 correlation_id=ord-18-1030095550 entity=INC-2393 seq=6
+09:58:03.441 [writer-B] SEND  topic=s3170_drafts partition=0 offset=214 correlation_id=ord-18-1030095550
+09:58:03.444 [writer-B] COMMIT offset 159 on partition 0 (after successful processing)
+09:58:03.897 [writer-B] Consumer is ready and listening... group=s3170_ord_unkeyed_1030095550 partitions=[0, 1] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:58:04.469 [writer-B] writer stopped

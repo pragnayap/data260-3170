@@ -70,3 +70,6 @@ pytest
 PyJWT>=2.8
 ruff
 pre-commit
+
+# HW8 - Kafka request/response, three-agent pipeline, failure tests
+confluent-kafka==2.16.1

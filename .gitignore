@@ -33,3 +33,6 @@ reports/hw06/memory_test/llm_cache.json
 
 # HW7: downloaded Capital Bikeshare zips (re-fetched by build_data.py)
 data/hw07_raw/
+
+# HW8: throwaway consumer state and verify logs
+data/hw08_state/

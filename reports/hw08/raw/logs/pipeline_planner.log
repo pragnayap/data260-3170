@@ -1,0 +1,4 @@
+09:35:16.893 [PLANNER ] ready - listening on s3170_inbox
+09:35:33.820 [PLANNER ] RECV  topic=s3170_inbox partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a question='What should a rider do when their bus is cancelled and the next one is an hour away?'
+09:38:03.478 [PLANNER ] PLAN  correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a steps=['Check for alternative transportation options like a taxi or ride-sharing service.', "Look for real-time updates on bus schedules or delays through the transit authority's app or website.", 'Contact the transit authority to inquire about possible rerouting or additional bus services.']
+09:38:03.505 [PLANNER ] SEND  topic=s3170_tasks partition=1 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a

@@ -1,0 +1,6 @@
+09:54:42.053 [writer-1] Consumer is ready and listening... group=s3170_death_after_1030095328 partitions=[0, 1] mode=stub idempotent=1 commit=after max_retries=3 dlq=1
+09:54:42.117 [writer-1] RECV  topic=s3170_tasks partition=0 offset=104 correlation_id=warmup-after-1030095328
+09:54:42.122 [writer-1] SEND  topic=s3170_drafts partition=0 offset=145 correlation_id=warmup-after-1030095328
+09:54:42.124 [writer-1] COMMIT offset 105 on partition 0 (after successful processing)
+09:54:43.829 [writer-1] RECV  topic=s3170_tasks partition=0 offset=105 correlation_id=death-after-1030095328
+09:54:43.829 [writer-1] WORKING correlation_id=death-after-1030095328 - busy for 8000 ms (kill this process now to simulate a crash mid-work)

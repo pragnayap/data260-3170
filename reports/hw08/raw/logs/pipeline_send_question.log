@@ -1,0 +1,14 @@
+Pragnaya Priyadarshini (Lucky) - HW8 - send_question.py
+09:35:33.819 [YOU     ] SEND  topic=s3170_inbox partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+09:35:33.819 [YOU     ] question: What should a rider do when their bus is cancelled and the next one is an hour away?
+09:38:31.615 [YOU     ] RECV  topic=s3170_final partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+
+====================================================================================================
+FINAL MESSAGE
+====================================================================================================
+{
+  "correlation_id": "b7ce8dd1-f4ac-4eeb-8183-174329d22e3a",
+  "status": "approved",
+  "answer": "If your bus is cancelled and the next one is an hour away, first check for real-time updates on bus schedules through the transit authority's app or website. Then, consider alternative transportation options like a taxi or ride-sharing service to minimize your wait time. You can also contact the transit authority to ask about possible rerouting or additional bus services that may be available.",
+  "reason": "draft passes length and content checks"
+}

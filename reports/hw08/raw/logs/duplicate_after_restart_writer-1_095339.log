@@ -1,0 +1,4 @@
+09:53:39.363 [writer-1] Consumer is ready and listening... group=s3170_dup_after_1030095328 partitions=[0, 1] mode=stub idempotent=1 commit=after max_retries=3 dlq=1
+09:53:39.478 [writer-1] RECV  topic=s3170_tasks partition=1 offset=65 correlation_id=dup-after-1030095328
+09:53:39.478 [writer-1] DUPLICATE correlation_id=dup-after-1030095328 already completed - ignored, no side effect
+09:53:43.579 [writer-1] writer stopped

@@ -1,0 +1,17 @@
+09:48:16.043 [writer-1] Consumer is ready and listening... group=s3170_poison_after_1030094620 partitions=[0, 1] mode=stub idempotent=1 commit=after max_retries=3 dlq=1
+09:48:16.166 [writer-1] RECV  topic=s3170_tasks partition=0 offset=39 correlation_id=poison-after-1030094620
+09:48:16.166 [writer-1] RETRY topic=s3170_tasks partition=0 offset=39 attempt 1/3 error=task has no plan
+09:48:16.466 [writer-1] RETRY topic=s3170_tasks partition=0 offset=39 attempt 2/3 error=task has no plan
+09:48:17.070 [writer-1] GIVE UP topic=s3170_tasks partition=0 offset=39 after 3 attempts error=task has no plan
+09:48:17.074 [writer-1] DEAD-LETTER topic=s3170_dead_letter partition=0 offset=0 correlation_id=poison-after-1030094620
+09:48:17.076 [writer-1] COMMIT offset 40 on partition 0 (after successful processing)
+09:48:17.076 [writer-1] RECV  topic=s3170_tasks partition=0 offset=40 correlation_id=None
+09:48:17.076 [writer-1] RETRY topic=s3170_tasks partition=0 offset=40 attempt 1/3 error=message is not valid JSON
+09:48:17.380 [writer-1] RETRY topic=s3170_tasks partition=0 offset=40 attempt 2/3 error=message is not valid JSON
+09:48:17.982 [writer-1] GIVE UP topic=s3170_tasks partition=0 offset=40 after 3 attempts error=message is not valid JSON
+09:48:17.983 [writer-1] DEAD-LETTER topic=s3170_dead_letter partition=0 offset=1 correlation_id=None
+09:48:17.985 [writer-1] COMMIT offset 41 on partition 0 (after successful processing)
+09:48:17.985 [writer-1] RECV  topic=s3170_tasks partition=0 offset=41 correlation_id=after-poison-after-1030094620
+09:48:17.987 [writer-1] SEND  topic=s3170_drafts partition=0 offset=53 correlation_id=after-poison-after-1030094620
+09:48:17.989 [writer-1] COMMIT offset 42 on partition 0 (after successful processing)
+09:48:26.163 [writer-1] writer stopped

@@ -1,0 +1,18 @@
+Pragnaya Priyadarshini (Lucky) - HW8 - Kafka topics (CLI)
+$ docker exec s3170_kafka kafka-topics.sh --list
+s3170_dead_letter
+s3170_drafts
+s3170_entity_requests
+s3170_entity_responses
+s3170_final
+s3170_inbox
+s3170_tasks
+
+$ docker exec s3170_kafka kafka-topics.sh --describe (partitions per topic)
+Topic: s3170_entity_requests	TopicId: ppdARBCVRZaecNrYVZLNcA	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+Topic: s3170_entity_responses	TopicId: felkOvKBTouSb8Bhp5q0-g	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+Topic: s3170_inbox	TopicId: 2QbMIvpuQCCaewD9UyqcpQ	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+Topic: s3170_tasks	TopicId: jGZPgdHlQpWSccKECc1xmg	PartitionCount: 2	ReplicationFactor: 1	Configs: 
+Topic: s3170_drafts	TopicId: FIwybb4QSuKvcmCJ21rxFw	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+Topic: s3170_final	TopicId: g4tjneysTb--9Y-PTcs9Hg	PartitionCount: 1	ReplicationFactor: 1	Configs: 
+Topic: s3170_dead_letter	TopicId: 2L11r7RHSuucWSnojAVZOg	PartitionCount: 1	ReplicationFactor: 1	Configs: 

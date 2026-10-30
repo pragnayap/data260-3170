@@ -1,0 +1,63 @@
+Pragnaya Priyadarshini (Lucky) - HW8 - homework_demo.py
+
+====================================================================================================
+STEPS 1-7: CREATE_INCIDENT
+====================================================================================================
+09:49:24.985 [DEMO    ] STEP 1  one correlation_id is created per request, before sending
+09:49:24.985 [DEMO    ] STEP 2-3 send CREATE_INCIDENT to the request topic and log the message
+09:49:24.992 [CLIENT  ] SEND  topic=s3170_entity_requests partition=0 offset=8 correlation_id=bada3b85-e170-410f-9c95-91dcb7ffc52d operation=CREATE_INCIDENT
+09:49:24.992 [CLIENT  ]       message: {"correlation_id": "bada3b85-e170-410f-9c95-91dcb7ffc52d", "reply_to": "s3170_entity_responses", "operation": "CREATE_INCIDENT", "data": {"routeId": "Line 22", "location": "Downtown Transit Center", "submitterEmail": "rider@example.com", "description": "Bus arrived 40 minutes late with no announcement or updated signage at the stop.", "category": "Delay", "agreeTerms": true}}
+09:49:25.032 [CLIENT  ] RECV  topic=s3170_entity_responses partition=0 offset=8 correlation_id=bada3b85-e170-410f-9c95-91dcb7ffc52d success=True
+09:49:25.032 [CLIENT  ]       message: {"correlation_id": "bada3b85-e170-410f-9c95-91dcb7ffc52d", "success": true, "incident_id": "de394178-0bdb-4749-a433-893555a4fc7b", "message": "Incident created"}
+09:49:25.032 [DEMO    ] STEP 4-5 worker received, processed and replied (its own log lines):
+      (worker container) 09:49:25.007 [WORKER  ] RECV  topic=s3170_entity_requests partition=0 offset=8 correlation_id=bada3b85-e170-410f-9c95-91dcb7ffc52d operation=CREATE_INCIDENT
+      (worker container) 09:49:25.019 [WORKER  ] PROCESS correlation_id=bada3b85-e170-410f-9c95-91dcb7ffc52d operation=CREATE_INCIDENT data={'routeId': 'Line 22', 'location': 'Downtown Transit Center', 'submitterEmail': 'rider@example.com', 'description': 'Bus arrived 40 minutes late with no announcement or updated signage at the stop.', 'category': 'Delay', 'agreeTerms': True}
+      (worker container) 09:49:25.031 [WORKER  ] REPLY topic=s3170_entity_responses partition=0 offset=8 correlation_id=bada3b85-e170-410f-9c95-91dcb7ffc52d success=True
+09:49:25.579 [DEMO    ] STEP 6  response received by the client (logged above)
+09:49:25.579 [DEMO    ] STEP 7  extracted incident_id=de394178-0bdb-4749-a433-893555a4fc7b
+
+====================================================================================================
+STEPS 8-10: GET_INCIDENT with that incident_id
+====================================================================================================
+09:49:25.579 [DEMO    ] STEP 8  send GET_INCIDENT
+09:49:25.580 [CLIENT  ] SEND  topic=s3170_entity_requests partition=0 offset=9 correlation_id=94942a83-4bf4-474d-ab12-0c4143cc87e3 operation=GET_INCIDENT
+09:49:25.580 [CLIENT  ]       message: {"correlation_id": "94942a83-4bf4-474d-ab12-0c4143cc87e3", "reply_to": "s3170_entity_responses", "operation": "GET_INCIDENT", "data": {"incident_id": "de394178-0bdb-4749-a433-893555a4fc7b"}}
+09:49:25.582 [CLIENT  ] RECV  topic=s3170_entity_responses partition=0 offset=9 correlation_id=94942a83-4bf4-474d-ab12-0c4143cc87e3 success=True
+09:49:25.582 [CLIENT  ]       message: {"correlation_id": "94942a83-4bf4-474d-ab12-0c4143cc87e3", "success": true, "incident": {"incident_id": "de394178-0bdb-4749-a433-893555a4fc7b", "routeId": "Line 22", "location": "Downtown Transit Center", "submitterEmail": "rider@example.com", "description": "Bus arrived 40 minutes late with no announcement or updated signage at the stop.", "category": "Delay", "agreeTerms": true}}
+09:49:25.582 [DEMO    ] STEP 9  worker received, processed and replied (its own log lines):
+      (worker container) 09:49:25.579 [WORKER  ] RECV  topic=s3170_entity_requests partition=0 offset=9 correlation_id=94942a83-4bf4-474d-ab12-0c4143cc87e3 operation=GET_INCIDENT
+      (worker container) 09:49:25.580 [WORKER  ] PROCESS correlation_id=94942a83-4bf4-474d-ab12-0c4143cc87e3 operation=GET_INCIDENT data={'incident_id': 'de394178-0bdb-4749-a433-893555a4fc7b'}
+      (worker container) 09:49:25.580 [WORKER  ] REPLY topic=s3170_entity_responses partition=0 offset=9 correlation_id=94942a83-4bf4-474d-ab12-0c4143cc87e3 success=True
+09:49:26.126 [DEMO    ] STEP 10 retrieved entity:
+{
+  "incident_id": "de394178-0bdb-4749-a433-893555a4fc7b",
+  "routeId": "Line 22",
+  "location": "Downtown Transit Center",
+  "submitterEmail": "rider@example.com",
+  "description": "Bus arrived 40 minutes late with no announcement or updated signage at the stop.",
+  "category": "Delay",
+  "agreeTerms": true
+}
+09:49:26.127 [DEMO    ] correlation_id sent     = 94942a83-4bf4-474d-ab12-0c4143cc87e3
+09:49:26.127 [DEMO    ] correlation_id received = 94942a83-4bf4-474d-ab12-0c4143cc87e3
+09:49:26.127 [DEMO    ] correlation_id preserved: True
+
+====================================================================================================
+ERROR PATHS (each error response still echoes its correlation_id)
+====================================================================================================
+09:49:26.127 [DEMO    ] -- unknown incident_id
+09:49:26.128 [CLIENT  ] SEND  topic=s3170_entity_requests partition=0 offset=10 correlation_id=c20a0bba-a9b4-462c-8769-6391fe5690e4 operation=GET_INCIDENT
+09:49:26.128 [CLIENT  ]       message: {"correlation_id": "c20a0bba-a9b4-462c-8769-6391fe5690e4", "reply_to": "s3170_entity_responses", "operation": "GET_INCIDENT", "data": {"incident_id": "does-not-exist"}}
+09:49:26.130 [CLIENT  ] RECV  topic=s3170_entity_responses partition=0 offset=10 correlation_id=c20a0bba-a9b4-462c-8769-6391fe5690e4 success=False
+09:49:26.130 [CLIENT  ]       message: {"correlation_id": "c20a0bba-a9b4-462c-8769-6391fe5690e4", "success": false, "error": "Incident not found"}
+09:49:26.130 [DEMO    ] -- unknown operation
+09:49:26.131 [CLIENT  ] SEND  topic=s3170_entity_requests partition=0 offset=11 correlation_id=5eb80674-9455-4619-96a4-467be63d2c38 operation=DELETE_INCIDENT
+09:49:26.131 [CLIENT  ]       message: {"correlation_id": "5eb80674-9455-4619-96a4-467be63d2c38", "reply_to": "s3170_entity_responses", "operation": "DELETE_INCIDENT", "data": {}}
+09:49:26.133 [CLIENT  ] RECV  topic=s3170_entity_responses partition=0 offset=11 correlation_id=5eb80674-9455-4619-96a4-467be63d2c38 success=False
+09:49:26.133 [CLIENT  ]       message: {"correlation_id": "5eb80674-9455-4619-96a4-467be63d2c38", "success": false, "error": "Unknown operation"}
+09:49:26.133 [DEMO    ] -- invalid entity (short description)
+09:49:26.135 [CLIENT  ] SEND  topic=s3170_entity_requests partition=0 offset=12 correlation_id=5a994c3d-3f2b-42bc-876b-64ef31468b08 operation=CREATE_INCIDENT
+09:49:26.135 [CLIENT  ]       message: {"correlation_id": "5a994c3d-3f2b-42bc-876b-64ef31468b08", "reply_to": "s3170_entity_responses", "operation": "CREATE_INCIDENT", "data": {"routeId": "Line 22", "location": "Downtown Transit Center", "submitterEmail": "rider@example.com", "description": "too short", "category": "Delay", "agreeTerms": true}}
+09:49:26.136 [CLIENT  ] RECV  topic=s3170_entity_responses partition=0 offset=12 correlation_id=5a994c3d-3f2b-42bc-876b-64ef31468b08 success=False
+09:49:26.136 [CLIENT  ]       message: {"correlation_id": "5a994c3d-3f2b-42bc-876b-64ef31468b08", "success": false, "error": "Field description must be longer than 25 characters"}
+09:49:26.138 [DEMO    ] RESULT: PASS (create ok, get ok, correlation_id preserved, errors clean)

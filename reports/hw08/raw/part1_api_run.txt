@@ -1,0 +1,33 @@
+# HW8 Part 1 - the FastAPI wrapper over HTTP (each call becomes a Kafka request/response)
+$ echo "Pragnaya Priyadarshini (Lucky) - HW8"
+Pragnaya Priyadarshini (Lucky) - HW8
+$ curl -i -X POST localhost:8470/incidents -d '{...valid incident...}'
+HTTP/1.1 201 Created
+x-correlation-id: 3da9ef59-11e8-47c6-9a3e-75fc70649069
+{"correlation_id":"3da9ef59-11e8-47c6-9a3e-75fc70649069","success":true,"incident_id":"815b1e7f-e2bf-40cb-8f58-b453b6458eb3","message":"Incident created"}
+$ curl -i localhost:8470/incidents/815b1e7f-e2bf-40cb-8f58-b453b6458eb3
+HTTP/1.1 200 OK
+x-correlation-id: 12828f53-64f5-47bf-949d-59bec3ed93dc
+{"correlation_id":"12828f53-64f5-47bf-949d-59bec3ed93dc","success":true,"incident":{"incident_id":"815b1e7f-e2bf-40cb-8f58-b453b6458eb3","routeId":"Line 9","location":"5th & Main","submitterEmail":"rider@example.com","description":"Platform signal was broken and passengers were stranded for an hour.","category":"Safety Hazard","agreeTerms":true}}
+$ curl -i localhost:8470/incidents/does-not-exist
+HTTP/1.1 404 Not Found
+x-correlation-id: cbfe7440-574c-41e5-b3d6-8b8f3f5209bb
+{"correlation_id":"cbfe7440-574c-41e5-b3d6-8b8f3f5209bb","success":false,"error":"Incident not found"}
+$ curl -i -X POST localhost:8470/requests -d '{"operation":"DROP_EVERYTHING"}'
+HTTP/1.1 400 Bad Request
+x-correlation-id: 3bb88d43-ac3f-470b-813d-4695559f570b
+{"correlation_id":"3bb88d43-ac3f-470b-813d-4695559f570b","success":false,"error":"Unknown operation"}
+
+# API container log (its Kafka send/receive lines):
+09:49:26.220 [API     ] SEND  topic=s3170_entity_requests partition=0 offset=13 correlation_id=3da9ef59-11e8-47c6-9a3e-75fc70649069 operation=CREATE_INCIDENT
+09:49:26.222 [API     ] RECV  topic=s3170_entity_responses partition=0 offset=13 correlation_id=3da9ef59-11e8-47c6-9a3e-75fc70649069 success=True
+09:49:26.222 [API     ] CLIENT-RESPONSE correlation_id=3da9ef59-11e8-47c6-9a3e-75fc70649069 success=True in 5 ms
+09:49:26.284 [API     ] SEND  topic=s3170_entity_requests partition=0 offset=14 correlation_id=12828f53-64f5-47bf-949d-59bec3ed93dc operation=GET_INCIDENT
+09:49:26.286 [API     ] RECV  topic=s3170_entity_responses partition=0 offset=14 correlation_id=12828f53-64f5-47bf-949d-59bec3ed93dc success=True
+09:49:26.286 [API     ] CLIENT-RESPONSE correlation_id=12828f53-64f5-47bf-949d-59bec3ed93dc success=True in 3 ms
+09:49:26.306 [API     ] SEND  topic=s3170_entity_requests partition=0 offset=15 correlation_id=cbfe7440-574c-41e5-b3d6-8b8f3f5209bb operation=GET_INCIDENT
+09:49:26.308 [API     ] RECV  topic=s3170_entity_responses partition=0 offset=15 correlation_id=cbfe7440-574c-41e5-b3d6-8b8f3f5209bb success=False
+09:49:26.308 [API     ] CLIENT-RESPONSE correlation_id=cbfe7440-574c-41e5-b3d6-8b8f3f5209bb success=False in 2 ms
+09:49:26.328 [API     ] SEND  topic=s3170_entity_requests partition=0 offset=16 correlation_id=3bb88d43-ac3f-470b-813d-4695559f570b operation=DROP_EVERYTHING
+09:49:26.330 [API     ] RECV  topic=s3170_entity_responses partition=0 offset=16 correlation_id=3bb88d43-ac3f-470b-813d-4695559f570b success=False
+09:49:26.330 [API     ] CLIENT-RESPONSE correlation_id=3bb88d43-ac3f-470b-813d-4695559f570b success=False in 3 ms

@@ -1,0 +1,21 @@
+09:48:33.878 [writer-A] Consumer is ready and listening... group=s3170_ord_keyed_1030094620 partitions=[0, 1] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:48:37.392 [writer-A] Consumer is ready and listening... group=s3170_ord_keyed_1030094620 partitions=[1] mode=stub idempotent=0 commit=after max_retries=3 dlq=1
+09:48:40.079 [writer-A] RECV  topic=s3170_tasks partition=1 offset=37 correlation_id=ord-02-1030094620 entity=INC-2393 seq=1
+09:48:40.167 [writer-A] SEND  topic=s3170_drafts partition=0 offset=74 correlation_id=ord-02-1030094620
+09:48:40.170 [writer-A] COMMIT offset 38 on partition 1 (after successful processing)
+09:48:40.170 [writer-A] RECV  topic=s3170_tasks partition=1 offset=38 correlation_id=ord-06-1030094620 entity=INC-2393 seq=2
+09:48:40.501 [writer-A] SEND  topic=s3170_drafts partition=0 offset=76 correlation_id=ord-06-1030094620
+09:48:40.504 [writer-A] COMMIT offset 39 on partition 1 (after successful processing)
+09:48:40.504 [writer-A] RECV  topic=s3170_tasks partition=1 offset=39 correlation_id=ord-07-1030094620 entity=INC-2393 seq=3
+09:48:40.564 [writer-A] SEND  topic=s3170_drafts partition=0 offset=78 correlation_id=ord-07-1030094620
+09:48:40.566 [writer-A] COMMIT offset 40 on partition 1 (after successful processing)
+09:48:40.566 [writer-A] RECV  topic=s3170_tasks partition=1 offset=40 correlation_id=ord-15-1030094620 entity=INC-2393 seq=4
+09:48:40.676 [writer-A] SEND  topic=s3170_drafts partition=0 offset=79 correlation_id=ord-15-1030094620
+09:48:40.679 [writer-A] COMMIT offset 41 on partition 1 (after successful processing)
+09:48:40.679 [writer-A] RECV  topic=s3170_tasks partition=1 offset=41 correlation_id=ord-17-1030094620 entity=INC-2393 seq=5
+09:48:40.955 [writer-A] SEND  topic=s3170_drafts partition=0 offset=81 correlation_id=ord-17-1030094620
+09:48:40.957 [writer-A] COMMIT offset 42 on partition 1 (after successful processing)
+09:48:40.957 [writer-A] RECV  topic=s3170_tasks partition=1 offset=42 correlation_id=ord-18-1030094620 entity=INC-2393 seq=6
+09:48:41.073 [writer-A] SEND  topic=s3170_drafts partition=0 offset=82 correlation_id=ord-18-1030094620
+09:48:41.076 [writer-A] COMMIT offset 43 on partition 1 (after successful processing)
+09:48:44.137 [writer-A] writer stopped

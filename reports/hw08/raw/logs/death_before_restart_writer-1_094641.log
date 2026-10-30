@@ -1,0 +1,2 @@
+09:46:48.803 [writer-1] Consumer is ready and listening... group=s3170_death_before_1030094620 partitions=[0, 1] mode=stub idempotent=1 commit=auto max_retries=3 dlq=1
+09:47:32.592 [writer-1] writer stopped

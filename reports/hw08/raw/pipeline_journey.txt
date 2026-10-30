@@ -1,0 +1,20 @@
+# HW8 Part 2 - one complete message journey, correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+# (log lines from the five processes, sorted by time)
+09:35:33.819 [YOU     ] SEND  topic=s3170_inbox partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+09:35:33.820 [PLANNER ] RECV  topic=s3170_inbox partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a question='What should a rider do when their bus is cancelled and the next one is an hour away?'
+09:38:03.478 [PLANNER ] PLAN  correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a steps=['Check for alternative transportation options like a taxi or ride-sharing service.', "Look for real-time updates on bus schedules or delays through the transit authority's
+09:38:03.505 [PLANNER ] SEND  topic=s3170_tasks partition=1 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+09:38:03.523 [writer-1] RECV  topic=s3170_tasks partition=1 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+09:38:31.554 [writer-1] SEND  topic=s3170_drafts partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+09:38:31.572 [REVIEWER] RECV  topic=s3170_drafts partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+09:38:31.578 [REVIEWER] REVIEW correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a status=approved (draft passes length and content checks)
+09:38:31.593 [REVIEWER] SEND  topic=s3170_final partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+09:38:31.615 [YOU     ] RECV  topic=s3170_final partition=0 offset=0 correlation_id=b7ce8dd1-f4ac-4eeb-8183-174329d22e3a
+
+# final message read from s3170_final:
+{
+  "correlation_id": "b7ce8dd1-f4ac-4eeb-8183-174329d22e3a",
+  "status": "approved",
+  "answer": "If your bus is cancelled and the next one is an hour away, first check for real-time updates on bus schedules through the transit authority's app or website. Then, consider alternative transportation options like a taxi or ride-sharing service to minimize your wait time. You can also contact the transit authority to ask about possible rerouting or additional bus services that may be available.",
+  "reason": "draft passes length and content checks"
+}
