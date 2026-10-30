@@ -270,7 +270,7 @@ def main() -> int:
     skipped = sum(c["status"] == "SKIP" for c in checks)
     out = {
         "homework": 8, "SID4": SID4, "PORT_BASE": PORT_BASE, "PREFIX": "s3170", "SEED": SEED, "VERIFY_SEED": VERIFY_SEED,
-        "DOMAIN_ID": 2, "commit": git("rev-parse", "HEAD"), "working_tree_clean": git("status", "--porcelain") == "",
+        "DOMAIN_ID": 2, "commit": git("rev-parse", "HEAD"), "working_tree_clean": git("status", "--porcelain", "--untracked-files=no") == "",   # tracked files only
         "model_configuration": {"kafka": "apache/kafka:3.8.0 (KRaft, single broker, via Docker)", "client": "confluent-kafka 2.16.1",
                                 "entity": "Transit Incident (CREATE_INCIDENT / GET_INCIDENT)", "agents_model": "qwen3:8b via Ollama (checks use stub mode)",
                                 "quick_mode": args.quick},
