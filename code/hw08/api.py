@@ -134,6 +134,14 @@ def generic(body: dict[str, Any], response: Response):
     return reply
 
 
+@app.get("/", include_in_schema=False)
+def home():
+    """A readable landing page so opening http://127.0.0.1:8470/ in a browser shows what the service is."""
+    return {"service": "HW8 Kafka entity API (SID4 3170)", "docs": "/docs", "health": "/health",
+            "topics": {"requests": REQUESTS, "responses": RESPONSES},
+            "endpoints": ["POST /incidents", "GET /incidents/{incident_id}", "POST /requests"]}
+
+
 @app.get("/health")
 def health():
     return {"status": "ok", "topics": [REQUESTS, RESPONSES]}
