@@ -144,7 +144,7 @@ def banner(title: str) -> None:
 
 def student_banner(label: str) -> None:
     """Prints the student's name so it is in every terminal screenshot."""
-    print(f"Pragnaya Priyadarshini (Lucky) - HW8 - {label}", flush=True)
+    print(f"Pragnaya Priyadarshini HW8 - {label}", flush=True)
 
 
 if __name__ == "__main__":
