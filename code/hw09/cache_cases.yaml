@@ -1,0 +1,80 @@
+# HW9 Part 3.1 - 40 labeled domain queries for the semantic-cache threshold sweep.
+# Labels are fixed BEFORE any threshold result exists. Do not edit after the sweep; document mistakes
+# separately in reports/hw09/LABEL_NOTES.md.
+#
+# `seeds` are the 20 questions answered once by the HW8 agent path and stored in the cache before the cases run.
+# Each case says what it should do (expect: hit | miss) and, via `key`, how the correct answer is derived
+# from the s3170_rel tables (code/hw09/qa_agent.py ground_truth()).
+version: 1
+sid4: 3170
+prefix: s3170
+embedding_model: sentence-transformers/all-MiniLM-L6-v2
+
+seeds:
+  - {id: S01, query: "What agency operates route R-0002?", key: {kind: agency, route: R-0002}}
+  - {id: S02, query: "How many incidents are recorded for route R-0012?", key: {kind: incident_count, route: R-0012}}
+  - {id: S03, query: "What type of route is R-0021?", key: {kind: route_type, route: R-0021}}
+  - {id: S04, query: "How many Delay incidents are recorded for route R-0018?", key: {kind: category_count, route: R-0018, category: Delay}}
+  - {id: S05, query: "What is the total number of riders affected on route R-0015?", key: {kind: riders_total, route: R-0015}}
+  - {id: S06, query: "What is the name of route R-0033?", key: {kind: route_name, route: R-0033}}
+  - {id: S07, query: "Which agency runs route R-0042?", key: {kind: agency, route: R-0042}}
+  - {id: S08, query: "How many Safety Hazard incidents are recorded for route R-0050?", key: {kind: category_count, route: R-0050, category: Safety Hazard}}
+  - {id: S09, query: "What type of route is R-0063?", key: {kind: route_type, route: R-0063}}
+  - {id: S10, query: "How many incidents are recorded for route R-0071?", key: {kind: incident_count, route: R-0071}}
+  - {id: S11, query: "What agency operates route R-0001?", key: {kind: agency, route: R-0001}}
+  - {id: S12, query: "How many incidents are recorded for route R-0004?", key: {kind: incident_count, route: R-0004}}
+  - {id: S13, query: "What type of route is R-0005?", key: {kind: route_type, route: R-0005}}
+  - {id: S14, query: "How many Delay incidents are recorded for route R-0009?", key: {kind: category_count, route: R-0009, category: Delay}}
+  - {id: S15, query: "What is the total number of riders affected on route R-0010?", key: {kind: riders_total, route: R-0010}}
+  - {id: S16, query: "What is the name of route R-0011?", key: {kind: route_name, route: R-0011}}
+  - {id: S17, query: "Which agency runs route R-0014?", key: {kind: agency, route: R-0014}}
+  - {id: S18, query: "How many Safety Hazard incidents are recorded for route R-0019?", key: {kind: category_count, route: R-0019, category: Safety Hazard}}
+  - {id: S19, query: "What type of route is R-0024?", key: {kind: route_type, route: R-0024}}
+  - {id: S20, query: "How many incidents are recorded for route R-0027?", key: {kind: incident_count, route: R-0027}}
+
+cases:
+  # --- 10 exact duplicates: identical text to a seed -> should hit ----------------------------------
+  - {id: C01, group: exact_duplicate, expect: hit, seed: S01, query: "What agency operates route R-0002?", key: {kind: agency, route: R-0002}}
+  - {id: C02, group: exact_duplicate, expect: hit, seed: S02, query: "How many incidents are recorded for route R-0012?", key: {kind: incident_count, route: R-0012}}
+  - {id: C03, group: exact_duplicate, expect: hit, seed: S03, query: "What type of route is R-0021?", key: {kind: route_type, route: R-0021}}
+  - {id: C04, group: exact_duplicate, expect: hit, seed: S04, query: "How many Delay incidents are recorded for route R-0018?", key: {kind: category_count, route: R-0018, category: Delay}}
+  - {id: C05, group: exact_duplicate, expect: hit, seed: S05, query: "What is the total number of riders affected on route R-0015?", key: {kind: riders_total, route: R-0015}}
+  - {id: C06, group: exact_duplicate, expect: hit, seed: S06, query: "What is the name of route R-0033?", key: {kind: route_name, route: R-0033}}
+  - {id: C07, group: exact_duplicate, expect: hit, seed: S07, query: "Which agency runs route R-0042?", key: {kind: agency, route: R-0042}}
+  - {id: C08, group: exact_duplicate, expect: hit, seed: S08, query: "How many Safety Hazard incidents are recorded for route R-0050?", key: {kind: category_count, route: R-0050, category: Safety Hazard}}
+  - {id: C09, group: exact_duplicate, expect: hit, seed: S09, query: "What type of route is R-0063?", key: {kind: route_type, route: R-0063}}
+  - {id: C10, group: exact_duplicate, expect: hit, seed: S10, query: "How many incidents are recorded for route R-0071?", key: {kind: incident_count, route: R-0071}}
+  # --- 10 paraphrases of a seed: same route, same question, different words -> should hit -------------
+  - {id: C11, group: paraphrase, expect: hit, seed: S11, query: "Which transit agency is responsible for route R-0001?", key: {kind: agency, route: R-0001}}
+  - {id: C12, group: paraphrase, expect: hit, seed: S12, query: "What is the total incident count for route R-0004?", key: {kind: incident_count, route: R-0004}}
+  - {id: C13, group: paraphrase, expect: hit, seed: S13, query: "What kind of service does route R-0005 provide?", key: {kind: route_type, route: R-0005}}
+  - {id: C14, group: paraphrase, expect: hit, seed: S14, query: "What is the number of delays reported on route R-0009?", key: {kind: category_count, route: R-0009, category: Delay}}
+  - {id: C15, group: paraphrase, expect: hit, seed: S15, query: "How many passengers in total were impacted by incidents on route R-0010?", key: {kind: riders_total, route: R-0010}}
+  - {id: C16, group: paraphrase, expect: hit, seed: S16, query: "What is route R-0011 called?", key: {kind: route_name, route: R-0011}}
+  - {id: C17, group: paraphrase, expect: hit, seed: S17, query: "Who is the operator of route R-0014?", key: {kind: agency, route: R-0014}}
+  - {id: C18, group: paraphrase, expect: hit, seed: S18, query: "How many safety hazards have been reported on route R-0019?", key: {kind: category_count, route: R-0019, category: Safety Hazard}}
+  - {id: C19, group: paraphrase, expect: hit, seed: S19, query: "What mode of transit is route R-0024?", key: {kind: route_type, route: R-0024}}
+  - {id: C20, group: paraphrase, expect: hit, seed: S20, query: "How many incident reports exist for route R-0027?", key: {kind: incident_count, route: R-0027}}
+  # --- 10 superficially similar, DIFFERENT correct answer -> should miss ---------------------------------
+  # (`seed` is the cached question each one is easiest to confuse with)
+  - {id: C21, group: near_miss, expect: miss, seed: S01, query: "What agency operates route R-0003?", key: {kind: agency, route: R-0003}}
+  - {id: C22, group: near_miss, expect: miss, seed: S02, query: "How many incidents are recorded for route R-0013?", key: {kind: incident_count, route: R-0013}}
+  - {id: C23, group: near_miss, expect: miss, seed: S03, query: "What type of route is R-0022?", key: {kind: route_type, route: R-0022}}
+  - {id: C24, group: near_miss, expect: miss, seed: S04, query: "How many Safety Hazard incidents are recorded for route R-0018?", key: {kind: category_count, route: R-0018, category: Safety Hazard}}
+  - {id: C25, group: near_miss, expect: miss, seed: S05, query: "What is the total number of riders affected on route R-0016?", key: {kind: riders_total, route: R-0016}}
+  - {id: C26, group: near_miss, expect: miss, seed: S06, query: "What is the name of route R-0034?", key: {kind: route_name, route: R-0034}}
+  - {id: C27, group: near_miss, expect: miss, seed: S07, query: "Which agency runs route R-0043?", key: {kind: agency, route: R-0043}}
+  - {id: C28, group: near_miss, expect: miss, seed: S08, query: "How many Accident-Collision incidents are recorded for route R-0050?", key: {kind: category_count, route: R-0050, category: Accident-Collision}}
+  - {id: C29, group: near_miss, expect: miss, seed: S09, query: "What type of route is R-0065?", key: {kind: route_type, route: R-0065}}
+  - {id: C30, group: near_miss, expect: miss, seed: S10, query: "How many incidents are recorded for route R-0072?", key: {kind: incident_count, route: R-0072}}
+  # --- 10 unrelated -> should miss ----------------------------------------------------------------------
+  - {id: C31, group: unrelated, expect: miss, query: "What is the capital of France?"}
+  - {id: C32, group: unrelated, expect: miss, query: "How do I bake sourdough bread at home?"}
+  - {id: C33, group: unrelated, expect: miss, query: "Who wrote the novel Pride and Prejudice?"}
+  - {id: C34, group: unrelated, expect: miss, query: "At what temperature does water boil in Fahrenheit?"}
+  - {id: C35, group: unrelated, expect: miss, query: "How many players are on a soccer team?"}
+  - {id: C36, group: unrelated, expect: miss, query: "Explain how photosynthesis works."}
+  - {id: C37, group: unrelated, expect: miss, query: "What is the tallest mountain in the world?"}
+  - {id: C38, group: unrelated, expect: miss, query: "Recommend a good book about machine learning."}
+  - {id: C39, group: unrelated, expect: miss, query: "How do I change the strings on an acoustic guitar?"}
+  - {id: C40, group: unrelated, expect: miss, query: "What is the square root of 144?"}
