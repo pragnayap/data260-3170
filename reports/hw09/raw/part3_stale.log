@@ -1,0 +1,31 @@
+Pragnaya Priyadarshini HW9 - part3_stale.py
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+1) The cached question depends on routes row R-0099 (agency = 'Caltrain').
+10:46:25 INFO CACHE MISS  nearest_similarity=n/a threshold=0.85 -> running the HW8 agent path
+10:47:31 INFO CACHE MISS  agent_ms=66037 total=66188 ms stored version=v-a8c51f52a15f
+  first ask (miss, agent runs, version marker stored): is_cached=False similarity=None latency=66188 ms
+      answer: Route R-0099, also known as Route 99, is operated by Caltrain. This route is a Subway type with a recorded history of incidents affecting a total of 1,786 riders.
+      stored data_version = v-a8c51f52a15f
+
+2) UPDATE routes SET agency = 'Golden Gate Transit' WHERE route_code = 'R-0099'
+      database now says: 'Golden Gate Transit'; current data_version = v-fa2c8eff4630
+
+3) Same question again, NO invalidation (validate_version=False): the stale hit
+10:47:33 INFO CACHE HIT  similarity=1.0000 threshold=0.85 matched='What agency operates route R-0099?' latency=1114.5 ms
+  stale hit: is_cached=True similarity=1.0 latency=1114 ms
+      answer: Route R-0099, also known as Route 99, is operated by Caltrain. This route is a Subway type with a recorded history of incidents affecting a total of 1,786 riders.
+
+4) Same question, invalidation ON (stored marker compared with the live marker on every hit)
+10:47:33 INFO STALE  similarity=1.0000 stored_version=v-a8c51f52a15f current_version=v-fa2c8eff4630 -> evicting, treating as a miss
+10:47:33 INFO CACHE MISS  nearest_similarity=1.0000 threshold=0.85 -> running the HW8 agent path
+10:48:04 INFO CACHE MISS  agent_ms=31014 total=31067 ms stored version=v-fa2c8eff4630
+  after invalidation: is_cached=False similarity=1.0 latency=31067 ms
+      answer: Route R-0099, also known as Route 99, is operated by Golden Gate Transit. This route is classified as a Subway type.
+
+5) And once more: the refreshed entry is now a valid hit, at the cost of one version check
+10:48:04 INFO CACHE HIT  similarity=1.0000 threshold=0.85 matched='What agency operates route R-0099?' latency=784.9 ms
+  fresh hit: is_cached=True similarity=1.0 latency=785 ms
+      answer: Route R-0099, also known as Route 99, is operated by Golden Gate Transit. This route is classified as a Subway type.
+
+restored R-0099.agency 'Golden Gate Transit' -> 'Caltrain'

@@ -1,0 +1,64 @@
+{
+  "route": "R-0099",
+  "query": "What agency operates route R-0099?",
+  "first_ask": {
+    "query": "What agency operates route R-0099?",
+    "answer": "Route R-0099, also known as Route 99, is operated by Caltrain. This route is a Subway type with a recorded history of incidents affecting a total of 1,786 riders.",
+    "is_cached": false,
+    "similarity": null,
+    "matched_query": null,
+    "threshold": 0.85,
+    "latency_ms": 66188.42,
+    "embed_ms": 131.44,
+    "search_ms": 1.06,
+    "agent_ms": 66037.1,
+    "data_version": "v-a8c51f52a15f",
+    "stale_evicted": null
+  },
+  "stale_hit": {
+    "query": "What agency operates route R-0099?",
+    "answer": "Route R-0099, also known as Route 99, is operated by Caltrain. This route is a Subway type with a recorded history of incidents affecting a total of 1,786 riders.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "matched_query": "What agency operates route R-0099?",
+    "threshold": 0.85,
+    "latency_ms": 1114.45,
+    "embed_ms": 1112.07,
+    "search_ms": 2.36,
+    "version_check_ms": 0.0,
+    "stale_evicted": null
+  },
+  "after_invalidation": {
+    "query": "What agency operates route R-0099?",
+    "answer": "Route R-0099, also known as Route 99, is operated by Golden Gate Transit. This route is classified as a Subway type.",
+    "is_cached": false,
+    "similarity": 1.0,
+    "matched_query": "What agency operates route R-0099?",
+    "threshold": 0.85,
+    "latency_ms": 31067.15,
+    "embed_ms": 38.73,
+    "search_ms": 0.95,
+    "agent_ms": 31013.94,
+    "data_version": "v-fa2c8eff4630",
+    "stale_evicted": {
+      "stored": "v-a8c51f52a15f",
+      "current": "v-fa2c8eff4630",
+      "evicted_query": "What agency operates route R-0099?"
+    }
+  },
+  "fresh_hit": {
+    "query": "What agency operates route R-0099?",
+    "answer": "Route R-0099, also known as Route 99, is operated by Golden Gate Transit. This route is classified as a Subway type.",
+    "is_cached": true,
+    "similarity": 1.0,
+    "matched_query": "What agency operates route R-0099?",
+    "threshold": 0.85,
+    "latency_ms": 784.89,
+    "embed_ms": 778.83,
+    "search_ms": 1.93,
+    "version_check_ms": 4.12,
+    "stale_evicted": null
+  },
+  "original_agency": "Caltrain",
+  "new_agency": "Golden Gate Transit"
+}

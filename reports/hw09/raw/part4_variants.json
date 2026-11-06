@@ -1,0 +1,1508 @@
+{
+  "summary": [
+    {
+      "variant": "Baseline",
+      "correct": 10,
+      "incorrect": 4,
+      "avg_attempts": 1,
+      "avg_latency_s": 4.6,
+      "lessons_available": []
+    },
+    {
+      "variant": "Evaluator Repair",
+      "correct": 14,
+      "incorrect": 0,
+      "avg_attempts": 1.29,
+      "avg_latency_s": 5.5,
+      "lessons_available": []
+    },
+    {
+      "variant": "Lesson Memory",
+      "correct": 14,
+      "incorrect": 0,
+      "avg_attempts": 1.14,
+      "avg_latency_s": 5.7,
+      "lessons_available": [
+        "lesson_001",
+        "lesson_002"
+      ]
+    },
+    {
+      "variant": "Validated Improvement",
+      "correct": 14,
+      "incorrect": 0,
+      "avg_attempts": 1.14,
+      "avg_latency_s": 5.7,
+      "lessons_available": [
+        "lesson_001"
+      ]
+    }
+  ],
+  "detail": {
+    "Baseline": [
+      {
+        "id": "tes_01",
+        "question": "What is the current fare on route R-0121?",
+        "final_answer": "The current fare on route R-0121 is $2.00, effective from 2025-07-01.",
+        "final_result": "REVISE",
+        "correct": false,
+        "attempts": 1,
+        "first_attempt_failure": "stale_value",
+        "latency_s": 9.37,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current fare on route R-0121 is $2.00, effective from 2025-07-01.",
+            "lessons_loaded": [],
+            "result": "REVISE",
+            "explanation": "The answer gives an outdated fare, not the current one.",
+            "feedback": "That fare is out of date. The record lists fares with effective dates; use the one with the latest effective date.",
+            "failure_type": "stale_value",
+            "facts_checked": [
+              "fare_current=2.25"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_02",
+        "question": "Which agency operates route R-0122 and what type of route is it?",
+        "final_answer": "The agency that operates route R-0122 is VTA, and it is a Bus route.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 4.88,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The agency that operates route R-0122 is VTA, and it is a Bus route.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=VTA",
+              "route_type=Bus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_03",
+        "question": "What is the largest ocean on Earth?",
+        "final_answer": "The largest ocean on Earth is the Pacific Ocean.",
+        "final_result": "REVISE",
+        "correct": false,
+        "attempts": 1,
+        "first_attempt_failure": "unsupported_answer",
+        "latency_s": 2.93,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The largest ocean on Earth is the Pacific Ocean.",
+            "lessons_loaded": [],
+            "result": "REVISE",
+            "explanation": "The reference data has no record for this question, but the answer states a fact anyway.",
+            "feedback": "This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.",
+            "failure_type": "unsupported_answer",
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_04",
+        "question": "How many incidents are recorded for route R-0123?",
+        "final_answer": "The route R-0123 has 26 incidents recorded.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.52,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The route R-0123 has 26 incidents recorded.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "incident_count=26"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_05",
+        "question": "How much is a single ride on route R-0124?",
+        "final_answer": "As of the most recent fare history, a single ride on route R-0124 costs $3.00.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 5.73,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "As of the most recent fare history, a single ride on route R-0124 costs $3.00.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=3.00"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_06",
+        "question": "What is the most common incident category on route R-0125?",
+        "final_answer": "The most common incident category on route R-0125 is Delay.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.63,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The most common incident category on route R-0125 is Delay.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "top_incident_category=Delay"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_07",
+        "question": "Who is the current president of France?",
+        "final_answer": "The current president of France is Emmanuel Macron.",
+        "final_result": "REVISE",
+        "correct": false,
+        "attempts": 1,
+        "first_attempt_failure": "unsupported_answer",
+        "latency_s": 2.1,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current president of France is Emmanuel Macron.",
+            "lessons_loaded": [],
+            "result": "REVISE",
+            "explanation": "The reference data has no record for this question, but the answer states a fact anyway.",
+            "feedback": "This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.",
+            "failure_type": "unsupported_answer",
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_08",
+        "question": "How many riders were affected in total on route R-0126, and which agency runs it?",
+        "final_answer": "A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 6.54,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=VTA",
+              "riders_total=1401"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_09",
+        "question": "What is the name of route R-0127?",
+        "final_answer": "The name of route R-0127 is Route 127.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.77,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The name of route R-0127 is Route 127.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "route_name=Route 127"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_10",
+        "question": "What agency operates the route named Caltrain Line 128?",
+        "final_answer": "The agency that operates the route named Caltrain Line 128 is Caltrain.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.99,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The agency that operates the route named Caltrain Line 128 is Caltrain.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=Caltrain"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_11",
+        "question": "What is the current fare on route R-0129 and which agency operates it?",
+        "final_answer": "The current fare on route R-0129 is $2.75, and it is operated by AC Transit.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 5.67,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current fare on route R-0129 is $2.75, and it is operated by AC Transit.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=2.75",
+              "agency=AC Transit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_12",
+        "question": "How many incidents are recorded for route R-9999?",
+        "final_answer": "There are no recorded incidents for route R-9999.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.11,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "There are no recorded incidents for route R-9999.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_13",
+        "question": "What is the best pizza topping?",
+        "final_answer": "The best pizza topping is subjective, but many people love pepperoni.",
+        "final_result": "REVISE",
+        "correct": false,
+        "attempts": 1,
+        "first_attempt_failure": "unsupported_answer",
+        "latency_s": 3.86,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The best pizza topping is subjective, but many people love pepperoni.",
+            "lessons_loaded": [],
+            "result": "REVISE",
+            "explanation": "The reference data has no record for this question, but the answer states a fact anyway.",
+            "feedback": "This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.",
+            "failure_type": "unsupported_answer",
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_14",
+        "question": "What type of route is R-0130?",
+        "final_answer": "Route R-0130 is a Bus route operated by SamTrans.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 5.69,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "Route R-0130 is a Bus route operated by SamTrans.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "route_type=Bus"
+            ]
+          }
+        ]
+      }
+    ],
+    "Evaluator Repair": [
+      {
+        "id": "tes_01",
+        "question": "What is the current fare on route R-0121?",
+        "final_answer": "The current fare on route R-0121 is $2.25, effective from 2026-07-01.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 2,
+        "first_attempt_failure": "stale_value",
+        "latency_s": 17.99,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current fare on route R-0121 is $2.00, effective from 2025-07-01.",
+            "lessons_loaded": [],
+            "result": "REVISE",
+            "explanation": "The answer gives an outdated fare, not the current one.",
+            "feedback": "That fare is out of date. The record lists fares with effective dates; use the one with the latest effective date.",
+            "failure_type": "stale_value",
+            "facts_checked": [
+              "fare_current=2.25"
+            ]
+          },
+          {
+            "attempt": 2,
+            "answer": "The current fare on route R-0121 is $2.25, effective from 2026-07-01.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=2.25"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_02",
+        "question": "Which agency operates route R-0122 and what type of route is it?",
+        "final_answer": "The agency that operates route R-0122 is VTA, and it is a Bus route.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 4.9,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The agency that operates route R-0122 is VTA, and it is a Bus route.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=VTA",
+              "route_type=Bus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_03",
+        "question": "What is the largest ocean on Earth?",
+        "final_answer": "I do not have that information.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 2,
+        "first_attempt_failure": "unsupported_answer",
+        "latency_s": 4.82,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The largest ocean on Earth is the Pacific Ocean.",
+            "lessons_loaded": [],
+            "result": "REVISE",
+            "explanation": "The reference data has no record for this question, but the answer states a fact anyway.",
+            "feedback": "This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.",
+            "failure_type": "unsupported_answer",
+            "facts_checked": []
+          },
+          {
+            "attempt": 2,
+            "answer": "I do not have that information.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_04",
+        "question": "How many incidents are recorded for route R-0123?",
+        "final_answer": "The route R-0123 has 26 incidents recorded.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.34,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The route R-0123 has 26 incidents recorded.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "incident_count=26"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_05",
+        "question": "How much is a single ride on route R-0124?",
+        "final_answer": "As of the most recent fare history, a single ride on route R-0124 costs $3.00.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 5.63,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "As of the most recent fare history, a single ride on route R-0124 costs $3.00.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=3.00"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_06",
+        "question": "What is the most common incident category on route R-0125?",
+        "final_answer": "The most common incident category on route R-0125 is Delay.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.59,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The most common incident category on route R-0125 is Delay.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "top_incident_category=Delay"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_07",
+        "question": "Who is the current president of France?",
+        "final_answer": "I do not have that information.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 2,
+        "first_attempt_failure": "unsupported_answer",
+        "latency_s": 3.79,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current president of France is Emmanuel Macron.",
+            "lessons_loaded": [],
+            "result": "REVISE",
+            "explanation": "The reference data has no record for this question, but the answer states a fact anyway.",
+            "feedback": "This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.",
+            "failure_type": "unsupported_answer",
+            "facts_checked": []
+          },
+          {
+            "attempt": 2,
+            "answer": "I do not have that information.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_08",
+        "question": "How many riders were affected in total on route R-0126, and which agency runs it?",
+        "final_answer": "A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 6.59,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=VTA",
+              "riders_total=1401"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_09",
+        "question": "What is the name of route R-0127?",
+        "final_answer": "The name of route R-0127 is Route 127.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.83,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The name of route R-0127 is Route 127.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "route_name=Route 127"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_10",
+        "question": "What agency operates the route named Caltrain Line 128?",
+        "final_answer": "The agency that operates the route named Caltrain Line 128 is Caltrain.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 4.06,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The agency that operates the route named Caltrain Line 128 is Caltrain.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=Caltrain"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_11",
+        "question": "What is the current fare on route R-0129 and which agency operates it?",
+        "final_answer": "The current fare on route R-0129 is $2.75, and it is operated by AC Transit.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 5.95,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current fare on route R-0129 is $2.75, and it is operated by AC Transit.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=2.75",
+              "agency=AC Transit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_12",
+        "question": "How many incidents are recorded for route R-9999?",
+        "final_answer": "There are no recorded incidents for route R-9999.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.14,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "There are no recorded incidents for route R-9999.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_13",
+        "question": "What is the best pizza topping?",
+        "final_answer": "I do not have that information.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 2,
+        "first_attempt_failure": "unsupported_answer",
+        "latency_s": 5.5,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The best pizza topping is subjective, but many people love pepperoni.",
+            "lessons_loaded": [],
+            "result": "REVISE",
+            "explanation": "The reference data has no record for this question, but the answer states a fact anyway.",
+            "feedback": "This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.",
+            "failure_type": "unsupported_answer",
+            "facts_checked": []
+          },
+          {
+            "attempt": 2,
+            "answer": "I do not have that information.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_14",
+        "question": "What type of route is R-0130?",
+        "final_answer": "Route R-0130 is a Bus route operated by SamTrans.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.67,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "Route R-0130 is a Bus route operated by SamTrans.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "route_type=Bus"
+            ]
+          }
+        ]
+      }
+    ],
+    "Lesson Memory": [
+      {
+        "id": "tes_01",
+        "question": "What is the current fare on route R-0121?",
+        "final_answer": "The current fare on route R-0121 is $2.25, effective from 2026-07-01.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 2,
+        "first_attempt_failure": "stale_value",
+        "latency_s": 18.69,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current fare on route R-0121 is $2.00, effective from 2025-07-01.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "REVISE",
+            "explanation": "The answer gives an outdated fare, not the current one.",
+            "feedback": "That fare is out of date. The record lists fares with effective dates; use the one with the latest effective date.",
+            "failure_type": "stale_value",
+            "facts_checked": [
+              "fare_current=2.25"
+            ]
+          },
+          {
+            "attempt": 2,
+            "answer": "The current fare on route R-0121 is $2.25, effective from 2026-07-01.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=2.25"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_02",
+        "question": "Which agency operates route R-0122 and what type of route is it?",
+        "final_answer": "The agency that operates route R-0122 is VTA, and it is a Bus route.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 5.01,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The agency that operates route R-0122 is VTA, and it is a Bus route.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=VTA",
+              "route_type=Bus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_03",
+        "question": "What is the largest ocean on Earth?",
+        "final_answer": "I cannot answer that question.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 2.48,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "I cannot answer that question.",
+            "lessons_loaded": [
+              "lesson_001",
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_04",
+        "question": "How many incidents are recorded for route R-0123?",
+        "final_answer": "The route R-0123 has 26 incidents recorded.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.51,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The route R-0123 has 26 incidents recorded.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "incident_count=26"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_05",
+        "question": "How much is a single ride on route R-0124?",
+        "final_answer": "The current fare for a single ride on route R-0124 is $3.00, effective from 2026-07-01.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 8.02,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current fare for a single ride on route R-0124 is $3.00, effective from 2026-07-01.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=3.00"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_06",
+        "question": "What is the most common incident category on route R-0125?",
+        "final_answer": "The most common incident category on route R-0125 is Delay.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.72,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The most common incident category on route R-0125 is Delay.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "top_incident_category=Delay"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_07",
+        "question": "Who is the current president of France?",
+        "final_answer": "I cannot answer this question.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 2.38,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "I cannot answer this question.",
+            "lessons_loaded": [
+              "lesson_001",
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_08",
+        "question": "How many riders were affected in total on route R-0126, and which agency runs it?",
+        "final_answer": "A total of 1401 riders were affected on route R-0126, which is run by the VTA agency.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 6.5,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "A total of 1401 riders were affected on route R-0126, which is run by the VTA agency.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=VTA",
+              "riders_total=1401"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_09",
+        "question": "What is the name of route R-0127?",
+        "final_answer": "The name of route R-0127 is Route 127.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.84,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The name of route R-0127 is Route 127.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "route_name=Route 127"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_10",
+        "question": "What agency operates the route named Caltrain Line 128?",
+        "final_answer": "The agency that operates the route named Caltrain Line 128 is Caltrain.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 4.04,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The agency that operates the route named Caltrain Line 128 is Caltrain.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=Caltrain"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_11",
+        "question": "What is the current fare on route R-0129 and which agency operates it?",
+        "final_answer": "The current fare on route R-0129 is $2.75, operated by AC Transit.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 5.18,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current fare on route R-0129 is $2.75, operated by AC Transit.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=2.75",
+              "agency=AC Transit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_12",
+        "question": "How many incidents are recorded for route R-9999?",
+        "final_answer": "I do not have that information in the transit database.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 2,
+        "first_attempt_failure": "unsupported_answer",
+        "latency_s": 11.41,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The transit database does not have information on incidents for route R-9999.",
+            "lessons_loaded": [
+              "lesson_001",
+              "lesson_002"
+            ],
+            "result": "REVISE",
+            "explanation": "The reference data has no record for this question, but the answer states a fact anyway.",
+            "feedback": "This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.",
+            "failure_type": "unsupported_answer",
+            "facts_checked": []
+          },
+          {
+            "attempt": 2,
+            "answer": "I do not have that information in the transit database.",
+            "lessons_loaded": [
+              "lesson_001",
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_13",
+        "question": "What is the best pizza topping?",
+        "final_answer": "I cannot answer that question.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 2.39,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "I cannot answer that question.",
+            "lessons_loaded": [
+              "lesson_001",
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_14",
+        "question": "What type of route is R-0130?",
+        "final_answer": "The route R-0130 is a Bus route.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.04,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The route R-0130 is a Bus route.",
+            "lessons_loaded": [
+              "lesson_002"
+            ],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "route_type=Bus"
+            ]
+          }
+        ]
+      }
+    ],
+    "Validated Improvement": [
+      {
+        "id": "tes_01",
+        "question": "What is the current fare on route R-0121?",
+        "final_answer": "The current fare on route R-0121 is $2.25, effective from 2026-07-01.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 2,
+        "first_attempt_failure": "stale_value",
+        "latency_s": 18.08,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current fare on route R-0121 is $2.00, effective from 2025-07-01.",
+            "lessons_loaded": [],
+            "result": "REVISE",
+            "explanation": "The answer gives an outdated fare, not the current one.",
+            "feedback": "That fare is out of date. The record lists fares with effective dates; use the one with the latest effective date.",
+            "failure_type": "stale_value",
+            "facts_checked": [
+              "fare_current=2.25"
+            ]
+          },
+          {
+            "attempt": 2,
+            "answer": "The current fare on route R-0121 is $2.25, effective from 2026-07-01.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=2.25"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_02",
+        "question": "Which agency operates route R-0122 and what type of route is it?",
+        "final_answer": "The agency that operates route R-0122 is VTA, and it is a Bus route.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 4.86,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The agency that operates route R-0122 is VTA, and it is a Bus route.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=VTA",
+              "route_type=Bus"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_03",
+        "question": "What is the largest ocean on Earth?",
+        "final_answer": "I do not have that information in the transit database.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.25,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "I do not have that information in the transit database.",
+            "lessons_loaded": [
+              "lesson_001"
+            ],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_04",
+        "question": "How many incidents are recorded for route R-0123?",
+        "final_answer": "The route R-0123 has 26 incidents recorded.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.39,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The route R-0123 has 26 incidents recorded.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "incident_count=26"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_05",
+        "question": "How much is a single ride on route R-0124?",
+        "final_answer": "As of the most recent fare history, a single ride on route R-0124 costs $3.00.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 5.65,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "As of the most recent fare history, a single ride on route R-0124 costs $3.00.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=3.00"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_06",
+        "question": "What is the most common incident category on route R-0125?",
+        "final_answer": "The most common incident category on route R-0125 is Delay.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.62,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The most common incident category on route R-0125 is Delay.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "top_incident_category=Delay"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_07",
+        "question": "Who is the current president of France?",
+        "final_answer": "I do not have that information in the transit database.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.38,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "I do not have that information in the transit database.",
+            "lessons_loaded": [
+              "lesson_001"
+            ],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_08",
+        "question": "How many riders were affected in total on route R-0126, and which agency runs it?",
+        "final_answer": "A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 6.47,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=VTA",
+              "riders_total=1401"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_09",
+        "question": "What is the name of route R-0127?",
+        "final_answer": "The name of route R-0127 is Route 127.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.8,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The name of route R-0127 is Route 127.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "route_name=Route 127"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_10",
+        "question": "What agency operates the route named Caltrain Line 128?",
+        "final_answer": "The agency that operates the route named Caltrain Line 128 is Caltrain.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 4.01,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The agency that operates the route named Caltrain Line 128 is Caltrain.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "agency=Caltrain"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_11",
+        "question": "What is the current fare on route R-0129 and which agency operates it?",
+        "final_answer": "The current fare on route R-0129 is $2.75, and it is operated by AC Transit.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 5.65,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The current fare on route R-0129 is $2.75, and it is operated by AC Transit.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "fare_current=2.75",
+              "agency=AC Transit"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tes_12",
+        "question": "How many incidents are recorded for route R-9999?",
+        "final_answer": "I do not have that information in the transit database.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 2,
+        "first_attempt_failure": "unsupported_answer",
+        "latency_s": 11.21,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "The transit database does not have information on incidents for route R-9999.",
+            "lessons_loaded": [
+              "lesson_001"
+            ],
+            "result": "REVISE",
+            "explanation": "The reference data has no record for this question, but the answer states a fact anyway.",
+            "feedback": "This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.",
+            "failure_type": "unsupported_answer",
+            "facts_checked": []
+          },
+          {
+            "attempt": 2,
+            "answer": "I do not have that information in the transit database.",
+            "lessons_loaded": [
+              "lesson_001"
+            ],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_13",
+        "question": "What is the best pizza topping?",
+        "final_answer": "I do not have that information in the transit database.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.46,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "I do not have that information in the transit database.",
+            "lessons_loaded": [
+              "lesson_001"
+            ],
+            "result": "PASS",
+            "explanation": "The question is not covered by the reference data and the answer says so.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": []
+          }
+        ]
+      },
+      {
+        "id": "tes_14",
+        "question": "What type of route is R-0130?",
+        "final_answer": "Route R-0130 is a Bus route operated by SamTrans.",
+        "final_result": "PASS",
+        "correct": true,
+        "attempts": 1,
+        "first_attempt_failure": null,
+        "latency_s": 3.61,
+        "trace": [
+          {
+            "attempt": 1,
+            "answer": "Route R-0130 is a Bus route operated by SamTrans.",
+            "lessons_loaded": [],
+            "result": "PASS",
+            "explanation": "All requested facts match the reference dataset.",
+            "feedback": "",
+            "failure_type": null,
+            "facts_checked": [
+              "route_type=Bus"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

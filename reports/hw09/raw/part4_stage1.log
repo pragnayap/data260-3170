@@ -1,0 +1,95 @@
+Pragnaya Priyadarshini HW9 - part4_run.py demo
+Question: Which agency operates route R-0110 and what type of route is it?
+Controlled fault: attempt 1 is forced to 'Route R-0110 is a Commuter Rail route.'
+    attempt 1: 'Route R-0110 is a Commuter Rail route.'
+      evaluator: REVISE - The answer does not state the requested fact(s): agency.
+      feedback: Your answer is missing: agency. Re-read the database record and state every requested fact explicitly.
+    attempt 2: 'The agency that operates route R-0110 is AC Transit, and it is a Commuter Rail route.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 2 attempt(s), 16.91s
+Pragnaya Priyadarshini HW9 - part4_run.py train
+
+[tra_01] What is the current fare on route R-0101?
+    features=['changing_value']
+    attempt 1: 'The current fare on route R-0101 is $2.75, effective from 2025-07-01.'
+      evaluator: REVISE - The answer gives an outdated fare, not the current one.
+      feedback: That fare is out of date. The record lists fares with effective dates; use the one with the latest effective date.
+    attempt 2: 'The current fare on route R-0101 is $3.00, effective from 2026-07-01.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 2 attempt(s), 31.63s
+
+[tra_02] Which agency operates route R-0102 and what type of route is it?
+    features=['multi_fact']
+    attempt 1: 'The agency that operates route R-0102 is BART, and it is a Light Rail route.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 13.44s
+
+[tra_03] What is the capital of Australia?
+    features=['no_record']
+    attempt 1: 'The capital of Australia is Canberra.'
+      evaluator: REVISE - The reference data has no record for this question, but the answer states a fact anyway.
+      feedback: This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.
+    attempt 2: 'I do not have access to the transit database, so I cannot provide that information.'
+      evaluator: PASS - The question is not covered by the reference data and the answer says so.
+    => final PASS after 2 attempt(s), 13.22s
+
+[tra_04] How many incidents are recorded for route R-0103?
+    features=[]
+    attempt 1: 'The route R-0103 has 26 incidents recorded.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 11.59s
+
+[tra_05] What is the ticket price for route R-0104?
+    features=['changing_value']
+    attempt 1: 'The ticket price for route R-0104 is $2.75, effective from 2026-07-01.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 16.55s
+
+[tra_06] What is the most common incident category on route R-0105?
+    features=[]
+    attempt 1: 'The most common incident category on route R-0105 is Accident-Collision.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 12.25s
+
+[tra_07] Who won the most recent football World Cup?
+    features=['no_record']
+    attempt 1: 'France won the most recent FIFA World Cup in 2022.'
+      evaluator: REVISE - The reference data has no record for this question, but the answer states a fact anyway.
+      feedback: This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.
+    attempt 2: 'I do not have that information.'
+      evaluator: PASS - The question is not covered by the reference data and the answer says so.
+    => final PASS after 2 attempt(s), 14.55s
+    ** pattern 'unsupported_answer' seen 2x -> created lesson_001
+
+[tra_08] How many riders were affected in total on route R-0106, and which agency runs it?
+    features=['multi_fact']
+    attempt 1: 'A total of 1,559 riders were affected on route R-0106, which is run by AC Transit.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 17.67s
+
+[tra_09] What is the name of route R-0107?
+    features=[]
+    attempt 1: 'The name of route R-0107 is Rapid 107.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 12.7s
+
+[tra_10] How much does it cost to ride route R-0108?
+    features=['changing_value']
+    attempt 1: 'The cost to ride route R-0108 is $2.25, effective from July 1, 2026.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 16.26s
+
+[tra_11] Recommend a good restaurant near Union Square in San Francisco.
+    features=['no_record']
+    attempt 1: 'I do not have that information in the transit database.'
+      evaluator: PASS - The question is not covered by the reference data and the answer says so.
+      lessons loaded: ['lesson_001']
+    => final PASS after 1 attempt(s), 7.58s
+
+[tra_12] What agency runs route R-0109?
+    features=[]
+    attempt 1: 'The agency that runs route R-0109 is AC Transit.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 12.37s
+
+lessons.json now holds 2 candidate lessons (last one is the hand-written over-broad candidate)

@@ -1,0 +1,133 @@
+{
+  "homework": 9,
+  "SID4": 3170,
+  "PORT_BASE": 8470,
+  "PREFIX": "s3170",
+  "SEED": 3170,
+  "VERIFY_SEED": 263170,
+  "DOMAIN_ID": 2,
+  "commit": "5eafe4cf3a245ac42b1a118bd880a5285857d4f7",
+  "working_tree_clean": false,
+  "model_configuration": {
+    "cache": "Redis Stack 7.4 (RediSearch HNSW, COSINE, 384-d)",
+    "embedding": "sentence-transformers/all-MiniLM-L6-v2",
+    "agents_model": "qwen3:8b via Ollama (checks use a stub agent)"
+  },
+  "generated_at": "2026-11-06T19:17:31+00:00",
+  "passed": 22,
+  "failed": 0,
+  "skipped": 0,
+  "total_checks": 22,
+  "checks": [
+    {
+      "check": "required HW9 files exist",
+      "status": "PASS",
+      "detail": "all required files present"
+    },
+    {
+      "check": "student name banner in every runnable script",
+      "status": "PASS",
+      "detail": "every runnable part prints the student name banner"
+    },
+    {
+      "check": "ruff passes on HW9 code",
+      "status": "PASS",
+      "detail": "ruff clean"
+    },
+    {
+      "check": "Redis Stack is running with the search module (vector index support)",
+      "status": "PASS",
+      "detail": "modules: ['ReJSON', 'timeseries', 'search', 'bf', 'redisgears_2', 'RedisCompat']"
+    },
+    {
+      "check": "Part 1: INCR counter returns 1..25, syncs to MySQL exactly at 10 and 20, key starts with s3170",
+      "status": "PASS",
+      "detail": "incident 2930: totals 1..25, DB synced at [10, 20], DB value 20, key s3170:views:incident:2930, updated_at untouched=True"
+    },
+    {
+      "check": "Part 2: miss runs the agent and stores; exact repeat is a hit WITHOUT running the agent; unrelated misses",
+      "status": "PASS",
+      "detail": "miss/hit/miss, agent ran 2x, hit similarity 1.0, latency fields present"
+    },
+    {
+      "check": "Part 2: hit iff cosine similarity >= threshold",
+      "status": "PASS",
+      "detail": "similarity 0.8764: hit just below it, miss just above it"
+    },
+    {
+      "check": "every Redis key starts with PREFIX s3170",
+      "status": "PASS",
+      "detail": "25 keys in Redis, none outside the s3170: prefix"
+    },
+    {
+      "check": "Part 3.5: updating a routes row makes a hit stale; the data-version check evicts it",
+      "status": "PASS",
+      "detail": "stale hit returned the old answer; version check evicted it and the agent re-ran; row restored"
+    },
+    {
+      "check": "Part 3.1: cache_cases.yaml has 40 cases, 10 per group",
+      "status": "PASS",
+      "detail": "40 cases {'exact_duplicate': 10, 'paraphrase': 10, 'near_miss': 10, 'unrelated': 10}"
+    },
+    {
+      "check": "Part 3.1: cache_cases.yaml was committed before the sweep and never relabeled",
+      "status": "PASS",
+      "detail": "1 commit, never modified since, clean=True, committed before the sweep output=True"
+    },
+    {
+      "check": "Part 2: >=10 queries covering duplicates, paraphrases and new questions, with flag + similarity + latency",
+      "status": "PASS",
+      "detail": "14 queries, hit rate 57.1%, cached 490.6 ms vs not cached 30325.4 ms"
+    },
+    {
+      "check": "Part 3.2: sweep covers 5 thresholds x 40 cases and the table matches the raw rows",
+      "status": "PASS",
+      "detail": "5 thresholds x 40 cases; table recomputed from rows matches: [(30, 10), (30, 10), (27, 10), (23, 9), (19, 7)]"
+    },
+    {
+      "check": "Part 3.4: total cost = misses x C_miss + false hits x C_false at every threshold",
+      "status": "PASS",
+      "detail": "total = misses x $0.02 + false hits x $5.0 for every threshold"
+    },
+    {
+      "check": "Part 3.5: recorded stale-hit and invalidation demo is consistent",
+      "status": "PASS",
+      "detail": "stale hit == original answer; after invalidation a fresh answer names the new agency; next ask is a valid hit"
+    },
+    {
+      "check": "Part 4: input datasets hold only questions, are disjoint, and a reference dataset exists",
+      "status": "PASS",
+      "detail": "30 reference routes; splits [12, 10, 14] disjoint; inputs hold only id+question"
+    },
+    {
+      "check": "Part 4.2: lessons.json has lesson_id, failure_pattern, correction, created_at, use_count",
+      "status": "PASS",
+      "detail": "2 lessons, statuses ['kept', 'rejected']"
+    },
+    {
+      "check": "Part 4.2: a lesson created earlier is loaded for a later question (use_count recorded)",
+      "status": "PASS",
+      "detail": "1 attempts loaded a stored lesson; use_count > 0 recorded"
+    },
+    {
+      "check": "Part 4.1: never more than two attempts; Baseline never revises",
+      "status": "PASS",
+      "detail": "max attempts in any variant = 2; Baseline always 1"
+    },
+    {
+      "check": "Part 4.1: controlled case shows REVISE + feedback, then a revised answer",
+      "status": "PASS",
+      "detail": "attempt 1 REVISE, attempt 2 PASS, final PASS"
+    },
+    {
+      "check": "Part 4: test_data.json was not used to create lessons",
+      "status": "PASS",
+      "detail": "no test question appears in training, or inside any lesson"
+    },
+    {
+      "check": "Part 4.4: four variants, each evaluated on all test questions",
+      "status": "PASS",
+      "detail": "Baseline 10/14; Evaluator Repair 14/14; Lesson Memory 14/14; Validated Improvement 14/14"
+    }
+  ]
+}

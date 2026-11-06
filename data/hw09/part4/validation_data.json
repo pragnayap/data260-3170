@@ -1,0 +1,42 @@
+[
+  {
+    "id": "val_01",
+    "question": "What is the current fare for route R-0111?"
+  },
+  {
+    "id": "val_02",
+    "question": "Which agency operates route R-0112, and what is its route type?"
+  },
+  {
+    "id": "val_03",
+    "question": "How do I convert Celsius to Fahrenheit?"
+  },
+  {
+    "id": "val_04",
+    "question": "How many incidents are recorded for route R-0113?"
+  },
+  {
+    "id": "val_05",
+    "question": "What does a ticket cost on route R-0114?"
+  },
+  {
+    "id": "val_06",
+    "question": "What is the most common incident category on route R-0115, and how many incidents are recorded there?"
+  },
+  {
+    "id": "val_07",
+    "question": "Who painted the Mona Lisa?"
+  },
+  {
+    "id": "val_08",
+    "question": "What agency operates the route named Line 116?"
+  },
+  {
+    "id": "val_09",
+    "question": "What is the name of route R-0117?"
+  },
+  {
+    "id": "val_10",
+    "question": "How many riders were affected in total on route R-0118?"
+  }
+]

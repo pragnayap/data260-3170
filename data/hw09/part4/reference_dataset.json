@@ -1,0 +1,695 @@
+{
+  "description": "Ground truth for HW9 Part 4. Route facts come from s3170_rel (routes + incident aggregates); fare_history is synthetic, generated with random.Random(3170). The current fare is the entry with the latest effective date.",
+  "routes": [
+    {
+      "route_code": "R-0101",
+      "route_name": "Line 101",
+      "agency": "Caltrain",
+      "route_type": "Commuter Rail",
+      "incident_count": 27,
+      "riders_total": 2186,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 3.0,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0102",
+      "route_name": "Line 102",
+      "agency": "BART",
+      "route_type": "Light Rail",
+      "incident_count": 28,
+      "riders_total": 2108,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0103",
+      "route_name": "Express 103",
+      "agency": "Caltrain",
+      "route_type": "Commuter Rail",
+      "incident_count": 26,
+      "riders_total": 2374,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0104",
+      "route_name": "Route 104",
+      "agency": "SamTrans",
+      "route_type": "Bus",
+      "incident_count": 30,
+      "riders_total": 2448,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0105",
+      "route_name": "Route 105",
+      "agency": "SamTrans",
+      "route_type": "Light Rail",
+      "incident_count": 23,
+      "riders_total": 2116,
+      "top_incident_category": "Accident-Collision",
+      "fare_history": [
+        {
+          "fare_usd": 1.75,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0106",
+      "route_name": "Route 106",
+      "agency": "AC Transit",
+      "route_type": "Light Rail",
+      "incident_count": 20,
+      "riders_total": 1559,
+      "top_incident_category": "Accident-Collision",
+      "fare_history": [
+        {
+          "fare_usd": 1.75,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0107",
+      "route_name": "Rapid 107",
+      "agency": "BART",
+      "route_type": "Subway",
+      "incident_count": 26,
+      "riders_total": 2263,
+      "top_incident_category": "Accident-Collision",
+      "fare_history": [
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0108",
+      "route_name": "Rapid 108",
+      "agency": "SamTrans",
+      "route_type": "Subway",
+      "incident_count": 22,
+      "riders_total": 2330,
+      "top_incident_category": "Accident-Collision",
+      "fare_history": [
+        {
+          "fare_usd": 1.75,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0109",
+      "route_name": "AC Transit Line 109",
+      "agency": "AC Transit",
+      "route_type": "Light Rail",
+      "incident_count": 29,
+      "riders_total": 2801,
+      "top_incident_category": "Accident-Collision",
+      "fare_history": [
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0110",
+      "route_name": "Route 110",
+      "agency": "AC Transit",
+      "route_type": "Commuter Rail",
+      "incident_count": 20,
+      "riders_total": 2144,
+      "top_incident_category": "Mechanical Failure",
+      "fare_history": [
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 3.0,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0111",
+      "route_name": "Line 111",
+      "agency": "Muni",
+      "route_type": "Commuter Rail",
+      "incident_count": 35,
+      "riders_total": 2822,
+      "top_incident_category": "Accident-Collision",
+      "fare_history": [
+        {
+          "fare_usd": 1.75,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0112",
+      "route_name": "Rapid 112",
+      "agency": "Caltrain",
+      "route_type": "Subway",
+      "incident_count": 27,
+      "riders_total": 2124,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 3.0,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0113",
+      "route_name": "Express 113",
+      "agency": "AC Transit",
+      "route_type": "Subway",
+      "incident_count": 22,
+      "riders_total": 2093,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0114",
+      "route_name": "Caltrain Line 114",
+      "agency": "Caltrain",
+      "route_type": "Subway",
+      "incident_count": 18,
+      "riders_total": 1716,
+      "top_incident_category": "Mechanical Failure",
+      "fare_history": [
+        {
+          "fare_usd": 1.75,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0115",
+      "route_name": "Line 115",
+      "agency": "SJ Transit",
+      "route_type": "Subway",
+      "incident_count": 21,
+      "riders_total": 2420,
+      "top_incident_category": "Accident-Collision",
+      "fare_history": [
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 3.0,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0116",
+      "route_name": "Line 116",
+      "agency": "VTA",
+      "route_type": "Bus",
+      "incident_count": 21,
+      "riders_total": 1828,
+      "top_incident_category": "Safety Hazard",
+      "fare_history": [
+        {
+          "fare_usd": 1.75,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0117",
+      "route_name": "Line 117",
+      "agency": "Muni",
+      "route_type": "Light Rail",
+      "incident_count": 30,
+      "riders_total": 2584,
+      "top_incident_category": "Mechanical Failure",
+      "fare_history": [
+        {
+          "fare_usd": 1.75,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0118",
+      "route_name": "Route 118",
+      "agency": "Caltrain",
+      "route_type": "Subway",
+      "incident_count": 15,
+      "riders_total": 1738,
+      "top_incident_category": "Mechanical Failure",
+      "fare_history": [
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0119",
+      "route_name": "AC Transit Line 119",
+      "agency": "AC Transit",
+      "route_type": "Bus",
+      "incident_count": 33,
+      "riders_total": 2373,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 1.75,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0120",
+      "route_name": "SamTrans Line 120",
+      "agency": "SamTrans",
+      "route_type": "Bus",
+      "incident_count": 21,
+      "riders_total": 1990,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0121",
+      "route_name": "Line 121",
+      "agency": "SamTrans",
+      "route_type": "Light Rail",
+      "incident_count": 29,
+      "riders_total": 2661,
+      "top_incident_category": "Accident-Collision",
+      "fare_history": [
+        {
+          "fare_usd": 1.75,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0122",
+      "route_name": "Route 122",
+      "agency": "VTA",
+      "route_type": "Bus",
+      "incident_count": 16,
+      "riders_total": 1636,
+      "top_incident_category": "Mechanical Failure",
+      "fare_history": [
+        {
+          "fare_usd": 1.75,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0123",
+      "route_name": "Express 123",
+      "agency": "VTA",
+      "route_type": "Subway",
+      "incident_count": 26,
+      "riders_total": 2240,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0124",
+      "route_name": "Line 124",
+      "agency": "Caltrain",
+      "route_type": "Bus",
+      "incident_count": 32,
+      "riders_total": 2696,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 3.0,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0125",
+      "route_name": "Rapid 125",
+      "agency": "Caltrain",
+      "route_type": "Commuter Rail",
+      "incident_count": 21,
+      "riders_total": 2011,
+      "top_incident_category": "Delay",
+      "fare_history": [
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0126",
+      "route_name": "VTA Line 126",
+      "agency": "VTA",
+      "route_type": "Subway",
+      "incident_count": 19,
+      "riders_total": 1401,
+      "top_incident_category": "Safety Hazard",
+      "fare_history": [
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0127",
+      "route_name": "Route 127",
+      "agency": "Muni",
+      "route_type": "Commuter Rail",
+      "incident_count": 26,
+      "riders_total": 2603,
+      "top_incident_category": "Safety Hazard",
+      "fare_history": [
+        {
+          "fare_usd": 2.0,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0128",
+      "route_name": "Caltrain Line 128",
+      "agency": "Caltrain",
+      "route_type": "Commuter Rail",
+      "incident_count": 26,
+      "riders_total": 2376,
+      "top_incident_category": "Safety Hazard",
+      "fare_history": [
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0129",
+      "route_name": "Express 129",
+      "agency": "AC Transit",
+      "route_type": "Bus",
+      "incident_count": 28,
+      "riders_total": 2525,
+      "top_incident_category": "Mechanical Failure",
+      "fare_history": [
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2026-07-01"
+        }
+      ]
+    },
+    {
+      "route_code": "R-0130",
+      "route_name": "Rapid 130",
+      "agency": "SamTrans",
+      "route_type": "Bus",
+      "incident_count": 28,
+      "riders_total": 2732,
+      "top_incident_category": "Accident-Collision",
+      "fare_history": [
+        {
+          "fare_usd": 2.25,
+          "effective": "2025-01-01"
+        },
+        {
+          "fare_usd": 2.5,
+          "effective": "2025-07-01"
+        },
+        {
+          "fare_usd": 2.75,
+          "effective": "2026-07-01"
+        }
+      ]
+    }
+  ]
+}

@@ -104,6 +104,14 @@ class Incident(Base):
         ForeignKey("routes.id", ondelete="RESTRICT"), index=True
     )
 
+    # HW9 Part 1: view counter. Redis holds the live count (s3170:views:incident:<id>);
+    # every 10th increment is written here with a raw UPDATE that deliberately does NOT
+    # touch updated_at, because a view is not a content change (HW9 Part 3.5 uses
+    # updated_at as the data-version marker).
+    view_count: Mapped[int] = mapped_column(
+        Integer, default=0, server_default="0", nullable=False
+    )
+
     created_at: Mapped[dt.datetime] = mapped_column(DateTime, default=_utcnow)
     updated_at: Mapped[dt.datetime] = mapped_column(
         DateTime, default=_utcnow, onupdate=_utcnow

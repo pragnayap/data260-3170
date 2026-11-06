@@ -1,0 +1,75 @@
+Pragnaya Priyadarshini HW9 - part4_run.py variants
+
+===== Baseline =====
+  tes_01: REVISE attempts=1 9.37s  'The current fare on route R-0121 is $2.00, effective from 2025-07-01.'
+  tes_02: PASS attempts=1 4.88s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: REVISE attempts=1 2.93s  'The largest ocean on Earth is the Pacific Ocean.'
+  tes_04: PASS attempts=1 3.52s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 5.73s  'As of the most recent fare history, a single ride on route R-0124 costs $3.00.'
+  tes_06: PASS attempts=1 3.63s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: REVISE attempts=1 2.1s  'The current president of France is Emmanuel Macron.'
+  tes_08: PASS attempts=1 6.54s  'A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 3.77s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 3.99s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 5.67s  'The current fare on route R-0129 is $2.75, and it is operated by AC Transit.'
+  tes_12: PASS attempts=1 3.11s  'There are no recorded incidents for route R-9999.'
+  tes_13: REVISE attempts=1 3.86s  'The best pizza topping is subjective, but many people love pepperoni.'
+  tes_14: PASS attempts=1 5.69s  'Route R-0130 is a Bus route operated by SamTrans.'
+  -> {'variant': 'Baseline', 'correct': 10, 'incorrect': 4, 'avg_attempts': 1, 'avg_latency_s': 4.6, 'lessons_available': []}
+
+===== Evaluator Repair =====
+  tes_01: PASS attempts=2 17.99s  'The current fare on route R-0121 is $2.25, effective from 2026-07-01.'
+  tes_02: PASS attempts=1 4.9s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: PASS attempts=2 4.82s  'I do not have that information.'
+  tes_04: PASS attempts=1 3.34s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 5.63s  'As of the most recent fare history, a single ride on route R-0124 costs $3.00.'
+  tes_06: PASS attempts=1 3.59s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: PASS attempts=2 3.79s  'I do not have that information.'
+  tes_08: PASS attempts=1 6.59s  'A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 3.83s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 4.06s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 5.95s  'The current fare on route R-0129 is $2.75, and it is operated by AC Transit.'
+  tes_12: PASS attempts=1 3.14s  'There are no recorded incidents for route R-9999.'
+  tes_13: PASS attempts=2 5.5s  'I do not have that information.'
+  tes_14: PASS attempts=1 3.67s  'Route R-0130 is a Bus route operated by SamTrans.'
+  -> {'variant': 'Evaluator Repair', 'correct': 14, 'incorrect': 0, 'avg_attempts': 1.29, 'avg_latency_s': 5.5, 'lessons_available': []}
+
+===== Lesson Memory =====
+  tes_01: PASS attempts=2 18.69s  'The current fare on route R-0121 is $2.25, effective from 2026-07-01.'
+  tes_02: PASS attempts=1 5.01s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: PASS attempts=1 2.48s  'I cannot answer that question.'
+  tes_04: PASS attempts=1 3.51s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 8.02s  'The current fare for a single ride on route R-0124 is $3.00, effective from 2026-07-01.'
+  tes_06: PASS attempts=1 3.72s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: PASS attempts=1 2.38s  'I cannot answer this question.'
+  tes_08: PASS attempts=1 6.5s  'A total of 1401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 3.84s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 4.04s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 5.18s  'The current fare on route R-0129 is $2.75, operated by AC Transit.'
+  tes_12: PASS attempts=2 11.41s  'I do not have that information in the transit database.'
+  tes_13: PASS attempts=1 2.39s  'I cannot answer that question.'
+  tes_14: PASS attempts=1 3.04s  'The route R-0130 is a Bus route.'
+  -> {'variant': 'Lesson Memory', 'correct': 14, 'incorrect': 0, 'avg_attempts': 1.14, 'avg_latency_s': 5.7, 'lessons_available': ['lesson_001', 'lesson_002']}
+
+===== Validated Improvement =====
+  tes_01: PASS attempts=2 18.08s  'The current fare on route R-0121 is $2.25, effective from 2026-07-01.'
+  tes_02: PASS attempts=1 4.86s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: PASS attempts=1 3.25s  'I do not have that information in the transit database.'
+  tes_04: PASS attempts=1 3.39s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 5.65s  'As of the most recent fare history, a single ride on route R-0124 costs $3.00.'
+  tes_06: PASS attempts=1 3.62s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: PASS attempts=1 3.38s  'I do not have that information in the transit database.'
+  tes_08: PASS attempts=1 6.47s  'A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 3.8s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 4.01s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 5.65s  'The current fare on route R-0129 is $2.75, and it is operated by AC Transit.'
+  tes_12: PASS attempts=2 11.21s  'I do not have that information in the transit database.'
+  tes_13: PASS attempts=1 3.46s  'I do not have that information in the transit database.'
+  tes_14: PASS attempts=1 3.61s  'Route R-0130 is a Bus route operated by SamTrans.'
+  -> {'variant': 'Validated Improvement', 'correct': 14, 'incorrect': 0, 'avg_attempts': 1.14, 'avg_latency_s': 5.7, 'lessons_available': ['lesson_001']}
+
+Variant                 Correct  Incorrect  AvgAttempts  AvgLatency(s)
+Baseline                     10          4            1           4.6
+Evaluator Repair             14          0         1.29           5.5
+Lesson Memory                14          0         1.14           5.7
+Validated Improvement        14          0         1.14           5.7

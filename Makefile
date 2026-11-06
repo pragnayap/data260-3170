@@ -13,7 +13,8 @@ APP_DIR := code/web_application
         mongo-up sweep-hw06 consolidate-hw06 agent-check-hw06 metrics-hw06 test-hw06 file-memory verify-hw06 \
         seed-hw07 test-hw07 demo-hw07 reliability-hw07 reflexion-hw07 bike-data-hw07 snapshots-hw07 attacks-hw07 verify-hw07 \
         metrics-hw07 runlog-hw07 report-hw07 \
-        kafka-up-hw08 topics-hw08 demo-hw08 agents-hw08 failures-hw08 verify-hw08 down-hw08
+        kafka-up-hw08 topics-hw08 demo-hw08 agents-hw08 failures-hw08 verify-hw08 down-hw08 \
+        redis-up-hw09 migrate-hw09 counter-hw09 cache-hw09 sweep-hw09 stale-hw09 si-hw09 verify-hw09 metrics-hw09
 
 help:
 	@echo "install       install deps from requirements.txt, then the NLTK data"
@@ -66,6 +67,15 @@ help:
 	@echo "failures-hw08  Part 3: duplicate, consumer death, poison message, ordering - before and after"
 	@echo "verify-hw08    run the HW8 self-check -> reports/hw08/verification.json"
 	@echo "down-hw08      docker compose down"
+	@echo "redis-up-hw09  start the s3170_redis container (Redis Stack: RediSearch vector index) on 6379"
+	@echo "migrate-hw09   add incidents.view_count to MySQL"
+	@echo "counter-hw09   Part 1: 25 accesses through increment_incident_views()"
+	@echo "cache-hw09     Part 2: 14 queries through the semantic cache (needs Ollama)"
+	@echo "sweep-hw09     Part 3.2-3.4: seed 20 answers, then 40 cases x 5 thresholds (needs Ollama)"
+	@echo "stale-hw09     Part 3.5: stale hit, then version-marker invalidation (needs Ollama)"
+	@echo "si-hw09        Part 4: demo + train + validate + variants (needs Ollama, ~1 h)"
+	@echo "verify-hw09    run the HW9 self-check -> reports/hw09/verification.json"
+	@echo "metrics-hw09   rebuild reports/hw09/METRICS.md from raw/"
 
 install:
 	$(PY) -m pip install -r requirements.txt
@@ -248,3 +258,30 @@ verify-hw08:
 
 down-hw08:
 	docker compose down
+
+redis-up-hw09:
+	docker start s3170_redis 2>/dev/null || docker run -d --name s3170_redis -p 6379:6379 redis/redis-stack-server:7.4.0-v1
+
+migrate-hw09:
+	$(PY) code/hw09/migrate_hw09.py
+
+counter-hw09:
+	cd code/hw09 && ../../$(PY) -u part1_counter.py
+
+cache-hw09:
+	cd code/hw09 && ../../$(PY) -u part2_run.py 2>&1 | tee ../../reports/hw09/raw/part2_run.log
+
+sweep-hw09:
+	cd code/hw09 && ../../$(PY) -u part3_sweep.py 2>&1 | tee ../../reports/hw09/raw/part3_sweep.log
+
+stale-hw09:
+	cd code/hw09 && ../../$(PY) -u part3_stale.py 2>&1 | tee ../../reports/hw09/raw/part3_stale.log
+
+si-hw09:
+	cd code/hw09 && ../../$(PY) -u part4_build_data.py && ../../$(PY) -u part4_run.py all 2>&1 | tee ../../reports/hw09/raw/part4_run.log
+
+verify-hw09:
+	$(PY) -u code/verify_hw09.py
+
+metrics-hw09:
+	$(PY) code/hw09/build_metrics.py

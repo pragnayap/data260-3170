@@ -20,6 +20,7 @@ reader); delete - moderator only (403 for reader and writer).
 
 from __future__ import annotations
 
+from cache_db import get_incident_cache
 from fastapi import APIRouter, Depends, HTTPException, Query, Response
 from sqlalchemy.orm import Session
 
@@ -82,7 +83,13 @@ def list_incidents(
 @router.get("/{incident_id}", response_model=IncidentOut)
 def get_incident(incident_id: int, response: Response, db: Session = Depends(get_db)):
     _no_store(response)
-    return _get_or_404(db, incident_id)
+    incident = _get_or_404(db, incident_id)
+    # HW9 Part 1: count the access in Redis. A Redis outage must never break a read.
+    try:
+        response.headers["X-View-Count"] = str(get_incident_cache().increment_incident_views(incident_id))
+    except Exception:  # noqa: BLE001
+        pass
+    return incident
 
 
 @router.post(

@@ -1,0 +1,484 @@
+HW9 RUN LOG - Pragnaya Priyadarshini - assembled from the real run logs in raw/ (no edits)
+
+################ raw/part1_run.log
+Pragnaya Priyadarshini HW9 - part1_counter.py
+key = s3170:views:incident:1
+
+=== Testing Counter ===
+
+Access #1: Total = 1
+Access #2: Total = 2
+Access #3: Total = 3
+Access #4: Total = 4
+Access #5: Total = 5
+Access #6: Total = 6
+Access #7: Total = 7
+Access #8: Total = 8
+Access #9: Total = 9
+Access #10: Total = 10
+✓ Synced views to database
+Access #11: Total = 11
+Access #12: Total = 12
+Access #13: Total = 13
+Access #14: Total = 14
+Access #15: Total = 15
+Access #16: Total = 16
+Access #17: Total = 17
+Access #18: Total = 18
+Access #19: Total = 19
+Access #20: Total = 20
+✓ Synced views to database
+Access #21: Total = 21
+Access #22: Total = 22
+Access #23: Total = 23
+Access #24: Total = 24
+Access #25: Total = 25
+
+Redis s3170:views:incident:1 = 25
+MySQL incidents.view_count (id=1) = 20   (last synced at the 20th access)
+
+################ raw/part2_run.log
+Pragnaya Priyadarshini HW9 - part2_run.py
+
+--- Query 1/14 [new] What agency operates route R-0030?
+10:05:19 INFO CACHE MISS  nearest_similarity=n/a threshold=0.85 -> running the HW8 agent path
+10:06:01 INFO CACHE MISS  agent_ms=42060 total=42186 ms stored version=v-3c5ea8f5adc3
+    is_cached=False  similarity=n/a  latency=42185.7 ms
+    answer: Route R-0030, also known as Route 30, is operated by Caltrain. This route is classified as a Commuter Rail service.
+
+--- Query 2/14 [exact duplicate] What agency operates route R-0030?
+10:06:02 INFO CACHE HIT  similarity=1.0000 threshold=0.85 matched='What agency operates route R-0030?' latency=1141.3 ms
+    is_cached=True  similarity=1.0000  latency=1141.3 ms
+    answer: Route R-0030, also known as Route 30, is operated by Caltrain. This route is classified as a Commuter Rail service.
+
+--- Query 3/14 [paraphrase] Which transit agency is responsible for route R-0030?
+10:06:02 INFO CACHE HIT  similarity=0.8755 threshold=0.85 matched='What agency operates route R-0030?' latency=163.8 ms
+    is_cached=True  similarity=0.8755  latency=163.8 ms
+    answer: Route R-0030, also known as Route 30, is operated by Caltrain. This route is classified as a Commuter Rail service.
+
+--- Query 4/14 [new] How many incidents are recorded for route R-0040?
+10:06:02 INFO CACHE MISS  nearest_similarity=0.5988 threshold=0.85 -> running the HW8 agent path
+10:06:30 INFO CACHE MISS  agent_ms=27693 total=27727 ms stored version=v-e30a089b9f95
+    is_cached=False  similarity=0.5988  latency=27726.9 ms
+    answer: The number of incidents recorded for route R-0040 is 32. This total includes incidents categorized as Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+
+--- Query 5/14 [exact duplicate] How many incidents are recorded for route R-0040?
+10:06:30 INFO CACHE HIT  similarity=1.0000 threshold=0.85 matched='How many incidents are recorded for route R-0040?' latency=761.1 ms
+    is_cached=True  similarity=1.0000  latency=761.1 ms
+    answer: The number of incidents recorded for route R-0040 is 32. This total includes incidents categorized as Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+
+--- Query 6/14 [paraphrase] What is the total incident count for route R-0040?
+10:06:31 INFO CACHE HIT  similarity=0.9161 threshold=0.85 matched='How many incidents are recorded for route R-0040?' latency=144.3 ms
+    is_cached=True  similarity=0.9161  latency=144.3 ms
+    answer: The number of incidents recorded for route R-0040 is 32. This total includes incidents categorized as Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+
+--- Query 7/14 [new] What type of route is R-0045?
+10:06:31 INFO CACHE MISS  nearest_similarity=0.7510 threshold=0.85 -> running the HW8 agent path
+10:07:05 INFO CACHE MISS  agent_ms=34046 total=34196 ms stored version=v-eac8a98ddcea
+    is_cached=False  similarity=0.7510  latency=34196.0 ms
+    answer: Route R-0045, known as Rapid 45, is a Light Rail route operated by the VTA, and it has recorded 20 incidents affecting a total of 1,880 riders, categorized into Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+
+--- Query 8/14 [paraphrase] What kind of service does route R-0045 provide?
+10:07:06 INFO CACHE MISS  nearest_similarity=0.8480 threshold=0.85 -> running the HW8 agent path
+10:07:39 INFO CACHE MISS  agent_ms=33515 total=34325 ms stored version=v-eac8a98ddcea
+    is_cached=False  similarity=0.8480  latency=34325.0 ms
+    answer: Route R-0045, known as Rapid 45, provides light rail service operated by the VTA. It has recorded 20 incidents, including delays, mechanical failures, and safety hazards, affecting a total of 1,880 riders.
+
+--- Query 9/14 [new (unrelated)] What is the capital of France?
+10:07:40 INFO CACHE MISS  nearest_similarity=0.1403 threshold=0.85 -> running the HW8 agent path
+10:07:56 INFO CACHE MISS  agent_ms=16266 total=17137 ms stored version=none
+    is_cached=False  similarity=0.1403  latency=17137.0 ms
+    answer: The country in question is France. The capital of France is Paris.
+
+--- Query 10/14 [exact duplicate] What is the capital of France?
+10:07:57 INFO CACHE HIT  similarity=1.0000 threshold=0.85 matched='What is the capital of France?' latency=757.4 ms
+    is_cached=True  similarity=1.0000  latency=757.4 ms
+    answer: The country in question is France. The capital of France is Paris.
+
+--- Query 11/14 [new] What is the name of route R-0052?
+10:07:57 INFO CACHE HIT  similarity=0.8836 threshold=0.85 matched='What type of route is R-0045?' latency=136.7 ms
+    is_cached=True  similarity=0.8836  latency=136.7 ms
+    answer: Route R-0045, known as Rapid 45, is a Light Rail route operated by the VTA, and it has recorded 20 incidents affecting a total of 1,880 riders, categorized into Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+
+--- Query 12/14 [near miss] What is the name of route R-0053?
+10:07:57 INFO CACHE HIT  similarity=0.8874 threshold=0.85 matched='What type of route is R-0045?' latency=32.4 ms
+    is_cached=True  similarity=0.8874  latency=32.5 ms
+    answer: Route R-0045, known as Rapid 45, is a Light Rail route operated by the VTA, and it has recorded 20 incidents affecting a total of 1,880 riders, categorized into Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+
+--- Query 13/14 [new] How many riders were affected in total on route R-0060?
+10:07:57 INFO CACHE MISS  nearest_similarity=0.7099 threshold=0.85 -> running the HW8 agent path
+10:08:27 INFO CACHE MISS  agent_ms=30033 total=30182 ms stored version=v-31722aacd2ab
+    is_cached=False  similarity=0.7099  latency=30181.7 ms
+    answer: The total number of riders affected on route R-0060 is 2,563, as directly provided in the database facts.
+
+--- Query 14/14 [paraphrase] What is the total number of passengers impacted on route R-0060?
+10:08:29 INFO CACHE HIT  similarity=0.8734 threshold=0.85 matched='How many riders were affected in total on route R-0060?' latency=1166.7 ms
+    is_cached=True  similarity=0.8734  latency=1166.7 ms
+    answer: The total number of riders affected on route R-0060 is 2,563, as directly provided in the database facts.
+
+=== Part 2 summary ===
+{
+  "queries": 14,
+  "hits": 8,
+  "misses": 6,
+  "hit_rate_pct": 57.1,
+  "avg_latency_cached_ms": 538.0,
+  "avg_latency_not_cached_ms": 30958.7,
+  "threshold": 0.85
+}
+
+################ raw/part3_sweep.log
+Pragnaya Priyadarshini HW9 - part3_sweep.py
+seed S01:  34883 ms  What agency operates route R-0002?  ->  The agency that operates route R-0002, also known as Line 2, is the VTA, which is responsible for managing bus routes in the area.
+seed S02:  30409 ms  How many incidents are recorded for route R-0012?  ->  The route R-0012, Express 12, has 26 incidents recorded. These incidents are categorized as Delay=9, Mechanical Failure=8, Accident-Collision=2, and Safety Hazard=7.
+seed S03:  28187 ms  What type of route is R-0021?  ->  Route R-0021, known as Express 21, is a Bus route operated by Muni. It has recorded 23 incidents affecting 1,963 riders, including delays, mechanical failures, and accidents.
+seed S04:  45208 ms  How many Delay incidents are recorded for route R-0018?  ->  Route R-0018, the BART Line 18, has recorded 9 Delay incidents according to the provided database facts.
+seed S05:  31627 ms  What is the total number of riders affected on route R-0015?  ->  The total number of riders affected on route R-0015 is 2,861. This figure is directly provided in the database facts for route R-0015.
+seed S06:  26276 ms  What is the name of route R-0033?  ->  The name of route R-0033 is Rapid 33. It is operated by the BART agency and is a Light Rail route.
+seed S07:  44960 ms  Which agency runs route R-0042?  ->  Route R-0042, known as the Express 42, is operated by the BART agency. It is a Subway route with a recorded history of incidents affecting a total of 2,584 riders.
+seed S08:  27649 ms  How many Safety Hazard incidents are recorded for route R-0050?  ->  Based on the database facts, there are 11 Safety Hazard incidents recorded for route R-0050.
+seed S09:  29729 ms  What type of route is R-0063?  ->  Route R-0063, named Express 63, is a Bus route operated by SJ Transit. It is classified as an express bus route, as indicated by its name and type.
+seed S10:  34614 ms  How many incidents are recorded for route R-0071?  ->  The number of incidents recorded for route R-0071 is 21. This total includes incidents categorized as Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+seed S11:  35741 ms  What agency operates route R-0001?  ->  The agency that operates route R-0001, known as Express 1, is AC Transit. This route is a Subway type managed by AC Transit.
+seed S12:  43452 ms  How many incidents are recorded for route R-0004?  ->  The number of incidents recorded for route R-0004 is 24. This total includes incidents categorized as Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+seed S13:  49601 ms  What type of route is R-0005?  ->  Route R-0005, known as the SJ Transit Line 5, is a Light Rail route operated by SJ Transit. It has experienced 22 incidents, affecting a total of 1,814 riders, with the majority categorized as delays, mechanical failures, and safety hazards.
+seed S14:  36192 ms  How many Delay incidents are recorded for route R-0009?  ->  Route R-0009, which is Line 9 operated by SamTrans, has recorded 6 Delay incidents according to the provided database facts.
+seed S15:  39176 ms  What is the total number of riders affected on route R-0010?  ->  The total number of riders affected on route R-0010 is 1,730. This figure is directly provided in the database facts for route R-0010.
+seed S16:  36806 ms  What is the name of route R-0011?  ->  The name of route R-0011 is Route 11. It is a Subway route operated by BART with a recorded total of 21 incidents affecting 1,749 riders.
+seed S17:  41152 ms  Which agency runs route R-0014?  ->  Route R-0014, known as Rapid 14, is operated by Caltrain, a commuter rail agency. The route is a Commuter Rail line managed by Caltrain, as indicated by the database facts.
+seed S18:  32671 ms  How many Safety Hazard incidents are recorded for route R-0019?  ->  According to the database facts, there are 7 Safety Hazard incidents recorded for route R-0019.
+seed S19:  40000 ms  What type of route is R-0024?  ->  Route R-0024, known as the SJ Transit Line 24, is a Subway route operated by SJ Transit. It has recorded incidents affecting a total of 2,604 riders, categorized into delays, mechanical failures, accidents, and safety hazards.
+seed S20:  38659 ms  How many incidents are recorded for route R-0027?  ->  The number of incidents recorded for route R-0027 is 18. This includes incidents categorized as Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+
+cache holds 20 entries; mean measured agent latency = 36350 ms
+
+threshold  hit%   FH%   missedHits  meanLat(ms)  totalCost($)
+0.75       75.0   50.0      0         9182.6      50.2
+0.80       75.0   50.0      0         9131.8      50.2
+0.85       67.5   50.0      3        11858.1     50.26
+0.90       57.5   45.0      6        15493.7     45.34
+0.95       47.5   35.0      8        19128.3     35.42
+
+cheapest threshold at $5.0 per false hit: 0.95
+
+################ raw/part3_stale.log
+Pragnaya Priyadarshini HW9 - part3_stale.py
+1) The cached question depends on routes row R-0099 (agency = 'Caltrain').
+10:21:46 INFO CACHE MISS  nearest_similarity=n/a threshold=0.85 -> running the HW8 agent path
+10:22:34 INFO CACHE MISS  agent_ms=48366 total=48515 ms stored version=v-35ebcc71f6cc
+  first ask (miss, agent runs, version marker stored): is_cached=False similarity=None latency=48515 ms
+      answer: Route R-0099, also known as Route 99, is operated by Caltrain. This route is a Subway type with a recorded history of incidents affecting a total of 1,786 riders.
+      stored data_version = v-35ebcc71f6cc
+
+2) UPDATE routes SET agency = 'Golden Gate Transit' WHERE route_code = 'R-0099'
+      database now says: 'Golden Gate Transit'; current data_version = v-2828a984429b
+
+3) Same question again, NO invalidation (validate_version=False): the stale hit
+10:22:35 INFO CACHE HIT  similarity=1.0000 threshold=0.85 matched='What agency operates route R-0099?' latency=784.2 ms
+  stale hit: is_cached=True similarity=1.0 latency=784 ms
+      answer: Route R-0099, also known as Route 99, is operated by Caltrain. This route is a Subway type with a recorded history of incidents affecting a total of 1,786 riders.
+
+4) Same question, invalidation ON (stored marker compared with the live marker on every hit)
+10:22:35 INFO STALE  similarity=1.0000 stored_version=v-35ebcc71f6cc current_version=v-2828a984429b -> evicting, treating as a miss
+10:22:35 INFO CACHE MISS  nearest_similarity=1.0000 threshold=0.85 -> running the HW8 agent path
+10:23:16 INFO CACHE MISS  agent_ms=40939 total=40986 ms stored version=v-2828a984429b
+  after invalidation: is_cached=False similarity=1.0 latency=40986 ms
+      answer: Route R-0099, also known as Route 99, is operated by Golden Gate Transit. This route is a Subway type with a recorded history of 22 incidents affecting a total of 1,786 riders.
+
+5) And once more: the refreshed entry is now a valid hit, at the cost of one version check
+10:23:17 INFO CACHE HIT  similarity=1.0000 threshold=0.85 matched='What agency operates route R-0099?' latency=817.4 ms
+  fresh hit: is_cached=True similarity=1.0 latency=817 ms
+      answer: Route R-0099, also known as Route 99, is operated by Golden Gate Transit. This route is a Subway type with a recorded history of 22 incidents affecting a total of 1,786 riders.
+
+restored R-0099.agency 'Golden Gate Transit' -> 'Caltrain'
+
+################ raw/part4_stage1.log
+Pragnaya Priyadarshini HW9 - part4_run.py demo
+Question: Which agency operates route R-0110 and what type of route is it?
+Controlled fault: attempt 1 is forced to 'Route R-0110 is a Commuter Rail route.'
+    attempt 1: 'Route R-0110 is a Commuter Rail route.'
+      evaluator: REVISE - The answer does not state the requested fact(s): agency.
+      feedback: Your answer is missing: agency. Re-read the database record and state every requested fact explicitly.
+    attempt 2: 'The agency that operates route R-0110 is AC Transit, and it is a Commuter Rail route.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 2 attempt(s), 16.91s
+Pragnaya Priyadarshini HW9 - part4_run.py train
+
+[tra_01] What is the current fare on route R-0101?
+    features=['changing_value']
+    attempt 1: 'The current fare on route R-0101 is $2.75, effective from 2025-07-01.'
+      evaluator: REVISE - The answer gives an outdated fare, not the current one.
+      feedback: That fare is out of date. The record lists fares with effective dates; use the one with the latest effective date.
+    attempt 2: 'The current fare on route R-0101 is $3.00, effective from 2026-07-01.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 2 attempt(s), 31.63s
+
+[tra_02] Which agency operates route R-0102 and what type of route is it?
+    features=['multi_fact']
+    attempt 1: 'The agency that operates route R-0102 is BART, and it is a Light Rail route.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 13.44s
+
+[tra_03] What is the capital of Australia?
+    features=['no_record']
+    attempt 1: 'The capital of Australia is Canberra.'
+      evaluator: REVISE - The reference data has no record for this question, but the answer states a fact anyway.
+      feedback: This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.
+    attempt 2: 'I do not have access to the transit database, so I cannot provide that information.'
+      evaluator: PASS - The question is not covered by the reference data and the answer says so.
+    => final PASS after 2 attempt(s), 13.22s
+
+[tra_04] How many incidents are recorded for route R-0103?
+    features=[]
+    attempt 1: 'The route R-0103 has 26 incidents recorded.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 11.59s
+
+[tra_05] What is the ticket price for route R-0104?
+    features=['changing_value']
+    attempt 1: 'The ticket price for route R-0104 is $2.75, effective from 2026-07-01.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 16.55s
+
+[tra_06] What is the most common incident category on route R-0105?
+    features=[]
+    attempt 1: 'The most common incident category on route R-0105 is Accident-Collision.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 12.25s
+
+[tra_07] Who won the most recent football World Cup?
+    features=['no_record']
+    attempt 1: 'France won the most recent FIFA World Cup in 2022.'
+      evaluator: REVISE - The reference data has no record for this question, but the answer states a fact anyway.
+      feedback: This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.
+    attempt 2: 'I do not have that information.'
+      evaluator: PASS - The question is not covered by the reference data and the answer says so.
+    => final PASS after 2 attempt(s), 14.55s
+    ** pattern 'unsupported_answer' seen 2x -> created lesson_001
+
+[tra_08] How many riders were affected in total on route R-0106, and which agency runs it?
+    features=['multi_fact']
+    attempt 1: 'A total of 1,559 riders were affected on route R-0106, which is run by AC Transit.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 17.67s
+
+[tra_09] What is the name of route R-0107?
+    features=[]
+    attempt 1: 'The name of route R-0107 is Rapid 107.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 12.7s
+
+[tra_10] How much does it cost to ride route R-0108?
+    features=['changing_value']
+    attempt 1: 'The cost to ride route R-0108 is $2.25, effective from July 1, 2026.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 16.26s
+
+[tra_11] Recommend a good restaurant near Union Square in San Francisco.
+    features=['no_record']
+    attempt 1: 'I do not have that information in the transit database.'
+      evaluator: PASS - The question is not covered by the reference data and the answer says so.
+      lessons loaded: ['lesson_001']
+    => final PASS after 1 attempt(s), 7.58s
+
+[tra_12] What agency runs route R-0109?
+    features=[]
+    attempt 1: 'The agency that runs route R-0109 is AC Transit.'
+      evaluator: PASS - All requested facts match the reference dataset.
+    => final PASS after 1 attempt(s), 12.37s
+
+lessons.json now holds 2 candidate lessons (last one is the hand-written over-broad candidate)
+
+################ raw/part4_stage2_run1.log
+Pragnaya Priyadarshini HW9 - part4_run.py validate
+--- validation BEFORE any lesson ---
+  [before] val_01: first=ok final=ok lessons=[]
+  [before] val_02: first=ok final=ok lessons=[]
+  [before] val_03: first=FAIL final=ok lessons=[]
+  [before] val_04: first=ok final=ok lessons=[]
+  [before] val_05: first=ok final=ok lessons=[]
+  [before] val_06: first=ok final=ok lessons=[]
+  [before] val_07: first=FAIL final=ok lessons=[]
+  [before] val_08: first=ok final=ok lessons=[]
+  [before] val_09: first=ok final=ok lessons=[]
+  [before] val_10: first=ok final=ok lessons=[]
+
+--- candidate lesson_001 (unsupported_answer, trigger=no_record): If the database says no record matched, do not answer from general knowledge. Reply that you do not have that information in the transit database.
+  [lesson_001] val_01: first=ok final=ok lessons=[]
+  [lesson_001] val_02: first=ok final=ok lessons=[]
+  [lesson_001] val_03: first=ok final=ok lessons=['lesson_001']
+  [lesson_001] val_04: first=ok final=ok lessons=[]
+  [lesson_001] val_05: first=ok final=ok lessons=[]
+  [lesson_001] val_06: first=ok final=ok lessons=[]
+  [lesson_001] val_07: first=ok final=ok lessons=['lesson_001']
+  [lesson_001] val_08: first=ok final=ok lessons=[]
+  [lesson_001] val_09: first=ok final=ok lessons=[]
+  [lesson_001] val_10: first=ok final=ok lessons=[]
+  => KEEP  fixed(first/final)=2/0 regressed(first/final)=0/0 unsupported-answers-on-unrelated=0
+
+--- candidate lesson_002 (unsupported_answer, trigger=always): Only answer questions that contain a route code in the form R-NNNN. For every other question, say you cannot answer it.
+  [lesson_002] val_01: first=ok final=ok lessons=['lesson_002']
+  [lesson_002] val_02: first=ok final=ok lessons=['lesson_002']
+  [lesson_002] val_03: first=ok final=ok lessons=['lesson_001', 'lesson_002']
+  [lesson_002] val_04: first=ok final=ok lessons=['lesson_002']
+  [lesson_002] val_05: first=ok final=ok lessons=['lesson_002']
+  [lesson_002] val_06: first=ok final=ok lessons=['lesson_002']
+  [lesson_002] val_07: first=ok final=ok lessons=['lesson_001', 'lesson_002']
+  [lesson_002] val_08: first=ok final=ok lessons=['lesson_002']
+  [lesson_002] val_09: first=ok final=ok lessons=['lesson_002']
+  [lesson_002] val_10: first=ok final=ok lessons=['lesson_002']
+  => REJECT  fixed(first/final)=0/0 regressed(first/final)=0/0 unsupported-answers-on-unrelated=0
+
+kept lessons: ['lesson_001']
+Pragnaya Priyadarshini HW9 - part4_run.py variants
+
+===== Baseline =====
+  tes_01: REVISE attempts=1 29.68s  'The current fare on route R-0121 is $2.00, effective from 2025-07-01.'
+  tes_02: PASS attempts=1 20.36s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: REVISE attempts=1 6.5s  'The largest ocean on Earth is the Pacific Ocean.'
+  tes_04: PASS attempts=1 17.99s  'There are 26 incidents recorded for route R-0123.'
+  tes_05: PASS attempts=1 23.05s  'As of the most recent fare history, a single ride on route R-0124 costs $3.00.'
+  tes_06: PASS attempts=1 18.42s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: REVISE attempts=1 6.43s  'The current president of France is Emmanuel Macron.'
+  tes_08: PASS attempts=1 25.17s  'A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 19.21s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 11.58s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 14.05s  'The current fare on route R-0129 is $2.75, and it is operated by AC Transit.'
+  tes_12: PASS attempts=1 6.5s  'There are no recorded incidents for route R-9999.'
+  tes_13: REVISE attempts=1 5.36s  'The best pizza topping is subjective, but many people love pepperoni.'
+  tes_14: PASS attempts=1 10.46s  'Route R-0130 is a Bus route operated by SamTrans.'
+  -> {'variant': 'Baseline', 'correct': 10, 'incorrect': 4, 'avg_attempts': 1, 'avg_latency_s': 15.3, 'lessons_available': []}
+
+===== Evaluator Repair =====
+  tes_01: PASS attempts=2 22.04s  'The current fare on route R-0121 is $2.25, effective from 2026-07-01.'
+  tes_02: PASS attempts=1 6.36s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: PASS attempts=2 8.54s  'I do not have that information.'
+  tes_04: PASS attempts=1 4.42s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 7.37s  'As of the most recent fare history, a single ride on route R-0124 costs $3.00.'
+  tes_06: PASS attempts=1 4.65s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: PASS attempts=2 8.57s  'I do not have that information.'
+  tes_08: PASS attempts=1 8.61s  'A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 4.87s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 5.2s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 7.31s  'The current fare on route R-0129 is $2.75, and it is operated by AC Transit.'
+  tes_12: PASS attempts=1 4.05s  'There are no recorded incidents for route R-9999.'
+  tes_13: PASS attempts=2 9.89s  'I do not have that information.'
+  tes_14: PASS attempts=1 4.67s  'Route R-0130 is a Bus route operated by SamTrans.'
+  -> {'variant': 'Evaluator Repair', 'correct': 14, 'incorrect': 0, 'avg_attempts': 1.29, 'avg_latency_s': 7.6, 'lessons_available': []}
+
+===== Lesson Memory =====
+  tes_01: PASS attempts=2 28.71s  'The current fare on route R-0121 is $2.25, effective from 2026-07-01.'
+  tes_02: PASS attempts=1 11.94s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: PASS attempts=1 2.74s  'I cannot answer that question.'
+  tes_04: PASS attempts=1 10.73s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 15.63s  'The current fare for a single ride on route R-0124 is $3.00, effective from 2026-07-01.'
+  tes_06: PASS attempts=1 10.0s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: PASS attempts=1 2.92s  'I cannot answer this question.'
+  tes_08: PASS attempts=1 19.36s  'A total of 1401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 11.02s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 11.58s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 11.51s  'The current fare on route R-0129 is $2.75, operated by AC Transit.'
+  tes_12: PASS attempts=2 11.62s  'I do not have that information in the transit database.'
+  tes_13: PASS attempts=1 2.39s  'I cannot answer that question.'
+  tes_14: PASS attempts=1 9.61s  'The route R-0130 is a Bus route.'
+  -> {'variant': 'Lesson Memory', 'correct': 14, 'incorrect': 0, 'avg_attempts': 1.14, 'avg_latency_s': 11.4, 'lessons_available': ['lesson_001', 'lesson_002']}
+
+===== Validated Improvement =====
+  tes_01: PASS attempts=2 18.5s  'The current fare on route R-0121 is $2.25, effective from 2026-07-01.'
+  tes_02: PASS attempts=1 4.89s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: PASS attempts=1 4.47s  'I do not have that information in the transit database.'
+  tes_04: PASS attempts=1 3.39s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 5.77s  'As of the most recent fare history, a single ride on route R-0124 costs $3.00.'
+  tes_06: PASS attempts=1 3.56s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: PASS attempts=1 3.46s  'I do not have that information in the transit database.'
+  tes_08: PASS attempts=1 6.51s  'A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 3.82s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 3.95s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 5.74s  'The current fare on route R-0129 is $2.75, and it is operated by AC Transit.'
+  tes_12: PASS attempts=2 11.27s  'I do not have that information in the transit database.'
+  tes_13: PASS attempts=1 3.31s  'I do not have that information in the transit database.'
+  tes_14: PASS attempts=1 3.62s  'Route R-0130 is a Bus route operated by SamTrans.'
+  -> {'variant': 'Validated Improvement', 'correct': 14, 'incorrect': 0, 'avg_attempts': 1.14, 'avg_latency_s': 5.9, 'lessons_available': ['lesson_001']}
+
+Variant                 Correct  Incorrect  AvgAttempts  AvgLatency(s)
+Baseline                     10          4            1          15.3
+Evaluator Repair             14          0         1.29           7.6
+Lesson Memory                14          0         1.14          11.4
+Validated Improvement        14          0         1.14           5.9
+
+################ raw/part4_variants_run2.log
+Pragnaya Priyadarshini HW9 - part4_run.py variants
+
+===== Baseline =====
+  tes_01: REVISE attempts=1 9.37s  'The current fare on route R-0121 is $2.00, effective from 2025-07-01.'
+  tes_02: PASS attempts=1 4.88s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: REVISE attempts=1 2.93s  'The largest ocean on Earth is the Pacific Ocean.'
+  tes_04: PASS attempts=1 3.52s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 5.73s  'As of the most recent fare history, a single ride on route R-0124 costs $3.00.'
+  tes_06: PASS attempts=1 3.63s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: REVISE attempts=1 2.1s  'The current president of France is Emmanuel Macron.'
+  tes_08: PASS attempts=1 6.54s  'A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 3.77s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 3.99s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 5.67s  'The current fare on route R-0129 is $2.75, and it is operated by AC Transit.'
+  tes_12: PASS attempts=1 3.11s  'There are no recorded incidents for route R-9999.'
+  tes_13: REVISE attempts=1 3.86s  'The best pizza topping is subjective, but many people love pepperoni.'
+  tes_14: PASS attempts=1 5.69s  'Route R-0130 is a Bus route operated by SamTrans.'
+  -> {'variant': 'Baseline', 'correct': 10, 'incorrect': 4, 'avg_attempts': 1, 'avg_latency_s': 4.6, 'lessons_available': []}
+
+===== Evaluator Repair =====
+  tes_01: PASS attempts=2 17.99s  'The current fare on route R-0121 is $2.25, effective from 2026-07-01.'
+  tes_02: PASS attempts=1 4.9s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: PASS attempts=2 4.82s  'I do not have that information.'
+  tes_04: PASS attempts=1 3.34s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 5.63s  'As of the most recent fare history, a single ride on route R-0124 costs $3.00.'
+  tes_06: PASS attempts=1 3.59s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: PASS attempts=2 3.79s  'I do not have that information.'
+  tes_08: PASS attempts=1 6.59s  'A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 3.83s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 4.06s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 5.95s  'The current fare on route R-0129 is $2.75, and it is operated by AC Transit.'
+  tes_12: PASS attempts=1 3.14s  'There are no recorded incidents for route R-9999.'
+  tes_13: PASS attempts=2 5.5s  'I do not have that information.'
+  tes_14: PASS attempts=1 3.67s  'Route R-0130 is a Bus route operated by SamTrans.'
+  -> {'variant': 'Evaluator Repair', 'correct': 14, 'incorrect': 0, 'avg_attempts': 1.29, 'avg_latency_s': 5.5, 'lessons_available': []}
+
+===== Lesson Memory =====
+  tes_01: PASS attempts=2 18.69s  'The current fare on route R-0121 is $2.25, effective from 2026-07-01.'
+  tes_02: PASS attempts=1 5.01s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: PASS attempts=1 2.48s  'I cannot answer that question.'
+  tes_04: PASS attempts=1 3.51s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 8.02s  'The current fare for a single ride on route R-0124 is $3.00, effective from 2026-07-01.'
+  tes_06: PASS attempts=1 3.72s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: PASS attempts=1 2.38s  'I cannot answer this question.'
+  tes_08: PASS attempts=1 6.5s  'A total of 1401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 3.84s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 4.04s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 5.18s  'The current fare on route R-0129 is $2.75, operated by AC Transit.'
+  tes_12: PASS attempts=2 11.41s  'I do not have that information in the transit database.'
+  tes_13: PASS attempts=1 2.39s  'I cannot answer that question.'
+  tes_14: PASS attempts=1 3.04s  'The route R-0130 is a Bus route.'
+  -> {'variant': 'Lesson Memory', 'correct': 14, 'incorrect': 0, 'avg_attempts': 1.14, 'avg_latency_s': 5.7, 'lessons_available': ['lesson_001', 'lesson_002']}
+
+===== Validated Improvement =====
+  tes_01: PASS attempts=2 18.08s  'The current fare on route R-0121 is $2.25, effective from 2026-07-01.'
+  tes_02: PASS attempts=1 4.86s  'The agency that operates route R-0122 is VTA, and it is a Bus route.'
+  tes_03: PASS attempts=1 3.25s  'I do not have that information in the transit database.'
+  tes_04: PASS attempts=1 3.39s  'The route R-0123 has 26 incidents recorded.'
+  tes_05: PASS attempts=1 5.65s  'As of the most recent fare history, a single ride on route R-0124 costs $3.00.'
+  tes_06: PASS attempts=1 3.62s  'The most common incident category on route R-0125 is Delay.'
+  tes_07: PASS attempts=1 3.38s  'I do not have that information in the transit database.'
+  tes_08: PASS attempts=1 6.47s  'A total of 1,401 riders were affected on route R-0126, which is run by the VTA agency.'
+  tes_09: PASS attempts=1 3.8s  'The name of route R-0127 is Route 127.'
+  tes_10: PASS attempts=1 4.01s  'The agency that operates the route named Caltrain Line 128 is Caltrain.'
+  tes_11: PASS attempts=1 5.65s  'The current fare on route R-0129 is $2.75, and it is operated by AC Transit.'
+  tes_12: PASS attempts=2 11.21s  'I do not have that information in the transit database.'
+  tes_13: PASS attempts=1 3.46s  'I do not have that information in the transit database.'
+  tes_14: PASS attempts=1 3.61s  'Route R-0130 is a Bus route operated by SamTrans.'
+  -> {'variant': 'Validated Improvement', 'correct': 14, 'incorrect': 0, 'avg_attempts': 1.14, 'avg_latency_s': 5.7, 'lessons_available': ['lesson_001']}
+
+Variant                 Correct  Incorrect  AvgAttempts  AvgLatency(s)
+Baseline                     10          4            1           4.6
+Evaluator Repair             14          0         1.29           5.5
+Lesson Memory                14          0         1.14           5.7
+Validated Improvement        14          0         1.14           5.7

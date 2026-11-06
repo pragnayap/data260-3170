@@ -1,0 +1,50 @@
+[
+  {
+    "id": "tra_01",
+    "question": "What is the current fare on route R-0101?"
+  },
+  {
+    "id": "tra_02",
+    "question": "Which agency operates route R-0102 and what type of route is it?"
+  },
+  {
+    "id": "tra_03",
+    "question": "What is the capital of Australia?"
+  },
+  {
+    "id": "tra_04",
+    "question": "How many incidents are recorded for route R-0103?"
+  },
+  {
+    "id": "tra_05",
+    "question": "What is the ticket price for route R-0104?"
+  },
+  {
+    "id": "tra_06",
+    "question": "What is the most common incident category on route R-0105?"
+  },
+  {
+    "id": "tra_07",
+    "question": "Who won the most recent football World Cup?"
+  },
+  {
+    "id": "tra_08",
+    "question": "How many riders were affected in total on route R-0106, and which agency runs it?"
+  },
+  {
+    "id": "tra_09",
+    "question": "What is the name of route R-0107?"
+  },
+  {
+    "id": "tra_10",
+    "question": "How much does it cost to ride route R-0108?"
+  },
+  {
+    "id": "tra_11",
+    "question": "Recommend a good restaurant near Union Square in San Francisco."
+  },
+  {
+    "id": "tra_12",
+    "question": "What agency runs route R-0109?"
+  }
+]

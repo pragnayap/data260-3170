@@ -1,0 +1,338 @@
+{
+  "first_attempt_failure_counts": {
+    "stale_value": 1,
+    "unsupported_answer": 2
+  },
+  "items": [
+    {
+      "id": "tra_01",
+      "question": "What is the current fare on route R-0101?",
+      "final_answer": "The current fare on route R-0101 is $3.00, effective from 2026-07-01.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 2,
+      "first_attempt_failure": "stale_value",
+      "latency_s": 31.63,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "The current fare on route R-0101 is $2.75, effective from 2025-07-01.",
+          "lessons_loaded": [],
+          "result": "REVISE",
+          "explanation": "The answer gives an outdated fare, not the current one.",
+          "feedback": "That fare is out of date. The record lists fares with effective dates; use the one with the latest effective date.",
+          "failure_type": "stale_value",
+          "facts_checked": [
+            "fare_current=3.00"
+          ]
+        },
+        {
+          "attempt": 2,
+          "answer": "The current fare on route R-0101 is $3.00, effective from 2026-07-01.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "All requested facts match the reference dataset.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": [
+            "fare_current=3.00"
+          ]
+        }
+      ],
+      "lesson_created": null
+    },
+    {
+      "id": "tra_02",
+      "question": "Which agency operates route R-0102 and what type of route is it?",
+      "final_answer": "The agency that operates route R-0102 is BART, and it is a Light Rail route.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 1,
+      "first_attempt_failure": null,
+      "latency_s": 13.44,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "The agency that operates route R-0102 is BART, and it is a Light Rail route.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "All requested facts match the reference dataset.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": [
+            "agency=BART",
+            "route_type=Light Rail"
+          ]
+        }
+      ],
+      "lesson_created": null
+    },
+    {
+      "id": "tra_03",
+      "question": "What is the capital of Australia?",
+      "final_answer": "I do not have access to the transit database, so I cannot provide that information.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 2,
+      "first_attempt_failure": "unsupported_answer",
+      "latency_s": 13.22,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "The capital of Australia is Canberra.",
+          "lessons_loaded": [],
+          "result": "REVISE",
+          "explanation": "The reference data has no record for this question, but the answer states a fact anyway.",
+          "feedback": "This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.",
+          "failure_type": "unsupported_answer",
+          "facts_checked": []
+        },
+        {
+          "attempt": 2,
+          "answer": "I do not have access to the transit database, so I cannot provide that information.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "The question is not covered by the reference data and the answer says so.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": []
+        }
+      ],
+      "lesson_created": null
+    },
+    {
+      "id": "tra_04",
+      "question": "How many incidents are recorded for route R-0103?",
+      "final_answer": "The route R-0103 has 26 incidents recorded.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 1,
+      "first_attempt_failure": null,
+      "latency_s": 11.59,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "The route R-0103 has 26 incidents recorded.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "All requested facts match the reference dataset.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": [
+            "incident_count=26"
+          ]
+        }
+      ],
+      "lesson_created": null
+    },
+    {
+      "id": "tra_05",
+      "question": "What is the ticket price for route R-0104?",
+      "final_answer": "The ticket price for route R-0104 is $2.75, effective from 2026-07-01.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 1,
+      "first_attempt_failure": null,
+      "latency_s": 16.55,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "The ticket price for route R-0104 is $2.75, effective from 2026-07-01.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "All requested facts match the reference dataset.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": [
+            "fare_current=2.75"
+          ]
+        }
+      ],
+      "lesson_created": null
+    },
+    {
+      "id": "tra_06",
+      "question": "What is the most common incident category on route R-0105?",
+      "final_answer": "The most common incident category on route R-0105 is Accident-Collision.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 1,
+      "first_attempt_failure": null,
+      "latency_s": 12.25,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "The most common incident category on route R-0105 is Accident-Collision.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "All requested facts match the reference dataset.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": [
+            "top_incident_category=Accident-Collision"
+          ]
+        }
+      ],
+      "lesson_created": null
+    },
+    {
+      "id": "tra_07",
+      "question": "Who won the most recent football World Cup?",
+      "final_answer": "I do not have that information.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 2,
+      "first_attempt_failure": "unsupported_answer",
+      "latency_s": 14.55,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "France won the most recent FIFA World Cup in 2022.",
+          "lessons_loaded": [],
+          "result": "REVISE",
+          "explanation": "The reference data has no record for this question, but the answer states a fact anyway.",
+          "feedback": "This is not covered by the transit database. Say you do not have that information instead of answering from general knowledge.",
+          "failure_type": "unsupported_answer",
+          "facts_checked": []
+        },
+        {
+          "attempt": 2,
+          "answer": "I do not have that information.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "The question is not covered by the reference data and the answer says so.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": []
+        }
+      ],
+      "lesson_created": "lesson_001"
+    },
+    {
+      "id": "tra_08",
+      "question": "How many riders were affected in total on route R-0106, and which agency runs it?",
+      "final_answer": "A total of 1,559 riders were affected on route R-0106, which is run by AC Transit.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 1,
+      "first_attempt_failure": null,
+      "latency_s": 17.67,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "A total of 1,559 riders were affected on route R-0106, which is run by AC Transit.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "All requested facts match the reference dataset.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": [
+            "agency=AC Transit",
+            "riders_total=1559"
+          ]
+        }
+      ],
+      "lesson_created": null
+    },
+    {
+      "id": "tra_09",
+      "question": "What is the name of route R-0107?",
+      "final_answer": "The name of route R-0107 is Rapid 107.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 1,
+      "first_attempt_failure": null,
+      "latency_s": 12.7,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "The name of route R-0107 is Rapid 107.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "All requested facts match the reference dataset.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": [
+            "route_name=Rapid 107"
+          ]
+        }
+      ],
+      "lesson_created": null
+    },
+    {
+      "id": "tra_10",
+      "question": "How much does it cost to ride route R-0108?",
+      "final_answer": "The cost to ride route R-0108 is $2.25, effective from July 1, 2026.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 1,
+      "first_attempt_failure": null,
+      "latency_s": 16.26,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "The cost to ride route R-0108 is $2.25, effective from July 1, 2026.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "All requested facts match the reference dataset.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": [
+            "fare_current=2.25"
+          ]
+        }
+      ],
+      "lesson_created": null
+    },
+    {
+      "id": "tra_11",
+      "question": "Recommend a good restaurant near Union Square in San Francisco.",
+      "final_answer": "I do not have that information in the transit database.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 1,
+      "first_attempt_failure": null,
+      "latency_s": 7.58,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "I do not have that information in the transit database.",
+          "lessons_loaded": [
+            "lesson_001"
+          ],
+          "result": "PASS",
+          "explanation": "The question is not covered by the reference data and the answer says so.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": []
+        }
+      ],
+      "lesson_created": null
+    },
+    {
+      "id": "tra_12",
+      "question": "What agency runs route R-0109?",
+      "final_answer": "The agency that runs route R-0109 is AC Transit.",
+      "final_result": "PASS",
+      "correct": true,
+      "attempts": 1,
+      "first_attempt_failure": null,
+      "latency_s": 12.37,
+      "trace": [
+        {
+          "attempt": 1,
+          "answer": "The agency that runs route R-0109 is AC Transit.",
+          "lessons_loaded": [],
+          "result": "PASS",
+          "explanation": "All requested facts match the reference dataset.",
+          "feedback": "",
+          "failure_type": null,
+          "facts_checked": [
+            "agency=AC Transit"
+          ]
+        }
+      ],
+      "lesson_created": null
+    }
+  ]
+}

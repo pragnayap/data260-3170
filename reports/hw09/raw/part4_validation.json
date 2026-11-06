@@ -1,0 +1,30 @@
+{
+  "kept": [
+    "lesson_001"
+  ],
+  "candidates": [
+    {
+      "lesson_id": "lesson_001",
+      "decision": "kept",
+      "note": "fixed(first/final)=2/0 regressed(first/final)=0/0 unsupported-answers-on-unrelated=0",
+      "fixed_first": [
+        "val_03",
+        "val_07"
+      ],
+      "fixed_final": [],
+      "regressed_first": [],
+      "regressed_final": [],
+      "unsupported_on_unrelated": []
+    },
+    {
+      "lesson_id": "lesson_002",
+      "decision": "rejected",
+      "note": "fixed(first/final)=0/0 regressed(first/final)=0/0 unsupported-answers-on-unrelated=0",
+      "fixed_first": [],
+      "fixed_final": [],
+      "regressed_first": [],
+      "regressed_final": [],
+      "unsupported_on_unrelated": []
+    }
+  ]
+}

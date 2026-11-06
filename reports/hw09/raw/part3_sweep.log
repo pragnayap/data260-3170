@@ -1,0 +1,34 @@
+Pragnaya Priyadarshini HW9 - part3_sweep.py
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+seed S01:  22430 ms  What agency operates route R-0002?  ->  The agency that operates route R-0002 is the VTA, as indicated by the database facts.
+seed S02:  24252 ms  How many incidents are recorded for route R-0012?  ->  The number of incidents recorded for route R-0012 is 26. This total includes incidents categorized as Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+seed S03:  29631 ms  What type of route is R-0021?  ->  Route R-0021, known as Express 21, is a Bus route operated by Muni. It has recorded 23 incidents affecting 1,963 riders, including delays, mechanical failures, accidents, and safety hazards.
+seed S04:  23976 ms  How many Delay incidents are recorded for route R-0018?  ->  According to the database facts, there are 9 Delay incidents recorded for route R-0018.
+seed S05:  35838 ms  What is the total number of riders affected on route R-0015?  ->  The total number of riders affected on route R-0015 is 2,861. This figure is directly provided in the database facts for route R-0015.
+seed S06:  30723 ms  What is the name of route R-0033?  ->  The name of route R-0033 is Rapid 33. It is a Light Rail route operated by BART with a record of 20 incidents, affecting a total of 2,239 riders.
+seed S07:  30172 ms  Which agency runs route R-0042?  ->  Route R-0042, known as the Express 42, is operated by the BART agency. It is a Subway route with a recorded history of incidents affecting a total of 2,584 riders.
+seed S08:  32554 ms  How many Safety Hazard incidents are recorded for route R-0050?  ->  Route R-0050 has a total of 11 Safety Hazard incidents recorded according to the provided database facts.
+seed S09:  30427 ms  What type of route is R-0063?  ->  Route R-0063, named Express 63, is a Bus route operated by SJ Transit. It is classified as an express bus route, as indicated by its name and type.
+seed S10:  26022 ms  How many incidents are recorded for route R-0071?  ->  Route R-0071 has 21 incidents recorded in total. These incidents are categorized into Delay, Mechanical Failure, Accident-Collision, and Safety Hazard.
+seed S11:  31046 ms  What agency operates route R-0001?  ->  The agency that operates route R-0001, known as Express 1, is AC Transit. This agency is responsible for managing and operating subway routes in the relevant area.
+seed S12:  23877 ms  How many incidents are recorded for route R-0004?  ->  Route R-0004, named Express 4, has 24 incidents recorded according to the database facts.
+seed S13:  34750 ms  What type of route is R-0005?  ->  Route R-0005, known as the SJ Transit Line 5, is a Light Rail route operated by SJ Transit. It has recorded 22 incidents affecting a total of 1,814 riders, categorized into delays, mechanical failures, and safety hazards.
+seed S14:  28036 ms  How many Delay incidents are recorded for route R-0009?  ->  Route R-0009, which is Line 9 operated by SamTrans, has recorded 6 Delay incidents according to the provided database facts.
+seed S15:  33117 ms  What is the total number of riders affected on route R-0010?  ->  The total number of riders affected on route R-0010 is 1730. This figure is directly provided in the database facts for route R-0010.
+seed S16:  29742 ms  What is the name of route R-0011?  ->  The name of route R-0011 is Route 11. It is a Subway route operated by BART with a recorded total of 21 incidents affecting 1,749 riders.
+seed S17:  30147 ms  Which agency runs route R-0014?  ->  Route R-0014, known as Rapid 14, is operated by Caltrain, a commuter rail agency. The route is a Commuter Rail line managed by Caltrain, as indicated by the database facts.
+seed S18:  23844 ms  How many Safety Hazard incidents are recorded for route R-0019?  ->  According to the database facts, there are 7 Safety Hazard incidents recorded for route R-0019.
+seed S19:  29368 ms  What type of route is R-0024?  ->  Route R-0024, known as the SJ Transit Line 24, is a Subway route operated by SJ Transit. It has recorded incidents affecting a total of 2,604 riders, categorized primarily under Accident-Collision, Safety Hazard, Mechanical Failure, and Delay.
+seed S20:  27888 ms  How many incidents are recorded for route R-0027?  ->  The route R-0027 has 18 incidents recorded according to the database facts. These incidents are categorized as Delay=5, Mechanical Failure=7, Accident-Collision=3, and Safety Hazard=3.
+
+cache holds 20 entries; mean measured agent latency = 28892 ms
+
+threshold  hit%   FH%   missedHits  meanLat(ms)  totalCost($)
+0.75       75.0   50.0      0         7267.3      50.2
+0.80       75.0   50.0      0         7255.0      50.2
+0.85       67.5   50.0      3         9421.8     50.26
+0.90       57.5   45.0      6        12310.9     45.34
+0.95       47.5   35.0      8        15199.8     35.42
+
+cheapest threshold at $5.0 per false hit: 0.95

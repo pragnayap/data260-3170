@@ -1,0 +1,22 @@
+Pragnaya Priyadarshini HW9 - part2_run.py
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+
+--- Query 1/14 [new] What agency operates route R-0030?
+10:25:32 INFO CACHE MISS  nearest_similarity=n/a threshold=0.85 -> running the HW8 agent path
+10:26:18 INFO CACHE MISS  agent_ms=46009 total=46137 ms stored version=v-3c5ea8f5adc3
+    is_cached=False  similarity=n/a  latency=46137.4 ms
+    answer: Route R-0030, also known as Route 30, is operated by Caltrain. This route is classified as a Commuter Rail service.
+
+--- Query 2/14 [exact duplicate] What agency operates route R-0030?
+10:26:20 INFO CACHE HIT  similarity=1.0000 threshold=0.85 matched='What agency operates route R-0030?' latency=1086.3 ms
+    is_cached=True  similarity=1.0000  latency=1086.3 ms
+    answer: Route R-0030, also known as Route 30, is operated by Caltrain. This route is classified as a Commuter Rail service.
+
+--- Query 3/14 [paraphrase] Which transit agency is responsible for route R-0030?
+10:26:20 INFO CACHE HIT  similarity=0.8755 threshold=0.85 matched='What agency operates route R-0030?' latency=180.4 ms
+    is_cached=True  similarity=0.8755  latency=180.4 ms
+    answer: Route R-0030, also known as Route 30, is operated by Caltrain. This route is classified as a Commuter Rail service.
+
+--- Query 4/14 [new] How many incidents are recorded for route R-0040?
+10:26:20 INFO CACHE MISS  nearest_similarity=0.5988 threshold=0.85 -> running the HW8 agent path

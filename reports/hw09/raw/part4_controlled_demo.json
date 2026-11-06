@@ -1,0 +1,37 @@
+{
+  "question": "Which agency operates route R-0110 and what type of route is it?",
+  "final_answer": "The agency that operates route R-0110 is AC Transit, and it is a Commuter Rail route.",
+  "final_result": "PASS",
+  "correct": true,
+  "attempts": 2,
+  "first_attempt_failure": "missing_fact",
+  "latency_s": 15.03,
+  "trace": [
+    {
+      "attempt": 1,
+      "answer": "Route R-0110 is a Commuter Rail route.",
+      "lessons_loaded": [],
+      "result": "REVISE",
+      "explanation": "The answer does not state the requested fact(s): agency.",
+      "feedback": "Your answer is missing: agency. Re-read the database record and state every requested fact explicitly.",
+      "failure_type": "missing_fact",
+      "facts_checked": [
+        "agency=AC Transit",
+        "route_type=Commuter Rail"
+      ]
+    },
+    {
+      "attempt": 2,
+      "answer": "The agency that operates route R-0110 is AC Transit, and it is a Commuter Rail route.",
+      "lessons_loaded": [],
+      "result": "PASS",
+      "explanation": "All requested facts match the reference dataset.",
+      "feedback": "",
+      "failure_type": null,
+      "facts_checked": [
+        "agency=AC Transit",
+        "route_type=Commuter Rail"
+      ]
+    }
+  ]
+}

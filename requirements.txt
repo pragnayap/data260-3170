@@ -73,3 +73,6 @@ pre-commit
 
 # HW8 - Kafka request/response, three-agent pipeline, failure tests
 confluent-kafka==2.16.1
+
+# HW9 - Redis client (server: Redis Stack in Docker, for the RediSearch vector index)
+redis>=5,<6
