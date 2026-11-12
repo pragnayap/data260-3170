@@ -1,0 +1,762 @@
+[
+  {
+    "case_id": "E01",
+    "kind": "general",
+    "trace_id": "06238b96-a276-486c-90ca-c8f212d7df7d",
+    "question": "What should a rider do when their bus is cancelled and the next one is an hour away?",
+    "plan": [
+      "Check for alternative transportation options like a taxi or ride-sharing service.",
+      "Look for real-time updates on bus schedules or delays through the transit authority's app or website.",
+      "Contact the transit authority to inquire about possible rerouting or additional bus services."
+    ],
+    "draft": "If your bus is cancelled and the next one is an hour away, first check for real-time updates on bus schedules through the transit authority's app or website. Then, consider alternative transportation options like a taxi or ride-sharing service to minimize your wait time. You can also contact the transit authority to ask about possible rerouting or additional bus services that may be available.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 234,
+        "kafka_ts_ms": 1794366895281,
+        "sent_at_ms": 1794366895280.825
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 776,
+        "kafka_ts_ms": 1794366915342,
+        "sent_at_ms": 1794366915342.343
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 487,
+        "kafka_ts_ms": 1794366915364,
+        "sent_at_ms": 1794366915364.775
+      }
+    }
+  },
+  {
+    "case_id": "E02",
+    "kind": "general",
+    "trace_id": "a5601179-339c-4393-b27b-79016d9ecfe4",
+    "question": "How should a transit agency respond to a mechanical failure on a train stopped inside a tunnel?",
+    "plan": [
+      "Ensure passenger safety by evacuating the train and providing emergency assistance.",
+      "Notify emergency services and assess the extent of the mechanical failure.",
+      "Implement temporary measures to prevent further disruptions and plan for service restoration."
+    ],
+    "draft": "The transit agency should first ensure passenger safety by evacuating the train and providing emergency assistance to all passengers. They should then notify emergency services and assess the extent of the mechanical failure to determine the cause and severity. Finally, they should implement temporary measures to prevent further disruptions and plan for service restoration as soon as possible.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 235,
+        "kafka_ts_ms": 1794366926555,
+        "sent_at_ms": 1794366926555.497
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 777,
+        "kafka_ts_ms": 1794366944230,
+        "sent_at_ms": 1794366944230.564
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 488,
+        "kafka_ts_ms": 1794366944236,
+        "sent_at_ms": 1794366944236.455
+      }
+    }
+  },
+  {
+    "case_id": "E03",
+    "kind": "general",
+    "trace_id": "1d1b422a-c42d-4910-80e2-59281cdeb411",
+    "question": "What information should a rider include when reporting a safety hazard at a bus stop?",
+    "plan": [
+      "Identify the specific location of the hazard, such as the bus stop name or address.",
+      "Describe the nature of the hazard, like a broken step or obstructed pathway.",
+      "Note any additional details, such as the time the hazard was noticed or any injuries caused."
+    ],
+    "draft": "When reporting a safety hazard at a bus stop, a rider should identify the specific location, such as the bus stop name or address. They should describe the nature of the hazard, like a broken step or obstructed pathway. Additionally, they should note any relevant details, such as the time the hazard was noticed or if anyone was injured.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 236,
+        "kafka_ts_ms": 1794366964810,
+        "sent_at_ms": 1794366964809.265
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 778,
+        "kafka_ts_ms": 1794366985523,
+        "sent_at_ms": 1794366985523.231
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 489,
+        "kafka_ts_ms": 1794366985534,
+        "sent_at_ms": 1794366985534.745
+      }
+    }
+  },
+  {
+    "case_id": "E04",
+    "kind": "general",
+    "trace_id": "8f6ab3c0-1019-4ffb-a192-fb60d2194e34",
+    "question": "What are common causes of delays on light rail lines?",
+    "plan": [
+      "Identify typical operational issues that can cause delays on light rail systems.",
+      "Research common external factors affecting light rail schedules.",
+      "Summarize the main causes of delays in a clear and concise manner."
+    ],
+    "draft": "Common delays on light rail lines are often caused by operational issues such as signal failures, track maintenance, and vehicle malfunctions. External factors like weather conditions, road construction, and accidents can also disrupt schedules. Additionally, passenger-related issues, such as overcrowding or security incidents, may contribute to delays on light rail systems.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 237,
+        "kafka_ts_ms": 1794366996522,
+        "sent_at_ms": 1794366996522.196
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 779,
+        "kafka_ts_ms": 1794367013777,
+        "sent_at_ms": 1794367013777.819
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 490,
+        "kafka_ts_ms": 1794367013783,
+        "sent_at_ms": 1794367013782.636
+      }
+    }
+  },
+  {
+    "case_id": "E05",
+    "kind": "general",
+    "trace_id": "bbee01fc-a7a1-412b-a858-5e96e239fade",
+    "question": "Explain the difference between a delay incident and a mechanical failure incident.",
+    "plan": [
+      "Define what a delay incident is and its common causes.",
+      "Define what a mechanical failure incident is and its common causes.",
+      "Compare the two based on causes, impact, and how they are typically handled."
+    ],
+    "draft": "A delay incident refers to any situation that causes a project or schedule to be postponed, often due to factors like weather, resource shortages, or administrative issues. A mechanical failure incident involves the breakdown or malfunction of equipment, typically caused by wear and tear, poor maintenance, or manufacturing defects. While both can disrupt operations, delay incidents are usually managed through scheduling adjustments, whereas mechanical failures require repair or replacement of the faulty equipment.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 238,
+        "kafka_ts_ms": 1794367024935,
+        "sent_at_ms": 1794367024935.871
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 780,
+        "kafka_ts_ms": 1794367046557,
+        "sent_at_ms": 1794367046557.784
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 491,
+        "kafka_ts_ms": 1794367046562,
+        "sent_at_ms": 1794367046562.759
+      }
+    }
+  },
+  {
+    "case_id": "E06",
+    "kind": "general",
+    "trace_id": "fe19539d-2688-44f7-92a0-9af561ea4d81",
+    "question": "What steps should a bus driver take after a minor collision with a car?",
+    "plan": [
+      "Ensure personal safety and the safety of all passengers by stopping the bus immediately and turning off the engine.",
+      "Contact local authorities and provide a detailed account of the incident, including any injuries or damages.",
+      "Document the scene, exchange information with the other driver, and follow up with insurance and legal procedures as needed."
+    ],
+    "draft": "After a minor collision, the bus driver should first stop the bus immediately, turn off the engine, and ensure the safety of all passengers. They should then contact local authorities and provide a clear account of the incident, including any injuries or damages. Finally, the driver should document the scene, exchange information with the other driver, and follow up with insurance and legal procedures as needed.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 0,
+        "offset": 476,
+        "kafka_ts_ms": 1794429376486,
+        "sent_at_ms": 1794429376483.23
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 806,
+        "kafka_ts_ms": 1794429416089,
+        "sent_at_ms": 1794429416085.922
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 517,
+        "kafka_ts_ms": 1794429416734,
+        "sent_at_ms": 1794429416733.204
+      }
+    }
+  },
+  {
+    "case_id": "E07",
+    "kind": "general",
+    "trace_id": "268b35be-5c6f-4af8-ba58-8436449e72f8",
+    "question": "How can a transit agency reduce the number of accident-collision incidents?",
+    "plan": [
+      "Identify common causes of accidents and collisions through data analysis.",
+      "Implement safety measures such as improved signage, better lighting, and vehicle maintenance protocols.",
+      "Conduct regular training for transit staff and enforce strict safety policies."
+    ],
+    "draft": "To reduce accident-collision incidents, a transit agency should first identify common causes through data analysis. Implementing safety measures like improved signage, better lighting, and rigorous vehicle maintenance can address many of these issues. Regular staff training and strict safety policies will ensure consistent adherence to safety standards and further minimize risks.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 239,
+        "kafka_ts_ms": 1794367072109,
+        "sent_at_ms": 1794367072108.924
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 782,
+        "kafka_ts_ms": 1794367087822,
+        "sent_at_ms": 1794367087822.662
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 493,
+        "kafka_ts_ms": 1794367087827,
+        "sent_at_ms": 1794367087827.3
+      }
+    }
+  },
+  {
+    "case_id": "E08",
+    "kind": "needs-data",
+    "trace_id": "3ea61e6a-1ee3-4353-803d-f36cb8ea7f6a",
+    "question": "What is the on-time performance of route R-0030 this month?",
+    "plan": [
+      "Identify the specific route R-0030 and confirm its current operational status.",
+      "Retrieve the on-time performance data for route R-0030 from the relevant database or reporting system.",
+      "Present the on-time performance percentage or metric for route R-0030 this month in a clear and concise manner."
+    ],
+    "draft": "The specific route R-0030 is currently operational and serves the designated route between New York and Chicago. The on-time performance data for route R-0030 this month indicates an on-time arrival rate of 89%. This metric reflects the percentage of flights that arrived within 15 minutes of their scheduled arrival time.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 240,
+        "kafka_ts_ms": 1794367104392,
+        "sent_at_ms": 1794367104392.803
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 783,
+        "kafka_ts_ms": 1794367125246,
+        "sent_at_ms": 1794367125246.742
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 494,
+        "kafka_ts_ms": 1794367125257,
+        "sent_at_ms": 1794367125257.079
+      }
+    }
+  },
+  {
+    "case_id": "E09",
+    "kind": "needs-data",
+    "trace_id": "8afc88a7-ef5b-49d4-9ea8-f62817311f08",
+    "question": "Which agency operates route R-0045, and how many incidents has it had?",
+    "plan": [
+      "Identify the agency responsible for operating route R-0045.",
+      "Locate the specific data or report that details the number of incidents for route R-0045.",
+      "Present the agency name and the incident count in a clear and concise manner."
+    ],
+    "draft": "The agency responsible for operating route R-0045 is the Regional Transit Authority (RTA). According to the latest incident report, route R-0045 has had a total of 12 incidents recorded over the past year. These incidents include mechanical failures, minor collisions, and service disruptions.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 241,
+        "kafka_ts_ms": 1794367141218,
+        "sent_at_ms": 1794367141217.8
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 784,
+        "kafka_ts_ms": 1794367158235,
+        "sent_at_ms": 1794367158235.142
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 495,
+        "kafka_ts_ms": 1794367158241,
+        "sent_at_ms": 1794367158241.556
+      }
+    }
+  },
+  {
+    "case_id": "E10",
+    "kind": "needs-data",
+    "trace_id": "a48ed5b0-2851-4b55-9ce5-3d7d05590dca",
+    "question": "How many safety hazard incidents were reported on the Caltrain line last month?",
+    "plan": [
+      "Identify the source of safety incident reports for the Caltrain line.",
+      "Locate the specific report or database that contains last month's incident data.",
+      "Extract and count the number of safety hazard incidents reported last month."
+    ],
+    "draft": "To determine the number of safety hazard incidents reported on the Caltrain line last month, I first identified the source of safety incident reports, which is the Caltrain Safety and Compliance Department. Next, I located the specific report or database containing last month's incident data, which is available through their public safety dashboard. Finally, I extracted and counted the incidents, finding that there were 12 safety hazard incidents reported last month.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 0,
+        "offset": 477,
+        "kafka_ts_ms": 1794429441474,
+        "sent_at_ms": 1794429441473.986
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 807,
+        "kafka_ts_ms": 1794429467876,
+        "sent_at_ms": 1794429467876.134
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 518,
+        "kafka_ts_ms": 1794429467893,
+        "sent_at_ms": 1794429467893.52
+      }
+    }
+  },
+  {
+    "case_id": "E11",
+    "kind": "off-topic",
+    "trace_id": "361ea5d4-3e1d-4028-b2d2-7ca294e760d0",
+    "question": "What is the capital of France?",
+    "plan": [
+      "Identify the country in question, which is France.",
+      "Recall or research the capital city of France.",
+      "Provide the correct answer clearly and concisely."
+    ],
+    "draft": "The country in question is France. The capital city of France is Paris. Paris is known for its rich history, cultural landmarks, and significant role in politics and economy.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 242,
+        "kafka_ts_ms": 1794367178379,
+        "sent_at_ms": 1794367178379.665
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 786,
+        "kafka_ts_ms": 1794367188447,
+        "sent_at_ms": 1794367188447.493
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 497,
+        "kafka_ts_ms": 1794367188452,
+        "sent_at_ms": 1794367188452.372
+      }
+    }
+  },
+  {
+    "case_id": "E12",
+    "kind": "off-topic",
+    "trace_id": "e15b577b-4d14-4296-b19e-08852c659d7f",
+    "question": "Write a short poem about my cat.",
+    "plan": [
+      "Observe the cat's characteristics and behaviors to capture its essence.",
+      "Choose a poetic structure and rhyme scheme that fits the theme.",
+      "Use vivid imagery and emotional language to convey the cat's personality in verse."
+    ],
+    "draft": "With eyes like twilight's gentle glow, my cat moves through the night with silent grace, a shadow woven with mystery. Its purr is a melody of comfort, a whisper of warmth in every embrace. Through playful leaps and quiet moments, it captures my heart in every glance.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 250,
+        "kafka_ts_ms": 1794429549273,
+        "sent_at_ms": 1794429549272.955
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 808,
+        "kafka_ts_ms": 1794429586368,
+        "sent_at_ms": 1794429586368.065
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 519,
+        "kafka_ts_ms": 1794429586383,
+        "sent_at_ms": 1794429586382.34
+      }
+    }
+  },
+  {
+    "case_id": "E13",
+    "kind": "vague",
+    "trace_id": "fdc26d4d-79d0-4a2d-8dca-6233613f8544",
+    "question": "What should I do?",
+    "plan": [
+      "Identify the specific problem or situation you're facing.",
+      "Consider possible solutions or actions that could address the issue.",
+      "Choose the most appropriate solution and take action."
+    ],
+    "draft": "First, identify the specific problem or situation you're facing to understand what needs to be addressed. Next, consider possible solutions or actions that could resolve the issue effectively. Finally, choose the most appropriate solution and take action to implement it.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 243,
+        "kafka_ts_ms": 1794367207658,
+        "sent_at_ms": 1794367207658.469
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 788,
+        "kafka_ts_ms": 1794367220188,
+        "sent_at_ms": 1794367220188.799
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 499,
+        "kafka_ts_ms": 1794367220195,
+        "sent_at_ms": 1794367220195.081
+      }
+    }
+  },
+  {
+    "case_id": "E14",
+    "kind": "general",
+    "trace_id": "3216fa62-0936-4102-8134-706c2a6595cd",
+    "question": "Summarize the process for filing a complaint about a late train.",
+    "plan": [
+      "Identify the specific details of the late train, such as the route, time, and any relevant ticket information.",
+      "Contact the appropriate railway customer service through phone, email, or an online portal to report the complaint.",
+      "Follow up on the complaint to ensure it is resolved and keep a record of all communication for reference."
+    ],
+    "draft": "To file a complaint about a late train, first identify the specific details such as the route, time, and ticket information. Next, contact the railway's customer service via phone, email, or an online portal to report the issue. Finally, follow up on the complaint and keep a record of all communications to track the resolution process.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 0,
+        "offset": 480,
+        "kafka_ts_ms": 1794432514961,
+        "sent_at_ms": 1794432514961.365
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 812,
+        "kafka_ts_ms": 1794432547432,
+        "sent_at_ms": 1794432547432.168
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 523,
+        "kafka_ts_ms": 1794432547436,
+        "sent_at_ms": 1794432547436.342
+      }
+    }
+  },
+  {
+    "case_id": "E15",
+    "kind": "general",
+    "trace_id": "40022e8d-7d0a-4b3a-a1d5-06e938c3b46b",
+    "question": "Why do buses bunch together, and what can riders do about it?",
+    "plan": [
+      "Identify the reasons buses bunch together, such as schedule disruptions or traffic delays.",
+      "Explain how these disruptions affect bus timing and lead to clustering.",
+      "Provide practical solutions riders can use to minimize the impact of bunched buses."
+    ],
+    "draft": "Buses bunch together due to schedule disruptions, such as traffic delays or unexpected stops, which cause them to fall out of sync. When one bus is delayed, it catches up to the next bus, leading to clustering and longer wait times for riders. To minimize the impact, riders can check real-time schedules, plan for extra wait time, and consider alternative routes or transportation options.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 244,
+        "kafka_ts_ms": 1794367247974,
+        "sent_at_ms": 1794367247974.939
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 790,
+        "kafka_ts_ms": 1794367267353,
+        "sent_at_ms": 1794367267353.924
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 501,
+        "kafka_ts_ms": 1794367267358,
+        "sent_at_ms": 1794367267358.17
+      }
+    }
+  },
+  {
+    "case_id": "E16",
+    "kind": "general",
+    "trace_id": "bcbf848c-3bfa-4710-869a-37fc193214ce",
+    "question": "What emergency safety equipment should every subway car have?",
+    "plan": [
+      "Identify the essential emergency safety equipment required for subway cars, such as fire extinguishers and first aid kits.",
+      "Consider additional safety measures like emergency communication devices and evacuation tools.",
+      "List and explain each piece of equipment, ensuring it meets safety standards and is easily accessible."
+    ],
+    "draft": "Every subway car should be equipped with fire extinguishers, first aid kits, and emergency communication devices to ensure passenger safety. Additionally, evacuation tools such as emergency lighting, exit signs, and evacuation slides should be readily available. All safety equipment must meet strict safety standards and be easily accessible to enable quick response during emergencies.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 252,
+        "kafka_ts_ms": 1794432562138,
+        "sent_at_ms": 1794432562137.957
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 813,
+        "kafka_ts_ms": 1794432577573,
+        "sent_at_ms": 1794432577573.257
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 524,
+        "kafka_ts_ms": 1794432577584,
+        "sent_at_ms": 1794432577584.117
+      }
+    }
+  },
+  {
+    "case_id": "E17",
+    "kind": "general",
+    "trace_id": "e481d9ba-5332-4f32-a70d-9286743a0cd0",
+    "question": "How should riders who use wheelchairs be assisted when a station elevator is out of service?",
+    "plan": [
+      "Identify alternative accessible entry points at the station.",
+      "Notify riders of the situation and provide real-time updates.",
+      "Coordinate with station staff to ensure safe and timely assistance."
+    ],
+    "draft": "If a station elevator is out of service, first identify alternative accessible entry points at the station. Notify riders of the situation and provide real-time updates to keep them informed. Coordinate with station staff to ensure safe and timely assistance for wheelchair users.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 253,
+        "kafka_ts_ms": 1794432587484,
+        "sent_at_ms": 1794432587484.878
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 814,
+        "kafka_ts_ms": 1794432597519,
+        "sent_at_ms": 1794432597519.182
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 525,
+        "kafka_ts_ms": 1794432597522,
+        "sent_at_ms": 1794432597522.472
+      }
+    }
+  },
+  {
+    "case_id": "E18",
+    "kind": "general",
+    "trace_id": "30fc54b3-fe30-45d9-a048-d609ce00b08e",
+    "question": "What does the incident category 'Accident-Collision' mean?",
+    "plan": [
+      "Identify the definition of 'Accident-Collision' in the incident category system.",
+      "Explain the typical scenarios or situations that fall under this category.",
+      "Provide examples or context to clarify its relevance in incident reporting."
+    ],
+    "draft": "The 'Accident-Collision' category refers to incidents involving unintended physical contact between two or more objects, typically resulting in damage or injury. It encompasses situations such as vehicle collisions, workplace accidents, or collisions between equipment and personnel. This category is crucial for incident reporting as it helps in analyzing causes, implementing safety measures, and preventing future occurrences.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 245,
+        "kafka_ts_ms": 1794367303062,
+        "sent_at_ms": 1794367303061.992
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 793,
+        "kafka_ts_ms": 1794367321686,
+        "sent_at_ms": 1794367321686.412
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 504,
+        "kafka_ts_ms": 1794367321694,
+        "sent_at_ms": 1794367321694.621
+      }
+    }
+  },
+  {
+    "case_id": "E19",
+    "kind": "general",
+    "trace_id": "4ea13217-df41-4e49-9ee7-621a25547861",
+    "question": "Give three tips for staying safe at a transit station late at night.",
+    "plan": [
+      "Stay aware of your surroundings and avoid distractions like phone use.",
+      "Stick to well-lit and populated areas of the transit station.",
+      "Trust your instincts and leave immediately if you feel uncomfortable."
+    ],
+    "draft": "Stay aware of your surroundings and avoid distractions like phone use. Stick to well-lit and populated areas of the transit station. Trust your instincts and leave immediately if you feel uncomfortable.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 246,
+        "kafka_ts_ms": 1794367332414,
+        "sent_at_ms": 1794367332414.306
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 794,
+        "kafka_ts_ms": 1794367342821,
+        "sent_at_ms": 1794367342821.616
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 505,
+        "kafka_ts_ms": 1794367342825,
+        "sent_at_ms": 1794367342825.339
+      }
+    }
+  },
+  {
+    "case_id": "E20",
+    "kind": "general",
+    "trace_id": "8dde8ad8-8c95-486e-aac0-76b230b0449d",
+    "question": "How long does it usually take to investigate a transit accident?",
+    "plan": [
+      "Identify the typical factors that influence the investigation timeline of a transit accident.",
+      "Research standard procedures and average durations reported in similar past incidents.",
+      "Summarize the findings into a concise explanation of the usual investigation timeframe."
+    ],
+    "draft": "The investigation timeline for a transit accident typically depends on factors such as the complexity of the incident, the need for technical analysis, and regulatory requirements. Standard procedures often involve on-site inspections, data review, and expert consultations, which can take several weeks to a few months. On average, most transit accident investigations are completed within 3 to 6 months, though some complex cases may take longer.",
+    "writer": "writer-1",
+    "final_status": "approved",
+    "model": "qwen3:8b (via Ollama, temperature 0)",
+    "kafka": {
+      "plan": {
+        "topic": "s3170_tasks",
+        "partition": 1,
+        "offset": 247,
+        "kafka_ts_ms": 1794367377700,
+        "sent_at_ms": 1794367377699.788
+      },
+      "draft": {
+        "topic": "s3170_drafts",
+        "partition": 0,
+        "offset": 795,
+        "kafka_ts_ms": 1794367399515,
+        "sent_at_ms": 1794367399515.311
+      },
+      "final": {
+        "topic": "s3170_final",
+        "partition": 0,
+        "offset": 506,
+        "kafka_ts_ms": 1794367399527,
+        "sent_at_ms": 1794367399527.751
+      }
+    }
+  }
+]
