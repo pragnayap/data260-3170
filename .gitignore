@@ -36,3 +36,10 @@ data/hw07_raw/
 
 # HW8: throwaway consumer state and verify logs
 data/hw08_state/
+
+# HW10: process ids, live agent logs and consumer state are throwaway; spans, eval cases, labels and results ARE committed
+data/hw10/run/
+data/hw10/logs/
+data/hw10/state/
+data/hw10/eval_cases_raw.jsonl
+data/hw10/spans/eval_cases_spans.jsonl

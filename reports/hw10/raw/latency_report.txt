@@ -1,0 +1,13 @@
+Pragnaya Priyadarshini HW10 - latency_report.py
+Stage                  n    p50 (ms)    p95 (ms)   % of cache-miss e2e
+Cache lookup          50       866.8      1291.4                 2.98%
+Planner               50     13469.7     21606.2                37.56%
+Writer                50     19448.3     27575.7                59.42%
+Reviewer              50         2.8         4.9                 0.01%
+Queue wait (total)    50        16.2        45.3                 0.05%
+Evaluation            50     77686.4    509129.4               317.12%
+
+end-to-end (user-facing, n=50): p50 33854.9 ms, p95 49771.4 ms, mean 38538.3 ms
+request-path stages cover 100.02% of end-to-end (unaccounted -0.02%)
+dominant stage: Writer
+cache-hit latency (separate): {'n': 20, 'p50': 111.9, 'p95': 217.8, 'max': 221.0}

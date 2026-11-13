@@ -1,0 +1,99 @@
+{
+  "homework": 10,
+  "SID4": 3170,
+  "PORT_BASE": 8470,
+  "PREFIX": "s3170",
+  "SEED": 3170,
+  "VERIFY_SEED": 263170,
+  "DOMAIN_ID": 2,
+  "commit": "e436acc0106adae9bbdea37c6901cd013987b802",
+  "working_tree_clean": false,
+  "model_configuration": {
+    "agents": "qwen3:8b via Ollama (CPU)",
+    "judge": "qwen3:8b, DeepEval GEval, temperature 0, seed 3170, 1-5 rubric",
+    "cache": "Redis Stack 7.4, threshold 0.95 (the HW9 shipped value)",
+    "broker": "apache/kafka 3.8.0 (KRaft)"
+  },
+  "generated_at": "2026-11-13T19:56:11+00:00",
+  "passed": 15,
+  "failed": 0,
+  "skipped": 0,
+  "total_checks": 15,
+  "checks": [
+    {
+      "check": "required HW10 files exist",
+      "status": "PASS",
+      "detail": "all present"
+    },
+    {
+      "check": "student name banner in every runnable script",
+      "status": "PASS",
+      "detail": "8 runnable scripts print the student name banner"
+    },
+    {
+      "check": "ruff passes on HW10 code and the edited HW8 agents",
+      "status": "PASS",
+      "detail": "ruff clean (default rules)"
+    },
+    {
+      "check": "stale-agent guard present (the bug that produced stub drafts)",
+      "status": "PASS",
+      "detail": "agents.sh refuses to start over stale agents and stops child processes"
+    },
+    {
+      "check": "every span is structured JSON with trace_id, stage, start, end, status, error (and no second request id)",
+      "status": "PASS",
+      "detail": "486 spans over 72 traces; every span has ['duration_ms', 'end', 'end_ms', 'error', 'stage', 'start', 'start_ms', 'status', 'trace_id']; trace_id is the correlation_id (UUID)"
+    },
+    {
+      "check": "4.3: 50 confirmed cache-miss requests, none served from the cache, all full real-agent traces",
+      "status": "PASS",
+      "detail": "50 requests; cache_lookup is a MISS in 50; 50 complete 8-stage traces; min e2e 25.3s; hits skipped during the run: 0"
+    },
+    {
+      "check": "4.3: p50/p95 and % table recomputed from the raw spans",
+      "status": "PASS",
+      "detail": "stage table in latency_stats.json == recomputed from spans.jsonl + latency_runs.json (p50/p95/% for all 6 rows)"
+    },
+    {
+      "check": "4.3: stage spans account for the end-to-end latency of each request",
+      "status": "PASS",
+      "detail": "for every request the 8 stage spans add up to end-to-end within 0.08% (nothing unaccounted)"
+    },
+    {
+      "check": "4.2: cache-hit, cache-miss and failed example traces are what they claim",
+      "status": "PASS",
+      "detail": "hit 6dbf72e0 (cache_lookup only, is_cached) \u00b7 miss ae426d0e (all 8 stages ok) \u00b7 failed b8360dad (writer error: ValueError: task has no plan)"
+    },
+    {
+      "check": "3.1: eval_cases.json holds 20 real Writer drafts (no stub output)",
+      "status": "PASS",
+      "detail": "20 cases, 20 distinct drafts, stub drafts: 0 [], each with the Kafka metadata of its plan/draft/final"
+    },
+    {
+      "check": "2: evaluator results (scale 1-5, difference arithmetic, originals kept, evaluator spans)",
+      "status": "PASS",
+      "detail": "50 evaluated; scores all 1-5; difference == final - draft; original messages + Kafka offsets kept; evaluator span present for all"
+    },
+    {
+      "check": "3.1: cases and human labels committed (and unmodified) BEFORE the judge scores existed",
+      "status": "PASS",
+      "detail": "eval_cases.json committed 1396s before the judge output, unmodified=True; human_labels.csv committed 1396s before the judge output, unmodified=True"
+    },
+    {
+      "check": "3.1: 20 hand-assigned human labels, each 1-5",
+      "status": "PASS",
+      "detail": "20 labels, all integers 1-5; distribution {'4': 5, '5': 15}"
+    },
+    {
+      "check": "3.2/3.3: Spearman, mean abs difference and repeatability recomputed from raw data",
+      "status": "PASS",
+      "detail": "recomputed from raw per-case scores: Spearman 0.1984, MAD 0.5, 0/20 cases changed over 3 runs"
+    },
+    {
+      "check": "1: Streamlit dashboard renders all three pages and the three example traces",
+      "status": "PASS",
+      "detail": "Summary, Evaluation and Trace lookup pages render with no exception; the 3 example traces load and show a HIT/MISS badge"
+    }
+  ]
+}

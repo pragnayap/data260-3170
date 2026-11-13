@@ -1,0 +1,316 @@
+HW10 RUN LOG - Pragnaya Priyadarshini - assembled from the real run logs in raw/ (no edits)
+
+################ raw/build_eval_cases_last_run.log
+Pragnaya Priyadarshini HW10 - build_eval_cases.py
+[01/20] cached  What should a rider do when their bus is cancelled and the next one is an hour away?
+[02/20] cached  How should a transit agency respond to a mechanical failure on a train stopped inside a tunnel?
+[03/20] cached  What information should a rider include when reporting a safety hazard at a bus stop?
+[04/20] cached  What are common causes of delays on light rail lines?
+[05/20] cached  Explain the difference between a delay incident and a mechanical failure incident.
+[06/20] cached  What steps should a bus driver take after a minor collision with a car?
+[07/20] cached  How can a transit agency reduce the number of accident-collision incidents?
+[08/20] cached  What is the on-time performance of route R-0030 this month?
+[09/20] cached  Which agency operates route R-0045, and how many incidents has it had?
+[10/20] cached  How many safety hazard incidents were reported on the Caltrain line last month?
+[11/20] cached  What is the capital of France?
+[12/20] cached  Write a short poem about my cat.
+[13/20] cached  What should I do?
+[14/20] approved  145.1s  Summarize the process for filing a complaint about a late train.
+[15/20] cached  Why do buses bunch together, and what can riders do about it?
+[16/20] approved   30.1s  What emergency safety equipment should every subway car have?
+[17/20] approved   19.9s  How should riders who use wheelchairs be assisted when a station elevator is out of service?
+[18/20] cached  What does the incident category 'Accident-Collision' mean?
+[19/20] cached  Give three tips for staying safe at a transit station late at night.
+[20/20] cached  How long does it usually take to investigate a transit accident?
+
+wrote 20 cases -> data/hw10/eval_cases.json ; empty labels -> data/hw10/human_labels.csv
+
+################ raw/latency_experiment.log
+Pragnaya Priyadarshini HW10 - latency_experiment.py
+warm-up done (model + cache index loaded; its trace id starts with 'warmup-' and is excluded)
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+[01/50] approved   49.9s  sim=None  How can a city bus that broke down on a highway be prevented from happening again?
+[02/50] approved   33.3s  sim=0.3712  What are the main safety risks of a light rail line suspended by a signal fault?
+[03/50] approved   30.4s  sim=0.7137  How should a transit agency communicate with passengers about a city bus that broke down on a highway?
+[04/50] approved   27.6s  sim=0.3969  What should riders do when they encounter a ferry terminal with a cancelled sailing?
+[05/50] approved   30.2s  sim=0.5085  What are the main safety risks of a bus driver running far behind schedule?
+[06/50] approved   27.9s  sim=0.3989  Who is responsible for resolving a cable car stopped by a power outage, and how?
+[07/50] approved   31.9s  sim=0.4269  Who is responsible for resolving a subway platform that is overcrowded during rush hour, and how?
+[08/50] approved   41.4s  sim=0.6086  Who is responsible for resolving a commuter train stopped between stations, and how?
+[09/50] approved   34.6s  sim=0.6036  How can a flooded subway entrance be prevented from happening again?
+[10/50] approved   33.6s  sim=0.6488  How can a crowded bus with a medical emergency on board be prevented from happening again?
+[11/50] approved   35.0s  sim=0.8495  How can a cable car stopped by a power outage be prevented from happening again?
+[12/50] approved   39.8s  sim=0.763  How should a transit agency communicate with passengers about a crowded bus with a medical emergency on board?
+[13/50] approved   36.1s  sim=0.642  How can an icy bus route during a winter storm be prevented from happening again?
+[14/50] approved   44.1s  sim=0.5782  What are the main safety risks of a station escalator that stops suddenly?
+[15/50] approved   33.7s  sim=0.4498  How can a paratransit van that arrives late for a pickup be prevented from happening again?
+[16/50] approved   40.9s  sim=0.7821  How should a transit agency communicate with passengers about a subway platform that is overcrowded during rush hour?
+[17/50] approved   36.7s  sim=0.7421  How should a transit agency communicate with passengers about a light rail line suspended by a signal fault?
+[18/50] approved   33.9s  sim=0.7049  What are the main safety risks of a commuter train stopped between stations?
+[19/50] approved   34.6s  sim=0.7778  How should a transit agency communicate with passengers about a ferry terminal with a cancelled sailing?
+[20/50] approved   38.6s  sim=0.5402  How can a tram that struck a parked car be prevented from happening again?
+[21/50] approved   33.7s  sim=0.5268  What should riders do when they encounter a station elevator that is out of service?
+[22/50] approved   32.7s  sim=0.7336  How should a transit agency communicate with passengers about a commuter train stopped between stations?
+[23/50] approved   32.8s  sim=0.816  How can a station elevator that is out of service be prevented from happening again?
+[24/50] approved   25.3s  sim=0.8363  What should riders do when they encounter a flooded subway entrance?
+[25/50] approved   44.9s  sim=0.7154  How should a transit agency communicate with passengers about a delayed airport shuttle service?
+[26/50] approved   30.4s  sim=0.734  How should a transit agency communicate with passengers about a train door that will not close?
+[27/50] approved   37.6s  sim=0.8237  How can a light rail line suspended by a signal fault be prevented from happening again?
+[28/50] approved   49.0s  sim=0.7888  What should riders do when they encounter a station escalator that stops suddenly?
+[29/50] approved   36.2s  sim=0.8327  Who is responsible for resolving a flooded subway entrance, and how?
+[30/50] approved   26.8s  sim=0.7841  What should riders do when they encounter a train door that will not close?
+[31/50] approved   32.1s  sim=0.8557  Who is responsible for resolving a paratransit van that arrives late for a pickup, and how?
+[32/50] approved   30.3s  sim=0.8357  What should riders do when they encounter a paratransit van that arrives late for a pickup?
+[33/50] approved   34.3s  sim=0.6885  How should a transit agency communicate with passengers about a tram that struck a parked car?
+[34/50] approved   30.8s  sim=0.8137  How can a commuter train stopped between stations be prevented from happening again?
+[35/50] approved   40.4s  sim=0.8028  How should a transit agency communicate with passengers about a station elevator that is out of service?
+[36/50] approved   29.9s  sim=0.7718  How can a bus driver running far behind schedule be prevented from happening again?
+[37/50] approved   39.1s  sim=0.8598  What should riders do when they encounter a crowded bus with a medical emergency on board?
+[38/50] approved   33.8s  sim=0.7661  What should riders do when they encounter a delayed airport shuttle service?
+[39/50] approved   49.6s  sim=0.6116  Who is responsible for resolving a bus stop with a broken shelter and a missing light, and how?
+[40/50] approved   30.8s  sim=0.8265  Who is responsible for resolving a bus driver running far behind schedule, and how?
+[41/50] approved   26.9s  sim=0.7947  Who is responsible for resolving a train door that will not close, and how?
+[42/50] approved   29.0s  sim=0.7993  What should riders do when they encounter a bus stop with a broken shelter and a missing light?
+[43/50] approved   30.6s  sim=0.6925  How can a rail crossing where a vehicle is stuck on the tracks be prevented from happening again?
+[44/50] approved   27.4s  sim=0.7954  How can a delayed airport shuttle service be prevented from happening again?
+[45/50] approved   37.8s  sim=0.7983  How should a transit agency communicate with passengers about a station escalator that stops suddenly?
+[46/50] approved   31.7s  sim=0.8444  Who is responsible for resolving a tram that struck a parked car, and how?
+[47/50] approved  108.9s  sim=0.7455  What are the main safety risks of a station elevator that is out of service?
+[48/50] approved   37.1s  sim=0.8799  What should riders do when they encounter an icy bus route during a winter storm?
+[49/50] approved  143.5s  sim=0.8091  What are the main safety risks of a rail crossing where a vehicle is stuck on the tracks?
+[50/50] approved   39.2s  sim=0.8007  How should a transit agency communicate with passengers about a bus stop with a broken shelter and a missing light?
+done: 50 confirmed misses, 0 skipped hits, 1927s
+
+################ raw/trace_examples.log
+Pragnaya Priyadarshini HW10 - trace_examples.py
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+20 hit samples: median 112 ms, max 221 ms
+cache_hit  trace_id=6dbf72e0-fa7b-41fe-a068-fcd88e016c4e
+cache_miss trace_id=ae426d0e-16d0-4197-9ad7-f51883aa3a68
+failed     trace_id=b8360dad-2bdc-49eb-95fc-9a35ca672b88
+
+################ raw/eval_run.log
+Pragnaya Priyadarshini HW10 - evaluate_pipeline.py
+[1/20] fbd2b2af  plan=4 draft=4 final=4  (63.0s)
+[2/20] e78d3172  plan=5 draft=5 final=5  (54.7s)
+[3/20] 8ed6d449  plan=3 draft=5 final=5  (62.8s)
+[4/20] cb53b857  plan=3 draft=3 final=4  (69.6s)
+[5/20] 7386fdc9  plan=4 draft=3 final=3  (68.8s)
+[6/20] 3f2f551f  plan=4 draft=5 final=5  (70.2s)
+[7/20] 3b39ce96  plan=4 draft=5 final=5  (67.2s)
+[8/20] ae426d0e  plan=3 draft=4 final=4  (79.7s)
+[9/20] 3f488ed9  plan=5 draft=4 final=4  (100.3s)
+[10/20] 3f8f0c96  plan=4 draft=4 final=3  (77.6s)
+[11/20] 9db7f1ab  plan=5 draft=4 final=4  (77.9s)
+[12/20] a2941903  plan=5 draft=5 final=5  (73.3s)
+[13/20] 3c10ddf1  plan=3 draft=5 final=5  (73.8s)
+[14/20] 34d03ed0  plan=4 draft=4 final=4  (79.0s)
+[15/20] 92212c33  plan=3 draft=4 final=4  (101.9s)
+[16/20] 431908e6  plan=5 draft=5 final=5  (77.1s)
+[17/20] 3720f0a3  plan=3 draft=4 final=5  (68.4s)
+[18/20] 45563bec  plan=4 draft=3 final=3  (79.4s)
+[19/20] 87177be9  plan=3 draft=4 final=4  (74.0s)
+[20/20] be5f67fc  plan=5 draft=5 final=5  (66.3s)
+evaluated 20/20 in 1494s -> /Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/reports/hw10/raw/eval_results.json
+
+################ raw/eval_run_remaining30.log
+Pragnaya Priyadarshini HW10 - evaluate_pipeline.py
+[1/30] 92d3af70  plan=3 draft=3 final=3  (283.5s)
+[2/30] bea51c9e  JudgeError: judge unavailable or reply malformed after 2 tries: ReadTimeout: timed out  (300.0s)
+[3/30] b62e40cb  plan=2 draft=3 final=3  (176.9s)
+[4/30] e60147cc  plan=3 draft=3 final=3  (109.8s)
+[5/30] 15c04e17  plan=4 draft=5 final=5  (525.4s)
+[6/30] 19cc32dc  plan=3 draft=5 final=5  (88.5s)
+[7/30] e7924078  plan=4 draft=4 final=4  (113.5s)
+[8/30] 32f303fa  plan=3 draft=5 final=5  (518.5s)
+[9/30] 4a29d9dc  plan=4 draft=3 final=3  (88.1s)
+[10/30] 775ce446  plan=3 draft=5 final=5  (125.3s)
+[11/30] 2b16d668  plan=4 draft=5 final=5  (539.3s)
+[12/30] c4ea5169  plan=4 draft=3 final=3  (93.3s)
+[13/30] 2986f4f3  plan=4 draft=4 final=4  (117.1s)
+[14/30] 4a720102  plan=5 draft=5 final=5  (505.9s)
+[15/30] ac7137e9  plan=5 draft=4 final=4  (98.9s)
+[16/30] 13353786  plan=5 draft=4 final=4  (102.9s)
+[17/30] 2c1b9372  plan=3 draft=5 final=5  (521.2s)
+[18/30] a95f4478  plan=5 draft=5 final=5  (87.1s)
+[19/30] 930bb510  plan=5 draft=4 final=4  (116.7s)
+[20/30] c322832b  plan=3 draft=3 final=3  (531.9s)
+[21/30] c31111b0  plan=5 draft=5 final=5  (85.3s)
+[22/30] 70902eb0  plan=5 draft=5 final=5  (103.5s)
+[23/30] 5a916363  plan=3 draft=5 final=5  (508.7s)
+[24/30] a48d2f0d  plan=3 draft=5 final=5  (55.7s)
+[25/30] 060d20d0  plan=5 draft=5 final=5  (57.7s)
+[26/30] 35148505  plan=3 draft=4 final=4  (55.0s)
+[27/30] 32593774  plan=4 draft=5 final=5  (53.1s)
+[28/30] 00e1802a  plan=3 draft=5 final=4  (62.2s)
+[29/30] 3df73bc2  plan=2 draft=5 final=5  (62.1s)
+[30/30] 7a392f4b  plan=5 draft=4 final=4  (60.5s)
+evaluated 29/30 in 6158s -> /Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/reports/hw10/raw/eval_results.json
+Pragnaya Priyadarshini HW10 - evaluate_pipeline.py
+[1/1] bea51c9e  plan=5 draft=4 final=4  (49.8s)
+evaluated 1/1 in 59s -> /Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/reports/hw10/raw/eval_results.json
+
+################ raw/eval_run_remaining30_traced.log
+Pragnaya Priyadarshini HW10 - evaluate_pipeline.py
+[1/30] 92d3af70  plan=3 draft=3 final=3  (83.3s)
+[2/30] bea51c9e  plan=5 draft=4 final=4  (56.2s)
+[3/30] b62e40cb  plan=2 draft=3 final=3  (67.7s)
+[4/30] e60147cc  plan=3 draft=3 final=3  (60.9s)
+[5/30] 15c04e17  plan=4 draft=5 final=5  (56.9s)
+[6/30] 19cc32dc  plan=3 draft=5 final=5  (56.0s)
+[7/30] e7924078  plan=4 draft=4 final=4  (67.2s)
+[8/30] 32f303fa  plan=3 draft=5 final=5  (57.1s)
+[9/30] 4a29d9dc  plan=4 draft=3 final=3  (81.3s)
+[10/30] 775ce446  plan=4 draft=5 final=5  (77.8s)
+[11/30] 2b16d668  plan=4 draft=5 final=4  (67.6s)
+[12/30] c4ea5169  plan=4 draft=3 final=3  (119.9s)
+[13/30] 2986f4f3  plan=4 draft=4 final=4  (82.4s)
+[14/30] 4a720102  plan=5 draft=5 final=5  (96.5s)
+[15/30] ac7137e9  plan=4 draft=5 final=5  (265.5s)
+[16/30] 13353786  JudgeError: judge unavailable or reply malformed after 2 tries: ReadTimeout: timed out  (300.1s)
+[17/30] 2c1b9372  plan=3 draft=5 final=5  (68.9s)
+[18/30] a95f4478  plan=5 draft=5 final=5  (92.9s)
+[19/30] 930bb510  plan=5 draft=4 final=4  (531.2s)
+[20/30] c322832b  plan=3 draft=3 final=3  (80.9s)
+[21/30] c31111b0  plan=5 draft=4 final=5  (88.6s)
+[22/30] 70902eb0  plan=5 draft=4 final=5  (512.5s)
+[23/30] 5a916363  plan=3 draft=5 final=5  (74.9s)
+[24/30] a48d2f0d  plan=3 draft=5 final=5  (86.3s)
+[25/30] 060d20d0  plan=5 draft=5 final=5  (505.0s)
+[26/30] 35148505  plan=3 draft=4 final=4  (75.5s)
+[27/30] 32593774  plan=4 draft=5 final=5  (88.7s)
+[28/30] 00e1802a  plan=3 draft=5 final=4  (542.5s)
+[29/30] 3df73bc2  plan=2 draft=5 final=5  (82.4s)
+[30/30] 7a392f4b  plan=5 draft=4 final=4  (95.9s)
+evaluated 29/30 in 4532s -> /Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/reports/hw10/raw/eval_results.json
+Pragnaya Priyadarshini HW10 - evaluate_pipeline.py
+[1/1] 13353786  plan=4 draft=4 final=4  (403.0s)
+evaluated 1/1 in 412s -> /Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/reports/hw10/raw/eval_results.json
+
+################ raw/judge_validation.log
+Pragnaya Priyadarshini HW10 - validate_judge.py
+run 1 E01  judge=4  human=5
+run 1 E02  judge=5  human=4
+run 1 E03  judge=5  human=5
+run 1 E04  judge=5  human=5
+run 1 E05  judge=5  human=5
+run 1 E06  judge=5  human=4
+run 1 E07  judge=5  human=5
+run 1 E08  judge=4  human=5
+run 1 E09  judge=5  human=5
+run 1 E10  judge=3  human=4
+run 1 E11  judge=5  human=5
+run 1 E12  judge=5  human=5
+run 1 E13  judge=3  human=4
+run 1 E14  judge=4  human=5
+run 1 E15  judge=5  human=4
+run 1 E16  judge=5  human=5
+run 1 E17  judge=3  human=5
+run 1 E18  judge=5  human=5
+run 1 E19  judge=5  human=5
+run 1 E20  judge=5  human=5
+run 2 E01  judge=4  human=5
+run 2 E02  judge=5  human=4
+run 2 E03  judge=5  human=5
+run 2 E04  judge=5  human=5
+run 2 E05  judge=5  human=5
+run 2 E06  judge=5  human=4
+run 2 E07  judge=5  human=5
+run 2 E08  judge=4  human=5
+run 2 E09  judge=5  human=5
+run 2 E10  judge=3  human=4
+run 2 E11  judge=5  human=5
+run 2 E12  judge=5  human=5
+run 2 E13  judge=3  human=4
+run 2 E14  judge=4  human=5
+run 2 E15  judge=5  human=4
+run 2 E16  judge=5  human=5
+run 2 E17  judge=3  human=5
+run 2 E18  judge=5  human=5
+run 2 E19  judge=5  human=5
+run 2 E20  judge=5  human=5
+run 3 E01  judge=4  human=5
+run 3 E02  judge=5  human=4
+run 3 E03  judge=5  human=5
+run 3 E04  judge=5  human=5
+run 3 E05  judge=5  human=5
+run 3 E06  judge=5  human=4
+run 3 E07  judge=5  human=5
+run 3 E08  judge=4  human=5
+run 3 E09  judge=5  human=5
+run 3 E10  judge=3  human=4
+run 3 E11  judge=5  human=5
+run 3 E12  judge=5  human=5
+run 3 E13  judge=3  human=4
+run 3 E14  judge=4  human=5
+run 3 E15  judge=5  human=4
+run 3 E16  judge=5  human=5
+run 3 E17  judge=3  human=5
+run 3 E18  judge=5  human=5
+run 3 E19  judge=5  human=5
+run 3 E20  judge=5  human=5
+{
+  "n_cases": 20,
+  "n_runs": 3,
+  "part_3_2_run1_vs_human": {
+    "n_scored": 20,
+    "spearman": 0.1984,
+    "mean_abs_diff": 0.5,
+    "mean_signed_diff_judge_minus_human": -0.2
+  },
+  "each_run_vs_human": [
+    {
+      "n_scored": 20,
+      "spearman": 0.1984,
+      "mean_abs_diff": 0.5,
+      "mean_signed_diff_judge_minus_human": -0.2
+    },
+    {
+      "n_scored": 20,
+      "spearman": 0.1984,
+      "mean_abs_diff": 0.5,
+      "mean_signed_diff_judge_minus_human": -0.2
+    },
+    {
+      "n_scored": 20,
+      "spearman": 0.1984,
+      "mean_abs_diff": 0.5,
+      "mean_signed_diff_judge_minus_human": -0.2
+    }
+  ],
+  "repeatability": {
+    "cases_compared": 20,
+    "cases_whose_score_changed_across_runs": 0,
+    "fraction_cases_changed": 0.0,
+    "run_pair_comparisons": 60,
+    "fraction_pair_comparisons_changed": 0.0,
+    "mean_abs_change": 0,
+    "max_abs_change": 0,
+    "mean_range_per_case": 0,
+    "max_range_per_case": 0
+  },
+  "human_label_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 5,
+    "5": 15
+  }
+}
+
+################ raw/latency_report.txt
+Pragnaya Priyadarshini HW10 - latency_report.py
+Stage                  n    p50 (ms)    p95 (ms)   % of cache-miss e2e
+Cache lookup          50       866.8      1291.4                 2.98%
+Planner               50     13469.7     21606.2                37.56%
+Writer                50     19448.3     27575.7                59.42%
+Reviewer              50         2.8         4.9                 0.01%
+Queue wait (total)    50        16.2        45.3                 0.05%
+Evaluation            50     77686.4    509129.4               317.12%
+
+end-to-end (user-facing, n=50): p50 33854.9 ms, p95 49771.4 ms, mean 38538.3 ms
+request-path stages cover 100.02% of end-to-end (unaccounted -0.02%)
+dominant stage: Writer
+cache-hit latency (separate): {'n': 20, 'p50': 111.9, 'p95': 217.8, 'max': 221.0}

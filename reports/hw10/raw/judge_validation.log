@@ -1,0 +1,109 @@
+Pragnaya Priyadarshini HW10 - validate_judge.py
+run 1 E01  judge=4  human=5
+run 1 E02  judge=5  human=4
+run 1 E03  judge=5  human=5
+run 1 E04  judge=5  human=5
+run 1 E05  judge=5  human=5
+run 1 E06  judge=5  human=4
+run 1 E07  judge=5  human=5
+run 1 E08  judge=4  human=5
+run 1 E09  judge=5  human=5
+run 1 E10  judge=3  human=4
+run 1 E11  judge=5  human=5
+run 1 E12  judge=5  human=5
+run 1 E13  judge=3  human=4
+run 1 E14  judge=4  human=5
+run 1 E15  judge=5  human=4
+run 1 E16  judge=5  human=5
+run 1 E17  judge=3  human=5
+run 1 E18  judge=5  human=5
+run 1 E19  judge=5  human=5
+run 1 E20  judge=5  human=5
+run 2 E01  judge=4  human=5
+run 2 E02  judge=5  human=4
+run 2 E03  judge=5  human=5
+run 2 E04  judge=5  human=5
+run 2 E05  judge=5  human=5
+run 2 E06  judge=5  human=4
+run 2 E07  judge=5  human=5
+run 2 E08  judge=4  human=5
+run 2 E09  judge=5  human=5
+run 2 E10  judge=3  human=4
+run 2 E11  judge=5  human=5
+run 2 E12  judge=5  human=5
+run 2 E13  judge=3  human=4
+run 2 E14  judge=4  human=5
+run 2 E15  judge=5  human=4
+run 2 E16  judge=5  human=5
+run 2 E17  judge=3  human=5
+run 2 E18  judge=5  human=5
+run 2 E19  judge=5  human=5
+run 2 E20  judge=5  human=5
+run 3 E01  judge=4  human=5
+run 3 E02  judge=5  human=4
+run 3 E03  judge=5  human=5
+run 3 E04  judge=5  human=5
+run 3 E05  judge=5  human=5
+run 3 E06  judge=5  human=4
+run 3 E07  judge=5  human=5
+run 3 E08  judge=4  human=5
+run 3 E09  judge=5  human=5
+run 3 E10  judge=3  human=4
+run 3 E11  judge=5  human=5
+run 3 E12  judge=5  human=5
+run 3 E13  judge=3  human=4
+run 3 E14  judge=4  human=5
+run 3 E15  judge=5  human=4
+run 3 E16  judge=5  human=5
+run 3 E17  judge=3  human=5
+run 3 E18  judge=5  human=5
+run 3 E19  judge=5  human=5
+run 3 E20  judge=5  human=5
+{
+  "n_cases": 20,
+  "n_runs": 3,
+  "part_3_2_run1_vs_human": {
+    "n_scored": 20,
+    "spearman": 0.1984,
+    "mean_abs_diff": 0.5,
+    "mean_signed_diff_judge_minus_human": -0.2
+  },
+  "each_run_vs_human": [
+    {
+      "n_scored": 20,
+      "spearman": 0.1984,
+      "mean_abs_diff": 0.5,
+      "mean_signed_diff_judge_minus_human": -0.2
+    },
+    {
+      "n_scored": 20,
+      "spearman": 0.1984,
+      "mean_abs_diff": 0.5,
+      "mean_signed_diff_judge_minus_human": -0.2
+    },
+    {
+      "n_scored": 20,
+      "spearman": 0.1984,
+      "mean_abs_diff": 0.5,
+      "mean_signed_diff_judge_minus_human": -0.2
+    }
+  ],
+  "repeatability": {
+    "cases_compared": 20,
+    "cases_whose_score_changed_across_runs": 0,
+    "fraction_cases_changed": 0.0,
+    "run_pair_comparisons": 60,
+    "fraction_pair_comparisons_changed": 0.0,
+    "mean_abs_change": 0,
+    "max_abs_change": 0,
+    "mean_range_per_case": 0,
+    "max_range_per_case": 0
+  },
+  "human_label_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 5,
+    "5": 15
+  }
+}

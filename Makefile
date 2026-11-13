@@ -14,7 +14,8 @@ APP_DIR := code/web_application
         seed-hw07 test-hw07 demo-hw07 reliability-hw07 reflexion-hw07 bike-data-hw07 snapshots-hw07 attacks-hw07 verify-hw07 \
         metrics-hw07 runlog-hw07 report-hw07 \
         kafka-up-hw08 topics-hw08 demo-hw08 agents-hw08 failures-hw08 verify-hw08 down-hw08 \
-        redis-up-hw09 migrate-hw09 counter-hw09 cache-hw09 sweep-hw09 stale-hw09 si-hw09 verify-hw09 metrics-hw09
+        redis-up-hw09 migrate-hw09 counter-hw09 cache-hw09 sweep-hw09 stale-hw09 si-hw09 verify-hw09 metrics-hw09 \
+        agents-hw10 agents-stop-hw10 cases-hw10 judge-hw10 eval-hw10 latency-hw10 traces-hw10 latency-report-hw10 dashboard-hw10 verify-hw10 metrics-hw10
 
 help:
 	@echo "install       install deps from requirements.txt, then the NLTK data"
@@ -76,6 +77,16 @@ help:
 	@echo "si-hw09        Part 4: demo + train + validate + variants (needs Ollama, ~1 h)"
 	@echo "verify-hw09    run the HW9 self-check -> reports/hw09/verification.json"
 	@echo "metrics-hw09   rebuild reports/hw09/METRICS.md from raw/"
+	@echo "agents-hw10   start planner/writer/reviewer in the background with tracing on (needs Kafka + Ollama); agents-stop-hw10 stops them"
+	@echo "cases-hw10    Part 3.1: build the 20 frozen eval drafts from the real pipeline (agents running)"
+	@echo "judge-hw10    Part 3.2/3.3: judge vs human labels + 3-run repeatability (needs committed labels)"
+	@echo "eval-hw10     Part 2: score 20 traced requests (plan / draft / final) with the local judge"
+	@echo "latency-hw10  Part 4.3: 50 confirmed cache-miss requests (agents running, ~30 min)"
+	@echo "traces-hw10   Part 4.2: capture the cache-hit, cache-miss and failed example traces"
+	@echo "latency-report-hw10  Part 4.3 stage p50/p95 table from the spans"
+	@echo "dashboard-hw10 Part 1: Streamlit dashboard on http://localhost:8472"
+	@echo "verify-hw10   run the HW10 self-check -> reports/hw10/verification.json"
+	@echo "metrics-hw10  rebuild reports/hw10/METRICS.md from raw/"
 
 install:
 	$(PY) -m pip install -r requirements.txt
@@ -285,3 +296,36 @@ verify-hw09:
 
 metrics-hw09:
 	$(PY) code/hw09/build_metrics.py
+
+agents-hw10:
+	code/hw10/agents.sh start
+
+agents-stop-hw10:
+	code/hw10/agents.sh stop
+
+cases-hw10:
+	cd code/hw10 && ../../$(PY) -u build_eval_cases.py 2>&1 | tee ../../data/hw10/logs/build_eval_cases.log
+
+judge-hw10:
+	cd code/hw10 && ../../$(PY) -u validate_judge.py 2>&1 | tee ../../reports/hw10/raw/judge_validation.log
+
+eval-hw10:
+	cd code/hw10 && HW10_TRACE=1 ../../$(PY) -u evaluate_pipeline.py --file ../../reports/hw10/raw/eval_sample.json 2>&1 | tee ../../reports/hw10/raw/eval_run.log
+
+latency-hw10:
+	cd code/hw10 && HW10_TRACE=1 caffeinate -i ../../$(PY) -u latency_experiment.py 2>&1 | tee ../../reports/hw10/raw/latency_experiment.log
+
+traces-hw10:
+	cd code/hw10 && HW10_TRACE=1 ../../$(PY) -u trace_examples.py 2>&1 | tee ../../reports/hw10/raw/trace_examples.log
+
+latency-report-hw10:
+	cd code/hw10 && ../../$(PY) latency_report.py | tee ../../reports/hw10/raw/latency_report.txt
+
+dashboard-hw10:
+	cd code/hw10 && ../../$(PY) -m streamlit run dashboard.py --server.port 8472 --server.address localhost --browser.gatherUsageStats false
+
+verify-hw10:
+	$(PY) -u code/verify_hw10.py
+
+metrics-hw10:
+	$(PY) code/hw10/build_metrics.py

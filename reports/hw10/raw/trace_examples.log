@@ -1,0 +1,7 @@
+Pragnaya Priyadarshini HW10 - trace_examples.py
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+20 hit samples: median 112 ms, max 221 ms
+cache_hit  trace_id=6dbf72e0-fa7b-41fe-a068-fcd88e016c4e
+cache_miss trace_id=ae426d0e-16d0-4197-9ad7-f51883aa3a68
+failed     trace_id=b8360dad-2bdc-49eb-95fc-9a35ca672b88

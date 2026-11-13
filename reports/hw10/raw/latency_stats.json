@@ -1,0 +1,56 @@
+{
+  "n_requests": 50,
+  "definition_end_to_end": "cache_lookup start -> final received (user-facing)",
+  "end_to_end_ms": {
+    "p50": 33854.9,
+    "p95": 49771.4,
+    "mean": 38538.3
+  },
+  "stages": {
+    "Cache lookup": {
+      "n": 50,
+      "p50_ms": 866.8,
+      "p95_ms": 1291.4,
+      "pct_of_end_to_end": 2.98
+    },
+    "Planner": {
+      "n": 50,
+      "p50_ms": 13469.7,
+      "p95_ms": 21606.2,
+      "pct_of_end_to_end": 37.56
+    },
+    "Writer": {
+      "n": 50,
+      "p50_ms": 19448.3,
+      "p95_ms": 27575.7,
+      "pct_of_end_to_end": 59.42
+    },
+    "Reviewer": {
+      "n": 50,
+      "p50_ms": 2.8,
+      "p95_ms": 4.9,
+      "pct_of_end_to_end": 0.01
+    },
+    "Queue wait (total)": {
+      "n": 50,
+      "p50_ms": 16.2,
+      "p95_ms": 45.3,
+      "pct_of_end_to_end": 0.05
+    },
+    "Evaluation": {
+      "n": 50,
+      "p50_ms": 77686.4,
+      "p95_ms": 509129.4,
+      "pct_of_end_to_end": 317.12
+    }
+  },
+  "request_path_stages_pct_total": 100.02,
+  "unaccounted_pct": -0.02,
+  "dominant_stage": "Writer",
+  "cache_hit_latency_ms": {
+    "n": 20,
+    "p50": 111.9,
+    "p95": 217.8,
+    "max": 221.0
+  }
+}

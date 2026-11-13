@@ -1,0 +1,124 @@
+{
+  "cache_hit": {
+    "trace_id": "6dbf72e0-fa7b-41fe-a068-fcd88e016c4e",
+    "question": "How can a city bus that broke down on a highway be prevented from happening again?",
+    "similarity": 1.0,
+    "e2e_ms": 107.7
+  },
+  "cache_miss": {
+    "trace_id": "ae426d0e-16d0-4197-9ad7-f51883aa3a68",
+    "question": "What are the main safety risks of a commuter train stopped between stations?",
+    "e2e_ms": 33886.31,
+    "note": "median-latency request of the 50 confirmed misses"
+  },
+  "failed": {
+    "trace_id": "b8360dad-2bdc-49eb-95fc-9a35ca672b88",
+    "question": "What should a rider do if a train door will not close and the train is about to leave the station?",
+    "status": "no_final",
+    "failing_stage": "writer",
+    "error": "ValueError: task has no plan (Planner emitted an empty plan; the Writer retried 3 times and dead-lettered the message)",
+    "e2e_ms": 45968.7
+  },
+  "hit_samples": [
+    {
+      "trace_id": "6dbf72e0-fa7b-41fe-a068-fcd88e016c4e",
+      "similarity": 1.0,
+      "e2e_ms": 107.7
+    },
+    {
+      "trace_id": "d2aa02d0-379d-4c01-8660-c9cc2f5ace71",
+      "similarity": 1.0,
+      "e2e_ms": 107.1
+    },
+    {
+      "trace_id": "4bfb0ebc-7f4c-4765-b98e-8c96ecc437bd",
+      "similarity": 1.0,
+      "e2e_ms": 174.48
+    },
+    {
+      "trace_id": "a2b924be-a8ba-43e7-a25c-78b1dd1b8a95",
+      "similarity": 1.0,
+      "e2e_ms": 175.61
+    },
+    {
+      "trace_id": "c06d2a14-8dbb-404b-b5b2-77551ed38e2d",
+      "similarity": 1.0,
+      "e2e_ms": 57.1
+    },
+    {
+      "trace_id": "f0714ac6-0648-448a-a31e-990a5629b974",
+      "similarity": 1.0,
+      "e2e_ms": 161.71
+    },
+    {
+      "trace_id": "04c9d30a-26c4-4fe1-b9b3-66f1b1048664",
+      "similarity": 1.0,
+      "e2e_ms": 210.47
+    },
+    {
+      "trace_id": "6a9acc59-545a-4dd5-b641-cef9417886f6",
+      "similarity": 1.0,
+      "e2e_ms": 58.65
+    },
+    {
+      "trace_id": "0c9683f6-ed56-4ae6-9a3e-ef83120beb2d",
+      "similarity": 1.0,
+      "e2e_ms": 217.61
+    },
+    {
+      "trace_id": "021c3a03-0beb-4187-bc6c-e32d5b626da0",
+      "similarity": 1.0,
+      "e2e_ms": 142.39
+    },
+    {
+      "trace_id": "ed1d2f05-b6fb-4034-817d-710f07516b2c",
+      "similarity": 1.0,
+      "e2e_ms": 114.36
+    },
+    {
+      "trace_id": "9f6bbeff-bad8-4cdc-8d66-5a4af052c276",
+      "similarity": 1.0,
+      "e2e_ms": 69.08
+    },
+    {
+      "trace_id": "dc82f1d6-c1a4-440c-8357-34c9769717b6",
+      "similarity": 1.0,
+      "e2e_ms": 192.1
+    },
+    {
+      "trace_id": "4355921b-fd90-49c3-b023-b01b6d074cfa",
+      "similarity": 1.0,
+      "e2e_ms": 81.82
+    },
+    {
+      "trace_id": "b7dfafa0-cc3c-4296-ab4b-e10416aab4b8",
+      "similarity": 1.0,
+      "e2e_ms": 93.69
+    },
+    {
+      "trace_id": "475a3891-5c63-49c6-b31e-b525fef642c3",
+      "similarity": 1.0,
+      "e2e_ms": 220.97
+    },
+    {
+      "trace_id": "812e45a4-680e-42dd-8fc4-a7f57ebb1c5e",
+      "similarity": 1.0,
+      "e2e_ms": 68.91
+    },
+    {
+      "trace_id": "8494a208-ad95-42e5-9f39-5de10edc350a",
+      "similarity": 1.0,
+      "e2e_ms": 142.83
+    },
+    {
+      "trace_id": "7c1f9964-0c27-4b60-add5-65a3ac162293",
+      "similarity": 1.0,
+      "e2e_ms": 109.47
+    },
+    {
+      "trace_id": "fb58b9df-0bb7-432a-a179-796aca1aa01a",
+      "similarity": 1.0,
+      "e2e_ms": 55.42
+    }
+  ]
+}

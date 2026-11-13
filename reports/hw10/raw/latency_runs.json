@@ -1,0 +1,409 @@
+{
+  "requests": [
+    {
+      "trace_id": "fbd2b2af-0620-410d-b8b7-17adf2868c8e",
+      "question": "How can a city bus that broke down on a highway be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": null,
+      "e2e_ms": 49878.24
+    },
+    {
+      "trace_id": "92d3af70-c33e-49ee-bcf7-3b036a6c7b11",
+      "question": "What are the main safety risks of a light rail line suspended by a signal fault?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.3712,
+      "e2e_ms": 33339.42
+    },
+    {
+      "trace_id": "e78d3172-94cd-4dfd-882e-b73591fad266",
+      "question": "How should a transit agency communicate with passengers about a city bus that broke down on a highway?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7137,
+      "e2e_ms": 30439.5
+    },
+    {
+      "trace_id": "bea51c9e-0d50-4da8-81e3-0ff28a0095d5",
+      "question": "What should riders do when they encounter a ferry terminal with a cancelled sailing?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.3969,
+      "e2e_ms": 27567.41
+    },
+    {
+      "trace_id": "b62e40cb-806e-4ed8-8fcb-6ac2f0433ac5",
+      "question": "What are the main safety risks of a bus driver running far behind schedule?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.5085,
+      "e2e_ms": 30242.15
+    },
+    {
+      "trace_id": "8ed6d449-8391-4531-90ab-6ac2a19e3df5",
+      "question": "Who is responsible for resolving a cable car stopped by a power outage, and how?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.3989,
+      "e2e_ms": 27892.93
+    },
+    {
+      "trace_id": "e60147cc-a38e-4ea4-882d-a12f66cdcafd",
+      "question": "Who is responsible for resolving a subway platform that is overcrowded during rush hour, and how?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.4269,
+      "e2e_ms": 31864.86
+    },
+    {
+      "trace_id": "cb53b857-eeb9-4beb-b872-83e3eaa3ce7b",
+      "question": "Who is responsible for resolving a commuter train stopped between stations, and how?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.6086,
+      "e2e_ms": 41408.25
+    },
+    {
+      "trace_id": "15c04e17-b8a5-429d-b4e4-1f085aae5012",
+      "question": "How can a flooded subway entrance be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.6036,
+      "e2e_ms": 34593.98
+    },
+    {
+      "trace_id": "19cc32dc-f73b-4d1e-be3f-d8b7a8b32609",
+      "question": "How can a crowded bus with a medical emergency on board be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.6488,
+      "e2e_ms": 33586.53
+    },
+    {
+      "trace_id": "7386fdc9-4c5d-4906-a80e-9557eccdd8d7",
+      "question": "How can a cable car stopped by a power outage be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8495,
+      "e2e_ms": 35003.96
+    },
+    {
+      "trace_id": "e7924078-559a-416a-8428-084a1a771301",
+      "question": "How should a transit agency communicate with passengers about a crowded bus with a medical emergency on board?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.763,
+      "e2e_ms": 39802.74
+    },
+    {
+      "trace_id": "3f2f551f-f614-4ced-a8b2-7eeb46d5a586",
+      "question": "How can an icy bus route during a winter storm be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.642,
+      "e2e_ms": 36093.88
+    },
+    {
+      "trace_id": "32f303fa-b571-4bbe-936f-9710b28a4b42",
+      "question": "What are the main safety risks of a station escalator that stops suddenly?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.5782,
+      "e2e_ms": 44121.15
+    },
+    {
+      "trace_id": "4a29d9dc-c07a-4376-9a29-bd5513671b2a",
+      "question": "How can a paratransit van that arrives late for a pickup be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.4498,
+      "e2e_ms": 33686.27
+    },
+    {
+      "trace_id": "3b39ce96-6945-4837-858d-8f64a80176eb",
+      "question": "How should a transit agency communicate with passengers about a subway platform that is overcrowded during rush hour?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7821,
+      "e2e_ms": 40867.44
+    },
+    {
+      "trace_id": "775ce446-7faa-4571-9852-84415b789f04",
+      "question": "How should a transit agency communicate with passengers about a light rail line suspended by a signal fault?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7421,
+      "e2e_ms": 36741.61
+    },
+    {
+      "trace_id": "ae426d0e-16d0-4197-9ad7-f51883aa3a68",
+      "question": "What are the main safety risks of a commuter train stopped between stations?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7049,
+      "e2e_ms": 33886.31
+    },
+    {
+      "trace_id": "2b16d668-eb0e-47ed-be0d-2a98620ddb91",
+      "question": "How should a transit agency communicate with passengers about a ferry terminal with a cancelled sailing?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7778,
+      "e2e_ms": 34628.59
+    },
+    {
+      "trace_id": "c4ea5169-a1f6-4250-8ec4-6056710cbd51",
+      "question": "How can a tram that struck a parked car be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.5402,
+      "e2e_ms": 38552.02
+    },
+    {
+      "trace_id": "3f488ed9-2ff4-4dbb-a75e-449b8784af24",
+      "question": "What should riders do when they encounter a station elevator that is out of service?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.5268,
+      "e2e_ms": 33701.49
+    },
+    {
+      "trace_id": "2986f4f3-1e97-49f6-b293-2cfd78c7931a",
+      "question": "How should a transit agency communicate with passengers about a commuter train stopped between stations?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7336,
+      "e2e_ms": 32652.84
+    },
+    {
+      "trace_id": "3f8f0c96-9196-465c-9618-ab8fbdfc701b",
+      "question": "How can a station elevator that is out of service be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.816,
+      "e2e_ms": 32811.41
+    },
+    {
+      "trace_id": "4a720102-ecb9-49ce-b5e2-8fd08fc8581b",
+      "question": "What should riders do when they encounter a flooded subway entrance?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8363,
+      "e2e_ms": 25325.02
+    },
+    {
+      "trace_id": "ac7137e9-d8c2-4114-9a09-3643fd277195",
+      "question": "How should a transit agency communicate with passengers about a delayed airport shuttle service?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7154,
+      "e2e_ms": 44854.17
+    },
+    {
+      "trace_id": "9db7f1ab-fde2-4533-ae13-6b1751f4bac1",
+      "question": "How should a transit agency communicate with passengers about a train door that will not close?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.734,
+      "e2e_ms": 30392.79
+    },
+    {
+      "trace_id": "13353786-bfc4-4b5a-8f31-52b8c53abb12",
+      "question": "How can a light rail line suspended by a signal fault be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8237,
+      "e2e_ms": 37567.8
+    },
+    {
+      "trace_id": "a2941903-7b82-44b5-9bc6-a148fcc219e2",
+      "question": "What should riders do when they encounter a station escalator that stops suddenly?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7888,
+      "e2e_ms": 49027.7
+    },
+    {
+      "trace_id": "2c1b9372-dac5-4ecf-a6e6-97348f6a5d78",
+      "question": "Who is responsible for resolving a flooded subway entrance, and how?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8327,
+      "e2e_ms": 36206.77
+    },
+    {
+      "trace_id": "a95f4478-191f-4096-8d16-f72c508f648c",
+      "question": "What should riders do when they encounter a train door that will not close?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7841,
+      "e2e_ms": 26776.41
+    },
+    {
+      "trace_id": "3c10ddf1-9085-4c73-99b9-24ab32eec98c",
+      "question": "Who is responsible for resolving a paratransit van that arrives late for a pickup, and how?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8557,
+      "e2e_ms": 32101.47
+    },
+    {
+      "trace_id": "930bb510-61de-4fd1-b952-f767e7b9c98e",
+      "question": "What should riders do when they encounter a paratransit van that arrives late for a pickup?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8357,
+      "e2e_ms": 30324.28
+    },
+    {
+      "trace_id": "34d03ed0-82b6-4dd3-9880-c3edae4446cd",
+      "question": "How should a transit agency communicate with passengers about a tram that struck a parked car?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.6885,
+      "e2e_ms": 34327.14
+    },
+    {
+      "trace_id": "c322832b-c252-41af-b67f-7d0be9c48830",
+      "question": "How can a commuter train stopped between stations be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8137,
+      "e2e_ms": 30815.64
+    },
+    {
+      "trace_id": "c31111b0-b349-4c54-8682-012698811ea6",
+      "question": "How should a transit agency communicate with passengers about a station elevator that is out of service?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8028,
+      "e2e_ms": 40442.4
+    },
+    {
+      "trace_id": "92212c33-281a-4739-933c-b99c25b12775",
+      "question": "How can a bus driver running far behind schedule be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7718,
+      "e2e_ms": 29851.57
+    },
+    {
+      "trace_id": "70902eb0-2d86-4e55-bbd1-f390fd3b30c4",
+      "question": "What should riders do when they encounter a crowded bus with a medical emergency on board?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8598,
+      "e2e_ms": 39075.79
+    },
+    {
+      "trace_id": "431908e6-7f8e-47c3-a2bd-4b5fc19657f0",
+      "question": "What should riders do when they encounter a delayed airport shuttle service?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7661,
+      "e2e_ms": 33823.43
+    },
+    {
+      "trace_id": "5a916363-20da-48b9-b873-ce86ac37bbe2",
+      "question": "Who is responsible for resolving a bus stop with a broken shelter and a missing light, and how?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.6116,
+      "e2e_ms": 49640.9
+    },
+    {
+      "trace_id": "a48d2f0d-9d60-4bd5-bfe0-a891ec83c9f5",
+      "question": "Who is responsible for resolving a bus driver running far behind schedule, and how?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8265,
+      "e2e_ms": 30798.88
+    },
+    {
+      "trace_id": "3720f0a3-b105-4191-b515-16a911951c3b",
+      "question": "Who is responsible for resolving a train door that will not close, and how?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7947,
+      "e2e_ms": 26944.56
+    },
+    {
+      "trace_id": "060d20d0-2004-4619-a2c3-7bfd30457473",
+      "question": "What should riders do when they encounter a bus stop with a broken shelter and a missing light?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7993,
+      "e2e_ms": 28997.55
+    },
+    {
+      "trace_id": "45563bec-f774-4c0d-986d-d81f651ee4b8",
+      "question": "How can a rail crossing where a vehicle is stuck on the tracks be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.6925,
+      "e2e_ms": 30569.91
+    },
+    {
+      "trace_id": "35148505-c098-4626-9234-eb892147ff0f",
+      "question": "How can a delayed airport shuttle service be prevented from happening again?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7954,
+      "e2e_ms": 27447.24
+    },
+    {
+      "trace_id": "32593774-4d4c-4df5-aadc-60fb4dd02eab",
+      "question": "How should a transit agency communicate with passengers about a station escalator that stops suddenly?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7983,
+      "e2e_ms": 37811.4
+    },
+    {
+      "trace_id": "87177be9-e98b-4a5f-a129-1c7d85dd917b",
+      "question": "Who is responsible for resolving a tram that struck a parked car, and how?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8444,
+      "e2e_ms": 31749.74
+    },
+    {
+      "trace_id": "00e1802a-d564-45ee-a747-6e90ba3b58f9",
+      "question": "What are the main safety risks of a station elevator that is out of service?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.7455,
+      "e2e_ms": 108881.98
+    },
+    {
+      "trace_id": "be5f67fc-5122-49d2-9bfa-7b82821f2bd9",
+      "question": "What should riders do when they encounter an icy bus route during a winter storm?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8799,
+      "e2e_ms": 37070.3
+    },
+    {
+      "trace_id": "3df73bc2-47f3-4a08-9032-9b2d90c9d68b",
+      "question": "What are the main safety risks of a rail crossing where a vehicle is stuck on the tracks?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8091,
+      "e2e_ms": 143526.39
+    },
+    {
+      "trace_id": "7a392f4b-0b03-410d-80c4-79bb2c048ee2",
+      "question": "How should a transit agency communicate with passengers about a bus stop with a broken shelter and a missing light?",
+      "status": "approved",
+      "is_cached": false,
+      "similarity": 0.8007,
+      "e2e_ms": 39202.13
+    }
+  ],
+  "skipped_hits": [],
+  "confirmed_misses": 50,
+  "all_confirmed_misses": true,
+  "threshold": 0.95,
+  "wall_clock_s": 1927.4
+}

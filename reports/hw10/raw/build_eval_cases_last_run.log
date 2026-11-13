@@ -1,0 +1,23 @@
+Pragnaya Priyadarshini HW10 - build_eval_cases.py
+[01/20] cached  What should a rider do when their bus is cancelled and the next one is an hour away?
+[02/20] cached  How should a transit agency respond to a mechanical failure on a train stopped inside a tunnel?
+[03/20] cached  What information should a rider include when reporting a safety hazard at a bus stop?
+[04/20] cached  What are common causes of delays on light rail lines?
+[05/20] cached  Explain the difference between a delay incident and a mechanical failure incident.
+[06/20] cached  What steps should a bus driver take after a minor collision with a car?
+[07/20] cached  How can a transit agency reduce the number of accident-collision incidents?
+[08/20] cached  What is the on-time performance of route R-0030 this month?
+[09/20] cached  Which agency operates route R-0045, and how many incidents has it had?
+[10/20] cached  How many safety hazard incidents were reported on the Caltrain line last month?
+[11/20] cached  What is the capital of France?
+[12/20] cached  Write a short poem about my cat.
+[13/20] cached  What should I do?
+[14/20] approved  145.1s  Summarize the process for filing a complaint about a late train.
+[15/20] cached  Why do buses bunch together, and what can riders do about it?
+[16/20] approved   30.1s  What emergency safety equipment should every subway car have?
+[17/20] approved   19.9s  How should riders who use wheelchairs be assisted when a station elevator is out of service?
+[18/20] cached  What does the incident category 'Accident-Collision' mean?
+[19/20] cached  Give three tips for staying safe at a transit station late at night.
+[20/20] cached  How long does it usually take to investigate a transit accident?
+
+wrote 20 cases -> data/hw10/eval_cases.json ; empty labels -> data/hw10/human_labels.csv

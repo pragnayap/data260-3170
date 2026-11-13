@@ -76,3 +76,12 @@ confluent-kafka==2.16.1
 
 # HW9 - Redis client (server: Redis Stack in Docker, for the RediSearch vector index)
 redis>=5,<6
+
+# HW10 - Streamlit dashboard + DeepEval/GEval judge.
+# Pins are deliberate (found the hard way): streamlit>=1.5x depends on starlette>=0.40, which breaks fastapi==0.109.0 / starlette<0.36
+# above, and a newer pyarrow requires NumPy 2 (this repo needs numpy<2 on Intel macOS). streamlit 1.40.2 uses tornado instead.
+streamlit==1.40.2
+pyarrow<20
+protobuf<6
+deepeval==4.3.3
+scipy

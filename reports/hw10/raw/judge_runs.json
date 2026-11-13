@@ -1,0 +1,335 @@
+{
+  "settings": {
+    "judge_model": "qwen3:8b",
+    "framework": "DeepEval GEval (custom local model)",
+    "temperature": 0.0,
+    "seed": 3170,
+    "thinking": "off",
+    "num_predict": 400,
+    "client_timeout_s": 150,
+    "scale": "1-5 (rubric), same scale as the human labels",
+    "metric": "Writer Helpfulness",
+    "input": "question + Writer draft",
+    "evaluation_steps": "fixed (judge.HELPFULNESS_STEPS)"
+  },
+  "runs": [
+    {
+      "run": 1,
+      "seconds": 487.6,
+      "cases": {
+        "E01": {
+          "score": 4,
+          "reason": "The response directly addresses the question by providing actionable steps such as checking real-time updates, considering alternative transportation, and contacting the transit authority. It is accurate, relevant, and specific enough for the rider to take immediate action. The answer is complete and helpful, aligning well with the rubric for a good response.",
+          "error": null
+        },
+        "E02": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and directly addresses the question about how a transit agency should respond to a mechanical failure in a tunnel. It outlines clear steps for ensuring passenger safety, notifying emergency services, assessing the situation, and planning for service restoration. The answer is specific and complete enough for the agency to act on, making it a helpful and well-structured response.",
+          "error": null
+        },
+        "E03": {
+          "score": 5,
+          "reason": "The response directly addresses the question by outlining specific information a rider should include when reporting a safety hazard. It covers key details such as location, nature of the hazard, and relevant context, making it accurate, specific, and complete. The answer is helpful and directly useful for the intended purpose.",
+          "error": null
+        },
+        "E04": {
+          "score": 5,
+          "reason": "The response directly addresses the question by listing common causes of delays on light rail lines, including operational, external, and passenger-related factors. It is accurate, specific, and complete, providing actionable information that would help someone understand the issue.",
+          "error": null
+        },
+        "E05": {
+          "score": 5,
+          "reason": "The response accurately explains the difference between a delay incident and a mechanical failure incident, providing clear definitions and examples. It also highlights how each type of incident is typically managed, making the answer specific and complete. The explanation is relevant and directly addresses the question without inaccuracies or irrelevant information.",
+          "error": null
+        },
+        "E06": {
+          "score": 5,
+          "reason": "The response directly addresses the question by outlining specific steps a bus driver should take after a minor collision. It includes stopping the bus, ensuring passenger safety, contacting authorities, documenting the scene, exchanging information, and following up with insurance and legal procedures. The content is accurate, relevant, and complete, making it directly useful for the person seeking guidance.",
+          "error": null
+        },
+        "E07": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and provides specific measures that a transit agency can take to reduce accident-collision incidents. It addresses the question directly and offers actionable steps such as data analysis, improved signage, lighting, vehicle maintenance, staff training, and safety policies. The answer is complete and directly useful.",
+          "error": null
+        },
+        "E08": {
+          "score": 4,
+          "reason": "The response directly addresses the question about the on-time performance of route R-0030 and provides a specific percentage (89%) with a clear definition of what the metric represents. However, it lacks additional context such as the total number of flights or any factors affecting the performance, which could make the information more actionable.",
+          "error": null
+        },
+        "E09": {
+          "score": 5,
+          "reason": "The response directly addresses the question by identifying the agency operating route R-0045 and providing the number of incidents. It is accurate, specific, and complete, offering relevant details about the types of incidents. The answer is helpful and directly useful for the person asking.",
+          "error": null
+        },
+        "E10": {
+          "score": 3,
+          "reason": "The response provides a general procedure for finding the answer but does not actually provide the number of safety hazard incidents. It lacks specificity and completeness, failing to meet the requirement of directly answering the question with accurate data.",
+          "error": null
+        },
+        "E11": {
+          "score": 5,
+          "reason": "The response is accurate and directly addresses the question about the capital of France. It correctly identifies Paris as the capital and provides additional context about the city, which is relevant and helpful. The answer is specific and complete enough for the person to understand and act on.",
+          "error": null
+        },
+        "E12": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and directly addresses the request to write a short poem about a cat. It is specific, creative, and complete enough to be directly useful. The poem captures the essence of a cat's behavior and appearance, making it a satisfying and appropriate answer to the query.",
+          "error": null
+        },
+        "E13": {
+          "score": 3,
+          "reason": "The response is fair but vague, providing a general framework without addressing the specific question or offering actionable steps. It lacks specificity and does not align with the test case parameters which require a direct and relevant answer to 'What should I do?'",
+          "error": null
+        },
+        "E14": {
+          "score": 4,
+          "reason": "The response directly addresses the question by outlining a clear process for filing a complaint about a late train. It includes specific steps such as identifying details, contacting customer service, and following up. The content is accurate and relevant, though it lacks mention of specific platforms or contact details, which could make it more actionable.",
+          "error": null
+        },
+        "E15": {
+          "score": 5,
+          "reason": "The response accurately explains why buses bunch together and provides actionable advice for riders. It addresses the question directly and is specific enough for riders to understand and act on the information provided.",
+          "error": null
+        },
+        "E16": {
+          "score": 5,
+          "reason": "The response is accurate and directly addresses the question by listing relevant emergency safety equipment for subway cars. It includes fire extinguishers, first aid kits, emergency communication devices, evacuation tools, and mentions compliance with safety standards. The answer is specific and complete, making it directly useful for the intended purpose.",
+          "error": null
+        },
+        "E17": {
+          "score": 3,
+          "reason": "The response addresses the question by suggesting alternative accessible entry points, notifying riders, and coordinating with staff. However, it lacks specific details on how to identify alternative entry points, how to notify riders effectively, or what steps to take if no alternatives are available. The answer is relevant and accurate but incomplete and somewhat vague.",
+          "error": null
+        },
+        "E18": {
+          "score": 5,
+          "reason": "The response accurately defines the 'Accident-Collision' category and provides relevant examples, making it helpful and specific. It also explains the importance of the category in incident reporting, which directly addresses the question and meets the requirements for a complete and accurate answer.",
+          "error": null
+        },
+        "E19": {
+          "score": 5,
+          "reason": "The response provides three clear and actionable tips for staying safe at a transit station late at night, addressing the question directly. Each tip is specific and relevant, and the advice is accurate and practical. The answer is complete and directly useful, meeting the criteria for a high score.",
+          "error": null
+        },
+        "E20": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and directly addresses the question about the typical duration of transit accident investigations. It provides a range of timeframes and explains influencing factors, making it useful and complete. The answer is specific and does not include incorrect or speculative information.",
+          "error": null
+        }
+      }
+    },
+    {
+      "run": 2,
+      "seconds": 442.4,
+      "cases": {
+        "E01": {
+          "score": 4,
+          "reason": "The response directly addresses the question by providing actionable steps such as checking real-time updates, considering alternative transportation, and contacting the transit authority. It is accurate, relevant, and specific enough for the rider to take immediate action. The answer is complete and helpful, aligning well with the rubric for a good response.",
+          "error": null
+        },
+        "E02": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and directly addresses the question about how a transit agency should respond to a mechanical failure in a tunnel. It outlines clear steps for ensuring passenger safety, notifying emergency services, assessing the situation, and planning for service restoration. The answer is specific and complete enough for the agency to act on, making it a helpful and well-structured response.",
+          "error": null
+        },
+        "E03": {
+          "score": 5,
+          "reason": "The response directly addresses the question by outlining specific information a rider should include when reporting a safety hazard. It covers key details such as location, nature of the hazard, and relevant context, making it accurate, specific, and complete. The answer is helpful and directly useful for the intended purpose.",
+          "error": null
+        },
+        "E04": {
+          "score": 5,
+          "reason": "The response directly addresses the question by listing common causes of delays on light rail lines, including operational, external, and passenger-related factors. It is accurate, specific, and complete, providing actionable information that would help someone understand the issue.",
+          "error": null
+        },
+        "E05": {
+          "score": 5,
+          "reason": "The response accurately explains the difference between a delay incident and a mechanical failure incident, providing clear definitions and examples. It also highlights how each type of incident is typically managed, making the answer specific and complete. The explanation is relevant and directly addresses the question without inaccuracies or irrelevant information.",
+          "error": null
+        },
+        "E06": {
+          "score": 5,
+          "reason": "The response directly addresses the question by outlining specific steps a bus driver should take after a minor collision. It includes stopping the bus, ensuring passenger safety, contacting authorities, documenting the scene, exchanging information, and following up with insurance and legal procedures. The content is accurate, relevant, and complete, making it directly useful for the person seeking guidance.",
+          "error": null
+        },
+        "E07": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and provides specific measures that a transit agency can take to reduce accident-collision incidents. It addresses the question directly and offers actionable steps such as data analysis, improved signage, lighting, vehicle maintenance, staff training, and safety policies. The answer is complete and directly useful.",
+          "error": null
+        },
+        "E08": {
+          "score": 4,
+          "reason": "The response directly addresses the question about the on-time performance of route R-0030 and provides a specific percentage (89%) with a clear definition of what the metric represents. However, it lacks additional context such as the total number of flights or any factors affecting the performance, which could make the information more actionable.",
+          "error": null
+        },
+        "E09": {
+          "score": 5,
+          "reason": "The response directly addresses the question by identifying the agency operating route R-0045 and providing the number of incidents. It is accurate, specific, and complete, offering relevant details about the types of incidents. The answer is helpful and directly useful for the person asking.",
+          "error": null
+        },
+        "E10": {
+          "score": 3,
+          "reason": "The response provides a general procedure for finding the answer but does not actually provide the number of safety hazard incidents. It lacks specificity and completeness, failing to meet the requirement of directly answering the question with accurate data.",
+          "error": null
+        },
+        "E11": {
+          "score": 5,
+          "reason": "The response is accurate and directly addresses the question about the capital of France. It correctly identifies Paris as the capital and provides additional context about the city, which is relevant and helpful. The answer is specific and complete enough for the person to understand and act on.",
+          "error": null
+        },
+        "E12": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and directly addresses the request to write a short poem about a cat. It is specific, creative, and complete enough to be directly useful. The poem captures the essence of a cat's behavior and appearance, making it a satisfying and appropriate answer to the query.",
+          "error": null
+        },
+        "E13": {
+          "score": 3,
+          "reason": "The response is fair but vague, providing a general framework without addressing the specific question or offering actionable steps. It lacks specificity and does not align with the test case parameters which require a direct and relevant answer to 'What should I do?'",
+          "error": null
+        },
+        "E14": {
+          "score": 4,
+          "reason": "The response directly addresses the question by outlining a clear process for filing a complaint about a late train. It includes specific steps such as identifying details, contacting customer service, and following up. The content is accurate and relevant, though it lacks mention of specific platforms or contact details, which could make it more actionable.",
+          "error": null
+        },
+        "E15": {
+          "score": 5,
+          "reason": "The response accurately explains why buses bunch together and provides actionable advice for riders. It addresses the question directly and is specific enough for riders to understand and act on the information provided.",
+          "error": null
+        },
+        "E16": {
+          "score": 5,
+          "reason": "The response is accurate and directly addresses the question by listing relevant emergency safety equipment for subway cars. It includes fire extinguishers, first aid kits, emergency communication devices, evacuation tools, and mentions compliance with safety standards. The answer is specific and complete, making it directly useful for the intended purpose.",
+          "error": null
+        },
+        "E17": {
+          "score": 3,
+          "reason": "The response addresses the question by suggesting alternative accessible entry points, notifying riders, and coordinating with staff. However, it lacks specific details on how to identify alternative entry points, how to notify riders effectively, or what steps to take if no alternatives are available. The answer is relevant and accurate but incomplete and somewhat vague.",
+          "error": null
+        },
+        "E18": {
+          "score": 5,
+          "reason": "The response accurately defines the 'Accident-Collision' category and provides relevant examples, making it helpful and specific. It also explains the importance of the category in incident reporting, which directly addresses the question and meets the requirements for a complete and accurate answer.",
+          "error": null
+        },
+        "E19": {
+          "score": 5,
+          "reason": "The response provides three clear and actionable tips for staying safe at a transit station late at night, addressing the question directly. Each tip is specific and relevant, and the advice is accurate and practical. The answer is complete and directly useful, meeting the criteria for a high score.",
+          "error": null
+        },
+        "E20": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and directly addresses the question about the typical duration of transit accident investigations. It provides a range of timeframes and explains influencing factors, making it useful and complete. The answer is specific and does not include incorrect or speculative information.",
+          "error": null
+        }
+      }
+    },
+    {
+      "run": 3,
+      "seconds": 421.9,
+      "cases": {
+        "E01": {
+          "score": 4,
+          "reason": "The response directly addresses the question by providing actionable steps such as checking real-time updates, considering alternative transportation, and contacting the transit authority. It is accurate, relevant, and specific enough for the rider to take immediate action. The answer is complete and helpful, aligning well with the rubric for a good response.",
+          "error": null
+        },
+        "E02": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and directly addresses the question about how a transit agency should respond to a mechanical failure in a tunnel. It outlines clear steps for ensuring passenger safety, notifying emergency services, assessing the situation, and planning for service restoration. The answer is specific and complete enough for the agency to act on, making it a helpful and well-structured response.",
+          "error": null
+        },
+        "E03": {
+          "score": 5,
+          "reason": "The response directly addresses the question by outlining specific information a rider should include when reporting a safety hazard. It covers key details such as location, nature of the hazard, and relevant context, making it accurate, specific, and complete. The answer is helpful and directly useful for the intended purpose.",
+          "error": null
+        },
+        "E04": {
+          "score": 5,
+          "reason": "The response directly addresses the question by listing common causes of delays on light rail lines, including operational, external, and passenger-related factors. It is accurate, specific, and complete, providing actionable information that would help someone understand the issue.",
+          "error": null
+        },
+        "E05": {
+          "score": 5,
+          "reason": "The response accurately explains the difference between a delay incident and a mechanical failure incident, providing clear definitions and examples. It also highlights how each type of incident is typically managed, making the answer specific and complete. The explanation is relevant and directly addresses the question without inaccuracies or irrelevant information.",
+          "error": null
+        },
+        "E06": {
+          "score": 5,
+          "reason": "The response directly addresses the question by outlining specific steps a bus driver should take after a minor collision. It includes stopping the bus, ensuring passenger safety, contacting authorities, documenting the scene, exchanging information, and following up with insurance and legal procedures. The content is accurate, relevant, and complete, making it directly useful for the person seeking guidance.",
+          "error": null
+        },
+        "E07": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and provides specific measures that a transit agency can take to reduce accident-collision incidents. It addresses the question directly and offers actionable steps such as data analysis, improved signage, lighting, vehicle maintenance, staff training, and safety policies. The answer is complete and directly useful.",
+          "error": null
+        },
+        "E08": {
+          "score": 4,
+          "reason": "The response directly addresses the question about the on-time performance of route R-0030 and provides a specific percentage (89%) with a clear definition of what the metric represents. However, it lacks additional context such as the total number of flights or any factors affecting the performance, which could make the information more actionable.",
+          "error": null
+        },
+        "E09": {
+          "score": 5,
+          "reason": "The response directly addresses the question by identifying the agency operating route R-0045 and providing the number of incidents. It is accurate, specific, and complete, offering relevant details about the types of incidents. The answer is helpful and directly useful for the person asking.",
+          "error": null
+        },
+        "E10": {
+          "score": 3,
+          "reason": "The response provides a general procedure for finding the answer but does not actually provide the number of safety hazard incidents. It lacks specificity and completeness, failing to meet the requirement of directly answering the question with accurate data.",
+          "error": null
+        },
+        "E11": {
+          "score": 5,
+          "reason": "The response is accurate and directly addresses the question about the capital of France. It correctly identifies Paris as the capital and provides additional context about the city, which is relevant and helpful. The answer is specific and complete enough for the person to understand and act on.",
+          "error": null
+        },
+        "E12": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and directly addresses the request to write a short poem about a cat. It is specific, creative, and complete enough to be directly useful. The poem captures the essence of a cat's behavior and appearance, making it a satisfying and appropriate answer to the query.",
+          "error": null
+        },
+        "E13": {
+          "score": 3,
+          "reason": "The response is fair but vague, providing a general framework without addressing the specific question or offering actionable steps. It lacks specificity and does not align with the test case parameters which require a direct and relevant answer to 'What should I do?'",
+          "error": null
+        },
+        "E14": {
+          "score": 4,
+          "reason": "The response directly addresses the question by outlining a clear process for filing a complaint about a late train. It includes specific steps such as identifying details, contacting customer service, and following up. The content is accurate and relevant, though it lacks mention of specific platforms or contact details, which could make it more actionable.",
+          "error": null
+        },
+        "E15": {
+          "score": 5,
+          "reason": "The response accurately explains why buses bunch together and provides actionable advice for riders. It addresses the question directly and is specific enough for riders to understand and act on the information provided.",
+          "error": null
+        },
+        "E16": {
+          "score": 5,
+          "reason": "The response is accurate and directly addresses the question by listing relevant emergency safety equipment for subway cars. It includes fire extinguishers, first aid kits, emergency communication devices, evacuation tools, and mentions compliance with safety standards. The answer is specific and complete, making it directly useful for the intended purpose.",
+          "error": null
+        },
+        "E17": {
+          "score": 3,
+          "reason": "The response addresses the question by suggesting alternative accessible entry points, notifying riders, and coordinating with staff. However, it lacks specific details on how to identify alternative entry points, how to notify riders effectively, or what steps to take if no alternatives are available. The answer is relevant and accurate but incomplete and somewhat vague.",
+          "error": null
+        },
+        "E18": {
+          "score": 5,
+          "reason": "The response accurately defines the 'Accident-Collision' category and provides relevant examples, making it helpful and specific. It also explains the importance of the category in incident reporting, which directly addresses the question and meets the requirements for a complete and accurate answer.",
+          "error": null
+        },
+        "E19": {
+          "score": 5,
+          "reason": "The response provides three clear and actionable tips for staying safe at a transit station late at night, addressing the question directly. Each tip is specific and relevant, and the advice is accurate and practical. The answer is complete and directly useful, meeting the criteria for a high score.",
+          "error": null
+        },
+        "E20": {
+          "score": 5,
+          "reason": "The response is accurate, relevant, and directly addresses the question about the typical duration of transit accident investigations. It provides a range of timeframes and explains influencing factors, making it useful and complete. The answer is specific and does not include incorrect or speculative information.",
+          "error": null
+        }
+      }
+    }
+  ]
+}

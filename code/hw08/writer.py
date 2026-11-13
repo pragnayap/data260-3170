@@ -41,6 +41,7 @@ from kafka_common import (
     now,
     produce,
 )
+from tracing import now_ms, queue_span, stamp, write_span
 
 WRITER_ID = os.environ.get("WRITER_ID", "writer-1")
 GROUP = os.environ.get("GROUP", f"{PREFIX}_writer")
@@ -150,6 +151,9 @@ def main() -> int:
             correlation_id = task.get("correlation_id")
             extra = f" entity={task['entity']} seq={task['seq']}" if "entity" in task else ""
             log(WRITER_ID, f"RECV  {where} correlation_id={correlation_id}{extra}")
+            recv_ms = now_ms()                                                    # HW10: wait in s3170_tasks
+            queue_span(correlation_id, "tasks", task.get("sent_at_ms"), recv_ms)
+            last_error: str | None = None
 
             if IDEMPOTENT and correlation_id in processed:
                 log(WRITER_ID, f"DUPLICATE correlation_id={correlation_id} already completed - ignored, no side effect")
@@ -163,12 +167,13 @@ def main() -> int:
                     if not task:
                         raise ValueError("message is not valid JSON")
                     draft = work(task)
-                    partition, offset = produce(producer, DRAFTS, draft, key=correlation_id)
+                    partition, offset = produce(producer, DRAFTS, stamp(draft), key=correlation_id)
                     log(WRITER_ID, f"SEND  topic={DRAFTS} partition={partition} offset={offset} correlation_id={correlation_id}")
                     delivered = True
                     break
                 except Exception as exc:  # noqa: BLE001 - any failure of one message is handled, never fatal
                     attempts += 1
+                    last_error = f"{type(exc).__name__}: {exc}"
                     if MAX_RETRIES == 0:
                         log(WRITER_ID, f"RETRY {where} attempt {attempts} (no limit) error={exc}")
                         time.sleep(1.0)
@@ -185,6 +190,9 @@ def main() -> int:
                         p, o = produce(producer, DEAD_LETTER, dead, key=correlation_id)
                         log(WRITER_ID, f"DEAD-LETTER topic={DEAD_LETTER} partition={p} offset={o} correlation_id={correlation_id}")
                     break
+            write_span(correlation_id, "writer", recv_ms, now_ms(), status="ok" if delivered else "error",   # HW10
+                       error=None if delivered else last_error, attempts=attempts + (1 if delivered else 0),
+                       dead_lettered=bool(not delivered and DLQ))
             if delivered:
                 # Bookkeeping AFTER delivery and OUTSIDE the retry loop: if it fails it is logged, never re-run
                 # the work (re-running would deliver the draft a second time).

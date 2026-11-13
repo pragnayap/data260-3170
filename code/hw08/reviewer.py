@@ -25,6 +25,7 @@ from kafka_common import (
     make_producer,
     produce,
 )
+from tracing import queue_span, span, stamp
 
 MIN_CHARS, MAX_CHARS = 40, 2000
 BAD_PHRASES = ("todo", "lorem ipsum", "as an ai language model")
@@ -64,11 +65,13 @@ def main() -> int:
                 continue
             log("REVIEWER", f"RECV  topic={msg.topic()} partition={msg.partition()} offset={msg.offset()} "
                             f"correlation_id={correlation_id}")
-            status, reason = review(draft.get("draft", ""))
-            log("REVIEWER", f"REVIEW correlation_id={correlation_id} status={status} ({reason})")
-            final = {"correlation_id": correlation_id, "status": status,
-                     "answer": draft.get("draft") if status == "approved" else None, "reason": reason}
-            partition, offset = produce(producer, FINAL, final, key=correlation_id)
+            queue_span(correlation_id, "drafts", draft.get("sent_at_ms"))        # HW10: wait in s3170_drafts
+            with span(correlation_id, "reviewer"):                               # HW10: review + delivery
+                status, reason = review(draft.get("draft", ""))
+                log("REVIEWER", f"REVIEW correlation_id={correlation_id} status={status} ({reason})")
+                final = {"correlation_id": correlation_id, "status": status,
+                         "answer": draft.get("draft") if status == "approved" else None, "reason": reason}
+                partition, offset = produce(producer, FINAL, stamp(final), key=correlation_id)
             log("REVIEWER", f"SEND  topic={FINAL} partition={partition} offset={offset} correlation_id={correlation_id}")
             consumer.commit(message=msg, asynchronous=False)
     finally:

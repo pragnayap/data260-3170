@@ -1,0 +1,61 @@
+{
+  "settings": {
+    "judge_model": "qwen3:8b",
+    "framework": "DeepEval GEval (custom local model)",
+    "temperature": 0.0,
+    "seed": 3170,
+    "thinking": "off",
+    "num_predict": 400,
+    "client_timeout_s": 150,
+    "scale": "1-5 (rubric), same scale as the human labels",
+    "metric": "Writer Helpfulness",
+    "input": "question + Writer draft",
+    "evaluation_steps": "fixed (judge.HELPFULNESS_STEPS)"
+  },
+  "n_cases": 20,
+  "n_runs": 3,
+  "part_3_2_run1_vs_human": {
+    "n_scored": 20,
+    "spearman": 0.1984,
+    "mean_abs_diff": 0.5,
+    "mean_signed_diff_judge_minus_human": -0.2
+  },
+  "each_run_vs_human": [
+    {
+      "n_scored": 20,
+      "spearman": 0.1984,
+      "mean_abs_diff": 0.5,
+      "mean_signed_diff_judge_minus_human": -0.2
+    },
+    {
+      "n_scored": 20,
+      "spearman": 0.1984,
+      "mean_abs_diff": 0.5,
+      "mean_signed_diff_judge_minus_human": -0.2
+    },
+    {
+      "n_scored": 20,
+      "spearman": 0.1984,
+      "mean_abs_diff": 0.5,
+      "mean_signed_diff_judge_minus_human": -0.2
+    }
+  ],
+  "repeatability": {
+    "cases_compared": 20,
+    "cases_whose_score_changed_across_runs": 0,
+    "fraction_cases_changed": 0.0,
+    "run_pair_comparisons": 60,
+    "fraction_pair_comparisons_changed": 0.0,
+    "mean_abs_change": 0,
+    "max_abs_change": 0,
+    "mean_range_per_case": 0,
+    "max_range_per_case": 0
+  },
+  "human_label_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 5,
+    "5": 15
+  }
+}

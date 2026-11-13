@@ -1,0 +1,55 @@
+Pragnaya Priyadarshini HW10 - latency_experiment.py
+warm-up done (model + cache index loaded; its trace id starts with 'warmup-' and is excluded)
+/Users/ritchit/Desktop/DATA 260--Agentic AI-Homework/data260-3170/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+[01/50] approved   49.9s  sim=None  How can a city bus that broke down on a highway be prevented from happening again?
+[02/50] approved   33.3s  sim=0.3712  What are the main safety risks of a light rail line suspended by a signal fault?
+[03/50] approved   30.4s  sim=0.7137  How should a transit agency communicate with passengers about a city bus that broke down on a highway?
+[04/50] approved   27.6s  sim=0.3969  What should riders do when they encounter a ferry terminal with a cancelled sailing?
+[05/50] approved   30.2s  sim=0.5085  What are the main safety risks of a bus driver running far behind schedule?
+[06/50] approved   27.9s  sim=0.3989  Who is responsible for resolving a cable car stopped by a power outage, and how?
+[07/50] approved   31.9s  sim=0.4269  Who is responsible for resolving a subway platform that is overcrowded during rush hour, and how?
+[08/50] approved   41.4s  sim=0.6086  Who is responsible for resolving a commuter train stopped between stations, and how?
+[09/50] approved   34.6s  sim=0.6036  How can a flooded subway entrance be prevented from happening again?
+[10/50] approved   33.6s  sim=0.6488  How can a crowded bus with a medical emergency on board be prevented from happening again?
+[11/50] approved   35.0s  sim=0.8495  How can a cable car stopped by a power outage be prevented from happening again?
+[12/50] approved   39.8s  sim=0.763  How should a transit agency communicate with passengers about a crowded bus with a medical emergency on board?
+[13/50] approved   36.1s  sim=0.642  How can an icy bus route during a winter storm be prevented from happening again?
+[14/50] approved   44.1s  sim=0.5782  What are the main safety risks of a station escalator that stops suddenly?
+[15/50] approved   33.7s  sim=0.4498  How can a paratransit van that arrives late for a pickup be prevented from happening again?
+[16/50] approved   40.9s  sim=0.7821  How should a transit agency communicate with passengers about a subway platform that is overcrowded during rush hour?
+[17/50] approved   36.7s  sim=0.7421  How should a transit agency communicate with passengers about a light rail line suspended by a signal fault?
+[18/50] approved   33.9s  sim=0.7049  What are the main safety risks of a commuter train stopped between stations?
+[19/50] approved   34.6s  sim=0.7778  How should a transit agency communicate with passengers about a ferry terminal with a cancelled sailing?
+[20/50] approved   38.6s  sim=0.5402  How can a tram that struck a parked car be prevented from happening again?
+[21/50] approved   33.7s  sim=0.5268  What should riders do when they encounter a station elevator that is out of service?
+[22/50] approved   32.7s  sim=0.7336  How should a transit agency communicate with passengers about a commuter train stopped between stations?
+[23/50] approved   32.8s  sim=0.816  How can a station elevator that is out of service be prevented from happening again?
+[24/50] approved   25.3s  sim=0.8363  What should riders do when they encounter a flooded subway entrance?
+[25/50] approved   44.9s  sim=0.7154  How should a transit agency communicate with passengers about a delayed airport shuttle service?
+[26/50] approved   30.4s  sim=0.734  How should a transit agency communicate with passengers about a train door that will not close?
+[27/50] approved   37.6s  sim=0.8237  How can a light rail line suspended by a signal fault be prevented from happening again?
+[28/50] approved   49.0s  sim=0.7888  What should riders do when they encounter a station escalator that stops suddenly?
+[29/50] approved   36.2s  sim=0.8327  Who is responsible for resolving a flooded subway entrance, and how?
+[30/50] approved   26.8s  sim=0.7841  What should riders do when they encounter a train door that will not close?
+[31/50] approved   32.1s  sim=0.8557  Who is responsible for resolving a paratransit van that arrives late for a pickup, and how?
+[32/50] approved   30.3s  sim=0.8357  What should riders do when they encounter a paratransit van that arrives late for a pickup?
+[33/50] approved   34.3s  sim=0.6885  How should a transit agency communicate with passengers about a tram that struck a parked car?
+[34/50] approved   30.8s  sim=0.8137  How can a commuter train stopped between stations be prevented from happening again?
+[35/50] approved   40.4s  sim=0.8028  How should a transit agency communicate with passengers about a station elevator that is out of service?
+[36/50] approved   29.9s  sim=0.7718  How can a bus driver running far behind schedule be prevented from happening again?
+[37/50] approved   39.1s  sim=0.8598  What should riders do when they encounter a crowded bus with a medical emergency on board?
+[38/50] approved   33.8s  sim=0.7661  What should riders do when they encounter a delayed airport shuttle service?
+[39/50] approved   49.6s  sim=0.6116  Who is responsible for resolving a bus stop with a broken shelter and a missing light, and how?
+[40/50] approved   30.8s  sim=0.8265  Who is responsible for resolving a bus driver running far behind schedule, and how?
+[41/50] approved   26.9s  sim=0.7947  Who is responsible for resolving a train door that will not close, and how?
+[42/50] approved   29.0s  sim=0.7993  What should riders do when they encounter a bus stop with a broken shelter and a missing light?
+[43/50] approved   30.6s  sim=0.6925  How can a rail crossing where a vehicle is stuck on the tracks be prevented from happening again?
+[44/50] approved   27.4s  sim=0.7954  How can a delayed airport shuttle service be prevented from happening again?
+[45/50] approved   37.8s  sim=0.7983  How should a transit agency communicate with passengers about a station escalator that stops suddenly?
+[46/50] approved   31.7s  sim=0.8444  Who is responsible for resolving a tram that struck a parked car, and how?
+[47/50] approved  108.9s  sim=0.7455  What are the main safety risks of a station elevator that is out of service?
+[48/50] approved   37.1s  sim=0.8799  What should riders do when they encounter an icy bus route during a winter storm?
+[49/50] approved  143.5s  sim=0.8091  What are the main safety risks of a rail crossing where a vehicle is stuck on the tracks?
+[50/50] approved   39.2s  sim=0.8007  How should a transit agency communicate with passengers about a bus stop with a broken shelter and a missing light?
+done: 50 confirmed misses, 0 skipped hits, 1927s

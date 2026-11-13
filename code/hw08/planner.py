@@ -13,6 +13,7 @@ import signal
 import sys
 
 from kafka_common import (
+    FINAL,
     INBOX,
     PREFIX,
     TASKS,
@@ -24,6 +25,7 @@ from kafka_common import (
     produce,
 )
 from llm import complete
+from tracing import queue_span, span, stamp
 
 
 def make_plan(question: str) -> list[str]:
@@ -61,11 +63,29 @@ def main() -> int:
                 continue
             log("PLANNER", f"RECV  topic={msg.topic()} partition={msg.partition()} offset={msg.offset()} "
                            f"correlation_id={correlation_id} question={question!r}")
-            plan = make_plan(question)
-            log("PLANNER", f"PLAN  correlation_id={correlation_id} steps={plan}")
-            partition, offset = produce(producer, TASKS, {"correlation_id": correlation_id, "question": question,
-                                                          "plan": plan}, key=correlation_id)
-            log("PLANNER", f"SEND  topic={TASKS} partition={partition} offset={offset} correlation_id={correlation_id}")
+            queue_span(correlation_id, "inbox", incoming.get("sent_at_ms"))      # HW10: wait in s3170_inbox
+            try:
+                with span(correlation_id, "planner"):                            # HW10: plan + delivery
+                    for attempt in (1, 2):                                       # HW10: one retry on a model timeout/error
+                        try:
+                            plan = make_plan(question)
+                            break
+                        except Exception as exc:  # noqa: BLE001 - e.g. an Ollama ReadTimeout
+                            log("PLANNER", f"RETRY correlation_id={correlation_id} attempt {attempt}/2 error={type(exc).__name__}: {exc}")
+                            if attempt == 2:
+                                raise
+                    if incoming.get("fault") == "empty_plan":       # HW10 test hook: simulate a Planner bug (cf. HW8 simulate_slow_ms)
+                        plan = []
+                    log("PLANNER", f"PLAN  correlation_id={correlation_id} steps={plan}")
+                    partition, offset = produce(producer, TASKS, stamp({"correlation_id": correlation_id,
+                                                                        "question": question, "plan": plan}),
+                                                key=correlation_id)
+                log("PLANNER", f"SEND  topic={TASKS} partition={partition} offset={offset} correlation_id={correlation_id}")
+            except Exception as exc:  # noqa: BLE001 - HW10: a failed plan must NOT kill the Planner or leave the caller waiting
+                log("PLANNER", f"FAILED correlation_id={correlation_id} error={type(exc).__name__}: {exc}")
+                produce(producer, FINAL, stamp({"correlation_id": correlation_id, "status": "failed", "answer": None,
+                                                "failed_stage": "planner", "reason": f"planner failed: {type(exc).__name__}: {exc}"}),
+                        key=correlation_id)
             consumer.commit(message=msg, asynchronous=False)
     finally:
         consumer.close()
