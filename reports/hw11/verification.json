@@ -1,0 +1,103 @@
+{
+  "homework": 11,
+  "SID4": 3170,
+  "PORT_BASE": 8470,
+  "PREFIX": "s3170",
+  "SEED": 3170,
+  "VERIFY_SEED": 263170,
+  "DOMAIN_ID": 2,
+  "commit": "f4dbd8f0af1aae80414ab03cbcb11990677a3197",
+  "working_tree_clean": false,
+  "model_configuration": {
+    "agent": "Meta Muse (free tier), standing instructions + policy.md",
+    "tool": "stock-watch kit watch.py with two disclosed extensions",
+    "note": "agent decisions are shown by the Muse screenshots; this script verifies the repo side"
+  },
+  "generated_at": "2026-11-23T21:29:50+00:00",
+  "passed": 14,
+  "failed": 0,
+  "skipped": 2,
+  "total_checks": 16,
+  "checks": [
+    {
+      "check": "required HW11 files exist",
+      "status": "PASS",
+      "detail": "all present"
+    },
+    {
+      "check": "3: golden set is 12 cases, two per category, every label valid",
+      "status": "PASS",
+      "detail": "12 cases, per category {'normal': 2, 'boundary': 2, 'adversarial': 2, 'ambiguous': 2, 'near_duplicate': 2, 'interruption': 2}, malformed []"
+    },
+    {
+      "check": "3: policy, fixtures and golden labels were committed (and unmodified) BEFORE the first agent run",
+      "status": "PASS",
+      "detail": "policy, fixtures and golden labels last changed in commit 0acf62a, 4260 s before the first Muse run; uncommitted changes: none"
+    },
+    {
+      "check": "3: the real tool resolves every golden case on the fixtures and matches Muse's 11 new / 1 duplicate",
+      "status": "PASS",
+      "detail": "11 candidates, 1 duplicate suppressed (Muse reported 11 new, 1 duplicate); every golden case resolves; mismatches []"
+    },
+    {
+      "check": "4: injection guard catches the explicit injection (A1) and misses the polite one (A2), as designed",
+      "status": "PASS",
+      "detail": "guard flags A1=True, A2=False (A2 is the polite injection the guard is expected to miss; the model must catch it)"
+    },
+    {
+      "check": "the kit's own demo still passes after the watch.py extensions",
+      "status": "PASS",
+      "detail": "kit demo_test.sh still ends with decision_accuracy 1.0 after the watch.py extensions"
+    },
+    {
+      "check": "watch.py extension: a non-CSV price reply is an error, not 'no price moves'",
+      "status": "PASS",
+      "detail": "a non-CSV price reply is logged as 1 source_error in the real tool's trace (the kit alone treated it as 'no price moves')"
+    },
+    {
+      "check": "5/6: the numbers in the report agree with the transcribed Muse evidence",
+      "status": "PASS",
+      "detail": "5 alerts = the 5 notify cases; summary line fields agree; tokens/alert 200000 = 1000000/5; wall 130 s, active 15 s"
+    },
+    {
+      "check": "1/7: the live-run failure is recorded in the evidence",
+      "status": "PASS",
+      "detail": "live run shows 5 source errors and the agent's summary did not name them (recorded as a finding, not hidden)"
+    },
+    {
+      "check": "the personal email is not in the repo copy",
+      "status": "PASS",
+      "detail": "no personal university email in the committed kit or report text files"
+    },
+    {
+      "check": "report screenshots exist and are readable images",
+      "status": "PASS",
+      "detail": "26 screenshots, all readable"
+    },
+    {
+      "check": "report formatting: main headings 14 pt bold, subheadings 12 pt bold, body 11 pt",
+      "status": "PASS",
+      "detail": "headings 14/12 pt bold, body 11 pt"
+    },
+    {
+      "check": "report has no unfinished placeholders",
+      "status": "SKIP",
+      "detail": "1 red placeholders still to fill in the report"
+    },
+    {
+      "check": "report PDF is at most 25 pages",
+      "status": "SKIP",
+      "detail": "report PDF not exported yet (Priyadarshini_HW11.pdf)"
+    },
+    {
+      "check": "ruff passes on the new HW11 scripts",
+      "status": "PASS",
+      "detail": "ruff clean (default rules)"
+    },
+    {
+      "check": "student name banner in every runnable script",
+      "status": "PASS",
+      "detail": "2 runnable scripts print the student name banner"
+    }
+  ]
+}

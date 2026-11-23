@@ -15,7 +15,7 @@ APP_DIR := code/web_application
         metrics-hw07 runlog-hw07 report-hw07 \
         kafka-up-hw08 topics-hw08 demo-hw08 agents-hw08 failures-hw08 verify-hw08 down-hw08 \
         redis-up-hw09 migrate-hw09 counter-hw09 cache-hw09 sweep-hw09 stale-hw09 si-hw09 verify-hw09 metrics-hw09 \
-        agents-hw10 agents-stop-hw10 cases-hw10 judge-hw10 eval-hw10 latency-hw10 traces-hw10 latency-report-hw10 dashboard-hw10 verify-hw10 metrics-hw10
+        agents-hw10 agents-stop-hw10 cases-hw10 judge-hw10 eval-hw10 latency-hw10 traces-hw10 latency-report-hw10 dashboard-hw10 verify-hw10 metrics-hw10 verify-hw11 metrics-hw11
 
 help:
 	@echo "install       install deps from requirements.txt, then the NLTK data"
@@ -87,6 +87,8 @@ help:
 	@echo "dashboard-hw10 Part 1: Streamlit dashboard on http://localhost:8472"
 	@echo "verify-hw10   run the HW10 self-check -> reports/hw10/verification.json"
 	@echo "metrics-hw10  rebuild reports/hw10/METRICS.md from raw/"
+	@echo "verify-hw11   run the HW11 self-check -> reports/hw11/verification.json (no Muse needed)"
+	@echo "metrics-hw11  rebuild reports/hw11/METRICS.md and RUN_LOG.txt from raw/"
 
 install:
 	$(PY) -m pip install -r requirements.txt
@@ -329,3 +331,9 @@ verify-hw10:
 
 metrics-hw10:
 	$(PY) code/hw10/build_metrics.py
+
+verify-hw11:
+	$(PY) -u code/verify_hw11.py
+
+metrics-hw11:
+	$(PY) -u code/hw11/build_metrics.py
