@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- HW11 FIXTURE. Orbit Express (ORBX), Voltaic Motors (VLTM), Pinecrest Devices (PNCR), Quantum Fabrics (QNTF) and Redwood Beverage (RWBV) are fictional companies; these filings do not exist. -->
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>EDGAR 8-K filings (HW11 fixture)</title>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999915-26-000501</id>
+    <updated>2026-11-19T17:10:00-05:00</updated>
+    <title>ORBX: 8-K - Current report (Item 1.03)</title>
+    <summary>(Fixture, fictional company.) Orbit Express Inc. Item 1.03 Bankruptcy or Receivership: the company filed a voluntary petition under Chapter 11 of the U.S. Bankruptcy Code.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999915/000999991526000501/0009999915-26-000501-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999914-26-000401</id>
+    <updated>2026-11-19T09:00:00-05:00</updated>
+    <title>VLTM: 8-K - Current report (Item 5.02)</title>
+    <summary>(Fixture, fictional company.) Voltaic Motors Inc. Item 5.02 Departure of Directors or Certain Officers: the Chief Executive Officer resigned effective immediately; the board named an interim CEO.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999914/000999991426000401/0009999914-26-000401-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999911-26-000301</id>
+    <updated>2026-11-19T16:15:00-05:00</updated>
+    <title>PNCR: 8-K - Current report (Item 2.02)</title>
+    <summary>(Fixture, fictional company.) Pinecrest Devices Inc. Item 2.02 Results of Operations and Financial Condition; Item 9.01 Exhibits. Q3 revenue $890M, up 12% year over year; operating margin 21%.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999911/000999991126000301/0009999911-26-000301-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999911-26-000305</id>
+    <updated>2026-11-20T08:30:00-05:00</updated>
+    <title>PNCR: 8-K/A - Current report, amendment</title>
+    <summary>(Fixture, fictional company.) Pinecrest Devices Inc. Amendment No. 1 to the 8-K of November 19, filed only to correct the numbering of Exhibit 99.1. No other changes.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999911/000999991126000305/0009999911-26-000305-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999913-26-000601</id>
+    <updated>2026-11-18T10:00:00-05:00</updated>
+    <title>QNTF: 8-K - Current report (Item 2.01)</title>
+    <summary>(Fixture, fictional company.) Quantum Fabrics Inc. Item 2.01 Completion of Acquisition or Disposition of Assets: the company completed its acquisition of a packaging supplier for $310M in cash.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999913/000999991326000601/0009999913-26-000601-index.htm" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>urn:tag:sec.gov,2008:accession-number=0009999912-26-000201</id>
+    <updated>2026-11-18T08:45:00-05:00</updated>
+    <title>RWBV: 8-K - Current report (Item 8.01)</title>
+    <summary>(Fixture, fictional company.) Redwood Beverage Inc. Item 8.01 Other Events: the company announced a voluntary recall of one product line that accounted for about 4% of last year's revenue, citing a packaging defect.</summary>
+    <link href="https://www.sec.gov/Archives/edgar/data/9999912/000999991226000201/0009999912-26-000201-index.htm" rel="alternate"/>
+  </entry>
+</feed>

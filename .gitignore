@@ -43,3 +43,8 @@ data/hw10/logs/
 data/hw10/state/
 data/hw10/eval_cases_raw.jsonl
 data/hw10/spans/eval_cases_spans.jsonl
+
+# HW11: Stock Watch run state, digests and the Muse upload zip are generated, not committed
+code/hw11/stock-watch/state/
+code/hw11/stock-watch/digests/
+reports/hw11/*.zip

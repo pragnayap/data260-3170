@@ -1,0 +1,51 @@
+{
+  "topic": "Material changes for a stock watchlist: large daily price moves and new SEC 8-K filings",
+  "user_agent": "DATA260-stock-watch/1.0 REPLACE-WITH-YOUR-EMAIL@example.edu",
+  "note": "Approved-source allowlist. watch.py refuses any URL whose host is not listed here. SEC asks automated clients to send a User-Agent with a contact email: replace the placeholder in user_agent above BEFORE the first live run. thresholds_pct (HW11 extension) sets a per-ticker candidate floor: moves below it never reach the agent.",
+  "sources": [
+    {
+      "id": "prices_live",
+      "type": "stooq",
+      "modes": ["live"],
+      "url": "https://stooq.com/q/d/l/",
+      "tickers": ["aapl.us", "nvda.us", "ko.us", "tsla.us"],
+      "threshold_pct": 2.0,
+      "thresholds_pct": {"aapl.us": 2.0, "ko.us": 2.0, "nvda.us": 4.0, "tsla.us": 4.0},
+      "lookback_days": 3
+    },
+    {
+      "id": "edgar_live",
+      "type": "edgar",
+      "modes": ["live"],
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "form": "8-K",
+      "per_company": 5,
+      "ciks": {"AAPL": "0000320193", "NVDA": "0001045810", "KO": "0000021344", "TSLA": "0001318605"}
+    },
+    {
+      "id": "prices_demo",
+      "type": "stooq",
+      "modes": ["fixtures"],
+      "url": "https://stooq.com/q/d/l/",
+      "tickers": ["nbrx.us", "cbds.us", "lksp.us", "pncr.us", "rwbv.us", "qntf.us", "orbx.us"],
+      "threshold_pct": 2.0,
+      "thresholds_pct": {"qntf.us": 4.0, "orbx.us": 4.0},
+      "lookback_days": 3
+    },
+    {
+      "id": "edgar_demo",
+      "type": "edgar",
+      "modes": ["fixtures"],
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "fixture": "edgar_8k.xml",
+      "ciks": {}
+    },
+    {
+      "id": "newswire_demo",
+      "type": "rss",
+      "modes": ["fixtures"],
+      "url": "https://example-newswire.example/markets/feed.xml",
+      "fixture": "newswire.xml"
+    }
+  ]
+}
