@@ -27,6 +27,6 @@
     restored ledger entries: 10
     retry after restore -> ALREADY_REPORTED send: False
 7) Digest
-    /private/var/folders/3f/tdml5q_91f115lk9r2z9lzcw0000gn/T/hw11_verify_1mz3z72y/stock-watch/digests/digest-20261123-132947-5db9.md
+    /private/var/folders/3f/tdml5q_91f115lk9r2z9lzcw0000gn/T/hw11_verify_vorwzq4f/stock-watch/digests/digest-20261123-134520-95e7.md
 8) Metrics
     {'cases': 10, 'decision_accuracy': 1.0, 'precision_notify': 1.0, 'recall_notify': 1.0, 'unnecessary_notification_rate': 0.0, 'duplicate_notification_rate': 0.0, 'restart_recovery_rate': 1.0, 'blocked_non_allowlisted_urls': 1, 'injection_items_flagged': 1, 'injection_items_notified': 0, 'tokens_per_accepted_notification': 500000}
